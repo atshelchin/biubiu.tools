@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "MetaMask - Dompet Kripto Terkemuka | Akses DeFi, NFT & Web3",
+		"description": "Jelajahi MetaMask, dompet kripto self-custodial terkemuka. Akses protokol DeFi, pasar NFT, dan aplikasi Web3 di Ethereum dan rantai yang kompatibel dengan EVM.",
+		"keywords": "MetaMask, dompet kripto, dompet Ethereum, Web3, DeFi, NFT, ekstensi browser, dompet mobile"
+	},
+	"overview": "MetaMask adalah dompet kripto self-custodial paling populer di dunia, memungkinkan pengguna untuk mengakses aplikasi terdesentralisasi di Ethereum dan blockchain yang kompatibel dengan EVM. Dibuat oleh Aaron Davis dan Dan Finlay di ConsenSys pada tahun 2016, MetaMask mempelopori konsep dompet ekstensi browser yang membuat Web3 dapat diakses oleh pengguna umum.\n\nTersedia sebagai ekstensi browser untuk Chrome, Firefox, Brave, dan Edge, ditambah aplikasi mobile untuk iOS dan Android, MetaMask melayani lebih dari 30 juta pengguna aktif bulanan. Dompet ini memungkinkan pengguna untuk menyimpan ETH dan token ERC-20, berinteraksi dengan dApp, menukar token, membeli kripto dengan fiat, dan mengelola NFT. MetaMask Snaps memungkinkan ekstensi pihak ketiga untuk menambahkan fungsi seperti dukungan untuk rantai non-EVM.\n\nMetaMask telah menjadi standar de facto untuk otentikasi Web3, dengan sebagian besar dApp menggunakan 'Hubungkan dengan MetaMask' sebagai metode login utama. Dompet ini menghasilkan pendapatan melalui biaya swap (0.875%) dan kemitraan on-ramp. Sebagai gerbang ke DeFi, NFT, dan Web3 untuk jutaan pengguna, MetaMask tetap menjadi infrastruktur penting dalam ekosistem Ethereum.",
+	"features": {
+		"1": {
+			"title": "Dukungan Multi-Rantai",
+			"description": "Terhubung ke Ethereum, Polygon, Arbitrum, Optimism, BSC, dan ratusan rantai EVM"
+		},
+		"2": {
+			"title": "Swap Dalam Aplikasi",
+			"description": "Tukar token langsung di dompet dengan penawaran agregat dari beberapa DEX"
+		},
+		"3": {
+			"title": "Manajemen NFT",
+			"description": "Lihat, kirim, dan kelola koleksi NFT di jaringan yang didukung"
+		},
+		"4": {
+			"title": "Dompet Hardware",
+			"description": "Hubungkan dompet hardware Ledger dan Trezor untuk keamanan yang ditingkatkan"
+		},
+		"5": {
+			"title": "MetaMask Snaps",
+			"description": "Perluas fungsi dengan plugin pihak ketiga untuk rantai dan fitur non-EVM"
+		},
+		"6": {
+			"title": "Tampilan Portofolio",
+			"description": "Lacak kepemilikan Anda di seluruh rantai dengan dasbor portofolio terintegrasi"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Akses DeFi",
+			"description": "Terhubung ke protokol lending, DEX, dan yield di Ethereum dan L2"
+		},
+		"2": {
+			"title": "Perdagangan NFT",
+			"description": "Beli, jual, dan kelola NFT di OpenSea, Blur, dan pasar lainnya"
+		},
+		"3": {
+			"title": "Swap Token",
+			"description": "Perdagangkan token dengan tarif kompetitif melalui agregasi DEX terintegrasi"
+		},
+		"4": {
+			"title": "Login Web3",
+			"description": "Masuk ke dApp dan situs web menggunakan alamat dompet Anda"
+		},
+		"5": {
+			"title": "Lintas Rantai",
+			"description": "Jembatani aset dan berinteraksi dengan aplikasi di beberapa jaringan EVM"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu MetaMask dan apakah aman?",
+			"answer": "MetaMask adalah dompet kripto self-custodial, artinya Anda mengontrol kunci pribadi Anda—bukan MetaMask atau ConsenSys. Ini umumnya dianggap aman ketika digunakan dengan benar: aktifkan perlindungan kata sandi, jangan pernah membagikan Frasa Pemulihan Rahasia Anda, verifikasi detail transaksi sebelum menandatangani, dan berhati-hatilah terhadap situs phishing. Risiko utama adalah kesalahan pengguna (kehilangan seed phrase, menandatangani transaksi berbahaya) daripada kerentanan perangkat lunak."
+		},
+		"2": {
+			"question": "Bagaimana cara menambahkan jaringan baru ke MetaMask?",
+			"answer": "Klik dropdown jaringan di bagian atas, lalu 'Tambah Jaringan'. Anda dapat menambahkan jaringan populer seperti Polygon atau Arbitrum dengan satu klik, atau memasukkan detail RPC secara manual untuk rantai lainnya. Situs seperti Chainlist.org menyediakan konfigurasi jaringan yang telah diverifikasi yang dapat Anda tambahkan secara otomatis. Selalu verifikasi URL RPC dari sumber resmi untuk menghindari terhubung ke node berbahaya."
+		},
+		"3": {
+			"question": "Apa itu MetaMask Snaps?",
+			"answer": "Snaps adalah ekstensi pihak ketiga yang menambahkan fungsi ke MetaMask. Mereka dapat mengaktifkan dukungan untuk rantai non-EVM (seperti Bitcoin, Solana, Cosmos), menambahkan wawasan transaksi baru, menyediakan notifikasi khusus, dan banyak lagi. Snaps berjalan di lingkungan terisolasi untuk keamanan. Anda menginstalnya dari direktori MetaMask Snaps, dan setiap Snap meminta izin spesifik yang harus Anda setujui."
+		},
+		"4": {
+			"question": "Mengapa transaksi saya macet atau gagal?",
+			"answer": "Penyebab umum: harga gas terlalu rendah (tingkatkan gas), masalah nonce (reset akun di pengaturan), kemacetan jaringan (tunggu atau percepat), atau kesalahan smart contract (periksa dApp). Untuk transaksi yang macet, Anda dapat 'Percepat' (bayar lebih banyak gas) atau 'Batal' (kirim 0 ETH ke diri sendiri dengan nonce yang sama). Tab aktivitas MetaMask menampilkan transaksi pending yang dapat Anda kelola."
+		},
+		"5": {
+			"question": "Bagaimana MetaMask menghasilkan uang?",
+			"answer": "MetaMask menghasilkan melalui biaya swap (0.875% pada swap token dalam aplikasi melalui MetaMask Swaps), kemitraan on-ramp (biaya dari pembelian fiat-ke-kripto melalui penyedia seperti MoonPay/Transak), dan layanan MetaMask Institutional untuk organisasi. Fungsi dompet inti gratis—Anda hanya membayar biaya gas jaringan untuk transaksi."
+		}
+	},
+	"cta": {
+		"ready": "Siap menjelajahi Web3?",
+		"button": "Buka MetaMask",
+		"note": "Dompet kripto self-custodial terkemuka"
+	}
+}

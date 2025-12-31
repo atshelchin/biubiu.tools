@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "The Graph - Protokol Pengindeksan Terdesentralisasi | Query Data Blockchain",
+		"description": "Jelajahi The Graph, protokol pengindeksan terdesentralisasi untuk Web3. Bangun subgraph untuk query data blockchain secara efisien dengan GraphQL.",
+		"keywords": "The Graph, GRT, subgraph, pengindeksan blockchain, GraphQL, data Web3, protokol terdesentralisasi"
+	},
+	"overview": "The Graph adalah protokol pengindeksan terdesentralisasi yang memungkinkan query data blockchain yang efisien. Didirikan pada tahun 2018 oleh Yaniv Tal, Jannis Pohlmann, dan Brandon Ramirez, The Graph memecahkan masalah mendasar: data blockchain disimpan dalam format yang dioptimalkan untuk konsensus, bukan untuk query. Membaca data langsung dari node lambat dan terbatas.\n\nThe Graph bekerja melalui 'subgraph'—API terbuka yang mengindeks dan mengatur data blockchain tertentu. Pengembang menentukan data apa yang akan diindeks (event, entitas, hubungan), dan jaringan The Graph mengindeksnya ke dalam format yang dapat di-query yang dapat diakses melalui GraphQL. Indexer menjalankan node yang memproses dan melayani query, Curator memberi sinyal subgraph mana yang berharga, dan Delegator mem-stake GRT untuk mendukung indexer.\n\nDengan 195+ miliar query yang dilayani dan ribuan subgraph yang di-deploy, The Graph mendukung sebagian besar dApp utama termasuk Uniswap, Aave, Synthetix, dan banyak lainnya. Jaringan terdesentralisasi memastikan tidak ada single point of failure dan resistensi terhadap sensor. Token GRT digunakan untuk staking, curation, dan membayar biaya query. The Graph telah menjadi infrastruktur penting untuk Web3, sering disebut 'Google blockchain'.",
+	"features": {
+		"1": {
+			"title": "Pengindeksan Subgraph",
+			"description": "Buat API khusus yang mengindeks data blockchain tertentu untuk aplikasi Anda"
+		},
+		"2": {
+			"title": "Query GraphQL",
+			"description": "Query data blockchain dengan GraphQL—fleksibel, efisien, dan ramah pengembang"
+		},
+		"3": {
+			"title": "Multi-Rantai",
+			"description": "Indeks data dari Ethereum, Polygon, Arbitrum, dan banyak rantai lainnya"
+		},
+		"4": {
+			"title": "Jaringan Terdesentralisasi",
+			"description": "Query dilayani oleh jaringan indexer independen untuk keandalan"
+		},
+		"5": {
+			"title": "Subgraph Studio",
+			"description": "Bangun, uji, dan deploy subgraph dengan studio yang ramah pengembang"
+		},
+		"6": {
+			"title": "Pembaruan Real-Time",
+			"description": "Subgraph diperbarui secara otomatis saat blok baru diproduksi"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Dashboard DeFi",
+			"description": "Dukung dashboard analitik dengan data protokol yang diindeks"
+		},
+		"2": {
+			"title": "Pasar NFT",
+			"description": "Query kepemilikan NFT, transfer, dan metadata secara efisien"
+		},
+		"3": {
+			"title": "Frontend Protokol",
+			"description": "Bangun UI dApp yang responsif dengan akses data blockchain yang cepat"
+		},
+		"4": {
+			"title": "Aplikasi Dompet",
+			"description": "Tampilkan riwayat transaksi dan data portofolio kepada pengguna"
+		},
+		"5": {
+			"title": "Analisis Data",
+			"description": "Peneliti query data on-chain untuk analisis dan pelaporan"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu The Graph dan mengapa diperlukan?",
+			"answer": "The Graph adalah protokol pengindeksan yang membuat data blockchain dapat di-query. Blockchain menyimpan data untuk konsensus, bukan query—membaca data langsung lambat dan terbatas. The Graph mengindeks data blockchain ke dalam format terstruktur, memungkinkan Anda query dengan GraphQL (seperti 'dapatkan semua swap di atas $100k dalam jam terakhir'). Sebagian besar dApp utama menggunakan The Graph karena query node langsung tidak dapat mendukung UI yang responsif."
+		},
+		"2": {
+			"question": "Apa itu subgraph?",
+			"answer": "Subgraph adalah API terbuka yang menentukan data blockchain apa yang akan diindeks dan bagaimana mengaturnya. Anda menulis 'manifest subgraph' yang menentukan smart contract dan event mana yang akan diamati, dan 'pemetaan' yang mengubah event blockchain menjadi entitas. Setelah di-deploy, jaringan The Graph mengindeks data dan melayaninya melalui GraphQL. Siapa pun dapat membuat subgraph, dan yang populer digunakan kembali oleh banyak aplikasi."
+		},
+		"3": {
+			"question": "Bagaimana cara query subgraph?",
+			"answer": "Subgraph di-query menggunakan GraphQL. Setiap subgraph memiliki URL endpoint di mana Anda mengirim query GraphQL. Misalnya: query { swaps(first: 10, orderBy: amountUSD) { ... } }. The Graph Explorer memungkinkan Anda menjelajahi dan menguji subgraph. Untuk produksi, Anda mendapatkan kunci API dari Subgraph Studio dan membayar untuk query dengan GRT atau kartu kredit."
+		},
+		"4": {
+			"question": "Untuk apa token GRT digunakan?",
+			"answer": "GRT adalah token asli The Graph dengan beberapa kegunaan: Indexer mem-stake GRT untuk berpartisipasi dalam jaringan dan mendapatkan biaya query. Curator mem-stake GRT untuk memberi sinyal subgraph mana yang berharga (mendapat bagian dari biaya). Delegator mem-stake GRT dengan indexer untuk mendapatkan reward. Biaya query dibayar dalam GRT (atau melalui penagihan dalam fiat yang dikonversi ke GRT). GRT menyelaraskan insentif di seluruh jaringan."
+		},
+		"5": {
+			"question": "Bagaimana jaringan terdesentralisasi The Graph bekerja?",
+			"answer": "Tiga peran utama: Indexer menjalankan node yang mengindeks subgraph dan melayani query, mem-stake GRT dan mendapatkan biaya. Curator memberi sinyal subgraph berharga dengan mem-stake GRT, membantu indexer memprioritaskan apa yang akan diindeks. Delegator mem-stake GRT dengan indexer yang mereka percayai, berbagi reward. Ini menciptakan jaringan terdesentralisasi di mana tidak ada satu entitas pun yang mengontrol infrastruktur—berbeda dari layanan pengindeksan terpusat."
+		}
+	},
+	"cta": {
+		"ready": "Siap untuk query data blockchain?",
+		"button": "Buka The Graph",
+		"note": "Protokol pengindeksan terdesentralisasi untuk Web3"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "MetaMask - Portefeuille Crypto Leader | Accédez à DeFi, NFTs et Web3",
+		"description": "Explorez MetaMask, le portefeuille crypto auto-géré leader. Accédez aux protocoles DeFi, marchés NFT et applications Web3 sur Ethereum et blockchains compatibles EVM.",
+		"keywords": "MetaMask, portefeuille crypto, portefeuille Ethereum, Web3, DeFi, NFT, extension navigateur, portefeuille mobile"
+	},
+	"overview": "MetaMask est le portefeuille crypto auto-géré le plus populaire au monde, permettant aux utilisateurs d'accéder aux applications décentralisées sur Ethereum et les blockchains compatibles EVM. Créé par Aaron Davis et Dan Finlay chez ConsenSys en 2016, MetaMask a été pionnier du concept de portefeuille en extension de navigateur qui a rendu le Web3 accessible aux utilisateurs grand public.\n\nDisponible comme extension de navigateur pour Chrome, Firefox, Brave et Edge, plus des applications mobiles pour iOS et Android, MetaMask sert plus de 30 millions d'utilisateurs actifs mensuels. Le portefeuille permet aux utilisateurs de stocker ETH et tokens ERC-20, d'interagir avec les dApps, d'échanger des tokens, d'acheter des cryptos avec du fiat et de gérer des NFTs. MetaMask Snaps permet des extensions tierces pour ajouter des fonctionnalités comme le support de blockchains non-EVM.\n\nMetaMask est devenu le standard de facto pour l'authentification Web3, la plupart des dApps utilisant 'Se connecter avec MetaMask' comme méthode de connexion principale. Le portefeuille génère des revenus via les frais de swap (0,875%) et partenariats d'on-ramp. En tant que passerelle vers DeFi, NFTs et Web3 pour des millions d'utilisateurs, MetaMask reste une infrastructure essentielle dans l'écosystème Ethereum.",
+	"features": {
+		"1": {
+			"title": "Support Multi-Chain",
+			"description": "Connectez-vous à Ethereum, Polygon, Arbitrum, Optimism, BSC et des centaines de blockchains EVM"
+		},
+		"2": {
+			"title": "Swaps Intégrés",
+			"description": "Échangez des tokens directement dans le portefeuille avec des cotations agrégées de plusieurs DEX"
+		},
+		"3": {
+			"title": "Gestion NFT",
+			"description": "Visualisez, envoyez et gérez des collections NFT sur les réseaux supportés"
+		},
+		"4": {
+			"title": "Portefeuille Matériel",
+			"description": "Connectez des portefeuilles matériels Ledger et Trezor pour une sécurité renforcée"
+		},
+		"5": {
+			"title": "MetaMask Snaps",
+			"description": "Étendez les fonctionnalités avec des plugins tiers pour blockchains non-EVM et fonctionnalités"
+		},
+		"6": {
+			"title": "Vue Portefeuille",
+			"description": "Suivez vos avoirs sur les blockchains avec le tableau de bord de portefeuille intégré"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Accès DeFi",
+			"description": "Connectez-vous aux protocoles de prêt, DEX et yield sur Ethereum et L2s"
+		},
+		"2": {
+			"title": "Trading NFT",
+			"description": "Achetez, vendez et gérez des NFTs sur OpenSea, Blur et autres marchés"
+		},
+		"3": {
+			"title": "Échanges de Tokens",
+			"description": "Échangez des tokens avec des taux compétitifs via l'agrégation DEX intégrée"
+		},
+		"4": {
+			"title": "Connexion Web3",
+			"description": "Connectez-vous aux dApps et sites web en utilisant votre adresse de portefeuille"
+		},
+		"5": {
+			"title": "Cross-Chain",
+			"description": "Transférez des actifs et interagissez avec des apps sur plusieurs réseaux EVM"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que MetaMask et est-il sûr?",
+			"answer": "MetaMask est un portefeuille crypto auto-géré, ce qui signifie que vous contrôlez vos clés privées—pas MetaMask ou ConsenSys. Il est généralement considéré comme sûr lorsqu'il est utilisé correctement: activez la protection par mot de passe, ne partagez jamais votre phrase de récupération secrète, vérifiez les détails de transaction avant de signer et soyez prudent avec les sites de phishing. Les principaux risques sont l'erreur utilisateur (perdre la seed phrase, signer des transactions malveillantes) plutôt que des vulnérabilités logicielles."
+		},
+		"2": {
+			"question": "Comment ajouter un nouveau réseau à MetaMask?",
+			"answer": "Cliquez sur le menu déroulant réseau en haut, puis 'Ajouter Réseau'. Vous pouvez ajouter des réseaux populaires comme Polygon ou Arbitrum en un clic, ou entrer manuellement les détails RPC pour d'autres blockchains. Des sites comme Chainlist.org fournissent des configurations réseau vérifiées que vous pouvez ajouter automatiquement. Vérifiez toujours les URLs RPC depuis des sources officielles pour éviter de vous connecter à des nœuds malveillants."
+		},
+		"3": {
+			"question": "Qu'est-ce que MetaMask Snaps?",
+			"answer": "Les Snaps sont des extensions tierces qui ajoutent des fonctionnalités à MetaMask. Ils peuvent activer le support de blockchains non-EVM (comme Bitcoin, Solana, Cosmos), ajouter des insights de transaction, fournir des notifications personnalisées et plus encore. Les Snaps s'exécutent dans des environnements isolés pour la sécurité. Vous les installez depuis le répertoire MetaMask Snaps, et chaque Snap demande des permissions spécifiques que vous devez approuver."
+		},
+		"4": {
+			"question": "Pourquoi mes transactions sont bloquées ou échouent?",
+			"answer": "Causes courantes: prix du gas trop bas (augmentez le gas), problèmes de nonce (réinitialisez le compte dans les paramètres), congestion du réseau (attendez ou accélérez), ou erreurs de smart contract (vérifiez la dApp). Pour les transactions bloquées, vous pouvez 'Accélérer' (payer plus de gas) ou 'Annuler' (envoyer 0 ETH à vous-même avec le même nonce). L'onglet activité de MetaMask montre les transactions en attente que vous pouvez gérer."
+		},
+		"5": {
+			"question": "Comment MetaMask gagne-t-il de l'argent?",
+			"answer": "MetaMask gagne via les frais de swap (0,875% sur les échanges de tokens dans l'app via MetaMask Swaps), partenariats d'on-ramp (frais sur les achats fiat-vers-crypto via des fournisseurs comme MoonPay/Transak), et services MetaMask Institutional pour les organisations. Les fonctionnalités de base du portefeuille sont gratuites—vous ne payez que les frais de gas du réseau pour les transactions."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à explorer Web3?",
+		"button": "Ouvrir MetaMask",
+		"note": "Le portefeuille crypto auto-géré leader"
+	}
+}

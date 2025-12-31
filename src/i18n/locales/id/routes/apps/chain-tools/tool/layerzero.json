@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "LayerZero - Protokol Interoperabilitas Omnichain | Hubungkan 50+ Blockchain",
+		"description": "Temukan LayerZero, protokol messaging omnichain. Bangun aplikasi yang berinteraksi dengan mulus di 50+ blockchain dengan keamanan yang dapat disesuaikan.",
+		"keywords": "LayerZero, ZRO, omnichain, interoperabilitas, cross-chain, bridge, messaging, OFT"
+	},
+	"overview": "LayerZero adalah protokol interoperabilitas omnichain yang memungkinkan aplikasi untuk berkomunikasi di 50+ blockchain. Didirikan oleh Bryan Pellegrino, Ryan Zarick, dan Caleb Banister pada tahun 2021, LayerZero mempelopori konsep keamanan milik aplikasi untuk messaging cross-chain.\n\nTidak seperti bridge tradisional yang mengunci dan mencetak aset, LayerZero adalah protokol messaging yang memungkinkan pengembang mengirim jenis data apa pun antar chain. Model keamanan unik memungkinkan aplikasi memilih Decentralized Verifier Networks (DVN) mereka sendiri—mereka dapat menggunakan Chainlink, Polyhedra, Google Cloud, atau kombinasi apa pun untuk verifikasi pesan. Modularitas ini berarti tidak ada entitas tunggal yang mengontrol keamanan cross-chain.\n\nStandar kunci LayerZero termasuk OFT (Omnichain Fungible Token) untuk token multi-chain asli dan ONFT untuk NFT cross-chain. Dengan lebih dari 137 juta pesan yang diproses dan $5+ miliar nilai yang ditransfer, LayerZero telah menjadi infrastruktur fundamental untuk aplikasi omnichain seperti Stargate, Radiant, dan banyak lainnya.",
+	"features": {
+		"1": {
+			"title": "Messaging Universal",
+			"description": "Kirim jenis pesan apa pun antara 50+ jaringan blockchain yang didukung"
+		},
+		"2": {
+			"title": "Keamanan Modular",
+			"description": "Pilih dari 30+ DVN termasuk Chainlink, Google Cloud, dan Polyhedra"
+		},
+		"3": {
+			"title": "Standar OFT",
+			"description": "Buat token omnichain asli yang ada di beberapa chain dengan mulus"
+		},
+		"4": {
+			"title": "Protokol Immutable",
+			"description": "Kontrak inti bersifat immutable dan permissionless untuk kepercayaan maksimum"
+		},
+		"5": {
+			"title": "Fleksibilitas Eksekusi",
+			"description": "Siapa pun dapat mengeksekusi pesan, memastikan operasi permissionless"
+		},
+		"6": {
+			"title": "SDK Developer",
+			"description": "Alat dan kontrak komprehensif untuk membangun aplikasi omnichain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Omnichain",
+			"description": "Deploy token yang secara asli ada di beberapa blockchain"
+		},
+		"2": {
+			"title": "DeFi Cross-Chain",
+			"description": "Bangun protokol lending, DEX, dan yield yang mencakup beberapa chain"
+		},
+		"3": {
+			"title": "Tata Kelola Terpadu",
+			"description": "Aktifkan voting dan partisipasi tata kelola dari chain yang terhubung mana pun"
+		},
+		"4": {
+			"title": "Bridging NFT",
+			"description": "Pindahkan NFT antar chain sambil mempertahankan provenance dan kepemilikan"
+		},
+		"5": {
+			"title": "Aset Gaming",
+			"description": "Buat item dalam game dan mata uang yang dapat digunakan di berbagai game blockchain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu LayerZero dan bagaimana perbedaannya dengan bridge?",
+			"answer": "LayerZero adalah protokol messaging, bukan bridge. Bridge tradisional mengunci aset di satu chain dan mencetak versi wrapped di chain lain, menciptakan risiko honeypot. LayerZero memungkinkan aplikasi mengirim pesan sewenang-wenang (termasuk transfer token) antar chain, dengan aplikasi memilih konfigurasi keamanannya. Ini adalah infrastruktur untuk membangun aplikasi cross-chain, bukan hanya memindahkan token."
+		},
+		"2": {
+			"question": "Apa itu DVN dan bagaimana keamanan bekerja?",
+			"answer": "DVN (Decentralized Verifier Networks) adalah entitas yang memverifikasi pesan cross-chain. Tidak seperti operator bridge tunggal, LayerZero memungkinkan aplikasi memilih DVN mana yang dipercaya—oracle Chainlink, Google Cloud, bukti ZK Polyhedra, atau pengaturan kustom. Penyerang perlu mengkompromikan beberapa DVN independen yang dipilih oleh aplikasi, membuat serangan jauh lebih sulit."
+		},
+		"3": {
+			"question": "Apa itu standar OFT?",
+			"answer": "OFT (Omnichain Fungible Token) adalah standar LayerZero untuk membuat token yang secara asli ada di beberapa chain. Tidak seperti token wrapped yang mewakili aset terkunci, OFT menggunakan mekanisme burn-and-mint—token yang dibakar di chain sumber dicetak di chain tujuan. Ini mempertahankan pasokan terpadu di semua chain tanpa fragmentasi token wrapped."
+		},
+		"4": {
+			"question": "Untuk apa token ZRO digunakan?",
+			"answer": "ZRO adalah token asli LayerZero yang digunakan untuk biaya protokol, tata kelola, dan staking. Pengguna membayar ZRO untuk pesan cross-chain (alternatifnya, aplikasi dapat membayar biaya dalam token asli chain sumber). Pemegang ZRO dapat berpartisipasi dalam keputusan tata kelola tentang parameter protokol dan konfigurasi DVN."
+		},
+		"5": {
+			"question": "Aplikasi apa yang menggunakan LayerZero?",
+			"answer": "Aplikasi utama termasuk: Stargate (bridge cross-chain menggunakan LayerZero), Radiant Capital (lending omnichain), Angle Protocol (stablecoin omnichain), Holograph (NFT omnichain), dan banyak lainnya. Lebih dari 50.000 kontrak telah di-deploy menggunakan LayerZero, dan token besar seperti USDC telah mengintegrasikan OFT untuk dukungan multi-chain asli."
+		}
+	},
+	"cta": {
+		"ready": "Siap untuk go omnichain?",
+		"button": "Buka LayerZero",
+		"note": "Protokol interoperabilitas omnichain"
+	}
+}

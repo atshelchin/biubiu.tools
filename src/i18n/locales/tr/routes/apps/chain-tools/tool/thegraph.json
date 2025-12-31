@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "The Graph - Merkezi Olmayan İndeksleme Protokolü | Blokzincir Verilerini Sorgulayın",
+		"description": "Web3 için merkezi olmayan indeksleme protokolü The Graph'ı keşfedin. GraphQL ile blokzincir verilerini verimli bir şekilde sorgulamak için subgraph'lar oluşturun.",
+		"keywords": "The Graph, GRT, subgraph, blokzincir indeksleme, GraphQL, Web3 verisi, merkezi olmayan protokol"
+	},
+	"overview": "The Graph, blokzincir verilerinin verimli sorgulanmasını sağlayan merkezi olmayan bir indeksleme protokolüdür. 2018 yılında Yaniv Tal, Jannis Pohlmann ve Brandon Ramirez tarafından kurulan The Graph, temel bir sorunu çözer: blokzincir verileri, sorgulama için değil, konsensüs için optimize edilmiş formatlarda saklanır. Verileri doğrudan düğümlerden okumak yavaş ve sınırlıdır.\n\nThe Graph, belirli blokzincir verilerini indeksleyen ve düzenleyen açık API'ler olan 'subgraph'lar aracılığıyla çalışır. Geliştiriciler hangi verilerin indeksleneceğini tanımlar (olaylar, varlıklar, ilişkiler) ve The Graph ağı bunu GraphQL ile erişilebilir sorgulanabilir bir formata indeksler. İndeksleyiciler sorguları işleyen ve sunan düğümler çalıştırır, Küratörler hangi subgraph'ların değerli olduğunu işaret eder ve Delegatörler indeksleyicileri desteklemek için GRT stake eder.\n\n195+ milyar sorgu sunulması ve binlerce subgraph dağıtılmasıyla The Graph, Uniswap, Aave, Synthetix ve diğerleri dahil olmak üzere çoğu büyük dApp'e güç sağlar. Merkezi olmayan ağ, tek bir başarısızlık noktası olmamasını ve sansür direncini sağlar. GRT tokeni stake etme, kürasyon ve sorgu ücretlerini ödemek için kullanılır. The Graph, genellikle 'blokzincirlerin Google'ı' olarak adlandırılan Web3 için temel altyapı haline gelmiştir.",
+	"features": {
+		"1": {
+			"title": "Subgraph İndeksleme",
+			"description": "Uygulamanız için belirli blokzincir verilerini indeksleyen özel API'ler oluşturun"
+		},
+		"2": {
+			"title": "GraphQL Sorguları",
+			"description": "GraphQL ile blokzincir verilerini sorgulayın—esnek, verimli ve geliştirici dostu"
+		},
+		"3": {
+			"title": "Çoklu Zincir",
+			"description": "Ethereum, Polygon, Arbitrum ve diğer birçok zincirden veri indeksleyin"
+		},
+		"4": {
+			"title": "Merkezi Olmayan Ağ",
+			"description": "Güvenilirlik için bağımsız indeksleyiciler ağı tarafından sunulan sorgular"
+		},
+		"5": {
+			"title": "Subgraph Studio",
+			"description": "Geliştirici dostu stüdyo ile subgraph'ları oluşturun, test edin ve dağıtın"
+		},
+		"6": {
+			"title": "Gerçek Zamanlı Güncellemeler",
+			"description": "Subgraph'lar yeni bloklar üretildikçe otomatik olarak güncellenir"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Panoları",
+			"description": "İndekslenmiş protokol verileriyle analiz panolarına güç verin"
+		},
+		"2": {
+			"title": "NFT Pazaryerleri",
+			"description": "NFT sahipliğini, transferlerini ve metadata'sını verimli bir şekilde sorgulayın"
+		},
+		"3": {
+			"title": "Protokol Ön Yüzleri",
+			"description": "Hızlı blokzincir veri erişimiyle duyarlı dApp UI'ları oluşturun"
+		},
+		"4": {
+			"title": "Cüzdan Uygulamaları",
+			"description": "Kullanıcılara işlem geçmişi ve portföy verilerini gösterin"
+		},
+		"5": {
+			"title": "Veri Analizi",
+			"description": "Araştırmacılar analiz ve raporlama için zincir üstü verileri sorgular"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "The Graph nedir ve neden gerekli?",
+			"answer": "The Graph, blokzincir verilerini sorgulanabilir hale getiren bir indeksleme protokolüdür. Blokzincirler verileri sorgulama için değil konsensüs için saklar—verileri doğrudan okumak yavaş ve sınırlıdır. The Graph, blokzincir verilerini yapılandırılmış bir formata indeksler ve GraphQL ile sorgulamanıza olanak tanır ('son saatte 100 bin doların üzerindeki tüm takasları al' gibi). Çoğu büyük dApp The Graph'ı kullanır çünkü doğrudan düğüm sorguları duyarlı UI'ları destekleyemez."
+		},
+		"2": {
+			"question": "Subgraph nedir?",
+			"answer": "Subgraph, hangi blokzincir verilerinin indeksleneceğini ve nasıl düzenleneceğini tanımlayan açık bir API'dir. Hangi akıllı kontratları ve olayları izleyeceğinizi belirten bir 'subgraph manifestosu' ve blokzincir olaylarını varlıklara dönüştüren 'eşlemeler' yazarsınız. Dağıtıldıktan sonra The Graph ağı verileri indeksler ve GraphQL ile sunar. Herkes subgraph'lar oluşturabilir ve popüler olanlar birçok uygulama tarafından yeniden kullanılır."
+		},
+		"3": {
+			"question": "Subgraph nasıl sorgulanır?",
+			"answer": "Subgraph'lar GraphQL kullanılarak sorgulanır. Her subgraph'ın GraphQL sorguları gönderdiğiniz bir endpoint URL'si vardır. Örneğin: query { swaps(first: 10, orderBy: amountUSD) { ... } }. The Graph Explorer subgraph'lara göz atmanıza ve test etmenize olanak tanır. Üretim için Subgraph Studio'dan bir API anahtarı alır ve GRT veya kredi kartıyla sorgular için ödeme yaparsınız."
+		},
+		"4": {
+			"question": "GRT tokeni ne için kullanılır?",
+			"answer": "GRT, The Graph'ın birkaç kullanımı olan yerel tokenıdır: İndeksleyiciler ağa katılmak ve sorgu ücretleri kazanmak için GRT stake eder. Küratörler hangi subgraph'ların değerli olduğunu işaret etmek için GRT stake eder (ücretlerin bir kısmını kazanır). Delegatörler ödüller kazanmak için indeksleyicilerle GRT stake eder. Sorgu ücretleri GRT ile ödenir (veya GRT'ye dönüştürülen fiat üzerinden faturalandırma yoluyla). GRT, ağ genelinde teşvikleri hizalar."
+		},
+		"5": {
+			"question": "The Graph'ın merkezi olmayan ağı nasıl çalışır?",
+			"answer": "Üç ana rol: İndeksleyiciler subgraph'ları indeksleyen ve sorguları sunan, GRT stake eden ve ücret kazanan düğümler çalıştırır. Küratörler değerli subgraph'ları GRT stake ederek işaret eder, indeksleyicilerin neyi indeksleyeceğini önceliklendirmesine yardımcı olur. Delegatörler güvendikleri indeksleyicilerle GRT stake eder, ödülleri paylaşır. Bu, hiçbir tek varlığın altyapıyı kontrol etmediği merkezi olmayan bir ağ oluşturur—merkezi indeksleme hizmetlerinden farklıdır."
+		}
+	},
+	"cta": {
+		"ready": "Blokzincir verilerini sorgulamaya hazır mısınız?",
+		"button": "The Graph'ı Aç",
+		"note": "Web3 için merkezi olmayan indeksleme protokolü"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Alchemy - Blokzincir Geliştirici Platformu | Web3 Uygulamaları Oluşturun",
+		"description": "Lider blokzincir geliştirici platformu Alchemy'yi keşfedin. Güvenilir düğüm altyapısı, API'ler ve geliştirici araçlarıyla ölçeklenebilir Web3 uygulamaları oluşturun.",
+		"keywords": "Alchemy, blokzincir API, Web3 geliştirme, düğüm altyapısı, NFT API, dApp geliştirme, Ethereum API"
+	},
+	"overview": "Alchemy, ölçeklenebilir Web3 uygulamaları oluşturmak için gereken altyapı ve araçları sağlayan lider blokzincir geliştirici platformudur. 2017 yılında Nikil Viswanathan ve Joe Lau tarafından kurulan Alchemy, OpenSea, Adobe, Shopify ve birçok üst DeFi protokolü dahil olmak üzere büyük şirketlere güç sağlıyor.\n\nPlatform, Ethereum, Polygon, Arbitrum, Optimism, Solana ve diğer büyük zincirler için güvenilir düğüm altyapısı sunar. Temel RPC erişiminin ötesinde, Alchemy NFT'ler, tokenlar, işlemler ve webhook'lar için gelişmiş API'ler sağlar. Supernode teknolojileri, kendi düğümlerinizi çalıştırmaktan daha yüksek güvenilirlik ve daha düşük gecikme sağlar. Geliştirici araçları arasında Alchemy SDK, blokzincir gezgini, mempool görselleştiricisi ve hata ayıklama araçları bulunur.\n\nAlchemy, trilyonlarca isteği işlemiş ve 100 milyar doların üzerinde değer transfer eden uygulamaları desteklemiştir. 2022 itibariyle 10.2 milyar dolar değerlemeye sahip olan Alchemy, çoğu Web3 geliştiricisinin güvendiği temel altyapı olan blokzincirin AWS'si haline gelmiştir. Ücretsiz katmanları bağımsız geliştiriciler için erişilebilir hale getirirken, kurumsal planlar milyonlarca isteğe ölçeklenir.",
+	"features": {
+		"1": {
+			"title": "Supernode RPC",
+			"description": "Büyük zincirler arasında %99.9+ çalışma süresiyle yüksek güvenilirlikli düğüm altyapısı"
+		},
+		"2": {
+			"title": "Gelişmiş API'ler",
+			"description": "NFT metadataları, token bakiyeleri, işlem geçmişi ve daha fazlası için özelleştirilmiş API'ler"
+		},
+		"3": {
+			"title": "Webhook'lar",
+			"description": "Transferler ve kontrat çağrıları gibi zincir üstü olaylar için gerçek zamanlı bildirimler"
+		},
+		"4": {
+			"title": "Alchemy SDK",
+			"description": "Yaygın blokzincir işlemlerini basitleştiren geliştirici dostu SDK"
+		},
+		"5": {
+			"title": "Account Kit",
+			"description": "Gazsız işlemler ve sosyal giriş için akıllı cüzdan altyapısı"
+		},
+		"6": {
+			"title": "Rollup Çözümleri",
+			"description": "Alchemy'nin rollup-as-a-service platformuyla özel L2/L3 zincirleri dağıtın"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp Geliştirme",
+			"description": "Sağlam blokzincir altyapısıyla güvenilir merkezi olmayan uygulamalar oluşturun"
+		},
+		"2": {
+			"title": "NFT Platformları",
+			"description": "Kapsamlı metadata API'leriyle NFT pazaryerlerine ve uygulamalarına güç verin"
+		},
+		"3": {
+			"title": "Cüzdan Hizmetleri",
+			"description": "Gerçek zamanlı bakiye güncellemeleri ve işlem geçmişiyle cüzdanlar oluşturun"
+		},
+		"4": {
+			"title": "DeFi Protokolleri",
+			"description": "DeFi uygulamaları için güvenilir fiyat verilerine ve işlem yayınına erişin"
+		},
+		"5": {
+			"title": "Kurumsal Web3",
+			"description": "Blokzincir özelliklerini ölçekte kurumsal uygulamalara entegre edin"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Alchemy nedir ve geliştiriciler neden kullanıyor?",
+			"answer": "Alchemy, geliştiricilerin kendi düğümlerini çalıştırmak zorunda kalmaması için düğüm erişimi ve API'ler sağlayan blokzincir altyapısıdır. Ethereum düğümlerini çalıştırmak önemli kaynaklar gerektirir (TB depolama, sürekli senkronizasyon, DevOps). Alchemy bu altyapıyı yönetirken NFT API'leri, webhook'lar ve hata ayıklama araçları gibi gelişmiş özellikler ekler. Çoğu büyük dApp, Alchemy veya benzer sağlayıcıları kullanır."
+		},
+		"2": {
+			"question": "Alchemy kendi düğümünüzü çalıştırmakla karşılaştırıldığında nasıl?",
+			"answer": "Kendi düğümünüzü çalıştırmak tam kontrol sağlar ancak önemli kaynaklar gerektirir: donanım, depolama (Ethereum için 1-2TB), bant genişliği ve devam eden bakım. Alchemy'nin Supernode'u daha yüksek güvenilirlik (%99.9+ çalışma süresi), daha düşük gecikme, gelişmiş API'ler sağlar ve otomatik olarak ölçeklenir. Çoğu proje için Alchemy kullanmak, çok yüksek hacimlere ulaşana kadar kendi sunucunuzu barındırmaktan daha uygun maliyetlidir."
+		},
+		"3": {
+			"question": "Alchemy'yi kullanmak ücretsiz mi?",
+			"answer": "Alchemy, çoğu bağımsız projeyi ve erken aşama girişimleri kapsayan cömert bir ücretsiz katman sunar: ayda 300M hesaplama birimi. Ücretli planlar (Growth, Scale, Enterprise) daha fazla hesaplama birimi, daha yüksek oran limitleri, özel destek ve gelişmiş özellikler sağlar. Birçok geliştirici ücretsiz başlar ve uygulamaları büyüdükçe yükseltme yapar."
+		},
+		"4": {
+			"question": "Alchemy hangi zincirleri destekliyor?",
+			"answer": "Alchemy, Ethereum, Polygon, Arbitrum, Optimism, Base, Solana ve daha fazlası dahil olmak üzere büyük zincirleri destekler. Her zincir, tam RPC desteğinin yanı sıra zincire özel gelişmiş API'lere sahiptir. Geliştirici talebine göre sürekli olarak yeni zincirler ekliyorlar. Desteklenen ağların güncel listesi için belgelerine bakın."
+		},
+		"5": {
+			"question": "Alchemy Account Kit nedir?",
+			"answer": "Account Kit, hesap soyutlamayı (ERC-4337) sağlayan Alchemy'nin akıllı cüzdan altyapısıdır. dApp'lerin gazsız işlemler (kullanıcı gazını sponsorlama), sosyal giriş (e-posta/Google ile oturum açma) ve programlanabilir cüzdanlar sunmasına olanak tanır. Bu, kullanıcıların seed phrase'leri yönetmesine veya gaz için ETH tutmasına olan ihtiyacı ortadan kaldırarak UX'i iyileştirir."
+		}
+	},
+	"cta": {
+		"ready": "Web3 üzerine inşa etmeye hazır mısınız?",
+		"button": "Alchemy'yi Aç",
+		"note": "Lider blokzincir geliştirici platformu"
+	}
+}

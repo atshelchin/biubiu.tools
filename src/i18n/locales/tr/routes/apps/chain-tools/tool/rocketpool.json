@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Rocket Pool - Merkezi Olmayan Ethereum Stake Etme | rETH Liquid Staking Token",
+		"description": "Merkezi olmayan Ethereum stake protokolü Rocket Pool'u keşfedin. rETH için herhangi bir miktarda ETH stake edin veya sadece 8 ETH ile node çalıştırın. Güvensiz ve izinsiz.",
+		"keywords": "Rocket Pool, rETH, Ethereum staking, liquid staking, node operator, merkezi olmayan, RPL"
+	},
+	"overview": "Rocket Pool, hem liquid staking (rETH) hem de izinsiz node operasyonu sunan önde gelen merkezi olmayan Ethereum stake protokolüdür. 2016'da David Rugendyke tarafından kurulan Rocket Pool, ilk liquid staking çözümlerinden biridir ve merkezi stake sağlayıcılarına en merkezi olmayan alternatif olmaya devam etmektedir.\n\nProtokol iki taraflı çalışır: normal kullanıcılar herhangi bir miktarda ETH stake edebilir ve stake ödülleri biriktikçe değer kazanan bir liquid staking token'ı olan rETH alabilirler. Node operatörleri, RPL tokenlarını bağlayıp mevduat sahibi ETH ile eşleştirilerek sadece 8 ETH ile (solo stake'de 32 ETH'ye karşı) validator çalıştırabilirler.\n\nRocket Pool'un temel ayırt edici özelliği gerçek merkeziyetsizliktir—herkes izin almadan node çalıştırabilir ve protokol merkezi bir operatör setine dayanmaz. Oracle DAO, fiyat beslemeleri sağlar ve protokol operasyonlarını yönetir. Dünya çapında binlerce bağımsız node operatörü ile Rocket Pool, Ethereum için en sansüre dayanıklı stake seçeneğini sunar.",
+	"features": {
+		"1": {
+			"title": "rETH Liquid Staking",
+			"description": "Herhangi bir miktarda ETH stake edin ve otomatik olarak stake ödülleri biriktiren rETH alın"
+		},
+		"2": {
+			"title": "8 ETH Minipool'lar",
+			"description": "Protokol mevduat sahipleriyle eşleştirilerek sadece 8 ETH ile validator çalıştırın"
+		},
+		"3": {
+			"title": "İzinsiz Node'lar",
+			"description": "Herkes onay almadan node operatörü olabilir—gerçekten merkezi olmayan"
+		},
+		"4": {
+			"title": "RPL Teminatı",
+			"description": "Node operatörleri slashing'e karşı sigorta olarak RPL bağlar, stake'lerinde RPL ödülleri kazanır"
+		},
+		"5": {
+			"title": "Smoothing Pool",
+			"description": "Katılan node'lar arasında MEV ve öncelik ücretlerini sosyalleştiren isteğe bağlı havuz"
+		},
+		"6": {
+			"title": "Oracle DAO",
+			"description": "rETH fiyatlandırması ve protokol operasyonları için merkezi olmayan oracle ağı"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid ETH Stake Etme",
+			"description": "Kilitleme olmadan ETH stake edin—stake ödülleri kazanırken rETH'yi DeFi'de kullanın"
+		},
+		"2": {
+			"title": "Evde Node İşletimi",
+			"description": "Azaltılmış sermaye gereksinimleriyle evde Ethereum validator'ları çalıştırın"
+		},
+		"3": {
+			"title": "DeFi Teminatı",
+			"description": "rETH'yi Aave, Maker ve diğer borç verme protokollerinde teminat olarak kullanın"
+		},
+		"4": {
+			"title": "Merkezi Olmayan Stake",
+			"description": "Gerçekten izinsiz bir protokol seçerek Ethereum merkeziyetsizliğini destekleyin"
+		},
+		"5": {
+			"title": "RPL Stake Etme",
+			"description": "Gelişmiş stake getirileri kazanmak için node operatörü olarak RPL bağlayın"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Rocket Pool nedir ve rETH nasıl çalışır?",
+			"answer": "Rocket Pool merkezi olmayan bir stake protokolüdür. ETH yatırdığınızda, stake edilmiş ETH'niz ve biriken ödüllerinizi temsil eden bir token olan rETH alırsınız. rETH'nin değeri, stake ödülleri biriktikçe ETH'ye göre zamanla artar. rETH'yi istediğiniz zaman protokol veya DEX'ler aracılığıyla ETH'ye geri takas edebilirsiniz. ETH, binlerce bağımsız node operatörü tarafından stake edilir."
+		},
+		"2": {
+			"question": "Rocket Pool, Lido'dan nasıl farklıdır?",
+			"answer": "Ana fark merkeziyetsizliktir. Rocket Pool, herkesin 8 ETH ile izinsiz olarak node çalıştırmasına izin verirken, Lido seçilmiş profesyonel operatörler kullanır. Rocket Pool, küresel olarak binlerce bağımsız node operatörüne sahiptir ve bu da onu daha sansüre dayanıklı yapar. Lido TVL açısından daha büyüktür ancak validator işletiminde daha merkezidir."
+		},
+		"3": {
+			"question": "RPL nedir ve node operatörleri neden ona ihtiyaç duyar?",
+			"answer": "RPL, Rocket Pool'un yönetim ve fayda token'ıdır. Node operatörleri, slashing'e karşı sigorta olarak ödünç aldıkları ETH'nin en az %10'u değerinde RPL bağlamalıdır. Karşılığında, ETH stake ödüllerinin üzerine RPL enflasyon ödülleri kazanırlar. RPL ayrıca protokol yönetiminde oy hakkı verir."
+		},
+		"4": {
+			"question": "Evde Rocket Pool node'u çalıştırabilir miyim?",
+			"answer": "Evet! Rocket Pool, ev stake edenler için tasarlanmıştır. Minimum 8 ETH, teminat için RPL, donanım gereksinimlerini karşılayan bir bilgisayar ve kararlı bir internet bağlantısına ihtiyacınız vardır. Smartnode yazılımı kurulumu basitleştirir. Birçok node operatörü evde tüketici donanımında çalışır ve Ethereum'un coğrafi merkeziyetsizliğine katkıda bulunur."
+		},
+		"5": {
+			"question": "rETH'nin riskleri nelerdir?",
+			"answer": "Riskler şunları içerir: akıllı sözleşme güvenlik açıkları, slashing olayları (RPL sigortasıyla azaltılır), DEX'lerde rETH fiyatının gerçeğe uygun değerden sapması, Oracle DAO'daki oracle riskleri ve istemci hataları gibi genel stake riskleri. Rocket Pool kapsamlı şekilde denetlenmiştir ve bir bug bounty programına sahiptir."
+		}
+	},
+	"cta": {
+		"ready": "ETH'yi merkezi olmayan şekilde stake etmeye hazır mısınız?",
+		"button": "Rocket Pool'u Aç",
+		"note": "Merkezi olmayan Ethereum liquid staking"
+	}
+}

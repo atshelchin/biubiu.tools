@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Convex Finance - Staking Potenziato Curve e Frax | Massimizza Ricompense CRV",
+		"description": "Scopri Convex Finance, la piattaforma per massimizzare i rendimenti Curve e Frax. Metti in stake token LP per ricompense CRV potenziate senza blocco, o stake CVX per commissioni del protocollo.",
+		"keywords": "Convex Finance, CVX, Curve, CRV, potenziamento rendimento, DeFi, staking liquidità, veCRV"
+	},
+	"overview": "Convex Finance è un protocollo DeFi che massimizza i rendimenti per i fornitori di liquidità di Curve Finance aggregando il potere di voto veCRV. Lanciato a maggio 2021, Convex ha risolto un problema chiave: guadagnare le massime ricompense CRV su Curve richiede di bloccare CRV fino a 4 anni, cosa che la maggior parte degli utenti non può o non vuole fare.\n\nConvex raggruppa veCRV dagli utenti che mettono in stake il loro CRV, quindi utilizza questo potere di voto aggregato per potenziare le ricompense per tutti i depositanti Convex. I possessori di token LP Curve possono mettere in stake su Convex per guadagnare ricompense CRV + CVX potenziate senza bloccare personalmente alcun CRV. Questo ha democratizzato l'accesso ai rendimenti potenziati e ha scatenato le \"Curve Wars\"—protocolli in competizione per il potere di voto CVX di Convex per dirigere le emissioni CRV.\n\nLa piattaforma si è espansa oltre Curve per supportare Frax Finance (cvxFXS) e il protocollo f(x). I possessori di token CVX possono bloccare i loro token come vlCVX per votare sui pesi dei gauge e guadagnare bribe dai protocolli che cercano di dirigere le emissioni. Con oltre 1 miliardo di dollari in TVL, Convex è centrale nell'ecosistema Curve.",
+	"features": {
+		"1": {
+			"title": "Ricompense CRV Potenziate",
+			"description": "Guadagna le massime ricompense Curve senza bloccare personalmente CRV per 4 anni"
+		},
+		"2": {
+			"title": "Ricompense CVX",
+			"description": "Metti in stake token LP Curve per guadagnare CVX oltre al CRV potenziato"
+		},
+		"3": {
+			"title": "Staking cvxCRV",
+			"description": "Metti in stake CRV come cvxCRV per guadagnare ricompense CRV, CVX e 3CRV"
+		},
+		"4": {
+			"title": "Voto vlCVX",
+			"description": "Blocca CVX per votare sui pesi dei gauge Curve e guadagnare bribe"
+		},
+		"5": {
+			"title": "Supporto Frax",
+			"description": "Metti in stake FXS come cvxFXS per ricompense potenziate del protocollo Frax"
+		},
+		"6": {
+			"title": "Auto-Compounding",
+			"description": "Le ricompense vengono automaticamente reclamate e composte per i depositanti"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Potenziamento LP Curve",
+			"description": "Guadagna le massime ricompense CRV sulle tue posizioni LP Curve senza bloccare CRV"
+		},
+		"2": {
+			"title": "Staking CRV",
+			"description": "Converti CRV in cvxCRV per guadagnare rendimenti senza blocchi di 4 anni"
+		},
+		"3": {
+			"title": "Potere di Governance",
+			"description": "Blocca CVX come vlCVX per dirigere le emissioni Curve e guadagnare bribe"
+		},
+		"4": {
+			"title": "Rendimento Passivo",
+			"description": "Metti in stake e guadagna ricompense auto-composte su Curve e Frax"
+		},
+		"5": {
+			"title": "Influenza del Protocollo",
+			"description": "I protocolli accumulano CVX per influenzare le emissioni CRV verso i loro pool"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Convex Finance e perché esiste?",
+			"answer": "Convex risolve il problema del boost di Curve. Per guadagnare le massime ricompense CRV, devi bloccare CRV come veCRV fino a 4 anni. La maggior parte degli utenti non può farlo. Convex aggrega veCRV da molti utenti per fornire ricompense potenziate a tutti coloro che mettono in stake token LP Curve su Convex—nessun blocco personale richiesto."
+		},
+		"2": {
+			"question": "Qual è la differenza tra CRV, cvxCRV e veCRV?",
+			"answer": "CRV è il token di Curve. veCRV è CRV vote-escrowed bloccato direttamente in Curve fino a 4 anni—fornisce potere di voto e boost ma è illiquido. cvxCRV è CRV depositato in Convex—è liquido (scambiabile) e guadagna rendimenti dalla posizione veCRV aggregata di Convex. Convertire CRV in cvxCRV è unidirezionale."
+		},
+		"3": {
+			"question": "Cosa sono le Curve Wars?",
+			"answer": "Curve Wars si riferisce ai protocolli in competizione per accumulare CVX/vlCVX per dirigere le emissioni CRV. Poiché Convex controlla un significativo veCRV, controllare il potere di voto CVX significa controllare dove vanno le ricompense Curve. I protocolli offrono \"bribe\" ai votanti vlCVX per votare per i loro pool, creando un meta-gioco attorno alla direzione delle emissioni."
+		},
+		"4": {
+			"question": "Cos'è vlCVX e come funzionano le bribe?",
+			"answer": "vlCVX (vote-locked CVX) è CVX bloccato per oltre 16 settimane. I possessori di vlCVX votano su quali pool Curve ricevono le emissioni CRV. I protocolli pagano \"bribe\" (ricompense in token) ai votanti vlCVX che dirigono le emissioni verso i loro pool. Le bribe sono spesso più preziose del CVX bloccato, creando rendimenti attraenti per i votanti."
+		},
+		"5": {
+			"question": "La conversione di CRV in cvxCRV è reversibile?",
+			"answer": "No, convertire CRV in cvxCRV è unidirezionale e permanente. Tuttavia, cvxCRV è scambiabile sui DEX. Il tasso di cambio cvxCRV/CRV fluttua in base alle condizioni di mercato—a volte cvxCRV viene scambiato con uno sconto o un premio rispetto a CRV. Considera questo prima di convertire."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a massimizzare i tuoi rendimenti Curve?",
+		"button": "Apri Convex",
+		"note": "Staking potenziato per Curve e Frax"
+	}
+}

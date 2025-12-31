@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "LayerZero - Protocollo di Interoperabilità Omnichain | Connetti 50+ Blockchain",
+		"description": "Scopri LayerZero, il protocollo di messaggistica omnichain. Costruisci applicazioni che interagiscono perfettamente su 50+ blockchain con sicurezza personalizzabile.",
+		"keywords": "LayerZero, ZRO, omnichain, interoperabilità, cross-chain, bridge, messaging, OFT"
+	},
+	"overview": "LayerZero è un protocollo di interoperabilità omnichain che consente alle applicazioni di comunicare attraverso 50+ blockchain. Fondato da Bryan Pellegrino, Ryan Zarick e Caleb Banister nel 2021, LayerZero ha pionerato il concetto di sicurezza di proprietà dell'applicazione per la messaggistica cross-chain.\n\nA differenza dei bridge tradizionali che bloccano e mintano asset, LayerZero è un protocollo di messaggistica che consente agli sviluppatori di inviare qualsiasi tipo di dati tra chain. Il modello di sicurezza unico permette alle applicazioni di scegliere le proprie Decentralized Verifier Networks (DVN)—possono usare Chainlink, Polyhedra, Google Cloud o qualsiasi combinazione per la verifica dei messaggi. Questa modularità significa che nessuna entità singola controlla la sicurezza cross-chain.\n\nGli standard chiave di LayerZero includono OFT (Omnichain Fungible Token) per token multi-chain nativi e ONFT per NFT cross-chain. Con oltre 137 milioni di messaggi elaborati e 5+ miliardi di dollari in valore trasferito, LayerZero è diventata un'infrastruttura fondamentale per applicazioni omnichain come Stargate, Radiant e molte altre.",
+	"features": {
+		"1": {
+			"title": "Messaggistica Universale",
+			"description": "Invia qualsiasi tipo di messaggio tra 50+ reti blockchain supportate"
+		},
+		"2": {
+			"title": "Sicurezza Modulare",
+			"description": "Scegli tra 30+ DVN inclusi Chainlink, Google Cloud e Polyhedra"
+		},
+		"3": {
+			"title": "Standard OFT",
+			"description": "Crea token omnichain nativi che esistono su più chain senza soluzione di continuità"
+		},
+		"4": {
+			"title": "Protocollo Immutabile",
+			"description": "I contratti core sono immutabili e permissionless per la massima fiducia"
+		},
+		"5": {
+			"title": "Flessibilità di Esecuzione",
+			"description": "Chiunque può eseguire messaggi, garantendo operazione permissionless"
+		},
+		"6": {
+			"title": "SDK per Sviluppatori",
+			"description": "Strumenti e contratti completi per costruire applicazioni omnichain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Omnichain",
+			"description": "Distribuisci token che esistono nativamente su più blockchain"
+		},
+		"2": {
+			"title": "DeFi Cross-Chain",
+			"description": "Costruisci protocolli di lending, DEX e yield che spaziano su più chain"
+		},
+		"3": {
+			"title": "Governance Unificata",
+			"description": "Abilita votazioni e partecipazione alla governance da qualsiasi chain connessa"
+		},
+		"4": {
+			"title": "Bridging NFT",
+			"description": "Sposta NFT tra chain mantenendo provenienza e proprietà"
+		},
+		"5": {
+			"title": "Asset di Gaming",
+			"description": "Crea oggetti in-game e valute utilizzabili in più giochi blockchain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è LayerZero e come si differenzia dai bridge?",
+			"answer": "LayerZero è un protocollo di messaggistica, non un bridge. I bridge tradizionali bloccano asset su una chain e mintano versioni wrapped su un'altra, creando rischi di honeypot. LayerZero consente alle applicazioni di inviare messaggi arbitrari (inclusi trasferimenti di token) tra chain, con l'applicazione che sceglie la sua configurazione di sicurezza. È un'infrastruttura per costruire app cross-chain, non solo per spostare token."
+		},
+		"2": {
+			"question": "Cosa sono i DVN e come funziona la sicurezza?",
+			"answer": "I DVN (Decentralized Verifier Networks) sono entità che verificano messaggi cross-chain. A differenza di singoli operatori di bridge, LayerZero permette alle applicazioni di scegliere quali DVN fidarsi—oracle Chainlink, Google Cloud, prove ZK Polyhedra o configurazioni personalizzate. Un attaccante dovrebbe compromettere più DVN indipendenti scelti dall'applicazione, rendendo gli attacchi molto più difficili."
+		},
+		"3": {
+			"question": "Cos'è lo standard OFT?",
+			"answer": "OFT (Omnichain Fungible Token) è lo standard di LayerZero per creare token che esistono nativamente su più chain. A differenza dei token wrapped che rappresentano asset bloccati, gli OFT usano un meccanismo burn-and-mint—i token bruciati sulla chain sorgente vengono mintati sulla chain di destinazione. Questo mantiene un'offerta unificata su tutte le chain senza frammentazione di token wrapped."
+		},
+		"4": {
+			"question": "A cosa serve il token ZRO?",
+			"answer": "ZRO è il token native di LayerZero utilizzato per commissioni di protocollo, governance e staking. Gli utenti pagano ZRO per messaggi cross-chain (in alternativa, le app possono pagare commissioni nel token nativo della chain sorgente). I possessori di ZRO possono partecipare alle decisioni di governance sui parametri del protocollo e le configurazioni DVN."
+		},
+		"5": {
+			"question": "Quali applicazioni usano LayerZero?",
+			"answer": "Le principali applicazioni includono: Stargate (bridge cross-chain che usa LayerZero), Radiant Capital (lending omnichain), Angle Protocol (stablecoin omnichain), Holograph (NFT omnichain) e molte altre. Oltre 50.000 contratti sono stati distribuiti usando LayerZero, e token importanti come USDC hanno integrato OFT per supporto multi-chain nativo."
+		}
+	},
+	"cta": {
+		"ready": "Pronto ad andare omnichain?",
+		"button": "Apri LayerZero",
+		"note": "Il protocollo di interoperabilità omnichain"
+	}
+}

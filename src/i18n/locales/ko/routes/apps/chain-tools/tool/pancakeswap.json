@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷",
+		"code": "ko"
+	},
+	"seo": {
+		"title": "PancakeSwap - 선도적인 멀티체인 DEX | BNB Chain에서 거래 및 수익 창출",
+		"description": "BNB Chain에서 가장 인기 있는 DEX인 PancakeSwap을 경험하세요. 토큰 거래, 유동성 공급, CAKE 파밍, 여러 체인에서 IFO 참여가 가능합니다.",
+		"keywords": "PancakeSwap, BNB Chain, DEX, CAKE, 이자 농사, 유동성, IFO, DeFi"
+	},
+	"overview": "PancakeSwap은 BNB Chain에서 가장 큰 탈중앙화 거래소이며, Ethereum, Arbitrum, Base 등을 지원하는 선도적인 멀티체인 DEX로 확장되었습니다. 2020년 9월에 출시된 PancakeSwap은 토큰 스왑, 유동성 공급, 수익 창출을 원하는 BNB Chain 사용자들에게 빠르게 주요 플랫폼이 되었습니다.\n\n이 플랫폼은 AMM을 통한 토큰 스왑, Farms 및 Syrup Pools를 통한 이자 농사, 새로운 토큰 출시를 위한 Initial Farm Offerings(IFO), 예측 시장, NFT 마켓플레이스, 그리고 무기한 거래를 포함한 포괄적인 DeFi 경험을 제공합니다. CAKE 토큰은 거버넌스 및 유틸리티 토큰으로 사용되며, 스테이킹 옵션을 통해 다양한 혜택을 제공합니다.\n\nPancakeSwap은 자동화된 유동성을 위한 포지션 매니저, 크로스체인 스왑, 집중 유동성 풀(v3)과 같은 기능을 추가하며 지속적으로 혁신해왔습니다. 수십억 달러의 거래량과 수백만 명의 사용자를 보유하고 있으며, BNB Chain의 지배적인 DEX이자 더 넓은 멀티체인 DeFi 생태계에서 중요한 플레이어로 남아있습니다.",
+	"features": {
+		"1": {
+			"title": "멀티체인 DEX",
+			"description": "BNB Chain, Ethereum, Arbitrum, Base, zkSync 등 여러 체인에서 거래 가능"
+		},
+		"2": {
+			"title": "이자 농사",
+			"description": "Farms에서 LP 토큰을 스테이킹하거나 Syrup Pools에서 단일 자산을 스테이킹하여 CAKE 보상 획득"
+		},
+		"3": {
+			"title": "IFOs",
+			"description": "Initial Farm Offerings에 참여하여 새로운 토큰 출시에 조기 접근"
+		},
+		"4": {
+			"title": "V3 집중 유동성",
+			"description": "특정 가격 범위 내에서 유동성을 제공하여 더 높은 자본 효율성 달성"
+		},
+		"5": {
+			"title": "무기한 거래",
+			"description": "주요 암호화폐 쌍에 대해 레버리지를 사용하여 무기한 선물 거래"
+		},
+		"6": {
+			"title": "게임 및 NFTs",
+			"description": "예측 시장, 복권, NFT 마켓플레이스 참여"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "토큰 스왑",
+			"description": "BNB Chain에서 낮은 수수료로 BEP-20 토큰 및 크로스체인 자산 거래"
+		},
+		"2": {
+			"title": "수익 창출",
+			"description": "LP 토큰 또는 CAKE를 스테이킹하여 파밍 보상을 통해 수동 소득 획득"
+		},
+		"3": {
+			"title": "새로운 토큰 접근",
+			"description": "IFO에 참여하여 출시 가격으로 새로운 토큰 구매"
+		},
+		"4": {
+			"title": "유동성 공급",
+			"description": "유동성을 제공하여 거래 수수료 및 CAKE 인센티브 획득"
+		},
+		"5": {
+			"title": "크로스체인 거래",
+			"description": "플랫폼을 떠나지 않고 여러 체인에서 자산 스왑"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "PancakeSwap이란 무엇이며 어떻게 작동하나요?",
+			"answer": "PancakeSwap은 AMM(Automated Market Maker) 모델을 사용하는 탈중앙화 거래소입니다. 주문서 대신 사용자가 제공한 유동성 풀에 대해 거래가 실행됩니다. 즉시 토큰을 스왑하고, 수수료를 벌기 위해 유동성을 제공하며, LP 토큰 또는 CAKE를 스테이킹하여 추가 보상을 받을 수 있습니다."
+		},
+		"2": {
+			"question": "CAKE 토큰은 무엇에 사용되나요?",
+			"answer": "CAKE는 PancakeSwap의 거버넌스 및 유틸리티 토큰입니다. Syrup Pools에서 CAKE를 스테이킹하여 다른 토큰을 얻을 수 있으며, veCAKE를 위해 CAKE를 잠가 파밍 보상을 부스트하고 거버넌스에 투표할 수 있으며, IFO에 참여하고, 플랫폼 전반에서 거래 쌍으로 사용할 수 있습니다."
+		},
+		"3": {
+			"question": "PancakeSwap에서 어떻게 파밍하나요?",
+			"answer": "파밍 방법: 1) 거래 쌍에 유동성을 추가하여 LP 토큰 획득, 2) Farms로 이동하여 쌍 찾기, 3) LP 토큰 스테이킹, 4) 시간이 지남에 따라 CAKE 보상 획득, 5) 보상 수확 또는 복리 투자. 파밍에는 비영구적 손실 위험이 있음을 유의하세요."
+		},
+		"4": {
+			"question": "PancakeSwap은 안전하게 사용할 수 있나요?",
+			"answer": "PancakeSwap은 광범위한 보안 감사와 강력한 실적을 갖춘 가장 확립된 DEX 중 하나입니다. 그러나 DeFi는 항상 스마트 컨트랙트 취약점, 비영구적 손실, 토큰 위험을 포함한 위험을 수반합니다. 손실을 감당할 수 있는 금액만 투자하고 거래하기 전에 토큰을 조사하세요."
+		},
+		"5": {
+			"question": "PancakeSwap은 어떤 체인을 지원하나요?",
+			"answer": "PancakeSwap은 BNB Chain을 넘어 Ethereum, Arbitrum, Base, zkSync Era, Polygon zkEVM, Linea, opBNB, Aptos를 지원하도록 확장되었습니다. 각 체인에서 네이티브 자산을 스왑하고 크로스체인 기능을 사용하여 체인 간 브리지할 수 있습니다."
+		}
+	},
+	"cta": {
+		"ready": "PancakeSwap에서 거래할 준비가 되셨나요?",
+		"button": "PancakeSwap 열기",
+		"note": "거래 및 수익 창출을 위한 선도적인 멀티체인 DEX"
+	}
+}

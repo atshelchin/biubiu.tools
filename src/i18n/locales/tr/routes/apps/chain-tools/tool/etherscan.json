@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Etherscan - Ethereum Blokzincir Gezgini | İşlemleri & Kontratları Takip Edin",
+		"description": "Lider Ethereum blokzincir gezgini Etherscan'i keşfedin. İşlemleri takip edin, kontratları doğrulayın, adresleri analiz edin ve zincir üstü verileri keşfedin.",
+		"keywords": "Etherscan, blokzincir gezgini, Ethereum, işlem takipçisi, akıllı kontratlar, gaz takipçisi, token takipçisi"
+	},
+	"overview": "Etherscan, tüm zincir üstü aktiviteye bir pencere sağlayan Ethereum için lider blokzincir gezginidir. 2015 yılında kurulan Etherscan, kontratları hata ayıklayan geliştiricilerden işlemleri takip eden kullanıcılara, zincir üstü verileri analiz eden araştırmacılara kadar Ethereum ile etkileşim kuran herkes için temel bir araç haline gelmiştir.\n\nPlatform, kullanıcıların Ethereum'daki herhangi bir işlemi, adresi, tokeni veya akıllı kontratı aramasına olanak tanır. Temel özellikler arasında işlem takibi, kontrat doğrulama ve okuma, token transferleri ve bakiyeleri, gaz fiyatı takibi ve detaylı analizler bulunur. Etherscan ayrıca geliştiricilerin blokzincir verilerine programatik olarak erişmeleri için API'ler sağlar. Doğrulanmış kontrat özellikleri bir standart haline gelmiştir—kullanıcılar etkileşim kurmadan önce kontratların 'Etherscan'de doğrulanıp doğrulanmadığını' rutin olarak kontrol eder.\n\nEtherscan, ayrı gezginler aracılığıyla diğer EVM zincirlerini desteklemek için genişlemiştir: Polygonscan, Arbiscan, Optimistic Etherscan, BSCScan ve daha fazlası. Ekip ayrıca cüzdandan cüzdana mesajlaşma için Blockscan Chat'i oluşturdu. Günlük milyarlarca sayfa görüntüleme ve milyonlarca API çağrısıyla Etherscan, Ethereum'un şeffaflığını herkese erişilebilir kılan temel altyapıdır.",
+	"features": {
+		"1": {
+			"title": "İşlem Takibi",
+			"description": "Detaylı durum, kullanılan gaz ve kod çözülmüş verilerle herhangi bir işlemi arayın"
+		},
+		"2": {
+			"title": "Kontrat Doğrulama",
+			"description": "Şeffaflık ve güven için akıllı kontrat kaynak kodunu doğrulayın ve okuyun"
+		},
+		"3": {
+			"title": "Token Takibi",
+			"description": "ERC-20 ve ERC-721 token transferlerini, sahiplerini ve analizlerini keşfedin"
+		},
+		"4": {
+			"title": "Gaz Takipçisi",
+			"description": "Yavaş, ortalama ve hızlı tahminlerle gerçek zamanlı gaz fiyatı takibi"
+		},
+		"5": {
+			"title": "Adres Analizi",
+			"description": "Tam işlem geçmişini, token bakiyelerini ve kontrat etkileşimlerini görüntüleyin"
+		},
+		"6": {
+			"title": "Geliştirici API'leri",
+			"description": "Uygulama oluşturmak için blokzincir verilerine programatik erişim"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "İşlem Doğrulama",
+			"description": "Kripto gönderdikten sonra işlem durumunu ve ayrıntılarını onaylayın"
+		},
+		"2": {
+			"title": "Kontrat Araştırması",
+			"description": "DeFi protokolleriyle etkileşim kurmadan önce doğrulanmış kontrat kodunu okuyun"
+		},
+		"3": {
+			"title": "Cüzdan Analizi",
+			"description": "Varlıkları ve işlem modellerini anlamak için adresleri araştırın"
+		},
+		"4": {
+			"title": "Token Keşfi",
+			"description": "Yeni tokenları bulun, meşruiyeti kontrol edin ve sahip dağılımını analiz edin"
+		},
+		"5": {
+			"title": "Hata Ayıklama & Geliştirme",
+			"description": "Geliştiriciler işlemleri hata ayıklamak ve kontratları test etmek için Etherscan kullanır"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Etherscan nedir ve nasıl kullanılır?",
+			"answer": "Etherscan, Ethereum'daki her şeyi aramanıza ve analiz etmenize olanak tanıyan bir blokzincir gezginidir. Arama çubuğuna herhangi bir işlem hash'i, cüzdan adresi, kontrat adresi veya ENS adı yapıştırın. Tam ayrıntıları göreceksiniz: işlemler için (durum, değer, gaz), adresler için (bakiye, geçmiş, tokenlar), kontratlar için (kod, etkileşimler). Zincir üstünde herhangi bir şeyi doğrulamak için başvurulan araçtır."
+		},
+		"2": {
+			"question": "Etherscan'de akıllı kontratı nasıl doğrularım?",
+			"answer": "Kontrat adresine gidin, 'Contract' sekmesine tıklayın, ardından 'Verify & Publish'e tıklayın. Dağıtım sırasında kullanılan derleyici sürümünü ve optimizasyon ayarlarını seçin, kaynak kodunuzu yapıştırın (veya düzleştirilmiş dosyayı yükleyin) ve gönderin. Doğrulandıktan sonra herkes kontrat kodunu okuyabilir ve Etherscan üzerinden okuma/yazma fonksiyonlarıyla etkileşim kurabilir. Çoğu saygın proje kontratlarını doğrular."
+		},
+		"3": {
+			"question": "İşlemim neden 'Beklemede' görünüyor?",
+			"answer": "Beklemede, işlemin bir bloğa dahil edilmek için mempool'da beklediği anlamına gelir. Yaygın nedenler: gaz fiyatı çok düşük (madenciler daha yüksek gazı önceliklendirir), ağ tıkanıklığı (birçok bekleyen işlem) veya nonce sorunları. Daha yüksek gazla yeniden göndererek (aynı nonce) 'hızlandırabilir' veya bekleyebilirsiniz. Etherscan bekleyen işlemleri gösterir ancak henüz onaylanmamışlardır."
+		},
+		"4": {
+			"question": "Etherscan sadece Ethereum için mi?",
+			"answer": "Etherscan'in arkasındaki ekip, birçok EVM zinciri için gezginler işletiyor: Polygonscan (Polygon), Arbiscan (Arbitrum), Optimistic Etherscan (Optimism), BSCScan (BNB Chain) ve diğerleri. Her gezgin benzer şekilde çalışır ancak kendi zinciri için. Aynı arayüzü ve özellikleri paylaşırlar, sadece farklı blokzincir verileri."
+		},
+		"5": {
+			"question": "Etherscan nasıl para kazanıyor?",
+			"answer": "Etherscan'in geliri şunlardan gelir: reklam (sitedeki banner reklamlar), premium API planları (ücretsiz katmanın oran limitleri vardır, ücretli planlar daha fazla çağrı sunar) ve kurumsal hizmetler. Temel gezgin kullanımı ücretsizdir. Ayrıca Ethereum Foundation'dan hibeler alırlar. Kritik altyapı olmasına rağmen Etherscan özel bir şirkettir, bir protokol değil."
+		}
+	},
+	"cta": {
+		"ready": "Ethereum'u keşfetmeye hazır mısınız?",
+		"button": "Etherscan'i Aç",
+		"note": "Lider Ethereum blokzincir gezgini"
+	}
+}

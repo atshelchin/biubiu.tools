@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "PancakeSwap - Önde Gelen Çoklu Zincir DEX | BNB Chain'de Al-Sat ve Kazan",
+		"description": "BNB Chain'in en popüler DEX'i PancakeSwap'ı keşfedin. Token alım satımı yapın, likidite sağlayın, CAKE çiftçiliği yapın ve birden fazla zincirde IFO'lara katılın.",
+		"keywords": "PancakeSwap, BNB Chain, DEX, CAKE, yield farming, likidite, IFO, DeFi"
+	},
+	"overview": "PancakeSwap, BNB Chain'deki en büyük merkezi olmayan borsa olup, Ethereum, Arbitrum, Base ve daha fazlasını destekleyen önde gelen bir çoklu zincir DEX haline gelmiştir. Eylül 2020'de başlatılan PancakeSwap, token takası yapmak, likidite sağlamak ve getiri elde etmek isteyen BNB Chain kullanıcıları için hızla tercih edilen platform oldu.\n\nPlatform, AMM aracılığıyla token takasları, Farms ve Syrup Pools aracılığıyla yield farming, yeni token lansmanları için Initial Farm Offerings (IFO'lar), tahmin piyasası, NFT pazarı ve sürekli işlem dahil olmak üzere kapsamlı bir DeFi deneyimi sunar. CAKE token'ı, çeşitli avantajlar sağlayan stake seçenekleriyle birlikte yönetim ve kullanım token'ı olarak hizmet eder.\n\nPancakeSwap sürekli yenilik yaparak, otomatik likidite için pozisyon yöneticileri, zincirler arası takas ve konsantre likidite havuzları (v3) gibi özellikler eklemiştir. Milyarlarca işlem hacmi ve milyonlarca kullanıcıyla, BNB Chain için baskın DEX ve daha geniş çoklu zincir DeFi ekosisteminde önemli bir oyuncu olmaya devam ediyor.",
+	"features": {
+		"1": {
+			"title": "Çoklu Zincir DEX",
+			"description": "BNB Chain, Ethereum, Arbitrum, Base, zkSync ve daha fazla zincirde işlem yapın"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Farms'da LP token'larını veya Syrup Pools'da tek varlıkları stake ederek CAKE ödülleri kazanın"
+		},
+		"3": {
+			"title": "IFO'lar",
+			"description": "Yeni token lansmanlarına erken erişim için Initial Farm Offerings'e katılın"
+		},
+		"4": {
+			"title": "V3 Konsantre Likidite",
+			"description": "Daha yüksek sermaye verimliliği için belirli fiyat aralıklarında likidite sağlayın"
+		},
+		"5": {
+			"title": "Sürekli İşlem",
+			"description": "Büyük kripto paritelerinde kaldıraçlı sürekli futures işlemi yapın"
+		},
+		"6": {
+			"title": "Oyun ve NFT'ler",
+			"description": "Tahmin piyasalarına, piyangoya ve NFT pazarına katılın"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Takası",
+			"description": "BNB Chain'de düşük ücretlerle BEP-20 token'ları ve zincirler arası varlıkları takas edin"
+		},
+		"2": {
+			"title": "Getiri Üretimi",
+			"description": "Farming ödülleri yoluyla pasif gelir elde etmek için LP token'ları veya CAKE stake edin"
+		},
+		"3": {
+			"title": "Yeni Token Erişimi",
+			"description": "Lansman fiyatlarında yeni token'lar satın almak için IFO'lara katılın"
+		},
+		"4": {
+			"title": "Likidite Sağlama",
+			"description": "İşlem ücretleri ve CAKE teşvikleri kazanmak için likidite sağlayın"
+		},
+		"5": {
+			"title": "Zincirler Arası İşlem",
+			"description": "Platformdan ayrılmadan birden fazla zincirde varlık takası yapın"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "PancakeSwap nedir ve nasıl çalışır?",
+			"answer": "PancakeSwap, AMM (Otomatik Piyasa Yapıcı) modelini kullanan merkezi olmayan bir borsadır. Emir defterlerinin yerine, işlemler kullanıcılar tarafından finanse edilen likidite havuzlarına karşı gerçekleştirilir. Anında token takası yapabilir, ücret kazanmak için likidite sağlayabilir ve ek ödüller kazanmak için LP token'larını veya CAKE'i stake edebilirsiniz."
+		},
+		"2": {
+			"question": "CAKE token'ı ne için kullanılır?",
+			"answer": "CAKE, PancakeSwap'ın yönetim ve kullanım token'ıdır. Diğer token'ları kazanmak için Syrup Pools'da CAKE stake edebilir, farming ödüllerini artırmak ve yönetim oylamasına katılmak için CAKE'i veCAKE olarak kilitleyebilir, IFO'lara katılabilir ve platformda işlem çifti olarak kullanabilirsiniz."
+		},
+		"3": {
+			"question": "PancakeSwap'ta nasıl farming yaparım?",
+			"answer": "Farming yapmak için: 1) LP token'ları almak için bir işlem çiftine likidite ekleyin, 2) Farms'a gidin ve çiftinizi bulun, 3) LP token'larınızı stake edin, 4) Zaman içinde CAKE ödülleri kazanın, 5) Ödülleri hasat edin veya bileşikleştirin. Farming'in kalıcı kayıp riski taşıdığını unutmayın."
+		},
+		"4": {
+			"question": "PancakeSwap kullanmak güvenli mi?",
+			"answer": "PancakeSwap, kapsamlı güvenlik denetimleri ve güçlü bir geçmişe sahip en köklü DEX'lerden biridir. Ancak DeFi her zaman akıllı sözleşme güvenlik açıkları, kalıcı kayıp ve token riskleri dahil olmak üzere riskler taşır. Yalnızca kaybetmeyi göze alabileceğiniz miktarı yatırın ve işlem yapmadan önce token'ları araştırın."
+		},
+		"5": {
+			"question": "PancakeSwap hangi zincirleri destekler?",
+			"answer": "PancakeSwap, BNB Chain'in ötesinde Ethereum, Arbitrum, Base, zkSync Era, Polygon zkEVM, Linea, opBNB ve Aptos'u destekleyecek şekilde genişlemiştir. Her zincirde yerel varlıkları takas edebilir ve aralarında köprü kurmak için zincirler arası özellikleri kullanabilirsiniz."
+		}
+	},
+	"cta": {
+		"ready": "PancakeSwap'ta işlem yapmaya hazır mısınız?",
+		"button": "PancakeSwap'ı Aç",
+		"note": "Al-sat ve kazanç için önde gelen çoklu zincir DEX"
+	}
+}

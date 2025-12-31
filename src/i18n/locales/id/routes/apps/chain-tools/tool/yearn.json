@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Yearn Finance - Yield Aggregator DeFi | Vault Auto-Compound",
+		"description": "Temukan Yearn Finance, yield aggregator terkemuka. Depositkan aset ke dalam Vault untuk secara otomatis mendapatkan yield DeFi yang dioptimalkan tanpa manajemen manual.",
+		"keywords": "Yearn Finance, YFI, yield aggregator, vaults, DeFi, auto-compound, yield optimization"
+	},
+	"overview": "Yearn Finance adalah protokol agregasi yield terdesentralisasi yang mengotomatiskan strategi yield farming DeFi. Didirikan oleh Andre Cronje pada awal 2020, Yearn memelopori konsep \"Vaults\"—smart contract yang secara otomatis mendeploy aset yang didepositkan di berbagai protokol DeFi untuk memaksimalkan pengembalian.\n\nProduk intinya adalah Yearn Vaults (yVaults), di mana pengguna mendepositkan aset dan strategi protokol secara otomatis farming yield terbaik, compound reward, dan rebalance posisi. Ini menghemat pengguna dari memindahkan dana secara manual, membayar gas untuk harvest, dan terus-menerus meneliti strategi optimal. Strategi vault dikembangkan oleh ahli strategi yang mendapatkan bagian dari keuntungan yang dihasilkan.\n\nYearn V3 memperkenalkan arsitektur vault modular, memungkinkan deployment strategi yang lebih fleksibel dan manajemen risiko yang lebih baik. Token YFI digunakan untuk governance, dengan veYFI memungkinkan pemegang token voting pada keputusan protokol. Yearn telah menjadi infrastruktur DeFi fundamental, dengan strategi dan arsitekturnya mempengaruhi banyak protokol yield berikutnya.",
+	"features": {
+		"1": {
+			"title": "Vault Otomatis",
+			"description": "Depositkan aset dan dapatkan yield yang dioptimalkan secara otomatis—tanpa manajemen manual"
+		},
+		"2": {
+			"title": "Optimisasi Strategi",
+			"description": "Ahli strategi terus mengembangkan dan meningkatkan strategi yield"
+		},
+		"3": {
+			"title": "Auto-Compounding",
+			"description": "Reward secara otomatis di-harvest dan diinvestasikan kembali untuk pertumbuhan compound"
+		},
+		"4": {
+			"title": "Strategi Multi-Protokol",
+			"description": "Strategi deploy di Aave, Compound, Curve, dan lainnya untuk yield optimal"
+		},
+		"5": {
+			"title": "Arsitektur Modular V3",
+			"description": "Desain vault fleksibel dengan berbagai strategi per vault dan isolasi risiko yang lebih baik"
+		},
+		"6": {
+			"title": "Governance veYFI",
+			"description": "Lock YFI untuk voting pada keputusan protokol dan emisi gauge"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Passive Yield Earning",
+			"description": "Depositkan stablecoin atau crypto dan dapatkan yield yang dioptimalkan tanpa usaha"
+		},
+		"2": {
+			"title": "DeFi yang Disederhanakan",
+			"description": "Akses strategi yield kompleks melalui deposit vault sederhana"
+		},
+		"3": {
+			"title": "Optimisasi Gas",
+			"description": "Berbagi biaya gas untuk harvesting dan compounding dengan depositor vault lainnya"
+		},
+		"4": {
+			"title": "Pengembangan Strategi",
+			"description": "Ahli strategi dapat membangun dan deploy strategi untuk mendapatkan performance fee"
+		},
+		"5": {
+			"title": "Integrasi Protokol",
+			"description": "Protokol lain mengintegrasikan yVaults untuk yield otomatis pada treasury mereka"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Yearn Finance dan bagaimana Vault bekerja?",
+			"answer": "Yearn adalah yield aggregator di mana Anda mendepositkan aset ke dalam Vault. Setiap Vault memiliki strategi yang secara otomatis mendeploy dana Anda di berbagai protokol DeFi (Aave, Compound, Curve, dll.) untuk mendapatkan yield. Reward di-auto-compound, dan strategi dioptimalkan oleh ahli. Anda menerima yToken yang mewakili bagian Anda dari vault."
+		},
+		"2": {
+			"question": "Biaya apa yang dikenakan Yearn?",
+			"answer": "Vault Yearn V3 biasanya mengenakan biaya performance 10% pada yield yang dihasilkan (bukan pada principal). Beberapa vault mungkin memiliki biaya manajemen. Biaya mendanai pengembangan protokol dan reward ahli strategi. Tidak ada biaya deposit atau withdrawal untuk sebagian besar vault."
+		},
+		"3": {
+			"question": "Apakah Yearn aman digunakan?",
+			"answer": "Yearn telah beroperasi sejak 2020 dengan audit ekstensif dan track record keamanan yang kuat. Namun, risiko termasuk kerentanan smart contract di Yearn dan protokol yang mendasari, risiko strategi, dan potensi kerugian dalam kondisi pasar ekstrem. Vault Yearn tidak diasuransikan—hanya depositkan apa yang mampu Anda rugikan."
+		},
+		"4": {
+			"question": "Apa itu YFI dan veYFI?",
+			"answer": "YFI adalah token governance Yearn dengan supply tetap 36,666. veYFI (vote-escrowed YFI) diperoleh dengan mengunci YFI hingga 4 tahun. Pemegang veYFI dapat voting pada proposal governance, mengarahkan emisi gauge ke vault tertentu, dan mendapatkan biaya protokol. Lock yang lebih lama memberikan voting power lebih banyak."
+		},
+		"5": {
+			"question": "Apa perbedaan antara Yearn V2 dan V3?",
+			"answer": "V3 memperkenalkan arsitektur vault modular di mana setiap vault dapat memiliki berbagai strategi yang mudah ditambahkan atau dihapus. Ini meningkatkan manajemen risiko, memungkinkan kontrol yang lebih granular, dan memungkinkan tipe vault baru. V3 juga memiliki efisiensi gas yang lebih baik dan integrasi yang lebih baik dengan protokol lain."
+		}
+	},
+	"cta": {
+		"ready": "Siap mendapatkan yield yang dioptimalkan?",
+		"button": "Buka Yearn",
+		"note": "Optimisasi yield otomatis untuk crypto Anda"
+	}
+}

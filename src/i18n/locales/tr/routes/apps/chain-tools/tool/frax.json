@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Frax Finance - Merkezi Olmayan Stablecoin ve DeFi Hub | FRAX, frxETH, Fraxtal",
+		"description": "Yenilikçi DeFi ekosistemi Frax Finance'i keşfedin. Kapsamlı DeFi çözümleri için FRAX stablecoin, frxETH liquid staking, Fraxlend ve Fraxtal L2 kullanın.",
+		"keywords": "Frax Finance, FRAX, frxETH, FXS, stablecoin, liquid staking, Fraxtal, DeFi"
+	},
+	"overview": "Frax Finance, FRAX stablecoin ve birbirine bağlı bir protokol paketi etrafında merkezlenen kapsamlı bir DeFi ekosistemidir. 2020'de Sam Kazemian tarafından kurulan Frax, kısmi-algoritmik stablecoin modeline öncülük etmiştir, ancak o zamandan beri tamamen teminatlandırılmış hale gelmiştir.\n\nEkosistem şunları içerir: FRAX (artık %100 teminatlandırılmış merkezi olmayan bir stablecoin), frxETH/sfrxETH (Ethereum liquid staking), Fraxlend (izinsiz borç verme), FraxSwap (TWAMM özellikli DEX), FraxFerry (zincirler arası köprü) ve Fraxtal (Optimism teknolojisi üzerine inşa edilmiş bir L2 blockchain). FXS, tüm protokol faaliyetlerinden değer yakalayan yönetim token'ıdır.\n\nFrax'ın ana yeniliği, dikey olarak entegre yaklaşımıdır—stablecoin'den L2 zincire kadar tüm yığına sahiptir. Protokol, veFXS ve vlCVX varlıkları aracılığıyla Curve ve Convex'te önemli yönetim gücüne sahiptir ve bu, emisyonları Frax ile ilgili havuzlara yönlendirmesine ve derin likidite sürdürmesine olanak tanır.",
+	"features": {
+		"1": {
+			"title": "FRAX Stablecoin",
+			"description": "Kripto teminatla desteklenen, artık %100 teminatlandırılmış merkezi olmayan USD stablecoin"
+		},
+		"2": {
+			"title": "frxETH Stake Etme",
+			"description": "frxETH ve getiri sağlayan sfrxETH tokenları ile ETH için liquid staking"
+		},
+		"3": {
+			"title": "Fraxlend",
+			"description": "İzole risk ve özel parametrelerle izinsiz borç verme piyasaları"
+		},
+		"4": {
+			"title": "Fraxtal L2",
+			"description": "Gas token olarak FRAX kullanan, blok alanı teşvikleriyle Optimism tabanlı L2 zinciri"
+		},
+		"5": {
+			"title": "FraxSwap",
+			"description": "Büyük zaman ağırlıklı ortalama fiyat emirleri için yerleşik TWAMM'li AMM"
+		},
+		"6": {
+			"title": "veFXS Yönetimi",
+			"description": "Oy gücü, gauge ağırlığı yönlendirme ve protokol ücretleri için FXS kilitleyin"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Stablecoin Kullanımı",
+			"description": "DeFi'de ticaret, borç verme ve istikrarlı değer olarak FRAX kullanın"
+		},
+		"2": {
+			"title": "ETH Liquid Staking",
+			"description": "frxETH aracılığıyla ETH stake edin ve otomatik getiri biriktirme için sfrxETH tutun"
+		},
+		"3": {
+			"title": "Kaldıraçlı Stratejiler",
+			"description": "Çeşitli teminat türlerine karşı borçlanma için Fraxlend kullanın"
+		},
+		"4": {
+			"title": "L2 Geliştirme",
+			"description": "Daha düşük gas maliyetleri ve blok alanı teşvik ödülleri için Fraxtal üzerinde inşa edin"
+		},
+		"5": {
+			"title": "Yönetime Katılım",
+			"description": "Protokol parametrelerinde oy kullanmak ve ücret kazanmak için FXS'yi veFXS olarak kilitleyin"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Frax Finance nedir ve FRAX nasıl çalışır?",
+			"answer": "Frax Finance, FRAX stablecoin etrafında inşa edilmiş bir DeFi ekosistemidir. FRAX başlangıçta kısmi-algoritmikti (kısmen teminatlandırılmış) ancak maksimum istikrar için %100 teminatlandırmaya evrilmiştir. Protokol liquid staking, borç verme, bir DEX ve bir L2 zinciri içerir—hepsi kapsamlı bir DeFi yığını oluşturmak için birbirine bağlıdır."
+		},
+		"2": {
+			"question": "frxETH ve sfrxETH arasındaki fark nedir?",
+			"answer": "frxETH, likidite sağlama için kullanılan 1:1 ETH'ye sabitlenmiş bir token'dır. sfrxETH, tüm validator ödüllerini biriktiren stake edilmiş versiyondur. ETH stake ettiğinizde, frxETH'yi (LP yapmak için) seçebilir veya sfrxETH'ye dönüştürebilirsiniz (pasif getiri için). sfrxETH, stake ödülleri biriktikçe zamanla değer kazanır."
+		},
+		"3": {
+			"question": "Fraxtal nedir?",
+			"answer": "Fraxtal, Optimism (OP Stack) teknolojisi üzerine inşa edilmiş Frax'ın L2 blockchain'idir. Yerel gas token olarak FRAX kullanır. Benzersiz özelliği 'Flox'tur—harcanan gas'a göre kullanıcıları ve geliştiricileri ödüllendiren blok alanı teşvikleri, zincirde benimseme ve aktivite döngüsü oluşturur."
+		},
+		"4": {
+			"question": "FXS ve veFXS nedir?",
+			"answer": "FXS, tüm ekosistem faaliyetlerinden değer yakalayan Frax'ın yönetim token'ıdır. veFXS (oy için emanet edilmiş FXS), FXS'yi 4 yıla kadar kilitleyerek elde edilir. veFXS sahipleri gauge ağırlıklarında oy kullanır, protokol ücretleri kazanır ve emisyonları yönlendirir. Daha uzun kilitlenmeler daha fazla oy gücü sağlar."
+		},
+		"5": {
+			"question": "Frax kullanımı güvenli mi?",
+			"answer": "Frax, kapsamlı denetimlerle 2020'den beri faaliyet göstermektedir. FRAX artık %100 teminatlandırılmıştır ve bu, peg'den çıkma riskini azaltır. Ancak riskler, akıllı sözleşme güvenlik açıklarını, oracle bağımlılıklarını ve birbirine bağlı protokol tasarımından kaynaklanan karmaşıklığı içerir. frxETH liquid staking'in ek validator riskleri vardır."
+		}
+	},
+	"cta": {
+		"ready": "Frax ekosistemini keşfetmeye hazır mısınız?",
+		"button": "Frax Finance'i Aç",
+		"note": "Tek ekosistemde stablecoin'ler, liquid staking ve L2"
+	}
+}

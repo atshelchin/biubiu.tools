@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Convex Finance - Staking Curve & Frax Được Tăng Cường | Tối Đa Hóa Phần Thưởng CRV",
+		"description": "Khám phá Convex Finance, nền tảng tối đa hóa lợi nhuận Curve và Frax. Stake LP token để nhận phần thưởng CRV được tăng cường mà không cần khóa, hoặc stake CVX để nhận phí giao thức.",
+		"keywords": "Convex Finance, CVX, Curve, CRV, yield boost, DeFi, liquidity staking, veCRV"
+	},
+	"overview": "Convex Finance là giao thức DeFi tối đa hóa lợi nhuận cho các nhà cung cấp thanh khoản Curve Finance bằng cách tổng hợp quyền bỏ phiếu veCRV. Ra mắt vào tháng 5 năm 2021, Convex đã giải quyết một vấn đề chính: để kiếm phần thưởng CRV tối đa trên Curve cần phải khóa CRV trong tối đa 4 năm, điều mà hầu hết người dùng không thể hoặc sẽ không làm.\n\nConvex tổng hợp veCRV từ những người dùng stake CRV của họ, sau đó sử dụng quyền bỏ phiếu tổng hợp này để tăng phần thưởng cho tất cả người gửi Convex. Chủ sở hữu LP token Curve có thể stake trên Convex để kiếm phần thưởng CRV + CVX được tăng cường mà không cần tự khóa bất kỳ CRV nào. Điều này đã dân chủ hóa quyền truy cập vào lợi nhuận được tăng cường và châm ngòi cho \"Curve Wars\"—các giao thức cạnh tranh để có quyền bỏ phiếu CVX của Convex nhằm hướng phát thải CRV.\n\nNền tảng đã mở rộng ra ngoài Curve để hỗ trợ Frax Finance (cvxFXS) và f(x) Protocol. Chủ sở hữu token CVX có thể khóa token của họ thành vlCVX để bỏ phiếu về gauge weights và kiếm bribes từ các giao thức tìm kiếm hướng phát thải. Với hơn 1 tỷ đô la TVL, Convex là trung tâm của hệ sinh thái Curve.",
+	"features": {
+		"1": {
+			"title": "Phần Thưởng CRV Được Tăng Cường",
+			"description": "Kiếm phần thưởng Curve tối đa mà không cần tự khóa CRV trong 4 năm"
+		},
+		"2": {
+			"title": "Phần Thưởng CVX",
+			"description": "Stake LP token Curve để kiếm CVX ngoài CRV được tăng cường"
+		},
+		"3": {
+			"title": "Staking cvxCRV",
+			"description": "Stake CRV thành cvxCRV để kiếm phần thưởng CRV, CVX và 3CRV"
+		},
+		"4": {
+			"title": "Bỏ Phiếu vlCVX",
+			"description": "Khóa CVX để bỏ phiếu về Curve gauge weights và kiếm bribes"
+		},
+		"5": {
+			"title": "Hỗ Trợ Frax",
+			"description": "Stake FXS thành cvxFXS để nhận phần thưởng giao thức Frax được tăng cường"
+		},
+		"6": {
+			"title": "Tự Động Gộp",
+			"description": "Phần thưởng được tự động claim và gộp cho người gửi"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Tăng Cường LP Curve",
+			"description": "Kiếm phần thưởng CRV tối đa trên vị thế LP Curve của bạn mà không cần khóa CRV"
+		},
+		"2": {
+			"title": "Staking CRV",
+			"description": "Chuyển đổi CRV thành cvxCRV để kiếm lợi nhuận mà không cần khóa 4 năm"
+		},
+		"3": {
+			"title": "Quyền Lực Quản Trị",
+			"description": "Khóa CVX thành vlCVX để hướng phát thải Curve và kiếm bribes"
+		},
+		"4": {
+			"title": "Lợi Nhuận Thụ Động",
+			"description": "Stake và kiếm phần thưởng tự động gộp trên Curve và Frax"
+		},
+		"5": {
+			"title": "Ảnh Hưởng Giao Thức",
+			"description": "Các giao thức tích lũy CVX để ảnh hưởng phát thải CRV đến pool của họ"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Convex Finance là gì và tại sao nó tồn tại?",
+			"answer": "Convex giải quyết vấn đề boost của Curve. Để kiếm phần thưởng CRV tối đa, bạn cần khóa CRV thành veCRV trong tối đa 4 năm. Hầu hết người dùng không thể làm điều này. Convex tổng hợp veCRV từ nhiều người dùng để cung cấp phần thưởng được tăng cường cho mọi người stake LP token Curve trên Convex—không cần khóa cá nhân."
+		},
+		"2": {
+			"question": "Sự khác biệt giữa CRV, cvxCRV và veCRV là gì?",
+			"answer": "CRV là token của Curve. veCRV là CRV vote-escrowed được khóa trực tiếp trong Curve trong tối đa 4 năm—nó cung cấp quyền bỏ phiếu và boost nhưng không thanh khoản. cvxCRV là CRV được gửi vào Convex—nó có thanh khoản (có thể giao dịch) và kiếm lợi nhuận từ vị thế veCRV tổng hợp của Convex. Chuyển đổi CRV thành cvxCRV là một chiều."
+		},
+		"3": {
+			"question": "Curve Wars là gì?",
+			"answer": "Curve Wars đề cập đến các giao thức cạnh tranh để tích lũy CVX/vlCVX nhằm hướng phát thải CRV. Vì Convex kiểm soát veCRV đáng kể, kiểm soát quyền bỏ phiếu CVX có nghĩa là kiểm soát nơi phần thưởng Curve đi đến. Các giao thức cung cấp \"bribes\" cho người bỏ phiếu vlCVX để bỏ phiếu cho pool của họ, tạo ra một meta-game xung quanh hướng phát thải."
+		},
+		"4": {
+			"question": "vlCVX là gì và bribes hoạt động như thế nào?",
+			"answer": "vlCVX (vote-locked CVX) là CVX được khóa trong 16+ tuần. Chủ sở hữu vlCVX bỏ phiếu về pool Curve nào nhận phát thải CRV. Các giao thức trả \"bribes\" (phần thưởng token) cho người bỏ phiếu vlCVX hướng phát thải đến pool của họ. Bribes thường có giá trị hơn CVX bị khóa, tạo ra lợi nhuận hấp dẫn cho người bỏ phiếu."
+		},
+		"5": {
+			"question": "Chuyển đổi CRV thành cvxCRV có thể đảo ngược không?",
+			"answer": "Không, chuyển đổi CRV thành cvxCRV là một chiều và vĩnh viễn. Tuy nhiên, cvxCRV có thể giao dịch trên các sàn DEX. Tỷ giá hối đoái cvxCRV/CRV dao động dựa trên điều kiện thị trường—đôi khi cvxCRV giao dịch ở mức chiết khấu hoặc cao hơn so với CRV. Hãy cân nhắc điều này trước khi chuyển đổi."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng tối đa hóa lợi nhuận Curve của bạn?",
+		"button": "Mở Convex",
+		"note": "Staking được tăng cường cho Curve và Frax"
+	}
+}

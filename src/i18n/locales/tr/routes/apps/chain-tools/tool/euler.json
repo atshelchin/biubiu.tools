@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Euler Finance - Modüler Borç Verme Protokolü | Özelleştirilebilir DeFi Kredi Piyasaları",
+		"description": "Modüler borç verme platformu Euler Finance V2'yi keşfedin. Özel borç verme vault'ları oluşturun, herhangi bir varlığı teminat olarak kullanın ve sofistike kredi stratejileri oluşturun.",
+		"keywords": "Euler Finance, EUL, borç verme, borçlanma, modüler, vault'lar, DeFi, kredi"
+	},
+	"overview": "Euler Finance, özelleştirilebilir kredi piyasalarının oluşturulmasını sağlayan modüler bir borç verme protokolüdür. Başlangıçta 2021'de başlatılan Euler V2, 2023 exploit'inden sonra kapsamlı güvenlik çalışmasının ardından tam bir yeniden inşayı temsil eder. Yeni versiyon, DeFi borç vermede eşi görülmemiş esneklik sunar.\n\nEuler V2 iki temel bileşenden oluşur: yapılandırılabilir parametrelerle özel borç verme vault'ları dağıtmak için Euler Vault Kit (EVK) ve vault'ların diğer vault'lardan teminatı tanımasına olanak tanıyan Ethereum Vault Connector (EVC). Bu, sofistike kredi yapılarını mümkün kılar—tek bir teminat pozisyonu birden fazla piyasada borçlanmayı destekleyebilir.\n\nModüler tasarım, herkesin özel risk parametreleri, oracle konfigürasyonları, faiz oranı modelleri ve tasfiye mekanikleriyle borç verme piyasaları oluşturabileceği anlamına gelir. Bu, izinli kurumsal vault'lardan izinsiz kamu piyasalarına kadar uzanır. Euler, kapsamlı güvenlik önlemleriyle yeniden inşa etti ve V2 yeniden başlatmasından bu yana önemli TVL büyümesi elde etti.",
+	"features": {
+		"1": {
+			"title": "Euler Vault Kit",
+			"description": "Yapılandırılabilir risk parametreleri ve oracle'larla özel borç verme vault'ları oluşturun"
+		},
+		"2": {
+			"title": "Ethereum Vault Connector",
+			"description": "Sermaye verimli borçlanma için teminatı birden fazla vault'ta kullanın"
+		},
+		"3": {
+			"title": "Modüler Piyasalar",
+			"description": "Herhangi bir varlık çifti için izinsiz borç verme piyasaları oluşturma"
+		},
+		"4": {
+			"title": "Esnek Oracle'lar",
+			"description": "Chainlink, Uniswap TWAP, Redstone ve özel oracle'lar için destek"
+		},
+		"5": {
+			"title": "Risk İzolasyonu",
+			"description": "İzole borç verme havuzları farklı piyasalar arasında bulaşmayı önler"
+		},
+		"6": {
+			"title": "Yönetim Kontrolü",
+			"description": "Vault'lar yaratıcının seçimine göre yönetilebilir, değiştirilemez veya güncellenebilir olabilir"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Standart Borç Verme",
+			"description": "Küratörlü, savaş testinden geçmiş vault'larda ana varlıklara karşı borçlanma"
+		},
+		"2": {
+			"title": "Uzun Kuyruklu Varlıklar",
+			"description": "Daha yeni veya daha az likit tokenlar için borç verme piyasalarına erişim"
+		},
+		"3": {
+			"title": "Kurumsal Piyasalar",
+			"description": "KYC gereksinimleri ve özel şartlarla izinli vault'lar oluşturun"
+		},
+		"4": {
+			"title": "Kaldıraçlı Stratejiler",
+			"description": "Verimli kaldıraçlı pozisyonlar için vault'lar arası teminat kullanın"
+		},
+		"5": {
+			"title": "Piyasa Oluşturma",
+			"description": "Belirli varlıklar veya kullanım senaryoları için özel borç verme piyasaları dağıtın"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Euler Finance nedir ve V2 nasıl çalışır?",
+			"answer": "Euler modüler bir borç verme protokolüdür. V2, herkesin Euler Vault Kit (EVK) kullanarak özel borç verme vault'ları oluşturmasına olanak tanır. Her vault kendi teminat türlerine, oracle'larına, faiz oranı modellerine ve risk parametrelerine sahip olabilir. Ethereum Vault Connector (EVC), vault'ları birbirine bağlar ve bir vault'taki teminatın diğerlerinde borçlanmayı desteklemesine izin verir."
+		},
+		"2": {
+			"question": "Euler V1'e ne oldu?",
+			"answer": "Euler V1, Mart 2023'te bağış saldırısı vektöründeki bir güvenlik açığı nedeniyle 197 milyon dolarlık bir exploit'e maruz kaldı. Saldırgan daha sonra fonları iade etti. Euler Labs, V2 üzerinde bir yıldan fazla zaman harcadı, kapsamlı güvenlik denetimleri yaptı ve kapsamlı bir bug bounty programı uyguladı. V2, V1'in yaması değil, tam bir mimari yeniden tasarımdır."
+		},
+		"3": {
+			"question": "Ethereum Vault Connector (EVC) nedir?",
+			"answer": "EVC, vault'lar arası teminat tanımaya olanak tanıyan Euler'in yeniliğidir. Her borç verme piyasasına ayrı ayrı teminat yatırmak yerine, bir kez yatırabilir ve birden fazla vault'un onu tanımasını sağlayabilirsiniz. Bu, sermaye verimliliğini önemli ölçüde artırır ve karmaşık çok ayaklı borçlanma stratejilerini mümkün kılar."
+		},
+		"4": {
+			"question": "Euler vault'ları kim oluşturabilir?",
+			"answer": "Herkes EVK kullanarak bir vault oluşturabilir. Vault yaratıcıları tüm parametreleri seçer: kabul edilen teminat, oracle'lar, faiz oranları, tasfiye koşulları ve yönetim. Vault'lar tamamen izinsiz olabilir, beyaz liste gerektirebilir veya herhangi bir özel erişim kontrolüne sahip olabilir. Bu, kurumsal özel piyasalardan kamu izinsiz borç vermeye kadar her şeyi mümkün kılar."
+		},
+		"5": {
+			"question": "Euler V2 kullanımı güvenli mi?",
+			"answer": "Euler V2, DeFi'deki en kapsamlı güvenlik süreçlerinden birinden geçti—kapsamlı denetimler, resmi doğrulama ve 1 milyon dolardan fazla bug bounty. Ancak, DeFi her zaman risk taşır. Modüler tasarım, her vault'un bağımsız riske sahip olduğu anlamına gelir—kötü yapılandırılmış bir vault diğerlerini etkilemez. Yatırım yapmadan önce her zaman belirli vault'ları araştırın."
+		}
+	},
+	"cta": {
+		"ready": "Modüler borç vermeyi keşfetmeye hazır mısınız?",
+		"button": "Euler Finance'i Aç",
+		"note": "Herhangi bir varlık için özelleştirilebilir borç verme vault'ları"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "The Graph - Giao Thức Lập Chỉ Mục Phi Tập Trung | Truy Vấn Dữ Liệu Blockchain",
+		"description": "Khám phá The Graph, giao thức lập chỉ mục phi tập trung cho Web3. Xây dựng subgraph để truy vấn dữ liệu blockchain hiệu quả với GraphQL.",
+		"keywords": "The Graph, GRT, subgraph, lập chỉ mục blockchain, GraphQL, dữ liệu Web3, giao thức phi tập trung"
+	},
+	"overview": "The Graph là giao thức lập chỉ mục phi tập trung cho phép truy vấn dữ liệu blockchain hiệu quả. Được thành lập vào năm 2018 bởi Yaniv Tal, Jannis Pohlmann và Brandon Ramirez, The Graph giải quyết một vấn đề cơ bản: dữ liệu blockchain được lưu trữ ở định dạng được tối ưu hóa cho sự đồng thuận, không phải để truy vấn. Đọc dữ liệu trực tiếp từ các node là chậm và hạn chế.\n\nThe Graph hoạt động thông qua 'subgraph'—các API mở lập chỉ mục và tổ chức dữ liệu blockchain cụ thể. Các nhà phát triển xác định dữ liệu nào cần lập chỉ mục (sự kiện, thực thể, mối quan hệ) và mạng The Graph lập chỉ mục nó thành định dạng có thể truy vấn được truy cập qua GraphQL. Indexer chạy các node xử lý và phục vụ các truy vấn, Curator báo hiệu subgraph nào có giá trị và Delegator stake GRT để hỗ trợ indexer.\n\nVới 195+ tỷ truy vấn được phục vụ và hàng nghìn subgraph được triển khai, The Graph cung cấp năng lượng cho hầu hết các dApp lớn bao gồm Uniswap, Aave, Synthetix và nhiều dApp khác. Mạng phi tập trung đảm bảo không có điểm thất bại duy nhất và khả năng chống kiểm duyệt. Token GRT được sử dụng để stake, curation và thanh toán phí truy vấn. The Graph đã trở thành cơ sở hạ tầng thiết yếu cho Web3, thường được gọi là 'Google của blockchain'.",
+	"features": {
+		"1": {
+			"title": "Lập Chỉ Mục Subgraph",
+			"description": "Tạo API tùy chỉnh lập chỉ mục dữ liệu blockchain cụ thể cho ứng dụng của bạn"
+		},
+		"2": {
+			"title": "Truy Vấn GraphQL",
+			"description": "Truy vấn dữ liệu blockchain với GraphQL—linh hoạt, hiệu quả và thân thiện với nhà phát triển"
+		},
+		"3": {
+			"title": "Đa Chuỗi",
+			"description": "Lập chỉ mục dữ liệu từ Ethereum, Polygon, Arbitrum và nhiều chuỗi khác"
+		},
+		"4": {
+			"title": "Mạng Phi Tập Trung",
+			"description": "Truy vấn được phục vụ bởi mạng lưới indexer độc lập để đảm bảo độ tin cậy"
+		},
+		"5": {
+			"title": "Subgraph Studio",
+			"description": "Xây dựng, kiểm tra và triển khai subgraph với studio thân thiện với nhà phát triển"
+		},
+		"6": {
+			"title": "Cập Nhật Thời Gian Thực",
+			"description": "Subgraph tự động cập nhật khi các khối mới được tạo ra"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Bảng Điều Khiển DeFi",
+			"description": "Cung cấp năng lượng cho bảng điều khiển phân tích với dữ liệu giao thức đã lập chỉ mục"
+		},
+		"2": {
+			"title": "Thị Trường NFT",
+			"description": "Truy vấn quyền sở hữu NFT, chuyển khoản và metadata một cách hiệu quả"
+		},
+		"3": {
+			"title": "Giao Diện Giao Thức",
+			"description": "Xây dựng UI dApp phản hồi với truy cập dữ liệu blockchain nhanh"
+		},
+		"4": {
+			"title": "Ứng Dụng Ví",
+			"description": "Hiển thị lịch sử giao dịch và dữ liệu danh mục cho người dùng"
+		},
+		"5": {
+			"title": "Phân Tích Dữ Liệu",
+			"description": "Các nhà nghiên cứu truy vấn dữ liệu on-chain để phân tích và báo cáo"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "The Graph là gì và tại sao nó cần thiết?",
+			"answer": "The Graph là giao thức lập chỉ mục giúp dữ liệu blockchain có thể truy vấn được. Blockchain lưu trữ dữ liệu cho sự đồng thuận, không phải cho truy vấn—đọc dữ liệu trực tiếp là chậm và hạn chế. The Graph lập chỉ mục dữ liệu blockchain thành định dạng có cấu trúc, cho phép bạn truy vấn với GraphQL (như 'lấy tất cả các lần hoán đổi trên 100k$ trong giờ qua'). Hầu hết các dApp lớn sử dụng The Graph vì truy vấn node trực tiếp không thể hỗ trợ UI phản hồi."
+		},
+		"2": {
+			"question": "Subgraph là gì?",
+			"answer": "Subgraph là một API mở xác định dữ liệu blockchain nào cần lập chỉ mục và cách tổ chức nó. Bạn viết một 'bản kê khai subgraph' chỉ định các hợp đồng thông minh và sự kiện nào cần theo dõi, và 'ánh xạ' chuyển đổi các sự kiện blockchain thành các thực thể. Sau khi được triển khai, mạng The Graph lập chỉ mục dữ liệu và phục vụ nó qua GraphQL. Bất kỳ ai cũng có thể tạo subgraph và những cái phổ biến được tái sử dụng bởi nhiều ứng dụng."
+		},
+		"3": {
+			"question": "Làm thế nào để truy vấn một subgraph?",
+			"answer": "Subgraph được truy vấn bằng GraphQL. Mỗi subgraph có một URL endpoint nơi bạn gửi các truy vấn GraphQL. Ví dụ: query { swaps(first: 10, orderBy: amountUSD) { ... } }. The Graph Explorer cho phép bạn duyệt và kiểm tra subgraph. Đối với sản xuất, bạn nhận khóa API từ Subgraph Studio và thanh toán cho các truy vấn bằng GRT hoặc thẻ tín dụng."
+		},
+		"4": {
+			"question": "Token GRT được sử dụng để làm gì?",
+			"answer": "GRT là token gốc của The Graph với một số công dụng: Indexer stake GRT để tham gia vào mạng và kiếm phí truy vấn. Curator stake GRT để báo hiệu subgraph nào có giá trị (kiếm một phần phí). Delegator stake GRT với các indexer để kiếm phần thưởng. Phí truy vấn được thanh toán bằng GRT (hoặc thông qua thanh toán bằng fiat chuyển đổi sang GRT). GRT điều chỉnh các động lực trên toàn mạng."
+		},
+		"5": {
+			"question": "Mạng phi tập trung của The Graph hoạt động như thế nào?",
+			"answer": "Ba vai trò chính: Indexer chạy các node lập chỉ mục subgraph và phục vụ truy vấn, stake GRT và kiếm phí. Curator báo hiệu subgraph có giá trị bằng cách stake GRT, giúp indexer ưu tiên những gì cần lập chỉ mục. Delegator stake GRT với các indexer họ tin tưởng, chia sẻ phần thưởng. Điều này tạo ra một mạng phi tập trung nơi không có thực thể đơn lẻ nào kiểm soát cơ sở hạ tầng—khác với các dịch vụ lập chỉ mục tập trung."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng truy vấn dữ liệu blockchain?",
+		"button": "Mở The Graph",
+		"note": "Giao thức lập chỉ mục phi tập trung cho Web3"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Liquity - Faizsiz Borçlanma Protokolü | ETH Karşılığında LUSD Borçlanın",
+		"description": "Merkezi olmayan borçlanma protokolü Liquity'yi keşfedin. ETH teminatına karşı %0 faizle LUSD stablecoin borçlanın—sadece tek seferlik ücret. Tamamen değiştirilemez.",
+		"keywords": "Liquity, LUSD, LQTY, faizsiz borçlanma, stablecoin, ETH teminatı, DeFi"
+	},
+	"overview": "Liquity, kullanıcıların ETH teminatına karşı faizsiz krediler çekmesine olanak tanıyan merkezi olmayan bir borçlanma protokolüdür. 2020'de Robert Lauko tarafından kurulan ve 2021'de başlatılan Liquity, gerçekten değiştirilemez DeFi'ye öncülük etti—protokolün yönetici anahtarları yoktur ve güncellenemez veya kapatılamaz.\n\nKullanıcılar ETH'yi 'Trove'lara yatırır ve ona karşı LUSD stablecoin borçlanır. Devam eden faiz oranı yoktur—sadece piyasa koşullarına bağlı olarak tek seferlik bir borçlanma ücreti (%0.5-5). Minimum teminatlandırma oranı %110'dur ve DeFi'deki en sermaye verimli oranlar arasındadır. LUSD, arbitraj teşvikleri ve sağlam bir tasfiye mekanizması aracılığıyla pegini korur.\n\nLQTY, Stability Pool mevduat sahipleri ve ön yüz operatörleri tarafından kazanılan ikincil token'dır. Stability Pool, tasfiyeler için ilk savunma hattıdır ve mevduat sahipleri tasfiye edilen Trove'lardan ETH kazanır. Liquity V2 (2024'te başlatılıyor), kullanıcı tarafından belirlenen faiz oranları ve birden fazla teminat türü sunar.",
+	"features": {
+		"1": {
+			"title": "%0 Faizli Krediler",
+			"description": "Devam eden faiz olmadan LUSD borçlanın—sadece tek seferlik ihraç ücreti"
+		},
+		"2": {
+			"title": "%110 Teminat Oranı",
+			"description": "Düşük minimum teminat gereksinimleriyle sektör lideri sermaye verimliliği"
+		},
+		"3": {
+			"title": "Değiştirilemez Protokol",
+			"description": "Yönetici anahtarı yok, yönetim yok—protokol sonsuza kadar özerk çalışır"
+		},
+		"4": {
+			"title": "Stability Pool",
+			"description": "Tasfiyelerden ETH ve LQTY ödülleri kazanmak için LUSD yatırın"
+		},
+		"5": {
+			"title": "Anında Tasfiyeler",
+			"description": "Verimli tasfiye mekanizması sistem ödeme gücünü otomatik olarak korur"
+		},
+		"6": {
+			"title": "Merkezi Olmayan Ön Yüzler",
+			"description": "Birden fazla bağımsız ön yüz—tek bir hata noktası veya sansür yok"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Faizsiz Kaldıraç",
+			"description": "Devam eden faiz ödemeden kaldıraç elde etmek için ETH karşılığında LUSD borçlanın"
+		},
+		"2": {
+			"title": "LUSD Getirisi",
+			"description": "ETH ve LQTY ödülleri kazanmak için LUSD'yi Stability Pool'a yatırın"
+		},
+		"3": {
+			"title": "Stablecoin Erişimi",
+			"description": "Ödemeler, DeFi veya istikrarlı değer tutma için LUSD basın"
+		},
+		"4": {
+			"title": "Sermaye Verimliliği",
+			"description": "Minimum aşırı teminatlandırma ile ETH maruziyetini maksimize edin"
+		},
+		"5": {
+			"title": "Sansüre Direnç",
+			"description": "Merkezi kontrol olmayan değiştirilemez, durdurulamaz bir borçlanma protokolü kullanın"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Liquity nedir ve faizsiz borçlanma nasıl çalışır?",
+			"answer": "Liquity, ETH teminatına karşı devam eden faiz olmadan LUSD stablecoin borçlanmanıza izin verir. Faiz yerine, Trove'nuzu açarken veya ayarlarken tek seferlik bir ücret (%0.5-5) ödersiniz. Ücret, son sistem aktivitesine göre değişir. Kredileriniz, %110 minimum teminat oranını koruduğunuz sürece süresiz olarak açık kalabilir."
+		},
+		"2": {
+			"question": "LUSD nedir ve pegini nasıl korur?",
+			"answer": "LUSD, yalnızca ETH ile desteklenen Liquity'nin USD'ye sabitlenmiş stablecoin'idir. Peg şunlar aracılığıyla korunur: 1) Itfalar yoluyla 1$'lık sabit fiyat tabanı (herkes LUSD'yi 1$ değerinde ETH için itfa edebilir), 2) ~1.10$ civarında yumuşak fiyat tavanı (borçlanma cazip hale gelir), 3) Stability Pool tasfiyeleri ve 4) Arbitraj fırsatları. LUSD, mükemmel peg istikrarı sürdürmüştür."
+		},
+		"3": {
+			"question": "Stability Pool nedir?",
+			"answer": "Stability Pool, LUSD sahiplerinin ödül kazanmak için yatırdığı yerdir. Trove'lar tasfiye edildiğinde, borcun ödenmesi için Stability Pool mevduatları kullanılır ve mevduat sahipleri tasfiye edilen ETH'yi alır (~%10 indirimle). Mevduat sahipleri ayrıca LQTY token ödülleri kazanır. Sistem ödeme gücünü sağlayan temel bir mekanizmadır."
+		},
+		"4": {
+			"question": "Liquity neden değiştirilemezdir ve bu ne anlama gelir?",
+			"answer": "Liquity'nin yönetici anahtarları, yönetimi veya güncelleme mekanizması yoktur. Dağıtıldıktan sonra, akıllı sözleşmeler kimse tarafından değiştirilemez—Ethereum üzerinde sonsuza kadar özerk çalışırlar. Bu, maksimum sansüre direnç sağlar ve yönetim saldırı vektörlerini ortadan kaldırır, ancak aynı zamanda hataların düzeltilemeyeceği anlamına gelir. En merkezi olmayan borçlanma protokolüdür."
+		},
+		"5": {
+			"question": "Liquity V2 nedir?",
+			"answer": "Liquity V2, kullanıcı tarafından belirlenen faiz oranlarını (borçlular oranlarda rekabet eder), ETH'nin ötesinde birden fazla teminat türünü ve geliştirilmiş sermaye verimliliğini sunan 2024'te başlatılacak yeni bir versiyondur. V1'in aksine, V2'nin bir miktar güncellenebilirliği olacaktır. V1 ve V2 ayrı protokoller olarak birlikte var olacaktır."
+		}
+	},
+	"cta": {
+		"ready": "Faizsiz borçlanmaya hazır mısınız?",
+		"button": "Liquity'yi Aç",
+		"note": "ETH karşılığında değiştirilemez faizsiz borçlanma"
+	}
+}

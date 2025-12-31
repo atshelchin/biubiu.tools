@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Synthetix - Giao thức Tài sản Tổng hợp Phi tập trung | Giao dịch Mọi Tài sản Trên Chuỗi",
+		"description": "Khám phá Synthetix, giao thức để tạo và giao dịch tài sản tổng hợp. Truy cập crypto, forex, hàng hóa và cổ phiếu trên chuỗi với thanh khoản vô hạn.",
+		"keywords": "Synthetix, SNX, tài sản tổng hợp, Synths, DeFi, phái sinh, perpetuals, thanh khoản"
+	},
+	"overview": "Synthetix là giao thức phi tập trung cho phép tạo và giao dịch tài sản tổng hợp (Synths) trên Ethereum và Optimism. Được thành lập bởi Kain Warwick vào năm 2017 (ban đầu có tên Havven), Synthetix tiên phong trong khái niệm tài sản tổng hợp trên chuỗi—các token theo dõi giá của tài sản thế giới thực như tiền tệ, hàng hóa, cổ phiếu và tiền điện tử.\n\nGiao thức hoạt động bằng cách để người nắm giữ token SNX stake token của họ làm tài sản thế chấp để đúc Synths. Điều này tạo ra một debt pool chung nơi các staker cùng nhau đảm bảo cho tất cả Synths đang lưu hành. Hệ thống cung cấp thanh khoản vô hạn với zero slippage cho các giao dịch Synth-to-Synth, vì chúng chỉ đơn giản là chuyển đổi giá dựa trên oracle thay vì hoán đổi AMM truyền thống.\n\nSynthetix V3 giới thiệu kiến trúc modular với các liquidity pool riêng biệt, cho phép triển khai vốn hiệu quả hơn và các loại thị trường mới. Giao thức đã trở thành cơ sở hạ tầng DeFi nền tảng, với các giao thức như Kwenta và Lyra xây dựng giao dịch perpetuals và options trên thanh khoản Synthetix.",
+	"features": {
+		"1": {
+			"title": "Tài sản Tổng hợp",
+			"description": "Giao dịch phiên bản tổng hợp của crypto, forex, hàng hóa và chỉ số trên chuỗi"
+		},
+		"2": {
+			"title": "Zero Slippage",
+			"description": "Hoán đổi Synth-to-Synth có thanh khoản vô hạn không slippage qua định giá oracle"
+		},
+		"3": {
+			"title": "Perpetual Futures",
+			"description": "Giao dịch perpetuals với thanh khoản sâu thông qua các integrator như Kwenta"
+		},
+		"4": {
+			"title": "SNX Staking",
+			"description": "Stake SNX để đúc sUSD, kiếm phí giao dịch và tham gia quản trị"
+		},
+		"5": {
+			"title": "V3 Modular Pools",
+			"description": "Các liquidity pool riêng biệt cho các thị trường khác nhau với thông số rủi ro có thể cấu hình"
+		},
+		"6": {
+			"title": "Đa Chuỗi",
+			"description": "Triển khai trên Ethereum mainnet và Optimism L2 để giảm chi phí gas"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Giao dịch Phái sinh",
+			"description": "Giao dịch perpetual futures trên các tài sản crypto với đòn bẩy"
+		},
+		"2": {
+			"title": "Tiếp cận Forex",
+			"description": "Có được exposure trên chuỗi với các đồng tiền chính như EUR, JPY, AUD"
+		},
+		"3": {
+			"title": "Phần thưởng Staking",
+			"description": "Stake SNX để kiếm phí giao dịch và phần thưởng lạm phát"
+		},
+		"4": {
+			"title": "Cung cấp Thanh khoản",
+			"description": "Cung cấp tài sản thế chấp cho các pool V3 để kiếm lợi nhuận từ trader"
+		},
+		"5": {
+			"title": "Tích hợp Giao thức",
+			"description": "Xây dựng giao diện giao dịch và sản phẩm trên thanh khoản Synthetix"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Synthetix là gì và tài sản tổng hợp hoạt động như thế nào?",
+			"answer": "Synthetix cho phép tạo ra Synths—các token theo dõi giá tài sản bên ngoài thông qua oracle. Các staker SNX cung cấp tài sản thế chấp đảm bảo cho tất cả Synths. Khi bạn nắm giữ sUSD (synthetic USD), bạn có thể hoán đổi nó sang bất kỳ Synth nào khác (sBTC, sETH, sEUR, v.v.) theo giá oracle với zero slippage. Hệ thống không yêu cầu đối tác giao dịch—nó chỉ là tài sản thế chấp đảm bảo cho các token được định giá bởi oracle."
+		},
+		"2": {
+			"question": "Cơ chế staking SNX là gì?",
+			"answer": "Người nắm giữ SNX stake token của họ làm tài sản thế chấp để đúc sUSD. Các staker phải duy trì tỷ lệ thế chấp (hiện tại ~500%) và chủ động quản lý vị thế nợ của họ. Đổi lại, họ kiếm được phí giao dịch hàng tuần và phần thưởng lạm phát SNX. Debt pool được chia sẻ—nếu trader Synth có lãi, nợ của staker tăng; nếu trader thua lỗ, nợ của staker giảm."
+		},
+		"3": {
+			"question": "Synthetix V3 là gì?",
+			"answer": "V3 là bản xây dựng lại hoàn toàn giới thiệu kiến trúc modular. Thay vì một debt pool toàn cầu, V3 có các pool riêng biệt có thể đảm bảo cho các thị trường khác nhau với thông số rủi ro tùy chỉnh. Điều này cho phép sử dụng vốn hiệu quả hơn, tích hợp dễ dàng hơn và các loại sản phẩm mới. V3 cũng giới thiệu chức năng đa chuỗi và quản trị cải tiến."
+		},
+		"4": {
+			"question": "Các giao thức nào được xây dựng trên Synthetix?",
+			"answer": "Một số giao thức lớn xây dựng trên thanh khoản Synthetix: Kwenta cho giao dịch perpetual futures, Lyra cho options, Polynomial cho structured products và các giao thức khác. Các integrator này cung cấp giao diện người dùng trong khi Synthetix cung cấp lớp thanh khoản và thanh toán cơ bản. Mô hình hệ sinh thái này cho phép Synthetix tập trung vào cơ sở hạ tầng."
+		},
+		"5": {
+			"question": "Rủi ro khi sử dụng Synthetix là gì?",
+			"answer": "Rủi ro bao gồm: lỗ hổng smart contract, thao túng/lỗi oracle, exposure debt pool (staker chia sẻ thua lỗ giao dịch), thanh lý nếu tỷ lệ thế chấp giảm quá thấp, và sự không chắc chắn về quy định đối với tài sản tổng hợp. Giao thức đã được kiểm toán kỹ lưỡng nhưng vẫn phức tạp với rủi ro DeFi vốn có."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng giao dịch tài sản tổng hợp?",
+		"button": "Mở Synthetix",
+		"note": "Tài sản tổng hợp và perpetuals phi tập trung"
+	}
+}

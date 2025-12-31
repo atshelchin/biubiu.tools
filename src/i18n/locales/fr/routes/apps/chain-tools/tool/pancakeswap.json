@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "PancakeSwap - DEX Multi-Chaîne Leader | Échangez et Gagnez sur BNB Chain",
+		"description": "Découvrez PancakeSwap, le DEX le plus populaire sur BNB Chain. Échangez des tokens, fournissez de la liquidité, farmez des CAKE et participez aux IFO sur plusieurs chaînes.",
+		"keywords": "PancakeSwap, BNB Chain, DEX, CAKE, yield farming, liquidité, IFO, DeFi"
+	},
+	"overview": "PancakeSwap est le plus grand exchange décentralisé sur BNB Chain et s'est développé pour devenir un DEX multi-chaîne leader supportant Ethereum, Arbitrum, Base et bien plus encore. Lancé en septembre 2020, PancakeSwap est rapidement devenu la plateforme de référence pour les utilisateurs de BNB Chain souhaitant échanger des tokens, fournir de la liquidité et générer des rendements.\n\nLa plateforme offre une expérience DeFi complète incluant des échanges de tokens via son AMM, du yield farming à travers les Farms et Syrup Pools, des Initial Farm Offerings (IFO) pour les lancements de nouveaux tokens, un marché de prédiction, une marketplace NFT et du trading de contrats perpétuels. Le token CAKE sert de token de gouvernance et d'utilité, avec des options de staking offrant divers avantages.\n\nPancakeSwap n'a cessé d'innover, ajoutant des fonctionnalités telles que des gestionnaires de positions pour la liquidité automatisée, des échanges cross-chain et des pools de liquidité concentrée (v3). Avec des milliards de volume d'échanges et des millions d'utilisateurs, il reste le DEX dominant pour BNB Chain et un acteur important dans l'écosystème DeFi multi-chaîne.",
+	"features": {
+		"1": {
+			"title": "DEX Multi-Chaîne",
+			"description": "Échangez sur BNB Chain, Ethereum, Arbitrum, Base, zkSync et d'autres chaînes"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Gagnez des récompenses CAKE en stakant des tokens LP dans les Farms ou des actifs uniques dans les Syrup Pools"
+		},
+		"3": {
+			"title": "IFO",
+			"description": "Participez aux Initial Farm Offerings pour accéder en avant-première aux nouveaux lancements de tokens"
+		},
+		"4": {
+			"title": "Liquidité Concentrée V3",
+			"description": "Fournissez de la liquidité dans des fourchettes de prix spécifiques pour une meilleure efficacité du capital"
+		},
+		"5": {
+			"title": "Trading Perpétuel",
+			"description": "Tradez des contrats perpétuels avec effet de levier sur les principales paires crypto"
+		},
+		"6": {
+			"title": "Gaming & NFT",
+			"description": "Participez aux marchés de prédiction, loterie et marketplace NFT"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Échanges de Tokens",
+			"description": "Échangez des tokens BEP-20 et des actifs cross-chain avec des frais faibles sur BNB Chain"
+		},
+		"2": {
+			"title": "Génération de Rendement",
+			"description": "Stakez des tokens LP ou CAKE pour gagner un revenu passif via les récompenses de farming"
+		},
+		"3": {
+			"title": "Accès aux Nouveaux Tokens",
+			"description": "Participez aux IFO pour acheter de nouveaux tokens aux prix de lancement"
+		},
+		"4": {
+			"title": "Fourniture de Liquidité",
+			"description": "Fournissez de la liquidité pour gagner des frais de trading et des incitations CAKE"
+		},
+		"5": {
+			"title": "Trading Cross-Chain",
+			"description": "Échangez des actifs sur plusieurs chaînes sans quitter la plateforme"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que PancakeSwap et comment fonctionne-t-il ?",
+			"answer": "PancakeSwap est un exchange décentralisé utilisant un modèle AMM (Automated Market Maker). Au lieu de carnets d'ordres, les échanges s'effectuent contre des pools de liquidité financés par les utilisateurs. Vous pouvez échanger des tokens instantanément, fournir de la liquidité pour gagner des frais et staker des tokens LP ou CAKE pour obtenir des récompenses supplémentaires."
+		},
+		"2": {
+			"question": "À quoi sert le token CAKE ?",
+			"answer": "CAKE est le token de gouvernance et d'utilité de PancakeSwap. Vous pouvez staker CAKE dans les Syrup Pools pour gagner d'autres tokens, verrouiller CAKE pour du veCAKE afin de booster les récompenses de farming et voter sur la gouvernance, participer aux IFO et l'utiliser comme paire de trading sur la plateforme."
+		},
+		"3": {
+			"question": "Comment farmer sur PancakeSwap ?",
+			"answer": "Pour farmer : 1) Ajoutez de la liquidité à une paire de trading pour obtenir des tokens LP, 2) Allez dans Farms et trouvez votre paire, 3) Stakez vos tokens LP, 4) Gagnez des récompenses CAKE au fil du temps, 5) Récoltez les récompenses ou composez-les. Notez que le farming comporte un risque de perte impermanente."
+		},
+		"4": {
+			"question": "Est-il sûr d'utiliser PancakeSwap ?",
+			"answer": "PancakeSwap est l'un des DEX les plus établis avec de nombreux audits de sécurité et un solide historique. Cependant, DeFi comporte toujours des risques incluant des vulnérabilités de smart contracts, des pertes impermanentes et des risques liés aux tokens. N'investissez que ce que vous pouvez vous permettre de perdre et recherchez les tokens avant de trader."
+		},
+		"5": {
+			"question": "Quelles chaînes PancakeSwap supporte-t-il ?",
+			"answer": "PancakeSwap s'est étendu au-delà de BNB Chain pour supporter Ethereum, Arbitrum, Base, zkSync Era, Polygon zkEVM, Linea, opBNB et Aptos. Vous pouvez échanger des actifs natifs sur chaque chaîne et utiliser les fonctionnalités cross-chain pour créer des ponts entre elles."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à trader sur PancakeSwap ?",
+		"button": "Ouvrir PancakeSwap",
+		"note": "Le DEX multi-chaîne leader pour trader et gagner"
+	}
+}

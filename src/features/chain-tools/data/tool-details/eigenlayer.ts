@@ -23,7 +23,7 @@ export const eigenlayerDetail: ToolDetail = {
 	// Social links
 	socialLinks: {
 		twitter: 'https://twitter.com/eigenlayer',
-		discord: 'https://discord.com/invite/eigenlayer',
+		discord: 'https://discord.gg/eigenlayer',
 		github: 'https://github.com/Layr-Labs',
 		docs: 'https://docs.eigenlayer.xyz'
 	},

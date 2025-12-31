@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Chainlink - Mạng Oracle Phi Tập Trung | Kết Nối Smart Contract với Dữ Liệu Thế Giới Thực",
+		"description": "Khám phá Chainlink, mạng oracle phi tập trung hàng đầu. Kết nối smart contract với dữ liệu thế giới thực, API và tính toán off-chain một cách an toàn.",
+		"keywords": "Chainlink, LINK, oracle, price feeds, VRF, CCIP, smart contracts, DeFi"
+	},
+	"overview": "Chainlink là mạng oracle phi tập trung tiêu chuẩn ngành cho phép smart contract truy cập an toàn vào dữ liệu, API và tính toán off-chain. Được thành lập bởi Sergey Nazarov và Steve Ellis vào năm 2017, Chainlink giải quyết 'vấn đề oracle'—thách thức trong việc đưa dữ liệu bên ngoài đáng tin cậy vào môi trường blockchain.\n\nMạng hoạt động thông qua các nhà điều hành node độc lập tổng hợp dữ liệu từ nhiều nguồn, cung cấp đầu vào và đầu ra chống giả mạo cho smart contract. Các sản phẩm của Chainlink bao gồm Price Feeds (được sử dụng bởi hầu hết các giao thức DeFi), VRF (hàm ngẫu nhiên có thể xác minh cho gaming/NFT), Automation (thực thi hợp đồng phi tập trung), Functions (tính toán serverless) và CCIP (Giao thức Tương tác Chuỗi Chéo).\n\nChainlink bảo mật hơn 75 tỷ đô la giá trị trên DeFi, bảo hiểm, gaming và ứng dụng doanh nghiệp. Token LINK được sử dụng để thanh toán cho các nhà điều hành node và làm tài sản thế chấp staking. Với các tích hợp rộng rãi và thành tích đã được chứng minh, Chainlink đã trở thành cơ sở hạ tầng quan trọng cho toàn bộ hệ sinh thái blockchain.",
+	"features": {
+		"1": {
+			"title": "Price Feeds",
+			"description": "Oracle giá phi tập trung cung cấp dữ liệu thị trường chính xác cho hầu hết các giao thức DeFi"
+		},
+		"2": {
+			"title": "VRF",
+			"description": "Hàm Ngẫu Nhiên Có Thể Xác Minh cho tính ngẫu nhiên công bằng có thể chứng minh trong gaming và NFT"
+		},
+		"3": {
+			"title": "CCIP",
+			"description": "Giao thức Tương tác Chuỗi Chéo cho chuyển token và tin nhắn an toàn"
+		},
+		"4": {
+			"title": "Automation",
+			"description": "Tự động hóa smart contract phi tập trung cho bảo trì và kích hoạt"
+		},
+		"5": {
+			"title": "Functions",
+			"description": "Nền tảng tính toán serverless để kết nối smart contract với bất kỳ API nào"
+		},
+		"6": {
+			"title": "Proof of Reserve",
+			"description": "Xác minh on-chain về dự trữ tài sản off-chain hoặc cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Dữ Liệu Giá DeFi",
+			"description": "Cung cấp nguồn cấp giá chính xác cho giao thức lending, derivatives và DEX"
+		},
+		"2": {
+			"title": "Tính Ngẫu Nhiên Gaming",
+			"description": "Tạo số ngẫu nhiên có thể xác minh cho mint NFT công bằng và cơ chế game"
+		},
+		"3": {
+			"title": "Chuyển Cross-Chain",
+			"description": "Bắc cầu token và tin nhắn an toàn giữa các blockchain khác nhau"
+		},
+		"4": {
+			"title": "Hành Động Tự Động",
+			"description": "Kích hoạt các hàm smart contract dựa trên thời gian hoặc điều kiện bên ngoài"
+		},
+		"5": {
+			"title": "Tích Hợp Thế Giới Thực",
+			"description": "Kết nối ứng dụng blockchain với API và nguồn dữ liệu truyền thống"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Chainlink là gì và tại sao smart contract cần oracle?",
+			"answer": "Chainlink là mạng oracle phi tập trung cung cấp dữ liệu bên ngoài cho smart contract. Blockchain là hệ thống cô lập không thể truy cập trực tiếp dữ liệu bên ngoài. Oracle lấp đầy khoảng trống này bằng cách truy xuất an toàn thông tin thế giới thực (giá cả, thời tiết, điểm thể thao, v.v.) và phân phối on-chain. Không có oracle, DeFi và hầu hết các ứng dụng blockchain không thể hoạt động."
+		},
+		"2": {
+			"question": "Chainlink đảm bảo độ chính xác của dữ liệu như thế nào?",
+			"answer": "Chainlink sử dụng nhiều lớp phi tập trung: dữ liệu được lấy từ nhiều nhà cung cấp dữ liệu cao cấp, được tổng hợp bởi nhiều nhà điều hành node độc lập, và kết quả trung vị/đồng thuận được phân phối on-chain. Các nhà điều hành node stake LINK làm tài sản thế chấp và có thể bị phạt vì cung cấp dữ liệu sai. Điều này làm cho thao túng trở nên không khả thi về mặt kinh tế."
+		},
+		"3": {
+			"question": "CCIP là gì và hoạt động như thế nào?",
+			"answer": "CCIP (Giao thức Tương tác Chuỗi Chéo) là giải pháp của Chainlink cho giao tiếp cross-chain an toàn. Nó cho phép chuyển token và tin nhắn tùy ý giữa các blockchain bằng cách sử dụng mạng oracle phi tập trung của Chainlink để bảo mật. Không giống như các bridge đã bị khai thác hàng tỷ đô la, CCIP tận dụng cơ sở hạ tầng bảo mật hiện có của Chainlink."
+		},
+		"4": {
+			"question": "Token LINK được sử dụng để làm gì?",
+			"answer": "LINK là token gốc của Chainlink với nhiều mục đích sử dụng: thanh toán cho các nhà điều hành node cho dịch vụ oracle, tài sản thế chấp staking cho nhà điều hành node (với phạt cho dữ liệu sai), và tham gia quản trị. Các dApp trả LINK cho dịch vụ Chainlink, tạo ra nhu cầu khi việc sử dụng mạng tăng lên."
+		},
+		"5": {
+			"question": "Những giao thức nào sử dụng Chainlink?",
+			"answer": "Chainlink được sử dụng bởi hầu hết các giao thức DeFi lớn bao gồm Aave, Compound, Synthetix, dYdX, GMX và hàng trăm giao thức khác. Nó cũng được sử dụng bởi các doanh nghiệp truyền thống như Swift, DTCC và ANZ Bank cho các thử nghiệm blockchain. Hơn 1.800 dự án trên DeFi, gaming, NFT và bảo hiểm dựa vào oracle của Chainlink."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng khám phá oracle của Chainlink?",
+		"button": "Mở Chainlink",
+		"note": "Mạng oracle tiêu chuẩn ngành"
+	}
+}

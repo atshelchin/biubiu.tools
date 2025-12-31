@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Liquity - Protocolo de Préstamos Sin Intereses | Pide Prestado LUSD Contra ETH",
+		"description": "Descubre Liquity, el protocolo de préstamos descentralizado. Pide prestada la stablecoin LUSD contra colateral ETH con 0% de interés: solo una comisión única. Completamente inmutable.",
+		"keywords": "Liquity, LUSD, LQTY, préstamos sin intereses, stablecoin, colateral ETH, DeFi"
+	},
+	"overview": "Liquity es un protocolo de préstamos descentralizado que permite a los usuarios obtener préstamos sin intereses contra colateral ETH. Fundado por Robert Lauko en 2020 y lanzado en 2021, Liquity fue pionero en DeFi verdaderamente inmutable: el protocolo no tiene claves de administrador y no puede ser actualizado ni cerrado.\n\nLos usuarios depositan ETH en 'Troves' y piden prestada la stablecoin LUSD contra él. No hay tasa de interés continua, solo una comisión única de préstamo (0.5-5% dependiendo de las condiciones del mercado). El ratio mínimo de colateral es 110%, entre los más eficientes en capital en DeFi. LUSD mantiene su vinculación a través de incentivos de arbitraje y un mecanismo de liquidación robusto.\n\nLQTY es el token secundario ganado por los depositantes del Stability Pool y operadores de frontend. El Stability Pool es la primera línea de defensa para liquidaciones, con depositantes ganando ETH de Troves liquidados. Liquity V2 (lanzamiento 2024) introduce tasas de interés establecidas por usuarios y múltiples tipos de colateral.",
+	"features": {
+		"1": {
+			"title": "Préstamos al 0% de Interés",
+			"description": "Pide prestado LUSD sin interés continuo: solo una comisión única de emisión"
+		},
+		"2": {
+			"title": "Ratio de Colateral 110%",
+			"description": "Eficiencia de capital líder en la industria con requisitos mínimos de colateral bajos"
+		},
+		"3": {
+			"title": "Protocolo Inmutable",
+			"description": "Sin claves de administrador, sin gobernanza: el protocolo funciona autónomamente para siempre"
+		},
+		"4": {
+			"title": "Stability Pool",
+			"description": "Deposita LUSD para ganar ETH de liquidaciones y recompensas LQTY"
+		},
+		"5": {
+			"title": "Liquidaciones Instantáneas",
+			"description": "Mecanismo de liquidación eficiente mantiene la solvencia del sistema automáticamente"
+		},
+		"6": {
+			"title": "Frontends Descentralizados",
+			"description": "Múltiples frontends independientes: sin punto único de fallo o censura"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Apalancamiento Sin Intereses",
+			"description": "Pide prestado LUSD contra ETH para obtener apalancamiento sin pagar intereses continuos"
+		},
+		"2": {
+			"title": "Rendimiento de LUSD",
+			"description": "Deposita LUSD en el Stability Pool para ganar recompensas de ETH y LQTY"
+		},
+		"3": {
+			"title": "Acceso a Stablecoin",
+			"description": "Acuña LUSD para pagos, DeFi, o mantener valor estable"
+		},
+		"4": {
+			"title": "Eficiencia de Capital",
+			"description": "Maximiza la exposición a ETH con sobre-colateralización mínima"
+		},
+		"5": {
+			"title": "Resistencia a la Censura",
+			"description": "Usa un protocolo de préstamos inmutable e imparable sin control central"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Liquity y cómo funcionan los préstamos sin intereses?",
+			"answer": "Liquity te permite pedir prestada la stablecoin LUSD contra colateral ETH sin interés continuo. En lugar de interés, pagas una comisión única (0.5-5%) al abrir o ajustar tu Trove. La comisión varía según la actividad reciente del sistema. Tu préstamo puede permanecer abierto indefinidamente siempre que mantengas el ratio mínimo de colateral del 110%."
+		},
+		"2": {
+			"question": "¿Qué es LUSD y cómo mantiene su vinculación?",
+			"answer": "LUSD es la stablecoin vinculada a USD de Liquity, respaldada solo por ETH. La vinculación se mantiene a través de: 1) Precio mínimo garantizado en $1 mediante redenciones (cualquiera puede redimir LUSD por $1 de ETH), 2) Precio máximo suave alrededor de $1.10 (pedir prestado se vuelve atractivo), 3) Liquidaciones del Stability Pool, y 4) Oportunidades de arbitraje. LUSD ha mantenido excelente estabilidad de vinculación."
+		},
+		"3": {
+			"question": "¿Qué es el Stability Pool?",
+			"answer": "El Stability Pool es donde los poseedores de LUSD depositan para ganar recompensas. Cuando los Troves son liquidados, los depósitos del Stability Pool se usan para pagar la deuda, y los depositantes reciben el ETH liquidado (con un descuento de ~10%). Los depositantes también ganan recompensas de token LQTY. Es un mecanismo clave que asegura la solvencia del sistema."
+		},
+		"4": {
+			"question": "¿Por qué Liquity es inmutable y qué significa eso?",
+			"answer": "Liquity no tiene claves de administrador, gobernanza o mecanismo de actualización. Una vez desplegados, los contratos inteligentes no pueden ser cambiados por nadie: funcionan autónomamente en Ethereum para siempre. Esto proporciona máxima resistencia a la censura y elimina vectores de ataque de gobernanza, pero también significa que los bugs no pueden ser corregidos. Es el protocolo de préstamos más descentralizado."
+		},
+		"5": {
+			"question": "¿Qué es Liquity V2?",
+			"answer": "Liquity V2 es una nueva versión que se lanzará en 2024 que introduce tasas de interés establecidas por usuarios (los prestatarios compiten en tasas), múltiples tipos de colateral más allá de ETH, y eficiencia de capital mejorada. A diferencia de V1, V2 tendrá cierta capacidad de actualización. V1 y V2 coexistirán como protocolos separados."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para pedir prestado sin intereses?",
+		"button": "Abrir Liquity",
+		"note": "Préstamos inmutables sin intereses contra ETH"
+	}
+}

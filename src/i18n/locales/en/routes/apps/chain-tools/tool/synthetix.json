@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Synthetix - Decentralized Synthetic Assets Protocol | Trade Any Asset On-Chain",
+		"description": "Discover Synthetix, the protocol for creating and trading synthetic assets. Access crypto, forex, commodities, and stocks on-chain with infinite liquidity.",
+		"keywords": "Synthetix, SNX, synthetic assets, Synths, DeFi, derivatives, perpetuals, liquidity"
+	},
+	"overview": "Synthetix is a decentralized protocol that enables the creation and trading of synthetic assets (Synths) on Ethereum and Optimism. Founded by Kain Warwick in 2017 (originally as Havven), Synthetix pioneered the concept of on-chain synthetic assets—tokens that track the price of real-world assets like currencies, commodities, stocks, and cryptocurrencies.\n\nThe protocol works by having SNX token holders stake their tokens as collateral to mint Synths. This creates a shared debt pool where stakers collectively back all Synths in circulation. The system provides infinite liquidity with zero slippage for Synth-to-Synth trades, as they're simply oracle-based price conversions rather than traditional AMM swaps.\n\nSynthetix V3 introduced a modular architecture with separate liquidity pools, enabling more efficient capital deployment and new market types. The protocol has become foundational DeFi infrastructure, with protocols like Kwenta and Lyra building perpetuals and options trading on top of Synthetix liquidity.",
+	"features": {
+		"1": {
+			"title": "Synthetic Assets",
+			"description": "Trade synthetic versions of crypto, forex, commodities, and indices on-chain"
+		},
+		"2": {
+			"title": "Zero Slippage",
+			"description": "Synth-to-Synth swaps have infinite liquidity with no slippage via oracle pricing"
+		},
+		"3": {
+			"title": "Perpetual Futures",
+			"description": "Trade perpetuals with deep liquidity through integrators like Kwenta"
+		},
+		"4": {
+			"title": "SNX Staking",
+			"description": "Stake SNX to mint sUSD, earn trading fees, and participate in governance"
+		},
+		"5": {
+			"title": "V3 Modular Pools",
+			"description": "Separate liquidity pools for different markets with configurable risk parameters"
+		},
+		"6": {
+			"title": "Cross-Chain",
+			"description": "Deploy on Ethereum mainnet and Optimism L2 for lower gas costs"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Derivatives Trading",
+			"description": "Trade perpetual futures on crypto assets with leverage"
+		},
+		"2": {
+			"title": "Forex Exposure",
+			"description": "Get on-chain exposure to major currencies like EUR, JPY, AUD"
+		},
+		"3": {
+			"title": "Staking Rewards",
+			"description": "Stake SNX to earn trading fees and inflationary rewards"
+		},
+		"4": {
+			"title": "Liquidity Provision",
+			"description": "Provide collateral to V3 pools to earn returns from traders"
+		},
+		"5": {
+			"title": "Protocol Integration",
+			"description": "Build trading interfaces and products on top of Synthetix liquidity"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Synthetix and how do synthetic assets work?",
+			"answer": "Synthetix enables the creation of Synths—tokens that track external asset prices via oracles. SNX stakers provide collateral backing all Synths. When you hold sUSD (synthetic USD), you can swap it for any other Synth (sBTC, sETH, sEUR, etc.) at oracle prices with zero slippage. The system doesn't require counterparties—it's just collateral backing oracle-priced tokens."
+		},
+		"2": {
+			"question": "What is the SNX staking mechanism?",
+			"answer": "SNX holders stake their tokens as collateral to mint sUSD. Stakers must maintain a collateralization ratio (currently ~500%) and actively manage their debt position. In return, they earn weekly trading fees and SNX inflation rewards. The debt pool is shared—if Synth traders profit, staker debt increases; if traders lose, staker debt decreases."
+		},
+		"3": {
+			"question": "What is Synthetix V3?",
+			"answer": "V3 is a complete rebuild introducing modular architecture. Instead of one global debt pool, V3 has separate pools that can back different markets with custom risk parameters. This enables more efficient capital usage, easier integration, and new product types. V3 also introduces cross-chain functionality and improved governance."
+		},
+		"4": {
+			"question": "What protocols are built on Synthetix?",
+			"answer": "Several major protocols build on Synthetix liquidity: Kwenta for perpetual futures trading, Lyra for options, Polynomial for structured products, and others. These integrators provide user interfaces while Synthetix provides the underlying liquidity and settlement layer. This ecosystem model allows Synthetix to focus on infrastructure."
+		},
+		"5": {
+			"question": "What are the risks of using Synthetix?",
+			"answer": "Risks include: smart contract vulnerabilities, oracle manipulation/failure, debt pool exposure (stakers share trading losses), liquidation if collateral ratio drops too low, and regulatory uncertainty around synthetic assets. The protocol has been audited extensively but remains complex with inherent DeFi risks."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade synthetic assets?",
+		"button": "Open Synthetix",
+		"note": "Decentralized synthetic assets and perpetuals"
+	}
+}

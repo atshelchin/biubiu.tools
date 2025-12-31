@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Dune Analytics - Platform Data Blockchain | Query dan Visualisasikan Data On-Chain",
+		"description": "Temukan Dune, platform analytics blockchain terkemuka. Tulis query SQL, bangun dashboard, dan jelajahi data on-chain di Ethereum, Bitcoin, dan 40+ chain.",
+		"keywords": "Dune Analytics, data blockchain, SQL, dashboard, analytics on-chain, analytics DeFi, data crypto"
+	},
+	"overview": "Dune adalah platform analytics blockchain berbasis komunitas terkemuka yang memungkinkan siapa saja untuk melakukan query, memvisualisasikan, dan membagikan data on-chain. Didirikan oleh Fredrik Haga dan Mats Olsen pada tahun 2018, Dune mendemokratisasi analisis data blockchain dengan membuatnya dapat diakses melalui query SQL tanpa memerlukan keahlian data engineering.\n\nPlatform menyediakan data blockchain yang didekode dan dapat dibaca manusia di 40+ jaringan termasuk Ethereum, Bitcoin, Solana, Polygon, dan Layer 2. Pengguna menulis query SQL (menggunakan DuneSQL) untuk menganalisis apa pun dari metrik protokol DeFi hingga pola trading NFT, kemudian membuat visualisasi dan dashboard yang dapat dibagikan. Spellbook, lapisan transformasi open-source Dune, menyediakan dataset yang telah dibangun sebelumnya untuk kebutuhan analytics umum.\n\nDune telah menjadi infrastruktur penting untuk riset crypto, dengan ribuan analis membuat dashboard publik yang digunakan oleh protokol, investor, dan jurnalis. Platform menggabungkan data blockchain mentah dengan event kontrak yang didekode, membuat analisis on-chain yang kompleks dapat diakses oleh siapa saja yang mengetahui SQL.",
+	"features": {
+		"1": {
+			"title": "Query SQL",
+			"description": "Tulis query DuneSQL untuk menganalisis data blockchain yang didekode dari 40+ jaringan"
+		},
+		"2": {
+			"title": "Dashboard Visual",
+			"description": "Buat dan bagikan dashboard interaktif dengan grafik, tabel, dan metrik"
+		},
+		"3": {
+			"title": "Spellbook",
+			"description": "Dataset yang telah dibangun untuk analytics umum seperti trading DEX, penjualan NFT, bridge"
+		},
+		"4": {
+			"title": "Data Real-Time",
+			"description": "Akses data blockchain hampir real-time dengan pembaruan otomatis"
+		},
+		"5": {
+			"title": "Akses API",
+			"description": "Akses hasil query secara programatik untuk integrasi ke dalam aplikasi"
+		},
+		"6": {
+			"title": "Query Komunitas",
+			"description": "Fork dan belajar dari ribuan query dan dashboard publik"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Analytics Protokol",
+			"description": "Lacak TVL, volume, pengguna, dan metrik untuk protokol DeFi"
+		},
+		"2": {
+			"title": "Analisis Wallet",
+			"description": "Riset wallet whale, lacak smart money, dan analisis pola trading"
+		},
+		"3": {
+			"title": "Riset Token",
+			"description": "Analisis distribusi token, perilaku holder, dan pola transfer"
+		},
+		"4": {
+			"title": "Analytics NFT",
+			"description": "Lacak penjualan NFT, floor price, statistik holder, dan metrik koleksi"
+		},
+		"5": {
+			"title": "Riset Ekosistem",
+			"description": "Bandingkan L2, lacak penggunaan gas, dan analisis tren aktivitas jaringan"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Dune dan untuk siapa?",
+			"answer": "Dune adalah platform analytics blockchain di mana pengguna melakukan query data on-chain menggunakan SQL dan membuat dashboard visual. Ini untuk siapa saja yang menganalisis crypto: peneliti yang melacak protokol, trader yang mencari alpha, protokol yang memantau metrik mereka, jurnalis yang menyelidiki event on-chain, dan developer yang membangun produk data. Pengetahuan SQL dasar membantu tetapi tidak diperlukan—Anda dapat memulai dengan melakukan fork query yang ada."
+		},
+		"2": {
+			"question": "Data apa yang tersedia di Dune?",
+			"answer": "Dune menyediakan data yang didekode dari 40+ blockchain termasuk Ethereum, Bitcoin, Solana, dan L2 utama. Data termasuk transaksi mentah, event kontrak yang didekode (misalnya swap Uniswap, deposit Aave), transfer token, perdagangan NFT, dan lainnya. Spellbook menyediakan tabel tingkat lebih tinggi seperti perdagangan DEX di semua protokol, membuat analisis kompleks lebih sederhana."
+		},
+		"3": {
+			"question": "Apakah Dune gratis?",
+			"answer": "Dune memiliki tier gratis yang memungkinkan query dan dashboard publik dengan beberapa batasan pada eksekusi query dan kesegaran data. Paket berbayar (Plus, Pro, Enterprise) menawarkan query pribadi, eksekusi lebih cepat, lebih banyak kredit, akses API, dan fitur tambahan. Banyak pengguna memulai gratis dan upgrade seiring pertumbuhan kebutuhan."
+		},
+		"4": {
+			"question": "Apa itu Spellbook?",
+			"answer": "Spellbook adalah lapisan transformasi open-source Dune (dibangun dengan dbt). Ini berisi model SQL yang dipelihara komunitas yang mengubah data blockchain mentah menjadi tabel berguna—seperti dex.trades (semua perdagangan DEX), nft.trades (penjualan NFT), saldo erc20, dll. Siapa pun dapat berkontribusi spell baru, dan mereka tersedia gratis untuk semua pengguna Dune."
+		},
+		"5": {
+			"question": "Bagaimana cara belajar menggunakan Dune?",
+			"answer": "Mulai dengan menjelajahi dashboard populer dan melakukan fork query untuk memahami cara kerjanya. Dune menawarkan dokumentasi, tutorial, dan komunitas Discord untuk bantuan. OurNetwork adalah sumber belajar yang populer. Keterampilan SQL dasar langsung ditransfer—jika Anda tahu SELECT, JOIN, dan GROUP BY, Anda dapat menganalisis data blockchain di Dune."
+		}
+	},
+	"cta": {
+		"ready": "Siap menganalisis data on-chain?",
+		"button": "Buka Dune",
+		"note": "Analytics blockchain berbasis komunitas"
+	}
+}

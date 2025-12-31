@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Frax Finance - Stablecoin Decentralizzato & Hub DeFi | FRAX, frxETH, Fraxtal",
+		"description": "Scopri Frax Finance, l'ecosistema DeFi innovativo. Usa la stablecoin FRAX, liquid staking frxETH, Fraxlend e Fraxtal L2 per soluzioni DeFi complete.",
+		"keywords": "Frax Finance, FRAX, frxETH, FXS, stablecoin, liquid staking, Fraxtal, DeFi"
+	},
+	"overview": "Frax Finance è un ecosistema DeFi completo incentrato sulla stablecoin FRAX e una suite di protocolli interconnessi. Fondato da Sam Kazemian nel 2020, Frax ha pionierato il modello di stablecoin frazionale-algoritmico, anche se da allora si è evoluto per diventare completamente collateralizzato.\n\nL'ecosistema include: FRAX (una stablecoin decentralizzata ora collateralizzata al 100%), frxETH/sfrxETH (liquid staking Ethereum), Fraxlend (prestito permissionless), FraxSwap (DEX abilitato TWAMM), FraxFerry (bridge cross-chain), e Fraxtal (una blockchain L2 costruita su tecnologia Optimism). FXS è il token di governance che cattura valore da tutte le attività del protocollo.\n\nL'innovazione chiave di Frax è il suo approccio verticalmente integrato—possedendo l'intero stack dalla stablecoin alla chain L2. Il protocollo ha un potere di governance significativo in Curve e Convex tramite i suoi holding veFXS e vlCVX, consentendogli di dirigere le emissioni ai pool correlati a Frax e mantenere liquidità profonda.",
+	"features": {
+		"1": {
+			"title": "Stablecoin FRAX",
+			"description": "Stablecoin USD decentralizzata supportata da garanzie cripto, ora collateralizzata al 100%"
+		},
+		"2": {
+			"title": "Staking frxETH",
+			"description": "Liquid staking per ETH con token frxETH e sfrxETH generatori di rendimento"
+		},
+		"3": {
+			"title": "Fraxlend",
+			"description": "Mercati di prestito permissionless con rischio isolato e parametri personalizzati"
+		},
+		"4": {
+			"title": "Fraxtal L2",
+			"description": "Chain L2 basata su Optimism che usa FRAX come token gas con incentivi blockspace"
+		},
+		"5": {
+			"title": "FraxSwap",
+			"description": "AMM con TWAMM integrato per grandi ordini a prezzo medio ponderato nel tempo"
+		},
+		"6": {
+			"title": "Governance veFXS",
+			"description": "Blocca FXS per potere di voto, direzione del peso di gauge e commissioni del protocollo"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Utilizzo di Stablecoin",
+			"description": "Usa FRAX per trading, prestito e come valore stabile in DeFi"
+		},
+		"2": {
+			"title": "Liquid Staking ETH",
+			"description": "Metti in stake ETH tramite frxETH e detieni sfrxETH per accumulo automatico di rendimento"
+		},
+		"3": {
+			"title": "Strategie con Leva",
+			"description": "Usa Fraxlend per prendere in prestito contro vari tipi di garanzia"
+		},
+		"4": {
+			"title": "Sviluppo L2",
+			"description": "Costruisci su Fraxtal per costi di gas inferiori e ricompense da incentivi blockspace"
+		},
+		"5": {
+			"title": "Partecipazione alla Governance",
+			"description": "Blocca FXS come veFXS per votare sui parametri del protocollo e guadagnare commissioni"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Frax Finance e come funziona FRAX?",
+			"answer": "Frax Finance è un ecosistema DeFi costruito attorno alla stablecoin FRAX. FRAX era originariamente frazionale-algoritmico (parzialmente collateralizzato) ma si è evoluto alla collateralizzazione al 100% per massima stabilità. Il protocollo include liquid staking, prestito, un DEX e una chain L2—tutti interconnessi per creare uno stack DeFi completo."
+		},
+		"2": {
+			"question": "Qual è la differenza tra frxETH e sfrxETH?",
+			"answer": "frxETH è un token ancorato 1:1 a ETH usato per la fornitura di liquidità. sfrxETH è la versione in stake che accumula tutte le ricompense dei validatori. Quando metti in stake ETH, puoi scegliere frxETH (per LP) o convertire in sfrxETH (per rendimento passivo). sfrxETH si apprezza di valore nel tempo man mano che si accumulano le ricompense di staking."
+		},
+		"3": {
+			"question": "Cos'è Fraxtal?",
+			"answer": "Fraxtal è la blockchain L2 di Frax costruita su tecnologia Optimism (OP Stack). Usa FRAX come token gas native. La caratteristica unica è 'Flox'—incentivi blockspace che ricompensano utenti e sviluppatori in base al gas speso, creando un volano di adozione e attività sulla chain."
+		},
+		"4": {
+			"question": "Cos'è FXS e veFXS?",
+			"answer": "FXS è il token di governance di Frax che cattura valore da tutte le attività dell'ecosistema. veFXS (vote-escrowed FXS) si ottiene bloccando FXS fino a 4 anni. I possessori di veFXS votano sui pesi di gauge, guadagnano commissioni del protocollo e dirigono le emissioni. Blocchi più lunghi forniscono più potere di voto."
+		},
+		"5": {
+			"question": "È sicuro usare Frax?",
+			"answer": "Frax opera dal 2020 con verifiche estensive. FRAX è ora collateralizzato al 100%, riducendo il rischio di de-peg. Tuttavia, i rischi includono vulnerabilità degli smart contract, dipendenze dagli oracoli e complessità dal design del protocollo interconnesso. Il liquid staking frxETH ha rischi aggiuntivi dei validatori."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a esplorare l'ecosistema Frax?",
+		"button": "Apri Frax Finance",
+		"note": "Stablecoin, liquid staking e L2 in un unico ecosistema"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Euler Finance - Modular Lending Protocol | Customizable DeFi Credit Markets",
+		"description": "Discover Euler Finance V2, the modular lending platform. Create custom lending vaults, use any asset as collateral, and build sophisticated credit strategies.",
+		"keywords": "Euler Finance, EUL, lending, borrowing, modular, vaults, DeFi, credit"
+	},
+	"overview": "Euler Finance is a modular lending protocol that enables the creation of customizable credit markets. Originally launched in 2021, Euler V2 represents a complete rebuild following extensive security work after a 2023 exploit. The new version introduces unprecedented flexibility in DeFi lending.\n\nEuler V2 consists of two core components: the Euler Vault Kit (EVK) for deploying custom lending vaults with configurable parameters, and the Ethereum Vault Connector (EVC) that allows vaults to recognize collateral from other vaults. This enables sophisticated credit structures—a single collateral position can back borrowing across multiple markets.\n\nThe modular design means anyone can create lending markets with custom risk parameters, oracle configurations, interest rate models, and liquidation mechanics. This ranges from permissioned institutional vaults to permissionless public markets. Euler has rebuilt with comprehensive security measures and achieved significant TVL growth since the V2 relaunch.",
+	"features": {
+		"1": {
+			"title": "Euler Vault Kit",
+			"description": "Create custom lending vaults with configurable risk parameters and oracles"
+		},
+		"2": {
+			"title": "Ethereum Vault Connector",
+			"description": "Use collateral across multiple vaults for capital-efficient borrowing"
+		},
+		"3": {
+			"title": "Modular Markets",
+			"description": "Permissionless creation of lending markets for any asset pair"
+		},
+		"4": {
+			"title": "Flexible Oracles",
+			"description": "Support for Chainlink, Uniswap TWAP, Redstone, and custom oracles"
+		},
+		"5": {
+			"title": "Risk Isolation",
+			"description": "Isolated lending pools prevent contagion between different markets"
+		},
+		"6": {
+			"title": "Governance Control",
+			"description": "Vaults can be governed, immutable, or upgradeable based on creator choice"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Standard Lending",
+			"description": "Borrow against major assets in curated, battle-tested vaults"
+		},
+		"2": {
+			"title": "Long-Tail Assets",
+			"description": "Access lending markets for newer or less liquid tokens"
+		},
+		"3": {
+			"title": "Institutional Markets",
+			"description": "Create permissioned vaults with KYC requirements and custom terms"
+		},
+		"4": {
+			"title": "Leveraged Strategies",
+			"description": "Use cross-vault collateral for efficient leveraged positions"
+		},
+		"5": {
+			"title": "Market Creation",
+			"description": "Deploy custom lending markets for specific assets or use cases"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Euler Finance and how does V2 work?",
+			"answer": "Euler is a modular lending protocol. V2 allows anyone to create custom lending vaults using the Euler Vault Kit (EVK). Each vault can have its own collateral types, oracles, interest rate models, and risk parameters. The Ethereum Vault Connector (EVC) links vaults together, allowing collateral in one vault to back borrowing in others."
+		},
+		"2": {
+			"question": "What happened to Euler V1?",
+			"answer": "Euler V1 suffered a $197M exploit in March 2023 due to a vulnerability in the donation attack vector. The attacker later returned the funds. Euler Labs spent over a year on V2, conducting extensive security audits and implementing a comprehensive bug bounty program. V2 is a complete architectural redesign, not a patch of V1."
+		},
+		"3": {
+			"question": "What is the Ethereum Vault Connector (EVC)?",
+			"answer": "The EVC is Euler's innovation allowing cross-vault collateral recognition. Instead of depositing collateral into each lending market separately, you can deposit once and have multiple vaults recognize it. This dramatically improves capital efficiency and enables complex multi-leg borrowing strategies."
+		},
+		"4": {
+			"question": "Who can create Euler vaults?",
+			"answer": "Anyone can create a vault using the EVK. Vault creators choose all parameters: accepted collateral, oracles, interest rates, liquidation conditions, and governance. Vaults can be fully permissionless, require whitelisting, or have any custom access control. This enables everything from institutional private markets to public permissionless lending."
+		},
+		"5": {
+			"question": "Is Euler V2 safe to use?",
+			"answer": "Euler V2 underwent one of the most comprehensive security processes in DeFi—extensive audits, formal verification, and a $1M+ bug bounty. However, DeFi always carries risk. The modular design means each vault has independent risk—a poorly configured vault doesn't affect others. Always research specific vaults before depositing."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore modular lending?",
+		"button": "Open Euler Finance",
+		"note": "Customizable lending vaults for any asset"
+	}
+}

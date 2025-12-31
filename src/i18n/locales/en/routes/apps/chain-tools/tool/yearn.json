@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Yearn Finance - DeFi Yield Aggregator | Auto-Compound Vaults",
+		"description": "Discover Yearn Finance, the leading yield aggregator. Deposit assets into Vaults to automatically earn optimized DeFi yields without manual management.",
+		"keywords": "Yearn Finance, YFI, yield aggregator, vaults, DeFi, auto-compound, yield optimization"
+	},
+	"overview": "Yearn Finance is a decentralized yield aggregation protocol that automates DeFi yield farming strategies. Founded by Andre Cronje in early 2020, Yearn pioneered the concept of \"Vaults\"—smart contracts that automatically deploy deposited assets across various DeFi protocols to maximize returns.\n\nThe core product is Yearn Vaults (yVaults), where users deposit assets and the protocol's strategies automatically farm the best yields, compound rewards, and rebalance positions. This saves users from manually moving funds, paying gas for harvests, and constantly researching optimal strategies. Vault strategies are developed by expert strategists who earn a share of generated profits.\n\nYearn V3 introduced modular vault architecture, enabling more flexible strategy deployment and better risk management. The YFI token is used for governance, with veYFI allowing token holders to vote on protocol decisions. Yearn has become foundational DeFi infrastructure, with its strategies and architecture influencing many subsequent yield protocols.",
+	"features": {
+		"1": {
+			"title": "Automated Vaults",
+			"description": "Deposit assets and earn optimized yields automatically—no manual management"
+		},
+		"2": {
+			"title": "Strategy Optimization",
+			"description": "Expert strategists continuously develop and improve yield strategies"
+		},
+		"3": {
+			"title": "Auto-Compounding",
+			"description": "Rewards are automatically harvested and reinvested for compound growth"
+		},
+		"4": {
+			"title": "Multi-Protocol Strategies",
+			"description": "Strategies deploy across Aave, Compound, Curve, and more for optimal yields"
+		},
+		"5": {
+			"title": "V3 Modular Architecture",
+			"description": "Flexible vault design with multiple strategies per vault and better risk isolation"
+		},
+		"6": {
+			"title": "veYFI Governance",
+			"description": "Lock YFI to vote on protocol decisions and gauge emissions"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Passive Yield Earning",
+			"description": "Deposit stablecoins or crypto and earn optimized yields without effort"
+		},
+		"2": {
+			"title": "Simplified DeFi",
+			"description": "Access complex yield strategies through simple vault deposits"
+		},
+		"3": {
+			"title": "Gas Optimization",
+			"description": "Share gas costs for harvesting and compounding with other vault depositors"
+		},
+		"4": {
+			"title": "Strategy Development",
+			"description": "Strategists can build and deploy strategies to earn performance fees"
+		},
+		"5": {
+			"title": "Protocol Integration",
+			"description": "Other protocols integrate yVaults for automated yield on their treasuries"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Yearn Finance and how do Vaults work?",
+			"answer": "Yearn is a yield aggregator where you deposit assets into Vaults. Each Vault has strategies that automatically deploy your funds across DeFi protocols (Aave, Compound, Curve, etc.) to earn yields. Rewards are auto-compounded, and strategies are optimized by experts. You receive yTokens representing your share of the vault."
+		},
+		"2": {
+			"question": "What fees does Yearn charge?",
+			"answer": "Yearn V3 vaults typically charge a 10% performance fee on yields generated (not on principal). Some vaults may have management fees. Fees fund protocol development and strategist rewards. There are no deposit or withdrawal fees for most vaults."
+		},
+		"3": {
+			"question": "Is Yearn safe to use?",
+			"answer": "Yearn has been operating since 2020 with extensive audits and a strong security track record. However, risks include smart contract vulnerabilities in Yearn and underlying protocols, strategy risks, and potential for losses in extreme market conditions. Yearn vaults are not insured—only deposit what you can afford to lose."
+		},
+		"4": {
+			"question": "What is YFI and veYFI?",
+			"answer": "YFI is Yearn's governance token with a fixed supply of 36,666. veYFI (vote-escrowed YFI) is obtained by locking YFI for up to 4 years. veYFI holders can vote on governance proposals, direct gauge emissions to specific vaults, and earn protocol fees. Longer locks provide more voting power."
+		},
+		"5": {
+			"question": "What is the difference between Yearn V2 and V3?",
+			"answer": "V3 introduces modular vault architecture where each vault can have multiple strategies that are easily added or removed. This improves risk management, allows more granular control, and enables new vault types. V3 also has improved gas efficiency and better integration with other protocols."
+		}
+	},
+	"cta": {
+		"ready": "Ready to earn optimized yields?",
+		"button": "Open Yearn",
+		"note": "Automated yield optimization for your crypto"
+	}
+}

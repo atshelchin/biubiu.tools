@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "Synthetix - Protocolo Descentralizado de Ativos Sintéticos | Negocie Qualquer Ativo On-Chain",
+		"description": "Descubra o Synthetix, o protocolo para criar e negociar ativos sintéticos. Acesse cripto, forex, commodities e ações on-chain com liquidez infinita.",
+		"keywords": "Synthetix, SNX, ativos sintéticos, Synths, DeFi, derivativos, perpétuos, liquidez"
+	},
+	"overview": "Synthetix é um protocolo descentralizado que permite a criação e negociação de ativos sintéticos (Synths) no Ethereum e Optimism. Fundado por Kain Warwick em 2017 (originalmente como Havven), o Synthetix foi pioneiro no conceito de ativos sintéticos on-chain—tokens que rastreiam o preço de ativos do mundo real como moedas, commodities, ações e criptomoedas.\n\nO protocolo funciona com os detentores de tokens SNX fazendo staking de seus tokens como garantia para cunhar Synths. Isso cria um pool de dívida compartilhado onde os stakers coletivamente garantem todos os Synths em circulação. O sistema fornece liquidez infinita com zero de slippage para negociações Synth-para-Synth, pois são simplesmente conversões de preços baseadas em oráculos, em vez de swaps AMM tradicionais.\n\nSynthetix V3 introduziu uma arquitetura modular com pools de liquidez separados, permitindo implantação de capital mais eficiente e novos tipos de mercado. O protocolo tornou-se infraestrutura DeFi fundamental, com protocolos como Kwenta e Lyra construindo negociação de perpétuos e opções em cima da liquidez do Synthetix.",
+	"features": {
+		"1": {
+			"title": "Ativos Sintéticos",
+			"description": "Negocie versões sintéticas de cripto, forex, commodities e índices on-chain"
+		},
+		"2": {
+			"title": "Zero Slippage",
+			"description": "Swaps Synth-para-Synth têm liquidez infinita sem slippage via precificação por oráculo"
+		},
+		"3": {
+			"title": "Futuros Perpétuos",
+			"description": "Negocie perpétuos com liquidez profunda através de integradores como Kwenta"
+		},
+		"4": {
+			"title": "Staking de SNX",
+			"description": "Faça staking de SNX para cunhar sUSD, ganhar taxas de negociação e participar da governança"
+		},
+		"5": {
+			"title": "Pools Modulares V3",
+			"description": "Pools de liquidez separados para diferentes mercados com parâmetros de risco configuráveis"
+		},
+		"6": {
+			"title": "Cross-Chain",
+			"description": "Implantado no Ethereum mainnet e Optimism L2 para custos de gas menores"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Negociação de Derivativos",
+			"description": "Negocie futuros perpétuos em ativos cripto com alavancagem"
+		},
+		"2": {
+			"title": "Exposição Forex",
+			"description": "Obtenha exposição on-chain a moedas principais como EUR, JPY, AUD"
+		},
+		"3": {
+			"title": "Recompensas de Staking",
+			"description": "Faça staking de SNX para ganhar taxas de negociação e recompensas inflacionárias"
+		},
+		"4": {
+			"title": "Provisão de Liquidez",
+			"description": "Forneça garantia aos pools V3 para ganhar retornos dos traders"
+		},
+		"5": {
+			"title": "Integração de Protocolo",
+			"description": "Construa interfaces de negociação e produtos em cima da liquidez do Synthetix"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é Synthetix e como funcionam os ativos sintéticos?",
+			"answer": "Synthetix permite a criação de Synths—tokens que rastreiam preços de ativos externos via oráculos. Stakers de SNX fornecem garantia apoiando todos os Synths. Quando você detém sUSD (USD sintético), pode trocá-lo por qualquer outro Synth (sBTC, sETH, sEUR, etc.) a preços de oráculo com zero slippage. O sistema não requer contrapartes—é apenas garantia apoiando tokens precificados por oráculo."
+		},
+		"2": {
+			"question": "Qual é o mecanismo de staking de SNX?",
+			"answer": "Detentores de SNX fazem staking de seus tokens como garantia para cunhar sUSD. Stakers devem manter uma taxa de colateralização (atualmente ~500%) e gerenciar ativamente sua posição de dívida. Em troca, eles ganham taxas de negociação semanais e recompensas inflacionárias de SNX. O pool de dívida é compartilhado—se traders de Synth lucrarem, a dívida do staker aumenta; se traders perderem, a dívida do staker diminui."
+		},
+		"3": {
+			"question": "O que é Synthetix V3?",
+			"answer": "V3 é uma reconstrução completa introduzindo arquitetura modular. Em vez de um pool de dívida global, V3 tem pools separados que podem apoiar diferentes mercados com parâmetros de risco personalizados. Isso permite uso de capital mais eficiente, integração mais fácil e novos tipos de produtos. V3 também introduz funcionalidade cross-chain e governança aprimorada."
+		},
+		"4": {
+			"question": "Quais protocolos são construídos em cima do Synthetix?",
+			"answer": "Vários protocolos importantes constroem em cima da liquidez do Synthetix: Kwenta para negociação de futuros perpétuos, Lyra para opções, Polynomial para produtos estruturados e outros. Esses integradores fornecem interfaces de usuário enquanto o Synthetix fornece a liquidez subjacente e camada de liquidação. Esse modelo de ecossistema permite que o Synthetix se concentre em infraestrutura."
+		},
+		"5": {
+			"question": "Quais são os riscos de usar o Synthetix?",
+			"answer": "Os riscos incluem: vulnerabilidades em contratos inteligentes, manipulação/falha de oráculo, exposição ao pool de dívida (stakers compartilham perdas de negociação), liquidação se a taxa de colateralização cair muito baixo e incerteza regulatória em torno de ativos sintéticos. O protocolo foi auditado extensivamente, mas permanece complexo com riscos inerentes ao DeFi."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para negociar ativos sintéticos?",
+		"button": "Abrir Synthetix",
+		"note": "Ativos sintéticos e perpétuos descentralizados"
+	}
+}

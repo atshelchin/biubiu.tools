@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Etherscan - Explorador Blockchain Ethereum | Rastrea Transacciones y Contratos",
+		"description": "Explora Etherscan, el explorador blockchain Ethereum líder. Rastrea transacciones, verifica contratos, analiza direcciones y explora datos en cadena.",
+		"keywords": "Etherscan, explorador blockchain, Ethereum, rastreador de transacciones, contratos inteligentes, rastreador de gas, rastreador de tokens"
+	},
+	"overview": "Etherscan es el explorador blockchain líder para Ethereum, proporcionando una ventana a toda la actividad en cadena. Fundado en 2015, Etherscan se ha convertido en una herramienta esencial para cualquiera que interactúe con Ethereum, desde desarrolladores depurando contratos hasta usuarios rastreando transacciones y investigadores analizando datos en cadena.\n\nLa plataforma permite a los usuarios buscar cualquier transacción, dirección, token o contrato inteligente en Ethereum. Las características clave incluyen rastreo de transacciones, verificación y lectura de contratos, transferencias y tenencias de tokens, rastreo de precio de gas y análisis detallados. Etherscan también proporciona APIs para que los desarrolladores accedan programáticamente a datos blockchain. Su función de contrato verificado se ha convertido en un estándar: los usuarios verifican rutinariamente si los contratos están 'verificados en Etherscan' antes de interactuar.\n\nEtherscan se ha expandido para soportar otras cadenas EVM a través de exploradores separados: Polygonscan, Arbiscan, Optimistic Etherscan, BSCScan y más. El equipo también construyó Blockscan Chat para mensajería entre billeteras. Con miles de millones de vistas de página y millones de llamadas API diarias, Etherscan es infraestructura fundamental que hace la transparencia de Ethereum accesible para todos.",
+	"features": {
+		"1": {
+			"title": "Rastreo de Transacciones",
+			"description": "Busca cualquier transacción con estado detallado, gas usado y datos decodificados"
+		},
+		"2": {
+			"title": "Verificación de Contratos",
+			"description": "Verifica y lee código fuente de contratos inteligentes para transparencia y confianza"
+		},
+		"3": {
+			"title": "Rastreo de Tokens",
+			"description": "Explora transferencias, holders y análisis de tokens ERC-20 y ERC-721"
+		},
+		"4": {
+			"title": "Rastreador de Gas",
+			"description": "Rastreo de precio de gas en tiempo real con estimaciones lenta, promedio y rápida"
+		},
+		"5": {
+			"title": "Análisis de Direcciones",
+			"description": "Ve historial completo de transacciones, saldos de tokens e interacciones de contratos"
+		},
+		"6": {
+			"title": "APIs para Desarrolladores",
+			"description": "Acceso programático a datos blockchain para construir aplicaciones"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Verificación de Transacciones",
+			"description": "Confirma estado y detalles de transacciones después de enviar cripto"
+		},
+		"2": {
+			"title": "Investigación de Contratos",
+			"description": "Lee código de contrato verificado antes de interactuar con protocolos DeFi"
+		},
+		"3": {
+			"title": "Análisis de Billeteras",
+			"description": "Investiga direcciones para entender tenencias y patrones de transacciones"
+		},
+		"4": {
+			"title": "Descubrimiento de Tokens",
+			"description": "Encuentra nuevos tokens, verifica legitimidad y analiza distribución de holders"
+		},
+		"5": {
+			"title": "Depurar y Desarrollar",
+			"description": "Los desarrolladores usan Etherscan para depurar transacciones y probar contratos"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Etherscan y cómo lo uso?",
+			"answer": "Etherscan es un explorador blockchain que te permite buscar y analizar todo en Ethereum. Pega cualquier hash de transacción, dirección de billetera, dirección de contrato o nombre ENS en la barra de búsqueda. Verás detalles completos: para transacciones (estado, valor, gas), para direcciones (saldo, historial, tokens), para contratos (código, interacciones). Es la herramienta de referencia para verificar cualquier cosa en cadena."
+		},
+		"2": {
+			"question": "¿Cómo verifico un contrato inteligente en Etherscan?",
+			"answer": "Ve a la dirección del contrato, haz clic en la pestaña 'Contract', luego 'Verify & Publish'. Selecciona la versión del compilador y configuraciones de optimización usadas durante el despliegue, pega tu código fuente (o sube archivo aplanado) y envía. Una vez verificado, cualquiera puede leer el código del contrato e interactuar con funciones de lectura/escritura a través de Etherscan. La mayoría de proyectos respetables verifican sus contratos."
+		},
+		"3": {
+			"question": "¿Por qué mi transacción muestra 'Pendiente'?",
+			"answer": "Pendiente significa que la transacción está en el mempool esperando ser incluida en un bloque. Causas comunes: precio de gas demasiado bajo (los mineros priorizan gas más alto), congestión de red (muchas transacciones pendientes) o problemas de nonce. Puedes 'acelerar' reenviando con gas más alto (mismo nonce) o esperar. Etherscan muestra transacciones pendientes pero aún no han sido confirmadas."
+		},
+		"4": {
+			"question": "¿Etherscan es solo para Ethereum?",
+			"answer": "El equipo detrás de Etherscan opera exploradores para muchas cadenas EVM: Polygonscan (Polygon), Arbiscan (Arbitrum), Optimistic Etherscan (Optimism), BSCScan (BNB Chain) y otros. Cada explorador funciona de manera similar pero para su respectiva cadena. Comparten la misma interfaz y características, solo diferentes datos blockchain."
+		},
+		"5": {
+			"question": "¿Cómo gana dinero Etherscan?",
+			"answer": "Los ingresos de Etherscan provienen de: publicidad (anuncios de banner en el sitio), planes API premium (el nivel gratuito tiene límites de tasa, los planes pagos ofrecen más llamadas) y servicios empresariales. El explorador básico es gratuito. También reciben subvenciones de Ethereum Foundation. A pesar de ser infraestructura crítica, Etherscan es una empresa privada, no un protocolo."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para explorar Ethereum?",
+		"button": "Abrir Etherscan",
+		"note": "El explorador blockchain Ethereum líder"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "The Graph - Protocole d'Indexation Décentralisé | Interrogez les Données Blockchain",
+		"description": "Explorez The Graph, le protocole d'indexation décentralisé pour Web3. Construisez des subgraphs pour interroger efficacement les données blockchain avec GraphQL.",
+		"keywords": "The Graph, GRT, subgraph, indexation blockchain, GraphQL, données Web3, protocole décentralisé"
+	},
+	"overview": "The Graph est un protocole d'indexation décentralisé qui permet l'interrogation efficace des données blockchain. Fondé en 2018 par Yaniv Tal, Jannis Pohlmann et Brandon Ramirez, The Graph résout un problème fondamental: les données blockchain sont stockées dans des formats optimisés pour le consensus, pas pour les requêtes. Lire les données directement depuis les nœuds est lent et limité.\n\nThe Graph fonctionne via des 'subgraphs'—APIs ouvertes qui indexent et organisent des données blockchain spécifiques. Les développeurs définissent quelles données indexer (événements, entités, relations), et le réseau The Graph les indexe dans un format interrogeable accessible via GraphQL. Les Indexers exécutent des nœuds qui traitent et servent les requêtes, les Curators signalent quels subgraphs sont précieux, et les Delegators stakent du GRT pour soutenir les indexers.\n\nAvec 195+ milliards de requêtes servies et des milliers de subgraphs déployés, The Graph alimente la plupart des dApps majeurs incluant Uniswap, Aave, Synthetix et beaucoup d'autres. Le réseau décentralisé assure l'absence de point unique de défaillance et la résistance à la censure. Le token GRT est utilisé pour le staking, la curation et le paiement des frais de requête. The Graph est devenu une infrastructure essentielle pour Web3, souvent appelé le 'Google des blockchains'.",
+	"features": {
+		"1": {
+			"title": "Indexation de Subgraph",
+			"description": "Créez des APIs personnalisées qui indexent des données blockchain spécifiques pour votre application"
+		},
+		"2": {
+			"title": "Requêtes GraphQL",
+			"description": "Interrogez les données blockchain avec GraphQL—flexible, efficace et convivial pour développeurs"
+		},
+		"3": {
+			"title": "Multi-Chain",
+			"description": "Indexez des données d'Ethereum, Polygon, Arbitrum et de nombreuses autres blockchains"
+		},
+		"4": {
+			"title": "Réseau Décentralisé",
+			"description": "Requêtes servies par un réseau d'indexers indépendants pour la fiabilité"
+		},
+		"5": {
+			"title": "Subgraph Studio",
+			"description": "Construisez, testez et déployez des subgraphs avec le studio convivial pour développeurs"
+		},
+		"6": {
+			"title": "Mises à Jour Temps Réel",
+			"description": "Les subgraphs se mettent à jour automatiquement au fur et à mesure que de nouveaux blocs sont produits"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Tableaux de Bord DeFi",
+			"description": "Alimentez des tableaux de bord analytiques avec des données de protocole indexées"
+		},
+		"2": {
+			"title": "Marchés NFT",
+			"description": "Interrogez efficacement la propriété, les transferts et métadonnées NFT"
+		},
+		"3": {
+			"title": "Frontends de Protocoles",
+			"description": "Construisez des UIs dApp réactives avec accès rapide aux données blockchain"
+		},
+		"4": {
+			"title": "Applications Portefeuille",
+			"description": "Affichez l'historique de transactions et données de portefeuille aux utilisateurs"
+		},
+		"5": {
+			"title": "Analyse de Données",
+			"description": "Les chercheurs interrogent les données on-chain pour analyse et reporting"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que The Graph et pourquoi est-il nécessaire?",
+			"answer": "The Graph est un protocole d'indexation qui rend les données blockchain interrogeables. Les blockchains stockent les données pour le consensus, pas les requêtes—lire les données directement est lent et limité. The Graph indexe les données blockchain dans un format structuré, permettant d'interroger avec GraphQL (comme 'obtenir tous les swaps supérieurs à 100k$ dans la dernière heure'). La plupart des dApps majeurs utilisent The Graph car les requêtes directes aux nœuds ne peuvent pas supporter des UIs réactives."
+		},
+		"2": {
+			"question": "Qu'est-ce qu'un subgraph?",
+			"answer": "Un subgraph est une API ouverte qui définit quelles données blockchain indexer et comment les organiser. Vous écrivez un 'manifeste de subgraph' spécifiant quels smart contracts et événements surveiller, et des 'mappings' qui transforment les événements blockchain en entités. Une fois déployé, le réseau The Graph indexe les données et les sert via GraphQL. N'importe qui peut créer des subgraphs, et les populaires sont réutilisés par de nombreuses apps."
+		},
+		"3": {
+			"question": "Comment interroger un subgraph?",
+			"answer": "Les subgraphs sont interrogés en utilisant GraphQL. Chaque subgraph a une URL d'endpoint où vous envoyez des requêtes GraphQL. Par exemple: query { swaps(first: 10, orderBy: amountUSD) { ... } }. The Graph Explorer vous permet de parcourir et tester les subgraphs. Pour la production, vous obtenez une clé API depuis Subgraph Studio et payez pour les requêtes avec du GRT ou carte de crédit."
+		},
+		"4": {
+			"question": "À quoi sert le token GRT?",
+			"answer": "GRT est le token natif de The Graph avec plusieurs utilisations: les Indexers stakent du GRT pour participer au réseau et gagner des frais de requête. Les Curators stakent du GRT pour signaler quels subgraphs sont précieux (gagnent une portion des frais). Les Delegators stakent du GRT avec des indexers pour gagner des récompenses. Les frais de requête sont payés en GRT (ou via facturation en fiat qui se convertit en GRT). GRT aligne les incitations à travers le réseau."
+		},
+		"5": {
+			"question": "Comment fonctionne le réseau décentralisé de The Graph?",
+			"answer": "Trois rôles principaux: les Indexers exécutent des nœuds qui indexent les subgraphs et servent les requêtes, stakent du GRT et gagnent des frais. Les Curators signalent les subgraphs précieux en stakant du GRT, aidant les indexers à prioriser quoi indexer. Les Delegators stakent du GRT avec des indexers en qui ils ont confiance, partageant les récompenses. Cela crée un réseau décentralisé où aucune entité unique ne contrôle l'infrastructure—différent des services d'indexation centralisés."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à interroger les données blockchain?",
+		"button": "Ouvrir The Graph",
+		"note": "Le protocole d'indexation décentralisé pour Web3"
+	}
+}

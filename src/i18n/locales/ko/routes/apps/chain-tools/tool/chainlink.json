@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷",
+		"code": "ko"
+	},
+	"seo": {
+		"title": "Chainlink - 탈중앙화 Oracle 네트워크 | 스마트 컨트랙트와 실제 데이터 연결",
+		"description": "선도적인 탈중앙화 Oracle 네트워크 Chainlink를 만나보세요. 스마트 컨트랙트를 실제 데이터, API 및 오프체인 계산에 안전하게 연결합니다.",
+		"keywords": "Chainlink, LINK, oracle, price feeds, VRF, CCIP, smart contracts, DeFi"
+	},
+	"overview": "Chainlink는 스마트 컨트랙트가 오프체인 데이터, API 및 계산에 안전하게 액세스할 수 있도록 하는 업계 표준 탈중앙화 Oracle 네트워크입니다. 2017년 Sergey Nazarov와 Steve Ellis가 설립한 Chainlink는 블록체인 환경에 신뢰할 수 있는 외부 데이터를 가져오는 문제인 'Oracle 문제'를 해결합니다.\n\n네트워크는 여러 소스에서 데이터를 집계하는 독립적인 노드 운영자에 의해 운영되며, 스마트 컨트랙트에 변조 방지 입출력을 제공합니다. Chainlink의 제품에는 Price Feeds(대부분의 DeFi 프로토콜에서 사용), VRF(게임/NFT용 검증 가능한 랜덤 함수), Automation(탈중앙화 컨트랙트 실행), Functions(서버리스 컴퓨팅), CCIP(크로스체인 상호운용성 프로토콜)가 포함됩니다.\n\nChainlink는 DeFi, 보험, 게임 및 기업 애플리케이션 전반에 걸쳐 750억 달러 이상의 가치를 보호합니다. LINK 토큰은 노드 운영자에 대한 지불 및 스테이킹 담보로 사용됩니다. 광범위한 통합과 입증된 실적으로 Chainlink는 전체 블록체인 생태계의 핵심 인프라가 되었습니다.",
+	"features": {
+		"1": {
+			"title": "Price Feeds",
+			"description": "정확한 시장 데이터로 대부분의 DeFi 프로토콜을 지원하는 탈중앙화 가격 Oracle"
+		},
+		"2": {
+			"title": "VRF",
+			"description": "게임과 NFT에서 증명 가능하게 공정한 무작위성을 위한 검증 가능한 랜덤 함수"
+		},
+		"3": {
+			"title": "CCIP",
+			"description": "안전한 토큰 및 메시지 전송을 위한 크로스체인 상호운용성 프로토콜"
+		},
+		"4": {
+			"title": "Automation",
+			"description": "유지보수 및 트리거를 위한 탈중앙화 스마트 컨트랙트 자동화"
+		},
+		"5": {
+			"title": "Functions",
+			"description": "스마트 컨트랙트를 모든 API에 연결하는 서버리스 컴퓨팅 플랫폼"
+		},
+		"6": {
+			"title": "Proof of Reserve",
+			"description": "오프체인 또는 크로스체인 자산 준비금의 온체인 검증"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 가격 데이터",
+			"description": "대출, 파생상품 및 DEX 프로토콜에 정확한 가격 피드 제공"
+		},
+		"2": {
+			"title": "게임 무작위성",
+			"description": "공정한 NFT 민팅 및 게임 메커니즘을 위한 검증 가능한 난수 생성"
+		},
+		"3": {
+			"title": "크로스체인 전송",
+			"description": "서로 다른 블록체인 간에 토큰과 메시지를 안전하게 브리지"
+		},
+		"4": {
+			"title": "자동화된 작업",
+			"description": "시간 또는 외부 조건에 따라 스마트 컨트랙트 함수 트리거"
+		},
+		"5": {
+			"title": "실제 통합",
+			"description": "블록체인 애플리케이션을 기존 API 및 데이터 소스에 연결"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Chainlink는 무엇이며 스마트 컨트랙트에 Oracle이 필요한 이유는 무엇인가요?",
+			"answer": "Chainlink는 스마트 컨트랙트에 외부 데이터를 공급하는 탈중앙화 Oracle 네트워크입니다. 블록체인은 외부 데이터에 직접 액세스할 수 없는 격리된 시스템입니다. Oracle은 실제 정보(가격, 날씨, 스포츠 점수 등)를 안전하게 가져와 온체인에 전달하여 이 격차를 메웁니다. Oracle이 없으면 DeFi와 대부분의 블록체인 애플리케이션은 작동할 수 없습니다."
+		},
+		"2": {
+			"question": "Chainlink는 어떻게 데이터 정확성을 보장하나요?",
+			"answer": "Chainlink는 여러 계층의 탈중앙화를 사용합니다. 데이터는 많은 프리미엄 데이터 제공업체에서 소싱되고, 여러 독립 노드 운영자에 의해 집계되며, 중간값/합의 결과가 온체인으로 전달됩니다. 노드 운영자는 LINK를 담보로 스테이킹하고 잘못된 데이터를 제공하면 슬래시될 수 있습니다. 이로 인해 조작은 경제적으로 실행 불가능합니다."
+		},
+		"3": {
+			"question": "CCIP는 무엇이며 어떻게 작동하나요?",
+			"answer": "CCIP(크로스체인 상호운용성 프로토콜)는 안전한 크로스체인 통신을 위한 Chainlink의 솔루션입니다. Chainlink의 탈중앙화 Oracle 네트워크를 보안으로 사용하여 블록체인 간 토큰 전송 및 임의 메시징을 가능하게 합니다. 수십억 달러의 피해를 입은 브리지와 달리 CCIP는 Chainlink의 기존 보안 인프라를 활용합니다."
+		},
+		"4": {
+			"question": "LINK 토큰은 무엇에 사용되나요?",
+			"answer": "LINK는 Chainlink의 네이티브 토큰으로 여러 용도가 있습니다. Oracle 서비스에 대한 노드 운영자에 대한 지불, 노드 운영자의 스테이킹 담보(잘못된 데이터에 대한 슬래싱 포함), 거버넌스 참여입니다. dApp은 Chainlink 서비스에 LINK를 지불하여 네트워크 사용량이 증가함에 따라 수요가 생성됩니다."
+		},
+		"5": {
+			"question": "어떤 프로토콜이 Chainlink를 사용하나요?",
+			"answer": "Chainlink는 Aave, Compound, Synthetix, dYdX, GMX 및 수백 개 이상을 포함한 대부분의 주요 DeFi 프로토콜에서 사용됩니다. 또한 Swift, DTCC, ANZ Bank와 같은 전통적인 기업들이 블록체인 실험에 사용합니다. DeFi, 게임, NFT 및 보험 전반에 걸쳐 1,800개 이상의 프로젝트가 Chainlink Oracle에 의존합니다."
+		}
+	},
+	"cta": {
+		"ready": "Chainlink Oracle을 탐색할 준비가 되셨나요?",
+		"button": "Chainlink 열기",
+		"note": "업계 표준 Oracle 네트워크"
+	}
+}

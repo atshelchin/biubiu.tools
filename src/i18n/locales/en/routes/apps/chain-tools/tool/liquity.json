@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Liquity - Interest-Free Borrowing Protocol | Borrow LUSD Against ETH",
+		"description": "Discover Liquity, the decentralized borrowing protocol. Borrow LUSD stablecoin against ETH collateral with 0% interest—just a one-time fee. Fully immutable.",
+		"keywords": "Liquity, LUSD, LQTY, interest-free borrowing, stablecoin, ETH collateral, DeFi"
+	},
+	"overview": "Liquity is a decentralized borrowing protocol that allows users to draw interest-free loans against ETH collateral. Founded by Robert Lauko in 2020 and launched in 2021, Liquity pioneered truly immutable DeFi—the protocol has no admin keys and cannot be upgraded or shut down.\n\nUsers deposit ETH into 'Troves' and borrow LUSD stablecoin against it. There's no ongoing interest rate—just a one-time borrowing fee (0.5-5% depending on market conditions). The minimum collateral ratio is 110%, among the most capital-efficient in DeFi. LUSD maintains its peg through arbitrage incentives and a robust liquidation mechanism.\n\nLQTY is the secondary token earned by Stability Pool depositors and frontend operators. The Stability Pool is the first line of defense for liquidations, with depositors earning ETH from liquidated Troves. Liquity V2 (launching 2024) introduces user-set interest rates and multiple collateral types.",
+	"features": {
+		"1": {
+			"title": "0% Interest Loans",
+			"description": "Borrow LUSD with no ongoing interest—only a one-time issuance fee"
+		},
+		"2": {
+			"title": "110% Collateral Ratio",
+			"description": "Industry-leading capital efficiency with low minimum collateral requirements"
+		},
+		"3": {
+			"title": "Immutable Protocol",
+			"description": "No admin keys, no governance—the protocol runs autonomously forever"
+		},
+		"4": {
+			"title": "Stability Pool",
+			"description": "Deposit LUSD to earn ETH from liquidations and LQTY rewards"
+		},
+		"5": {
+			"title": "Instant Liquidations",
+			"description": "Efficient liquidation mechanism maintains system solvency automatically"
+		},
+		"6": {
+			"title": "Decentralized Frontends",
+			"description": "Multiple independent frontends—no single point of failure or censorship"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Interest-Free Leverage",
+			"description": "Borrow LUSD against ETH to get leverage without paying ongoing interest"
+		},
+		"2": {
+			"title": "LUSD Yield",
+			"description": "Deposit LUSD in the Stability Pool to earn ETH and LQTY rewards"
+		},
+		"3": {
+			"title": "Stablecoin Access",
+			"description": "Mint LUSD for payments, DeFi, or holding stable value"
+		},
+		"4": {
+			"title": "Capital Efficiency",
+			"description": "Maximize ETH exposure with minimal over-collateralization"
+		},
+		"5": {
+			"title": "Censorship Resistance",
+			"description": "Use an immutable, unstoppable borrowing protocol with no central control"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Liquity and how does interest-free borrowing work?",
+			"answer": "Liquity lets you borrow LUSD stablecoin against ETH collateral with no ongoing interest. Instead of interest, you pay a one-time fee (0.5-5%) when opening or adjusting your Trove. The fee varies based on recent system activity. Your loan can remain open indefinitely as long as you maintain the 110% minimum collateral ratio."
+		},
+		"2": {
+			"question": "What is LUSD and how does it maintain its peg?",
+			"answer": "LUSD is Liquity's USD-pegged stablecoin, backed only by ETH. The peg is maintained through: 1) Hard price floor at $1 via redemptions (anyone can redeem LUSD for $1 of ETH), 2) Soft price ceiling around $1.10 (borrowing becomes attractive), 3) Stability Pool liquidations, and 4) Arbitrage opportunities. LUSD has maintained excellent peg stability."
+		},
+		"3": {
+			"question": "What is the Stability Pool?",
+			"answer": "The Stability Pool is where LUSD holders deposit to earn rewards. When Troves are liquidated, Stability Pool deposits are used to repay the debt, and depositors receive the liquidated ETH (at a ~10% discount). Depositors also earn LQTY token rewards. It's a key mechanism ensuring system solvency."
+		},
+		"4": {
+			"question": "Why is Liquity immutable and what does that mean?",
+			"answer": "Liquity has no admin keys, governance, or upgrade mechanism. Once deployed, the smart contracts cannot be changed by anyone—they run autonomously on Ethereum forever. This provides maximum censorship resistance and removes governance attack vectors, but also means bugs cannot be fixed. It's the most decentralized borrowing protocol."
+		},
+		"5": {
+			"question": "What is Liquity V2?",
+			"answer": "Liquity V2 is a new version launching in 2024 that introduces user-set interest rates (borrowers compete on rates), multiple collateral types beyond ETH, and improved capital efficiency. Unlike V1, V2 will have some upgradeability. V1 and V2 will coexist as separate protocols."
+		}
+	},
+	"cta": {
+		"ready": "Ready to borrow interest-free?",
+		"button": "Open Liquity",
+		"note": "Immutable interest-free borrowing against ETH"
+	}
+}

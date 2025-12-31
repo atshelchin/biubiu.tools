@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵",
+		"code": "ja"
+	},
+	"seo": {
+		"title": "Frax Finance - 分散型ステーブルコイン & DeFiハブ | FRAX, frxETH, Fraxtal",
+		"description": "革新的なDeFiエコシステム、Frax Financeを体験。FRAXステーブルコイン、frxETHリキッドステーキング、Fraxlend、Fraxtal L2で包括的なDeFiソリューションを利用。",
+		"keywords": "Frax Finance, FRAX, frxETH, FXS, ステーブルコイン, リキッドステーキング, Fraxtal, DeFi"
+	},
+	"overview": "Frax Financeは、FRAXステーブルコインと相互接続されたプロトコルスイートを中心とした包括的なDeFiエコシステムです。2020年にSam Kazemianによって設立されたFraxは、部分的アルゴリズムステーブルコインモデルを開拓しましたが、現在は完全担保型に進化しています。\n\nエコシステムには以下が含まれます:FRAX(現在100%担保の分散型ステーブルコイン)、frxETH/sfrxETH(Ethereumリキッドステーキング)、Fraxlend(パーミッションレスレンディング)、FraxSwap(TWAMM対応DEX)、FraxFerry(クロスチェーンブリッジ)、Fraxtal(Optimism技術で構築されたL2ブロックチェーン)。FXSは、すべてのプロトコル活動から価値を獲得するガバナンストークンです。\n\nFraxの主な革新は、垂直統合アプローチです - ステーブルコインからL2チェーンまでの全スタックを所有しています。このプロトコルは、veFXSとvlCVXの保有を通じてCurveとConvexで大きなガバナンス力を持ち、Frax関連プールにエミッションを向け、深い流動性を維持できます。",
+	"features": {
+		"1": {
+			"title": "FRAXステーブルコイン",
+			"description": "暗号資産担保による分散型USDステーブルコイン、現在100%担保型"
+		},
+		"2": {
+			"title": "frxETHステーキング",
+			"description": "frxETHと利回り型sfrxETHトークンを使用したETHのリキッドステーキング"
+		},
+		"3": {
+			"title": "Fraxlend",
+			"description": "隔離されたリスクとカスタムパラメータを持つパーミッションレスレンディング市場"
+		},
+		"4": {
+			"title": "Fraxtal L2",
+			"description": "ガストークンとしてFRAXを使用し、ブロックスペースインセンティブを備えたOptimismベースのL2チェーン"
+		},
+		"5": {
+			"title": "FraxSwap",
+			"description": "大規模な時間加重平均価格注文用の組み込みTWAMMを備えたAMM"
+		},
+		"6": {
+			"title": "veFXSガバナンス",
+			"description": "FXSをロックして投票権を獲得し、ゲージウェイトを方向付け、プロトコル手数料を獲得"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "ステーブルコイン使用",
+			"description": "取引、レンディング、DeFiでの安定価値としてFRAXを使用"
+		},
+		"2": {
+			"title": "ETHリキッドステーキング",
+			"description": "frxETH経由でETHをステーキングし、自動利回り蓄積のためにsfrxETHを保有"
+		},
+		"3": {
+			"title": "レバレッジ戦略",
+			"description": "さまざまな担保タイプに対する借入にFraxlendを使用"
+		},
+		"4": {
+			"title": "L2開発",
+			"description": "低ガス費用とブロックスペースインセンティブ報酬のためにFraxtal上で構築"
+		},
+		"5": {
+			"title": "ガバナンス参加",
+			"description": "FXSをveFXSとしてロックし、プロトコルパラメータに投票して手数料を獲得"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Frax Financeとは何ですか?FRAXはどのように機能しますか?",
+			"answer": "Frax Financeは、FRAXステーブルコインを中心に構築されたDeFiエコシステムです。FRAXは当初部分的アルゴリズム型(部分的に担保)でしたが、最大の安定性のために100%担保型に進化しました。プロトコルには、リキッドステーキング、レンディング、DEX、L2チェーンが含まれており、すべて相互接続されて包括的なDeFiスタックを作成しています。"
+		},
+		"2": {
+			"question": "frxETHとsfrxETHの違いは何ですか?",
+			"answer": "frxETHは、流動性提供に使用される1:1 ETHペッグトークンです。sfrxETHは、すべてのバリデーター報酬を蓄積するステーキング版です。ETHをステーキングすると、frxETH(LPing用)またはsfrxETH(パッシブ利回り用)に変換するかを選択できます。sfrxETHは、ステーキング報酬が蓄積されるにつれて時間とともに価値が上昇します。"
+		},
+		"3": {
+			"question": "Fraxtalとは何ですか?",
+			"answer": "FraxtalはOptimism(OP Stack)技術で構築されたFraxのL2ブロックチェーンです。ネイティブガストークンとしてFRAXを使用します。ユニークな機能は'Flox'です - 使用されたガスに基づいてユーザーと開発者に報酬を与えるブロックスペースインセンティブで、チェーン上での採用と活動のフライホイールを作成します。"
+		},
+		"4": {
+			"question": "FXSとveFXSとは何ですか?",
+			"answer": "FXSは、すべてのエコシステム活動から価値を獲得するFraxのガバナンストークンです。veFXS(vote-escrowed FXS)は、FXSを最大4年間ロックすることで取得されます。veFXSホルダーはゲージウェイトに投票し、プロトコル手数料を獲得し、エミッションを方向付けます。より長いロックはより多くの投票権を提供します。"
+		},
+		"5": {
+			"question": "Fraxは安全に使用できますか?",
+			"answer": "Fraxは2020年から広範な監査で運営されています。FRAXは現在100%担保型で、デペッグリスクを軽減しています。ただし、リスクには、スマートコントラクトの脆弱性、オラクル依存性、相互接続されたプロトコル設計からの複雑性が含まれます。frxETHリキッドステーキングには追加のバリデーターリスクがあります。"
+		}
+	},
+	"cta": {
+		"ready": "Fraxエコシステムを探索する準備はできましたか?",
+		"button": "Frax Financeを開く",
+		"note": "1つのエコシステムにステーブルコイン、リキッドステーキング、L2"
+	}
+}

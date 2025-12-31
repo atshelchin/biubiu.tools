@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Alchemy - Plataforma de Desarrollo Blockchain | Construye Apps Web3",
+		"description": "Explora Alchemy, la plataforma líder para desarrolladores blockchain. Construye aplicaciones Web3 escalables con infraestructura de nodos confiable, APIs y herramientas para desarrolladores.",
+		"keywords": "Alchemy, API blockchain, desarrollo Web3, infraestructura de nodos, NFT API, desarrollo dApp, Ethereum API"
+	},
+	"overview": "Alchemy es la plataforma líder para desarrolladores blockchain, proporcionando la infraestructura y herramientas necesarias para construir aplicaciones Web3 escalables. Fundada en 2017 por Nikil Viswanathan y Joe Lau, Alchemy impulsa a empresas importantes incluyendo OpenSea, Adobe, Shopify y muchos protocolos DeFi principales.\n\nLa plataforma ofrece infraestructura de nodos confiable para Ethereum, Polygon, Arbitrum, Optimism, Solana y otras cadenas importantes. Más allá del acceso RPC básico, Alchemy proporciona APIs mejoradas para NFTs, tokens, transacciones y webhooks. Su tecnología Supernode ofrece mayor confiabilidad y menor latencia que ejecutar tus propios nodos. Las herramientas para desarrolladores incluyen el SDK de Alchemy, explorador de blockchain, visualizador de mempool y herramientas de depuración.\n\nAlchemy ha procesado billones de solicitudes y soporta aplicaciones que han transferido más de $100 mil millones en valor. Con una valoración de $10.2 mil millones a partir de 2022, Alchemy se ha convertido en el AWS de blockchain: infraestructura esencial en la que confía la mayoría de desarrolladores Web3. Su nivel gratuito lo hace accesible para desarrolladores independientes mientras que los planes empresariales escalan a millones de solicitudes.",
+	"features": {
+		"1": {
+			"title": "Supernode RPC",
+			"description": "Infraestructura de nodos de alta confiabilidad con 99.9%+ de tiempo activo en cadenas principales"
+		},
+		"2": {
+			"title": "APIs Mejoradas",
+			"description": "APIs especializadas para metadatos NFT, saldos de tokens, historial de transacciones y más"
+		},
+		"3": {
+			"title": "Webhooks",
+			"description": "Notificaciones en tiempo real para eventos en cadena como transferencias y llamadas a contratos"
+		},
+		"4": {
+			"title": "SDK de Alchemy",
+			"description": "SDK amigable para desarrolladores que simplifica operaciones blockchain comunes"
+		},
+		"5": {
+			"title": "Account Kit",
+			"description": "Infraestructura de billetera inteligente para transacciones sin gas e inicio de sesión social"
+		},
+		"6": {
+			"title": "Soluciones Rollup",
+			"description": "Despliega cadenas L2/L3 personalizadas con la plataforma rollup-as-a-service de Alchemy"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Desarrollo de dApp",
+			"description": "Construye aplicaciones descentralizadas confiables con infraestructura blockchain robusta"
+		},
+		"2": {
+			"title": "Plataformas NFT",
+			"description": "Impulsa mercados NFT y apps con APIs de metadatos completas"
+		},
+		"3": {
+			"title": "Servicios de Billetera",
+			"description": "Construye billeteras con actualizaciones de saldo en tiempo real e historial de transacciones"
+		},
+		"4": {
+			"title": "Protocolos DeFi",
+			"description": "Accede a datos de precios confiables y transmisión de transacciones para apps DeFi"
+		},
+		"5": {
+			"title": "Web3 Empresarial",
+			"description": "Integra características blockchain en aplicaciones empresariales a escala"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Alchemy y por qué lo usan los desarrolladores?",
+			"answer": "Alchemy es infraestructura blockchain que proporciona acceso a nodos y APIs para que los desarrolladores no tengan que ejecutar sus propios nodos. Ejecutar nodos Ethereum requiere recursos significativos (TB de almacenamiento, sincronización constante, DevOps). Alchemy maneja esta infraestructura mientras agrega características mejoradas como APIs NFT, webhooks y herramientas de depuración. La mayoría de las dApps principales usan Alchemy o proveedores similares."
+		},
+		"2": {
+			"question": "¿Cómo se compara Alchemy con ejecutar tu propio nodo?",
+			"answer": "Ejecutar tu propio nodo da control total pero requiere recursos significativos: hardware, almacenamiento (1-2TB para Ethereum), ancho de banda y mantenimiento continuo. El Supernode de Alchemy proporciona mayor confiabilidad (99.9%+ de tiempo activo), menor latencia, APIs mejoradas y escala automáticamente. Para la mayoría de proyectos, usar Alchemy es más rentable que auto-hospedaje hasta que alcances volúmenes muy altos."
+		},
+		"3": {
+			"question": "¿Es Alchemy gratuito?",
+			"answer": "Alchemy ofrece un nivel gratuito generoso: 300M de unidades de cómputo/mes, que cubre la mayoría de proyectos independientes y startups en etapa temprana. Los planes pagos (Growth, Scale, Enterprise) proporcionan más unidades de cómputo, límites de tasa más altos, soporte dedicado y características avanzadas. Muchos desarrolladores comienzan gratis y actualizan a medida que sus apps crecen."
+		},
+		"4": {
+			"question": "¿Qué cadenas soporta Alchemy?",
+			"answer": "Alchemy soporta cadenas principales incluyendo Ethereum, Polygon, Arbitrum, Optimism, Base, Solana y más. Cada cadena tiene soporte RPC completo más APIs mejoradas específicas de la cadena. Continuamente agregan nuevas cadenas basándose en la demanda de desarrolladores. Consulta su documentación para la lista actual de redes soportadas."
+		},
+		"5": {
+			"question": "¿Qué es Alchemy Account Kit?",
+			"answer": "Account Kit es la infraestructura de billetera inteligente de Alchemy que habilita abstracción de cuenta (ERC-4337). Permite que las dApps ofrezcan transacciones sin gas (patrocinar gas del usuario), inicio de sesión social (iniciar sesión con email/Google) y billeteras programables. Esto mejora la UX eliminando la necesidad de que los usuarios gestionen frases semilla o mantengan ETH para gas."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para construir en Web3?",
+		"button": "Abrir Alchemy",
+		"note": "La plataforma líder para desarrolladores blockchain"
+	}
+}

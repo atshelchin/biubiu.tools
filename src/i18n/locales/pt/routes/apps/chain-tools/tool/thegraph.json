@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "The Graph - Protocolo de Indexação Descentralizado | Consulte Dados Blockchain",
+		"description": "Explore The Graph, o protocolo de indexação descentralizado para Web3. Construa subgraphs para consultar dados blockchain eficientemente com GraphQL.",
+		"keywords": "The Graph, GRT, subgraph, indexação blockchain, GraphQL, dados Web3, protocolo descentralizado"
+	},
+	"overview": "The Graph é um protocolo de indexação descentralizado que permite consulta eficiente de dados blockchain. Fundado em 2018 por Yaniv Tal, Jannis Pohlmann e Brandon Ramirez, The Graph resolve um problema fundamental: dados blockchain são armazenados em formatos otimizados para consenso, não para consultas. Ler dados diretamente de nós é lento e limitado.\n\nThe Graph funciona através de 'subgraphs'—APIs abertas que indexam e organizam dados blockchain específicos. Desenvolvedores definem quais dados indexar (eventos, entidades, relacionamentos), e a rede The Graph indexa em um formato consultável acessível via GraphQL. Indexers executam nós que processam e servem consultas, Curators sinalizam quais subgraphs são valiosos, e Delegators fazem stake de GRT para apoiar indexers.\n\nCom 195+ bilhões de consultas servidas e milhares de subgraphs implantados, The Graph impulsiona a maioria dos dApps principais incluindo Uniswap, Aave, Synthetix e muitos outros. A rede descentralizada garante nenhum ponto único de falha e resistência à censura. O token GRT é usado para staking, curadoria e pagamento de taxas de consulta. The Graph se tornou infraestrutura essencial para Web3, frequentemente chamado de 'Google das blockchains'.",
+	"features": {
+		"1": {
+			"title": "Indexação de Subgraph",
+			"description": "Crie APIs customizadas que indexam dados blockchain específicos para sua aplicação"
+		},
+		"2": {
+			"title": "Consultas GraphQL",
+			"description": "Consulte dados blockchain com GraphQL—flexível, eficiente e amigável para desenvolvedores"
+		},
+		"3": {
+			"title": "Multi-Chain",
+			"description": "Indexe dados de Ethereum, Polygon, Arbitrum e muitas outras blockchains"
+		},
+		"4": {
+			"title": "Rede Descentralizada",
+			"description": "Consultas servidas por uma rede de indexers independentes para confiabilidade"
+		},
+		"5": {
+			"title": "Subgraph Studio",
+			"description": "Construa, teste e implante subgraphs com o studio amigável para desenvolvedores"
+		},
+		"6": {
+			"title": "Atualizações em Tempo Real",
+			"description": "Subgraphs atualizam automaticamente conforme novos blocos são produzidos"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Dashboards DeFi",
+			"description": "Impulsione dashboards de análise com dados de protocolo indexados"
+		},
+		"2": {
+			"title": "Mercados NFT",
+			"description": "Consulte propriedade, transferências e metadados NFT eficientemente"
+		},
+		"3": {
+			"title": "Frontends de Protocolos",
+			"description": "Construa UIs dApp responsivas com acesso rápido a dados blockchain"
+		},
+		"4": {
+			"title": "Apps de Carteira",
+			"description": "Exiba histórico de transações e dados de portfólio para usuários"
+		},
+		"5": {
+			"title": "Análise de Dados",
+			"description": "Pesquisadores consultam dados on-chain para análise e relatórios"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é The Graph e por que é necessário?",
+			"answer": "The Graph é um protocolo de indexação que torna dados blockchain consultáveis. Blockchains armazenam dados para consenso, não consultas—ler dados diretamente é lento e limitado. The Graph indexa dados blockchain em um formato estruturado, permitindo consultar com GraphQL (como 'obter todos os swaps acima de $100k na última hora'). A maioria dos dApps principais usa The Graph porque consultas diretas a nós não podem suportar UIs responsivas."
+		},
+		"2": {
+			"question": "O que é um subgraph?",
+			"answer": "Um subgraph é uma API aberta que define quais dados blockchain indexar e como organizá-los. Você escreve um 'manifesto de subgraph' especificando quais smart contracts e eventos observar, e 'mapeamentos' que transformam eventos blockchain em entidades. Uma vez implantado, a rede The Graph indexa os dados e os serve via GraphQL. Qualquer pessoa pode criar subgraphs, e os populares são reutilizados por muitos apps."
+		},
+		"3": {
+			"question": "Como consultar um subgraph?",
+			"answer": "Subgraphs são consultados usando GraphQL. Cada subgraph tem uma URL de endpoint onde você envia consultas GraphQL. Por exemplo: query { swaps(first: 10, orderBy: amountUSD) { ... } }. O Graph Explorer permite navegar e testar subgraphs. Para produção, você obtém uma chave API do Subgraph Studio e paga por consultas com GRT ou cartão de crédito."
+		},
+		"4": {
+			"question": "Para que é usado o token GRT?",
+			"answer": "GRT é o token nativo do The Graph com vários usos: Indexers fazem stake de GRT para participar da rede e ganhar taxas de consulta. Curators fazem stake de GRT para sinalizar quais subgraphs são valiosos (ganham parte das taxas). Delegators fazem stake de GRT com indexers para ganhar recompensas. Taxas de consulta são pagas em GRT (ou via faturamento em fiat que converte para GRT). GRT alinha incentivos em toda a rede."
+		},
+		"5": {
+			"question": "Como funciona a rede descentralizada do The Graph?",
+			"answer": "Três funções principais: Indexers executam nós que indexam subgraphs e servem consultas, fazendo stake de GRT e ganhando taxas. Curators sinalizam subgraphs valiosos fazendo stake de GRT, ajudando indexers a priorizar o que indexar. Delegators fazem stake de GRT com indexers em quem confiam, compartilhando recompensas. Isso cria uma rede descentralizada onde nenhuma entidade única controla a infraestrutura—diferente de serviços de indexação centralizados."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para consultar dados blockchain?",
+		"button": "Abrir The Graph",
+		"note": "O protocolo de indexação descentralizado para Web3"
+	}
+}

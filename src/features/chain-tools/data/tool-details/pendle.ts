@@ -22,9 +22,9 @@ export const pendleDetail: ToolDetail = {
 
 	// Social links
 	socialLinks: {
-		twitter: 'https://twitter.com/penaborsh_fi',
-		discord: 'https://discord.com/invite/penaborshle',
-		github: 'https://github.com/penaborshle-finance',
+		twitter: 'https://twitter.com/pendle_fi',
+		discord: 'https://pendle.finance/discord',
+		github: 'https://github.com/pendle-finance',
 		docs: 'https://docs.pendle.finance'
 	},
 

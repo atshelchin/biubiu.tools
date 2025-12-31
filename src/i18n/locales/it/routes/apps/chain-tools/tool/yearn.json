@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Yearn Finance - Aggregatore di Rendimento DeFi | Vault Auto-Compound",
+		"description": "Scopri Yearn Finance, l'aggregatore di rendimento leader. Deposita asset nei Vault per guadagnare automaticamente rendimenti DeFi ottimizzati senza gestione manuale.",
+		"keywords": "Yearn Finance, YFI, aggregatore di rendimento, vaults, DeFi, auto-compound, ottimizzazione rendimento"
+	},
+	"overview": "Yearn Finance è un protocollo di aggregazione di rendimento decentralizzato che automatizza le strategie di yield farming DeFi. Fondato da Andre Cronje all'inizio del 2020, Yearn ha introdotto il concetto di \"Vaults\"—smart contract che distribuiscono automaticamente gli asset depositati attraverso vari protocolli DeFi per massimizzare i rendimenti.\n\nIl prodotto principale sono i Yearn Vaults (yVaults), dove gli utenti depositano asset e le strategie del protocollo raccolgono automaticamente i migliori rendimenti, compongono le ricompense e ribilanciano le posizioni. Questo risparmia agli utenti di dover spostare manualmente i fondi, pagare gas per i raccolti e ricercare costantemente strategie ottimali. Le strategie dei vault sono sviluppate da strateghi esperti che guadagnano una quota dei profitti generati.\n\nYearn V3 ha introdotto un'architettura vault modulare, abilitando una distribuzione di strategie più flessibile e una migliore gestione del rischio. Il token YFI è utilizzato per la governance, con veYFI che consente ai possessori di token di votare sulle decisioni del protocollo. Yearn è diventato infrastruttura DeFi fondamentale, con le sue strategie e architettura che influenzano molti protocolli di rendimento successivi.",
+	"features": {
+		"1": {
+			"title": "Vault Automatizzati",
+			"description": "Deposita asset e guadagna rendimenti ottimizzati automaticamente—senza gestione manuale"
+		},
+		"2": {
+			"title": "Ottimizzazione delle Strategie",
+			"description": "Strateghi esperti sviluppano e migliorano continuamente le strategie di rendimento"
+		},
+		"3": {
+			"title": "Auto-Compounding",
+			"description": "Le ricompense vengono automaticamente raccolte e reinvestite per crescita composta"
+		},
+		"4": {
+			"title": "Strategie Multi-Protocollo",
+			"description": "Le strategie si distribuiscono su Aave, Compound, Curve e altro per rendimenti ottimali"
+		},
+		"5": {
+			"title": "Architettura Modulare V3",
+			"description": "Design vault flessibile con più strategie per vault e migliore isolamento del rischio"
+		},
+		"6": {
+			"title": "Governance veYFI",
+			"description": "Blocca YFI per votare sulle decisioni del protocollo e sulle emissioni gauge"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Guadagno Passivo di Rendimento",
+			"description": "Deposita stablecoin o crypto e guadagna rendimenti ottimizzati senza sforzo"
+		},
+		"2": {
+			"title": "DeFi Semplificato",
+			"description": "Accedi a strategie di rendimento complesse attraverso semplici depositi nei vault"
+		},
+		"3": {
+			"title": "Ottimizzazione del Gas",
+			"description": "Condividi i costi del gas per raccolta e compounding con altri depositanti del vault"
+		},
+		"4": {
+			"title": "Sviluppo di Strategie",
+			"description": "Gli strateghi possono costruire e distribuire strategie per guadagnare commissioni di performance"
+		},
+		"5": {
+			"title": "Integrazione di Protocollo",
+			"description": "Altri protocolli integrano yVaults per rendimento automatizzato sui loro tesori"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Yearn Finance e come funzionano i Vault?",
+			"answer": "Yearn è un aggregatore di rendimento dove depositi asset nei Vault. Ogni Vault ha strategie che distribuiscono automaticamente i tuoi fondi attraverso protocolli DeFi (Aave, Compound, Curve, ecc.) per guadagnare rendimenti. Le ricompense vengono auto-composte e le strategie sono ottimizzate da esperti. Ricevi yToken che rappresentano la tua quota del vault."
+		},
+		"2": {
+			"question": "Quali commissioni applica Yearn?",
+			"answer": "I vault Yearn V3 tipicamente applicano una commissione di performance del 10% sui rendimenti generati (non sul capitale). Alcuni vault possono avere commissioni di gestione. Le commissioni finanziano lo sviluppo del protocollo e le ricompense degli strateghi. Non ci sono commissioni di deposito o prelievo per la maggior parte dei vault."
+		},
+		"3": {
+			"question": "È sicuro usare Yearn?",
+			"answer": "Yearn opera dal 2020 con audit estensivi e un solido track record di sicurezza. Tuttavia, i rischi includono vulnerabilità degli smart contract in Yearn e nei protocolli sottostanti, rischi delle strategie e potenziale per perdite in condizioni di mercato estreme. I vault Yearn non sono assicurati—deposita solo ciò che puoi permetterti di perdere."
+		},
+		"4": {
+			"question": "Cos'è YFI e veYFI?",
+			"answer": "YFI è il token di governance di Yearn con una fornitura fissa di 36.666. veYFI (vote-escrowed YFI) si ottiene bloccando YFI fino a 4 anni. I possessori di veYFI possono votare sulle proposte di governance, dirigere le emissioni gauge a vault specifici e guadagnare commissioni del protocollo. Blocchi più lunghi forniscono più potere di voto."
+		},
+		"5": {
+			"question": "Qual è la differenza tra Yearn V2 e V3?",
+			"answer": "V3 introduce un'architettura vault modulare dove ogni vault può avere più strategie che sono facilmente aggiunte o rimosse. Questo migliora la gestione del rischio, consente un controllo più granulare e abilita nuovi tipi di vault. V3 ha anche una migliore efficienza del gas e una migliore integrazione con altri protocolli."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a guadagnare rendimenti ottimizzati?",
+		"button": "Apri Yearn",
+		"note": "Ottimizzazione automatica del rendimento per la tua crypto"
+	}
+}

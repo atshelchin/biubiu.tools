@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵",
+		"code": "ja"
+	},
+	"seo": {
+		"title": "Convex Finance - ブーストされたCurve & Fraxステーキング | CRV報酬を最大化",
+		"description": "CurveとFraxの利回りを最大化するプラットフォームであるConvex Financeを発見。ロックなしでブーストされたCRV報酬を得るためにLPトークンをステーキング、またはプロトコル手数料のためにCVXをステーキングできます。",
+		"keywords": "Convex Finance, CVX, Curve, CRV, イールドブースト, DeFi, 流動性ステーキング, veCRV"
+	},
+	"overview": "Convex Financeは、veCRV投票権を集約することでCurve Finance流動性提供者の利回りを最大化するDeFiプロトコルです。2021年5月にローンチされたConvexは、重要な問題を解決しました。Curveで最大のCRV報酬を獲得するには、CRVを最大4年間ロックする必要がありますが、ほとんどのユーザーはこれができない、またはしたくありません。\n\nConvexは、CRVをステーキングするユーザーからveCRVをプールし、この集約された投票権を使用して、すべてのConvex預金者の報酬をブーストします。Curve LPトークン保有者は、個人的にCRVをロックすることなく、ConvexにステーキングしてブーストされたCRV + CVX報酬を獲得できます。これにより、ブーストされた利回りへのアクセスが民主化され、「Curve Wars」が引き起こされました。これは、プロトコルがCRV排出を指示するためにConvexのCVX投票権を競い合うことです。\n\nこのプラットフォームは、Curveを超えてFrax Finance（cvxFXS）とf(x)プロトコルをサポートするように拡大しました。CVXトークン保有者は、トークンをvlCVXとしてロックしてゲージウェイトに投票し、排出方向を求めるプロトコルからブライブを獲得できます。10億ドル以上のTVLを持つConvexは、Curveエコシステムの中心です。",
+	"features": {
+		"1": {
+			"title": "ブーストされたCRV報酬",
+			"description": "個人的にCRVを4年間ロックすることなく、最大のCurve報酬を獲得"
+		},
+		"2": {
+			"title": "CVX報酬",
+			"description": "Curve LPトークンをステーキングして、ブーストされたCRVの上にCVXを獲得"
+		},
+		"3": {
+			"title": "cvxCRVステーキング",
+			"description": "CRVをcvxCRVとしてステーキングして、CRV、CVX、3CRV報酬を獲得"
+		},
+		"4": {
+			"title": "vlCVX投票",
+			"description": "CVXをロックしてCurveゲージウェイトに投票し、ブライブを獲得"
+		},
+		"5": {
+			"title": "Fraxサポート",
+			"description": "FXSをcvxFXSとしてステーキングして、ブーストされたFraxプロトコル報酬を獲得"
+		},
+		"6": {
+			"title": "自動複利運用",
+			"description": "報酬は預金者のために自動的に請求および複利運用される"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Curve LPブースト",
+			"description": "CRVをロックすることなく、Curve LPポジションで最大のCRV報酬を獲得"
+		},
+		"2": {
+			"title": "CRVステーキング",
+			"description": "CRVをcvxCRVに変換して、4年間のロックアップなしで利回りを獲得"
+		},
+		"3": {
+			"title": "ガバナンスパワー",
+			"description": "CVXをvlCVXとしてロックして、Curve排出を指示し、ブライブを獲得"
+		},
+		"4": {
+			"title": "受動的利回り",
+			"description": "ステーキングして、CurveとFrax全体で自動複利運用された報酬を獲得"
+		},
+		"5": {
+			"title": "プロトコルの影響力",
+			"description": "プロトコルはCVXを蓄積して、プールへのCRV排出に影響を与える"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Convex Financeとは何ですか？なぜ存在するのですか？",
+			"answer": "Convexは、Curveのブースト問題を解決します。最大のCRV報酬を獲得するには、CRVを最大4年間veCRVとしてロックする必要があります。ほとんどのユーザーはこれができません。Convexは、多くのユーザーからveCRVを集約して、Convexにステーキングする人全員にブーストされた報酬を提供します。個人的なロックは必要ありません。"
+		},
+		"2": {
+			"question": "CRV、cvxCRV、veCRVの違いは何ですか？",
+			"answer": "CRVはCurveのトークンです。veCRVは、Curveに最大4年間直接ロックされたvote-escrowed CRVです。投票権とブーストを提供しますが、非流動的です。cvxCRVは、Convexに預けられたCRVです。流動的（取引可能）であり、Convexの集約されたveCRVポジションから利回りを獲得します。CRVをcvxCRVに変換することは一方向です。"
+		},
+		"3": {
+			"question": "Curve Warsとは何ですか？",
+			"answer": "Curve Warsは、CRV排出を指示するためにCVX/vlCVXを蓄積するために競争するプロトコルを指します。ConvexがかなりのveCRVを制御しているため、CVX投票権を制御することは、Curve報酬がどこに行くかを制御することを意味します。プロトコルは、vlCVX投票者にプールに投票するように「ブライブ」（トークン報酬）を提供し、排出方向をめぐるメタゲームを作成します。"
+		},
+		"4": {
+			"question": "vlCVXとは何ですか？ブライブはどのように機能しますか？",
+			"answer": "vlCVX（vote-locked CVX）は、16週間以上ロックされたCVXです。vlCVX保有者は、どのCurveプールがCRV排出を受け取るかに投票します。プロトコルは、プールに排出を指示するvlCVX投票者に「ブライブ」（トークン報酬）を支払います。ブライブは、ロックされたCVXよりも価値があることが多く、投票者にとって魅力的な利回りを生み出します。"
+		},
+		"5": {
+			"question": "CRVをcvxCRVに変換することは可逆的ですか？",
+			"answer": "いいえ、CRVをcvxCRVに変換することは一方向で永続的です。ただし、cvxCRVはDEXで取引可能です。cvxCRV/CRV交換レートは市場状況に基づいて変動します。時にはcvxCRVはCRVに対してディスカウントまたはプレミアムで取引されます。変換する前にこれを考慮してください。"
+		}
+	},
+	"cta": {
+		"ready": "Curveの利回りを最大化する準備はできましたか？",
+		"button": "Convexを開く",
+		"note": "CurveとFraxのためのブーストされたステーキング"
+	}
+}

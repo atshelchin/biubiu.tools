@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Nansen - AI Destekli Zincir Üstü Analitik | Akıllı Para Takibi ve Cüzdan Etiketleri",
+		"description": "Önde gelen zincir üstü analitik platformu Nansen'ı keşfedin. Akıllı parayı takip edin, 500M+ etiketli cüzdanı analiz edin ve kripto yatırımı için AI destekli içgörüler alın.",
+		"keywords": "Nansen, zincir üstü analitik, akıllı para, cüzdan etiketleri, kripto analitiği, DeFi araştırması, AI"
+	},
+	"overview": "Nansen, zincir üstü verileri cüzdan etiketleriyle zenginleştirerek eyleme geçirilebilir içgörüler sağlayan AI destekli bir blokzincir analitik platformudur. 2019 yılında Alex Svanevik, Evgeny Medvedev ve Lars Bakke Krogvig tarafından kurulan Nansen, 'akıllı para' takibi konseptine öncülük etti—kanıtlanmış geçmişe sahip cüzdanları tanımlama ve takip etme.\n\nPlatform, birden fazla zincirde 500 milyondan fazla cüzdanı etiketledi ve bunları akıllı para, fonlar, borsalar, balinalar ve daha fazlası olarak kategorize etti. Bu etiketleme, kullanıcıların sadece zincir üstünde ne olduğunu değil, faaliyetin arkasında kimin olduğunu görmelerini sağlar. Nansen'ın ürünleri arasında portföy takibi, token analitiği, NFT analitiği ve gerçek zamanlı uyarılar bulunur.\n\nNansen hem perakende hem de kurumsal kullanıcılara hizmet verir ve basit akıllı para takibinden gelişmiş API erişimine ve özel panolara kadar özellikler sunar. Platformun AI yetenekleri, devasa miktarda zincir üstü veriden içgörü çıkarmaya yardımcı olarak fırsatları ve riskleri belirlemeyi kolaylaştırır.",
+	"features": {
+		"1": {
+			"title": "500M+ Etiketli Cüzdan",
+			"description": "Zincirler arası akıllı para, fonlar, borsalar ve önemli tüccarları tanımlayın"
+		},
+		"2": {
+			"title": "Akıllı Para Takibi",
+			"description": "Üst düzey tüccarların ve fonların ne aldığını, sattığını ve biriktirdiğini takip edin"
+		},
+		"3": {
+			"title": "Gerçek Zamanlı Uyarılar",
+			"description": "Akıllı para token'lara veya NFT koleksiyonlarına girdiğinde bildirim alın"
+		},
+		"4": {
+			"title": "Token Analitiği",
+			"description": "Sahip dağılımını, birikim modellerini ve borsa akışlarını analiz edin"
+		},
+		"5": {
+			"title": "NFT Analitiği",
+			"description": "Akıllı para NFT aktivitesini, taban fiyatlarını ve koleksiyon trendlerini takip edin"
+		},
+		"6": {
+			"title": "AI İçgörüleri",
+			"description": "Önemli zincir üstü modelleri ve anormallikleri ortaya çıkaran AI destekli analiz"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Akıllı Para Takibi",
+			"description": "Piyasa hareketlerinden önce üst düzey tüccarların ne biriktirdiğini takip edin"
+		},
+		"2": {
+			"title": "Token Durum Tespiti",
+			"description": "Sahip kompozisyonunu, dağılımı ve akıllı para ilgisini araştırın"
+		},
+		"3": {
+			"title": "Balina İzleme",
+			"description": "Büyük cüzdan hareketlerini ve borsa giriş/çıkışlarını izleyin"
+		},
+		"4": {
+			"title": "NFT Ticareti",
+			"description": "Akıllı para ilgisi kazanan NFT koleksiyonlarını tanımlayın"
+		},
+		"5": {
+			"title": "Portföy İzleme",
+			"description": "Portföyünüzü takip edin ve performansı akıllı parayla karşılaştırın"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Nansen nedir ve nasıl çalışır?",
+			"answer": "Nansen, işlemlerin arkasında kimin olduğunu göstermek için blokzincir cüzdanlarını etiketleyen bir zincir üstü analitik platformudur. Anonim adresler görmek yerine 'Akıllı Para', 'Fon', 'Borsa' vb. görürsünüz. Bu, token yükselmeden önce akıllı paranın bir token biriktirmesi veya satmadan önce balinaların borsalara fon taşıması gibi modelleri ortaya çıkarır. Ham blokzincir verilerini eyleme geçirilebilir istihbarata dönüştürür."
+		},
+		"2": {
+			"question": "'Akıllı Para' nedir ve nasıl tanımlanır?",
+			"answer": "Akıllı Para, kanıtlanmış karlı geçmişe sahip cüzdanları ifade eder. Nansen, bunları tarihsel analiz yoluyla tanımlar—fiyat artışlarından önce sürekli olarak token'ları erken satın alan, karlı DeFi hareketleri yapan veya bilinen başarılı tüccarlara/fonlara ait cüzdanlar. Bu etiketler, devam eden performansa göre sürekli güncellenir."
+		},
+		"3": {
+			"question": "Nansen kullanmak ücretsiz mi?",
+			"answer": "Nansen, sınırlı özelliklerle ücretsiz bir katman sunar. Tam erişim ücretli planlar gerektirir: temel özellikler için Lite (~$100/ay), tam akıllı para takibi için Standard (~$150/ay) ve gelişmiş API erişimi ve özel çözümler için VIP/Enterprise katmanları. Planlar farklı veri erişimi seviyeleri, uyarılar ve tarihsel veriler içerir."
+		},
+		"4": {
+			"question": "Nansen, Dune ile nasıl karşılaştırılır?",
+			"answer": "Farklı amaçlara hizmet ederler. Dune, ham verileri analiz etmek için SQL yazdığınız bir sorgu platformudur—esnek ama SQL becerileri gerektirir. Nansen, cüzdan etiketleriyle önceden oluşturulmuş analitikler sağlar—sorgulama olmadan kullanıma hazır içgörüler. Ciddi araştırmacıların çoğu her ikisini de kullanır: özel analiz için Dune, akıllı para takibi ve uyarılar için Nansen."
+		},
+		"5": {
+			"question": "Nansen'da kendi portföyümü takip edebilir miyim?",
+			"answer": "Evet. Nansen'ın portföy özelliği, varlıkları, K/Z'yi ve işlem geçmişini takip etmek için cüzdanları bağlamanıza veya adresleri girmenize olanak tanır. Performansınızın akıllı parayla nasıl karşılaştırıldığını görebilir ve takip ettiğiniz cüzdanlar hareket yaptığında uyarılar alabilirsiniz. Bu, desteklenen tüm zincirlerde mevcuttur."
+		}
+	},
+	"cta": {
+		"ready": "Akıllı parayı takip etmeye hazır mısınız?",
+		"button": "Nansen'ı Aç",
+		"note": "AI destekli zincir üstü analitik"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "MetaMask - Leading Crypto Wallet | Access DeFi, NFTs & Web3",
+		"description": "Explore MetaMask, the leading self-custodial crypto wallet. Access DeFi protocols, NFT marketplaces, and Web3 apps on Ethereum and EVM-compatible chains.",
+		"keywords": "MetaMask, crypto wallet, Ethereum wallet, Web3, DeFi, NFT, browser extension, mobile wallet"
+	},
+	"overview": "MetaMask is the world's most popular self-custodial crypto wallet, enabling users to access decentralized applications across Ethereum and EVM-compatible blockchains. Created by Aaron Davis and Dan Finlay at ConsenSys in 2016, MetaMask pioneered the browser extension wallet concept that made Web3 accessible to mainstream users.\n\nAvailable as a browser extension for Chrome, Firefox, Brave, and Edge, plus mobile apps for iOS and Android, MetaMask serves over 30 million monthly active users. The wallet allows users to store ETH and ERC-20 tokens, interact with dApps, swap tokens, buy crypto with fiat, and manage NFTs. MetaMask Snaps enables third-party extensions to add functionality like support for non-EVM chains.\n\nMetaMask has become the de facto standard for Web3 authentication, with most dApps using 'Connect with MetaMask' as their primary login method. The wallet generates revenue through swap fees (0.875%) and on-ramp partnerships. As the gateway to DeFi, NFTs, and Web3 for millions of users, MetaMask remains essential infrastructure in the Ethereum ecosystem.",
+	"features": {
+		"1": {
+			"title": "Multi-Chain Support",
+			"description": "Connect to Ethereum, Polygon, Arbitrum, Optimism, BSC, and hundreds of EVM chains"
+		},
+		"2": {
+			"title": "In-App Swaps",
+			"description": "Swap tokens directly in the wallet with aggregated quotes from multiple DEXs"
+		},
+		"3": {
+			"title": "NFT Management",
+			"description": "View, send, and manage NFT collections across supported networks"
+		},
+		"4": {
+			"title": "Hardware Wallet",
+			"description": "Connect Ledger and Trezor hardware wallets for enhanced security"
+		},
+		"5": {
+			"title": "MetaMask Snaps",
+			"description": "Extend functionality with third-party plugins for non-EVM chains and features"
+		},
+		"6": {
+			"title": "Portfolio View",
+			"description": "Track your holdings across chains with the integrated portfolio dashboard"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Access",
+			"description": "Connect to lending, DEX, and yield protocols on Ethereum and L2s"
+		},
+		"2": {
+			"title": "NFT Trading",
+			"description": "Buy, sell, and manage NFTs on OpenSea, Blur, and other marketplaces"
+		},
+		"3": {
+			"title": "Token Swaps",
+			"description": "Trade tokens with competitive rates through integrated DEX aggregation"
+		},
+		"4": {
+			"title": "Web3 Login",
+			"description": "Sign in to dApps and websites using your wallet address"
+		},
+		"5": {
+			"title": "Cross-Chain",
+			"description": "Bridge assets and interact with apps across multiple EVM networks"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is MetaMask and is it safe?",
+			"answer": "MetaMask is a self-custodial crypto wallet, meaning you control your private keys—not MetaMask or ConsenSys. It's generally considered safe when used properly: enable password protection, never share your Secret Recovery Phrase, verify transaction details before signing, and be cautious of phishing sites. The main risks are user error (losing seed phrase, signing malicious transactions) rather than software vulnerabilities."
+		},
+		"2": {
+			"question": "How do I add a new network to MetaMask?",
+			"answer": "Click the network dropdown at the top, then 'Add Network.' You can add popular networks like Polygon or Arbitrum with one click, or manually enter RPC details for other chains. Sites like Chainlist.org provide verified network configurations you can add automatically. Always verify RPC URLs from official sources to avoid connecting to malicious nodes."
+		},
+		"3": {
+			"question": "What are MetaMask Snaps?",
+			"answer": "Snaps are third-party extensions that add functionality to MetaMask. They can enable support for non-EVM chains (like Bitcoin, Solana, Cosmos), add new transaction insights, provide custom notifications, and more. Snaps run in isolated environments for security. You install them from the MetaMask Snaps directory, and each Snap requests specific permissions you must approve."
+		},
+		"4": {
+			"question": "Why are my transactions stuck or failing?",
+			"answer": "Common causes: gas price too low (increase gas), nonce issues (reset account in settings), network congestion (wait or speed up), or smart contract errors (check the dApp). For stuck transactions, you can 'Speed Up' (pay more gas) or 'Cancel' (send 0 ETH to yourself with same nonce). MetaMask's activity tab shows pending transactions you can manage."
+		},
+		"5": {
+			"question": "How does MetaMask make money?",
+			"answer": "MetaMask earns through swap fees (0.875% on in-app token swaps via MetaMask Swaps), on-ramp partnerships (fees from fiat-to-crypto purchases through providers like MoonPay/Transak), and MetaMask Institutional services for organizations. The core wallet functionality is free—you only pay network gas fees for transactions."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore Web3?",
+		"button": "Open MetaMask",
+		"note": "The leading self-custodial crypto wallet"
+	}
+}

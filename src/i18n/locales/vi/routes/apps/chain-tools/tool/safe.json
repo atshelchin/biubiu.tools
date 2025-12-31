@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Safe - Ví Đa Chữ Ký | Quản Lý Tài Sản Kỹ Thuật Số An Toàn",
+		"description": "Khám phá Safe (trước đây là Gnosis Safe), ví đa chữ ký hàng đầu. Bảo mật tài sản kỹ thuật số với ngưỡng phê duyệt có thể tùy chỉnh và bảo mật hợp đồng thông minh.",
+		"keywords": "Safe, Gnosis Safe, multisig, ví đa chữ ký, kho bạc DAO, ví hợp đồng thông minh, bảo mật crypto"
+	},
+	"overview": "Safe (trước đây là Gnosis Safe) là ví hợp đồng thông minh tiêu chuẩn ngành để bảo mật tài sản kỹ thuật số. Ban đầu được phát triển bởi nhóm Gnosis và ra mắt vào năm 2018, Safe đã trở thành giải pháp đáng tin cậy nhất cho các DAO, giao thức và tổ chức quản lý kho bạc crypto.\n\nKhông giống như ví truyền thống được kiểm soát bởi một khóa riêng duy nhất, Safe sử dụng bảo mật đa chữ ký (multisig) yêu cầu nhiều phê duyệt cho giao dịch. Bạn cấu hình M-of-N người ký—ví dụ, 3-of-5 có nghĩa là bất kỳ 3 trong số 5 người ký được chỉ định phải phê duyệt. Điều này loại bỏ các điểm thất bại đơn lẻ: không ai có thể di chuyển tiền một cách đơn phương. Safe cũng hỗ trợ giới hạn chi tiêu, gộp giao dịch và tiện ích mở rộng mô-đun.\n\nSafe đã bảo mật hơn 100 tỷ đô la tài sản qua 10+ triệu giao dịch. Các giao thức lớn như Uniswap, Aave, ENS và vô số DAO sử dụng Safe để quản lý kho bạc. Hệ sinh thái Safe bao gồm Safe{Wallet} (giao diện người dùng), Safe{Core} (cơ sở hạ tầng tài khoản thông minh cho nhà phát triển) và tích hợp với ví phần cứng, ứng dụng di động và trình tạo giao dịch. Safe đại diện cho sự phát triển từ ví EOA sang tài khoản thông minh có thể lập trình.",
+	"features": {
+		"1": {
+			"title": "Bảo Mật Đa Chữ Ký",
+			"description": "Yêu cầu nhiều phê duyệt (ví dụ: 3-of-5) cho giao dịch—không có điểm thất bại đơn lẻ"
+		},
+		"2": {
+			"title": "Gộp Giao Dịch",
+			"description": "Gộp nhiều giao dịch thành một, tiết kiệm gas và cho phép các hoạt động phức tạp"
+		},
+		"3": {
+			"title": "Giới Hạn Chi Tiêu",
+			"description": "Đặt hạn mức cho người ký để chi tiêu đến giới hạn mà không cần phê duyệt đầy đủ"
+		},
+		"4": {
+			"title": "Đa Chuỗi",
+			"description": "Triển khai Safe trên Ethereum, Polygon, Arbitrum, Optimism và các chuỗi EVM khác"
+		},
+		"5": {
+			"title": "Safe Apps",
+			"description": "Tương tác với các giao thức DeFi trực tiếp từ Safe thông qua các ứng dụng tích hợp"
+		},
+		"6": {
+			"title": "Tùy Chọn Khôi Phục",
+			"description": "Cấu hình người giám hộ và cơ chế khôi phục để khôi phục tài khoản"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Kho Bạc DAO",
+			"description": "Quản lý quỹ cộng đồng với quản trị multisig minh bạch"
+		},
+		"2": {
+			"title": "Quyền Sở Hữu Giao Thức",
+			"description": "Kiểm soát khóa quản trị hợp đồng thông minh với ký phân tán"
+		},
+		"3": {
+			"title": "Ví Nhóm",
+			"description": "Bảo mật crypto công ty với sự phê duyệt từ nhiều thành viên nhóm"
+		},
+		"4": {
+			"title": "Bảo Mật Cá Nhân",
+			"description": "Bảo vệ tài sản cá nhân với ví phần cứng + điện thoại + người ký dự phòng"
+		},
+		"5": {
+			"title": "Quỹ Đầu Tư",
+			"description": "Quản lý tài sản quỹ với bảo vệ nhà đầu tư thông qua multisig"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Safe là gì và khác với MetaMask như thế nào?",
+			"answer": "Safe là ví hợp đồng thông minh yêu cầu nhiều chữ ký (multisig) cho giao dịch. MetaMask là EOA (tài khoản sở hữu bên ngoài) được kiểm soát bởi một khóa riêng duy nhất. Nếu bạn mất cụm từ khởi tạo MetaMask hoặc nó bị đánh cắp, tiền sẽ mất. Với Safe, bạn cần nhiều người ký để phê duyệt—ngay cả khi một khóa bị xâm phạm, tiền vẫn được bảo vệ. Safe dành cho các trường hợp sử dụng bảo mật cao; MetaMask dành cho giao dịch hàng ngày."
+		},
+		"2": {
+			"question": "Làm thế nào để thiết lập multisig Safe?",
+			"answer": "Truy cập safe.global, kết nối ví của bạn và nhấp 'Create Safe'. Chọn một mạng (Ethereum, Polygon, v.v.), thêm địa chỉ người ký (ví có thể phê duyệt giao dịch) và đặt ngưỡng (bao nhiêu người phải ký). Ví dụ, thêm 5 người ký với ngưỡng 3-of-5. Bạn sẽ trả gas để triển khai hợp đồng thông minh Safe. Sau đó chuyển tài sản đến địa chỉ Safe mới của bạn."
+		},
+		"3": {
+			"question": "Điều gì xảy ra nếu tôi mất quyền truy cập vào một người ký?",
+			"answer": "Nếu bạn mất một người ký nhưng vẫn có đủ để đáp ứng ngưỡng, bạn có thể đề xuất một giao dịch để thay thế người ký bị mất bằng một địa chỉ mới. Những người ký còn lại phê duyệt và Safe cập nhật. Đây là lý do tại sao ngưỡng nên thấp hơn tổng số người ký (ví dụ: 3-of-5, không phải 5-of-5). Với thiết lập phù hợp, mất một thiết bị hoặc khóa không có nghĩa là mất tiền."
+		},
+		"4": {
+			"question": "Safe chỉ dành cho DAO và nhóm?",
+			"answer": "Safe phổ biến với các DAO nhưng cũng hoạt động cho bảo mật cá nhân. Cá nhân sử dụng Safe với thiết lập 2-of-3: ví phần cứng + điện thoại + dự phòng (giấy hoặc người đáng tin cậy). Điều này bảo vệ chống lại việc mất một thiết bị hoặc một khóa duy nhất bị đánh cắp. Chi phí của nhiều chữ ký là đáng giá cho các khoản nắm giữ đáng kể. Nhiều cá nhân am hiểu crypto sử dụng Safe để lưu trữ lạnh."
+		},
+		"5": {
+			"question": "Safe Apps và Safe Modules là gì?",
+			"answer": "Safe Apps là các dApp được tích hợp vào giao diện Safe—bạn có thể tương tác với Uniswap, Aave, v.v. trực tiếp từ Safe mà không cần chuyển đổi ngữ cảnh. Safe Modules là các tiện ích mở rộng thêm chức năng: giới hạn chi tiêu (mô-đun hạn mức), thanh toán định kỳ, cơ chế khôi phục, v.v. Tính mô-đun này làm cho Safe trở thành một nền tảng có thể lập trình, không chỉ là một ví."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng bảo mật tài sản của bạn?",
+		"button": "Mở Safe",
+		"note": "Ví hợp đồng thông minh tiêu chuẩn ngành"
+	}
+}

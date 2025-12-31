@@ -14,6 +14,31 @@ import { oneInchDetail } from './1inch';
 import { curveDetail } from './curve';
 import { lidoDetail } from './lido';
 import { gmxDetail } from './gmx';
+import { compoundDetail } from './compound';
+import { makerDetail } from './maker';
+import { eigenlayerDetail } from './eigenlayer';
+import { pendleDetail } from './pendle';
+import { dydxDetail } from './dydx';
+import { pancakeswapDetail } from './pancakeswap';
+import { sushiswapDetail } from './sushiswap';
+import { balancerDetail } from './balancer';
+import { yearnDetail } from './yearn';
+import { convexDetail } from './convex';
+import { synthetixDetail } from './synthetix';
+import { rocketpoolDetail } from './rocketpool';
+import { fraxDetail } from './frax';
+import { liquityDetail } from './liquity';
+import { eulerDetail } from './euler';
+import { chainlinkDetail } from './chainlink';
+import { openseaDetail } from './opensea';
+import { layerzeroDetail } from './layerzero';
+import { duneDetail } from './dune';
+import { nansenDetail } from './nansen';
+import { metamaskDetail } from './metamask';
+import { alchemyDetail } from './alchemy';
+import { etherscanDetail } from './etherscan';
+import { thegraphDetail } from './thegraph';
+import { safeDetail } from './safe';
 
 /**
  * All tool details mapped by tool ID
@@ -24,7 +49,32 @@ export const toolDetails: Record<string, ToolDetail> = {
 	'1inch': oneInchDetail,
 	curve: curveDetail,
 	lido: lidoDetail,
-	gmx: gmxDetail
+	gmx: gmxDetail,
+	compound: compoundDetail,
+	maker: makerDetail,
+	eigenlayer: eigenlayerDetail,
+	pendle: pendleDetail,
+	dydx: dydxDetail,
+	pancakeswap: pancakeswapDetail,
+	sushiswap: sushiswapDetail,
+	balancer: balancerDetail,
+	yearn: yearnDetail,
+	convex: convexDetail,
+	synthetix: synthetixDetail,
+	rocketpool: rocketpoolDetail,
+	frax: fraxDetail,
+	liquity: liquityDetail,
+	euler: eulerDetail,
+	chainlink: chainlinkDetail,
+	opensea: openseaDetail,
+	layerzero: layerzeroDetail,
+	dune: duneDetail,
+	nansen: nansenDetail,
+	metamask: metamaskDetail,
+	alchemy: alchemyDetail,
+	etherscan: etherscanDetail,
+	thegraph: thegraphDetail,
+	safe: safeDetail
 };
 
 /**

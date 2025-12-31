@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Dune Analytics - Plataforma de Datos Blockchain | Consulta y Visualiza Datos On-Chain",
+		"description": "Descubre Dune, la plataforma líder de análisis blockchain. Escribe consultas SQL, construye dashboards y explora datos on-chain en Ethereum, Bitcoin y más de 40 cadenas.",
+		"keywords": "Dune Analytics, blockchain data, SQL, dashboards, on-chain analytics, DeFi analytics, crypto data"
+	},
+	"overview": "Dune es la plataforma líder de análisis blockchain impulsada por la comunidad que permite a cualquiera consultar, visualizar y compartir datos on-chain. Fundada por Fredrik Haga y Mats Olsen en 2018, Dune democratizó el análisis de datos blockchain haciéndolo accesible a través de consultas SQL sin requerir experiencia en ingeniería de datos.\n\nLa plataforma proporciona datos blockchain decodificados y legibles por humanos en más de 40 redes, incluyendo Ethereum, Bitcoin, Solana, Polygon y Layer 2s. Los usuarios escriben consultas SQL (usando DuneSQL) para analizar cualquier cosa, desde métricas de protocolos DeFi hasta patrones de comercio de NFT, y luego crean visualizaciones y dashboards compartibles. El Spellbook, la capa de transformación de código abierto de Dune, proporciona conjuntos de datos preconstruidos para necesidades de análisis comunes.\n\nDune se ha convertido en infraestructura esencial para la investigación cripto, con miles de analistas creando dashboards públicos utilizados por protocolos, inversores y periodistas. La plataforma combina datos blockchain sin procesar con eventos de contratos decodificados, haciendo que el análisis on-chain complejo sea accesible para cualquiera que conozca SQL.",
+	"features": {
+		"1": {
+			"title": "Consultas SQL",
+			"description": "Escribe consultas DuneSQL para analizar datos blockchain decodificados de más de 40 redes"
+		},
+		"2": {
+			"title": "Dashboards Visuales",
+			"description": "Crea y comparte dashboards interactivos con gráficos, tablas y métricas"
+		},
+		"3": {
+			"title": "Spellbook",
+			"description": "Conjuntos de datos preconstruidos para análisis comunes como operaciones DEX, ventas NFT, puentes"
+		},
+		"4": {
+			"title": "Datos en Tiempo Real",
+			"description": "Accede a datos blockchain casi en tiempo real con actualizaciones automáticas"
+		},
+		"5": {
+			"title": "Acceso API",
+			"description": "Accede programáticamente a resultados de consultas para integración en aplicaciones"
+		},
+		"6": {
+			"title": "Consultas Comunitarias",
+			"description": "Copia y aprende de miles de consultas y dashboards públicos"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Análisis de Protocolos",
+			"description": "Rastrea TVL, volumen, usuarios y métricas para protocolos DeFi"
+		},
+		"2": {
+			"title": "Análisis de Billeteras",
+			"description": "Investiga billeteras ballena, rastrea smart money y analiza patrones de comercio"
+		},
+		"3": {
+			"title": "Investigación de Tokens",
+			"description": "Analiza distribución de tokens, comportamiento de holders y patrones de transferencia"
+		},
+		"4": {
+			"title": "Análisis de NFT",
+			"description": "Rastrea ventas de NFT, precios mínimos, estadísticas de holders y métricas de colecciones"
+		},
+		"5": {
+			"title": "Investigación de Ecosistemas",
+			"description": "Compara L2s, rastrea uso de gas y analiza tendencias de actividad de red"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Dune y para quién es?",
+			"answer": "Dune es una plataforma de análisis blockchain donde los usuarios consultan datos on-chain usando SQL y crean dashboards visuales. Es para cualquiera que analice cripto: investigadores rastreando protocolos, comerciantes buscando alpha, protocolos monitoreando sus métricas, periodistas investigando eventos on-chain y desarrolladores construyendo productos de datos. El conocimiento básico de SQL es útil pero no requerido: puedes comenzar copiando consultas existentes."
+		},
+		"2": {
+			"question": "¿Qué datos están disponibles en Dune?",
+			"answer": "Dune proporciona datos decodificados de más de 40 blockchains incluyendo Ethereum, Bitcoin, Solana y principales L2s. Los datos incluyen transacciones sin procesar, eventos de contratos decodificados (por ejemplo, swaps de Uniswap, depósitos de Aave), transferencias de tokens, operaciones de NFT y más. El Spellbook proporciona tablas de nivel superior como operaciones DEX en todos los protocolos, haciendo el análisis complejo más simple."
+		},
+		"3": {
+			"question": "¿Dune es gratis?",
+			"answer": "Dune tiene un nivel gratuito que permite consultas y dashboards públicos con algunas limitaciones en ejecución de consultas y actualización de datos. Los planes de pago (Plus, Pro, Enterprise) ofrecen consultas privadas, ejecución más rápida, más créditos, acceso API y características adicionales. Muchos usuarios comienzan gratis y actualizan a medida que crecen sus necesidades."
+		},
+		"4": {
+			"question": "¿Qué es el Spellbook?",
+			"answer": "Spellbook es la capa de transformación de código abierto de Dune (construida con dbt). Contiene modelos SQL mantenidos por la comunidad que transforman datos blockchain sin procesar en tablas útiles, como dex.trades (todas las operaciones DEX), nft.trades (ventas NFT), balances erc20, etc. Cualquiera puede contribuir nuevos hechizos, y están disponibles gratuitamente para todos los usuarios de Dune."
+		},
+		"5": {
+			"question": "¿Cómo aprendo a usar Dune?",
+			"answer": "Comienza explorando dashboards populares y copiando consultas para entender cómo funcionan. Dune ofrece documentación, tutoriales y una comunidad de Discord para ayuda. OurNetwork es un recurso de aprendizaje popular. Las habilidades básicas de SQL se transfieren directamente: si conoces SELECT, JOIN y GROUP BY, puedes analizar datos blockchain en Dune."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para analizar datos on-chain?",
+		"button": "Abrir Dune",
+		"note": "Análisis blockchain impulsado por la comunidad"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Chainlink - Jaringan Oracle Terdesentralisasi | Hubungkan Smart Contract ke Data Dunia Nyata",
+		"description": "Temukan Chainlink, jaringan oracle terdesentralisasi terkemuka. Hubungkan smart contract ke data dunia nyata, API, dan komputasi off-chain dengan aman.",
+		"keywords": "Chainlink, LINK, oracle, price feeds, VRF, CCIP, smart contracts, DeFi"
+	},
+	"overview": "Chainlink adalah jaringan oracle terdesentralisasi standar industri yang memungkinkan smart contract untuk mengakses data, API, dan komputasi off-chain dengan aman. Didirikan oleh Sergey Nazarov dan Steve Ellis pada tahun 2017, Chainlink memecahkan 'masalah oracle'—tantangan mendapatkan data eksternal yang dapat diandalkan ke dalam lingkungan blockchain.\n\nJaringan beroperasi melalui operator node independen yang mengagregasi data dari berbagai sumber, menyediakan input dan output yang tahan terhadap manipulasi untuk smart contract. Produk Chainlink termasuk Price Feeds (digunakan oleh sebagian besar protokol DeFi), VRF (fungsi acak yang dapat diverifikasi untuk gaming/NFT), Automation (eksekusi kontrak terdesentralisasi), Functions (komputasi serverless), dan CCIP (Cross-Chain Interoperability Protocol).\n\nChainlink mengamankan lebih dari $75 miliar nilai di seluruh DeFi, asuransi, gaming, dan aplikasi perusahaan. Token LINK digunakan untuk pembayaran kepada operator node dan sebagai jaminan staking. Dengan integrasi ekstensif dan rekam jejak yang terbukti, Chainlink telah menjadi infrastruktur kritis untuk seluruh ekosistem blockchain.",
+	"features": {
+		"1": {
+			"title": "Price Feeds",
+			"description": "Oracle harga terdesentralisasi yang mendukung sebagian besar protokol DeFi dengan data pasar yang akurat"
+		},
+		"2": {
+			"title": "VRF",
+			"description": "Fungsi Acak yang Dapat Diverifikasi untuk keacakan yang dapat dibuktikan adil dalam gaming dan NFT"
+		},
+		"3": {
+			"title": "CCIP",
+			"description": "Cross-Chain Interoperability Protocol untuk transfer token dan pesan yang aman"
+		},
+		"4": {
+			"title": "Automation",
+			"description": "Otomasi smart contract terdesentralisasi untuk pemeliharaan dan pemicu"
+		},
+		"5": {
+			"title": "Functions",
+			"description": "Platform komputasi serverless untuk menghubungkan smart contract ke API mana pun"
+		},
+		"6": {
+			"title": "Proof of Reserve",
+			"description": "Verifikasi on-chain dari cadangan aset off-chain atau cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Data Harga DeFi",
+			"description": "Menyediakan feed harga yang akurat untuk protokol lending, derivatives, dan DEX"
+		},
+		"2": {
+			"title": "Keacakan Gaming",
+			"description": "Menghasilkan angka acak yang dapat diverifikasi untuk mint NFT yang adil dan mekanik game"
+		},
+		"3": {
+			"title": "Transfer Cross-Chain",
+			"description": "Menjembatani token dan pesan dengan aman antara blockchain yang berbeda"
+		},
+		"4": {
+			"title": "Tindakan Otomatis",
+			"description": "Memicu fungsi smart contract berdasarkan waktu atau kondisi eksternal"
+		},
+		"5": {
+			"title": "Integrasi Dunia Nyata",
+			"description": "Menghubungkan aplikasi blockchain ke API dan sumber data tradisional"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Chainlink dan mengapa smart contract membutuhkan oracle?",
+			"answer": "Chainlink adalah jaringan oracle terdesentralisasi yang menyediakan data eksternal ke smart contract. Blockchain adalah sistem terisolasi yang tidak dapat mengakses data luar secara langsung. Oracle menjembatani kesenjangan ini dengan mengambil informasi dunia nyata (harga, cuaca, skor olahraga, dll.) dengan aman dan mengirimkannya on-chain. Tanpa oracle, DeFi dan sebagian besar aplikasi blockchain tidak dapat berfungsi."
+		},
+		"2": {
+			"question": "Bagaimana Chainlink memastikan akurasi data?",
+			"answer": "Chainlink menggunakan beberapa lapisan desentralisasi: data bersumber dari banyak penyedia data premium, diagregasi oleh beberapa operator node independen, dan hasil median/konsensus dikirimkan on-chain. Operator node melakukan stake LINK sebagai jaminan dan dapat dikenakan penalti karena memberikan data yang buruk. Ini membuat manipulasi tidak layak secara ekonomi."
+		},
+		"3": {
+			"question": "Apa itu CCIP dan bagaimana cara kerjanya?",
+			"answer": "CCIP (Cross-Chain Interoperability Protocol) adalah solusi Chainlink untuk komunikasi cross-chain yang aman. Ini memungkinkan transfer token dan pengiriman pesan sewenang-wenang antara blockchain menggunakan jaringan oracle terdesentralisasi Chainlink untuk keamanan. Tidak seperti bridge yang telah dieksploitasi senilai miliaran, CCIP memanfaatkan infrastruktur keamanan Chainlink yang ada."
+		},
+		"4": {
+			"question": "Untuk apa token LINK digunakan?",
+			"answer": "LINK adalah token asli Chainlink dengan berbagai kegunaan: pembayaran kepada operator node untuk layanan oracle, jaminan staking untuk operator node (dengan penalti untuk data buruk), dan partisipasi dalam tata kelola. dApp membayar LINK untuk layanan Chainlink, menciptakan permintaan seiring pertumbuhan penggunaan jaringan."
+		},
+		"5": {
+			"question": "Protokol apa yang menggunakan Chainlink?",
+			"answer": "Chainlink digunakan oleh sebagian besar protokol DeFi utama termasuk Aave, Compound, Synthetix, dYdX, GMX, dan ratusan lainnya. Ini juga digunakan oleh perusahaan tradisional seperti Swift, DTCC, dan ANZ Bank untuk eksperimen blockchain. Lebih dari 1.800 proyek di seluruh DeFi, gaming, NFT, dan asuransi mengandalkan oracle Chainlink."
+		}
+	},
+	"cta": {
+		"ready": "Siap untuk menjelajahi oracle Chainlink?",
+		"button": "Buka Chainlink",
+		"note": "Jaringan oracle standar industri"
+	}
+}

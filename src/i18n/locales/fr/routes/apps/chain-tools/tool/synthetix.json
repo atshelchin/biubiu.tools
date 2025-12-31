@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Synthetix - Protocole d'Actifs Synthétiques Décentralisés | Tradez N'importe Quel Actif On-Chain",
+		"description": "Découvrez Synthetix, le protocole de création et d'échange d'actifs synthétiques. Accédez aux crypto, forex, matières premières et actions on-chain avec une liquidité infinie.",
+		"keywords": "Synthetix, SNX, actifs synthétiques, Synths, DeFi, dérivés, perpétuels, liquidité"
+	},
+	"overview": "Synthetix est un protocole décentralisé qui permet la création et l'échange d'actifs synthétiques (Synths) sur Ethereum et Optimism. Fondé par Kain Warwick en 2017 (initialement sous le nom de Havven), Synthetix a été pionnier dans le concept d'actifs synthétiques on-chain—des jetons qui suivent le prix d'actifs du monde réel comme les devises, les matières premières, les actions et les cryptomonnaies.\n\nLe protocole fonctionne en demandant aux détenteurs de jetons SNX de staker leurs jetons en garantie pour créer des Synths. Cela crée un pool de dette partagé où les stakers soutiennent collectivement tous les Synths en circulation. Le système offre une liquidité infinie avec zéro slippage pour les échanges Synth-à-Synth, car ce sont simplement des conversions de prix basées sur des oracles plutôt que des swaps AMM traditionnels.\n\nSynthetix V3 a introduit une architecture modulaire avec des pools de liquidité séparés, permettant un déploiement de capital plus efficace et de nouveaux types de marchés. Le protocole est devenu une infrastructure DeFi fondamentale, avec des protocoles comme Kwenta et Lyra construisant du trading de perpétuels et d'options sur la liquidité de Synthetix.",
+	"features": {
+		"1": {
+			"title": "Actifs Synthétiques",
+			"description": "Tradez des versions synthétiques de crypto, forex, matières premières et indices on-chain"
+		},
+		"2": {
+			"title": "Zéro Slippage",
+			"description": "Les swaps Synth-à-Synth ont une liquidité infinie sans slippage via la tarification oracle"
+		},
+		"3": {
+			"title": "Futures Perpétuels",
+			"description": "Tradez des perpétuels avec une liquidité profonde via des intégrateurs comme Kwenta"
+		},
+		"4": {
+			"title": "Staking SNX",
+			"description": "Stakez SNX pour créer des sUSD, gagner des frais de trading et participer à la gouvernance"
+		},
+		"5": {
+			"title": "Pools Modulaires V3",
+			"description": "Pools de liquidité séparés pour différents marchés avec paramètres de risque configurables"
+		},
+		"6": {
+			"title": "Cross-Chain",
+			"description": "Déployé sur Ethereum mainnet et Optimism L2 pour des coûts de gas plus faibles"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading de Dérivés",
+			"description": "Tradez des futures perpétuels sur des actifs crypto avec effet de levier"
+		},
+		"2": {
+			"title": "Exposition Forex",
+			"description": "Obtenez une exposition on-chain aux principales devises comme EUR, JPY, AUD"
+		},
+		"3": {
+			"title": "Récompenses de Staking",
+			"description": "Stakez SNX pour gagner des frais de trading et des récompenses inflationnistes"
+		},
+		"4": {
+			"title": "Provision de Liquidité",
+			"description": "Fournissez des garanties aux pools V3 pour gagner des rendements des traders"
+		},
+		"5": {
+			"title": "Intégration de Protocole",
+			"description": "Construisez des interfaces de trading et des produits sur la liquidité de Synthetix"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Synthetix et comment fonctionnent les actifs synthétiques ?",
+			"answer": "Synthetix permet la création de Synths—des jetons qui suivent les prix d'actifs externes via des oracles. Les stakers SNX fournissent la garantie soutenant tous les Synths. Lorsque vous détenez des sUSD (USD synthétique), vous pouvez les échanger contre n'importe quel autre Synth (sBTC, sETH, sEUR, etc.) aux prix des oracles avec zéro slippage. Le système ne nécessite pas de contreparties—ce sont simplement des jetons à prix oracle soutenus par des garanties."
+		},
+		"2": {
+			"question": "Quel est le mécanisme de staking SNX ?",
+			"answer": "Les détenteurs de SNX stakent leurs jetons en garantie pour créer des sUSD. Les stakers doivent maintenir un ratio de collatéralisation (actuellement ~500%) et gérer activement leur position de dette. En retour, ils gagnent des frais de trading hebdomadaires et des récompenses d'inflation SNX. Le pool de dette est partagé—si les traders de Synths font des profits, la dette des stakers augmente ; si les traders perdent, la dette des stakers diminue."
+		},
+		"3": {
+			"question": "Qu'est-ce que Synthetix V3 ?",
+			"answer": "V3 est une reconstruction complète introduisant une architecture modulaire. Au lieu d'un pool de dette global, V3 a des pools séparés qui peuvent soutenir différents marchés avec des paramètres de risque personnalisés. Cela permet une utilisation du capital plus efficace, une intégration plus facile et de nouveaux types de produits. V3 introduit également des fonctionnalités cross-chain et une gouvernance améliorée."
+		},
+		"4": {
+			"question": "Quels protocoles sont construits sur Synthetix ?",
+			"answer": "Plusieurs protocoles majeurs construisent sur la liquidité de Synthetix : Kwenta pour le trading de futures perpétuels, Lyra pour les options, Polynomial pour les produits structurés, et d'autres. Ces intégrateurs fournissent des interfaces utilisateur tandis que Synthetix fournit la couche de liquidité et de règlement sous-jacente. Ce modèle d'écosystème permet à Synthetix de se concentrer sur l'infrastructure."
+		},
+		"5": {
+			"question": "Quels sont les risques d'utiliser Synthetix ?",
+			"answer": "Les risques incluent : les vulnérabilités des smart contracts, la manipulation/défaillance d'oracle, l'exposition au pool de dette (les stakers partagent les pertes de trading), la liquidation si le ratio de garantie baisse trop, et l'incertitude réglementaire autour des actifs synthétiques. Le protocole a été largement audité mais reste complexe avec des risques DeFi inhérents."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à trader des actifs synthétiques ?",
+		"button": "Ouvrir Synthetix",
+		"note": "Actifs synthétiques et perpétuels décentralisés"
+	}
+}

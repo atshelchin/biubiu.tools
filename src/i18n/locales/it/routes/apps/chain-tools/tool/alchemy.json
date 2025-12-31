@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Alchemy - Piattaforma per Sviluppatori Blockchain | Costruisci App Web3",
+		"description": "Esplora Alchemy, la piattaforma per sviluppatori blockchain leader. Costruisci applicazioni Web3 scalabili con infrastruttura nodi affidabile, API e strumenti per sviluppatori.",
+		"keywords": "Alchemy, API blockchain, sviluppo Web3, infrastruttura nodi, API NFT, sviluppo dApp, API Ethereum"
+	},
+	"overview": "Alchemy è la piattaforma per sviluppatori blockchain leader, che fornisce l'infrastruttura e gli strumenti necessari per costruire applicazioni Web3 scalabili. Fondata nel 2017 da Nikil Viswanathan e Joe Lau, Alchemy alimenta grandi aziende tra cui OpenSea, Adobe, Shopify e molti protocolli DeFi di punta.\n\nLa piattaforma offre un'infrastruttura nodi affidabile per Ethereum, Polygon, Arbitrum, Optimism, Solana e altre catene principali. Oltre all'accesso RPC di base, Alchemy fornisce API avanzate per NFT, token, transazioni e webhook. La tecnologia Supernode offre maggiore affidabilità e latenza inferiore rispetto all'esecuzione dei propri nodi. Gli strumenti per sviluppatori includono Alchemy SDK, blockchain explorer, visualizzatore mempool e strumenti di debug.\n\nAlchemy ha elaborato trilioni di richieste e supporta applicazioni che hanno trasferito oltre 100 miliardi di dollari di valore. Con una valutazione di 10,2 miliardi di dollari al 2022, Alchemy è diventato l'AWS della blockchain—infrastruttura essenziale su cui la maggior parte degli sviluppatori Web3 fa affidamento. Il loro piano gratuito lo rende accessibile agli sviluppatori indipendenti mentre i piani enterprise scalano a milioni di richieste.",
+	"features": {
+		"1": {
+			"title": "Supernode RPC",
+			"description": "Infrastruttura nodi ad alta affidabilità con uptime del 99.9%+ su catene principali"
+		},
+		"2": {
+			"title": "API Avanzate",
+			"description": "API specializzate per metadata NFT, saldi token, cronologia transazioni e altro"
+		},
+		"3": {
+			"title": "Webhook",
+			"description": "Notifiche in tempo reale per eventi on-chain come trasferimenti e chiamate a contratti"
+		},
+		"4": {
+			"title": "Alchemy SDK",
+			"description": "SDK facile da usare che semplifica le operazioni blockchain comuni"
+		},
+		"5": {
+			"title": "Account Kit",
+			"description": "Infrastruttura smart wallet per transazioni senza gas e login social"
+		},
+		"6": {
+			"title": "Soluzioni Rollup",
+			"description": "Distribuisci catene L2/L3 personalizzate con la piattaforma rollup-as-a-service di Alchemy"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Sviluppo dApp",
+			"description": "Costruisci applicazioni decentralizzate affidabili con infrastruttura blockchain robusta"
+		},
+		"2": {
+			"title": "Piattaforme NFT",
+			"description": "Alimenta marketplace e app NFT con API metadata complete"
+		},
+		"3": {
+			"title": "Servizi Wallet",
+			"description": "Costruisci wallet con aggiornamenti saldi in tempo reale e cronologia transazioni"
+		},
+		"4": {
+			"title": "Protocolli DeFi",
+			"description": "Accedi a dati di prezzo affidabili e broadcasting transazioni per app DeFi"
+		},
+		"5": {
+			"title": "Web3 Enterprise",
+			"description": "Integra funzionalità blockchain in applicazioni enterprise su larga scala"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Alchemy e perché gli sviluppatori lo usano?",
+			"answer": "Alchemy è un'infrastruttura blockchain che fornisce accesso ai nodi e API così gli sviluppatori non devono gestire i propri nodi. Eseguire nodi Ethereum richiede risorse significative (TB di storage, sincronizzazione costante, DevOps). Alchemy gestisce questa infrastruttura aggiungendo funzionalità avanzate come API NFT, webhook e strumenti di debug. La maggior parte delle dApp principali usa Alchemy o fornitori simili."
+		},
+		"2": {
+			"question": "Come si confronta Alchemy con l'esecuzione del proprio nodo?",
+			"answer": "Eseguire il proprio nodo offre pieno controllo ma richiede risorse significative: hardware, storage (1-2TB per Ethereum), larghezza di banda e manutenzione continua. Il Supernode di Alchemy fornisce maggiore affidabilità (uptime 99.9%+), latenza inferiore, API avanzate e scala automaticamente. Per la maggior parte dei progetti, usare Alchemy è più conveniente dell'auto-hosting fino a raggiungere volumi molto elevati."
+		},
+		"3": {
+			"question": "Alchemy è gratuito?",
+			"answer": "Alchemy offre un generoso piano gratuito: 300M unità di calcolo/mese, che copre la maggior parte dei progetti indie e startup in fase iniziale. I piani a pagamento (Growth, Scale, Enterprise) forniscono più unità di calcolo, limiti di rate più elevati, supporto dedicato e funzionalità avanzate. Molti sviluppatori iniziano gratuitamente e aggiornano man mano che le loro app crescono."
+		},
+		"4": {
+			"question": "Quali catene supporta Alchemy?",
+			"answer": "Alchemy supporta le principali catene tra cui Ethereum, Polygon, Arbitrum, Optimism, Base, Solana e altro. Ogni catena ha supporto RPC completo più API avanzate specifiche per catena. Aggiungono continuamente nuove catene in base alla domanda degli sviluppatori. Controlla la loro documentazione per l'elenco corrente delle reti supportate."
+		},
+		"5": {
+			"question": "Cos'è Alchemy Account Kit?",
+			"answer": "Account Kit è l'infrastruttura smart wallet di Alchemy che abilita l'account abstraction (ERC-4337). Permette alle dApp di offrire transazioni senza gas (sponsorizzare il gas dell'utente), login social (accedi con email/Google) e wallet programmabili. Questo migliora l'UX eliminando la necessità per gli utenti di gestire seed phrase o detenere ETH per il gas."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a costruire su Web3?",
+		"button": "Apri Alchemy",
+		"note": "La piattaforma per sviluppatori blockchain leader"
+	}
+}

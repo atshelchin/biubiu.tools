@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "SushiSwap - Sàn DEX & Nền Tảng DeFi Đa Chuỗi | Swap, Kiếm Tiền, Bridge",
+		"description": "Khám phá SushiSwap, sàn DEX đa chuỗi được điều hành bởi cộng đồng. Giao dịch token, cung cấp thanh khoản và truy cập swap đa chuỗi trên hơn 30 mạng.",
+		"keywords": "SushiSwap, Sushi, DEX, đa chuỗi, DeFi, thanh khoản, SUSHI token, cross-chain"
+	},
+	"overview": "SushiSwap là sàn giao dịch phi tập trung được điều hành bởi cộng đồng, đã phát triển từ một fork của Uniswap thành một nền tảng DeFi đa chuỗi toàn diện. Ra mắt vào tháng 8 năm 2020 trong thời kỳ \"DeFi Summer\", Sushi đã tiên phong khái niệm vampire attacks và khuyến khích liquidity mining đã định hình lại cách các giao thức DeFi cạnh tranh để có người dùng.\n\nNền tảng hiện hoạt động trên hơn 30 mạng bao gồm Ethereum, Arbitrum, Polygon, Avalanche và nhiều chuỗi khác. Ngoài swap đơn giản, Sushi cung cấp concentrated liquidity pools (SushiSwap V3), swap đa chuỗi qua SushiXSwap và bộ công cụ DeFi toàn diện. Token SUSHI được sử dụng cho quản trị và có thể stake để nhận xSUSHI nhằm kiếm phí giao thức.\n\nSushi đã trải qua sự phát triển đáng kể, chuyển đổi qua nhiều giai đoạn lãnh đạo và tái cơ cấu khác nhau. Ngày nay, nó tập trung vào việc trở thành trải nghiệm swap đa chuỗi tốt nhất với các tính năng như tối ưu hóa route, bảo vệ MEV và giao dịch đa chuỗi liền mạch.",
+	"features": {
+		"1": {
+			"title": "Hỗ Trợ 30+ Chuỗi",
+			"description": "Giao dịch trên Ethereum, Arbitrum, Polygon, Avalanche, BSC và nhiều mạng khác"
+		},
+		"2": {
+			"title": "SushiXSwap",
+			"description": "Swap đa chuỗi được hỗ trợ bởi Stargate và Axelar cho giao dịch đa chuỗi liền mạch"
+		},
+		"3": {
+			"title": "Concentrated Liquidity",
+			"description": "Pool V3 với khoảng giá tùy chỉnh để cung cấp thanh khoản hiệu quả về vốn"
+		},
+		"4": {
+			"title": "Tối Ưu Hóa Route",
+			"description": "Định tuyến thông minh tìm giá tốt nhất trên nhiều nguồn thanh khoản"
+		},
+		"5": {
+			"title": "Staking xSUSHI",
+			"description": "Stake SUSHI để kiếm phần chia sẻ từ phí giao dịch giao thức"
+		},
+		"6": {
+			"title": "Furo Streaming",
+			"description": "Giải pháp streaming và vesting token cho lương và tài trợ"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Giao Dịch Đa Chuỗi",
+			"description": "Swap token trên hơn 30 mạng từ một giao diện duy nhất"
+		},
+		"2": {
+			"title": "Swap Đa Chuỗi",
+			"description": "Bridge và swap trong một giao dịch với SushiXSwap"
+		},
+		"3": {
+			"title": "Cung Cấp Thanh Khoản",
+			"description": "Kiếm phí giao dịch bằng cách cung cấp thanh khoản cho pool"
+		},
+		"4": {
+			"title": "Thu Nhập Thụ Động",
+			"description": "Stake SUSHI để nhận xSUSHI và kiếm phần chia sẻ doanh thu giao thức"
+		},
+		"5": {
+			"title": "Token Streaming",
+			"description": "Sử dụng Furo cho lương, lịch vesting và tài trợ"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "SushiSwap là gì và khác gì so với Uniswap?",
+			"answer": "SushiSwap bắt đầu như một fork của Uniswap nhưng đã phát triển thành một nền tảng đa chuỗi riêng biệt. Điểm khác biệt chính bao gồm: hỗ trợ hơn 30 chuỗi (so với Uniswap ít hơn), swap đa chuỗi qua SushiXSwap, token SUSHI với chia sẻ doanh thu và mô hình quản trị ưu tiên cộng đồng. Cả hai đều sử dụng cơ chế AMM nhưng đã phân kỳ đáng kể."
+		},
+		"2": {
+			"question": "xSUSHI là gì và staking hoạt động như thế nào?",
+			"answer": "xSUSHI là phiên bản đã stake của SUSHI. Khi bạn stake SUSHI trong SushiBar, bạn nhận được xSUSHI sẽ tăng giá trị khi phí giao thức tích lũy. Một phần của tất cả phí giao dịch được dùng để mua SUSHI và phân phối cho chủ sở hữu xSUSHI. Bạn có thể unstake bất kỳ lúc nào để nhận lại SUSHI cộng với phần thưởng kiếm được."
+		},
+		"3": {
+			"question": "SushiXSwap swap đa chuỗi hoạt động như thế nào?",
+			"answer": "SushiXSwap sử dụng các giao thức bridge như Stargate và Axelar để cho phép swap đa chuỗi. Bạn có thể swap một token trên một chuỗi để nhận token khác trên chuỗi khác trong một giao dịch duy nhất. Hệ thống xử lý việc bridge, swap trên cả hai chuỗi và gửi token cuối cùng đến ví của bạn."
+		},
+		"4": {
+			"question": "SushiSwap có an toàn để sử dụng không?",
+			"answer": "SushiSwap đã hoạt động từ năm 2020 với nhiều cuộc kiểm toán bảo mật. Tuy nhiên, như với tất cả DeFi, rủi ro tồn tại bao gồm lỗi smart contract, impermanent loss, lỗ hổng bridge cho các tính năng đa chuỗi và rủi ro cụ thể của token. Giao thức đã có các sự cố bảo mật trong quá khứ, vì vậy hãy luôn cẩn thận."
+		},
+		"5": {
+			"question": "Điều gì đã xảy ra với ban lãnh đạo của Sushi?",
+			"answer": "Sushi có lịch sử quản trị đầy sóng gió. Ban đầu ra mắt với danh tính giả, nó đã trải qua các giai đoạn lãnh đạo tập trung, tranh chấp ngân khố và tái cơ cấu. Ngày nay nó hoạt động như một DAO với ban lãnh đạo được bầu. Giao thức tiếp tục phát triển và mở rộng bất chấp những thách thức này."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng giao dịch đa chuỗi?",
+		"button": "Mở SushiSwap",
+		"note": "Sàn DEX đa chuỗi được điều hành bởi cộng đồng"
+	}
+}

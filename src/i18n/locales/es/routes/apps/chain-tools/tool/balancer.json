@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Balancer - AMM de Pools Ponderados y Protocolo de Liquidez DeFi",
+		"description": "Descubre Balancer, el AMM flexible que permite pools personalizados ponderados. Crea pools con hasta 8 tokens, gana comisiones de trading y accede a liquidez programable.",
+		"keywords": "Balancer, AMM, weighted pools, DeFi, liquidez, token BAL, liquidez programable"
+	},
+	"overview": "Balancer es un exchange descentralizado y gestor de portafolios automatizado que fue pionero en pools de liquidez ponderados—permitiendo pools con hasta 8 tokens en cualquier proporción, en lugar del 50/50 fijo de los AMMs tradicionales. Lanzado en marzo de 2020 por Balancer Labs de Fernando Martinelli, el protocolo permite una flexibilidad sin precedentes en el diseño de pools.\n\nLa innovación clave es que los proveedores de liquidez pueden crear pools que mantienen proporciones personalizadas de activos automáticamente. Un pool ponderado 80% ETH / 20% WBTC se reequilibrará a través del arbitraje para mantener esa proporción, creando efectivamente un fondo indexado auto-reequilibrado que gana comisiones de trading en lugar de pagar comisiones de gestión.\n\nBalancer V2 introdujo una arquitectura de vault único para eficiencia de gas, y Balancer V3 (lanzamiento 2024) trae pools componibles, hooks para lógica personalizada y pools potenciados que dirigen la liquidez inactiva a protocolos de préstamos. El protocolo es una piedra angular de la infraestructura DeFi, con muchos proyectos construyendo tipos de pools personalizados en Balancer.",
+	"features": {
+		"1": {
+			"title": "Pools Ponderados",
+			"description": "Crea pools con hasta 8 tokens en cualquier proporción (ej., 80/20, 60/20/20)"
+		},
+		"2": {
+			"title": "Pools Estables",
+			"description": "Optimizados para activos vinculados con mínimo slippage entre tokens similares"
+		},
+		"3": {
+			"title": "Pools Potenciados",
+			"description": "La liquidez inactiva gana rendimiento adicional de protocolos de préstamos"
+		},
+		"4": {
+			"title": "Arquitectura de Vault",
+			"description": "Un vault único contiene todos los activos del pool para intercambios multi-hop eficientes en gas"
+		},
+		"5": {
+			"title": "Liquidez Programable",
+			"description": "Lógica de pool personalizada y hooks permiten diseños AMM novedosos"
+		},
+		"6": {
+			"title": "Gobernanza veBAL",
+			"description": "Bloquea BAL por poder de voto y recompensas de liquidity mining potenciadas"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Creación de Fondos Indexados",
+			"description": "Crea portafolios auto-reequilibrados que ganan comisiones en lugar de pagarlas"
+		},
+		"2": {
+			"title": "Liquidez de Protocolos",
+			"description": "Los proyectos usan Balancer para diversificación de tesorería y liquidez de tokens"
+		},
+		"3": {
+			"title": "Trading de Stablecoins",
+			"description": "Los pools estables permiten intercambios de bajo slippage entre activos vinculados"
+		},
+		"4": {
+			"title": "Liquidity Mining",
+			"description": "Gana recompensas BAL proporcionando liquidez a pools incentivados"
+		},
+		"5": {
+			"title": "Desarrollo de AMM Personalizado",
+			"description": "Construye tipos de pools novedosos usando la infraestructura programable de Balancer"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Balancer y cómo funcionan los pools ponderados?",
+			"answer": "Balancer es un AMM que permite pools con pesos de tokens personalizados. A diferencia de los pools fijos 50/50 de Uniswap, los pools de Balancer pueden ser 80/20, 60/20/20 o cualquier proporción. Los arbitrajistas reequilibran el pool para mantener los pesos, así que un portafolio se mantiene en las asignaciones objetivo mientras gana comisiones de trading. Es como un fondo indexado que te paga."
+		},
+		"2": {
+			"question": "¿Cuál es la diferencia entre Balancer V2 y V3?",
+			"answer": "V2 introdujo la arquitectura de vault donde todos los pools comparten un único contrato que contiene activos, permitiendo intercambios multi-hop eficientes en gas. V3 añade pools componibles (combinando estable y ponderado), hooks para lógica de pool personalizada, contabilidad transitoria para más ahorro de gas y mejor integración de pools potenciados."
+		},
+		"3": {
+			"question": "¿Qué es veBAL y cómo funciona la gobernanza?",
+			"answer": "veBAL (vote-escrowed BAL) se obtiene bloqueando tokens LP BAL/ETH 80/20 por hasta 1 año. Los holders de veBAL pueden votar en pesos de gauge (qué pools reciben emisiones BAL), potenciar sus propias recompensas de farming hasta 2.5x y participar en propuestas de gobernanza. Bloqueos más largos dan más poder de voto."
+		},
+		"4": {
+			"question": "¿Qué son los pools potenciados?",
+			"answer": "Los pools potenciados dirigen la liquidez inactiva (tokens no necesarios para operaciones actuales) a protocolos de préstamos como Aave para ganar rendimiento adicional. Los LPs ganan tanto comisiones de trading como intereses de préstamos. Esto aumenta significativamente la eficiencia de capital comparado con AMMs tradicionales donde el capital inactivo no gana nada."
+		},
+		"5": {
+			"question": "¿Es seguro usar Balancer?",
+			"answer": "Balancer ha sido probado en batalla desde 2020 con auditorías extensivas. Sin embargo, ha experimentado exploits en el pasado, incluyendo un ataque de flash loan en 2020 y una divulgación de vulnerabilidad en 2023. La arquitectura de vault V2 reduce la superficie de ataque. Como siempre en DeFi, los riesgos incluyen contratos inteligentes, pérdida impermanente y riesgos específicos del pool."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para explorar liquidez flexible?",
+		"button": "Abrir Balancer",
+		"note": "Liquidez programable para DeFi"
+	}
+}

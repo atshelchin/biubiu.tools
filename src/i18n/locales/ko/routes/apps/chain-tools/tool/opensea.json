@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷",
+		"code": "ko"
+	},
+	"seo": {
+		"title": "OpenSea - 선도적인 NFT 마켓플레이스 | 디지털 수집품 구매, 판매 및 발견",
+		"description": "세계 최대의 NFT 마켓플레이스 OpenSea를 만나보세요. 여러 블록체인에서 디지털 아트, 수집품, 게임 아이템 등을 구매, 판매 및 탐색하세요.",
+		"keywords": "OpenSea, NFT, marketplace, digital art, collectibles, Ethereum, Seaport, NFT trading"
+	},
+	"overview": "OpenSea는 세계 최대의 NFT 마켓플레이스로, 사용자가 여러 블록체인에서 디지털 수집품을 구매, 판매 및 발견할 수 있게 합니다. 2017년 Devin Finzer와 Alex Atallah가 설립한 OpenSea는 NFT 마켓플레이스 개념을 개척했으며 경쟁이 심화되는 가운데에도 지배적인 플랫폼으로 남아 있습니다.\n\n플랫폼은 Ethereum, Polygon, Klaytn, Solana, Arbitrum, Optimism, Avalanche, Base 등 여러 체인의 NFT를 지원합니다. OpenSea는 경매 스타일 및 고정 가격 목록, 컬렉션 오퍼, 특성 기반 오퍼, 희귀도 도구 등의 기능을 제공합니다. OpenSea의 오픈소스 마켓플레이스 프로토콜인 Seaport 프로토콜은 번들 판매 및 부분 채움과 같은 고급 기능으로 거래를 지원합니다.\n\nOpenSea는 수십억 달러의 NFT 거래량을 처리했으며 수백만 개의 NFT 컬렉션을 호스팅합니다. OS2(OpenSea 2.0)를 통해 플랫폼은 NFT와 함께 토큰 거래 지원을 확장하고 보상 프로그램을 도입했으며 커뮤니티 허브를 시작하여 포괄적인 Web3 마켓플레이스로 자리매김했습니다.",
+	"features": {
+		"1": {
+			"title": "멀티체인 지원",
+			"description": "Ethereum, Polygon, Solana, Base 및 15개 이상의 체인에서 NFT 거래"
+		},
+		"2": {
+			"title": "Seaport 프로토콜",
+			"description": "고급 거래 기능을 가능하게 하는 오픈소스 마켓플레이스 프로토콜"
+		},
+		"3": {
+			"title": "컬렉션 오퍼",
+			"description": "효율적인 구매를 위해 전체 컬렉션 또는 특정 특성에 오퍼 제작"
+		},
+		"4": {
+			"title": "크리에이터 도구",
+			"description": "맞춤형 로열티 및 공개 메커니즘으로 NFT 컬렉션 출시"
+		},
+		"5": {
+			"title": "OS2 토큰 거래",
+			"description": "새로운 OpenSea 2.0 경험으로 NFT와 함께 토큰 거래"
+		},
+		"6": {
+			"title": "Drops 및 민팅",
+			"description": "NFT Drop에 참여하고 OpenSea에서 직접 민팅"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "NFT 거래",
+			"description": "최대 마켓플레이스에서 디지털 아트, PFP 및 수집품 구매 및 판매"
+		},
+		"2": {
+			"title": "컬렉션 출시",
+			"description": "내장된 민팅 및 판매 도구로 NFT 컬렉션 생성 및 출시"
+		},
+		"3": {
+			"title": "포트폴리오 관리",
+			"description": "여러 체인에 걸친 NFT 보유 추적, 정리 및 관리"
+		},
+		"4": {
+			"title": "가격 발견",
+			"description": "정보에 입각한 결정을 위해 플로어 가격, 판매 이력 및 희귀도 조사"
+		},
+		"5": {
+			"title": "게임 자산",
+			"description": "다양한 블록체인 게임에서 게임 내 아이템 및 게임 NFT 거래"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "OpenSea는 무엇이며 어떻게 작동하나요?",
+			"answer": "OpenSea는 사용자가 디지털 수집품을 구매, 판매 및 발견할 수 있는 NFT 마켓플레이스입니다. 지갑을 연결하고 NFT를 탐색하거나 검색하고 나열된 가격으로 구매하거나 오퍼를 만들 수 있습니다. 판매자는 메시지에 서명하여 NFT를 나열합니다(나열에 가스 비용 없음). 판매가 발생하면 OpenSea는 NFT와 지불의 교환을 촉진하고 소액의 수수료를 받습니다."
+		},
+		"2": {
+			"question": "OpenSea는 어떤 수수료를 부과하나요?",
+			"answer": "OpenSea는 판매에 대해 2.5% 수수료를 부과합니다. 또한 크리에이터는 2차 판매에서 받는 로열티(일반적으로 5-10%)를 설정할 수 있습니다. 구매자는 온체인 거래에 대한 가스 비용을 지불합니다. Seaport 프로토콜은 오픈소스이므로 다른 마켓플레이스가 다른 수수료 구조로 사용할 수 있습니다."
+		},
+		"3": {
+			"question": "OpenSea Pro(구 Gem)는 무엇인가요?",
+			"answer": "OpenSea Pro는 파워 유저를 위한 고급 NFT 거래 인터페이스입니다. 크로스 마켓플레이스 집계(OpenSea, Blur 등에서 최상의 가격 찾기), 포트폴리오 분석, 고급 필터링, 여러 NFT를 효율적으로 구매하기 위한 스윕 도구와 같은 기능을 제공합니다. Pro는 전문 트레이더 및 수집가를 대상으로 합니다."
+		},
+		"4": {
+			"question": "OpenSea는 Blur와 비교하여 어떤가요?",
+			"answer": "OpenSea는 가장 광범위한 선택과 사용자 기반을 갖춘 원조 주요 NFT 마켓플레이스입니다. Blur는 수수료 없음, 더 빠른 거래 및 토큰 인센티브를 갖춘 전문 트레이더에 중점을 둔 경쟁자로 등장했습니다. OpenSea는 더 많은 캐주얼 사용자와 더 나은 발견 기능을 가지고 있습니다. Blur는 전문 거래량에서 선두를 달리고 있습니다. 많은 트레이더가 둘 다 사용합니다."
+		},
+		"5": {
+			"question": "OpenSea를 사용하는 것은 안전한가요?",
+			"answer": "OpenSea는 일반적으로 안전하지만 주의가 필요합니다. 위험에는 가짜/복사된 컬렉션(항상 컨트랙트 주소 확인), OpenSea를 사칭하는 피싱 사이트, 숨겨진 승인이 있는 악의적인 NFT, 도난당한 NFT가 포함됩니다. OpenSea는 합법적인 컬렉션을 위한 검증 배지와 사기를 신고할 도구를 가지고 있지만 사용자는 경계를 늦추지 말아야 합니다."
+		}
+	},
+	"cta": {
+		"ready": "NFT를 탐색할 준비가 되셨나요?",
+		"button": "OpenSea 열기",
+		"note": "세계 최대의 NFT 마켓플레이스"
+	}
+}

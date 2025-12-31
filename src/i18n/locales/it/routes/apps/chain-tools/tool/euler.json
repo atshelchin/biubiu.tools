@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Euler Finance - Protocollo di Prestito Modulare | Mercati di Credito DeFi Personalizzabili",
+		"description": "Scopri Euler Finance V2, la piattaforma di prestito modulare. Crea vault di prestito personalizzati, usa qualsiasi asset come garanzia e costruisci strategie di credito sofisticate.",
+		"keywords": "Euler Finance, EUL, prestito, borrowing, modulare, vault, DeFi, credito"
+	},
+	"overview": "Euler Finance è un protocollo di prestito modulare che consente la creazione di mercati di credito personalizzabili. Lanciato originariamente nel 2021, Euler V2 rappresenta una ricostruzione completa dopo un estensivo lavoro di sicurezza seguito a un exploit del 2023. La nuova versione introduce una flessibilità senza precedenti nel prestito DeFi.\n\nEuler V2 consiste di due componenti core: l'Euler Vault Kit (EVK) per deployare vault di prestito personalizzati con parametri configurabili, e l'Ethereum Vault Connector (EVC) che consente ai vault di riconoscere garanzie da altri vault. Questo abilita strutture di credito sofisticate—una singola posizione di garanzia può supportare il prestito attraverso mercati multipli.\n\nIl design modulare significa che chiunque può creare mercati di prestito con parametri di rischio personalizzati, configurazioni di oracoli, modelli di tasso di interesse e meccaniche di liquidazione. Questo spazia da vault istituzionali permissionati a mercati pubblici permissionless. Euler si è ricostruito con misure di sicurezza complete e ha ottenuto una crescita significativa del TVL dal rilancio di V2.",
+	"features": {
+		"1": {
+			"title": "Euler Vault Kit",
+			"description": "Crea vault di prestito personalizzati con parametri di rischio e oracoli configurabili"
+		},
+		"2": {
+			"title": "Ethereum Vault Connector",
+			"description": "Usa garanzie attraverso vault multipli per prestito efficiente in termini di capitale"
+		},
+		"3": {
+			"title": "Mercati Modulari",
+			"description": "Creazione permissionless di mercati di prestito per qualsiasi coppia di asset"
+		},
+		"4": {
+			"title": "Oracoli Flessibili",
+			"description": "Supporto per Chainlink, Uniswap TWAP, Redstone e oracoli personalizzati"
+		},
+		"5": {
+			"title": "Isolamento del Rischio",
+			"description": "Pool di prestito isolati prevengono il contagio tra mercati diversi"
+		},
+		"6": {
+			"title": "Controllo di Governance",
+			"description": "I vault possono essere governati, immutabili o aggiornabili in base alla scelta del creatore"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Prestito Standard",
+			"description": "Prendi in prestito contro asset principali in vault curati e testati in battaglia"
+		},
+		"2": {
+			"title": "Asset Long-Tail",
+			"description": "Accedi a mercati di prestito per token più nuovi o meno liquidi"
+		},
+		"3": {
+			"title": "Mercati Istituzionali",
+			"description": "Crea vault permissionati con requisiti KYC e termini personalizzati"
+		},
+		"4": {
+			"title": "Strategie con Leva",
+			"description": "Usa garanzie cross-vault per posizioni con leva efficienti"
+		},
+		"5": {
+			"title": "Creazione di Mercati",
+			"description": "Deploya mercati di prestito personalizzati per asset o casi d'uso specifici"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Euler Finance e come funziona V2?",
+			"answer": "Euler è un protocollo di prestito modulare. V2 consente a chiunque di creare vault di prestito personalizzati usando l'Euler Vault Kit (EVK). Ogni vault può avere i propri tipi di garanzia, oracoli, modelli di tasso di interesse e parametri di rischio. L'Ethereum Vault Connector (EVC) collega i vault insieme, consentendo alle garanzie in un vault di supportare il prestito in altri."
+		},
+		"2": {
+			"question": "Cosa è successo a Euler V1?",
+			"answer": "Euler V1 ha subito un exploit da $197M nel marzo 2023 a causa di una vulnerabilità nel vettore di attacco donation. L'attaccante ha successivamente restituito i fondi. Euler Labs ha speso oltre un anno su V2, conducendo verifiche di sicurezza estensive e implementando un programma completo di bug bounty. V2 è un ridisegno architetturale completo, non una patch di V1."
+		},
+		"3": {
+			"question": "Cos'è l'Ethereum Vault Connector (EVC)?",
+			"answer": "L'EVC è l'innovazione di Euler che consente il riconoscimento di garanzie cross-vault. Invece di depositare garanzie in ogni mercato di prestito separatamente, puoi depositare una volta e avere vault multipli che la riconoscono. Questo migliora drammaticamente l'efficienza di capitale e abilita strategie di prestito multi-leg complesse."
+		},
+		"4": {
+			"question": "Chi può creare vault Euler?",
+			"answer": "Chiunque può creare un vault usando l'EVK. I creatori di vault scelgono tutti i parametri: garanzie accettate, oracoli, tassi di interesse, condizioni di liquidazione e governance. I vault possono essere completamente permissionless, richiedere whitelisting o avere qualsiasi controllo di accesso personalizzato. Questo abilita tutto dai mercati privati istituzionali al prestito permissionless pubblico."
+		},
+		"5": {
+			"question": "È sicuro usare Euler V2?",
+			"answer": "Euler V2 ha subito uno dei processi di sicurezza più completi nella DeFi—verifiche estensive, verifica formale e un bug bounty da oltre $1M. Tuttavia, la DeFi comporta sempre rischi. Il design modulare significa che ogni vault ha rischio indipendente—un vault configurato male non influisce sugli altri. Ricerca sempre i vault specifici prima di depositare."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a esplorare il prestito modulare?",
+		"button": "Apri Euler Finance",
+		"note": "Vault di prestito personalizzabili per qualsiasi asset"
+	}
+}

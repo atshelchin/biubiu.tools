@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Convex Finance - Boosted Curve & Frax Staking | Maximize CRV Rewards",
+		"description": "Discover Convex Finance, the platform for maximizing Curve and Frax yields. Stake LP tokens for boosted CRV rewards without locking, or stake CVX for protocol fees.",
+		"keywords": "Convex Finance, CVX, Curve, CRV, yield boost, DeFi, liquidity staking, veCRV"
+	},
+	"overview": "Convex Finance is a DeFi protocol that maximizes yields for Curve Finance liquidity providers by aggregating veCRV voting power. Launched in May 2021, Convex solved a key problem: earning maximum CRV rewards on Curve requires locking CRV for up to 4 years, which most users can't or won't do.\n\nConvex pools veCRV from users who stake their CRV, then uses this aggregated voting power to boost rewards for all Convex depositors. Curve LP token holders can stake on Convex to earn boosted CRV + CVX rewards without personally locking any CRV. This democratized access to boosted yields and sparked the \"Curve Wars\"—protocols competing for Convex's CVX voting power to direct CRV emissions.\n\nThe platform has expanded beyond Curve to support Frax Finance (cvxFXS) and f(x) Protocol. CVX token holders can lock their tokens as vlCVX to vote on gauge weights and earn bribes from protocols seeking emission direction. With over $1 billion TVL, Convex is central to the Curve ecosystem.",
+	"features": {
+		"1": {
+			"title": "Boosted CRV Rewards",
+			"description": "Earn maximum Curve rewards without personally locking CRV for 4 years"
+		},
+		"2": {
+			"title": "CVX Rewards",
+			"description": "Stake Curve LP tokens to earn CVX on top of boosted CRV"
+		},
+		"3": {
+			"title": "cvxCRV Staking",
+			"description": "Stake CRV as cvxCRV to earn CRV, CVX, and 3CRV rewards"
+		},
+		"4": {
+			"title": "vlCVX Voting",
+			"description": "Lock CVX to vote on Curve gauge weights and earn bribes"
+		},
+		"5": {
+			"title": "Frax Support",
+			"description": "Stake FXS as cvxFXS for boosted Frax protocol rewards"
+		},
+		"6": {
+			"title": "Auto-Compounding",
+			"description": "Rewards are automatically claimed and compounded for depositors"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Curve LP Boosting",
+			"description": "Earn maximum CRV rewards on your Curve LP positions without locking CRV"
+		},
+		"2": {
+			"title": "CRV Staking",
+			"description": "Convert CRV to cvxCRV to earn yields without 4-year lockups"
+		},
+		"3": {
+			"title": "Governance Power",
+			"description": "Lock CVX as vlCVX to direct Curve emissions and earn bribes"
+		},
+		"4": {
+			"title": "Passive Yield",
+			"description": "Stake and earn auto-compounded rewards across Curve and Frax"
+		},
+		"5": {
+			"title": "Protocol Influence",
+			"description": "Protocols accumulate CVX to influence CRV emissions to their pools"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Convex Finance and why does it exist?",
+			"answer": "Convex solves Curve's boost problem. To earn maximum CRV rewards, you need to lock CRV as veCRV for up to 4 years. Most users can't do this. Convex aggregates veCRV from many users to provide boosted rewards to everyone who stakes Curve LP tokens on Convex—no personal locking required."
+		},
+		"2": {
+			"question": "What is the difference between CRV, cvxCRV, and veCRV?",
+			"answer": "CRV is Curve's token. veCRV is vote-escrowed CRV locked directly in Curve for up to 4 years—it provides voting power and boost but is illiquid. cvxCRV is CRV deposited into Convex—it's liquid (tradeable) and earns yields from Convex's aggregated veCRV position. Converting CRV to cvxCRV is one-way."
+		},
+		"3": {
+			"question": "What are the Curve Wars?",
+			"answer": "Curve Wars refers to protocols competing to accumulate CVX/vlCVX to direct CRV emissions. Since Convex controls significant veCRV, controlling CVX voting power means controlling where Curve rewards go. Protocols offer \"bribes\" to vlCVX voters to vote for their pools, creating a meta-game around emission direction."
+		},
+		"4": {
+			"question": "What is vlCVX and how do bribes work?",
+			"answer": "vlCVX (vote-locked CVX) is CVX locked for 16+ weeks. vlCVX holders vote on which Curve pools receive CRV emissions. Protocols pay \"bribes\" (token rewards) to vlCVX voters who direct emissions to their pools. Bribes are often more valuable than the CVX locked, creating attractive yields for voters."
+		},
+		"5": {
+			"question": "Is converting CRV to cvxCRV reversible?",
+			"answer": "No, converting CRV to cvxCRV is one-way and permanent. However, cvxCRV is tradeable on DEXs. The cvxCRV/CRV exchange rate fluctuates based on market conditions—sometimes cvxCRV trades at a discount or premium to CRV. Consider this before converting."
+		}
+	},
+	"cta": {
+		"ready": "Ready to maximize your Curve yields?",
+		"button": "Open Convex",
+		"note": "Boosted staking for Curve and Frax"
+	}
+}

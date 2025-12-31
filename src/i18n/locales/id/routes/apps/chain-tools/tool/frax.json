@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Frax Finance - Stablecoin Terdesentralisasi & Hub DeFi | FRAX, frxETH, Fraxtal",
+		"description": "Temukan Frax Finance, ekosistem DeFi inovatif. Gunakan stablecoin FRAX, liquid staking frxETH, Fraxlend, dan L2 Fraxtal untuk solusi DeFi komprehensif.",
+		"keywords": "Frax Finance, FRAX, frxETH, FXS, stablecoin, liquid staking, Fraxtal, DeFi"
+	},
+	"overview": "Frax Finance adalah ekosistem DeFi komprehensif yang berpusat pada stablecoin FRAX dan serangkaian protokol yang saling terhubung. Didirikan oleh Sam Kazemian pada tahun 2020, Frax mempelopori model stablecoin fraksional-algoritmik, meskipun sejak itu telah berkembang menjadi sepenuhnya terkolateralisasi.\n\nEkosistem ini mencakup: FRAX (stablecoin terdesentralisasi yang sekarang 100% terkolateralisasi), frxETH/sfrxETH (liquid staking Ethereum), Fraxlend (lending permissionless), FraxSwap (DEX dengan TWAMM), FraxFerry (bridge cross-chain), dan Fraxtal (blockchain L2 yang dibangun dengan teknologi Optimism). FXS adalah token governance yang menangkap nilai dari semua aktivitas protokol.\n\nInovasi utama Frax adalah pendekatan terintegrasi vertikal—memiliki seluruh stack dari stablecoin hingga chain L2. Protokol ini memiliki kekuatan governance signifikan di Curve dan Convex melalui kepemilikan veFXS dan vlCVX, memungkinkannya mengarahkan emisi ke pool terkait Frax dan mempertahankan likuiditas yang dalam.",
+	"features": {
+		"1": {
+			"title": "Stablecoin FRAX",
+			"description": "Stablecoin USD terdesentralisasi yang didukung oleh kolateral kripto, sekarang 100% terkolateralisasi"
+		},
+		"2": {
+			"title": "frxETH Staking",
+			"description": "Liquid staking untuk ETH dengan token frxETH dan sfrxETH yang menghasilkan yield"
+		},
+		"3": {
+			"title": "Fraxlend",
+			"description": "Pasar lending permissionless dengan risiko terisolasi dan parameter khusus"
+		},
+		"4": {
+			"title": "Fraxtal L2",
+			"description": "Chain L2 berbasis Optimism menggunakan FRAX sebagai token gas dengan insentif blockspace"
+		},
+		"5": {
+			"title": "FraxSwap",
+			"description": "AMM dengan TWAMM bawaan untuk order harga rata-rata tertimbang waktu yang besar"
+		},
+		"6": {
+			"title": "veFXS Governance",
+			"description": "Kunci FXS untuk kekuatan voting, arah bobot gauge, dan biaya protokol"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Penggunaan Stablecoin",
+			"description": "Gunakan FRAX untuk trading, lending, dan sebagai nilai stabil di DeFi"
+		},
+		"2": {
+			"title": "ETH Liquid Staking",
+			"description": "Stake ETH melalui frxETH dan pegang sfrxETH untuk akumulasi yield otomatis"
+		},
+		"3": {
+			"title": "Strategi Leverage",
+			"description": "Gunakan Fraxlend untuk meminjam dengan berbagai jenis kolateral"
+		},
+		"4": {
+			"title": "Pengembangan L2",
+			"description": "Bangun di Fraxtal untuk biaya gas lebih rendah dan reward insentif blockspace"
+		},
+		"5": {
+			"title": "Partisipasi Governance",
+			"description": "Kunci FXS sebagai veFXS untuk voting pada parameter protokol dan mendapatkan biaya"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Frax Finance dan bagaimana FRAX bekerja?",
+			"answer": "Frax Finance adalah ekosistem DeFi yang dibangun di sekitar stablecoin FRAX. FRAX awalnya fraksional-algoritmik (terkolateralisasi sebagian) tetapi telah berkembang menjadi 100% kolateralisasi untuk stabilitas maksimum. Protokol ini mencakup liquid staking, lending, DEX, dan chain L2—semuanya saling terhubung untuk menciptakan stack DeFi yang komprehensif."
+		},
+		"2": {
+			"question": "Apa perbedaan antara frxETH dan sfrxETH?",
+			"answer": "frxETH adalah token yang dipatok 1:1 dengan ETH yang digunakan untuk penyediaan likuiditas. sfrxETH adalah versi yang dipertaruhkan yang mengakumulasi semua reward validator. Ketika Anda stake ETH, Anda dapat memilih frxETH (untuk LP) atau konversi ke sfrxETH (untuk yield pasif). sfrxETH meningkat nilainya dari waktu ke waktu seiring reward staking terakumulasi."
+		},
+		"3": {
+			"question": "Apa itu Fraxtal?",
+			"answer": "Fraxtal adalah blockchain L2 Frax yang dibangun dengan teknologi Optimism (OP Stack). Ini menggunakan FRAX sebagai token gas native. Fitur uniknya adalah 'Flox'—insentif blockspace yang memberi reward kepada pengguna dan developer berdasarkan gas yang dihabiskan, menciptakan flywheel adopsi dan aktivitas di chain tersebut."
+		},
+		"4": {
+			"question": "Apa itu FXS dan veFXS?",
+			"answer": "FXS adalah token governance Frax yang menangkap nilai dari semua aktivitas ekosistem. veFXS (vote-escrowed FXS) diperoleh dengan mengunci FXS hingga 4 tahun. Pemegang veFXS voting pada bobot gauge, mendapatkan biaya protokol, dan mengarahkan emisi. Lock yang lebih lama memberikan kekuatan voting yang lebih besar."
+		},
+		"5": {
+			"question": "Apakah Frax aman digunakan?",
+			"answer": "Frax telah beroperasi sejak 2020 dengan audit ekstensif. FRAX sekarang 100% terkolateralisasi, mengurangi risiko de-peg. Namun, risiko termasuk kerentanan smart contract, ketergantungan oracle, dan kompleksitas dari desain protokol yang saling terhubung. Liquid staking frxETH memiliki risiko validator tambahan."
+		}
+	},
+	"cta": {
+		"ready": "Siap menjelajahi ekosistem Frax?",
+		"button": "Buka Frax Finance",
+		"note": "Stablecoin, liquid staking, dan L2 dalam satu ekosistem"
+	}
+}

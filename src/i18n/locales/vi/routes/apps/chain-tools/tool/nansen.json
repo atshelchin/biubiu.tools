@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Nansen - Phân Tích On-Chain Hỗ Trợ AI | Theo Dõi Smart Money và Nhãn Ví",
+		"description": "Khám phá Nansen, nền tảng phân tích on-chain hàng đầu. Theo dõi smart money, phân tích 500M+ ví được gắn nhãn và nhận thông tin chi tiết hỗ trợ AI cho đầu tư crypto.",
+		"keywords": "Nansen, phân tích on-chain, smart money, nhãn ví, phân tích crypto, nghiên cứu DeFi, AI"
+	},
+	"overview": "Nansen là nền tảng phân tích blockchain hỗ trợ AI cung cấp thông tin chi tiết có thể hành động bằng cách làm giàu dữ liệu on-chain với nhãn ví. Được thành lập bởi Alex Svanevik, Evgeny Medvedev và Lars Bakke Krogvig vào năm 2019, Nansen đã tiên phong khái niệm theo dõi 'smart money'—xác định và theo dõi các ví có thành tích đã được chứng minh.\n\nNền tảng đã gắn nhãn hơn 500 triệu ví trên nhiều chuỗi, phân loại chúng thành smart money, quỹ, sàn giao dịch, cá voi và hơn thế nữa. Việc gắn nhãn này cho phép người dùng không chỉ thấy điều gì đang xảy ra on-chain mà còn ai đứng sau hoạt động. Các sản phẩm của Nansen bao gồm theo dõi danh mục, phân tích token, phân tích NFT và cảnh báo thời gian thực.\n\nNansen phục vụ cả người dùng bán lẻ và tổ chức, với các tính năng từ theo dõi smart money đơn giản đến truy cập API nâng cao và dashboard tùy chỉnh. Khả năng AI của nền tảng giúp phát hiện thông tin chi tiết từ lượng dữ liệu on-chain khổng lồ, giúp dễ dàng xác định cơ hội và rủi ro hơn.",
+	"features": {
+		"1": {
+			"title": "500M+ Ví Được Gắn Nhãn",
+			"description": "Xác định smart money, quỹ, sàn giao dịch và trader đáng chú ý trên các chuỗi"
+		},
+		"2": {
+			"title": "Theo Dõi Smart Money",
+			"description": "Theo dõi những gì các trader và quỹ hàng đầu đang mua, bán và tích lũy"
+		},
+		"3": {
+			"title": "Cảnh Báo Thời Gian Thực",
+			"description": "Nhận thông báo khi smart money di chuyển vào token hoặc bộ sưu tập NFT"
+		},
+		"4": {
+			"title": "Phân Tích Token",
+			"description": "Phân tích phân phối người nắm giữ, mô hình tích lũy và dòng chảy sàn giao dịch"
+		},
+		"5": {
+			"title": "Phân Tích NFT",
+			"description": "Theo dõi hoạt động NFT của smart money, floor price và xu hướng bộ sưu tập"
+		},
+		"6": {
+			"title": "Thông Tin Chi Tiết AI",
+			"description": "Phân tích hỗ trợ AI phát hiện các mô hình và bất thường on-chain đáng chú ý"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Theo Dõi Smart Money",
+			"description": "Theo dõi những gì các trader hàng đầu đang tích lũy trước khi thị trường di chuyển"
+		},
+		"2": {
+			"title": "Thẩm Định Token",
+			"description": "Nghiên cứu thành phần người nắm giữ, phân phối và sự quan tâm của smart money"
+		},
+		"3": {
+			"title": "Theo Dõi Cá Voi",
+			"description": "Giám sát chuyển động ví lớn và luồng vào/ra sàn giao dịch"
+		},
+		"4": {
+			"title": "Giao Dịch NFT",
+			"description": "Xác định các bộ sưu tập NFT đang thu hút sự quan tâm của smart money"
+		},
+		"5": {
+			"title": "Giám Sát Danh Mục",
+			"description": "Theo dõi danh mục của bạn và so sánh hiệu suất với smart money"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Nansen là gì và hoạt động như thế nào?",
+			"answer": "Nansen là một nền tảng phân tích on-chain gắn nhãn ví blockchain để hiển thị ai đứng sau các giao dịch. Thay vì thấy các địa chỉ ẩn danh, bạn thấy 'Smart Money', 'Fund', 'Exchange', v.v. Điều này tiết lộ các mô hình như smart money tích lũy một token trước khi nó tăng giá, hoặc cá voi chuyển tiền đến sàn giao dịch trước khi bán. Nó biến dữ liệu blockchain thô thành thông tin tình báo có thể hành động."
+		},
+		"2": {
+			"question": "'Smart Money' là gì và được xác định như thế nào?",
+			"answer": "Smart Money đề cập đến các ví có thành tích lợi nhuận đã được chứng minh. Nansen xác định chúng thông qua phân tích lịch sử—các ví liên tục mua token sớm trước khi giá tăng, thực hiện các động thái DeFi có lợi nhuận hoặc thuộc về các trader/quỹ thành công đã biết. Các nhãn này được cập nhật liên tục dựa trên hiệu suất đang diễn ra."
+		},
+		"3": {
+			"question": "Nansen có miễn phí không?",
+			"answer": "Nansen cung cấp một gói miễn phí với các tính năng hạn chế. Truy cập đầy đủ yêu cầu các gói trả phí: Lite (~$100/tháng) cho các tính năng cơ bản, Standard (~$150/tháng) cho theo dõi smart money đầy đủ và các gói VIP/Enterprise cho truy cập API nâng cao và giải pháp tùy chỉnh. Các gói bao gồm các cấp độ truy cập dữ liệu, cảnh báo và dữ liệu lịch sử khác nhau."
+		},
+		"4": {
+			"question": "Nansen so sánh với Dune như thế nào?",
+			"answer": "Họ phục vụ các mục đích khác nhau. Dune là một nền tảng truy vấn nơi bạn viết SQL để phân tích dữ liệu thô—linh hoạt nhưng yêu cầu kỹ năng SQL. Nansen cung cấp phân tích được xây dựng sẵn với nhãn ví—thông tin chi tiết sẵn sàng sử dụng mà không cần truy vấn. Nhiều nhà nghiên cứu nghiêm túc sử dụng cả hai: Dune cho phân tích tùy chỉnh, Nansen cho theo dõi smart money và cảnh báo."
+		},
+		"5": {
+			"question": "Tôi có thể theo dõi danh mục của mình trên Nansen không?",
+			"answer": "Có. Tính năng danh mục của Nansen cho phép bạn kết nối ví hoặc nhập địa chỉ để theo dõi nắm giữ, P&L và lịch sử giao dịch. Bạn có thể thấy hiệu suất của bạn so với smart money như thế nào và nhận cảnh báo khi các ví bạn theo dõi thực hiện các động thái. Điều này có sẵn trên tất cả các chuỗi được hỗ trợ."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng theo dõi smart money?",
+		"button": "Mở Nansen",
+		"note": "Phân tích on-chain hỗ trợ AI"
+	}
+}

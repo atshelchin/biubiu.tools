@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Nansen - Análisis On-Chain con IA | Rastreo de Smart Money y Etiquetas de Billeteras",
+		"description": "Descubre Nansen, la plataforma líder de análisis on-chain. Rastrea smart money, analiza más de 500M de billeteras etiquetadas y obtén insights con IA para invertir en cripto.",
+		"keywords": "Nansen, on-chain analytics, smart money, wallet labels, crypto analytics, DeFi research, AI"
+	},
+	"overview": "Nansen es una plataforma de análisis blockchain con IA que proporciona insights accionables al enriquecer datos on-chain con etiquetas de billeteras. Fundada por Alex Svanevik, Evgeny Medvedev y Lars Bakke Krogvig en 2019, Nansen fue pionera en el concepto de rastreo de 'smart money': identificar y seguir billeteras con historiales probados.\n\nLa plataforma ha etiquetado más de 500 millones de billeteras en múltiples cadenas, categorizándolas como smart money, fondos, exchanges, ballenas y más. Este etiquetado permite a los usuarios ver no solo lo que está sucediendo on-chain, sino quién está detrás de la actividad. Los productos de Nansen incluyen rastreo de portafolio, análisis de tokens, análisis de NFT y alertas en tiempo real.\n\nNansen sirve tanto a usuarios minoristas como institucionales, con características que van desde rastreo simple de smart money hasta acceso avanzado a API y dashboards personalizados. Las capacidades de IA de la plataforma ayudan a descubrir insights de la enorme cantidad de datos on-chain, facilitando la identificación de oportunidades y riesgos.",
+	"features": {
+		"1": {
+			"title": "Más de 500M de Billeteras Etiquetadas",
+			"description": "Identifica smart money, fondos, exchanges y comerciantes notables en cadenas"
+		},
+		"2": {
+			"title": "Rastreo de Smart Money",
+			"description": "Sigue lo que los principales comerciantes y fondos están comprando, vendiendo y acumulando"
+		},
+		"3": {
+			"title": "Alertas en Tiempo Real",
+			"description": "Recibe notificaciones cuando smart money se mueve hacia tokens o colecciones NFT"
+		},
+		"4": {
+			"title": "Análisis de Tokens",
+			"description": "Analiza distribución de holders, patrones de acumulación y flujos de exchange"
+		},
+		"5": {
+			"title": "Análisis de NFT",
+			"description": "Rastrea actividad NFT de smart money, precios mínimos y tendencias de colecciones"
+		},
+		"6": {
+			"title": "Insights con IA",
+			"description": "Análisis con IA que descubre patrones y anomalías on-chain notables"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Seguimiento de Smart Money",
+			"description": "Rastrea lo que los principales comerciantes están acumulando antes de movimientos del mercado"
+		},
+		"2": {
+			"title": "Due Diligence de Tokens",
+			"description": "Investiga composición de holders, distribución e interés de smart money"
+		},
+		"3": {
+			"title": "Vigilancia de Ballenas",
+			"description": "Monitorea movimientos de grandes billeteras y entradas/salidas de exchanges"
+		},
+		"4": {
+			"title": "Comercio de NFT",
+			"description": "Identifica colecciones NFT que ganan interés de smart money"
+		},
+		"5": {
+			"title": "Monitoreo de Portafolio",
+			"description": "Rastrea tu portafolio y compara rendimiento con smart money"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Nansen y cómo funciona?",
+			"answer": "Nansen es una plataforma de análisis on-chain que etiqueta billeteras blockchain para mostrar quién está detrás de las transacciones. En lugar de ver direcciones anónimas, ves 'Smart Money', 'Fund', 'Exchange', etc. Esto revela patrones como smart money acumulando un token antes de que suba, o ballenas moviendo fondos a exchanges antes de vender. Convierte datos blockchain sin procesar en inteligencia accionable."
+		},
+		"2": {
+			"question": "¿Qué es 'Smart Money' y cómo se identifica?",
+			"answer": "Smart Money se refiere a billeteras con historiales rentables probados. Nansen las identifica a través de análisis histórico: billeteras que consistentemente compraron tokens temprano antes de aumentos de precio, hicieron movimientos DeFi rentables, o pertenecen a comerciantes/fondos exitosos conocidos. Estas etiquetas se actualizan constantemente según el rendimiento continuo."
+		},
+		"3": {
+			"question": "¿Nansen es gratis?",
+			"answer": "Nansen ofrece un nivel gratuito con características limitadas. El acceso completo requiere planes de pago: Lite (~$100/mes) para características básicas, Standard (~$150/mes) para rastreo completo de smart money, y niveles VIP/Enterprise para acceso avanzado a API y soluciones personalizadas. Los planes incluyen diferentes niveles de acceso a datos, alertas y datos históricos."
+		},
+		"4": {
+			"question": "¿Cómo se compara Nansen con Dune?",
+			"answer": "Sirven propósitos diferentes. Dune es una plataforma de consultas donde escribes SQL para analizar datos sin procesar: flexible pero requiere habilidades SQL. Nansen proporciona análisis preconstruidos con etiquetas de billeteras: insights listos para usar sin consultas. Muchos investigadores serios usan ambos: Dune para análisis personalizados, Nansen para rastreo de smart money y alertas."
+		},
+		"5": {
+			"question": "¿Puedo rastrear mi propio portafolio en Nansen?",
+			"answer": "Sí. La función de portafolio de Nansen te permite conectar billeteras o ingresar direcciones para rastrear tenencias, P&L e historial de transacciones. Puedes ver cómo se compara tu rendimiento con smart money y recibir alertas cuando las billeteras que sigues hacen movimientos. Esto está disponible en todas las cadenas compatibles."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para seguir smart money?",
+		"button": "Abrir Nansen",
+		"note": "Análisis on-chain con IA"
+	}
+}

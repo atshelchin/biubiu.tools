@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Safe - Billetera Multi-Firma | Gestión Segura de Activos Digitales",
+		"description": "Explora Safe (anteriormente Gnosis Safe), la billetera multi-firma líder. Asegura activos digitales con umbrales de aprobación personalizables y seguridad de contratos inteligentes.",
+		"keywords": "Safe, Gnosis Safe, multisig, billetera multi-firma, tesorería DAO, billetera de contrato inteligente, seguridad cripto"
+	},
+	"overview": "Safe (anteriormente Gnosis Safe) es la billetera de contrato inteligente estándar de la industria para asegurar activos digitales. Originalmente desarrollada por el equipo Gnosis y lanzada en 2018, Safe se ha convertido en la solución más confiable para DAOs, protocolos e instituciones que gestionan tesorerías cripto.\n\nA diferencia de las billeteras tradicionales controladas por una sola clave privada, Safe usa seguridad multi-firma (multisig) que requiere múltiples aprobaciones para transacciones. Configuras firmantes M-de-N—por ejemplo, 3-de-5 significa que cualquiera de 3 de 5 firmantes designados debe aprobar. Esto elimina puntos únicos de fallo: ninguna persona puede mover fondos unilateralmente. Safe también soporta límites de gasto, agrupación de transacciones y extensiones modulares.\n\nSafe ha asegurado más de $100 mil millones en activos a través de más de 10 millones de transacciones. Protocolos principales como Uniswap, Aave, ENS e innumerables DAOs usan Safe para gestión de tesorería. El ecosistema Safe incluye Safe{Wallet} (interfaz de usuario), Safe{Core} (infraestructura de cuenta inteligente para desarrolladores) e integración con billeteras hardware, apps móviles y constructores de transacciones. Safe representa la evolución de billeteras EOA a cuentas inteligentes programables.",
+	"features": {
+		"1": {
+			"title": "Seguridad Multi-Firma",
+			"description": "Requiere múltiples aprobaciones (ej. 3-de-5) para transacciones—sin punto único de fallo"
+		},
+		"2": {
+			"title": "Agrupación de Transacciones",
+			"description": "Agrupa múltiples transacciones en una, ahorrando gas y habilitando operaciones complejas"
+		},
+		"3": {
+			"title": "Límites de Gasto",
+			"description": "Establece asignaciones para que los firmantes gasten hasta límites sin aprobación completa"
+		},
+		"4": {
+			"title": "Multi-Cadena",
+			"description": "Despliega Safe en Ethereum, Polygon, Arbitrum, Optimism y otras cadenas EVM"
+		},
+		"5": {
+			"title": "Safe Apps",
+			"description": "Interactúa con protocolos DeFi directamente desde Safe a través de apps integradas"
+		},
+		"6": {
+			"title": "Opciones de Recuperación",
+			"description": "Configura guardianes y mecanismos de recuperación para recuperación de cuenta"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Tesorería DAO",
+			"description": "Gestiona fondos comunitarios con gobernanza multisig transparente"
+		},
+		"2": {
+			"title": "Propiedad de Protocolo",
+			"description": "Controla claves de administrador de contrato inteligente con firma distribuida"
+		},
+		"3": {
+			"title": "Billeteras de Equipo",
+			"description": "Asegura cripto de empresa con aprobación de múltiples miembros del equipo"
+		},
+		"4": {
+			"title": "Seguridad Personal",
+			"description": "Protege tenencias personales con billetera hardware + teléfono + firmante de respaldo"
+		},
+		"5": {
+			"title": "Fondos de Inversión",
+			"description": "Gestiona activos de fondos con protección de inversores mediante multisig"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Safe y en qué se diferencia de MetaMask?",
+			"answer": "Safe es una billetera de contrato inteligente que requiere múltiples firmas (multisig) para transacciones. MetaMask es una EOA (cuenta de propiedad externa) controlada por una sola clave privada. Si pierdes tu frase semilla de MetaMask o es robada, los fondos desaparecen. Con Safe, necesitas múltiples firmantes para aprobar—incluso si una clave es comprometida, los fondos están protegidos. Safe es para casos de uso de alta seguridad; MetaMask es para transacciones cotidianas."
+		},
+		"2": {
+			"question": "¿Cómo configuro un multisig Safe?",
+			"answer": "Ve a safe.global, conecta tu billetera y haz clic en 'Create Safe'. Elige una red (Ethereum, Polygon, etc.), agrega direcciones de firmantes (billeteras que pueden aprobar transacciones) y establece el umbral (cuántos deben firmar). Por ejemplo, agrega 5 firmantes con umbral 3-de-5. Pagarás gas para desplegar el contrato inteligente Safe. Luego transfiere activos a tu nueva dirección Safe."
+		},
+		"3": {
+			"question": "¿Qué pasa si pierdo acceso a un firmante?",
+			"answer": "Si pierdes un firmante pero aún tienes suficientes para cumplir el umbral, puedes proponer una transacción para reemplazar el firmante perdido con una nueva dirección. Los firmantes restantes aprueban y Safe se actualiza. Por esto el umbral debe ser menor que el total de firmantes (ej. 3-de-5, no 5-de-5). Con configuración adecuada, perder un dispositivo o clave no significa perder fondos."
+		},
+		"4": {
+			"question": "¿Safe es solo para DAOs y equipos?",
+			"answer": "Safe es popular con DAOs pero funciona para seguridad personal también. Individuos usan Safe con configuraciones 2-de-3: billetera hardware + teléfono + respaldo (papel o persona de confianza). Esto protege contra perder un dispositivo o que una sola clave sea robada. El overhead de múltiples firmas vale la pena para tenencias significativas. Muchos individuos nativos cripto usan Safe para almacenamiento en frío."
+		},
+		"5": {
+			"question": "¿Qué son Safe Apps y Safe Modules?",
+			"answer": "Safe Apps son dApps integradas en la interfaz Safe—puedes interactuar con Uniswap, Aave, etc. directamente desde Safe sin cambiar contextos. Safe Modules son extensiones que agregan funcionalidad: límites de gasto (módulo de asignación), pagos recurrentes, mecanismos de recuperación, etc. Esta modularidad hace de Safe una plataforma programable, no solo una billetera."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para asegurar tus activos?",
+		"button": "Abrir Safe",
+		"note": "La billetera de contrato inteligente estándar de la industria"
+	}
+}

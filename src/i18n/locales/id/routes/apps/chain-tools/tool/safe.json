@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Safe - Dompet Multi-Tanda Tangan | Manajemen Aset Digital yang Aman",
+		"description": "Jelajahi Safe (sebelumnya Gnosis Safe), dompet multi-tanda tangan terkemuka. Amankan aset digital dengan ambang batas persetujuan yang dapat disesuaikan dan keamanan smart contract.",
+		"keywords": "Safe, Gnosis Safe, multisig, dompet multi-tanda tangan, treasury DAO, dompet smart contract, keamanan kripto"
+	},
+	"overview": "Safe (sebelumnya Gnosis Safe) adalah dompet smart contract standar industri untuk mengamankan aset digital. Awalnya dikembangkan oleh tim Gnosis dan diluncurkan pada tahun 2018, Safe telah menjadi solusi paling terpercaya untuk DAO, protokol, dan institusi yang mengelola treasury kripto.\n\nTidak seperti dompet tradisional yang dikontrol oleh satu kunci pribadi, Safe menggunakan keamanan multi-tanda tangan (multisig) yang memerlukan banyak persetujuan untuk transaksi. Anda mengonfigurasi M-of-N penandatangan—misalnya, 3-of-5 berarti 3 dari 5 penandatangan yang ditunjuk harus menyetujui. Ini menghilangkan single point of failure: tidak ada satu orang yang dapat memindahkan dana secara sepihak. Safe juga mendukung batas pengeluaran, pengelompokan transaksi, dan ekstensi modular.\n\nSafe telah mengamankan lebih dari $100 miliar aset melalui 10+ juta transaksi. Protokol utama seperti Uniswap, Aave, ENS, dan DAO yang tak terhitung jumlahnya menggunakan Safe untuk manajemen treasury. Ekosistem Safe mencakup Safe{Wallet} (antarmuka pengguna), Safe{Core} (infrastruktur smart account untuk pengembang), dan integrasi dengan dompet hardware, aplikasi mobile, dan transaction builder. Safe mewakili evolusi dari dompet EOA ke smart account yang dapat diprogram.",
+	"features": {
+		"1": {
+			"title": "Keamanan Multi-Tanda Tangan",
+			"description": "Memerlukan banyak persetujuan (mis. 3-of-5) untuk transaksi—tidak ada single point of failure"
+		},
+		"2": {
+			"title": "Pengelompokan Transaksi",
+			"description": "Gabungkan beberapa transaksi menjadi satu, hemat gas dan aktifkan operasi kompleks"
+		},
+		"3": {
+			"title": "Batas Pengeluaran",
+			"description": "Tetapkan tunjangan bagi penandatangan untuk menghabiskan hingga batas tanpa persetujuan penuh"
+		},
+		"4": {
+			"title": "Multi-Rantai",
+			"description": "Deploy Safe di Ethereum, Polygon, Arbitrum, Optimism, dan rantai EVM lainnya"
+		},
+		"5": {
+			"title": "Safe Apps",
+			"description": "Berinteraksi dengan protokol DeFi langsung dari Safe melalui aplikasi terintegrasi"
+		},
+		"6": {
+			"title": "Opsi Pemulihan",
+			"description": "Konfigurasikan guardian dan mekanisme pemulihan untuk pemulihan akun"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Treasury DAO",
+			"description": "Kelola dana komunitas dengan governance multisig yang transparan"
+		},
+		"2": {
+			"title": "Kepemilikan Protokol",
+			"description": "Kontrol kunci admin smart contract dengan penandatanganan terdistribusi"
+		},
+		"3": {
+			"title": "Dompet Tim",
+			"description": "Amankan kripto perusahaan dengan persetujuan dari beberapa anggota tim"
+		},
+		"4": {
+			"title": "Keamanan Pribadi",
+			"description": "Lindungi kepemilikan pribadi dengan dompet hardware + telepon + penandatangan cadangan"
+		},
+		"5": {
+			"title": "Dana Investasi",
+			"description": "Kelola aset dana dengan perlindungan investor melalui multisig"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Safe dan bagaimana perbedaannya dari MetaMask?",
+			"answer": "Safe adalah dompet smart contract yang memerlukan banyak tanda tangan (multisig) untuk transaksi. MetaMask adalah EOA (akun yang dimiliki secara eksternal) yang dikontrol oleh satu kunci pribadi. Jika Anda kehilangan seed phrase MetaMask atau dicuri, dana hilang. Dengan Safe, Anda memerlukan banyak penandatangan untuk menyetujui—bahkan jika satu kunci dikompromikan, dana tetap terlindungi. Safe untuk kasus penggunaan keamanan tinggi; MetaMask untuk transaksi sehari-hari."
+		},
+		"2": {
+			"question": "Bagaimana cara mengatur multisig Safe?",
+			"answer": "Kunjungi safe.global, hubungkan dompet Anda, dan klik 'Create Safe'. Pilih jaringan (Ethereum, Polygon, dll.), tambahkan alamat penandatangan (dompet yang dapat menyetujui transaksi), dan atur ambang batas (berapa banyak yang harus menandatangani). Misalnya, tambahkan 5 penandatangan dengan ambang batas 3-of-5. Anda akan membayar gas untuk men-deploy smart contract Safe. Kemudian transfer aset ke alamat Safe baru Anda."
+		},
+		"3": {
+			"question": "Apa yang terjadi jika saya kehilangan akses ke penandatangan?",
+			"answer": "Jika Anda kehilangan satu penandatangan tetapi masih memiliki cukup untuk memenuhi ambang batas, Anda dapat mengusulkan transaksi untuk mengganti penandatangan yang hilang dengan alamat baru. Penandatangan yang tersisa menyetujui, dan Safe diperbarui. Inilah mengapa ambang batas harus kurang dari total penandatangan (mis. 3-of-5, bukan 5-of-5). Dengan pengaturan yang tepat, kehilangan satu perangkat atau kunci tidak berarti kehilangan dana."
+		},
+		"4": {
+			"question": "Apakah Safe hanya untuk DAO dan tim?",
+			"answer": "Safe populer dengan DAO tetapi juga bekerja untuk keamanan pribadi. Individu menggunakan Safe dengan pengaturan 2-of-3: dompet hardware + telepon + cadangan (kertas atau orang terpercaya). Ini melindungi terhadap kehilangan satu perangkat atau satu kunci yang dicuri. Overhead beberapa tanda tangan sepadan untuk kepemilikan yang signifikan. Banyak individu yang paham kripto menggunakan Safe untuk cold storage."
+		},
+		"5": {
+			"question": "Apa itu Safe Apps dan Safe Modules?",
+			"answer": "Safe Apps adalah dApp yang diintegrasikan ke dalam antarmuka Safe—Anda dapat berinteraksi dengan Uniswap, Aave, dll. langsung dari Safe tanpa mengubah konteks. Safe Modules adalah ekstensi yang menambahkan fungsi: batas pengeluaran (modul tunjangan), pembayaran berulang, mekanisme pemulihan, dll. Modularitas ini membuat Safe menjadi platform yang dapat diprogram, bukan hanya dompet."
+		}
+	},
+	"cta": {
+		"ready": "Siap mengamankan aset Anda?",
+		"button": "Buka Safe",
+		"note": "Dompet smart contract standar industri"
+	}
+}

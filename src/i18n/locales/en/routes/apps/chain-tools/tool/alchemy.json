@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Alchemy - Blockchain Developer Platform | Build Web3 Apps",
+		"description": "Explore Alchemy, the leading blockchain developer platform. Build scalable Web3 applications with reliable node infrastructure, APIs, and developer tools.",
+		"keywords": "Alchemy, blockchain API, Web3 development, node infrastructure, NFT API, dApp development, Ethereum API"
+	},
+	"overview": "Alchemy is the leading blockchain developer platform, providing the infrastructure and tools needed to build scalable Web3 applications. Founded in 2017 by Nikil Viswanathan and Joe Lau, Alchemy powers major companies including OpenSea, Adobe, Shopify, and many top DeFi protocols.\n\nThe platform offers reliable node infrastructure for Ethereum, Polygon, Arbitrum, Optimism, Solana, and other major chains. Beyond basic RPC access, Alchemy provides enhanced APIs for NFTs, tokens, transactions, and webhooks. Their Supernode technology delivers higher reliability and lower latency than running your own nodes. Developer tools include the Alchemy SDK, blockchain explorer, mempool visualizer, and debugging tools.\n\nAlchemy has processed trillions of requests and supports applications that have transferred over $100 billion in value. With a $10.2 billion valuation as of 2022, Alchemy has become the AWS of blockchain—essential infrastructure that most Web3 developers rely on. Their free tier makes it accessible for indie developers while enterprise plans scale to millions of requests.",
+	"features": {
+		"1": {
+			"title": "Supernode RPC",
+			"description": "High-reliability node infrastructure with 99.9%+ uptime across major chains"
+		},
+		"2": {
+			"title": "Enhanced APIs",
+			"description": "Specialized APIs for NFT metadata, token balances, transaction history, and more"
+		},
+		"3": {
+			"title": "Webhooks",
+			"description": "Real-time notifications for on-chain events like transfers and contract calls"
+		},
+		"4": {
+			"title": "Alchemy SDK",
+			"description": "Developer-friendly SDK that simplifies common blockchain operations"
+		},
+		"5": {
+			"title": "Account Kit",
+			"description": "Smart wallet infrastructure for gasless transactions and social login"
+		},
+		"6": {
+			"title": "Rollup Solutions",
+			"description": "Deploy custom L2/L3 chains with Alchemy's rollup-as-a-service platform"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp Development",
+			"description": "Build reliable decentralized applications with robust blockchain infrastructure"
+		},
+		"2": {
+			"title": "NFT Platforms",
+			"description": "Power NFT marketplaces and apps with comprehensive metadata APIs"
+		},
+		"3": {
+			"title": "Wallet Services",
+			"description": "Build wallets with real-time balance updates and transaction history"
+		},
+		"4": {
+			"title": "DeFi Protocols",
+			"description": "Access reliable price data and transaction broadcasting for DeFi apps"
+		},
+		"5": {
+			"title": "Enterprise Web3",
+			"description": "Integrate blockchain features into enterprise applications at scale"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Alchemy and why do developers use it?",
+			"answer": "Alchemy is blockchain infrastructure that provides node access and APIs so developers don't have to run their own nodes. Running Ethereum nodes requires significant resources (TB of storage, constant syncing, DevOps). Alchemy handles this infrastructure while adding enhanced features like NFT APIs, webhooks, and debugging tools. Most major dApps use Alchemy or similar providers."
+		},
+		"2": {
+			"question": "How does Alchemy compare to running your own node?",
+			"answer": "Running your own node gives full control but requires significant resources: hardware, storage (1-2TB for Ethereum), bandwidth, and ongoing maintenance. Alchemy's Supernode provides higher reliability (99.9%+ uptime), lower latency, enhanced APIs, and scales automatically. For most projects, using Alchemy is more cost-effective than self-hosting until you reach very high volumes."
+		},
+		"3": {
+			"question": "Is Alchemy free to use?",
+			"answer": "Alchemy offers a generous free tier: 300M compute units/month, which covers most indie projects and early-stage startups. Paid plans (Growth, Scale, Enterprise) provide more compute units, higher rate limits, dedicated support, and advanced features. Many developers start free and upgrade as their apps grow."
+		},
+		"4": {
+			"question": "What chains does Alchemy support?",
+			"answer": "Alchemy supports major chains including Ethereum, Polygon, Arbitrum, Optimism, Base, Solana, and more. Each chain has full RPC support plus chain-specific enhanced APIs. They continuously add new chains based on developer demand. Check their documentation for the current list of supported networks."
+		},
+		"5": {
+			"question": "What is Alchemy Account Kit?",
+			"answer": "Account Kit is Alchemy's smart wallet infrastructure that enables account abstraction (ERC-4337). It allows dApps to offer gasless transactions (sponsor user gas), social login (sign in with email/Google), and programmable wallets. This improves UX by removing the need for users to manage seed phrases or hold ETH for gas."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on Web3?",
+		"button": "Open Alchemy",
+		"note": "The leading blockchain developer platform"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷",
+		"code": "ko"
+	},
+	"seo": {
+		"title": "Rocket Pool - 탈중앙화 Ethereum 스테이킹 | rETH 유동 스테이킹 토큰",
+		"description": "탈중앙화 Ethereum 스테이킹 프로토콜 Rocket Pool을 알아보세요. 어떤 양의 ETH든 rETH로 스테이킹하거나, 8 ETH만으로 노드를 운영하세요. 신뢰 불필요, 무허가.",
+		"keywords": "Rocket Pool, rETH, Ethereum 스테이킹, 유동 스테이킹, 노드 운영자, 탈중앙화, RPL"
+	},
+	"overview": "Rocket Pool은 유동 스테이킹(rETH)과 무허가 노드 운영을 모두 제공하는 선도적인 탈중앙화 Ethereum 스테이킹 프로토콜입니다. 2016년 David Rugendyke가 설립한 Rocket Pool은 최초의 유동 스테이킹 솔루션 중 하나이며 중앙화된 스테이킹 제공자에 대한 가장 탈중앙화된 대안으로 남아 있습니다.\n\n프로토콜은 두 가지 측면에서 작동합니다: 일반 사용자는 어떤 양의 ETH든 스테이킹하고 스테이킹 보상이 축적됨에 따라 가치가 상승하는 유동 스테이킹 토큰인 rETH를 받을 수 있습니다. 노드 운영자는 RPL 토큰을 본딩하고 예치자 ETH와 매칭되어 단 8 ETH로(솔로 스테이킹 32 ETH 대비) 검증자를 실행할 수 있습니다.\n\nRocket Pool의 핵심 차별화 요소는 진정한 탈중앙화입니다. 누구나 허가 없이 노드를 실행할 수 있으며, 프로토콜은 중앙화된 운영자 세트에 의존하지 않습니다. Oracle DAO는 가격 피드를 제공하고 프로토콜 운영을 관리합니다. 전 세계 수천 명의 독립 노드 운영자와 함께 Rocket Pool은 Ethereum을 위한 가장 검열 저항적인 스테이킹 옵션을 제공합니다.",
+	"features": {
+		"1": {
+			"title": "rETH 유동 스테이킹",
+			"description": "어떤 양의 ETH든 스테이킹하고 자동으로 스테이킹 보상이 누적되는 rETH 수령"
+		},
+		"2": {
+			"title": "8 ETH 미니풀",
+			"description": "프로토콜 예치자와 매칭되어 8 ETH만으로 검증자 실행"
+		},
+		"3": {
+			"title": "무허가 노드",
+			"description": "누구나 승인 없이 노드 운영자가 될 수 있음—진정한 탈중앙화"
+		},
+		"4": {
+			"title": "RPL 담보",
+			"description": "노드 운영자가 보험으로 RPL을 본딩하고 스테이크에서 RPL 보상 획득"
+		},
+		"5": {
+			"title": "평활화 풀",
+			"description": "참여 노드 간 MEV 및 우선 수수료를 사회화하는 옵트인 풀"
+		},
+		"6": {
+			"title": "Oracle DAO",
+			"description": "rETH 가격 책정 및 프로토콜 운영을 위한 탈중앙화 오라클 네트워크"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "유동 ETH 스테이킹",
+			"description": "락업 없이 ETH 스테이킹—스테이킹 보상을 받으면서 DeFi에서 rETH 사용"
+		},
+		"2": {
+			"title": "홈 노드 운영",
+			"description": "자본 요구사항이 줄어든 상태에서 집에서 Ethereum 검증자 실행"
+		},
+		"3": {
+			"title": "DeFi 담보",
+			"description": "Aave, Maker 및 기타 대출 프로토콜에서 rETH를 담보로 사용"
+		},
+		"4": {
+			"title": "탈중앙화 스테이킹",
+			"description": "진정한 무허가 프로토콜을 선택하여 Ethereum 탈중앙화 지원"
+		},
+		"5": {
+			"title": "RPL 스테이킹",
+			"description": "노드 운영자로서 RPL을 본딩하여 향상된 스테이킹 수익률 획득"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Rocket Pool이란 무엇이며 rETH는 어떻게 작동하나요?",
+			"answer": "Rocket Pool은 탈중앙화 스테이킹 프로토콜입니다. ETH를 예치하면 스테이킹된 ETH와 누적 보상을 나타내는 토큰인 rETH를 받습니다. 스테이킹 보상이 축적됨에 따라 rETH의 가치는 ETH에 비해 시간이 지남에 따라 증가합니다. 프로토콜이나 DEX를 통해 언제든지 rETH를 ETH로 다시 스왑할 수 있습니다. ETH는 전 세계 수천 명의 독립 노드 운영자가 스테이킹합니다."
+		},
+		"2": {
+			"question": "Rocket Pool은 Lido와 어떻게 다른가요?",
+			"answer": "핵심 차이점은 탈중앙화입니다. Rocket Pool은 누구나 8 ETH로 무허가로 노드를 실행할 수 있는 반면, Lido는 전문 운영자의 선별된 세트를 사용합니다. Rocket Pool은 전 세계적으로 수천 명의 독립 노드 운영자를 보유하고 있어 더 검열 저항적입니다. Lido는 TVL 면에서 더 크지만 검증자 운영에서 더 중앙화되어 있습니다."
+		},
+		"3": {
+			"question": "RPL이란 무엇이며 노드 운영자가 왜 필요한가요?",
+			"answer": "RPL은 Rocket Pool의 거버넌스 및 유틸리티 토큰입니다. 노드 운영자는 슬래싱에 대한 보험으로 빌린 ETH의 최소 10% 가치의 RPL을 본딩해야 합니다. 그 대가로 ETH 스테이킹 보상 외에 RPL 인플레이션 보상을 받습니다. RPL은 프로토콜 거버넌스에서 투표권도 부여합니다."
+		},
+		"4": {
+			"question": "집에서 Rocket Pool 노드를 실행할 수 있나요?",
+			"answer": "예! Rocket Pool은 홈 스테이커를 위해 설계되었습니다. 최소 8 ETH, 담보를 위한 RPL, 하드웨어 요구사항을 충족하는 컴퓨터, 안정적인 인터넷 연결이 필요합니다. Smartnode 소프트웨어는 설정을 단순화합니다. 많은 노드 운영자가 집에서 소비자용 하드웨어로 실행하여 Ethereum의 지리적 탈중앙화에 기여합니다."
+		},
+		"5": {
+			"question": "rETH의 위험은 무엇인가요?",
+			"answer": "위험에는 스마트 컨트랙트 취약점, 슬래싱 이벤트(RPL 보험으로 완화), DEX에서 공정 가치에서 벗어난 rETH 가격, Oracle DAO의 오라클 위험, 클라이언트 버그와 같은 일반적인 스테이킹 위험이 포함됩니다. Rocket Pool은 광범위하게 감사되었으며 버그 바운티 프로그램을 운영하고 있습니다."
+		}
+	},
+	"cta": {
+		"ready": "탈중앙화 방식으로 ETH를 스테이킹할 준비가 되셨나요?",
+		"button": "Rocket Pool 열기",
+		"note": "탈중앙화 Ethereum 유동 스테이킹"
+	}
+}

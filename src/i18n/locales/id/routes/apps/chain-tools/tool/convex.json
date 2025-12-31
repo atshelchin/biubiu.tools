@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Convex Finance - Boosted Curve & Frax Staking | Maksimalkan Reward CRV",
+		"description": "Temukan Convex Finance, platform untuk memaksimalkan yield Curve dan Frax. Stake token LP untuk reward CRV yang ditingkatkan tanpa locking, atau stake CVX untuk biaya protokol.",
+		"keywords": "Convex Finance, CVX, Curve, CRV, yield boost, DeFi, liquidity staking, veCRV"
+	},
+	"overview": "Convex Finance adalah protokol DeFi yang memaksimalkan yield untuk penyedia likuiditas Curve Finance dengan menggabungkan voting power veCRV. Diluncurkan pada Mei 2021, Convex memecahkan masalah kunci: mendapatkan reward CRV maksimum di Curve memerlukan locking CRV hingga 4 tahun, yang tidak bisa atau tidak mau dilakukan sebagian besar pengguna.\n\nConvex mengumpulkan veCRV dari pengguna yang stake CRV mereka, kemudian menggunakan voting power agregat ini untuk meningkatkan reward untuk semua depositor Convex. Pemegang token LP Curve dapat stake di Convex untuk mendapatkan reward CRV + CVX yang ditingkatkan tanpa harus lock CRV pribadi. Ini mendemokratisasi akses ke yield yang ditingkatkan dan memicu \"Curve Wars\"—protokol bersaing untuk voting power CVX Convex guna mengarahkan emisi CRV.\n\nPlatform telah berkembang melampaui Curve untuk mendukung Frax Finance (cvxFXS) dan f(x) Protocol. Pemegang token CVX dapat lock token mereka sebagai vlCVX untuk voting pada gauge weights dan mendapatkan bribe dari protokol yang mencari arahan emisi. Dengan TVL lebih dari $1 miliar, Convex adalah pusat ekosistem Curve.",
+	"features": {
+		"1": {
+			"title": "Reward CRV yang Ditingkatkan",
+			"description": "Dapatkan reward Curve maksimum tanpa harus lock CRV pribadi selama 4 tahun"
+		},
+		"2": {
+			"title": "Reward CVX",
+			"description": "Stake token LP Curve untuk mendapatkan CVX di atas CRV yang ditingkatkan"
+		},
+		"3": {
+			"title": "cvxCRV Staking",
+			"description": "Stake CRV sebagai cvxCRV untuk mendapatkan reward CRV, CVX, dan 3CRV"
+		},
+		"4": {
+			"title": "vlCVX Voting",
+			"description": "Lock CVX untuk voting pada Curve gauge weights dan mendapatkan bribe"
+		},
+		"5": {
+			"title": "Dukungan Frax",
+			"description": "Stake FXS sebagai cvxFXS untuk reward protokol Frax yang ditingkatkan"
+		},
+		"6": {
+			"title": "Auto-Compounding",
+			"description": "Reward secara otomatis di-claim dan di-compound untuk depositor"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Boosting Curve LP",
+			"description": "Dapatkan reward CRV maksimum pada posisi Curve LP Anda tanpa locking CRV"
+		},
+		"2": {
+			"title": "Staking CRV",
+			"description": "Konversi CRV ke cvxCRV untuk mendapatkan yield tanpa lockup 4 tahun"
+		},
+		"3": {
+			"title": "Governance Power",
+			"description": "Lock CVX sebagai vlCVX untuk mengarahkan emisi Curve dan mendapatkan bribe"
+		},
+		"4": {
+			"title": "Passive Yield",
+			"description": "Stake dan dapatkan reward auto-compound di Curve dan Frax"
+		},
+		"5": {
+			"title": "Pengaruh Protokol",
+			"description": "Protokol mengakumulasi CVX untuk mempengaruhi emisi CRV ke pool mereka"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Convex Finance dan mengapa ada?",
+			"answer": "Convex memecahkan masalah boost Curve. Untuk mendapatkan reward CRV maksimum, Anda perlu lock CRV sebagai veCRV hingga 4 tahun. Sebagian besar pengguna tidak bisa melakukan ini. Convex menggabungkan veCRV dari banyak pengguna untuk memberikan reward yang ditingkatkan kepada semua orang yang stake token LP Curve di Convex—tidak perlu locking pribadi."
+		},
+		"2": {
+			"question": "Apa perbedaan antara CRV, cvxCRV, dan veCRV?",
+			"answer": "CRV adalah token Curve. veCRV adalah CRV yang di-lock langsung di Curve hingga 4 tahun—memberikan voting power dan boost tetapi tidak likuid. cvxCRV adalah CRV yang didepositkan ke Convex—likuid (dapat diperdagangkan) dan mendapatkan yield dari posisi veCRV agregat Convex. Konversi CRV ke cvxCRV adalah satu arah."
+		},
+		"3": {
+			"question": "Apa itu Curve Wars?",
+			"answer": "Curve Wars merujuk pada protokol yang bersaing untuk mengakumulasi CVX/vlCVX guna mengarahkan emisi CRV. Karena Convex mengendalikan veCRV yang signifikan, mengendalikan voting power CVX berarti mengendalikan kemana reward Curve pergi. Protokol menawarkan \"bribe\" kepada voter vlCVX untuk voting untuk pool mereka, menciptakan meta-game seputar arahan emisi."
+		},
+		"4": {
+			"question": "Apa itu vlCVX dan bagaimana bribe bekerja?",
+			"answer": "vlCVX (vote-locked CVX) adalah CVX yang di-lock selama 16+ minggu. Pemegang vlCVX voting pada pool Curve mana yang menerima emisi CRV. Protokol membayar \"bribe\" (reward token) kepada voter vlCVX yang mengarahkan emisi ke pool mereka. Bribe sering lebih berharga daripada CVX yang di-lock, menciptakan yield menarik untuk voter."
+		},
+		"5": {
+			"question": "Apakah konversi CRV ke cvxCRV dapat dibalik?",
+			"answer": "Tidak, konversi CRV ke cvxCRV adalah satu arah dan permanen. Namun, cvxCRV dapat diperdagangkan di DEX. Nilai tukar cvxCRV/CRV berfluktuasi berdasarkan kondisi pasar—terkadang cvxCRV diperdagangkan dengan diskon atau premium terhadap CRV. Pertimbangkan ini sebelum konversi."
+		}
+	},
+	"cta": {
+		"ready": "Siap memaksimalkan yield Curve Anda?",
+		"button": "Buka Convex",
+		"note": "Boosted staking untuk Curve dan Frax"
+	}
+}

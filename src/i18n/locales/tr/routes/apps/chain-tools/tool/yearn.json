@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Yearn Finance - DeFi Getiri Toplayıcısı | Otomatik Bileşik Vault'lar",
+		"description": "Önde gelen getiri toplayıcısı Yearn Finance'i keşfedin. Manuel yönetim olmadan otomatik olarak optimize edilmiş DeFi getirileri kazanmak için varlıkları Vault'lara yatırın.",
+		"keywords": "Yearn Finance, YFI, getiri toplayıcısı, vault'lar, DeFi, otomatik bileşik, getiri optimizasyonu"
+	},
+	"overview": "Yearn Finance, DeFi yield farming stratejilerini otomatikleştiren merkezi olmayan bir getiri toplama protokolüdür. Andre Cronje tarafından 2020'nin başlarında kurulan Yearn, \"Vault'lar\" kavramına öncülük etti—yatırılan varlıkları getirileri maksimize etmek için çeşitli DeFi protokolleri arasında otomatik olarak dağıtan akıllı sözleşmeler.\n\nTemel ürün, kullanıcıların varlık yatırdığı ve protokol stratejilerinin otomatik olarak en iyi getirileri aradığı, ödülleri bileşikleştirdiği ve pozisyonları yeniden dengelediği Yearn Vault'larıdır (yVault'lar). Bu, kullanıcıları manuel olarak fon taşımaktan, hasat için gaz ödemekten ve sürekli olarak optimal stratejiler araştırmaktan kurtarır. Vault stratejileri, üretilen karlardan pay kazanan uzman stratejistler tarafından geliştirilir.\n\nYearn V3, daha esnek strateji dağıtımı ve daha iyi risk yönetimi sağlayan modüler vault mimarisini tanıttı. YFI token'ı yönetim için kullanılır ve veYFI, token sahiplerinin protokol kararlarına oy vermesine olanak tanır. Yearn, stratejileri ve mimarisi birçok sonraki getiri protokolünü etkileyen temel DeFi altyapısı haline geldi.",
+	"features": {
+		"1": {
+			"title": "Otomatik Vault'lar",
+			"description": "Varlık yatırın ve manuel yönetim olmadan otomatik olarak optimize edilmiş getiriler kazanın"
+		},
+		"2": {
+			"title": "Strateji Optimizasyonu",
+			"description": "Uzman stratejistler sürekli olarak getiri stratejileri geliştirir ve iyileştirir"
+		},
+		"3": {
+			"title": "Otomatik Bileşikleştirme",
+			"description": "Ödüller otomatik olarak hasat edilir ve bileşik büyüme için yeniden yatırılır"
+		},
+		"4": {
+			"title": "Çoklu Protokol Stratejileri",
+			"description": "Stratejiler optimal getiriler için Aave, Compound, Curve ve daha fazlasında dağıtılır"
+		},
+		"5": {
+			"title": "V3 Modüler Mimari",
+			"description": "Vault başına çoklu stratejiler ve daha iyi risk izolasyonu ile esnek vault tasarımı"
+		},
+		"6": {
+			"title": "veYFI Yönetimi",
+			"description": "Protokol kararlarına ve gauge emisyonlarına oy vermek için YFI kilitleyin"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Pasif Getiri Kazanma",
+			"description": "Stablecoin veya kripto yatırın ve çaba harcamadan optimize edilmiş getiriler kazanın"
+		},
+		"2": {
+			"title": "Basitleştirilmiş DeFi",
+			"description": "Basit vault yatırımları yoluyla karmaşık getiri stratejilerine erişin"
+		},
+		"3": {
+			"title": "Gaz Optimizasyonu",
+			"description": "Hasat ve bileşikleştirme için gaz maliyetlerini diğer vault yatırımcılarıyla paylaşın"
+		},
+		"4": {
+			"title": "Strateji Geliştirme",
+			"description": "Stratejistler performans ücretleri kazanmak için stratejiler oluşturabilir ve dağıtabilir"
+		},
+		"5": {
+			"title": "Protokol Entegrasyonu",
+			"description": "Diğer protokoller hazinelerinde otomatik getiri için yVault'ları entegre eder"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Yearn Finance nedir ve Vault'lar nasıl çalışır?",
+			"answer": "Yearn, varlıkları Vault'lara yatırdığınız bir getiri toplayıcısıdır. Her Vault, fonlarınızı getiri kazanmak için DeFi protokolleri (Aave, Compound, Curve, vb.) arasında otomatik olarak dağıtan stratejilere sahiptir. Ödüller otomatik olarak bileşikleştirilir ve stratejiler uzmanlar tarafından optimize edilir. Vault'taki payınızı temsil eden yToken'lar alırsınız."
+		},
+		"2": {
+			"question": "Yearn hangi ücretleri alır?",
+			"answer": "Yearn V3 vault'ları tipik olarak üretilen getiriler üzerinden %10 performans ücreti alır (anapara üzerinden değil). Bazı vault'ların yönetim ücretleri olabilir. Ücretler protokol geliştirmeyi ve stratejist ödüllerini finanse eder. Çoğu vault için yatırım veya çekme ücreti yoktur."
+		},
+		"3": {
+			"question": "Yearn kullanmak güvenli mi?",
+			"answer": "Yearn, 2020'den beri kapsamlı denetimler ve güçlü bir güvenlik geçmişiyle faaliyet göstermektedir. Ancak riskler arasında Yearn ve temel protokollerdeki akıllı sözleşme güvenlik açıkları, strateji riskleri ve aşırı piyasa koşullarında potansiyel kayıplar yer alır. Yearn vault'ları sigortalı değildir—yalnızca kaybetmeyi göze alabileceğiniz miktarı yatırın."
+		},
+		"4": {
+			"question": "YFI ve veYFI nedir?",
+			"answer": "YFI, 36.666 sabit arzlı Yearn'ın yönetim token'ıdır. veYFI (oy emanetli YFI), YFI'yi 4 yıla kadar kilitlenerek elde edilir. veYFI sahipleri yönetim tekliflerine oy verebilir, belirli vault'lara gauge emisyonlarını yönlendirebilir ve protokol ücretlerini kazanabilir. Daha uzun kilitlemeler daha fazla oy gücü sağlar."
+		},
+		"5": {
+			"question": "Yearn V2 ve V3 arasındaki fark nedir?",
+			"answer": "V3, her vault'un kolayca eklenebilen veya kaldırılabilen birden fazla stratejiye sahip olabileceği modüler vault mimarisini tanıtır. Bu, risk yönetimini iyileştirir, daha ayrıntılı kontrol sağlar ve yeni vault türlerini mümkün kılar. V3 ayrıca geliştirilmiş gaz verimliliğine ve diğer protokollerle daha iyi entegrasyona sahiptir."
+		}
+	},
+	"cta": {
+		"ready": "Optimize edilmiş getiriler kazanmaya hazır mısınız?",
+		"button": "Yearn'ı Aç",
+		"note": "Kripto'nuz için otomatik getiri optimizasyonu"
+	}
+}

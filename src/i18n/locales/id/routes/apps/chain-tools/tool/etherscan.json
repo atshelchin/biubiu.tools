@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Etherscan - Blockchain Explorer Ethereum | Lacak Transaksi & Kontrak",
+		"description": "Jelajahi Etherscan, blockchain explorer Ethereum terkemuka. Lacak transaksi, verifikasi kontrak, analisis alamat, dan jelajahi data on-chain.",
+		"keywords": "Etherscan, blockchain explorer, Ethereum, pelacak transaksi, smart contract, pelacak gas, pelacak token"
+	},
+	"overview": "Etherscan adalah blockchain explorer terkemuka untuk Ethereum, menyediakan jendela ke semua aktivitas on-chain. Didirikan pada tahun 2015, Etherscan telah menjadi alat penting bagi siapa saja yang berinteraksi dengan Ethereum—dari pengembang yang men-debug kontrak hingga pengguna yang melacak transaksi hingga peneliti yang menganalisis data on-chain.\n\nPlatform ini memungkinkan pengguna untuk mencari transaksi, alamat, token, atau smart contract apa pun di Ethereum. Fitur utama termasuk pelacakan transaksi, verifikasi dan pembacaan kontrak, transfer dan kepemilikan token, pelacakan harga gas, dan analitik terperinci. Etherscan juga menyediakan API bagi pengembang untuk mengakses data blockchain secara programatik. Fitur kontrak terverifikasi mereka telah menjadi standar—pengguna secara rutin memeriksa apakah kontrak 'diverifikasi di Etherscan' sebelum berinteraksi.\n\nEtherscan telah berkembang untuk mendukung rantai EVM lainnya melalui explorer terpisah: Polygonscan, Arbiscan, Optimistic Etherscan, BSCScan, dan lainnya. Tim juga membangun Blockscan Chat untuk pesan dompet-ke-dompet. Dengan miliaran tampilan halaman dan jutaan panggilan API setiap hari, Etherscan adalah infrastruktur fundamental yang membuat transparansi Ethereum dapat diakses oleh semua orang.",
+	"features": {
+		"1": {
+			"title": "Pelacakan Transaksi",
+			"description": "Cari transaksi apa pun dengan status terperinci, gas yang digunakan, dan data yang didekode"
+		},
+		"2": {
+			"title": "Verifikasi Kontrak",
+			"description": "Verifikasi dan baca kode sumber smart contract untuk transparansi dan kepercayaan"
+		},
+		"3": {
+			"title": "Pelacakan Token",
+			"description": "Jelajahi transfer, pemegang, dan analitik token ERC-20 dan ERC-721"
+		},
+		"4": {
+			"title": "Pelacak Gas",
+			"description": "Pelacakan harga gas real-time dengan estimasi lambat, rata-rata, dan cepat"
+		},
+		"5": {
+			"title": "Analisis Alamat",
+			"description": "Lihat riwayat transaksi lengkap, saldo token, dan interaksi kontrak"
+		},
+		"6": {
+			"title": "API Pengembang",
+			"description": "Akses programatik ke data blockchain untuk membangun aplikasi"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Verifikasi Transaksi",
+			"description": "Konfirmasi status dan detail transaksi setelah mengirim kripto"
+		},
+		"2": {
+			"title": "Riset Kontrak",
+			"description": "Baca kode kontrak terverifikasi sebelum berinteraksi dengan protokol DeFi"
+		},
+		"3": {
+			"title": "Analisis Dompet",
+			"description": "Teliti alamat untuk memahami kepemilikan dan pola transaksi"
+		},
+		"4": {
+			"title": "Penemuan Token",
+			"description": "Temukan token baru, periksa legitimasi, dan analisis distribusi pemegang"
+		},
+		"5": {
+			"title": "Debug & Pengembangan",
+			"description": "Pengembang menggunakan Etherscan untuk men-debug transaksi dan menguji kontrak"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Etherscan dan bagaimana cara menggunakannya?",
+			"answer": "Etherscan adalah blockchain explorer yang memungkinkan Anda mencari dan menganalisis segala sesuatu di Ethereum. Tempel hash transaksi, alamat dompet, alamat kontrak, atau nama ENS apa pun ke bilah pencarian. Anda akan melihat detail lengkap: untuk transaksi (status, nilai, gas), untuk alamat (saldo, riwayat, token), untuk kontrak (kode, interaksi). Ini adalah alat utama untuk memverifikasi apa pun on-chain."
+		},
+		"2": {
+			"question": "Bagaimana cara memverifikasi smart contract di Etherscan?",
+			"answer": "Buka alamat kontrak, klik tab 'Contract', lalu 'Verify & Publish'. Pilih versi compiler dan pengaturan optimisasi yang digunakan selama deployment, tempel kode sumber Anda (atau upload file yang diratakan), dan kirim. Setelah diverifikasi, siapa pun dapat membaca kode kontrak dan berinteraksi dengan fungsi baca/tulis melalui Etherscan. Sebagian besar proyek terkemuka memverifikasi kontrak mereka."
+		},
+		"3": {
+			"question": "Mengapa transaksi saya menunjukkan 'Pending'?",
+			"answer": "Pending berarti transaksi ada di mempool menunggu untuk dimasukkan ke dalam blok. Penyebab umum: harga gas terlalu rendah (penambang memprioritaskan gas lebih tinggi), kemacetan jaringan (banyak transaksi pending), atau masalah nonce. Anda dapat 'mempercepat' dengan mengirim ulang dengan gas lebih tinggi (nonce yang sama) atau menunggu. Etherscan menampilkan transaksi pending tetapi belum dikonfirmasi."
+		},
+		"4": {
+			"question": "Apakah Etherscan hanya untuk Ethereum?",
+			"answer": "Tim di balik Etherscan mengoperasikan explorer untuk banyak rantai EVM: Polygonscan (Polygon), Arbiscan (Arbitrum), Optimistic Etherscan (Optimism), BSCScan (BNB Chain), dan lainnya. Setiap explorer bekerja dengan cara yang sama tetapi untuk rantai masing-masing. Mereka berbagi antarmuka dan fitur yang sama, hanya data blockchain yang berbeda."
+		},
+		"5": {
+			"question": "Bagaimana Etherscan menghasilkan uang?",
+			"answer": "Pendapatan Etherscan berasal dari: iklan (iklan banner di situs), paket API premium (tier gratis memiliki batas rate, paket berbayar menawarkan lebih banyak panggilan), dan layanan enterprise. Explorer dasar gratis untuk digunakan. Mereka juga menerima hibah dari Ethereum Foundation. Meskipun merupakan infrastruktur kritis, Etherscan adalah perusahaan swasta, bukan protokol."
+		}
+	},
+	"cta": {
+		"ready": "Siap menjelajahi Ethereum?",
+		"button": "Buka Etherscan",
+		"note": "Blockchain explorer Ethereum terkemuka"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "MetaMask - Carteira Cripto Líder | Acesse DeFi, NFTs e Web3",
+		"description": "Explore o MetaMask, a carteira cripto auto-custódia líder. Acesse protocolos DeFi, mercados NFT e aplicativos Web3 no Ethereum e blockchains compatíveis com EVM.",
+		"keywords": "MetaMask, carteira cripto, carteira Ethereum, Web3, DeFi, NFT, extensão navegador, carteira móvel"
+	},
+	"overview": "MetaMask é a carteira cripto auto-custódia mais popular do mundo, permitindo que os usuários acessem aplicativos descentralizados no Ethereum e blockchains compatíveis com EVM. Criada por Aaron Davis e Dan Finlay na ConsenSys em 2016, o MetaMask foi pioneiro no conceito de carteira em extensão de navegador que tornou a Web3 acessível aos usuários mainstream.\n\nDisponível como extensão de navegador para Chrome, Firefox, Brave e Edge, além de aplicativos móveis para iOS e Android, o MetaMask atende mais de 30 milhões de usuários ativos mensais. A carteira permite que os usuários armazenem ETH e tokens ERC-20, interajam com dApps, troquem tokens, comprem cripto com fiat e gerenciem NFTs. O MetaMask Snaps permite extensões de terceiros para adicionar funcionalidades como suporte para blockchains não-EVM.\n\nO MetaMask se tornou o padrão de fato para autenticação Web3, com a maioria dos dApps usando 'Conectar com MetaMask' como método de login principal. A carteira gera receita através de taxas de swap (0,875%) e parcerias de on-ramp. Como portal para DeFi, NFTs e Web3 para milhões de usuários, o MetaMask permanece como infraestrutura essencial no ecossistema Ethereum.",
+	"features": {
+		"1": {
+			"title": "Suporte Multi-Chain",
+			"description": "Conecte-se ao Ethereum, Polygon, Arbitrum, Optimism, BSC e centenas de blockchains EVM"
+		},
+		"2": {
+			"title": "Swaps na Carteira",
+			"description": "Troque tokens diretamente na carteira com cotações agregadas de múltiplas DEXs"
+		},
+		"3": {
+			"title": "Gerenciamento de NFT",
+			"description": "Visualize, envie e gerencie coleções NFT em redes suportadas"
+		},
+		"4": {
+			"title": "Carteira Hardware",
+			"description": "Conecte carteiras hardware Ledger e Trezor para segurança aprimorada"
+		},
+		"5": {
+			"title": "MetaMask Snaps",
+			"description": "Estenda funcionalidades com plugins de terceiros para blockchains não-EVM e recursos"
+		},
+		"6": {
+			"title": "Visualização de Portfólio",
+			"description": "Acompanhe seus ativos em blockchains com o painel de portfólio integrado"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Acesso DeFi",
+			"description": "Conecte-se a protocolos de lending, DEX e yield no Ethereum e L2s"
+		},
+		"2": {
+			"title": "Negociação NFT",
+			"description": "Compre, venda e gerencie NFTs no OpenSea, Blur e outros mercados"
+		},
+		"3": {
+			"title": "Troca de Tokens",
+			"description": "Negocie tokens com taxas competitivas através de agregação DEX integrada"
+		},
+		"4": {
+			"title": "Login Web3",
+			"description": "Entre em dApps e sites usando seu endereço de carteira"
+		},
+		"5": {
+			"title": "Cross-Chain",
+			"description": "Faça bridge de ativos e interaja com apps em múltiplas redes EVM"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é MetaMask e é seguro?",
+			"answer": "MetaMask é uma carteira cripto auto-custódia, o que significa que você controla suas chaves privadas—não o MetaMask ou ConsenSys. É geralmente considerado seguro quando usado adequadamente: habilite proteção por senha, nunca compartilhe sua Frase de Recuperação Secreta, verifique detalhes de transação antes de assinar e seja cauteloso com sites de phishing. Os principais riscos são erro do usuário (perder seed phrase, assinar transações maliciosas) em vez de vulnerabilidades de software."
+		},
+		"2": {
+			"question": "Como adicionar uma nova rede ao MetaMask?",
+			"answer": "Clique no dropdown de rede no topo, depois 'Adicionar Rede'. Você pode adicionar redes populares como Polygon ou Arbitrum com um clique, ou inserir manualmente detalhes RPC para outras blockchains. Sites como Chainlist.org fornecem configurações de rede verificadas que você pode adicionar automaticamente. Sempre verifique URLs RPC de fontes oficiais para evitar conectar a nós maliciosos."
+		},
+		"3": {
+			"question": "O que são MetaMask Snaps?",
+			"answer": "Snaps são extensões de terceiros que adicionam funcionalidades ao MetaMask. Eles podem habilitar suporte para blockchains não-EVM (como Bitcoin, Solana, Cosmos), adicionar insights de transação, fornecer notificações personalizadas e muito mais. Snaps são executados em ambientes isolados para segurança. Você os instala do diretório MetaMask Snaps, e cada Snap solicita permissões específicas que você deve aprovar."
+		},
+		"4": {
+			"question": "Por que minhas transações ficam travadas ou falham?",
+			"answer": "Causas comuns: preço de gas muito baixo (aumente o gas), problemas de nonce (redefina conta nas configurações), congestionamento de rede (espere ou acelere), ou erros de smart contract (verifique o dApp). Para transações travadas, você pode 'Acelerar' (pagar mais gas) ou 'Cancelar' (enviar 0 ETH para si mesmo com mesmo nonce). A aba de atividade do MetaMask mostra transações pendentes que você pode gerenciar."
+		},
+		"5": {
+			"question": "Como o MetaMask ganha dinheiro?",
+			"answer": "MetaMask ganha através de taxas de swap (0,875% em trocas de tokens no app via MetaMask Swaps), parcerias de on-ramp (taxas de compras fiat-para-cripto através de provedores como MoonPay/Transak), e serviços MetaMask Institutional para organizações. A funcionalidade principal da carteira é gratuita—você paga apenas taxas de gas de rede para transações."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para explorar Web3?",
+		"button": "Abrir MetaMask",
+		"note": "A carteira cripto auto-custódia líder"
+	}
+}

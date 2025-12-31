@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Liquity - Giao thức Vay Không Lãi suất | Vay LUSD với Tài sản Thế chấp ETH",
+		"description": "Khám phá Liquity, giao thức vay phi tập trung. Vay stablecoin LUSD với tài sản thế chấp ETH với lãi suất 0%—chỉ một khoản phí một lần. Hoàn toàn bất biến.",
+		"keywords": "Liquity, LUSD, LQTY, vay không lãi suất, stablecoin, tài sản thế chấp ETH, DeFi"
+	},
+	"overview": "Liquity là giao thức vay phi tập trung cho phép người dùng rút các khoản vay không lãi suất với tài sản thế chấp ETH. Được thành lập bởi Robert Lauko vào năm 2020 và ra mắt vào năm 2021, Liquity tiên phong trong DeFi thực sự bất biến—giao thức không có admin key và không thể được nâng cấp hoặc tắt.\n\nNgười dùng gửi ETH vào 'Troves' và vay stablecoin LUSD với nó. Không có lãi suất liên tục—chỉ một khoản phí vay một lần (0.5-5% tùy thuộc vào điều kiện thị trường). Tỷ lệ thế chấp tối thiểu là 110%, thuộc loại hiệu quả vốn nhất trong DeFi. LUSD duy trì peg thông qua khuyến khích arbitrage và cơ chế thanh lý mạnh mẽ.\n\nLQTY là token thứ cấp kiếm được bởi người gửi Stability Pool và các frontend operator. Stability Pool là tuyến phòng thủ đầu tiên cho thanh lý, với người gửi tiền kiếm ETH từ các Troves bị thanh lý. Liquity V2 (ra mắt 2024) giới thiệu lãi suất do người dùng đặt và nhiều loại tài sản thế chấp.",
+	"features": {
+		"1": {
+			"title": "Khoản vay Lãi suất 0%",
+			"description": "Vay LUSD không có lãi suất liên tục—chỉ phí phát hành một lần"
+		},
+		"2": {
+			"title": "Tỷ lệ Thế chấp 110%",
+			"description": "Hiệu quả vốn hàng đầu ngành với yêu cầu thế chấp tối thiểu thấp"
+		},
+		"3": {
+			"title": "Giao thức Bất biến",
+			"description": "Không có admin key, không có quản trị—giao thức chạy tự động mãi mãi"
+		},
+		"4": {
+			"title": "Stability Pool",
+			"description": "Gửi LUSD để kiếm ETH từ thanh lý và phần thưởng LQTY"
+		},
+		"5": {
+			"title": "Thanh lý Ngay lập tức",
+			"description": "Cơ chế thanh lý hiệu quả duy trì khả năng thanh toán hệ thống tự động"
+		},
+		"6": {
+			"title": "Frontend Phi tập trung",
+			"description": "Nhiều frontend độc lập—không có điểm lỗi đơn hoặc kiểm duyệt"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Đòn bẩy Không Lãi suất",
+			"description": "Vay LUSD với tài sản thế chấp ETH để có đòn bẩy mà không trả lãi suất liên tục"
+		},
+		"2": {
+			"title": "Lợi suất LUSD",
+			"description": "Gửi LUSD vào Stability Pool để kiếm phần thưởng ETH và LQTY"
+		},
+		"3": {
+			"title": "Truy cập Stablecoin",
+			"description": "Đúc LUSD cho thanh toán, DeFi hoặc nắm giữ giá trị ổn định"
+		},
+		"4": {
+			"title": "Hiệu quả Vốn",
+			"description": "Tối đa hóa exposure ETH với thế chấp thừa tối thiểu"
+		},
+		"5": {
+			"title": "Chống Kiểm duyệt",
+			"description": "Sử dụng giao thức vay bất biến, không thể dừng mà không có kiểm soát trung tâm"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Liquity là gì và vay không lãi suất hoạt động như thế nào?",
+			"answer": "Liquity cho phép bạn vay stablecoin LUSD với tài sản thế chấp ETH mà không có lãi suất liên tục. Thay vì lãi suất, bạn trả một khoản phí một lần (0.5-5%) khi mở hoặc điều chỉnh Trove của bạn. Phí thay đổi dựa trên hoạt động hệ thống gần đây. Khoản vay của bạn có thể mở vô thời hạn miễn là bạn duy trì tỷ lệ thế chấp tối thiểu 110%."
+		},
+		"2": {
+			"question": "LUSD là gì và nó duy trì peg như thế nào?",
+			"answer": "LUSD là stablecoin gắn USD của Liquity, chỉ được đảm bảo bởi ETH. Peg được duy trì thông qua: 1) Giá sàn cứng ở $1 qua redemptions (bất kỳ ai cũng có thể đổi LUSD lấy $1 ETH), 2) Giá trần mềm khoảng $1.10 (vay trở nên hấp dẫn), 3) Thanh lý Stability Pool, và 4) Cơ hội arbitrage. LUSD đã duy trì độ ổn định peg xuất sắc."
+		},
+		"3": {
+			"question": "Stability Pool là gì?",
+			"answer": "Stability Pool là nơi người nắm giữ LUSD gửi tiền để kiếm phần thưởng. Khi Troves bị thanh lý, tiền gửi Stability Pool được sử dụng để trả nợ, và người gửi tiền nhận ETH bị thanh lý (với giảm giá ~10%). Người gửi tiền cũng kiếm phần thưởng token LQTY. Đây là cơ chế quan trọng đảm bảo khả năng thanh toán hệ thống."
+		},
+		"4": {
+			"question": "Tại sao Liquity bất biến và điều đó có nghĩa gì?",
+			"answer": "Liquity không có admin key, quản trị hoặc cơ chế nâng cấp. Một khi triển khai, smart contract không thể thay đổi bởi bất kỳ ai—chúng chạy tự động trên Ethereum mãi mãi. Điều này cung cấp khả năng chống kiểm duyệt tối đa và loại bỏ các vector tấn công quản trị, nhưng cũng có nghĩa là lỗi không thể sửa. Đây là giao thức vay phi tập trung nhất."
+		},
+		"5": {
+			"question": "Liquity V2 là gì?",
+			"answer": "Liquity V2 là phiên bản mới ra mắt năm 2024 giới thiệu lãi suất do người dùng đặt (người vay cạnh tranh về lãi suất), nhiều loại tài sản thế chấp ngoài ETH, và hiệu quả vốn cải thiện. Không giống V1, V2 sẽ có khả năng nâng cấp. V1 và V2 sẽ cùng tồn tại như các giao thức riêng biệt."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng vay không lãi suất?",
+		"button": "Mở Liquity",
+		"note": "Vay không lãi suất bất biến với tài sản thế chấp ETH"
+	}
+}

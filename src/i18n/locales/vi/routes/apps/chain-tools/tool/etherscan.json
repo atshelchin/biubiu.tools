@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Etherscan - Trình Khám Phá Blockchain Ethereum | Theo Dõi Giao Dịch & Hợp Đồng",
+		"description": "Khám phá Etherscan, trình khám phá blockchain Ethereum hàng đầu. Theo dõi giao dịch, xác minh hợp đồng, phân tích địa chỉ và khám phá dữ liệu on-chain.",
+		"keywords": "Etherscan, trình khám phá blockchain, Ethereum, theo dõi giao dịch, hợp đồng thông minh, theo dõi gas, theo dõi token"
+	},
+	"overview": "Etherscan là trình khám phá blockchain hàng đầu cho Ethereum, cung cấp cửa sổ vào tất cả hoạt động on-chain. Được thành lập vào năm 2015, Etherscan đã trở thành một công cụ thiết yếu cho bất kỳ ai tương tác với Ethereum—từ các nhà phát triển gỡ lỗi hợp đồng đến người dùng theo dõi giao dịch đến các nhà nghiên cứu phân tích dữ liệu on-chain.\n\nNền tảng cho phép người dùng tìm kiếm bất kỳ giao dịch, địa chỉ, token hoặc hợp đồng thông minh nào trên Ethereum. Các tính năng chính bao gồm theo dõi giao dịch, xác minh và đọc hợp đồng, chuyển khoản và nắm giữ token, theo dõi giá gas và phân tích chi tiết. Etherscan cũng cung cấp API cho các nhà phát triển để truy cập dữ liệu blockchain theo chương trình. Tính năng hợp đồng đã xác minh của họ đã trở thành một tiêu chuẩn—người dùng thường xuyên kiểm tra xem hợp đồng có 'được xác minh trên Etherscan' trước khi tương tác.\n\nEtherscan đã mở rộng để hỗ trợ các chuỗi EVM khác thông qua các trình khám phá riêng biệt: Polygonscan, Arbiscan, Optimistic Etherscan, BSCScan và hơn thế nữa. Nhóm cũng đã xây dựng Blockscan Chat để nhắn tin từ ví đến ví. Với hàng tỷ lượt xem trang và hàng triệu lệnh gọi API hàng ngày, Etherscan là cơ sở hạ tầng cơ bản giúp cho tính minh bạch của Ethereum có thể tiếp cận được với mọi người.",
+	"features": {
+		"1": {
+			"title": "Theo Dõi Giao Dịch",
+			"description": "Tra cứu bất kỳ giao dịch nào với trạng thái chi tiết, gas đã sử dụng và dữ liệu đã giải mã"
+		},
+		"2": {
+			"title": "Xác Minh Hợp Đồng",
+			"description": "Xác minh và đọc mã nguồn hợp đồng thông minh để minh bạch và tin cậy"
+		},
+		"3": {
+			"title": "Theo Dõi Token",
+			"description": "Khám phá chuyển khoản, người nắm giữ và phân tích token ERC-20 và ERC-721"
+		},
+		"4": {
+			"title": "Theo Dõi Gas",
+			"description": "Theo dõi giá gas thời gian thực với ước tính chậm, trung bình và nhanh"
+		},
+		"5": {
+			"title": "Phân Tích Địa Chỉ",
+			"description": "Xem lịch sử giao dịch đầy đủ, số dư token và tương tác hợp đồng"
+		},
+		"6": {
+			"title": "API Nhà Phát Triển",
+			"description": "Truy cập theo chương trình vào dữ liệu blockchain để xây dựng ứng dụng"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Xác Minh Giao Dịch",
+			"description": "Xác nhận trạng thái và chi tiết giao dịch sau khi gửi crypto"
+		},
+		"2": {
+			"title": "Nghiên Cứu Hợp Đồng",
+			"description": "Đọc mã hợp đồng đã xác minh trước khi tương tác với giao thức DeFi"
+		},
+		"3": {
+			"title": "Phân Tích Ví",
+			"description": "Nghiên cứu địa chỉ để hiểu nắm giữ và mẫu giao dịch"
+		},
+		"4": {
+			"title": "Khám Phá Token",
+			"description": "Tìm token mới, kiểm tra tính hợp pháp và phân tích phân phối người nắm giữ"
+		},
+		"5": {
+			"title": "Gỡ Lỗi & Phát Triển",
+			"description": "Các nhà phát triển sử dụng Etherscan để gỡ lỗi giao dịch và kiểm tra hợp đồng"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Etherscan là gì và làm thế nào để sử dụng nó?",
+			"answer": "Etherscan là trình khám phá blockchain cho phép bạn tìm kiếm và phân tích mọi thứ trên Ethereum. Dán bất kỳ hash giao dịch, địa chỉ ví, địa chỉ hợp đồng hoặc tên ENS nào vào thanh tìm kiếm. Bạn sẽ thấy chi tiết đầy đủ: cho giao dịch (trạng thái, giá trị, gas), cho địa chỉ (số dư, lịch sử, token), cho hợp đồng (mã, tương tác). Đó là công cụ chính để xác minh bất cứ điều gì on-chain."
+		},
+		"2": {
+			"question": "Làm thế nào để xác minh hợp đồng thông minh trên Etherscan?",
+			"answer": "Đi đến địa chỉ hợp đồng, nhấp vào tab 'Contract', sau đó 'Verify & Publish'. Chọn phiên bản trình biên dịch và cài đặt tối ưu hóa được sử dụng trong quá trình triển khai, dán mã nguồn của bạn (hoặc tải lên tệp đã làm phẳng) và gửi. Sau khi được xác minh, bất kỳ ai cũng có thể đọc mã hợp đồng và tương tác với các chức năng đọc/ghi thông qua Etherscan. Hầu hết các dự án có uy tín đều xác minh hợp đồng của họ."
+		},
+		"3": {
+			"question": "Tại sao giao dịch của tôi hiển thị 'Đang chờ'?",
+			"answer": "Đang chờ có nghĩa là giao dịch đang ở trong mempool chờ được đưa vào một khối. Nguyên nhân phổ biến: giá gas quá thấp (thợ đào ưu tiên gas cao hơn), tắc nghẽn mạng (nhiều giao dịch đang chờ) hoặc vấn đề nonce. Bạn có thể 'tăng tốc' bằng cách gửi lại với gas cao hơn (cùng nonce) hoặc đợi. Etherscan hiển thị các giao dịch đang chờ nhưng chưa được xác nhận."
+		},
+		"4": {
+			"question": "Etherscan chỉ dành cho Ethereum?",
+			"answer": "Nhóm đằng sau Etherscan vận hành các trình khám phá cho nhiều chuỗi EVM: Polygonscan (Polygon), Arbiscan (Arbitrum), Optimistic Etherscan (Optimism), BSCScan (BNB Chain) và những chuỗi khác. Mỗi trình khám phá hoạt động tương tự nhưng cho chuỗi tương ứng của nó. Họ chia sẻ cùng một giao diện và tính năng, chỉ khác dữ liệu blockchain."
+		},
+		"5": {
+			"question": "Etherscan kiếm tiền như thế nào?",
+			"answer": "Doanh thu của Etherscan đến từ: quảng cáo (quảng cáo banner trên trang web), các gói API cao cấp (cấp miễn phí có giới hạn tỷ lệ, các gói trả phí cung cấp nhiều cuộc gọi hơn) và dịch vụ doanh nghiệp. Trình khám phá cơ bản là miễn phí để sử dụng. Họ cũng nhận được tài trợ từ Ethereum Foundation. Mặc dù là cơ sở hạ tầng quan trọng, Etherscan là một công ty tư nhân, không phải giao thức."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng khám phá Ethereum?",
+		"button": "Mở Etherscan",
+		"note": "Trình khám phá blockchain Ethereum hàng đầu"
+	}
+}

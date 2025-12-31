@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Synthetix - Protokol Aset Sintetis Terdesentralisasi | Trading Aset Apa Pun On-Chain",
+		"description": "Temukan Synthetix, protokol untuk membuat dan memperdagangkan aset sintetis. Akses kripto, forex, komoditas, dan saham on-chain dengan likuiditas tak terbatas.",
+		"keywords": "Synthetix, SNX, aset sintetis, Synths, DeFi, derivatif, perpetuals, likuiditas"
+	},
+	"overview": "Synthetix adalah protokol terdesentralisasi yang memungkinkan pembuatan dan perdagangan aset sintetis (Synths) di Ethereum dan Optimism. Didirikan oleh Kain Warwick pada tahun 2017 (awalnya sebagai Havven), Synthetix mempelopori konsep aset sintetis on-chain—token yang melacak harga aset dunia nyata seperti mata uang, komoditas, saham, dan cryptocurrency.\n\nProtokol ini bekerja dengan cara pemegang token SNX mempertaruhkan token mereka sebagai jaminan untuk mencetak Synths. Ini menciptakan kumpulan utang bersama di mana staker secara kolektif mendukung semua Synths yang beredar. Sistem ini menyediakan likuiditas tak terbatas dengan zero slippage untuk perdagangan Synth-ke-Synth, karena transaksi tersebut hanyalah konversi harga berbasis oracle daripada swap AMM tradisional.\n\nSynthetix V3 memperkenalkan arsitektur modular dengan kumpulan likuiditas terpisah, memungkinkan penyebaran modal yang lebih efisien dan jenis pasar baru. Protokol ini telah menjadi infrastruktur DeFi fundamental, dengan protokol seperti Kwenta dan Lyra membangun perdagangan perpetuals dan options di atas likuiditas Synthetix.",
+	"features": {
+		"1": {
+			"title": "Aset Sintetis",
+			"description": "Perdagangkan versi sintetis dari kripto, forex, komoditas, dan indeks on-chain"
+		},
+		"2": {
+			"title": "Zero Slippage",
+			"description": "Swap Synth-ke-Synth memiliki likuiditas tak terbatas tanpa slippage melalui penetapan harga oracle"
+		},
+		"3": {
+			"title": "Perpetual Futures",
+			"description": "Perdagangkan perpetuals dengan likuiditas dalam melalui integrator seperti Kwenta"
+		},
+		"4": {
+			"title": "SNX Staking",
+			"description": "Stake SNX untuk mencetak sUSD, dapatkan biaya trading, dan berpartisipasi dalam governance"
+		},
+		"5": {
+			"title": "V3 Modular Pools",
+			"description": "Kumpulan likuiditas terpisah untuk pasar berbeda dengan parameter risiko yang dapat dikonfigurasi"
+		},
+		"6": {
+			"title": "Cross-Chain",
+			"description": "Deploy di Ethereum mainnet dan Optimism L2 untuk biaya gas yang lebih rendah"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Perdagangan Derivatif",
+			"description": "Perdagangkan perpetual futures pada aset kripto dengan leverage"
+		},
+		"2": {
+			"title": "Eksposur Forex",
+			"description": "Dapatkan eksposur on-chain ke mata uang utama seperti EUR, JPY, AUD"
+		},
+		"3": {
+			"title": "Reward Staking",
+			"description": "Stake SNX untuk mendapatkan biaya trading dan reward inflasi"
+		},
+		"4": {
+			"title": "Penyediaan Likuiditas",
+			"description": "Berikan jaminan ke pool V3 untuk mendapatkan keuntungan dari trader"
+		},
+		"5": {
+			"title": "Integrasi Protokol",
+			"description": "Bangun antarmuka trading dan produk di atas likuiditas Synthetix"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Synthetix dan bagaimana aset sintetis bekerja?",
+			"answer": "Synthetix memungkinkan pembuatan Synths—token yang melacak harga aset eksternal melalui oracle. Staker SNX menyediakan jaminan yang mendukung semua Synths. Ketika Anda memegang sUSD (synthetic USD), Anda dapat menukarnya dengan Synth lainnya (sBTC, sETH, sEUR, dll.) pada harga oracle dengan zero slippage. Sistem ini tidak memerlukan counterparty—ini hanya jaminan yang mendukung token dengan harga oracle."
+		},
+		"2": {
+			"question": "Apa mekanisme SNX staking?",
+			"answer": "Pemegang SNX mempertaruhkan token mereka sebagai jaminan untuk mencetak sUSD. Staker harus mempertahankan rasio kolateralisasi (saat ini ~500%) dan secara aktif mengelola posisi utang mereka. Sebagai imbalannya, mereka mendapatkan biaya trading mingguan dan reward inflasi SNX. Kumpulan utang dibagi bersama—jika trader Synth untung, utang staker meningkat; jika trader rugi, utang staker menurun."
+		},
+		"3": {
+			"question": "Apa itu Synthetix V3?",
+			"answer": "V3 adalah pembangunan ulang lengkap yang memperkenalkan arsitektur modular. Alih-alih satu kumpulan utang global, V3 memiliki pool terpisah yang dapat mendukung pasar berbeda dengan parameter risiko khusus. Ini memungkinkan penggunaan modal yang lebih efisien, integrasi yang lebih mudah, dan jenis produk baru. V3 juga memperkenalkan fungsionalitas cross-chain dan governance yang ditingkatkan."
+		},
+		"4": {
+			"question": "Protokol apa saja yang dibangun di atas Synthetix?",
+			"answer": "Beberapa protokol besar dibangun di atas likuiditas Synthetix: Kwenta untuk perdagangan perpetual futures, Lyra untuk options, Polynomial untuk produk terstruktur, dan lainnya. Integrator ini menyediakan antarmuka pengguna sementara Synthetix menyediakan lapisan likuiditas dan settlement yang mendasarinya. Model ekosistem ini memungkinkan Synthetix fokus pada infrastruktur."
+		},
+		"5": {
+			"question": "Apa risiko menggunakan Synthetix?",
+			"answer": "Risiko termasuk: kerentanan smart contract, manipulasi/kegagalan oracle, eksposur kumpulan utang (staker berbagi kerugian trading), likuidasi jika rasio jaminan turun terlalu rendah, dan ketidakpastian regulasi seputar aset sintetis. Protokol ini telah diaudit secara ekstensif tetapi tetap kompleks dengan risiko DeFi yang melekat."
+		}
+	},
+	"cta": {
+		"ready": "Siap memperdagangkan aset sintetis?",
+		"button": "Buka Synthetix",
+		"note": "Aset sintetis terdesentralisasi dan perpetuals"
+	}
+}

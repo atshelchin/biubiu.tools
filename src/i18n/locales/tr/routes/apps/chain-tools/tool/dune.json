@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Dune Analytics - Blokzincir Veri Platformu | Zincir Üstü Verileri Sorgulayın ve Görselleştirin",
+		"description": "Önde gelen blokzincir analitik platformu Dune'u keşfedin. SQL sorguları yazın, panolar oluşturun ve Ethereum, Bitcoin ve 40+ zincirdeki zincir üstü verileri keşfedin.",
+		"keywords": "Dune Analytics, blokzincir verileri, SQL, panolar, zincir üstü analitik, DeFi analitiği, kripto verileri"
+	},
+	"overview": "Dune, herkesin zincir üstü verileri sorgulamasına, görselleştirmesine ve paylaşmasına olanak tanıyan önde gelen topluluk odaklı blokzincir analitik platformudur. 2018 yılında Fredrik Haga ve Mats Olsen tarafından kurulan Dune, veri mühendisliği uzmanlığı gerektirmeden SQL sorguları aracılığıyla erişilebilir hale getirerek blokzincir veri analizini demokratikleştirdi.\n\nPlatform, Ethereum, Bitcoin, Solana, Polygon ve Layer 2'ler dahil 40+ ağda çözümlenmiş, insan tarafından okunabilir blokzincir verileri sağlar. Kullanıcılar DeFi protokol metriklerinden NFT ticaret modellerine kadar her şeyi analiz etmek için SQL sorguları (DuneSQL kullanarak) yazar, ardından görselleştirmeler ve paylaşılabilir panolar oluşturur. Dune'un açık kaynak dönüştürme katmanı olan Spellbook, yaygın analitik ihtiyaçları için önceden oluşturulmuş veri kümeleri sağlar.\n\nDune, protokoller, yatırımcılar ve gazeteciler tarafından kullanılan binlerce analistin kamu panoları oluşturmasıyla kripto araştırması için temel altyapı haline geldi. Platform, ham blokzincir verilerini çözümlenmiş sözleşme olaylarıyla birleştirerek karmaşık zincir üstü analizleri SQL bilen herkese erişilebilir hale getirir.",
+	"features": {
+		"1": {
+			"title": "SQL Sorguları",
+			"description": "40+ ağdan çözümlenmiş blokzincir verilerini analiz etmek için DuneSQL sorguları yazın"
+		},
+		"2": {
+			"title": "Görsel Panolar",
+			"description": "Grafikler, tablolar ve metriklerle etkileşimli panolar oluşturun ve paylaşın"
+		},
+		"3": {
+			"title": "Spellbook",
+			"description": "DEX işlemleri, NFT satışları, köprüler gibi yaygın analitikler için önceden oluşturulmuş veri kümeleri"
+		},
+		"4": {
+			"title": "Gerçek Zamanlı Veriler",
+			"description": "Otomatik güncellemelerle neredeyse gerçek zamanlı blokzincir verilerine erişin"
+		},
+		"5": {
+			"title": "API Erişimi",
+			"description": "Uygulamalara entegrasyon için sorgu sonuçlarına programatik olarak erişin"
+		},
+		"6": {
+			"title": "Topluluk Sorguları",
+			"description": "Binlerce kamu sorgusunu ve panosunu çatallayın ve öğrenin"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Protokol Analitiği",
+			"description": "DeFi protokolleri için TVL, hacim, kullanıcılar ve metrikleri takip edin"
+		},
+		"2": {
+			"title": "Cüzdan Analizi",
+			"description": "Balina cüzdanlarını araştırın, akıllı parayı takip edin ve ticaret modellerini analiz edin"
+		},
+		"3": {
+			"title": "Token Araştırması",
+			"description": "Token dağılımını, sahip davranışını ve transfer modellerini analiz edin"
+		},
+		"4": {
+			"title": "NFT Analitiği",
+			"description": "NFT satışlarını, taban fiyatlarını, sahip istatistiklerini ve koleksiyon metriklerini takip edin"
+		},
+		"5": {
+			"title": "Ekosistem Araştırması",
+			"description": "L2'leri karşılaştırın, gas kullanımını takip edin ve ağ aktivite trendlerini analiz edin"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Dune nedir ve kimin için?",
+			"answer": "Dune, kullanıcıların SQL kullanarak zincir üstü verileri sorguladığı ve görsel panolar oluşturduğu bir blokzincir analitik platformudur. Kripto analiz eden herkes içindir: protokolleri takip eden araştırmacılar, alfa arayan tüccarlar, metriklerini izleyen protokoller, zincir üstü olayları araştıran gazeteciler ve veri ürünleri oluşturan geliştiriciler. Temel SQL bilgisi yararlıdır ancak gerekli değildir—mevcut sorguları çatallayarak başlayabilirsiniz."
+		},
+		"2": {
+			"question": "Dune'da hangi veriler mevcut?",
+			"answer": "Dune, Ethereum, Bitcoin, Solana ve büyük L2'ler dahil 40+ blokzincirden çözümlenmiş veriler sağlar. Veriler ham işlemleri, çözümlenmiş sözleşme olaylarını (örn. Uniswap takasları, Aave mevduatları), token transferlerini, NFT işlemlerini ve daha fazlasını içerir. Spellbook, karmaşık analizi basitleştirerek tüm protokollerdeki DEX işlemleri gibi daha üst düzey tablolar sağlar."
+		},
+		"3": {
+			"question": "Dune kullanmak ücretsiz mi?",
+			"answer": "Dune'un, sorgu yürütme ve veri tazeliği konusunda bazı sınırlamalarla kamu sorguları ve panolarına izin veren ücretsiz bir katmanı vardır. Ücretli planlar (Plus, Pro, Enterprise) özel sorgular, daha hızlı yürütme, daha fazla kredi, API erişimi ve ek özellikler sunar. Birçok kullanıcı ücretsiz başlar ve ihtiyaçlar arttıkça yükseltir."
+		},
+		"4": {
+			"question": "Spellbook nedir?",
+			"answer": "Spellbook, Dune'un açık kaynak dönüştürme katmanıdır (dbt ile oluşturulmuştur). Ham blokzincir verilerini yararlı tablolara dönüştüren topluluk tarafından sürdürülen SQL modelleri içerir—dex.trades (tüm DEX işlemleri), nft.trades (NFT satışları), erc20 bakiyeleri vb. gibi. Herkes yeni büyüler katkıda bulunabilir ve bunlar tüm Dune kullanıcılarına ücretsiz olarak sunulur."
+		},
+		"5": {
+			"question": "Dune'u kullanmayı nasıl öğrenebilirim?",
+			"answer": "Popüler panoları keşfederek ve nasıl çalıştıklarını anlamak için sorguları çatallayarak başlayın. Dune, dokümantasyon, eğitimler ve yardım için bir Discord topluluğu sunar. OurNetwork popüler bir öğrenme kaynağıdır. Temel SQL becerileri doğrudan aktarılır—SELECT, JOIN ve GROUP BY biliyorsanız Dune'da blokzincir verilerini analiz edebilirsiniz."
+		}
+	},
+	"cta": {
+		"ready": "Zincir üstü verileri analiz etmeye hazır mısınız?",
+		"button": "Dune'u Aç",
+		"note": "Topluluk odaklı blokzincir analitiği"
+	}
+}

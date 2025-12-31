@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Safe - Çoklu İmza Cüzdanı | Güvenli Dijital Varlık Yönetimi",
+		"description": "Lider çoklu imza cüzdanı Safe'i (eski adıyla Gnosis Safe) keşfedin. Özelleştirilebilir onay eşikleri ve akıllı kontrat güvenliğiyle dijital varlıkları güvence altına alın.",
+		"keywords": "Safe, Gnosis Safe, multisig, çoklu imza cüzdanı, DAO hazinesi, akıllı kontrat cüzdanı, kripto güvenliği"
+	},
+	"overview": "Safe (eski adıyla Gnosis Safe), dijital varlıkları güvence altına almak için endüstri standardı akıllı kontrat cüzdanıdır. Başlangıçta Gnosis ekibi tarafından geliştirilen ve 2018'de başlatılan Safe, DAO'lar, protokoller ve kripto hazinelerini yöneten kurumlar için en güvenilir çözüm haline gelmiştir.\n\nTek bir özel anahtar tarafından kontrol edilen geleneksel cüzdanların aksine, Safe işlemler için birden fazla onay gerektiren çoklu imza (multisig) güvenliği kullanır. M-of-N imzalayıcıları yapılandırırsınız—örneğin, 3-of-5, 5 belirlenen imzalayıcıdan herhangi 3'ünün onaylaması gerektiği anlamına gelir. Bu, tek başarısızlık noktalarını ortadan kaldırır: hiç kimse tek başına fonları hareket ettiremez. Safe ayrıca harcama limitleri, işlem gruplandırması ve modüler uzantıları destekler.\n\nSafe, 10+ milyon işlem boyunca 100 milyar doların üzerinde varlığı güvence altına almıştır. Uniswap, Aave, ENS gibi büyük protokoller ve sayısız DAO hazine yönetimi için Safe kullanıyor. Safe ekosistemi, Safe{Wallet} (kullanıcı arayüzü), Safe{Core} (geliştiriciler için akıllı hesap altyapısı) ve donanım cüzdanları, mobil uygulamalar ve işlem oluşturucularla entegrasyonu içerir. Safe, EOA cüzdanlarından programlanabilir akıllı hesaplara evrim temsil eder.",
+	"features": {
+		"1": {
+			"title": "Çoklu İmza Güvenliği",
+			"description": "İşlemler için birden fazla onay (örn. 3-of-5) gerektirin—tek başarısızlık noktası yok"
+		},
+		"2": {
+			"title": "İşlem Gruplandırması",
+			"description": "Birden fazla işlemi bir araya getirin, gaz tasarrufu yapın ve karmaşık işlemleri etkinleştirin"
+		},
+		"3": {
+			"title": "Harcama Limitleri",
+			"description": "İmzalayıcıların tam onay olmadan limitler dahilinde harcama yapması için ödenekler belirleyin"
+		},
+		"4": {
+			"title": "Çoklu Zincir",
+			"description": "Safe'i Ethereum, Polygon, Arbitrum, Optimism ve diğer EVM zincirlerinde dağıtın"
+		},
+		"5": {
+			"title": "Safe Apps",
+			"description": "Entegre uygulamalar aracılığıyla doğrudan Safe'ten DeFi protokolleriyle etkileşim kurun"
+		},
+		"6": {
+			"title": "Kurtarma Seçenekleri",
+			"description": "Hesap kurtarma için koruyucular ve kurtarma mekanizmaları yapılandırın"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DAO Hazinesi",
+			"description": "Şeffaf multisig yönetişimiyle topluluk fonlarını yönetin"
+		},
+		"2": {
+			"title": "Protokol Sahipliği",
+			"description": "Dağıtık imzalama ile akıllı kontrat yönetici anahtarlarını kontrol edin"
+		},
+		"3": {
+			"title": "Takım Cüzdanları",
+			"description": "Şirket kriptosunu birden fazla ekip üyesinin onayıyla güvence altına alın"
+		},
+		"4": {
+			"title": "Kişisel Güvenlik",
+			"description": "Donanım cüzdanı + telefon + yedek imzalayıcı ile kişisel varlıkları koruyun"
+		},
+		"5": {
+			"title": "Yatırım Fonları",
+			"description": "Multisig aracılığıyla yatırımcı korumasıyla fon varlıklarını yönetin"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Safe nedir ve MetaMask'tan nasıl farklıdır?",
+			"answer": "Safe, işlemler için birden fazla imza (multisig) gerektiren bir akıllı kontrat cüzdanıdır. MetaMask, tek bir özel anahtar tarafından kontrol edilen bir EOA'dır (harici olarak sahip olunan hesap). MetaMask seed phrase'inizi kaybederseniz veya çalınırsa fonlar kaybolur. Safe ile işlemleri onaylamak için birden fazla imzalayıcıya ihtiyacınız vardır—bir anahtar tehlikeye girse bile fonlar korunur. Safe yüksek güvenlikli kullanım durumları için; MetaMask günlük işlemler için."
+		},
+		"2": {
+			"question": "Safe multisig nasıl kurulur?",
+			"answer": "safe.global'e gidin, cüzdanınızı bağlayın ve 'Create Safe'e tıklayın. Bir ağ seçin (Ethereum, Polygon vb.), imzalayıcı adresleri ekleyin (işlemleri onaylayabilecek cüzdanlar) ve eşiği ayarlayın (kaç tanesinin imzalaması gerektiği). Örneğin, 3-of-5 eşiğiyle 5 imzalayıcı ekleyin. Safe akıllı kontratını dağıtmak için gaz ödersiniz. Ardından varlıkları yeni Safe adresinize aktarın."
+		},
+		"3": {
+			"question": "Bir imzalayıcıya erişimi kaybedersem ne olur?",
+			"answer": "Bir imzalayıcıyı kaybederseniz ancak eşiği karşılamak için hala yeterliyse, kaybedilen imzalayıcıyı yeni bir adresle değiştirmek için bir işlem önerebilirsiniz. Kalan imzalayıcılar onaylar ve Safe güncellenir. Bu nedenle eşik toplam imzalayıcılardan az olmalıdır (örn. 3-of-5, 5-of-5 değil). Uygun kurulumla bir cihazı veya anahtarı kaybetmek fonları kaybetmek anlamına gelmez."
+		},
+		"4": {
+			"question": "Safe sadece DAO'lar ve takımlar için mi?",
+			"answer": "Safe DAO'larda popülerdir ancak kişisel güvenlik için de çalışır. Bireyler Safe'i 2-of-3 kurulumlarıyla kullanır: donanım cüzdanı + telefon + yedek (kağıt veya güvenilir kişi). Bu, bir cihazı kaybetmeye veya tek bir anahtarın çalınmasına karşı korur. Birden fazla imzanın ek yükü önemli varlıklar için buna değer. Birçok kripto-native birey soğuk depolama için Safe kullanır."
+		},
+		"5": {
+			"question": "Safe Apps ve Safe Modülleri nedir?",
+			"answer": "Safe Apps, Safe arayüzüne entegre edilmiş dApp'lerdir—Uniswap, Aave vb. ile bağlamları değiştirmeden doğrudan Safe'ten etkileşim kurabilirsiniz. Safe Modülleri, işlevsellik ekleyen uzantılardır: harcama limitleri (ödenek modülü), tekrarlayan ödemeler, kurtarma mekanizmaları vb. Bu modülerlik Safe'i sadece bir cüzdan değil programlanabilir bir platform yapar."
+		}
+	},
+	"cta": {
+		"ready": "Varlıklarınızı güvence altına almaya hazır mısınız?",
+		"button": "Safe'i Aç",
+		"note": "Endüstri standardı akıllı kontrat cüzdanı"
+	}
+}

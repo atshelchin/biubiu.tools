@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Alchemy - Platform Pengembang Blockchain | Bangun Aplikasi Web3",
+		"description": "Jelajahi Alchemy, platform pengembang blockchain terkemuka. Bangun aplikasi Web3 yang dapat diskalakan dengan infrastruktur node yang andal, API, dan alat pengembang.",
+		"keywords": "Alchemy, API blockchain, pengembangan Web3, infrastruktur node, API NFT, pengembangan dApp, API Ethereum"
+	},
+	"overview": "Alchemy adalah platform pengembang blockchain terkemuka, menyediakan infrastruktur dan alat yang diperlukan untuk membangun aplikasi Web3 yang dapat diskalakan. Didirikan pada tahun 2017 oleh Nikil Viswanathan dan Joe Lau, Alchemy mendukung perusahaan besar termasuk OpenSea, Adobe, Shopify, dan banyak protokol DeFi teratas.\n\nPlatform ini menawarkan infrastruktur node yang andal untuk Ethereum, Polygon, Arbitrum, Optimism, Solana, dan rantai utama lainnya. Selain akses RPC dasar, Alchemy menyediakan API yang ditingkatkan untuk NFT, token, transaksi, dan webhook. Teknologi Supernode mereka memberikan keandalan yang lebih tinggi dan latensi yang lebih rendah daripada menjalankan node sendiri. Alat pengembang termasuk Alchemy SDK, blockchain explorer, visualizer mempool, dan alat debugging.\n\nAlchemy telah memproses triliunan permintaan dan mendukung aplikasi yang telah mentransfer lebih dari $100 miliar nilai. Dengan valuasi $10.2 miliar per 2022, Alchemy telah menjadi AWS blockchain—infrastruktur penting yang diandalkan oleh sebagian besar pengembang Web3. Tier gratis mereka membuatnya dapat diakses untuk pengembang indie sementara paket enterprise dapat diskalakan ke jutaan permintaan.",
+	"features": {
+		"1": {
+			"title": "Supernode RPC",
+			"description": "Infrastruktur node keandalan tinggi dengan uptime 99.9%+ di seluruh rantai utama"
+		},
+		"2": {
+			"title": "API yang Ditingkatkan",
+			"description": "API khusus untuk metadata NFT, saldo token, riwayat transaksi, dan lainnya"
+		},
+		"3": {
+			"title": "Webhook",
+			"description": "Notifikasi real-time untuk event on-chain seperti transfer dan pemanggilan kontrak"
+		},
+		"4": {
+			"title": "Alchemy SDK",
+			"description": "SDK yang ramah pengembang yang menyederhanakan operasi blockchain umum"
+		},
+		"5": {
+			"title": "Account Kit",
+			"description": "Infrastruktur smart wallet untuk transaksi tanpa gas dan login sosial"
+		},
+		"6": {
+			"title": "Solusi Rollup",
+			"description": "Deploy rantai L2/L3 khusus dengan platform rollup-as-a-service Alchemy"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Pengembangan dApp",
+			"description": "Bangun aplikasi terdesentralisasi yang andal dengan infrastruktur blockchain yang kuat"
+		},
+		"2": {
+			"title": "Platform NFT",
+			"description": "Dukung pasar dan aplikasi NFT dengan API metadata yang komprehensif"
+		},
+		"3": {
+			"title": "Layanan Dompet",
+			"description": "Bangun dompet dengan pembaruan saldo real-time dan riwayat transaksi"
+		},
+		"4": {
+			"title": "Protokol DeFi",
+			"description": "Akses data harga yang andal dan broadcast transaksi untuk aplikasi DeFi"
+		},
+		"5": {
+			"title": "Web3 Enterprise",
+			"description": "Integrasikan fitur blockchain ke dalam aplikasi enterprise secara berskala"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Alchemy dan mengapa pengembang menggunakannya?",
+			"answer": "Alchemy adalah infrastruktur blockchain yang menyediakan akses node dan API sehingga pengembang tidak perlu menjalankan node sendiri. Menjalankan node Ethereum memerlukan sumber daya yang signifikan (TB penyimpanan, sinkronisasi konstan, DevOps). Alchemy menangani infrastruktur ini sambil menambahkan fitur yang ditingkatkan seperti API NFT, webhook, dan alat debugging. Sebagian besar dApp utama menggunakan Alchemy atau penyedia serupa."
+		},
+		"2": {
+			"question": "Bagaimana Alchemy dibandingkan dengan menjalankan node sendiri?",
+			"answer": "Menjalankan node sendiri memberikan kontrol penuh tetapi memerlukan sumber daya yang signifikan: perangkat keras, penyimpanan (1-2TB untuk Ethereum), bandwidth, dan pemeliharaan berkelanjutan. Supernode Alchemy memberikan keandalan yang lebih tinggi (uptime 99.9%+), latensi lebih rendah, API yang ditingkatkan, dan diskalakan secara otomatis. Untuk sebagian besar proyek, menggunakan Alchemy lebih hemat biaya daripada self-hosting hingga Anda mencapai volume yang sangat tinggi."
+		},
+		"3": {
+			"question": "Apakah Alchemy gratis digunakan?",
+			"answer": "Alchemy menawarkan tier gratis yang murah hati: 300M unit komputasi/bulan, yang mencakup sebagian besar proyek indie dan startup tahap awal. Paket berbayar (Growth, Scale, Enterprise) menyediakan lebih banyak unit komputasi, batas rate yang lebih tinggi, dukungan khusus, dan fitur lanjutan. Banyak pengembang mulai gratis dan upgrade seiring aplikasi mereka berkembang."
+		},
+		"4": {
+			"question": "Rantai apa yang didukung Alchemy?",
+			"answer": "Alchemy mendukung rantai utama termasuk Ethereum, Polygon, Arbitrum, Optimism, Base, Solana, dan lainnya. Setiap rantai memiliki dukungan RPC penuh plus API yang ditingkatkan khusus rantai. Mereka terus menambahkan rantai baru berdasarkan permintaan pengembang. Periksa dokumentasi mereka untuk daftar jaringan yang didukung saat ini."
+		},
+		"5": {
+			"question": "Apa itu Alchemy Account Kit?",
+			"answer": "Account Kit adalah infrastruktur smart wallet Alchemy yang memungkinkan abstraksi akun (ERC-4337). Ini memungkinkan dApp untuk menawarkan transaksi tanpa gas (sponsor gas pengguna), login sosial (masuk dengan email/Google), dan dompet yang dapat diprogram. Ini meningkatkan UX dengan menghilangkan kebutuhan pengguna untuk mengelola seed phrase atau menyimpan ETH untuk gas."
+		}
+	},
+	"cta": {
+		"ready": "Siap membangun di Web3?",
+		"button": "Buka Alchemy",
+		"note": "Platform pengembang blockchain terkemuka"
+	}
+}

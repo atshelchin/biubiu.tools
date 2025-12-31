@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "LayerZero - Omnichain Birlikte Çalışabilirlik Protokolü | 50+ Blokzinciri Bağlayın",
+		"description": "Omnichain mesajlaşma protokolü LayerZero'yu keşfedin. Özelleştirilebilir güvenlikle 50+ blokzincir üzerinde sorunsuzca etkileşimde bulunan uygulamalar oluşturun.",
+		"keywords": "LayerZero, ZRO, omnichain, birlikte çalışabilirlik, çapraz zincir, köprü, mesajlaşma, OFT"
+	},
+	"overview": "LayerZero, uygulamaların 50+ blokzincir arasında iletişim kurmasını sağlayan bir omnichain birlikte çalışabilirlik protokolüdür. 2021 yılında Bryan Pellegrino, Ryan Zarick ve Caleb Banister tarafından kurulan LayerZero, çapraz zincir mesajlaşma için uygulamaya ait güvenlik konseptine öncülük etti.\n\nVarlıkları kilitleyen ve mint eden geleneksel köprülerin aksine LayerZero, geliştiricilerin zincirler arasında her türlü veriyi göndermesine olanak tanıyan bir mesajlaşma protokolüdür. Benzersiz güvenlik modeli, uygulamaların kendi Merkezi Olmayan Doğrulayıcı Ağlarını (DVN) seçmesine olanak tanır—mesaj doğrulaması için Chainlink, Polyhedra, Google Cloud veya herhangi bir kombinasyonu kullanabilirler. Bu modülerlik, hiçbir tek varlığın çapraz zincir güvenliğini kontrol etmemesi anlamına gelir.\n\nLayerZero'nun temel standartları arasında yerel çoklu zincir token'ları için OFT (Omnichain Fungible Token) ve çapraz zincir NFT'leri için ONFT bulunur. 137 milyondan fazla işlenmiş mesaj ve 5+ milyar dolar transfer edilen değerle LayerZero, Stargate, Radiant ve diğerleri gibi omnichain uygulamalar için temel altyapı haline geldi.",
+	"features": {
+		"1": {
+			"title": "Evrensel Mesajlaşma",
+			"description": "50+ desteklenen blokzincir ağı arasında her türlü mesajı gönderin"
+		},
+		"2": {
+			"title": "Modüler Güvenlik",
+			"description": "Chainlink, Google Cloud ve Polyhedra dahil 30+ DVN arasından seçim yapın"
+		},
+		"3": {
+			"title": "OFT Standardı",
+			"description": "Birden fazla zincirde sorunsuzca var olan yerel omnichain token'ları oluşturun"
+		},
+		"4": {
+			"title": "Değiştirilemez Protokol",
+			"description": "Maksimum güven için temel sözleşmeler değiştirilemez ve izinsizdir"
+		},
+		"5": {
+			"title": "Yürütme Esnekliği",
+			"description": "Herkes mesajları yürütebilir, izinsiz operasyonu garanti eder"
+		},
+		"6": {
+			"title": "Geliştirici SDK",
+			"description": "Omnichain uygulamalar oluşturmak için kapsamlı araçlar ve sözleşmeler"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Omnichain Token'lar",
+			"description": "Birden fazla blokzincirde yerel olarak var olan token'ları dağıtın"
+		},
+		"2": {
+			"title": "Çapraz Zincir DeFi",
+			"description": "Birden fazla zincire yayılan borç verme, DEX ve getiri protokolleri oluşturun"
+		},
+		"3": {
+			"title": "Birleşik Yönetim",
+			"description": "Bağlı herhangi bir zincirden oylama ve yönetime katılımı etkinleştirin"
+		},
+		"4": {
+			"title": "NFT Köprüleme",
+			"description": "Köken ve sahipliği koruyarak NFT'leri zincirler arasında taşıyın"
+		},
+		"5": {
+			"title": "Oyun Varlıkları",
+			"description": "Birden fazla blokzincir oyununda kullanılabilir oyun içi öğeler ve para birimleri oluşturun"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "LayerZero nedir ve köprülerden nasıl farklıdır?",
+			"answer": "LayerZero bir mesajlaşma protokolüdür, köprü değil. Geleneksel köprüler varlıkları bir zincirde kilitler ve diğerinde sarılmış versiyonlar mint eder, bu da bal küpü riskleri yaratır. LayerZero, uygulamaların zincirler arasında rastgele mesajlar (token transferleri dahil) göndermesini sağlar ve uygulama kendi güvenlik yapılandırmasını seçer. Sadece token taşımak değil, çapraz zincir uygulamalar oluşturmak için altyapıdır."
+		},
+		"2": {
+			"question": "DVN'ler nedir ve güvenlik nasıl çalışır?",
+			"answer": "DVN'ler (Merkezi Olmayan Doğrulayıcı Ağlar), çapraz zincir mesajlarını doğrulayan varlıklardır. Tek köprü operatörlerinin aksine LayerZero, uygulamaların hangi DVN'lere güveneceğini seçmesine izin verir—Chainlink oracle'ları, Google Cloud, Polyhedra ZK kanıtları veya özel kurulumlar. Bir saldırganın, uygulama tarafından seçilen birden fazla bağımsız DVN'yi tehlikeye atması gerekir, bu da saldırıları çok daha zor hale getirir."
+		},
+		"3": {
+			"question": "OFT standardı nedir?",
+			"answer": "OFT (Omnichain Fungible Token), birden fazla zincirde yerel olarak var olan token'lar oluşturmak için LayerZero'nun standardıdır. Kilitli varlıkları temsil eden sarılmış token'ların aksine OFT'ler bir yakma ve mint mekanizması kullanır—kaynak zincirde yakılan token'lar hedef zincirde mint edilir. Bu, sarılmış token parçalanması olmadan tüm zincirlerde birleşik bir arz sağlar."
+		},
+		"4": {
+			"question": "ZRO token'ı ne için kullanılır?",
+			"answer": "ZRO, protokol ücretleri, yönetim ve stake için kullanılan LayerZero'nun yerel token'ıdır. Kullanıcılar çapraz zincir mesajları için ZRO öder (alternatif olarak, uygulamalar kaynak zincirin yerel token'ında ücret ödeyebilir). ZRO sahipleri, protokol parametreleri ve DVN yapılandırmaları hakkındaki yönetim kararlarına katılabilir."
+		},
+		"5": {
+			"question": "Hangi uygulamalar LayerZero kullanıyor?",
+			"answer": "Başlıca uygulamalar şunları içerir: Stargate (LayerZero kullanan çapraz zincir köprüsü), Radiant Capital (omnichain borç verme), Angle Protocol (omnichain stablecoin), Holograph (omnichain NFT'ler) ve daha birçokları. LayerZero kullanılarak 50.000'den fazla sözleşme dağıtıldı ve USDC gibi büyük token'lar yerel çoklu zincir desteği için OFT'yi entegre etti."
+		}
+	},
+	"cta": {
+		"ready": "Omnichain'e gitmeye hazır mısınız?",
+		"button": "LayerZero'yu Aç",
+		"note": "Omnichain birlikte çalışabilirlik protokolü"
+	}
+}

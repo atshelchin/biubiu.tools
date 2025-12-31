@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Chainlink - Rete Oracle Decentralizzata | Collega Smart Contract a Dati del Mondo Reale",
+		"description": "Scopri Chainlink, la principale rete oracle decentralizzata. Collega smart contract a dati del mondo reale, API e computazione off-chain in modo sicuro.",
+		"keywords": "Chainlink, LINK, oracle, price feeds, VRF, CCIP, smart contracts, DeFi"
+	},
+	"overview": "Chainlink è la rete oracle decentralizzata standard del settore che consente agli smart contract di accedere in modo sicuro a dati, API e computazione off-chain. Fondata da Sergey Nazarov e Steve Ellis nel 2017, Chainlink risolve il 'problema dell'oracle'—la sfida di ottenere dati esterni affidabili negli ambienti blockchain.\n\nLa rete opera attraverso operatori di nodi indipendenti che aggregano dati da più fonti, fornendo input e output a prova di manomissione per gli smart contract. I prodotti di Chainlink includono Price Feeds (utilizzati dalla maggior parte dei protocolli DeFi), VRF (funzioni casuali verificabili per gaming/NFT), Automation (esecuzione di contratti decentralizzata), Functions (calcolo serverless) e CCIP (Cross-Chain Interoperability Protocol).\n\nChainlink protegge oltre 75 miliardi di dollari in valore attraverso DeFi, assicurazioni, gaming e applicazioni aziendali. Il token LINK viene utilizzato per il pagamento agli operatori di nodi e come garanzia di staking. Con le sue ampie integrazioni e il track record comprovato, Chainlink è diventata un'infrastruttura critica per l'intero ecosistema blockchain.",
+	"features": {
+		"1": {
+			"title": "Price Feeds",
+			"description": "Oracle di prezzo decentralizzati che alimentano la maggior parte dei protocolli DeFi con dati di mercato accurati"
+		},
+		"2": {
+			"title": "VRF",
+			"description": "Funzione Casuale Verificabile per casualità dimostrabilmente equa nel gaming e negli NFT"
+		},
+		"3": {
+			"title": "CCIP",
+			"description": "Cross-Chain Interoperability Protocol per trasferimenti sicuri di token e messaggi"
+		},
+		"4": {
+			"title": "Automation",
+			"description": "Automazione decentralizzata di smart contract per manutenzione e trigger"
+		},
+		"5": {
+			"title": "Functions",
+			"description": "Piattaforma di calcolo serverless per connettere smart contract a qualsiasi API"
+		},
+		"6": {
+			"title": "Proof of Reserve",
+			"description": "Verifica on-chain delle riserve di asset off-chain o cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Dati sui Prezzi DeFi",
+			"description": "Fornire feed di prezzo accurati per protocolli di lending, derivati e DEX"
+		},
+		"2": {
+			"title": "Casualità nel Gaming",
+			"description": "Generare numeri casuali verificabili per mint equi di NFT e meccaniche di gioco"
+		},
+		"3": {
+			"title": "Trasferimenti Cross-Chain",
+			"description": "Collegare token e messaggi in modo sicuro tra diverse blockchain"
+		},
+		"4": {
+			"title": "Azioni Automatizzate",
+			"description": "Attivare funzioni di smart contract basate su tempo o condizioni esterne"
+		},
+		"5": {
+			"title": "Integrazione con il Mondo Reale",
+			"description": "Connettere applicazioni blockchain a API e fonti dati tradizionali"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Chainlink e perché gli smart contract hanno bisogno di oracle?",
+			"answer": "Chainlink è una rete oracle decentralizzata che fornisce dati esterni agli smart contract. Le blockchain sono sistemi isolati che non possono accedere direttamente a dati esterni. Gli oracle colmano questo divario recuperando in modo sicuro informazioni del mondo reale (prezzi, meteo, punteggi sportivi, ecc.) e consegnandole on-chain. Senza oracle, DeFi e la maggior parte delle applicazioni blockchain non potrebbero funzionare."
+		},
+		"2": {
+			"question": "Come garantisce Chainlink l'accuratezza dei dati?",
+			"answer": "Chainlink utilizza più livelli di decentralizzazione: i dati provengono da molti fornitori di dati premium, vengono aggregati da più operatori di nodi indipendenti e il risultato mediano/di consenso viene consegnato on-chain. Gli operatori di nodi mettono in stake LINK come garanzia e possono essere penalizzati per fornire dati errati. Questo rende la manipolazione economicamente infattibile."
+		},
+		"3": {
+			"question": "Cos'è CCIP e come funziona?",
+			"answer": "CCIP (Cross-Chain Interoperability Protocol) è la soluzione di Chainlink per la comunicazione cross-chain sicura. Consente trasferimenti di token e messaggistica arbitraria tra blockchain utilizzando la rete oracle decentralizzata di Chainlink per la sicurezza. A differenza dei bridge che sono stati sfruttati per miliardi, CCIP sfrutta l'infrastruttura di sicurezza esistente di Chainlink."
+		},
+		"4": {
+			"question": "A cosa serve il token LINK?",
+			"answer": "LINK è il token native di Chainlink con molteplici utilizzi: pagamento agli operatori di nodi per servizi oracle, garanzia di staking per gli operatori di nodi (con penalità per dati errati) e partecipazione alla governance. Le dApp pagano LINK per i servizi Chainlink, creando domanda man mano che l'utilizzo della rete cresce."
+		},
+		"5": {
+			"question": "Quali protocolli utilizzano Chainlink?",
+			"answer": "Chainlink è utilizzato dalla maggior parte dei principali protocolli DeFi inclusi Aave, Compound, Synthetix, dYdX, GMX e centinaia di altri. È anche utilizzato da imprese tradizionali come Swift, DTCC e ANZ Bank per esperimenti blockchain. Oltre 1.800 progetti in DeFi, gaming, NFT e assicurazioni si affidano agli oracle di Chainlink."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a esplorare gli oracle di Chainlink?",
+		"button": "Apri Chainlink",
+		"note": "La rete oracle standard del settore"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "MetaMask - Ví Crypto Hàng Đầu | Truy Cập DeFi, NFT & Web3",
+		"description": "Khám phá MetaMask, ví crypto tự quản lý hàng đầu. Truy cập các giao thức DeFi, thị trường NFT và ứng dụng Web3 trên Ethereum và các chuỗi tương thích EVM.",
+		"keywords": "MetaMask, ví crypto, ví Ethereum, Web3, DeFi, NFT, tiện ích trình duyệt, ví di động"
+	},
+	"overview": "MetaMask là ví crypto tự quản lý phổ biến nhất thế giới, cho phép người dùng truy cập các ứng dụng phi tập trung trên Ethereum và các blockchain tương thích EVM. Được tạo ra bởi Aaron Davis và Dan Finlay tại ConsenSys vào năm 2016, MetaMask đã tiên phong trong khái niệm ví dạng tiện ích trình duyệt giúp Web3 trở nên dễ tiếp cận với người dùng đại chúng.\n\nCó sẵn dưới dạng tiện ích trình duyệt cho Chrome, Firefox, Brave và Edge, cùng với ứng dụng di động cho iOS và Android, MetaMask phục vụ hơn 30 triệu người dùng hoạt động hàng tháng. Ví cho phép người dùng lưu trữ ETH và token ERC-20, tương tác với dApp, hoán đổi token, mua crypto bằng tiền pháp định và quản lý NFT. MetaMask Snaps cho phép các tiện ích mở rộng của bên thứ ba thêm chức năng như hỗ trợ các chuỗi không phải EVM.\n\nMetaMask đã trở thành tiêu chuẩn thực tế cho xác thực Web3, với hầu hết các dApp sử dụng 'Kết nối với MetaMask' làm phương thức đăng nhập chính. Ví tạo doanh thu thông qua phí hoán đổi (0.875%) và hợp tác on-ramp. Là cổng vào DeFi, NFT và Web3 cho hàng triệu người dùng, MetaMask vẫn là cơ sở hạ tầng thiết yếu trong hệ sinh thái Ethereum.",
+	"features": {
+		"1": {
+			"title": "Hỗ Trợ Đa Chuỗi",
+			"description": "Kết nối với Ethereum, Polygon, Arbitrum, Optimism, BSC và hàng trăm chuỗi EVM"
+		},
+		"2": {
+			"title": "Hoán Đổi Trong Ứng Dụng",
+			"description": "Hoán đổi token trực tiếp trong ví với báo giá tổng hợp từ nhiều DEX"
+		},
+		"3": {
+			"title": "Quản Lý NFT",
+			"description": "Xem, gửi và quản lý bộ sưu tập NFT trên các mạng được hỗ trợ"
+		},
+		"4": {
+			"title": "Ví Phần Cứng",
+			"description": "Kết nối ví phần cứng Ledger và Trezor để tăng cường bảo mật"
+		},
+		"5": {
+			"title": "MetaMask Snaps",
+			"description": "Mở rộng chức năng với plugin của bên thứ ba cho các chuỗi và tính năng không phải EVM"
+		},
+		"6": {
+			"title": "Chế Độ Xem Danh Mục",
+			"description": "Theo dõi tài sản của bạn trên các chuỗi với bảng điều khiển danh mục tích hợp"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Truy Cập DeFi",
+			"description": "Kết nối với các giao thức cho vay, DEX và yield trên Ethereum và L2"
+		},
+		"2": {
+			"title": "Giao Dịch NFT",
+			"description": "Mua, bán và quản lý NFT trên OpenSea, Blur và các thị trường khác"
+		},
+		"3": {
+			"title": "Hoán Đổi Token",
+			"description": "Giao dịch token với tỷ giá cạnh tranh thông qua tổng hợp DEX tích hợp"
+		},
+		"4": {
+			"title": "Đăng Nhập Web3",
+			"description": "Đăng nhập vào dApp và trang web bằng địa chỉ ví của bạn"
+		},
+		"5": {
+			"title": "Chuỗi Chéo",
+			"description": "Cầu nối tài sản và tương tác với ứng dụng trên nhiều mạng EVM"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "MetaMask là gì và có an toàn không?",
+			"answer": "MetaMask là ví crypto tự quản lý, nghĩa là bạn kiểm soát khóa riêng của mình—không phải MetaMask hay ConsenSys. Nó thường được coi là an toàn khi sử dụng đúng cách: bật bảo vệ mật khẩu, không bao giờ chia sẻ Cụm Từ Khôi Phục Bí Mật của bạn, xác minh chi tiết giao dịch trước khi ký và cẩn thận với các trang web lừa đảo. Rủi ro chính là lỗi của người dùng (mất cụm từ khởi tạo, ký các giao dịch độc hại) hơn là lỗ hổng phần mềm."
+		},
+		"2": {
+			"question": "Làm thế nào để thêm mạng mới vào MetaMask?",
+			"answer": "Nhấp vào menu thả xuống mạng ở trên cùng, sau đó 'Thêm Mạng'. Bạn có thể thêm các mạng phổ biến như Polygon hoặc Arbitrum bằng một cú nhấp chuột, hoặc nhập thủ công chi tiết RPC cho các chuỗi khác. Các trang web như Chainlist.org cung cấp cấu hình mạng đã xác minh mà bạn có thể thêm tự động. Luôn xác minh URL RPC từ các nguồn chính thức để tránh kết nối với các node độc hại."
+		},
+		"3": {
+			"question": "MetaMask Snaps là gì?",
+			"answer": "Snaps là các tiện ích mở rộng của bên thứ ba thêm chức năng cho MetaMask. Chúng có thể hỗ trợ các chuỗi không phải EVM (như Bitcoin, Solana, Cosmos), thêm thông tin chi tiết giao dịch mới, cung cấp thông báo tùy chỉnh và hơn thế nữa. Snaps chạy trong môi trường cô lập để bảo mật. Bạn cài đặt chúng từ thư mục MetaMask Snaps và mỗi Snap yêu cầu các quyền cụ thể mà bạn phải phê duyệt."
+		},
+		"4": {
+			"question": "Tại sao giao dịch của tôi bị kẹt hoặc thất bại?",
+			"answer": "Nguyên nhân phổ biến: giá gas quá thấp (tăng gas), vấn đề nonce (đặt lại tài khoản trong cài đặt), tắc nghẽn mạng (đợi hoặc tăng tốc), hoặc lỗi hợp đồng thông minh (kiểm tra dApp). Đối với giao dịch bị kẹt, bạn có thể 'Tăng Tốc' (trả thêm gas) hoặc 'Hủy' (gửi 0 ETH cho chính bạn với cùng nonce). Tab hoạt động của MetaMask hiển thị các giao dịch đang chờ mà bạn có thể quản lý."
+		},
+		"5": {
+			"question": "MetaMask kiếm tiền như thế nào?",
+			"answer": "MetaMask kiếm tiền thông qua phí hoán đổi (0.875% trên hoán đổi token trong ứng dụng qua MetaMask Swaps), hợp tác on-ramp (phí từ mua hàng fiat-crypto thông qua các nhà cung cấp như MoonPay/Transak) và dịch vụ MetaMask Institutional cho các tổ chức. Chức năng ví cốt lõi là miễn phí—bạn chỉ trả phí gas mạng cho giao dịch."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng khám phá Web3?",
+		"button": "Mở MetaMask",
+		"note": "Ví crypto tự quản lý hàng đầu"
+	}
+}

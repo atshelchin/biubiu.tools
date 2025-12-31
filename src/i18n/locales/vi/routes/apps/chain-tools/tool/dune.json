@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Dune Analytics - Nền Tảng Dữ Liệu Blockchain | Truy Vấn và Trực Quan Hóa Dữ Liệu On-Chain",
+		"description": "Khám phá Dune, nền tảng phân tích blockchain hàng đầu. Viết truy vấn SQL, xây dựng dashboard và khám phá dữ liệu on-chain trên Ethereum, Bitcoin và 40+ chuỗi.",
+		"keywords": "Dune Analytics, dữ liệu blockchain, SQL, dashboard, phân tích on-chain, phân tích DeFi, dữ liệu crypto"
+	},
+	"overview": "Dune là nền tảng phân tích blockchain hướng cộng đồng hàng đầu cho phép bất kỳ ai truy vấn, trực quan hóa và chia sẻ dữ liệu on-chain. Được thành lập bởi Fredrik Haga và Mats Olsen vào năm 2018, Dune đã dân chủ hóa phân tích dữ liệu blockchain bằng cách làm cho nó có thể truy cập thông qua truy vấn SQL mà không yêu cầu chuyên môn kỹ thuật dữ liệu.\n\nNền tảng cung cấp dữ liệu blockchain được giải mã, có thể đọc được bởi con người trên 40+ mạng bao gồm Ethereum, Bitcoin, Solana, Polygon và Layer 2. Người dùng viết truy vấn SQL (sử dụng DuneSQL) để phân tích bất cứ điều gì từ số liệu giao thức DeFi đến mô hình giao dịch NFT, sau đó tạo trực quan hóa và dashboard có thể chia sẻ. Spellbook, lớp chuyển đổi mã nguồn mở của Dune, cung cấp bộ dữ liệu được xây dựng sẵn cho nhu cầu phân tích phổ biến.\n\nDune đã trở thành cơ sở hạ tầng thiết yếu cho nghiên cứu crypto, với hàng nghìn nhà phân tích tạo dashboard công khai được sử dụng bởi các giao thức, nhà đầu tư và nhà báo. Nền tảng kết hợp dữ liệu blockchain thô với các sự kiện hợp đồng được giải mã, làm cho phân tích on-chain phức tạp trở nên dễ tiếp cận với bất kỳ ai biết SQL.",
+	"features": {
+		"1": {
+			"title": "Truy Vấn SQL",
+			"description": "Viết truy vấn DuneSQL để phân tích dữ liệu blockchain được giải mã từ 40+ mạng"
+		},
+		"2": {
+			"title": "Dashboard Trực Quan",
+			"description": "Tạo và chia sẻ dashboard tương tác với biểu đồ, bảng và số liệu"
+		},
+		"3": {
+			"title": "Spellbook",
+			"description": "Bộ dữ liệu được xây dựng sẵn cho phân tích phổ biến như giao dịch DEX, bán NFT, bridge"
+		},
+		"4": {
+			"title": "Dữ Liệu Thời Gian Thực",
+			"description": "Truy cập dữ liệu blockchain gần thời gian thực với cập nhật tự động"
+		},
+		"5": {
+			"title": "Truy Cập API",
+			"description": "Truy cập kết quả truy vấn theo chương trình để tích hợp vào ứng dụng"
+		},
+		"6": {
+			"title": "Truy Vấn Cộng Đồng",
+			"description": "Fork và học từ hàng nghìn truy vấn và dashboard công khai"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Phân Tích Giao Thức",
+			"description": "Theo dõi TVL, khối lượng, người dùng và số liệu cho các giao thức DeFi"
+		},
+		"2": {
+			"title": "Phân Tích Ví",
+			"description": "Nghiên cứu ví cá voi, theo dõi smart money và phân tích mô hình giao dịch"
+		},
+		"3": {
+			"title": "Nghiên Cứu Token",
+			"description": "Phân tích phân phối token, hành vi người nắm giữ và mô hình chuyển"
+		},
+		"4": {
+			"title": "Phân Tích NFT",
+			"description": "Theo dõi doanh số NFT, floor price, thống kê người nắm giữ và số liệu bộ sưu tập"
+		},
+		"5": {
+			"title": "Nghiên Cứu Hệ Sinh Thái",
+			"description": "So sánh L2, theo dõi sử dụng gas và phân tích xu hướng hoạt động mạng"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Dune là gì và dành cho ai?",
+			"answer": "Dune là một nền tảng phân tích blockchain nơi người dùng truy vấn dữ liệu on-chain bằng SQL và tạo dashboard trực quan. Nó dành cho bất kỳ ai phân tích crypto: nhà nghiên cứu theo dõi giao thức, trader tìm kiếm alpha, giao thức giám sát số liệu của họ, nhà báo điều tra các sự kiện on-chain và nhà phát triển xây dựng sản phẩm dữ liệu. Kiến thức SQL cơ bản hữu ích nhưng không bắt buộc—bạn có thể bắt đầu bằng cách fork các truy vấn hiện có."
+		},
+		"2": {
+			"question": "Dữ liệu nào có sẵn trên Dune?",
+			"answer": "Dune cung cấp dữ liệu được giải mã từ 40+ blockchain bao gồm Ethereum, Bitcoin, Solana và các L2 chính. Dữ liệu bao gồm giao dịch thô, các sự kiện hợp đồng được giải mã (ví dụ: swap Uniswap, ký gửi Aave), chuyển token, giao dịch NFT và hơn thế nữa. Spellbook cung cấp các bảng cấp cao hơn như giao dịch DEX trên tất cả các giao thức, làm cho phân tích phức tạp trở nên đơn giản hơn."
+		},
+		"3": {
+			"question": "Dune có miễn phí không?",
+			"answer": "Dune có một gói miễn phí cho phép truy vấn và dashboard công khai với một số hạn chế về thực thi truy vấn và độ mới của dữ liệu. Các gói trả phí (Plus, Pro, Enterprise) cung cấp truy vấn riêng tư, thực thi nhanh hơn, nhiều tín dụng hơn, truy cập API và các tính năng bổ sung. Nhiều người dùng bắt đầu miễn phí và nâng cấp khi nhu cầu tăng lên."
+		},
+		"4": {
+			"question": "Spellbook là gì?",
+			"answer": "Spellbook là lớp chuyển đổi mã nguồn mở của Dune (được xây dựng với dbt). Nó chứa các mô hình SQL do cộng đồng duy trì chuyển đổi dữ liệu blockchain thô thành các bảng hữu ích—như dex.trades (tất cả giao dịch DEX), nft.trades (doanh số NFT), số dư erc20, v.v. Bất kỳ ai cũng có thể đóng góp các spell mới và chúng có sẵn miễn phí cho tất cả người dùng Dune."
+		},
+		"5": {
+			"question": "Làm thế nào để học sử dụng Dune?",
+			"answer": "Bắt đầu bằng cách khám phá các dashboard phổ biến và fork các truy vấn để hiểu cách chúng hoạt động. Dune cung cấp tài liệu, hướng dẫn và cộng đồng Discord để được trợ giúp. OurNetwork là một nguồn tài nguyên học tập phổ biến. Kỹ năng SQL cơ bản được chuyển giao trực tiếp—nếu bạn biết SELECT, JOIN và GROUP BY, bạn có thể phân tích dữ liệu blockchain trên Dune."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng phân tích dữ liệu on-chain?",
+		"button": "Mở Dune",
+		"note": "Phân tích blockchain hướng cộng đồng"
+	}
+}

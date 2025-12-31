@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "OpenSea - Marketplace NFT Leader | Compra, Vendi e Scopri Collezionabili Digitali",
+		"description": "Scopri OpenSea, il più grande marketplace NFT al mondo. Compra, vendi ed esplora arte digitale, collezionabili, oggetti di gioco e altro su più blockchain.",
+		"keywords": "OpenSea, NFT, marketplace, arte digitale, collezionabili, Ethereum, Seaport, trading NFT"
+	},
+	"overview": "OpenSea è il più grande marketplace NFT al mondo, che consente agli utenti di comprare, vendere e scoprire collezionabili digitali su più blockchain. Fondato da Devin Finzer e Alex Atallah nel 2017, OpenSea ha pionerato il concetto di marketplace NFT e rimane la piattaforma dominante nonostante la crescente concorrenza.\n\nLa piattaforma supporta NFT su Ethereum, Polygon, Klaytn, Solana, Arbitrum, Optimism, Avalanche, Base e altro. OpenSea offre funzionalità tra cui inserzioni in stile asta e a prezzo fisso, offerte per collezioni, offerte basate su tratti e strumenti di rarità. Il protocollo Seaport, il protocollo marketplace open-source di OpenSea, alimenta le negoziazioni con funzionalità avanzate come vendite in bundle e riempimenti parziali.\n\nOpenSea ha elaborato miliardi in volume di trading NFT e ospita milioni di collezioni NFT. Con OS2 (OpenSea 2.0), la piattaforma si è espansa per supportare il trading di token insieme agli NFT, ha introdotto un programma di ricompense e ha lanciato un hub della comunità, posizionandosi come marketplace Web3 completo.",
+	"features": {
+		"1": {
+			"title": "Supporto Multi-Chain",
+			"description": "Scambia NFT su Ethereum, Polygon, Solana, Base e oltre 15 altre chain"
+		},
+		"2": {
+			"title": "Protocollo Seaport",
+			"description": "Protocollo marketplace open-source che abilita funzionalità di trading avanzate"
+		},
+		"3": {
+			"title": "Offerte per Collezioni",
+			"description": "Fai offerte su intere collezioni o tratti specifici per acquisti efficienti"
+		},
+		"4": {
+			"title": "Strumenti per Creatori",
+			"description": "Lancia collezioni NFT con royalty personalizzabili e meccaniche di reveal"
+		},
+		"5": {
+			"title": "Trading Token OS2",
+			"description": "Scambia token insieme agli NFT con la nuova esperienza OpenSea 2.0"
+		},
+		"6": {
+			"title": "Drops & Minting",
+			"description": "Partecipa ai drops NFT e minta direttamente tramite OpenSea"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading NFT",
+			"description": "Compra e vendi arte digitale, PFP e collezionabili nel marketplace più grande"
+		},
+		"2": {
+			"title": "Lancio di Collezioni",
+			"description": "Crea e lancia collezioni NFT con strumenti di minting e vendita integrati"
+		},
+		"3": {
+			"title": "Gestione Portfolio",
+			"description": "Traccia, organizza e gestisci i tuoi possedimenti NFT su più chain"
+		},
+		"4": {
+			"title": "Price Discovery",
+			"description": "Ricerca floor price, storico vendite e rarità per decisioni informate"
+		},
+		"5": {
+			"title": "Asset di Gaming",
+			"description": "Scambia oggetti in-game e NFT di gaming tra vari giochi blockchain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è OpenSea e come funziona?",
+			"answer": "OpenSea è un marketplace NFT dove gli utenti possono comprare, vendere e scoprire collezionabili digitali. Connetti un wallet, sfoglia o cerca NFT e puoi acquistare ai prezzi elencati o fare offerte. I venditori elencano NFT firmando un messaggio (nessun gas per l'inserzione). Quando avviene una vendita, OpenSea facilita lo scambio di NFT per il pagamento, prendendo una piccola commissione."
+		},
+		"2": {
+			"question": "Quali commissioni applica OpenSea?",
+			"answer": "OpenSea applica una commissione del 2,5% sulle vendite. Inoltre, i creatori possono impostare royalty (tipicamente 5-10%) che ricevono sulle vendite secondarie. Gli acquirenti pagano le commissioni di gas per le transazioni on-chain. Il protocollo Seaport è open-source, quindi altri marketplace possono usarlo con strutture di commissioni diverse."
+		},
+		"3": {
+			"question": "Cos'è OpenSea Pro (precedentemente Gem)?",
+			"answer": "OpenSea Pro è un'interfaccia di trading NFT avanzata per utenti esperti. Offre funzionalità come aggregazione cross-marketplace (trovare i migliori prezzi tra OpenSea, Blur, ecc.), analytics di portfolio, filtri avanzati e strumenti di sweep per acquistare più NFT in modo efficiente. Pro è rivolto a trader e collezionisti professionisti."
+		},
+		"4": {
+			"question": "Come si confronta OpenSea con Blur?",
+			"answer": "OpenSea è il marketplace NFT principale originale con la selezione più ampia e la base utenti più grande. Blur è emerso come concorrente focalizzato sui trader professionali con zero commissioni, trading più veloce e incentivi in token. OpenSea ha più utenti occasionali e migliore discovery; Blur guida nel volume di trading professionale. Molti trader usano entrambi."
+		},
+		"5": {
+			"question": "È sicuro usare OpenSea?",
+			"answer": "OpenSea è generalmente sicuro ma richiede cautela. I rischi includono: collezioni false/copiate (verifica sempre gli indirizzi dei contratti), siti di phishing che impersonano OpenSea, NFT dannosi con approvazioni nascoste e NFT rubati. OpenSea ha badge di verifica per collezioni legittime e strumenti per segnalare truffe, ma gli utenti devono rimanere vigili."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a esplorare gli NFT?",
+		"button": "Apri OpenSea",
+		"note": "Il più grande marketplace NFT al mondo"
+	}
+}

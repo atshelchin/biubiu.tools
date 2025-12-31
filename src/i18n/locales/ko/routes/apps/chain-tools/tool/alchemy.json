@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷",
+		"code": "ko"
+	},
+	"seo": {
+		"title": "Alchemy - 블록체인 개발자 플랫폼 | Web3 앱 구축",
+		"description": "선도적인 블록체인 개발자 플랫폼 Alchemy를 탐색하세요. 신뢰할 수 있는 노드 인프라, API 및 개발자 도구로 확장 가능한 Web3 애플리케이션을 구축하세요.",
+		"keywords": "Alchemy, 블록체인 API, Web3 개발, 노드 인프라, NFT API, dApp 개발, Ethereum API"
+	},
+	"overview": "Alchemy는 확장 가능한 Web3 애플리케이션을 구축하는 데 필요한 인프라와 도구를 제공하는 선도적인 블록체인 개발자 플랫폼입니다. 2017년 Nikil Viswanathan과 Joe Lau가 설립한 Alchemy는 OpenSea, Adobe, Shopify 및 많은 최고의 DeFi 프로토콜을 포함한 주요 회사를 지원합니다.\n\n이 플랫폼은 Ethereum, Polygon, Arbitrum, Optimism, Solana 및 기타 주요 체인을 위한 신뢰할 수 있는 노드 인프라를 제공합니다. 기본 RPC 액세스를 넘어 Alchemy는 NFT, 토큰, 거래 및 웹훅을 위한 향상된 API를 제공합니다. 그들의 Supernode 기술은 자체 노드를 실행하는 것보다 더 높은 신뢰성과 더 낮은 지연 시간을 제공합니다. 개발자 도구에는 Alchemy SDK, 블록체인 탐색기, 멤풀 시각화 도구 및 디버깅 도구가 포함됩니다.\n\nAlchemy는 수조 개의 요청을 처리했으며 1000억 달러 이상의 가치를 전송한 애플리케이션을 지원합니다. 2022년 기준 102억 달러의 가치 평가를 받은 Alchemy는 대부분의 Web3 개발자가 의존하는 필수 인프라인 블록체인의 AWS가 되었습니다. 무료 티어를 통해 인디 개발자가 접근할 수 있으며 엔터프라이즈 플랜은 수백만 개의 요청으로 확장됩니다.",
+	"features": {
+		"1": {
+			"title": "Supernode RPC",
+			"description": "주요 체인 전반에 걸쳐 99.9% 이상의 가동 시간을 갖춘 고신뢰성 노드 인프라"
+		},
+		"2": {
+			"title": "향상된 API",
+			"description": "NFT 메타데이터, 토큰 잔액, 거래 내역 등을 위한 특수 API"
+		},
+		"3": {
+			"title": "웹훅",
+			"description": "전송 및 컨트랙트 호출과 같은 온체인 이벤트에 대한 실시간 알림"
+		},
+		"4": {
+			"title": "Alchemy SDK",
+			"description": "일반적인 블록체인 작업을 단순화하는 개발자 친화적 SDK"
+		},
+		"5": {
+			"title": "Account Kit",
+			"description": "가스리스 거래 및 소셜 로그인을 위한 스마트 지갑 인프라"
+		},
+		"6": {
+			"title": "롤업 솔루션",
+			"description": "Alchemy의 Rollup-as-a-Service 플랫폼으로 사용자 정의 L2/L3 체인 배포"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp 개발",
+			"description": "강력한 블록체인 인프라로 신뢰할 수 있는 탈중앙화 애플리케이션 구축"
+		},
+		"2": {
+			"title": "NFT 플랫폼",
+			"description": "포괄적인 메타데이터 API로 NFT 마켓플레이스 및 앱 강화"
+		},
+		"3": {
+			"title": "지갑 서비스",
+			"description": "실시간 잔액 업데이트 및 거래 내역으로 지갑 구축"
+		},
+		"4": {
+			"title": "DeFi 프로토콜",
+			"description": "DeFi 앱을 위한 신뢰할 수 있는 가격 데이터 및 거래 브로드캐스트에 액세스"
+		},
+		"5": {
+			"title": "엔터프라이즈 Web3",
+			"description": "블록체인 기능을 대규모로 엔터프라이즈 애플리케이션에 통합"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Alchemy란 무엇이며 개발자는 왜 사용하나요?",
+			"answer": "Alchemy는 개발자가 자체 노드를 실행할 필요가 없도록 노드 액세스 및 API를 제공하는 블록체인 인프라입니다. Ethereum 노드를 실행하려면 상당한 리소스(TB의 스토리지, 지속적인 동기화, DevOps)가 필요합니다. Alchemy는 NFT API, 웹훅 및 디버깅 도구와 같은 향상된 기능을 추가하면서 이 인프라를 처리합니다. 대부분의 주요 dApp은 Alchemy 또는 유사한 공급자를 사용합니다."
+		},
+		"2": {
+			"question": "Alchemy는 자체 노드 실행과 비교하여 어떤가요?",
+			"answer": "자체 노드를 실행하면 완전한 제어가 가능하지만 상당한 리소스가 필요합니다: 하드웨어, 스토리지(Ethereum의 경우 1-2TB), 대역폭 및 지속적인 유지 관리. Alchemy의 Supernode는 더 높은 신뢰성(99.9% 이상의 가동 시간), 더 낮은 지연 시간, 향상된 API 및 자동 확장을 제공합니다. 대부분의 프로젝트에서 매우 높은 볼륨에 도달할 때까지 Alchemy를 사용하는 것이 자체 호스팅보다 비용 효율적입니다."
+		},
+		"3": {
+			"question": "Alchemy는 무료로 사용할 수 있나요?",
+			"answer": "Alchemy는 관대한 무료 티어를 제공합니다: 월간 3억 컴퓨트 유닛, 이는 대부분의 인디 프로젝트 및 초기 단계 스타트업을 커버합니다. 유료 플랜(Growth, Scale, Enterprise)은 더 많은 컴퓨트 유닛, 더 높은 요율 제한, 전담 지원 및 고급 기능을 제공합니다. 많은 개발자가 무료로 시작하여 앱이 성장함에 따라 업그레이드합니다."
+		},
+		"4": {
+			"question": "Alchemy는 어떤 체인을 지원하나요?",
+			"answer": "Alchemy는 Ethereum, Polygon, Arbitrum, Optimism, Base, Solana 등 주요 체인을 지원합니다. 각 체인은 완전한 RPC 지원과 체인별 향상된 API를 제공합니다. 개발자 수요에 따라 지속적으로 새로운 체인을 추가합니다. 지원되는 네트워크의 현재 목록은 문서를 확인하세요."
+		},
+		"5": {
+			"question": "Alchemy Account Kit이란 무엇인가요?",
+			"answer": "Account Kit은 계정 추상화(ERC-4337)를 가능하게 하는 Alchemy의 스마트 지갑 인프라입니다. 이를 통해 dApp은 가스리스 거래(사용자 가스 후원), 소셜 로그인(이메일/Google로 로그인) 및 프로그래밍 가능한 지갑을 제공할 수 있습니다. 이를 통해 사용자가 시드 구문을 관리하거나 가스를 위해 ETH를 보유할 필요가 없어 UX가 향상됩니다."
+		}
+	},
+	"cta": {
+		"ready": "Web3에서 구축할 준비가 되셨나요?",
+		"button": "Alchemy 열기",
+		"note": "선도적인 블록체인 개발자 플랫폼"
+	}
+}

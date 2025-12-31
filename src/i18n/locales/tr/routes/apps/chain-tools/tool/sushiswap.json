@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "SushiSwap - Çoklu Zincir DEX ve DeFi Platformu | Takas, Kazanç, Köprü",
+		"description": "Topluluk odaklı çoklu zincir DEX SushiSwap'ı keşfedin. Token alım satımı yapın, likidite sağlayın ve 30+ ağda zincirler arası takaslara erişin.",
+		"keywords": "SushiSwap, Sushi, DEX, çoklu zincir, DeFi, likidite, SUSHI token, zincirler arası"
+	},
+	"overview": "SushiSwap, Uniswap fork'undan kapsamlı bir çoklu zincir DeFi platformuna evrilmiş, topluluk odaklı bir merkezi olmayan borsadır. Ağustos 2020'de \"DeFi Summer\" sırasında başlatılan Sushi, vampire saldırıları ve likidite madenciliği teşvikleri kavramında öncülük ederek DeFi protokollerinin kullanıcılar için nasıl rekabet ettiğini yeniden şekillendirdi.\n\nPlatform artık Ethereum, Arbitrum, Polygon, Avalanche ve daha fazlası dahil olmak üzere 30+ ağda faaliyet göstermektedir. Basit takasların ötesinde, Sushi konsantre likidite havuzları (SushiSwap V3), SushiXSwap aracılığıyla zincirler arası takaslar ve kapsamlı bir DeFi araç paketi sunar. SUSHI token'ı yönetim için kullanılır ve protokol ücretleri kazanmak için xSUSHI olarak stake edilebilir.\n\nSushi, çeşitli liderlik ve yeniden yapılanma aşamalarından geçerek önemli bir evrim geçirmiştir. Bugün, rota optimizasyonu, MEV koruması ve sorunsuz zincirler arası işlemler gibi özelliklerle en iyi çoklu zincir takas deneyimi olmaya odaklanmaktadır.",
+	"features": {
+		"1": {
+			"title": "30+ Zincir Desteği",
+			"description": "Ethereum, Arbitrum, Polygon, Avalanche, BSC ve daha birçok ağda işlem yapın"
+		},
+		"2": {
+			"title": "SushiXSwap",
+			"description": "Sorunsuz çoklu zincir işlemi için Stargate ve Axelar destekli zincirler arası takaslar"
+		},
+		"3": {
+			"title": "Konsantre Likidite",
+			"description": "Sermaye verimli likidite sağlama için özel fiyat aralıklarına sahip V3 havuzları"
+		},
+		"4": {
+			"title": "Rota Optimizasyonu",
+			"description": "Akıllı yönlendirme, birden fazla likidite kaynağında en iyi fiyatları bulur"
+		},
+		"5": {
+			"title": "xSUSHI Staking",
+			"description": "Protokol işlem ücretlerinden pay kazanmak için SUSHI stake edin"
+		},
+		"6": {
+			"title": "Furo Streaming",
+			"description": "Bordro ve hibeler için token streaming ve vesting çözümü"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Çoklu Zincir İşlemi",
+			"description": "Tek bir arayüzden 30+ ağda token takası yapın"
+		},
+		"2": {
+			"title": "Zincirler Arası Takaslar",
+			"description": "SushiXSwap ile tek işlemde köprü kurun ve takas yapın"
+		},
+		"3": {
+			"title": "Likidite Sağlama",
+			"description": "Havuzlara likidite sağlayarak işlem ücretleri kazanın"
+		},
+		"4": {
+			"title": "Pasif Gelir",
+			"description": "Protokol gelir payı kazanmak için SUSHI'yi xSUSHI olarak stake edin"
+		},
+		"5": {
+			"title": "Token Streaming",
+			"description": "Bordro, vesting programları ve hibeler için Furo kullanın"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "SushiSwap nedir ve Uniswap'tan farkı nedir?",
+			"answer": "SushiSwap bir Uniswap fork'u olarak başladı ancak farklı bir çoklu zincir platformuna evrildi. Temel farklar şunlardır: 30+ zincir desteği (Uniswap'ın daha azına karşılık), SushiXSwap aracılığıyla zincirler arası takaslar, gelir paylaşımlı SUSHI token'ı ve topluluk öncelikli yönetim modeli. Her ikisi de AMM mekanikleri kullanır ancak önemli ölçüde ayrışmıştır."
+		},
+		"2": {
+			"question": "xSUSHI nedir ve staking nasıl çalışır?",
+			"answer": "xSUSHI, SUSHI'nin stake edilmiş versiyonudur. SUSHI'yi SushiBar'da stake ettiğinizde, protokol ücretleri biriktikçe değeri artan xSUSHI alırsınız. Tüm işlem ücretlerinin bir kısmı SUSHI satın almak ve xSUSHI sahiplerine dağıtmak için kullanılır. İstediğiniz zaman stake'inizi kaldırarak SUSHI'nizi ve kazanılmış ödüllerinizi alabilirsiniz."
+		},
+		"3": {
+			"question": "SushiXSwap zincirler arası takas nasıl çalışır?",
+			"answer": "SushiXSwap, zincirler arası takasları etkinleştirmek için Stargate ve Axelar gibi köprü protokollerini kullanır. Bir zincirdeki token'ı tek işlemde başka bir zincirdeki farklı bir token için takas edebilirsiniz. Sistem köprü kurma, her iki zincirde takas yapma ve nihai token'ı cüzdanınıza teslim etme işlemlerini halleder."
+		},
+		"4": {
+			"question": "SushiSwap kullanmak güvenli mi?",
+			"answer": "SushiSwap 2020'den beri birden fazla güvenlik denetimiyle faaliyet göstermektedir. Ancak, tüm DeFi'lerde olduğu gibi, akıllı sözleşme hataları, kalıcı kayıp, zincirler arası özellikler için köprü güvenlik açıkları ve token'a özgü riskler dahil olmak üzere riskler mevcuttur. Protokolün geçmişte güvenlik olayları yaşandı, bu nedenle her zaman dikkatli olun."
+		},
+		"5": {
+			"question": "Sushi'nin liderliğine ne oldu?",
+			"answer": "Sushi'nin çalkantılı bir yönetim geçmişi var. Başlangıçta takma adla başlatıldı, merkezi liderlik, hazine anlaşmazlıkları ve yeniden yapılanma dönemlerinden geçti. Bugün seçilmiş liderlikle bir DAO olarak faaliyet göstermektedir. Protokol bu zorluklara rağmen gelişmeye ve genişlemeye devam ediyor."
+		}
+	},
+	"cta": {
+		"ready": "Zincirler arası işlem yapmaya hazır mısınız?",
+		"button": "SushiSwap'ı Aç",
+		"note": "Topluluk odaklı çoklu zincir DEX"
+	}
+}

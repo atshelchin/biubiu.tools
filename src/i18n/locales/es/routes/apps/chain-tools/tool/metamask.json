@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "MetaMask - Billetera Cripto Líder | Acceso a DeFi, NFTs y Web3",
+		"description": "Explora MetaMask, la billetera cripto de autocustodia líder. Accede a protocolos DeFi, mercados NFT y aplicaciones Web3 en Ethereum y cadenas compatibles con EVM.",
+		"keywords": "MetaMask, billetera cripto, billetera Ethereum, Web3, DeFi, NFT, extensión de navegador, billetera móvil"
+	},
+	"overview": "MetaMask es la billetera cripto de autocustodia más popular del mundo, permitiendo a los usuarios acceder a aplicaciones descentralizadas en Ethereum y blockchains compatibles con EVM. Creada por Aaron Davis y Dan Finlay en ConsenSys en 2016, MetaMask fue pionera en el concepto de billetera como extensión de navegador que hizo Web3 accesible para usuarios convencionales.\n\nDisponible como extensión de navegador para Chrome, Firefox, Brave y Edge, además de aplicaciones móviles para iOS y Android, MetaMask sirve a más de 30 millones de usuarios activos mensuales. La billetera permite a los usuarios almacenar ETH y tokens ERC-20, interactuar con dApps, intercambiar tokens, comprar cripto con moneda fiat y gestionar NFTs. MetaMask Snaps permite que extensiones de terceros añadan funcionalidad como soporte para cadenas no-EVM.\n\nMetaMask se ha convertido en el estándar de facto para autenticación Web3, con la mayoría de dApps usando 'Conectar con MetaMask' como su método principal de inicio de sesión. La billetera genera ingresos a través de tarifas de intercambio (0.875%) y asociaciones de rampa de entrada. Como la puerta de entrada a DeFi, NFTs y Web3 para millones de usuarios, MetaMask sigue siendo infraestructura esencial en el ecosistema Ethereum.",
+	"features": {
+		"1": {
+			"title": "Soporte Multi-Cadena",
+			"description": "Conéctate a Ethereum, Polygon, Arbitrum, Optimism, BSC y cientos de cadenas EVM"
+		},
+		"2": {
+			"title": "Intercambios en la App",
+			"description": "Intercambia tokens directamente en la billetera con cotizaciones agregadas de múltiples DEXs"
+		},
+		"3": {
+			"title": "Gestión de NFT",
+			"description": "Visualiza, envía y gestiona colecciones NFT en redes compatibles"
+		},
+		"4": {
+			"title": "Billetera Hardware",
+			"description": "Conecta billeteras hardware Ledger y Trezor para mayor seguridad"
+		},
+		"5": {
+			"title": "MetaMask Snaps",
+			"description": "Extiende funcionalidad con plugins de terceros para cadenas no-EVM y características"
+		},
+		"6": {
+			"title": "Vista de Portafolio",
+			"description": "Rastrea tus tenencias en cadenas con el panel de portafolio integrado"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Acceso DeFi",
+			"description": "Conéctate a protocolos de préstamos, DEX y rendimiento en Ethereum y L2s"
+		},
+		"2": {
+			"title": "Comercio NFT",
+			"description": "Compra, vende y gestiona NFTs en OpenSea, Blur y otros mercados"
+		},
+		"3": {
+			"title": "Intercambio de Tokens",
+			"description": "Comercia tokens con tasas competitivas mediante agregación DEX integrada"
+		},
+		"4": {
+			"title": "Inicio de Sesión Web3",
+			"description": "Inicia sesión en dApps y sitios web usando tu dirección de billetera"
+		},
+		"5": {
+			"title": "Cross-Chain",
+			"description": "Transfiere activos e interactúa con apps en múltiples redes EVM"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es MetaMask y es seguro?",
+			"answer": "MetaMask es una billetera cripto de autocustodia, lo que significa que tú controlas tus claves privadas, no MetaMask o ConsenSys. Generalmente se considera segura cuando se usa correctamente: habilita protección con contraseña, nunca compartas tu Frase de Recuperación Secreta, verifica los detalles de las transacciones antes de firmar y ten cuidado con sitios de phishing. Los principales riesgos son errores del usuario (perder la frase semilla, firmar transacciones maliciosas) en lugar de vulnerabilidades del software."
+		},
+		"2": {
+			"question": "¿Cómo agrego una nueva red a MetaMask?",
+			"answer": "Haz clic en el menú desplegable de red en la parte superior, luego 'Agregar Red'. Puedes agregar redes populares como Polygon o Arbitrum con un clic, o ingresar manualmente detalles RPC para otras cadenas. Sitios como Chainlist.org proporcionan configuraciones de red verificadas que puedes agregar automáticamente. Siempre verifica las URLs RPC de fuentes oficiales para evitar conectarte a nodos maliciosos."
+		},
+		"3": {
+			"question": "¿Qué son MetaMask Snaps?",
+			"answer": "Snaps son extensiones de terceros que agregan funcionalidad a MetaMask. Pueden habilitar soporte para cadenas no-EVM (como Bitcoin, Solana, Cosmos), agregar nuevos conocimientos de transacciones, proporcionar notificaciones personalizadas y más. Los Snaps se ejecutan en entornos aislados por seguridad. Los instalas desde el directorio MetaMask Snaps, y cada Snap solicita permisos específicos que debes aprobar."
+		},
+		"4": {
+			"question": "¿Por qué mis transacciones están atascadas o fallan?",
+			"answer": "Causas comunes: precio de gas demasiado bajo (aumenta el gas), problemas de nonce (reinicia la cuenta en configuración), congestión de red (espera o acelera), o errores de contrato inteligente (verifica la dApp). Para transacciones atascadas, puedes 'Acelerar' (pagar más gas) o 'Cancelar' (enviar 0 ETH a ti mismo con el mismo nonce). La pestaña de actividad de MetaMask muestra transacciones pendientes que puedes gestionar."
+		},
+		"5": {
+			"question": "¿Cómo gana dinero MetaMask?",
+			"answer": "MetaMask gana a través de tarifas de intercambio (0.875% en intercambios de tokens en la app a través de MetaMask Swaps), asociaciones de rampa de entrada (tarifas de compras de fiat a cripto a través de proveedores como MoonPay/Transak) y servicios MetaMask Institutional para organizaciones. La funcionalidad principal de la billetera es gratuita; solo pagas tarifas de gas de red para transacciones."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para explorar Web3?",
+		"button": "Abrir MetaMask",
+		"note": "La billetera cripto de autocustodia líder"
+	}
+}

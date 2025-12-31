@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Rocket Pool - Staking Ethereum Terdesentralisasi | Token Liquid Staking rETH",
+		"description": "Temukan Rocket Pool, protokol staking Ethereum terdesentralisasi. Stake jumlah ETH berapa pun untuk rETH, atau jalankan node dengan hanya 8 ETH. Trustless dan permissionless.",
+		"keywords": "Rocket Pool, rETH, Ethereum staking, liquid staking, node operator, terdesentralisasi, RPL"
+	},
+	"overview": "Rocket Pool adalah protokol staking Ethereum terdesentralisasi terkemuka, menawarkan liquid staking (rETH) dan operasi node permissionless. Didirikan oleh David Rugendyke pada tahun 2016, Rocket Pool adalah salah satu solusi liquid staking pertama dan tetap menjadi alternatif paling terdesentralisasi untuk penyedia staking terpusat.\n\nProtokol ini bekerja pada dua sisi: pengguna reguler dapat mempertaruhkan jumlah ETH apa pun dan menerima rETH, token liquid staking yang nilainya meningkat seiring akumulasi reward staking. Operator node dapat menjalankan validator hanya dengan 8 ETH (vs 32 ETH solo staking) dengan mengikat token RPL dan dipadankan dengan ETH depositor.\n\nPembeda utama Rocket Pool adalah desentralisasi sejati—siapa pun dapat menjalankan node tanpa izin, dan protokol tidak bergantung pada kumpulan operator terpusat. Oracle DAO menyediakan feed harga dan mengelola operasi protokol. Dengan ribuan operator node independen di seluruh dunia, Rocket Pool menawarkan opsi staking paling tahan sensor untuk Ethereum.",
+	"features": {
+		"1": {
+			"title": "rETH Liquid Staking",
+			"description": "Stake jumlah ETH berapa pun dan terima rETH yang mengakumulasi reward staking secara otomatis"
+		},
+		"2": {
+			"title": "8 ETH Minipools",
+			"description": "Jalankan validator hanya dengan 8 ETH dengan dipadankan dengan depositor protokol"
+		},
+		"3": {
+			"title": "Node Permissionless",
+			"description": "Siapa pun dapat menjadi operator node tanpa persetujuan—benar-benar terdesentralisasi"
+		},
+		"4": {
+			"title": "RPL Collateral",
+			"description": "Operator node mengikat RPL sebagai asuransi, mendapatkan reward RPL atas stake mereka"
+		},
+		"5": {
+			"title": "Smoothing Pool",
+			"description": "Pool opt-in yang mensosialisasikan MEV dan biaya prioritas di antara node yang berpartisipasi"
+		},
+		"6": {
+			"title": "Oracle DAO",
+			"description": "Jaringan oracle terdesentralisasi untuk penetapan harga rETH dan operasi protokol"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid ETH Staking",
+			"description": "Stake ETH tanpa lockup—gunakan rETH di DeFi sambil mendapatkan reward staking"
+		},
+		"2": {
+			"title": "Operasi Node Rumah",
+			"description": "Jalankan validator Ethereum di rumah dengan persyaratan modal yang lebih rendah"
+		},
+		"3": {
+			"title": "Kolateral DeFi",
+			"description": "Gunakan rETH sebagai kolateral di Aave, Maker, dan protokol lending lainnya"
+		},
+		"4": {
+			"title": "Staking Terdesentralisasi",
+			"description": "Dukung desentralisasi Ethereum dengan memilih protokol yang benar-benar permissionless"
+		},
+		"5": {
+			"title": "RPL Staking",
+			"description": "Ikat RPL sebagai operator node untuk mendapatkan yield staking yang ditingkatkan"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Rocket Pool dan bagaimana rETH bekerja?",
+			"answer": "Rocket Pool adalah protokol staking terdesentralisasi. Ketika Anda menyetor ETH, Anda menerima rETH—token yang mewakili ETH yang dipertaruhkan ditambah reward yang terakumulasi. Nilai rETH meningkat dari waktu ke waktu relatif terhadap ETH seiring reward staking terakumulasi. Anda dapat menukar rETH kembali ke ETH kapan saja melalui protokol atau DEX. ETH dipertaruhkan oleh ribuan operator node independen."
+		},
+		"2": {
+			"question": "Bagaimana Rocket Pool berbeda dari Lido?",
+			"answer": "Perbedaan utamanya adalah desentralisasi. Rocket Pool memungkinkan siapa pun menjalankan node secara permissionless dengan 8 ETH, sementara Lido menggunakan kumpulan operator profesional yang dikurasi. Rocket Pool memiliki ribuan operator node independen secara global, membuatnya lebih tahan sensor. Lido lebih besar dari segi TVL tetapi lebih terpusat dalam operasi validator."
+		},
+		"3": {
+			"question": "Apa itu RPL dan mengapa operator node membutuhkannya?",
+			"answer": "RPL adalah token governance dan utility Rocket Pool. Operator node harus mengikat RPL senilai setidaknya 10% dari ETH yang dipinjam sebagai asuransi terhadap slashing. Sebagai imbalannya, mereka mendapatkan reward inflasi RPL di atas reward staking ETH. RPL juga memberikan hak voting dalam governance protokol."
+		},
+		"4": {
+			"question": "Bisakah saya menjalankan node Rocket Pool di rumah?",
+			"answer": "Ya! Rocket Pool dirancang untuk staker rumahan. Anda memerlukan minimal 8 ETH, RPL untuk kolateral, komputer yang memenuhi persyaratan hardware, dan koneksi internet yang stabil. Software Smartnode menyederhanakan pengaturan. Banyak operator node berjalan di hardware konsumen di rumah, berkontribusi pada desentralisasi geografis Ethereum."
+		},
+		"5": {
+			"question": "Apa risiko rETH?",
+			"answer": "Risiko termasuk: kerentanan smart contract, peristiwa slashing (dikurangi oleh asuransi RPL), harga rETH menyimpang dari nilai wajar di DEX, risiko oracle di Oracle DAO, dan risiko staking umum seperti bug client. Rocket Pool telah diaudit secara ekstensif dan memiliki program bug bounty."
+		}
+	},
+	"cta": {
+		"ready": "Siap stake ETH secara terdesentralisasi?",
+		"button": "Buka Rocket Pool",
+		"note": "Liquid staking Ethereum terdesentralisasi"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Yearn Finance - Trình Tổng Hợp Lợi Nhuận DeFi | Vault Tự Động Gộp",
+		"description": "Khám phá Yearn Finance, trình tổng hợp lợi nhuận hàng đầu. Gửi tài sản vào Vault để tự động kiếm lợi nhuận DeFi tối ưu mà không cần quản lý thủ công.",
+		"keywords": "Yearn Finance, YFI, yield aggregator, vaults, DeFi, auto-compound, tối ưu hóa lợi nhuận"
+	},
+	"overview": "Yearn Finance là giao thức tổng hợp lợi nhuận phi tập trung tự động hóa các chiến lược yield farming DeFi. Được thành lập bởi Andre Cronje vào đầu năm 2020, Yearn đã tiên phong khái niệm \"Vaults\"—smart contract tự động triển khai tài sản được gửi trên nhiều giao thức DeFi khác nhau để tối đa hóa lợi nhuận.\n\nSản phẩm cốt lõi là Yearn Vaults (yVaults), nơi người dùng gửi tài sản và các chiến lược của giao thức tự động farm lợi nhuận tốt nhất, gộp phần thưởng và cân bằng lại vị thế. Điều này tiết kiệm cho người dùng việc di chuyển tiền thủ công, trả gas cho việc thu hoạch và liên tục nghiên cứu các chiến lược tối ưu. Các chiến lược vault được phát triển bởi các chuyên gia chiến lược kiếm một phần lợi nhuận được tạo ra.\n\nYearn V3 đã giới thiệu kiến trúc vault mô-đun, cho phép triển khai chiến lược linh hoạt hơn và quản lý rủi ro tốt hơn. Token YFI được sử dụng cho quản trị, với veYFI cho phép chủ sở hữu token bỏ phiếu về các quyết định giao thức. Yearn đã trở thành cơ sở hạ tầng DeFi nền tảng, với các chiến lược và kiến trúc của nó ảnh hưởng đến nhiều giao thức lợi nhuận tiếp theo.",
+	"features": {
+		"1": {
+			"title": "Vault Tự Động",
+			"description": "Gửi tài sản và kiếm lợi nhuận tối ưu tự động—không cần quản lý thủ công"
+		},
+		"2": {
+			"title": "Tối Ưu Hóa Chiến Lược",
+			"description": "Các chuyên gia chiến lược liên tục phát triển và cải thiện chiến lược lợi nhuận"
+		},
+		"3": {
+			"title": "Tự Động Gộp",
+			"description": "Phần thưởng được tự động thu hoạch và tái đầu tư để tăng trưởng gộp"
+		},
+		"4": {
+			"title": "Chiến Lược Đa Giao Thức",
+			"description": "Chiến lược triển khai trên Aave, Compound, Curve và nhiều giao thức khác để có lợi nhuận tối ưu"
+		},
+		"5": {
+			"title": "Kiến Trúc Mô-Đun V3",
+			"description": "Thiết kế vault linh hoạt với nhiều chiến lược mỗi vault và cách ly rủi ro tốt hơn"
+		},
+		"6": {
+			"title": "Quản Trị veYFI",
+			"description": "Khóa YFI để bỏ phiếu về quyết định giao thức và phát thải gauge"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Kiếm Lợi Nhuận Thụ Động",
+			"description": "Gửi stablecoin hoặc crypto và kiếm lợi nhuận tối ưu mà không cần nỗ lực"
+		},
+		"2": {
+			"title": "DeFi Đơn Giản Hóa",
+			"description": "Truy cập các chiến lược lợi nhuận phức tạp qua gửi vault đơn giản"
+		},
+		"3": {
+			"title": "Tối Ưu Hóa Gas",
+			"description": "Chia sẻ chi phí gas cho việc thu hoạch và gộp với những người gửi vault khác"
+		},
+		"4": {
+			"title": "Phát Triển Chiến Lược",
+			"description": "Các chuyên gia chiến lược có thể xây dựng và triển khai chiến lược để kiếm phí hiệu suất"
+		},
+		"5": {
+			"title": "Tích Hợp Giao Thức",
+			"description": "Các giao thức khác tích hợp yVaults để có lợi nhuận tự động trên ngân khố của họ"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Yearn Finance là gì và Vault hoạt động như thế nào?",
+			"answer": "Yearn là trình tổng hợp lợi nhuận nơi bạn gửi tài sản vào Vault. Mỗi Vault có các chiến lược tự động triển khai tiền của bạn trên các giao thức DeFi (Aave, Compound, Curve, v.v.) để kiếm lợi nhuận. Phần thưởng được tự động gộp lại và chiến lược được tối ưu hóa bởi chuyên gia. Bạn nhận yToken đại diện cho phần của bạn trong vault."
+		},
+		"2": {
+			"question": "Yearn tính phí bao nhiêu?",
+			"answer": "Vault Yearn V3 thường tính phí hiệu suất 10% trên lợi nhuận được tạo ra (không phải trên vốn gốc). Một số vault có thể có phí quản lý. Phí tài trợ cho phát triển giao thức và phần thưởng cho chuyên gia chiến lược. Hầu hết vault không có phí gửi hoặc rút tiền."
+		},
+		"3": {
+			"question": "Yearn có an toàn để sử dụng không?",
+			"answer": "Yearn đã hoạt động từ năm 2020 với nhiều cuộc kiểm toán và thành tích bảo mật mạnh mẽ. Tuy nhiên, rủi ro bao gồm lỗ hổng smart contract trong Yearn và các giao thức cơ bản, rủi ro chiến lược và khả năng thua lỗ trong điều kiện thị trường cực đoan. Vault Yearn không được bảo hiểm—chỉ gửi số tiền bạn có thể chấp nhận mất."
+		},
+		"4": {
+			"question": "YFI và veYFI là gì?",
+			"answer": "YFI là token quản trị của Yearn với nguồn cung cố định là 36,666. veYFI (vote-escrowed YFI) có được bằng cách khóa YFI trong tối đa 4 năm. Chủ sở hữu veYFI có thể bỏ phiếu về đề xuất quản trị, hướng phát thải gauge đến các vault cụ thể và kiếm phí giao thức. Khóa lâu hơn cung cấp quyền bỏ phiếu nhiều hơn."
+		},
+		"5": {
+			"question": "Sự khác biệt giữa Yearn V2 và V3 là gì?",
+			"answer": "V3 giới thiệu kiến trúc vault mô-đun nơi mỗi vault có thể có nhiều chiến lược dễ dàng thêm hoặc xóa. Điều này cải thiện quản lý rủi ro, cho phép kiểm soát chi tiết hơn và cho phép các loại vault mới. V3 cũng có hiệu quả gas được cải thiện và tích hợp tốt hơn với các giao thức khác."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng kiếm lợi nhuận tối ưu?",
+		"button": "Mở Yearn",
+		"note": "Tối ưu hóa lợi nhuận tự động cho crypto của bạn"
+	}
+}

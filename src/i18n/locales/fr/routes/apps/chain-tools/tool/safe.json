@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Safe - Portefeuille Multi-Signature | Gestion Sécurisée des Actifs Numériques",
+		"description": "Explorez Safe (anciennement Gnosis Safe), le portefeuille multi-signature leader. Sécurisez les actifs numériques avec des seuils d'approbation personnalisables et sécurité de smart contract.",
+		"keywords": "Safe, Gnosis Safe, multisig, portefeuille multi-signature, trésorerie DAO, portefeuille smart contract, sécurité crypto"
+	},
+	"overview": "Safe (anciennement Gnosis Safe) est le portefeuille smart contract standard de l'industrie pour sécuriser les actifs numériques. Initialement développé par l'équipe Gnosis et lancé en 2018, Safe est devenu la solution la plus fiable pour les DAOs, protocoles et institutions gérant des trésoreries crypto.\n\nContrairement aux portefeuilles traditionnels contrôlés par une seule clé privée, Safe utilise la sécurité multi-signature (multisig) nécessitant plusieurs approbations pour les transactions. Vous configurez M-sur-N signataires—par exemple, 3-sur-5 signifie que 3 des 5 signataires désignés doivent approuver. Cela élimine les points uniques de défaillance: aucune personne ne peut déplacer des fonds unilatéralement. Safe supporte également les limites de dépenses, le regroupement de transactions et les extensions modulaires.\n\nSafe a sécurisé plus de 100 milliards de dollars d'actifs à travers 10+ millions de transactions. Les protocoles majeurs comme Uniswap, Aave, ENS et d'innombrables DAOs utilisent Safe pour la gestion de trésorerie. L'écosystème Safe inclut Safe{Wallet} (interface utilisateur), Safe{Core} (infrastructure de compte intelligent pour développeurs) et intégration avec portefeuilles matériels, apps mobiles et constructeurs de transactions. Safe représente l'évolution des portefeuilles EOA vers les comptes intelligents programmables.",
+	"features": {
+		"1": {
+			"title": "Sécurité Multi-Sig",
+			"description": "Nécessitez plusieurs approbations (ex: 3-sur-5) pour les transactions—pas de point unique de défaillance"
+		},
+		"2": {
+			"title": "Regroupement de Transactions",
+			"description": "Regroupez plusieurs transactions en une, économisant le gas et permettant des opérations complexes"
+		},
+		"3": {
+			"title": "Limites de Dépenses",
+			"description": "Définissez des allocations pour les signataires pour dépenser jusqu'à des limites sans approbation complète"
+		},
+		"4": {
+			"title": "Multi-Chain",
+			"description": "Déployez Safe sur Ethereum, Polygon, Arbitrum, Optimism et autres blockchains EVM"
+		},
+		"5": {
+			"title": "Safe Apps",
+			"description": "Interagissez avec les protocoles DeFi directement depuis Safe via des apps intégrées"
+		},
+		"6": {
+			"title": "Options de Récupération",
+			"description": "Configurez des gardiens et mécanismes de récupération pour la récupération de compte"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trésorerie DAO",
+			"description": "Gérez les fonds communautaires avec gouvernance multisig transparente"
+		},
+		"2": {
+			"title": "Propriété de Protocole",
+			"description": "Contrôlez les clés admin de smart contract avec signature distribuée"
+		},
+		"3": {
+			"title": "Portefeuilles d'Équipe",
+			"description": "Sécurisez la crypto d'entreprise avec approbation de plusieurs membres de l'équipe"
+		},
+		"4": {
+			"title": "Sécurité Personnelle",
+			"description": "Protégez les avoirs personnels avec portefeuille matériel + téléphone + signataire de secours"
+		},
+		"5": {
+			"title": "Fonds d'Investissement",
+			"description": "Gérez les actifs de fonds avec protection des investisseurs via multisig"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Safe et en quoi diffère-t-il de MetaMask?",
+			"answer": "Safe est un portefeuille smart contract nécessitant plusieurs signatures (multisig) pour les transactions. MetaMask est une EOA (compte de propriété externe) contrôlé par une seule clé privée. Si vous perdez votre seed phrase MetaMask ou elle est volée, les fonds sont perdus. Avec Safe, vous avez besoin de plusieurs signataires pour approuver—même si une clé est compromise, les fonds sont protégés. Safe est pour les cas d'usage haute sécurité; MetaMask est pour les transactions quotidiennes."
+		},
+		"2": {
+			"question": "Comment configurer un multisig Safe?",
+			"answer": "Allez sur safe.global, connectez votre portefeuille et cliquez 'Créer Safe'. Choisissez un réseau (Ethereum, Polygon, etc.), ajoutez des adresses de signataires (portefeuilles qui peuvent approuver les transactions) et définissez le seuil (combien doivent signer). Par exemple, ajoutez 5 signataires avec un seuil de 3-sur-5. Vous paierez du gas pour déployer le smart contract Safe. Ensuite transférez les actifs vers votre nouvelle adresse Safe."
+		},
+		"3": {
+			"question": "Que se passe-t-il si je perds l'accès à un signataire?",
+			"answer": "Si vous perdez un signataire mais avez encore assez pour atteindre le seuil, vous pouvez proposer une transaction pour remplacer le signataire perdu par une nouvelle adresse. Les signataires restants approuvent, et le Safe se met à jour. C'est pourquoi le seuil devrait être inférieur au total de signataires (ex: 3-sur-5, pas 5-sur-5). Avec une configuration appropriée, perdre un appareil ou une clé ne signifie pas perdre les fonds."
+		},
+		"4": {
+			"question": "Safe est-il uniquement pour les DAOs et équipes?",
+			"answer": "Safe est populaire auprès des DAOs mais fonctionne aussi pour la sécurité personnelle. Les individus utilisent Safe avec des configurations 2-sur-3: portefeuille matériel + téléphone + sauvegarde (papier ou personne de confiance). Cela protège contre la perte d'un appareil ou le vol d'une seule clé. Le surcoût de plusieurs signatures en vaut la peine pour des avoirs importants. De nombreux individus crypto-natifs utilisent Safe pour le stockage à froid."
+		},
+		"5": {
+			"question": "Qu'est-ce que les Safe Apps et Safe Modules?",
+			"answer": "Les Safe Apps sont des dApps intégrées dans l'interface Safe—vous pouvez interagir avec Uniswap, Aave, etc. directement depuis Safe sans changer de contexte. Les Safe Modules sont des extensions qui ajoutent des fonctionnalités: limites de dépenses (module d'allocation), paiements récurrents, mécanismes de récupération, etc. Cette modularité fait de Safe une plateforme programmable, pas juste un portefeuille."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à sécuriser vos actifs?",
+		"button": "Ouvrir Safe",
+		"note": "Le portefeuille smart contract standard de l'industrie"
+	}
+}

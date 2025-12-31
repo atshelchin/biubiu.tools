@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Dune Analytics - Piattaforma Dati Blockchain | Interroga e Visualizza Dati On-Chain",
+		"description": "Scopri Dune, la principale piattaforma di analytics blockchain. Scrivi query SQL, costruisci dashboard ed esplora dati on-chain su Ethereum, Bitcoin e 40+ chain.",
+		"keywords": "Dune Analytics, dati blockchain, SQL, dashboard, analytics on-chain, analytics DeFi, dati crypto"
+	},
+	"overview": "Dune è la principale piattaforma di analytics blockchain guidata dalla comunità che consente a chiunque di interrogare, visualizzare e condividere dati on-chain. Fondata da Fredrik Haga e Mats Olsen nel 2018, Dune ha democratizzato l'analisi dei dati blockchain rendendola accessibile tramite query SQL senza richiedere competenze di data engineering.\n\nLa piattaforma fornisce dati blockchain decodificati e leggibili dall'uomo su 40+ network inclusi Ethereum, Bitcoin, Solana, Polygon e Layer 2. Gli utenti scrivono query SQL (usando DuneSQL) per analizzare qualsiasi cosa, dalle metriche dei protocolli DeFi ai pattern di trading NFT, quindi creano visualizzazioni e dashboard condivisibili. Lo Spellbook, il livello di trasformazione open-source di Dune, fornisce dataset pre-costruiti per esigenze analitiche comuni.\n\nDune è diventata un'infrastruttura essenziale per la ricerca crypto, con migliaia di analisti che creano dashboard pubbliche utilizzate da protocolli, investitori e giornalisti. La piattaforma combina dati blockchain grezzi con eventi di contratti decodificati, rendendo accessibile a chiunque conosca SQL l'analisi on-chain complessa.",
+	"features": {
+		"1": {
+			"title": "Query SQL",
+			"description": "Scrivi query DuneSQL per analizzare dati blockchain decodificati da 40+ network"
+		},
+		"2": {
+			"title": "Dashboard Visive",
+			"description": "Crea e condividi dashboard interattive con grafici, tabelle e metriche"
+		},
+		"3": {
+			"title": "Spellbook",
+			"description": "Dataset pre-costruiti per analytics comuni come scambi DEX, vendite NFT, bridge"
+		},
+		"4": {
+			"title": "Dati in Tempo Reale",
+			"description": "Accedi a dati blockchain quasi in tempo reale con aggiornamenti automatici"
+		},
+		"5": {
+			"title": "Accesso API",
+			"description": "Accedi programmaticamente ai risultati delle query per integrazione nelle applicazioni"
+		},
+		"6": {
+			"title": "Query della Comunità",
+			"description": "Forka e impara da migliaia di query e dashboard pubbliche"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Analytics di Protocollo",
+			"description": "Traccia TVL, volume, utenti e metriche per protocolli DeFi"
+		},
+		"2": {
+			"title": "Analisi Wallet",
+			"description": "Ricerca wallet whale, traccia smart money e analizza pattern di trading"
+		},
+		"3": {
+			"title": "Ricerca Token",
+			"description": "Analizza distribuzione token, comportamento dei possessori e pattern di trasferimento"
+		},
+		"4": {
+			"title": "Analytics NFT",
+			"description": "Traccia vendite NFT, floor price, statistiche possessori e metriche collezioni"
+		},
+		"5": {
+			"title": "Ricerca Ecosistema",
+			"description": "Confronta L2, traccia utilizzo gas e analizza trend di attività di rete"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Dune e per chi è?",
+			"answer": "Dune è una piattaforma di analytics blockchain dove gli utenti interrogano dati on-chain usando SQL e creano dashboard visive. È per chiunque analizzi crypto: ricercatori che tracciano protocolli, trader che cercano alpha, protocolli che monitorano le loro metriche, giornalisti che investigano eventi on-chain e sviluppatori che costruiscono prodotti dati. La conoscenza base di SQL è utile ma non richiesta—puoi iniziare forkando query esistenti."
+		},
+		"2": {
+			"question": "Quali dati sono disponibili su Dune?",
+			"answer": "Dune fornisce dati decodificati da 40+ blockchain inclusi Ethereum, Bitcoin, Solana e principali L2. I dati includono transazioni grezze, eventi di contratti decodificati (es. swap Uniswap, depositi Aave), trasferimenti token, scambi NFT e altro. Lo Spellbook fornisce tabelle di livello superiore come scambi DEX attraverso tutti i protocolli, rendendo più semplice l'analisi complessa."
+		},
+		"3": {
+			"question": "Dune è gratuito?",
+			"answer": "Dune ha un tier gratuito che consente query e dashboard pubbliche con alcune limitazioni su esecuzione query e freschezza dati. I piani a pagamento (Plus, Pro, Enterprise) offrono query private, esecuzione più veloce, più crediti, accesso API e funzionalità aggiuntive. Molti utenti iniziano gratuitamente e aggiornano man mano che le esigenze crescono."
+		},
+		"4": {
+			"question": "Cos'è lo Spellbook?",
+			"answer": "Spellbook è il livello di trasformazione open-source di Dune (costruito con dbt). Contiene modelli SQL mantenuti dalla comunità che trasformano dati blockchain grezzi in tabelle utili—come dex.trades (tutti gli scambi DEX), nft.trades (vendite NFT), saldi erc20, ecc. Chiunque può contribuire nuovi spell e sono liberamente disponibili a tutti gli utenti Dune."
+		},
+		"5": {
+			"question": "Come imparo a usare Dune?",
+			"answer": "Inizia esplorando dashboard popolari e forkando query per capire come funzionano. Dune offre documentazione, tutorial e una comunità Discord per aiuto. OurNetwork è una risorsa di apprendimento popolare. Le competenze SQL di base si trasferiscono direttamente—se conosci SELECT, JOIN e GROUP BY, puoi analizzare dati blockchain su Dune."
+		}
+	},
+	"cta": {
+		"ready": "Pronto ad analizzare dati on-chain?",
+		"button": "Apri Dune",
+		"note": "Analytics blockchain guidata dalla comunità"
+	}
+}

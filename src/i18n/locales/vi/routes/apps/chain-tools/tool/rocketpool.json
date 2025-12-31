@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Rocket Pool - Staking Ethereum Phi tập trung | Token Liquid Staking rETH",
+		"description": "Khám phá Rocket Pool, giao thức staking Ethereum phi tập trung. Stake bất kỳ số lượng ETH nào cho rETH, hoặc chạy node với chỉ 8 ETH. Trustless và permissionless.",
+		"keywords": "Rocket Pool, rETH, Ethereum staking, liquid staking, node operator, phi tập trung, RPL"
+	},
+	"overview": "Rocket Pool là giao thức staking Ethereum phi tập trung hàng đầu, cung cấp cả liquid staking (rETH) và vận hành node permissionless. Được thành lập bởi David Rugendyke vào năm 2016, Rocket Pool là một trong những giải pháp liquid staking đầu tiên và vẫn là lựa chọn phi tập trung nhất so với các nhà cung cấp staking tập trung.\n\nGiao thức hoạt động ở hai phía: người dùng thông thường có thể stake bất kỳ số lượng ETH nào và nhận rETH, một token liquid staking tăng giá trị khi phần thưởng staking tích lũy. Các node operator có thể chạy validator với chỉ 8 ETH (so với 32 ETH solo staking) bằng cách bond token RPL và được ghép cặp với ETH của người gửi tiền.\n\nĐiểm khác biệt chính của Rocket Pool là phi tập trung thực sự—bất kỳ ai cũng có thể chạy node mà không cần xin phép, và giao thức không phụ thuộc vào một tập hợp operator tập trung. Oracle DAO cung cấp price feeds và quản lý các hoạt động giao thức. Với hàng nghìn node operator độc lập trên toàn thế giới, Rocket Pool cung cấp tùy chọn staking chống kiểm duyệt nhất cho Ethereum.",
+	"features": {
+		"1": {
+			"title": "rETH Liquid Staking",
+			"description": "Stake bất kỳ số lượng ETH nào và nhận rETH tự động tích lũy phần thưởng staking"
+		},
+		"2": {
+			"title": "8 ETH Minipools",
+			"description": "Chạy validator với chỉ 8 ETH bằng cách được ghép cặp với người gửi tiền của giao thức"
+		},
+		"3": {
+			"title": "Permissionless Nodes",
+			"description": "Bất kỳ ai cũng có thể trở thành node operator mà không cần phê duyệt—thực sự phi tập trung"
+		},
+		"4": {
+			"title": "RPL Collateral",
+			"description": "Node operator bond RPL làm bảo hiểm, kiếm phần thưởng RPL trên stake của họ"
+		},
+		"5": {
+			"title": "Smoothing Pool",
+			"description": "Pool tùy chọn xã hội hóa MEV và priority fees giữa các node tham gia"
+		},
+		"6": {
+			"title": "Oracle DAO",
+			"description": "Mạng oracle phi tập trung cho định giá rETH và hoạt động giao thức"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid ETH Staking",
+			"description": "Stake ETH không bị khóa—sử dụng rETH trong DeFi trong khi kiếm phần thưởng staking"
+		},
+		"2": {
+			"title": "Vận hành Node tại Nhà",
+			"description": "Chạy validator Ethereum tại nhà với yêu cầu vốn giảm"
+		},
+		"3": {
+			"title": "Tài sản Thế chấp DeFi",
+			"description": "Sử dụng rETH làm tài sản thế chấp trong Aave, Maker và các giao thức cho vay khác"
+		},
+		"4": {
+			"title": "Staking Phi tập trung",
+			"description": "Hỗ trợ phi tập trung Ethereum bằng cách chọn giao thức thực sự permissionless"
+		},
+		"5": {
+			"title": "RPL Staking",
+			"description": "Bond RPL với tư cách node operator để kiếm lợi suất staking cao hơn"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Rocket Pool là gì và rETH hoạt động như thế nào?",
+			"answer": "Rocket Pool là giao thức staking phi tập trung. Khi bạn gửi ETH, bạn nhận được rETH—một token đại diện cho ETH đã stake của bạn cộng với phần thưởng tích lũy. Giá trị của rETH tăng theo thời gian so với ETH khi phần thưởng staking tích lũy. Bạn có thể hoán đổi rETH trở lại ETH bất kỳ lúc nào qua giao thức hoặc DEX. ETH được stake bởi hàng nghìn node operator độc lập."
+		},
+		"2": {
+			"question": "Rocket Pool khác Lido như thế nào?",
+			"answer": "Sự khác biệt chính là phi tập trung. Rocket Pool cho phép bất kỳ ai chạy node permissionless với 8 ETH, trong khi Lido sử dụng một tập hợp operator chuyên nghiệp được tuyển chọn. Rocket Pool có hàng nghìn node operator độc lập toàn cầu, làm cho nó chống kiểm duyệt hơn. Lido lớn hơn về TVL nhưng tập trung hơn trong vận hành validator."
+		},
+		"3": {
+			"question": "RPL là gì và tại sao node operator cần nó?",
+			"answer": "RPL là token quản trị và tiện ích của Rocket Pool. Node operator phải bond RPL trị giá ít nhất 10% ETH mượn của họ làm bảo hiểm chống slashing. Đổi lại, họ kiếm phần thưởng lạm phát RPL bên cạnh phần thưởng staking ETH. RPL cũng cấp quyền bỏ phiếu trong quản trị giao thức."
+		},
+		"4": {
+			"question": "Tôi có thể chạy node Rocket Pool tại nhà không?",
+			"answer": "Có! Rocket Pool được thiết kế cho các home staker. Bạn cần tối thiểu 8 ETH, RPL cho tài sản thế chấp, máy tính đáp ứng yêu cầu phần cứng và kết nối internet ổn định. Phần mềm Smartnode đơn giản hóa việc thiết lập. Nhiều node operator chạy trên phần cứng tiêu dùng tại nhà, góp phần vào phi tập trung địa lý của Ethereum."
+		},
+		"5": {
+			"question": "Rủi ro của rETH là gì?",
+			"answer": "Rủi ro bao gồm: lỗ hổng smart contract, sự kiện slashing (giảm thiểu bởi bảo hiểm RPL), giá rETH lệch khỏi giá trị hợp lý trên DEX, rủi ro oracle trong Oracle DAO, và rủi ro staking chung như lỗi client. Rocket Pool đã được kiểm toán kỹ lưỡng và có chương trình bug bounty."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng stake ETH phi tập trung?",
+		"button": "Mở Rocket Pool",
+		"note": "Liquid staking Ethereum phi tập trung"
+	}
+}

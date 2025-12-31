@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "SushiSwap - DEX Multi-Chain & Platform DeFi | Swap, Earn, Bridge",
+		"description": "Temukan SushiSwap, DEX multi-chain berbasis komunitas. Trading token, sediakan likuiditas, dan akses swap lintas chain di 30+ jaringan.",
+		"keywords": "SushiSwap, Sushi, DEX, multi-chain, DeFi, likuiditas, token SUSHI, cross-chain"
+	},
+	"overview": "SushiSwap adalah bursa terdesentralisasi berbasis komunitas yang telah berkembang dari fork Uniswap menjadi platform DeFi multi-chain yang komprehensif. Diluncurkan pada Agustus 2020 selama \"DeFi Summer,\" Sushi memelopori konsep vampire attack dan insentif liquidity mining yang membentuk kembali cara protokol DeFi bersaing untuk pengguna.\n\nPlatform ini sekarang beroperasi di 30+ jaringan termasuk Ethereum, Arbitrum, Polygon, Avalanche, dan banyak lagi. Selain swap sederhana, Sushi menawarkan concentrated liquidity pools (SushiSwap V3), swap lintas chain melalui SushiXSwap, dan suite lengkap tools DeFi. Token SUSHI digunakan untuk governance dan dapat distake untuk xSUSHI untuk mendapatkan biaya protokol.\n\nSushi telah mengalami evolusi signifikan, melewati berbagai fase kepemimpinan dan restrukturisasi. Saat ini, fokusnya adalah menjadi pengalaman swap multi-chain terbaik dengan fitur seperti optimisasi rute, perlindungan MEV, dan transaksi lintas chain yang mulus.",
+	"features": {
+		"1": {
+			"title": "Dukungan 30+ Chain",
+			"description": "Trading di Ethereum, Arbitrum, Polygon, Avalanche, BSC, dan banyak jaringan lainnya"
+		},
+		"2": {
+			"title": "SushiXSwap",
+			"description": "Swap lintas chain yang didukung oleh Stargate dan Axelar untuk trading multi-chain yang mulus"
+		},
+		"3": {
+			"title": "Concentrated Liquidity",
+			"description": "Pool V3 dengan rentang harga kustom untuk penyediaan likuiditas yang efisien modal"
+		},
+		"4": {
+			"title": "Optimisasi Rute",
+			"description": "Smart routing menemukan harga terbaik di berbagai sumber likuiditas"
+		},
+		"5": {
+			"title": "xSUSHI Staking",
+			"description": "Stake SUSHI untuk mendapatkan bagian dari biaya trading protokol"
+		},
+		"6": {
+			"title": "Furo Streaming",
+			"description": "Solusi token streaming dan vesting untuk payroll dan grant"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading Multi-Chain",
+			"description": "Tukar token di 30+ jaringan dari satu interface"
+		},
+		"2": {
+			"title": "Swap Lintas Chain",
+			"description": "Bridge dan swap dalam satu transaksi dengan SushiXSwap"
+		},
+		"3": {
+			"title": "Penyediaan Likuiditas",
+			"description": "Dapatkan biaya trading dengan menyediakan likuiditas ke pool"
+		},
+		"4": {
+			"title": "Passive Income",
+			"description": "Stake SUSHI untuk xSUSHI guna mendapatkan bagian pendapatan protokol"
+		},
+		"5": {
+			"title": "Token Streaming",
+			"description": "Gunakan Furo untuk payroll, jadwal vesting, dan grant"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu SushiSwap dan apa bedanya dengan Uniswap?",
+			"answer": "SushiSwap dimulai sebagai fork Uniswap tetapi telah berkembang menjadi platform multi-chain yang berbeda. Perbedaan utama meliputi: dukungan untuk 30+ chain (vs Uniswap yang lebih sedikit), swap lintas chain melalui SushiXSwap, token SUSHI dengan revenue sharing, dan model governance yang mengutamakan komunitas. Keduanya menggunakan mekanik AMM tetapi telah berbeda secara signifikan."
+		},
+		"2": {
+			"question": "Apa itu xSUSHI dan bagaimana staking bekerja?",
+			"answer": "xSUSHI adalah versi staked dari SUSHI. Ketika Anda stake SUSHI di SushiBar, Anda menerima xSUSHI yang nilainya meningkat seiring akumulasi biaya protokol. Sebagian dari semua biaya trading digunakan untuk membeli SUSHI dan didistribusikan ke pemegang xSUSHI. Anda dapat unstake kapan saja untuk menerima SUSHI Anda ditambah reward yang didapat."
+		},
+		"3": {
+			"question": "Bagaimana cara kerja swap lintas chain SushiXSwap?",
+			"answer": "SushiXSwap menggunakan protokol bridging seperti Stargate dan Axelar untuk memungkinkan swap lintas chain. Anda dapat menukar token di satu chain untuk token berbeda di chain lain dalam satu transaksi. Sistem menangani bridging, swapping di kedua chain, dan mengirimkan token akhir ke wallet Anda."
+		},
+		"4": {
+			"question": "Apakah SushiSwap aman digunakan?",
+			"answer": "SushiSwap telah beroperasi sejak 2020 dengan berbagai audit keamanan. Namun, seperti semua DeFi, risiko ada termasuk bug smart contract, impermanent loss, kerentanan bridge untuk fitur lintas chain, dan risiko khusus token. Protokol ini telah mengalami insiden keamanan di masa lalu, jadi selalu berhati-hati."
+		},
+		"5": {
+			"question": "Apa yang terjadi dengan kepemimpinan Sushi?",
+			"answer": "Sushi memiliki sejarah governance yang bergejolak. Awalnya diluncurkan secara pseudonim, melewati periode kepemimpinan tersentralisasi, perselisihan treasury, dan restrukturisasi. Saat ini beroperasi sebagai DAO dengan kepemimpinan terpilih. Protokol terus berkembang dan ekspansi meskipun tantangan ini."
+		}
+	},
+	"cta": {
+		"ready": "Siap trading lintas chain?",
+		"button": "Buka SushiSwap",
+		"note": "DEX multi-chain berbasis komunitas"
+	}
+}

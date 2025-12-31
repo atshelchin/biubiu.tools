@@ -23,7 +23,7 @@ export const compoundDetail: ToolDetail = {
 	// Social links
 	socialLinks: {
 		twitter: 'https://twitter.com/compoundfinance',
-		discord: 'https://discord.com/invite/compound',
+		discord: 'https://compound.finance/discord',
 		github: 'https://github.com/compound-finance',
 		docs: 'https://docs.compound.finance'
 	},

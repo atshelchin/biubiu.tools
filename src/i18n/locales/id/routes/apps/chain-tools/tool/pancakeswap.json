@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "PancakeSwap - DEX Multi-Chain Terkemuka | Trading & Earning di BNB Chain",
+		"description": "Temukan PancakeSwap, DEX paling populer di BNB Chain. Trading token, sediakan likuiditas, farming CAKE, dan ikuti IFO di berbagai blockchain.",
+		"keywords": "PancakeSwap, BNB Chain, DEX, CAKE, yield farming, likuiditas, IFO, DeFi"
+	},
+	"overview": "PancakeSwap adalah bursa terdesentralisasi terbesar di BNB Chain dan telah berkembang menjadi DEX multi-chain terkemuka yang mendukung Ethereum, Arbitrum, Base, dan banyak lagi. Diluncurkan pada September 2020, PancakeSwap dengan cepat menjadi platform pilihan bagi pengguna BNB Chain yang ingin menukar token, menyediakan likuiditas, dan mendapatkan hasil.\n\nPlatform ini menawarkan pengalaman DeFi yang komprehensif termasuk pertukaran token melalui AMM, yield farming melalui Farms dan Syrup Pools, Initial Farm Offerings (IFO) untuk peluncuran token baru, pasar prediksi, marketplace NFT, dan perdagangan perpetual. Token CAKE berfungsi sebagai token governance dan utility, dengan opsi staking yang memberikan berbagai manfaat.\n\nPancakeSwap terus berinovasi, menambahkan fitur seperti position manager untuk likuiditas otomatis, swap lintas chain, dan concentrated liquidity pools (v3). Dengan miliaran volume trading dan jutaan pengguna, platform ini tetap menjadi DEX dominan untuk BNB Chain dan pemain penting dalam ekosistem DeFi multi-chain yang lebih luas.",
+	"features": {
+		"1": {
+			"title": "DEX Multi-Chain",
+			"description": "Trading di BNB Chain, Ethereum, Arbitrum, Base, zkSync, dan berbagai chain lainnya"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Dapatkan reward CAKE dengan staking token LP di Farms atau aset tunggal di Syrup Pools"
+		},
+		"3": {
+			"title": "IFO",
+			"description": "Ikuti Initial Farm Offerings untuk mendapatkan akses awal ke peluncuran token baru"
+		},
+		"4": {
+			"title": "V3 Concentrated Liquidity",
+			"description": "Sediakan likuiditas dalam rentang harga tertentu untuk efisiensi modal yang lebih tinggi"
+		},
+		"5": {
+			"title": "Perpetual Trading",
+			"description": "Trading perpetual futures dengan leverage pada pasangan kripto utama"
+		},
+		"6": {
+			"title": "Gaming & NFTs",
+			"description": "Ikuti pasar prediksi, lotere, dan marketplace NFT"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Swap Token",
+			"description": "Trading token BEP-20 dan aset lintas chain dengan biaya rendah di BNB Chain"
+		},
+		"2": {
+			"title": "Generasi Yield",
+			"description": "Stake token LP atau CAKE untuk mendapatkan passive income melalui reward farming"
+		},
+		"3": {
+			"title": "Akses Token Baru",
+			"description": "Ikuti IFO untuk membeli token baru di harga peluncuran"
+		},
+		"4": {
+			"title": "Penyediaan Likuiditas",
+			"description": "Sediakan likuiditas untuk mendapatkan biaya trading dan insentif CAKE"
+		},
+		"5": {
+			"title": "Trading Lintas Chain",
+			"description": "Tukar aset di berbagai chain tanpa meninggalkan platform"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu PancakeSwap dan bagaimana cara kerjanya?",
+			"answer": "PancakeSwap adalah bursa terdesentralisasi yang menggunakan model AMM (Automated Market Maker). Alih-alih order book, perdagangan dieksekusi melawan liquidity pool yang didanai oleh pengguna. Anda dapat menukar token secara instan, menyediakan likuiditas untuk mendapatkan biaya, dan stake token LP atau CAKE untuk mendapatkan reward tambahan."
+		},
+		"2": {
+			"question": "Untuk apa token CAKE digunakan?",
+			"answer": "CAKE adalah token governance dan utility PancakeSwap. Anda dapat stake CAKE di Syrup Pools untuk mendapatkan token lain, lock CAKE untuk veCAKE guna meningkatkan reward farming dan voting pada governance, berpartisipasi dalam IFO, dan menggunakannya sebagai pasangan trading di seluruh platform."
+		},
+		"3": {
+			"question": "Bagaimana cara farming di PancakeSwap?",
+			"answer": "Untuk farming: 1) Tambahkan likuiditas ke pasangan trading untuk mendapatkan token LP, 2) Buka Farms dan temukan pasangan Anda, 3) Stake token LP Anda, 4) Dapatkan reward CAKE seiring waktu, 5) Harvest reward atau compound mereka. Perhatikan bahwa farming memiliki risiko impermanent loss."
+		},
+		"4": {
+			"question": "Apakah PancakeSwap aman digunakan?",
+			"answer": "PancakeSwap adalah salah satu DEX paling mapan dengan audit keamanan ekstensif dan track record yang kuat. Namun, DeFi selalu membawa risiko termasuk kerentanan smart contract, impermanent loss, dan risiko token. Hanya investasikan apa yang mampu Anda rugikan dan teliti token sebelum trading."
+		},
+		"5": {
+			"question": "Chain apa saja yang didukung PancakeSwap?",
+			"answer": "PancakeSwap telah berkembang melampaui BNB Chain untuk mendukung Ethereum, Arbitrum, Base, zkSync Era, Polygon zkEVM, Linea, opBNB, dan Aptos. Anda dapat menukar aset native di setiap chain dan menggunakan fitur lintas chain untuk bridge di antara mereka."
+		}
+	},
+	"cta": {
+		"ready": "Siap trading di PancakeSwap?",
+		"button": "Buka PancakeSwap",
+		"note": "DEX multi-chain terkemuka untuk trading dan earning"
+	}
+}

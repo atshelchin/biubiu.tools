@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "Safe - Carteira Multi-Assinatura | Gestão Segura de Ativos Digitais",
+		"description": "Explore Safe (anteriormente Gnosis Safe), a carteira multi-assinatura líder. Proteja ativos digitais com limiares de aprovação customizáveis e segurança de smart contract.",
+		"keywords": "Safe, Gnosis Safe, multisig, carteira multi-assinatura, tesouro DAO, carteira smart contract, segurança cripto"
+	},
+	"overview": "Safe (anteriormente Gnosis Safe) é a carteira smart contract padrão da indústria para proteger ativos digitais. Originalmente desenvolvida pela equipe Gnosis e lançada em 2018, Safe se tornou a solução mais confiável para DAOs, protocolos e instituições gerenciando tesouros cripto.\n\nDiferente de carteiras tradicionais controladas por uma única chave privada, Safe usa segurança multi-assinatura (multisig) exigindo múltiplas aprovações para transações. Você configura signatários M-de-N—por exemplo, 3-de-5 significa que quaisquer 3 de 5 signatários designados devem aprovar. Isso elimina pontos únicos de falha: nenhuma pessoa pode mover fundos unilateralmente. Safe também suporta limites de gastos, agrupamento de transações e extensões modulares.\n\nSafe protegeu mais de $100 bilhões em ativos através de 10+ milhões de transações. Protocolos principais como Uniswap, Aave, ENS e inúmeras DAOs usam Safe para gestão de tesouro. O ecossistema Safe inclui Safe{Wallet} (interface de usuário), Safe{Core} (infraestrutura de conta inteligente para desenvolvedores) e integração com carteiras hardware, apps móveis e construtores de transação. Safe representa a evolução de carteiras EOA para contas inteligentes programáveis.",
+	"features": {
+		"1": {
+			"title": "Segurança Multi-Sig",
+			"description": "Exija múltiplas aprovações (ex: 3-de-5) para transações—sem ponto único de falha"
+		},
+		"2": {
+			"title": "Agrupamento de Transações",
+			"description": "Agrupe múltiplas transações em uma, economizando gas e habilitando operações complexas"
+		},
+		"3": {
+			"title": "Limites de Gastos",
+			"description": "Defina permissões para signatários gastarem até limites sem aprovação total"
+		},
+		"4": {
+			"title": "Multi-Chain",
+			"description": "Implante Safe no Ethereum, Polygon, Arbitrum, Optimism e outras blockchains EVM"
+		},
+		"5": {
+			"title": "Safe Apps",
+			"description": "Interaja com protocolos DeFi diretamente do Safe através de apps integrados"
+		},
+		"6": {
+			"title": "Opções de Recuperação",
+			"description": "Configure guardiões e mecanismos de recuperação para recuperação de conta"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Tesouro DAO",
+			"description": "Gerencie fundos comunitários com governança multisig transparente"
+		},
+		"2": {
+			"title": "Propriedade de Protocolo",
+			"description": "Controle chaves admin de smart contract com assinatura distribuída"
+		},
+		"3": {
+			"title": "Carteiras de Equipe",
+			"description": "Proteja cripto da empresa com aprovação de múltiplos membros da equipe"
+		},
+		"4": {
+			"title": "Segurança Pessoal",
+			"description": "Proteja holdings pessoais com carteira hardware + telefone + signatário backup"
+		},
+		"5": {
+			"title": "Fundos de Investimento",
+			"description": "Gerencie ativos de fundos com proteção de investidores através de multisig"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é Safe e como é diferente do MetaMask?",
+			"answer": "Safe é uma carteira smart contract que exige múltiplas assinaturas (multisig) para transações. MetaMask é uma EOA (conta de propriedade externa) controlada por uma única chave privada. Se você perder sua seed phrase do MetaMask ou ela for roubada, os fundos são perdidos. Com Safe, você precisa de múltiplos signatários para aprovar—mesmo que uma chave seja comprometida, os fundos estão protegidos. Safe é para casos de uso de alta segurança; MetaMask é para transações diárias."
+		},
+		"2": {
+			"question": "Como configurar um multisig Safe?",
+			"answer": "Vá para safe.global, conecte sua carteira e clique 'Criar Safe'. Escolha uma rede (Ethereum, Polygon, etc.), adicione endereços de signatários (carteiras que podem aprovar transações) e defina o limiar (quantos devem assinar). Por exemplo, adicione 5 signatários com limiar 3-de-5. Você pagará gas para implantar o smart contract Safe. Depois transfira ativos para seu novo endereço Safe."
+		},
+		"3": {
+			"question": "O que acontece se eu perder acesso a um signatário?",
+			"answer": "Se você perder um signatário mas ainda tiver o suficiente para atingir o limiar, você pode propor uma transação para substituir o signatário perdido por um novo endereço. Os signatários restantes aprovam, e o Safe atualiza. Por isso o limiar deve ser menor que o total de signatários (ex: 3-de-5, não 5-de-5). Com configuração adequada, perder um dispositivo ou chave não significa perder fundos."
+		},
+		"4": {
+			"question": "Safe é apenas para DAOs e equipes?",
+			"answer": "Safe é popular com DAOs mas funciona para segurança pessoal também. Indivíduos usam Safe com configurações 2-de-3: carteira hardware + telefone + backup (papel ou pessoa confiável). Isso protege contra perder um dispositivo ou uma única chave ser roubada. O overhead de múltiplas assinaturas vale a pena para holdings significantes. Muitos indivíduos cripto-nativos usam Safe para armazenamento frio."
+		},
+		"5": {
+			"question": "O que são Safe Apps e Safe Modules?",
+			"answer": "Safe Apps são dApps integrados na interface Safe—você pode interagir com Uniswap, Aave, etc. diretamente do Safe sem trocar de contexto. Safe Modules são extensões que adicionam funcionalidade: limites de gastos (módulo de permissão), pagamentos recorrentes, mecanismos de recuperação, etc. Essa modularidade torna Safe uma plataforma programável, não apenas uma carteira."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para proteger seus ativos?",
+		"button": "Abrir Safe",
+		"note": "A carteira smart contract padrão da indústria"
+	}
+}

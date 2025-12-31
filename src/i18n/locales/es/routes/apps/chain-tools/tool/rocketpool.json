@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Rocket Pool - Staking Descentralizado de Ethereum | Token de Liquid Staking rETH",
+		"description": "Descubre Rocket Pool, el protocolo descentralizado de staking de Ethereum. Apuesta cualquier cantidad de ETH por rETH, o ejecuta un nodo con solo 8 ETH. Sin confianza y sin permisos.",
+		"keywords": "Rocket Pool, rETH, staking de Ethereum, liquid staking, operador de nodos, descentralizado, RPL"
+	},
+	"overview": "Rocket Pool es el protocolo líder de staking descentralizado de Ethereum, que ofrece tanto liquid staking (rETH) como operación de nodos sin permisos. Fundado por David Rugendyke en 2016, Rocket Pool fue una de las primeras soluciones de liquid staking y sigue siendo la alternativa más descentralizada a los proveedores de staking centralizados.\n\nEl protocolo funciona en dos frentes: los usuarios regulares pueden apostar cualquier cantidad de ETH y recibir rETH, un token de liquid staking que se aprecia en valor a medida que se acumulan las recompensas de staking. Los operadores de nodos pueden ejecutar validadores con solo 8 ETH (vs 32 ETH en staking solo) vinculando tokens RPL y siendo emparejados con ETH de depositantes.\n\nEl diferenciador clave de Rocket Pool es la verdadera descentralización: cualquiera puede ejecutar un nodo sin permiso, y el protocolo no depende de un conjunto de operadores centralizados. El Oracle DAO proporciona feeds de precios y gestiona las operaciones del protocolo. Con miles de operadores de nodos independientes en todo el mundo, Rocket Pool ofrece la opción de staking más resistente a la censura para Ethereum.",
+	"features": {
+		"1": {
+			"title": "Liquid Staking con rETH",
+			"description": "Apuesta cualquier cantidad de ETH y recibe rETH que acumula recompensas de staking automáticamente"
+		},
+		"2": {
+			"title": "Minipools de 8 ETH",
+			"description": "Ejecuta un validador con solo 8 ETH siendo emparejado con depositantes del protocolo"
+		},
+		"3": {
+			"title": "Nodos Sin Permisos",
+			"description": "Cualquiera puede convertirse en operador de nodos sin aprobación: verdaderamente descentralizado"
+		},
+		"4": {
+			"title": "Colateral RPL",
+			"description": "Los operadores de nodos vinculan RPL como seguro, ganando recompensas RPL sobre su stake"
+		},
+		"5": {
+			"title": "Smoothing Pool",
+			"description": "Pool opcional que socializa MEV y comisiones prioritarias entre nodos participantes"
+		},
+		"6": {
+			"title": "Oracle DAO",
+			"description": "Red de oráculos descentralizada para precios de rETH y operaciones del protocolo"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid Staking de ETH",
+			"description": "Apuesta ETH sin bloqueos: usa rETH en DeFi mientras ganas recompensas de staking"
+		},
+		"2": {
+			"title": "Operación de Nodos en Casa",
+			"description": "Ejecuta validadores de Ethereum en casa con requisitos de capital reducidos"
+		},
+		"3": {
+			"title": "Colateral en DeFi",
+			"description": "Usa rETH como colateral en Aave, Maker y otros protocolos de préstamos"
+		},
+		"4": {
+			"title": "Staking Descentralizado",
+			"description": "Apoya la descentralización de Ethereum eligiendo un protocolo verdaderamente sin permisos"
+		},
+		"5": {
+			"title": "Staking de RPL",
+			"description": "Vincula RPL como operador de nodos para ganar rendimientos de staking mejorados"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Rocket Pool y cómo funciona rETH?",
+			"answer": "Rocket Pool es un protocolo de staking descentralizado. Cuando depositas ETH, recibes rETH: un token que representa tu ETH apostado más las recompensas acumuladas. El valor de rETH aumenta con el tiempo en relación a ETH a medida que se acumulan las recompensas de staking. Puedes intercambiar rETH de vuelta a ETH en cualquier momento a través del protocolo o DEXs. El ETH es apostado por miles de operadores de nodos independientes."
+		},
+		"2": {
+			"question": "¿En qué se diferencia Rocket Pool de Lido?",
+			"answer": "La diferencia clave es la descentralización. Rocket Pool permite a cualquiera ejecutar un nodo sin permisos con 8 ETH, mientras que Lido usa un conjunto curado de operadores profesionales. Rocket Pool tiene miles de operadores de nodos independientes globalmente, haciéndolo más resistente a la censura. Lido es más grande por TVL pero más centralizado en la operación de validadores."
+		},
+		"3": {
+			"question": "¿Qué es RPL y por qué los operadores de nodos lo necesitan?",
+			"answer": "RPL es el token de gobernanza y utilidad de Rocket Pool. Los operadores de nodos deben vincular RPL por un valor de al menos el 10% de su ETH prestado como seguro contra slashing. A cambio, ganan recompensas de inflación de RPL además de recompensas de staking de ETH. RPL también otorga derechos de voto en la gobernanza del protocolo."
+		},
+		"4": {
+			"question": "¿Puedo ejecutar un nodo de Rocket Pool en casa?",
+			"answer": "¡Sí! Rocket Pool está diseñado para stakers en casa. Necesitas un mínimo de 8 ETH, RPL para colateral, una computadora que cumpla los requisitos de hardware y una conexión a internet estable. El software Smartnode simplifica la configuración. Muchos operadores de nodos ejecutan en hardware de consumo en casa, contribuyendo a la descentralización geográfica de Ethereum."
+		},
+		"5": {
+			"question": "¿Cuáles son los riesgos de rETH?",
+			"answer": "Los riesgos incluyen: vulnerabilidades de contratos inteligentes, eventos de slashing (mitigados por el seguro RPL), desviación del precio de rETH del valor justo en DEXs, riesgos de oráculos en el Oracle DAO, y riesgos generales de staking como bugs de clientes. Rocket Pool ha sido auditado extensivamente y tiene un programa de recompensas por bugs."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para apostar ETH de forma descentralizada?",
+		"button": "Abrir Rocket Pool",
+		"note": "Liquid staking descentralizado de Ethereum"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Yearn Finance - Agrégateur de Rendement DeFi | Vaults Auto-Composées",
+		"description": "Découvrez Yearn Finance, l'agrégateur de rendement leader. Déposez des actifs dans des Vaults pour gagner automatiquement des rendements DeFi optimisés sans gestion manuelle.",
+		"keywords": "Yearn Finance, YFI, agrégateur de rendement, vaults, DeFi, auto-composition, optimisation de rendement"
+	},
+	"overview": "Yearn Finance est un protocole décentralisé d'agrégation de rendement qui automatise les stratégies de yield farming DeFi. Fondé par Andre Cronje début 2020, Yearn a été pionnier du concept de \"Vaults\"—des smart contracts qui déploient automatiquement les actifs déposés sur divers protocoles DeFi pour maximiser les rendements.\n\nLe produit principal est les Yearn Vaults (yVaults), où les utilisateurs déposent des actifs et les stratégies du protocole farment automatiquement les meilleurs rendements, composent les récompenses et rééquilibrent les positions. Cela évite aux utilisateurs de devoir déplacer manuellement les fonds, payer du gaz pour les récoltes et rechercher constamment les stratégies optimales. Les stratégies de vaults sont développées par des stratèges experts qui gagnent une part des profits générés.\n\nYearn V3 a introduit une architecture de vault modulaire, permettant un déploiement de stratégie plus flexible et une meilleure gestion des risques. Le token YFI est utilisé pour la gouvernance, avec veYFI permettant aux détenteurs de tokens de voter sur les décisions du protocole. Yearn est devenu une infrastructure DeFi fondamentale, avec ses stratégies et son architecture influençant de nombreux protocoles de rendement ultérieurs.",
+	"features": {
+		"1": {
+			"title": "Vaults Automatisés",
+			"description": "Déposez des actifs et gagnez des rendements optimisés automatiquement—aucune gestion manuelle"
+		},
+		"2": {
+			"title": "Optimisation de Stratégie",
+			"description": "Des stratèges experts développent et améliorent continuellement les stratégies de rendement"
+		},
+		"3": {
+			"title": "Auto-Composition",
+			"description": "Les récompenses sont automatiquement récoltées et réinvesties pour une croissance composée"
+		},
+		"4": {
+			"title": "Stratégies Multi-Protocoles",
+			"description": "Les stratégies se déploient sur Aave, Compound, Curve et plus pour des rendements optimaux"
+		},
+		"5": {
+			"title": "Architecture Modulaire V3",
+			"description": "Conception de vault flexible avec plusieurs stratégies par vault et meilleure isolation des risques"
+		},
+		"6": {
+			"title": "Gouvernance veYFI",
+			"description": "Verrouillez YFI pour voter sur les décisions du protocole et les émissions de gauge"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Génération de Rendement Passif",
+			"description": "Déposez des stablecoins ou des crypto et gagnez des rendements optimisés sans effort"
+		},
+		"2": {
+			"title": "DeFi Simplifiée",
+			"description": "Accédez à des stratégies de rendement complexes via de simples dépôts dans les vaults"
+		},
+		"3": {
+			"title": "Optimisation de Gaz",
+			"description": "Partagez les coûts de gaz pour la récolte et la composition avec d'autres déposants du vault"
+		},
+		"4": {
+			"title": "Développement de Stratégie",
+			"description": "Les stratèges peuvent construire et déployer des stratégies pour gagner des frais de performance"
+		},
+		"5": {
+			"title": "Intégration de Protocole",
+			"description": "D'autres protocoles intègrent les yVaults pour un rendement automatisé sur leurs trésoreries"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Yearn Finance et comment fonctionnent les Vaults ?",
+			"answer": "Yearn est un agrégateur de rendement où vous déposez des actifs dans des Vaults. Chaque Vault a des stratégies qui déploient automatiquement vos fonds sur des protocoles DeFi (Aave, Compound, Curve, etc.) pour gagner des rendements. Les récompenses sont auto-composées et les stratégies sont optimisées par des experts. Vous recevez des yTokens représentant votre part du vault."
+		},
+		"2": {
+			"question": "Quels frais Yearn facture-t-il ?",
+			"answer": "Les vaults Yearn V3 facturent généralement des frais de performance de 10% sur les rendements générés (pas sur le principal). Certains vaults peuvent avoir des frais de gestion. Les frais financent le développement du protocole et les récompenses des stratèges. Il n'y a pas de frais de dépôt ou de retrait pour la plupart des vaults."
+		},
+		"3": {
+			"question": "Est-il sûr d'utiliser Yearn ?",
+			"answer": "Yearn fonctionne depuis 2020 avec de nombreux audits et un solide historique de sécurité. Cependant, les risques incluent des vulnérabilités de smart contracts dans Yearn et les protocoles sous-jacents, des risques de stratégie et un potentiel de pertes dans des conditions de marché extrêmes. Les vaults Yearn ne sont pas assurés—ne déposez que ce que vous pouvez vous permettre de perdre."
+		},
+		"4": {
+			"question": "Qu'est-ce que YFI et veYFI ?",
+			"answer": "YFI est le token de gouvernance de Yearn avec une offre fixe de 36 666. veYFI (vote-escrowed YFI) est obtenu en verrouillant YFI pour jusqu'à 4 ans. Les détenteurs de veYFI peuvent voter sur les propositions de gouvernance, diriger les émissions de gauge vers des vaults spécifiques et gagner des frais de protocole. Des verrouillages plus longs donnent plus de pouvoir de vote."
+		},
+		"5": {
+			"question": "Quelle est la différence entre Yearn V2 et V3 ?",
+			"answer": "V3 introduit une architecture de vault modulaire où chaque vault peut avoir plusieurs stratégies qui sont facilement ajoutées ou retirées. Cela améliore la gestion des risques, permet un contrôle plus granulaire et rend possibles de nouveaux types de vaults. V3 a également une meilleure efficacité en gaz et une meilleure intégration avec d'autres protocoles."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à gagner des rendements optimisés ?",
+		"button": "Ouvrir Yearn",
+		"note": "Optimisation de rendement automatisée pour vos crypto"
+	}
+}

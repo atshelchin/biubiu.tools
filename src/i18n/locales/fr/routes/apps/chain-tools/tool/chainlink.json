@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Chainlink - Réseau d'Oracles Décentralisé | Connecter les Smart Contracts aux Données du Monde Réel",
+		"description": "Découvrez Chainlink, le principal réseau d'oracles décentralisé. Connectez les smart contracts aux données du monde réel, aux APIs et au calcul off-chain en toute sécurité.",
+		"keywords": "Chainlink, LINK, oracle, price feeds, VRF, CCIP, smart contracts, DeFi"
+	},
+	"overview": "Chainlink est le réseau d'oracles décentralisé de référence de l'industrie qui permet aux smart contracts d'accéder en toute sécurité aux données off-chain, aux APIs et au calcul. Fondée par Sergey Nazarov et Steve Ellis en 2017, Chainlink résout le 'problème de l'oracle' - le défi d'obtenir des données externes fiables dans les environnements blockchain.\n\nLe réseau fonctionne grâce à des opérateurs de nœuds indépendants qui agrègent les données de plusieurs sources, fournissant des entrées et sorties inviolables pour les smart contracts. Les produits de Chainlink incluent Price Feeds (utilisés par la plupart des protocoles DeFi), VRF (fonctions aléatoires vérifiables pour les jeux/NFTs), Automation (exécution décentralisée de contrats), Functions (calcul serverless) et CCIP (Protocole d'Interopérabilité Cross-Chain).\n\nChainlink sécurise plus de 75 milliards de dollars de valeur dans la DeFi, l'assurance, les jeux et les applications d'entreprise. Le token LINK est utilisé pour le paiement aux opérateurs de nœuds et comme garantie de staking. Avec ses intégrations étendues et son historique éprouvé, Chainlink est devenu une infrastructure critique pour tout l'écosystème blockchain.",
+	"features": {
+		"1": {
+			"title": "Price Feeds",
+			"description": "Oracles de prix décentralisés alimentant la plupart des protocoles DeFi avec des données de marché précises"
+		},
+		"2": {
+			"title": "VRF",
+			"description": "Fonction Aléatoire Vérifiable pour un aléatoire prouvablement équitable dans les jeux et NFTs"
+		},
+		"3": {
+			"title": "CCIP",
+			"description": "Protocole d'Interopérabilité Cross-Chain pour des transferts sécurisés de tokens et messages"
+		},
+		"4": {
+			"title": "Automation",
+			"description": "Automatisation décentralisée des smart contracts pour la maintenance et les déclencheurs"
+		},
+		"5": {
+			"title": "Functions",
+			"description": "Plateforme de calcul serverless pour connecter les smart contracts à n'importe quelle API"
+		},
+		"6": {
+			"title": "Proof of Reserve",
+			"description": "Vérification on-chain des réserves d'actifs off-chain ou cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Données de Prix DeFi",
+			"description": "Fournir des flux de prix précis pour les protocoles de prêt, dérivés et DEX"
+		},
+		"2": {
+			"title": "Aléatoire pour les Jeux",
+			"description": "Générer des nombres aléatoires vérifiables pour des mints NFT équitables et des mécaniques de jeu"
+		},
+		"3": {
+			"title": "Transferts Cross-Chain",
+			"description": "Ponter des tokens et messages en toute sécurité entre différentes blockchains"
+		},
+		"4": {
+			"title": "Actions Automatisées",
+			"description": "Déclencher des fonctions de smart contracts basées sur le temps ou des conditions externes"
+		},
+		"5": {
+			"title": "Intégration au Monde Réel",
+			"description": "Connecter les applications blockchain aux APIs traditionnelles et sources de données"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Chainlink et pourquoi les smart contracts ont-ils besoin d'oracles ?",
+			"answer": "Chainlink est un réseau d'oracles décentralisé qui alimente les smart contracts avec des données externes. Les blockchains sont des systèmes isolés qui ne peuvent pas accéder aux données externes directement. Les oracles comblent cette lacune en récupérant de manière sécurisée des informations du monde réel (prix, météo, scores sportifs, etc.) et en les livrant on-chain. Sans oracles, la DeFi et la plupart des applications blockchain ne pourraient pas fonctionner."
+		},
+		"2": {
+			"question": "Comment Chainlink garantit-il la précision des données ?",
+			"answer": "Chainlink utilise plusieurs couches de décentralisation : les données proviennent de nombreux fournisseurs de données premium, agrégées par plusieurs opérateurs de nœuds indépendants, et le résultat médian/consensus est livré on-chain. Les opérateurs de nœuds stakent LINK comme garantie et peuvent être sanctionnés pour avoir fourni de mauvaises données. Cela rend la manipulation économiquement impossible."
+		},
+		"3": {
+			"question": "Qu'est-ce que CCIP et comment fonctionne-t-il ?",
+			"answer": "CCIP (Protocole d'Interopérabilité Cross-Chain) est la solution de Chainlink pour une communication sécurisée entre chaînes. Il permet les transferts de tokens et la messagerie arbitraire entre blockchains en utilisant le réseau d'oracles décentralisé de Chainlink pour la sécurité. Contrairement aux bridges qui ont été exploités pour des milliards, CCIP exploite l'infrastructure de sécurité existante de Chainlink."
+		},
+		"4": {
+			"question": "À quoi sert le token LINK ?",
+			"answer": "LINK est le token natif de Chainlink avec plusieurs utilisations : paiement aux opérateurs de nœuds pour les services d'oracle, garantie de staking pour les opérateurs de nœuds (avec sanction pour mauvaises données), et participation à la gouvernance. Les dApps paient LINK pour les services Chainlink, créant une demande à mesure que l'utilisation du réseau augmente."
+		},
+		"5": {
+			"question": "Quels protocoles utilisent Chainlink ?",
+			"answer": "Chainlink est utilisé par la plupart des principaux protocoles DeFi, notamment Aave, Compound, Synthetix, dYdX, GMX et des centaines d'autres. Il est également utilisé par des entreprises traditionnelles comme Swift, DTCC et ANZ Bank pour des expériences blockchain. Plus de 1 800 projets dans la DeFi, les jeux, les NFTs et l'assurance s'appuient sur les oracles Chainlink."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à explorer les oracles Chainlink ?",
+		"button": "Ouvrir Chainlink",
+		"note": "Le réseau d'oracles de référence de l'industrie"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Balancer - AMM Pool Có Trọng Số & Giao Thức Thanh Khoản DeFi",
+		"description": "Khám phá Balancer, AMM linh hoạt cho phép pool có trọng số tùy chỉnh. Tạo pool với tối đa 8 token, kiếm phí giao dịch và truy cập thanh khoản lập trình được.",
+		"keywords": "Balancer, AMM, weighted pools, DeFi, thanh khoản, BAL token, programmable liquidity"
+	},
+	"overview": "Balancer là sàn giao dịch phi tập trung và trình quản lý danh mục đầu tư tự động đã tiên phong về weighted liquidity pools—cho phép pool với tối đa 8 token theo bất kỳ tỷ lệ nào, thay vì tỷ lệ 50/50 cố định của các AMM truyền thống. Ra mắt vào tháng 3 năm 2020 bởi Balancer Labs của Fernando Martinelli, giao thức cho phép tính linh hoạt chưa từng có trong thiết kế pool.\n\nĐiểm đổi mới chính là nhà cung cấp thanh khoản có thể tạo pool duy trì tỷ lệ tài sản tùy chỉnh tự động. Một pool có trọng số 80% ETH / 20% WBTC sẽ tự cân bằng lại thông qua arbitrage để duy trì tỷ lệ đó, tạo ra một quỹ chỉ số tự cân bằng lại kiếm phí giao dịch thay vì trả phí quản lý.\n\nBalancer V2 đã giới thiệu kiến trúc vault đơn lẻ để tiết kiệm gas, và Balancer V3 (ra mắt 2024) mang đến composable pools, hooks cho logic tùy chỉnh và boosted pools định tuyến thanh khoản nhàn rỗi sang các giao thức cho vay. Giao thức là nền tảng cốt lõi của cơ sở hạ tầng DeFi, với nhiều dự án xây dựng các loại pool tùy chỉnh trên Balancer.",
+	"features": {
+		"1": {
+			"title": "Weighted Pools",
+			"description": "Tạo pool với tối đa 8 token theo bất kỳ tỷ lệ nào (ví dụ: 80/20, 60/20/20)"
+		},
+		"2": {
+			"title": "Stable Pools",
+			"description": "Tối ưu hóa cho tài sản neo giá với slippage tối thiểu giữa các token tương tự"
+		},
+		"3": {
+			"title": "Boosted Pools",
+			"description": "Thanh khoản nhàn rỗi kiếm lợi nhuận bổ sung từ các giao thức cho vay"
+		},
+		"4": {
+			"title": "Kiến Trúc Vault",
+			"description": "Vault đơn lẻ giữ tất cả tài sản của pool để swap multi-hop tiết kiệm gas"
+		},
+		"5": {
+			"title": "Programmable Liquidity",
+			"description": "Logic pool tùy chỉnh và hooks cho phép thiết kế AMM mới lạ"
+		},
+		"6": {
+			"title": "Quản Trị veBAL",
+			"description": "Khóa BAL để có quyền bỏ phiếu và tăng phần thưởng liquidity mining"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Tạo Quỹ Chỉ Số",
+			"description": "Tạo danh mục tự cân bằng lại kiếm phí thay vì trả phí"
+		},
+		"2": {
+			"title": "Thanh Khoản Giao Thức",
+			"description": "Các dự án sử dụng Balancer để đa dạng hóa ngân khố và thanh khoản token"
+		},
+		"3": {
+			"title": "Giao Dịch Stablecoin",
+			"description": "Stable pools cho phép swap với slippage thấp giữa các tài sản neo giá"
+		},
+		"4": {
+			"title": "Liquidity Mining",
+			"description": "Kiếm phần thưởng BAL bằng cách cung cấp thanh khoản cho pool được khuyến khích"
+		},
+		"5": {
+			"title": "Phát Triển AMM Tùy Chỉnh",
+			"description": "Xây dựng các loại pool mới lạ sử dụng cơ sở hạ tầng lập trình được của Balancer"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Balancer là gì và weighted pools hoạt động như thế nào?",
+			"answer": "Balancer là một AMM cho phép pool có trọng số token tùy chỉnh. Không giống như pool 50/50 cố định của Uniswap, pool Balancer có thể là 80/20, 60/20/20 hoặc bất kỳ tỷ lệ nào. Các arbitrageur cân bằng lại pool để duy trì trọng số, vì vậy danh mục luôn ở mức phân bổ mục tiêu trong khi kiếm phí giao dịch. Nó giống như một quỹ chỉ số trả tiền cho bạn."
+		},
+		"2": {
+			"question": "Sự khác biệt giữa Balancer V2 và V3 là gì?",
+			"answer": "V2 đã giới thiệu kiến trúc vault nơi tất cả pool chia sẻ một hợp đồng duy nhất giữ tài sản, cho phép swap multi-hop tiết kiệm gas. V3 thêm composable pools (kết hợp stable và weighted), hooks cho logic pool tùy chỉnh, transient accounting để tiết kiệm gas hơn nữa và tích hợp boosted pool tốt hơn."
+		},
+		"3": {
+			"question": "veBAL là gì và quản trị hoạt động như thế nào?",
+			"answer": "veBAL (vote-escrowed BAL) có được bằng cách khóa LP token BAL/ETH 80/20 trong tối đa 1 năm. Chủ sở hữu veBAL có thể bỏ phiếu về gauge weights (pool nào nhận phát thải BAL), tăng phần thưởng farming của riêng họ lên tới 2.5x và tham gia vào các đề xuất quản trị. Khóa lâu hơn cho quyền bỏ phiếu nhiều hơn."
+		},
+		"4": {
+			"question": "Boosted pools là gì?",
+			"answer": "Boosted pools định tuyến thanh khoản nhàn rỗi (token không cần thiết cho giao dịch hiện tại) sang các giao thức cho vay như Aave để kiếm lợi nhuận bổ sung. LP kiếm cả phí giao dịch và lãi cho vay. Điều này tăng hiệu quả vốn đáng kể so với các AMM truyền thống nơi vốn nhàn rỗi không kiếm được gì."
+		},
+		"5": {
+			"question": "Balancer có an toàn để sử dụng không?",
+			"answer": "Balancer đã được thử nghiệm trong thực tế từ năm 2020 với nhiều cuộc kiểm toán. Tuy nhiên, nó đã trải qua các lỗ hổng trong quá khứ, bao gồm cuộc tấn công flash loan năm 2020 và tiết lộ lỗ hổng năm 2023. Kiến trúc vault V2 giảm bề mặt tấn công. Như mọi khi trong DeFi, rủi ro bao gồm smart contract, impermanent loss và rủi ro cụ thể của pool."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng khám phá thanh khoản linh hoạt?",
+		"button": "Mở Balancer",
+		"note": "Thanh khoản lập trình được cho DeFi"
+	}
+}

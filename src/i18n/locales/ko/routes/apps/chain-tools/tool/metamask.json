@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷",
+		"code": "ko"
+	},
+	"seo": {
+		"title": "MetaMask - 선도적인 암호화폐 지갑 | DeFi, NFT, Web3 액세스",
+		"description": "선도적인 자기 보관형 암호화폐 지갑 MetaMask를 탐색하세요. Ethereum 및 EVM 호환 체인에서 DeFi 프로토콜, NFT 마켓플레이스, Web3 앱에 액세스하세요.",
+		"keywords": "MetaMask, 암호화폐 지갑, Ethereum 지갑, Web3, DeFi, NFT, 브라우저 확장 프로그램, 모바일 지갑"
+	},
+	"overview": "MetaMask는 세계에서 가장 인기 있는 자기 보관형 암호화폐 지갑으로, 사용자가 Ethereum 및 EVM 호환 블록체인 전반에 걸쳐 탈중앙화 애플리케이션에 액세스할 수 있도록 합니다. 2016년 ConsenSys의 Aaron Davis와 Dan Finlay가 만든 MetaMask는 Web3를 주류 사용자가 접근할 수 있도록 만든 브라우저 확장 지갑 개념을 개척했습니다.\n\nChrome, Firefox, Brave, Edge용 브라우저 확장 프로그램과 iOS 및 Android용 모바일 앱으로 사용 가능한 MetaMask는 월간 3천만 명 이상의 활성 사용자에게 서비스를 제공합니다. 지갑을 통해 사용자는 ETH 및 ERC-20 토큰을 저장하고, dApp과 상호 작용하고, 토큰을 스왑하고, 법정화폐로 암호화폐를 구매하고, NFT를 관리할 수 있습니다. MetaMask Snaps를 통해 타사 확장 프로그램이 비-EVM 체인 지원과 같은 기능을 추가할 수 있습니다.\n\nMetaMask는 Web3 인증의 사실상 표준이 되었으며, 대부분의 dApp은 'MetaMask로 연결'을 주요 로그인 방법으로 사용합니다. 지갑은 스왑 수수료(0.875%) 및 온램프 파트너십을 통해 수익을 창출합니다. 수백만 명의 사용자를 위한 DeFi, NFT 및 Web3의 게이트웨이로서 MetaMask는 Ethereum 생태계에서 필수 인프라로 남아 있습니다.",
+	"features": {
+		"1": {
+			"title": "멀티체인 지원",
+			"description": "Ethereum, Polygon, Arbitrum, Optimism, BSC 및 수백 개의 EVM 체인에 연결"
+		},
+		"2": {
+			"title": "인앱 스왑",
+			"description": "여러 DEX의 집계된 견적으로 지갑 내에서 직접 토큰 스왑"
+		},
+		"3": {
+			"title": "NFT 관리",
+			"description": "지원되는 네트워크 전반에 걸쳐 NFT 컬렉션 보기, 전송 및 관리"
+		},
+		"4": {
+			"title": "하드웨어 지갑",
+			"description": "향상된 보안을 위해 Ledger 및 Trezor 하드웨어 지갑 연결"
+		},
+		"5": {
+			"title": "MetaMask Snaps",
+			"description": "비-EVM 체인 및 기능을 위한 타사 플러그인으로 기능 확장"
+		},
+		"6": {
+			"title": "포트폴리오 뷰",
+			"description": "통합 포트폴리오 대시보드로 체인 전반의 보유 자산 추적"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 액세스",
+			"description": "Ethereum 및 L2의 대출, DEX, 수익 프로토콜에 연결"
+		},
+		"2": {
+			"title": "NFT 거래",
+			"description": "OpenSea, Blur 및 기타 마켓플레이스에서 NFT 구매, 판매 및 관리"
+		},
+		"3": {
+			"title": "토큰 스왑",
+			"description": "통합 DEX 집계를 통해 경쟁력 있는 요율로 토큰 거래"
+		},
+		"4": {
+			"title": "Web3 로그인",
+			"description": "지갑 주소를 사용하여 dApp 및 웹사이트에 로그인"
+		},
+		"5": {
+			"title": "크로스체인",
+			"description": "여러 EVM 네트워크 전반에 걸쳐 자산을 브리지하고 앱과 상호 작용"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "MetaMask란 무엇이며 안전한가요?",
+			"answer": "MetaMask는 자기 보관형 암호화폐 지갑입니다. 즉, 개인 키를 관리하는 것은 MetaMask나 ConsenSys가 아니라 본인입니다. 올바르게 사용하면 일반적으로 안전한 것으로 간주됩니다: 비밀번호 보호를 활성화하고, Secret Recovery Phrase를 절대 공유하지 말고, 서명하기 전에 거래 세부 정보를 확인하고, 피싱 사이트에 주의하세요. 주요 위험은 소프트웨어 취약점이 아니라 사용자 오류(시드 구문 분실, 악의적인 거래 서명)입니다."
+		},
+		"2": {
+			"question": "MetaMask에 새 네트워크를 추가하는 방법은?",
+			"answer": "상단의 네트워크 드롭다운을 클릭한 다음 '네트워크 추가'를 클릭합니다. Polygon 또는 Arbitrum과 같은 인기 있는 네트워크를 한 번의 클릭으로 추가하거나 다른 체인에 대한 RPC 세부 정보를 수동으로 입력할 수 있습니다. Chainlist.org와 같은 사이트는 자동으로 추가할 수 있는 검증된 네트워크 구성을 제공합니다. 악의적인 노드에 연결하지 않도록 항상 공식 출처에서 RPC URL을 확인하세요."
+		},
+		"3": {
+			"question": "MetaMask Snaps란 무엇인가요?",
+			"answer": "Snaps는 MetaMask에 기능을 추가하는 타사 확장 프로그램입니다. 비-EVM 체인(Bitcoin, Solana, Cosmos 등) 지원을 활성화하고, 새로운 거래 인사이트를 추가하고, 사용자 지정 알림을 제공하는 등의 작업을 수행할 수 있습니다. Snaps는 보안을 위해 격리된 환경에서 실행됩니다. MetaMask Snaps 디렉토리에서 설치하며, 각 Snap은 승인해야 하는 특정 권한을 요청합니다."
+		},
+		"4": {
+			"question": "거래가 멈추거나 실패하는 이유는?",
+			"answer": "일반적인 원인: 가스 가격이 너무 낮음(가스 증가), 논스 문제(설정에서 계정 재설정), 네트워크 혼잡(대기 또는 속도 향상), 또는 스마트 컨트랙트 오류(dApp 확인). 멈춘 거래의 경우 '속도 향상'(더 많은 가스 지불) 또는 '취소'(동일한 논스로 자신에게 0 ETH 전송)할 수 있습니다. MetaMask의 활동 탭에는 관리할 수 있는 보류 중인 거래가 표시됩니다."
+		},
+		"5": {
+			"question": "MetaMask는 어떻게 수익을 창출하나요?",
+			"answer": "MetaMask는 스왑 수수료(MetaMask Swaps를 통한 인앱 토큰 스왑에서 0.875%), 온램프 파트너십(MoonPay/Transak과 같은 공급자를 통한 법정화폐-암호화폐 구매 수수료), 조직을 위한 MetaMask Institutional 서비스를 통해 수익을 얻습니다. 핵심 지갑 기능은 무료이며 거래에 대한 네트워크 가스 수수료만 지불합니다."
+		}
+	},
+	"cta": {
+		"ready": "Web3를 탐색할 준비가 되셨나요?",
+		"button": "MetaMask 열기",
+		"note": "선도적인 자기 보관형 암호화폐 지갑"
+	}
+}

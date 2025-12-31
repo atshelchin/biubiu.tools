@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Balancer - Ağırlıklı Havuz AMM ve DeFi Likidite Protokolü",
+		"description": "Özelleştirilmiş ağırlıklı havuzları etkinleştiren esnek AMM Balancer'ı keşfedin. 8 token'a kadar havuzlar oluşturun, işlem ücretleri kazanın ve programlanabilir likiditeye erişin.",
+		"keywords": "Balancer, AMM, ağırlıklı havuzlar, DeFi, likidite, BAL token, programlanabilir likidite"
+	},
+	"overview": "Balancer, ağırlıklı likidite havuzlarında öncülük eden merkezi olmayan bir borsa ve otomatik portföy yöneticisidir—geleneksel AMM'lerin sabit 50/50 oranı yerine herhangi bir oranda 8 token'a kadar havuzlara izin verir. Mart 2020'de Fernando Martinelli'nin Balancer Labs tarafından başlatılan protokol, havuz tasarımında benzersiz esneklik sağlar.\n\nTemel yenilik, likidite sağlayıcılarının otomatik olarak özel varlık oranlarını koruyan havuzlar oluşturabilmesidir. %80 ETH / %20 WBTC ağırlıklı bir havuz, arbitraj yoluyla bu oranı korumak için yeniden dengelenecek ve yönetim ücretleri ödemek yerine işlem ücretleri kazanan otomatik yeniden dengelenen bir endeks fonu oluşturacaktır.\n\nBalancer V2, gaz verimliliği için tek vault mimarisi getirdi ve Balancer V3 (2024'te başlatılıyor) birleştirilebilir havuzlar, özel mantık için hook'lar ve boşta kalan likiditeyi lending protokollerine yönlendiren boosted havuzlar getiriyor. Protokol, Balancer üzerinde özel havuz türleri oluşturan birçok projeyle DeFi altyapısının temel taşıdır.",
+	"features": {
+		"1": {
+			"title": "Ağırlıklı Havuzlar",
+			"description": "Herhangi bir oranda (örn. 80/20, 60/20/20) 8 token'a kadar havuzlar oluşturun"
+		},
+		"2": {
+			"title": "Stable Havuzlar",
+			"description": "Benzer token'lar arasında minimum slippage ile sabitlenmiş varlıklar için optimize edilmiş"
+		},
+		"3": {
+			"title": "Boosted Havuzlar",
+			"description": "Boşta kalan likidite, lending protokollerinden ek getiri kazanır"
+		},
+		"4": {
+			"title": "Vault Mimarisi",
+			"description": "Tek vault, gaz verimli çok atlamalı takaslar için tüm havuz varlıklarını tutar"
+		},
+		"5": {
+			"title": "Programlanabilir Likidite",
+			"description": "Özel havuz mantığı ve hook'lar yeni AMM tasarımlarını mümkün kılar"
+		},
+		"6": {
+			"title": "veBAL Yönetimi",
+			"description": "Oy gücü ve artırılmış likidite madenciliği ödülleri için BAL kilitleyin"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Endeks Fonu Oluşturma",
+			"description": "Ücret ödemek yerine ücret kazanan otomatik yeniden dengelenen portföyler oluşturun"
+		},
+		"2": {
+			"title": "Protokol Likiditesi",
+			"description": "Projeler hazine çeşitlendirmesi ve token likiditesi için Balancer'ı kullanır"
+		},
+		"3": {
+			"title": "Stablecoin İşlemi",
+			"description": "Stable havuzlar, sabitlenmiş varlıklar arasında düşük slippage'lı takasları etkinleştirir"
+		},
+		"4": {
+			"title": "Likidite Madenciliği",
+			"description": "Teşvik edilen havuzlara likidite sağlayarak BAL ödülleri kazanın"
+		},
+		"5": {
+			"title": "Özel AMM Geliştirme",
+			"description": "Balancer'ın programlanabilir altyapısını kullanarak yeni havuz türleri oluşturun"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Balancer nedir ve ağırlıklı havuzlar nasıl çalışır?",
+			"answer": "Balancer, özel token ağırlıklarına sahip havuzlara izin veren bir AMM'dir. Uniswap'ın sabit 50/50 havuzlarının aksine, Balancer havuzları 80/20, 60/20/20 veya herhangi bir oran olabilir. Arbitrajcılar ağırlıkları korumak için havuzu yeniden dengeler, böylece portföy işlem ücretleri kazanırken hedef tahsislerde kalır. Sana ödeme yapan bir endeks fonu gibidir."
+		},
+		"2": {
+			"question": "Balancer V2 ve V3 arasındaki fark nedir?",
+			"answer": "V2, tüm havuzların varlıkları tutan tek bir sözleşmeyi paylaştığı vault mimarisini getirdi ve bu da gaz verimli çok atlamalı takasları mümkün kıldı. V3, birleştirilebilir havuzlar (stable ve ağırlıklı kombinasyonu), özel havuz mantığı için hook'lar, daha fazla gaz tasarrufu için geçici muhasebe ve daha iyi boosted havuz entegrasyonu ekler."
+		},
+		"3": {
+			"question": "veBAL nedir ve yönetim nasıl çalışır?",
+			"answer": "veBAL (oy emanetli BAL), BAL/ETH 80/20 LP token'larını 1 yıla kadar kilitlenerek elde edilir. veBAL sahipleri gauge ağırlıklarına (hangi havuzların BAL emisyonu alacağı) oy verebilir, kendi farming ödüllerini 2,5 kata kadar artırabilir ve yönetim tekliflerine katılabilir. Daha uzun kilitlemeler daha fazla oy gücü verir."
+		},
+		"4": {
+			"question": "Boosted havuzlar nedir?",
+			"answer": "Boosted havuzlar, boşta kalan likiditeyi (mevcut işlemler için gerekli olmayan token'lar) ek getiri kazanmak için Aave gibi lending protokollerine yönlendirir. LP'ler hem işlem ücretleri hem de lending faizi kazanır. Bu, boşta kalan sermayenin hiçbir şey kazanmadığı geleneksel AMM'lere kıyasla sermaye verimliliğini önemli ölçüde artırır."
+		},
+		"5": {
+			"question": "Balancer kullanmak güvenli mi?",
+			"answer": "Balancer, 2020'den beri kapsamlı denetimlerle test edilmiştir. Ancak, 2020'de bir flash loan saldırısı ve 2023'te bir güvenlik açığı ifşası dahil olmak üzere geçmişte exploit'lere maruz kalmıştır. V2 vault mimarisi saldırı yüzeyini azaltır. DeFi'de her zaman olduğu gibi, riskler akıllı sözleşmeleri, kalıcı kaybı ve havuza özgü riskleri içerir."
+		}
+	},
+	"cta": {
+		"ready": "Esnek likiditeyi keşfetmeye hazır mısınız?",
+		"button": "Balancer'ı Aç",
+		"note": "DeFi için programlanabilir likidite"
+	}
+}

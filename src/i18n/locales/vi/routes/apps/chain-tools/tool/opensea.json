@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "OpenSea - Sàn Giao Dịch NFT Hàng Đầu | Mua, Bán và Khám Phá Bộ Sưu Tập Số",
+		"description": "Khám phá OpenSea, sàn giao dịch NFT lớn nhất thế giới. Mua, bán và khám phá nghệ thuật số, bộ sưu tập, vật phẩm game và hơn thế nữa trên nhiều blockchain.",
+		"keywords": "OpenSea, NFT, marketplace, nghệ thuật số, bộ sưu tập, Ethereum, Seaport, giao dịch NFT"
+	},
+	"overview": "OpenSea là sàn giao dịch NFT lớn nhất thế giới, cho phép người dùng mua, bán và khám phá bộ sưu tập số trên nhiều blockchain. Được thành lập bởi Devin Finzer và Alex Atallah vào năm 2017, OpenSea đã tiên phong khái niệm sàn giao dịch NFT và vẫn là nền tảng thống trị bất chấp sự cạnh tranh ngày càng tăng.\n\nNền tảng hỗ trợ NFT trên Ethereum, Polygon, Klaytn, Solana, Arbitrum, Optimism, Avalanche, Base và nhiều hơn nữa. OpenSea cung cấp các tính năng bao gồm niêm yết đấu giá và giá cố định, đề nghị bộ sưu tập, đề nghị dựa trên đặc điểm và công cụ độ hiếm. Giao thức Seaport, giao thức marketplace mã nguồn mở của OpenSea, hỗ trợ giao dịch với các tính năng nâng cao như bán gói và điền một phần.\n\nOpenSea đã xử lý hàng tỷ đô la khối lượng giao dịch NFT và lưu trữ hàng triệu bộ sưu tập NFT. Với OS2 (OpenSea 2.0), nền tảng đã mở rộng để hỗ trợ giao dịch token cùng với NFT, giới thiệu chương trình phần thưởng và ra mắt trung tâm cộng đồng, định vị mình như một marketplace Web3 toàn diện.",
+	"features": {
+		"1": {
+			"title": "Hỗ Trợ Đa Chuỗi",
+			"description": "Giao dịch NFT trên Ethereum, Polygon, Solana, Base và hơn 15 chuỗi khác"
+		},
+		"2": {
+			"title": "Giao Thức Seaport",
+			"description": "Giao thức marketplace mã nguồn mở cho phép các tính năng giao dịch nâng cao"
+		},
+		"3": {
+			"title": "Đề Nghị Bộ Sưu Tập",
+			"description": "Đưa ra đề nghị trên toàn bộ bộ sưu tập hoặc các đặc điểm cụ thể để mua hiệu quả"
+		},
+		"4": {
+			"title": "Công Cụ Người Sáng Tạo",
+			"description": "Ra mắt bộ sưu tập NFT với royalty tùy chỉnh và cơ chế reveal"
+		},
+		"5": {
+			"title": "Giao Dịch Token OS2",
+			"description": "Giao dịch token cùng với NFT với trải nghiệm OpenSea 2.0 mới"
+		},
+		"6": {
+			"title": "Drops & Minting",
+			"description": "Tham gia NFT drops và mint trực tiếp thông qua OpenSea"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Giao Dịch NFT",
+			"description": "Mua và bán nghệ thuật số, PFP và bộ sưu tập trong sàn giao dịch lớn nhất"
+		},
+		"2": {
+			"title": "Ra Mắt Bộ Sưu Tập",
+			"description": "Tạo và ra mắt bộ sưu tập NFT với công cụ minting và bán hàng tích hợp"
+		},
+		"3": {
+			"title": "Quản Lý Danh Mục",
+			"description": "Theo dõi, tổ chức và quản lý NFT của bạn trên nhiều chuỗi"
+		},
+		"4": {
+			"title": "Khám Phá Giá",
+			"description": "Nghiên cứu floor price, lịch sử bán hàng và độ hiếm để đưa ra quyết định sáng suốt"
+		},
+		"5": {
+			"title": "Tài Sản Game",
+			"description": "Giao dịch vật phẩm trong game và NFT game trên các trò chơi blockchain khác nhau"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "OpenSea là gì và hoạt động như thế nào?",
+			"answer": "OpenSea là một sàn giao dịch NFT nơi người dùng có thể mua, bán và khám phá bộ sưu tập số. Bạn kết nối ví, duyệt hoặc tìm kiếm NFT, và có thể mua ở giá niêm yết hoặc đưa ra đề nghị. Người bán niêm yết NFT bằng cách ký một tin nhắn (không có gas cho niêm yết). Khi một giao dịch xảy ra, OpenSea tạo điều kiện cho việc hoán đổi NFT lấy thanh toán, lấy một khoản phí nhỏ."
+		},
+		"2": {
+			"question": "OpenSea tính phí gì?",
+			"answer": "OpenSea tính phí 2,5% trên doanh số bán hàng. Ngoài ra, người sáng tạo có thể đặt royalty (thường là 5-10%) mà họ nhận được từ doanh số thứ cấp. Người mua trả phí gas cho các giao dịch on-chain. Giao thức Seaport là mã nguồn mở, vì vậy các marketplace khác có thể sử dụng nó với cấu trúc phí khác nhau."
+		},
+		"3": {
+			"question": "OpenSea Pro (trước đây là Gem) là gì?",
+			"answer": "OpenSea Pro là giao diện giao dịch NFT nâng cao dành cho người dùng chuyên nghiệp. Nó cung cấp các tính năng như tổng hợp cross-marketplace (tìm giá tốt nhất trên OpenSea, Blur, v.v.), phân tích danh mục, lọc nâng cao và công cụ sweep để mua nhiều NFT hiệu quả. Pro nhắm đến các trader và collector chuyên nghiệp."
+		},
+		"4": {
+			"question": "OpenSea so sánh với Blur như thế nào?",
+			"answer": "OpenSea là sàn giao dịch NFT lớn ban đầu với lựa chọn rộng nhất và cơ sở người dùng lớn nhất. Blur xuất hiện như một đối thủ tập trung vào các trader chuyên nghiệp với phí bằng không, giao dịch nhanh hơn và khuyến khích token. OpenSea có nhiều người dùng bình thường hơn và khám phá tốt hơn; Blur dẫn đầu về khối lượng giao dịch chuyên nghiệp. Nhiều trader sử dụng cả hai."
+		},
+		"5": {
+			"question": "Sử dụng OpenSea có an toàn không?",
+			"answer": "OpenSea thường an toàn nhưng cần thận trọng. Rủi ro bao gồm: bộ sưu tập giả/sao chép (luôn xác minh địa chỉ hợp đồng), trang web lừa đảo mạo danh OpenSea, NFT độc hại với phê duyệt ẩn và NFT bị đánh cắp. OpenSea có huy hiệu xác minh cho các bộ sưu tập hợp pháp và công cụ báo cáo lừa đảo, nhưng người dùng phải cảnh giác."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng khám phá NFT?",
+		"button": "Mở OpenSea",
+		"note": "Sàn giao dịch NFT lớn nhất thế giới"
+	}
+}

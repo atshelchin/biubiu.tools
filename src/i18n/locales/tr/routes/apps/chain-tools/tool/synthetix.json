@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Synthetix - Merkezi Olmayan Sentetik Varlık Protokolü | Zincir Üzerinde Herhangi Bir Varlıkla İşlem Yapın",
+		"description": "Sentetik varlıklar oluşturmak ve işlem yapmak için tasarlanmış Synthetix protokolünü keşfedin. Kripto, forex, emtia ve hisse senetlerine zincir üzerinde sınırsız likidite ile erişin.",
+		"keywords": "Synthetix, SNX, sentetik varlıklar, Synths, DeFi, türevler, perpetuals, likidite"
+	},
+	"overview": "Synthetix, Ethereum ve Optimism üzerinde sentetik varlıkların (Synths) oluşturulmasını ve ticaretini sağlayan merkezi olmayan bir protokoldür. 2017'de Kain Warwick tarafından kurulan (başlangıçta Havven olarak) Synthetix, zincir üzerinde sentetik varlıklar kavramına öncülük etmiştir—para birimleri, emtialar, hisse senetleri ve kripto paralar gibi gerçek dünya varlıklarının fiyatlarını takip eden tokenlar.\n\nProtokol, SNX token sahiplerinin tokenlarını teminat olarak stake ederek Synth basmalarıyla çalışır. Bu, staker'ların dolaşımdaki tüm Synth'leri toplu olarak desteklediği ortak bir borç havuzu oluşturur. Sistem, Synth'den Synth'e işlemler için sıfır kayma ile sınırsız likidite sağlar, çünkü bunlar geleneksel AMM takasları yerine basitçe oracle tabanlı fiyat dönüşümleridir.\n\nSynthetix V3, daha verimli sermaye kullanımı ve yeni piyasa türlerine olanak tanıyan ayrı likidite havuzlarıyla modüler bir mimari sundu. Protokol, Kwenta ve Lyra gibi protokollerin Synthetix likiditesi üzerine perpetual ve opsiyon ticareti inşa etmesiyle temel DeFi altyapısı haline gelmiştir.",
+	"features": {
+		"1": {
+			"title": "Sentetik Varlıklar",
+			"description": "Kripto, forex, emtia ve endekslerin sentetik versiyonlarıyla zincir üzerinde işlem yapın"
+		},
+		"2": {
+			"title": "Sıfır Kayma",
+			"description": "Synth'den Synth'e takaslar oracle fiyatlandırması sayesinde kayma olmadan sınırsız likiditeye sahiptir"
+		},
+		"3": {
+			"title": "Perpetual Futures",
+			"description": "Kwenta gibi entegratörler aracılığıyla derin likidite ile perpetual işlem yapın"
+		},
+		"4": {
+			"title": "SNX Stake Etme",
+			"description": "sUSD basmak, işlem ücretleri kazanmak ve yönetime katılmak için SNX stake edin"
+		},
+		"5": {
+			"title": "V3 Modüler Havuzlar",
+			"description": "Yapılandırılabilir risk parametreleriyle farklı piyasalar için ayrı likidite havuzları"
+		},
+		"6": {
+			"title": "Zincirler Arası",
+			"description": "Daha düşük gas maliyetleri için Ethereum mainnet ve Optimism L2 üzerine dağıtım"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Türev Ticareti",
+			"description": "Kripto varlıklar üzerinde kaldıraçla perpetual futures işlemi yapın"
+		},
+		"2": {
+			"title": "Forex Maruziyeti",
+			"description": "EUR, JPY, AUD gibi başlıca para birimlerine zincir üzerinde erişim sağlayın"
+		},
+		"3": {
+			"title": "Stake Ödülleri",
+			"description": "İşlem ücretleri ve enflasyonist ödüller kazanmak için SNX stake edin"
+		},
+		"4": {
+			"title": "Likidite Sağlama",
+			"description": "Tüccarlardan getiri elde etmek için V3 havuzlarına teminat sağlayın"
+		},
+		"5": {
+			"title": "Protokol Entegrasyonu",
+			"description": "Synthetix likiditesi üzerine ticaret arayüzleri ve ürünler inşa edin"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Synthetix nedir ve sentetik varlıklar nasıl çalışır?",
+			"answer": "Synthetix, oracle'lar aracılığıyla harici varlık fiyatlarını takip eden tokenlar olan Synth'lerin oluşturulmasını sağlar. SNX staker'ları tüm Synth'leri destekleyen teminatı sağlar. sUSD (sentetik USD) tuttuğunuzda, onu sıfır kaymayla oracle fiyatlarından herhangi bir Synth (sBTC, sETH, sEUR, vb.) için takas edebilirsiniz. Sistem karşı taraf gerektirmez—sadece oracle fiyatlı tokenları destekleyen teminattır."
+		},
+		"2": {
+			"question": "SNX stake mekanizması nedir?",
+			"answer": "SNX sahipleri, sUSD basmak için tokenlarını teminat olarak stake eder. Staker'lar bir teminatlaştırma oranını (şu anda ~%500) korumalı ve borç pozisyonlarını aktif olarak yönetmelidir. Karşılığında, haftalık işlem ücretleri ve SNX enflasyon ödülleri kazanırlar. Borç havuzu paylaşılıdır—Synth tüccarları kar elde ederse, staker borcu artar; tüccarlar kaybederse, staker borcu azalır."
+		},
+		"3": {
+			"question": "Synthetix V3 nedir?",
+			"answer": "V3, modüler mimari sunan tam bir yeniden inşadır. Tek bir küresel borç havuzu yerine, V3'te özel risk parametreleriyle farklı piyasaları destekleyebilen ayrı havuzlar vardır. Bu, daha verimli sermaye kullanımı, daha kolay entegrasyon ve yeni ürün türlerini mümkün kılar. V3 ayrıca zincirler arası işlevsellik ve gelişmiş yönetim sunar."
+		},
+		"4": {
+			"question": "Synthetix üzerine hangi protokoller inşa edilmiştir?",
+			"answer": "Birkaç büyük protokol Synthetix likiditesi üzerine inşa edilmiştir: perpetual futures ticareti için Kwenta, opsiyonlar için Lyra, yapılandırılmış ürünler için Polynomial ve diğerleri. Bu entegratörler kullanıcı arayüzleri sağlarken Synthetix temel likidite ve uzlaşma katmanını sağlar. Bu ekosistem modeli, Synthetix'in altyapıya odaklanmasını sağlar."
+		},
+		"5": {
+			"question": "Synthetix kullanmanın riskleri nelerdir?",
+			"answer": "Riskler şunları içerir: akıllı sözleşme güvenlik açıkları, oracle manipülasyonu/arızası, borç havuzu maruziyeti (staker'lar işlem kayıplarını paylaşır), teminat oranı çok düşerse tasfiye ve sentetik varlıklar etrafındaki düzenleyici belirsizlik. Protokol kapsamlı şekilde denetlenmiştir ancak doğası gereği DeFi riskleri olan karmaşık bir yapıdır."
+		}
+	},
+	"cta": {
+		"ready": "Sentetik varlıklarla işlem yapmaya hazır mısınız?",
+		"button": "Synthetix'i Aç",
+		"note": "Merkezi olmayan sentetik varlıklar ve perpetual'lar"
+	}
+}

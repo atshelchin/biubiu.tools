@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Balancer - AMM Weighted Pool & Protokol Likuiditas DeFi",
+		"description": "Temukan Balancer, AMM fleksibel yang memungkinkan pool dengan bobot kustom. Buat pool dengan hingga 8 token, dapatkan biaya trading, dan akses likuiditas yang dapat diprogram.",
+		"keywords": "Balancer, AMM, weighted pools, DeFi, likuiditas, token BAL, programmable liquidity"
+	},
+	"overview": "Balancer adalah bursa terdesentralisasi dan portfolio manager otomatis yang memelopori weighted liquidity pools—memungkinkan pool dengan hingga 8 token dalam rasio apa pun, bukan 50/50 tetap dari AMM tradisional. Diluncurkan pada Maret 2020 oleh Balancer Labs Fernando Martinelli, protokol ini memungkinkan fleksibilitas yang belum pernah ada dalam desain pool.\n\nInovasi kuncinya adalah penyedia likuiditas dapat membuat pool yang mempertahankan rasio aset kustom secara otomatis. Pool dengan bobot 80% ETH / 20% WBTC akan rebalance melalui arbitrage untuk mempertahankan rasio tersebut, secara efektif menciptakan index fund yang rebalance otomatis yang mendapatkan biaya trading alih-alih membayar biaya manajemen.\n\nBalancer V2 memperkenalkan arsitektur vault tunggal untuk efisiensi gas, dan Balancer V3 (diluncurkan 2024) membawa composable pools, hooks untuk logika kustom, dan boosted pools yang merutekan likuiditas idle ke protokol lending. Protokol ini adalah landasan infrastruktur DeFi, dengan banyak proyek membangun tipe pool kustom di Balancer.",
+	"features": {
+		"1": {
+			"title": "Weighted Pools",
+			"description": "Buat pool dengan hingga 8 token dalam rasio apa pun (misalnya, 80/20, 60/20/20)"
+		},
+		"2": {
+			"title": "Stable Pools",
+			"description": "Dioptimalkan untuk aset yang dipatok dengan slippage minimal antara token serupa"
+		},
+		"3": {
+			"title": "Boosted Pools",
+			"description": "Likuiditas idle mendapatkan yield tambahan dari protokol lending"
+		},
+		"4": {
+			"title": "Arsitektur Vault",
+			"description": "Vault tunggal menyimpan semua aset pool untuk swap multi-hop yang efisien gas"
+		},
+		"5": {
+			"title": "Programmable Liquidity",
+			"description": "Logika pool kustom dan hooks memungkinkan desain AMM yang novel"
+		},
+		"6": {
+			"title": "Governance veBAL",
+			"description": "Lock BAL untuk voting power dan reward liquidity mining yang ditingkatkan"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Pembuatan Index Fund",
+			"description": "Buat portfolio yang rebalance otomatis yang mendapatkan biaya alih-alih membayarnya"
+		},
+		"2": {
+			"title": "Likuiditas Protokol",
+			"description": "Proyek menggunakan Balancer untuk diversifikasi treasury dan likuiditas token"
+		},
+		"3": {
+			"title": "Trading Stablecoin",
+			"description": "Stable pools memungkinkan swap slippage rendah antara aset yang dipatok"
+		},
+		"4": {
+			"title": "Liquidity Mining",
+			"description": "Dapatkan reward BAL dengan menyediakan likuiditas ke pool yang diberi insentif"
+		},
+		"5": {
+			"title": "Pengembangan AMM Kustom",
+			"description": "Bangun tipe pool novel menggunakan infrastruktur Balancer yang dapat diprogram"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Balancer dan bagaimana weighted pools bekerja?",
+			"answer": "Balancer adalah AMM yang memungkinkan pool dengan bobot token kustom. Tidak seperti pool 50/50 tetap Uniswap, pool Balancer dapat 80/20, 60/20/20, atau rasio apa pun. Arbitrageur rebalance pool untuk mempertahankan bobot, sehingga portfolio tetap pada alokasi target sambil mendapatkan biaya trading. Ini seperti index fund yang membayar Anda."
+		},
+		"2": {
+			"question": "Apa perbedaan antara Balancer V2 dan V3?",
+			"answer": "V2 memperkenalkan arsitektur vault di mana semua pool berbagi satu kontrak yang menyimpan aset, memungkinkan swap multi-hop yang efisien gas. V3 menambahkan composable pools (menggabungkan stable dan weighted), hooks untuk logika pool kustom, transient accounting untuk penghematan gas lebih lanjut, dan integrasi boosted pool yang lebih baik."
+		},
+		"3": {
+			"question": "Apa itu veBAL dan bagaimana governance bekerja?",
+			"answer": "veBAL (vote-escrowed BAL) diperoleh dengan mengunci token LP BAL/ETH 80/20 hingga 1 tahun. Pemegang veBAL dapat voting pada gauge weights (pool mana yang menerima emisi BAL), meningkatkan reward farming mereka sendiri hingga 2.5x, dan berpartisipasi dalam proposal governance. Lock yang lebih lama memberikan voting power lebih banyak."
+		},
+		"4": {
+			"question": "Apa itu boosted pools?",
+			"answer": "Boosted pools merutekan likuiditas idle (token yang tidak diperlukan untuk trading saat ini) ke protokol lending seperti Aave untuk mendapatkan yield tambahan. LP mendapatkan biaya trading dan bunga lending. Ini meningkatkan efisiensi modal secara signifikan dibandingkan AMM tradisional di mana modal idle tidak mendapatkan apa-apa."
+		},
+		"5": {
+			"question": "Apakah Balancer aman digunakan?",
+			"answer": "Balancer telah teruji sejak 2020 dengan audit ekstensif. Namun, telah mengalami exploit di masa lalu, termasuk serangan flash loan di 2020 dan pengungkapan kerentanan di 2023. Arsitektur vault V2 mengurangi permukaan serangan. Seperti biasa di DeFi, risiko termasuk smart contract, impermanent loss, dan risiko khusus pool."
+		}
+	},
+	"cta": {
+		"ready": "Siap menjelajahi likuiditas fleksibel?",
+		"button": "Buka Balancer",
+		"note": "Likuiditas yang dapat diprogram untuk DeFi"
+	}
+}

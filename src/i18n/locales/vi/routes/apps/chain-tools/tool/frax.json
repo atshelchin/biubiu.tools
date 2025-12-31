@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Frax Finance - Stablecoin Phi tập trung & DeFi Hub | FRAX, frxETH, Fraxtal",
+		"description": "Khám phá Frax Finance, hệ sinh thái DeFi sáng tạo. Sử dụng stablecoin FRAX, liquid staking frxETH, Fraxlend và Fraxtal L2 cho giải pháp DeFi toàn diện.",
+		"keywords": "Frax Finance, FRAX, frxETH, FXS, stablecoin, liquid staking, Fraxtal, DeFi"
+	},
+	"overview": "Frax Finance là một hệ sinh thái DeFi toàn diện tập trung xung quanh stablecoin FRAX và một bộ giao thức kết nối với nhau. Được thành lập bởi Sam Kazemian vào năm 2020, Frax tiên phong trong mô hình stablecoin fractional-algorithmic, mặc dù sau đó đã phát triển để trở thành được thế chấp hoàn toàn.\n\nHệ sinh thái bao gồm: FRAX (một stablecoin phi tập trung hiện được thế chấp 100%), frxETH/sfrxETH (Ethereum liquid staking), Fraxlend (cho vay permissionless), FraxSwap (DEX hỗ trợ TWAMM), FraxFerry (cầu nối đa chuỗi) và Fraxtal (blockchain L2 được xây dựng trên công nghệ Optimism). FXS là token quản trị thu giá trị từ tất cả hoạt động giao thức.\n\nĐổi mới chính của Frax là cách tiếp cận tích hợp theo chiều dọc—sở hữu toàn bộ stack từ stablecoin đến chuỗi L2. Giao thức có quyền lực quản trị đáng kể trong Curve và Convex thông qua nắm giữ veFXS và vlCVX, cho phép nó điều hướng emissions đến các pool liên quan đến Frax và duy trì thanh khoản sâu.",
+	"features": {
+		"1": {
+			"title": "FRAX Stablecoin",
+			"description": "Stablecoin USD phi tập trung được đảm bảo bởi tài sản thế chấp crypto, hiện được thế chấp 100%"
+		},
+		"2": {
+			"title": "frxETH Staking",
+			"description": "Liquid staking cho ETH với token frxETH và sfrxETH sinh lãi"
+		},
+		"3": {
+			"title": "Fraxlend",
+			"description": "Thị trường cho vay permissionless với rủi ro cô lập và thông số tùy chỉnh"
+		},
+		"4": {
+			"title": "Fraxtal L2",
+			"description": "Chuỗi L2 dựa trên Optimism sử dụng FRAX làm token gas với khuyến khích blockspace"
+		},
+		"5": {
+			"title": "FraxSwap",
+			"description": "AMM với TWAMM tích hợp sẵn cho các lệnh giá trung bình theo thời gian lớn"
+		},
+		"6": {
+			"title": "veFXS Governance",
+			"description": "Khóa FXS để có quyền bỏ phiếu, điều hướng gauge weight và phí giao thức"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Sử dụng Stablecoin",
+			"description": "Sử dụng FRAX cho giao dịch, cho vay và làm giá trị ổn định trong DeFi"
+		},
+		"2": {
+			"title": "ETH Liquid Staking",
+			"description": "Stake ETH qua frxETH và nắm giữ sfrxETH để tự động tích lũy lợi suất"
+		},
+		"3": {
+			"title": "Chiến lược Đòn bẩy",
+			"description": "Sử dụng Fraxlend để vay với nhiều loại tài sản thế chấp khác nhau"
+		},
+		"4": {
+			"title": "Phát triển L2",
+			"description": "Xây dựng trên Fraxtal để giảm chi phí gas và nhận phần thưởng khuyến khích blockspace"
+		},
+		"5": {
+			"title": "Tham gia Quản trị",
+			"description": "Khóa FXS thành veFXS để bỏ phiếu về thông số giao thức và kiếm phí"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Frax Finance là gì và FRAX hoạt động như thế nào?",
+			"answer": "Frax Finance là một hệ sinh thái DeFi được xây dựng xung quanh stablecoin FRAX. FRAX ban đầu là fractional-algorithmic (được thế chấp một phần) nhưng đã phát triển thành thế chấp 100% để đạt độ ổn định tối đa. Giao thức bao gồm liquid staking, cho vay, DEX và chuỗi L2—tất cả kết nối với nhau để tạo một stack DeFi toàn diện."
+		},
+		"2": {
+			"question": "Sự khác biệt giữa frxETH và sfrxETH là gì?",
+			"answer": "frxETH là token được gắn 1:1 với ETH sử dụng cho cung cấp thanh khoản. sfrxETH là phiên bản staked tích lũy tất cả phần thưởng validator. Khi bạn stake ETH, bạn có thể chọn frxETH (cho LP) hoặc chuyển đổi sang sfrxETH (cho lợi suất thụ động). sfrxETH tăng giá trị theo thời gian khi phần thưởng staking tích lũy."
+		},
+		"3": {
+			"question": "Fraxtal là gì?",
+			"answer": "Fraxtal là blockchain L2 của Frax được xây dựng trên công nghệ Optimism (OP Stack). Nó sử dụng FRAX làm token gas gốc. Tính năng độc đáo là 'Flox'—khuyến khích blockspace thưởng cho người dùng và nhà phát triển dựa trên gas đã chi, tạo ra một vòng tuần hoàn của việc áp dụng và hoạt động trên chuỗi."
+		},
+		"4": {
+			"question": "FXS và veFXS là gì?",
+			"answer": "FXS là token quản trị của Frax thu giá trị từ tất cả hoạt động hệ sinh thái. veFXS (vote-escrowed FXS) có được bằng cách khóa FXS tối đa 4 năm. Người nắm giữ veFXS bỏ phiếu về gauge weights, kiếm phí giao thức và điều hướng emissions. Khóa lâu hơn cung cấp quyền bỏ phiếu nhiều hơn."
+		},
+		"5": {
+			"question": "Frax có an toàn để sử dụng không?",
+			"answer": "Frax đã hoạt động từ năm 2020 với nhiều cuộc kiểm toán. FRAX hiện được thế chấp 100%, giảm rủi ro mất peg. Tuy nhiên, rủi ro bao gồm lỗ hổng smart contract, phụ thuộc oracle và độ phức tạp từ thiết kế giao thức kết nối. Liquid staking frxETH có thêm rủi ro validator."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng khám phá hệ sinh thái Frax?",
+		"button": "Mở Frax Finance",
+		"note": "Stablecoin, liquid staking và L2 trong một hệ sinh thái"
+	}
+}

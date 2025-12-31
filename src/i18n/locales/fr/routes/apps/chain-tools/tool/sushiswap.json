@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "SushiSwap - DEX Multi-Chaîne & Plateforme DeFi | Échangez, Gagnez, Bridgez",
+		"description": "Découvrez SushiSwap, le DEX multi-chaîne piloté par la communauté. Échangez des tokens, fournissez de la liquidité et accédez aux échanges cross-chain sur plus de 30 réseaux.",
+		"keywords": "SushiSwap, Sushi, DEX, multi-chaîne, DeFi, liquidité, token SUSHI, cross-chain"
+	},
+	"overview": "SushiSwap est un exchange décentralisé piloté par la communauté qui a évolué d'un fork de Uniswap en une plateforme DeFi multi-chaîne complète. Lancé en août 2020 pendant le \"DeFi Summer\", Sushi a été pionnier du concept d'attaques vampires et d'incitations au liquidity mining qui ont transformé la façon dont les protocoles DeFi se disputent les utilisateurs.\n\nLa plateforme fonctionne désormais sur plus de 30 réseaux incluant Ethereum, Arbitrum, Polygon, Avalanche et bien d'autres. Au-delà des simples échanges, Sushi offre des pools de liquidité concentrée (SushiSwap V3), des échanges cross-chain via SushiXSwap et une suite complète d'outils DeFi. Le token SUSHI est utilisé pour la gouvernance et peut être staké pour du xSUSHI afin de gagner des frais de protocole.\n\nSushi a connu une évolution significative, traversant diverses phases de leadership et de restructuration. Aujourd'hui, il se concentre sur la meilleure expérience d'échange multi-chaîne avec des fonctionnalités telles que l'optimisation des routes, la protection MEV et les transactions cross-chain transparentes.",
+	"features": {
+		"1": {
+			"title": "Support 30+ Chaînes",
+			"description": "Tradez sur Ethereum, Arbitrum, Polygon, Avalanche, BSC et de nombreux autres réseaux"
+		},
+		"2": {
+			"title": "SushiXSwap",
+			"description": "Échanges cross-chain alimentés par Stargate et Axelar pour un trading multi-chaîne fluide"
+		},
+		"3": {
+			"title": "Liquidité Concentrée",
+			"description": "Pools V3 avec fourchettes de prix personnalisées pour une fourniture de liquidité à capital efficace"
+		},
+		"4": {
+			"title": "Optimisation des Routes",
+			"description": "Le routage intelligent trouve les meilleurs prix sur plusieurs sources de liquidité"
+		},
+		"5": {
+			"title": "Staking xSUSHI",
+			"description": "Stakez SUSHI pour gagner une part des frais de trading du protocole"
+		},
+		"6": {
+			"title": "Streaming Furo",
+			"description": "Solution de streaming et vesting de tokens pour les salaires et subventions"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading Multi-Chaîne",
+			"description": "Échangez des tokens sur plus de 30 réseaux depuis une interface unique"
+		},
+		"2": {
+			"title": "Échanges Cross-Chain",
+			"description": "Bridgez et échangez en une seule transaction avec SushiXSwap"
+		},
+		"3": {
+			"title": "Fourniture de Liquidité",
+			"description": "Gagnez des frais de trading en fournissant de la liquidité aux pools"
+		},
+		"4": {
+			"title": "Revenu Passif",
+			"description": "Stakez SUSHI pour du xSUSHI afin de gagner une part des revenus du protocole"
+		},
+		"5": {
+			"title": "Streaming de Tokens",
+			"description": "Utilisez Furo pour les salaires, calendriers de vesting et subventions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que SushiSwap et en quoi diffère-t-il de Uniswap ?",
+			"answer": "SushiSwap a commencé comme un fork de Uniswap mais a évolué en une plateforme multi-chaîne distincte. Les différences clés incluent : le support de plus de 30 chaînes (contre moins pour Uniswap), les échanges cross-chain via SushiXSwap, le token SUSHI avec partage de revenus et un modèle de gouvernance communautaire. Les deux utilisent la mécanique AMM mais ont significativement divergé."
+		},
+		"2": {
+			"question": "Qu'est-ce que xSUSHI et comment fonctionne le staking ?",
+			"answer": "xSUSHI est la version stakée de SUSHI. Lorsque vous stakez SUSHI dans le SushiBar, vous recevez du xSUSHI qui s'apprécie en valeur au fur et à mesure que les frais de protocole s'accumulent. Une portion de tous les frais de trading est utilisée pour acheter du SUSHI et le distribuer aux détenteurs de xSUSHI. Vous pouvez unstaker à tout moment pour recevoir votre SUSHI plus les récompenses gagnées."
+		},
+		"3": {
+			"question": "Comment fonctionne l'échange cross-chain SushiXSwap ?",
+			"answer": "SushiXSwap utilise des protocoles de bridging comme Stargate et Axelar pour permettre les échanges cross-chain. Vous pouvez échanger un token sur une chaîne contre un token différent sur une autre chaîne en une seule transaction. Le système gère le bridging, l'échange sur les deux chaînes et livre le token final dans votre portefeuille."
+		},
+		"4": {
+			"question": "Est-il sûr d'utiliser SushiSwap ?",
+			"answer": "SushiSwap fonctionne depuis 2020 avec plusieurs audits de sécurité. Cependant, comme pour toute DeFi, des risques existent incluant des bugs de smart contracts, des pertes impermanentes, des vulnérabilités de bridge pour les fonctionnalités cross-chain et des risques spécifiques aux tokens. Le protocole a connu des incidents de sécurité par le passé, donc faites toujours preuve de prudence."
+		},
+		"5": {
+			"question": "Qu'est-il arrivé au leadership de Sushi ?",
+			"answer": "Sushi a eu un historique de gouvernance tumultueux. Lancé initialement de façon pseudonyme, il a traversé des périodes de leadership centralisé, des disputes sur la trésorerie et de la restructuration. Aujourd'hui, il fonctionne comme une DAO avec un leadership élu. Le protocole continue de se développer et s'étendre malgré ces défis."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à trader sur plusieurs chaînes ?",
+		"button": "Ouvrir SushiSwap",
+		"note": "Le DEX multi-chaîne piloté par la communauté"
+	}
+}

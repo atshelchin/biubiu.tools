@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Liquity - Protokol Peminjaman Tanpa Bunga | Pinjam LUSD dengan ETH",
+		"description": "Temukan Liquity, protokol peminjaman terdesentralisasi. Pinjam stablecoin LUSD dengan kolateral ETH dengan bunga 0%—hanya biaya satu kali. Sepenuhnya immutable.",
+		"keywords": "Liquity, LUSD, LQTY, peminjaman tanpa bunga, stablecoin, kolateral ETH, DeFi"
+	},
+	"overview": "Liquity adalah protokol peminjaman terdesentralisasi yang memungkinkan pengguna menarik pinjaman tanpa bunga dengan kolateral ETH. Didirikan oleh Robert Lauko pada tahun 2020 dan diluncurkan pada tahun 2021, Liquity mempelopori DeFi yang benar-benar immutable—protokol ini tidak memiliki admin key dan tidak dapat diupgrade atau dimatikan.\n\nPengguna menyetor ETH ke dalam 'Troves' dan meminjam stablecoin LUSD sebagai gantinya. Tidak ada tingkat bunga berkelanjutan—hanya biaya peminjaman satu kali (0,5-5% tergantung kondisi pasar). Rasio kolateral minimum adalah 110%, termasuk yang paling efisien modal di DeFi. LUSD mempertahankan pegnya melalui insentif arbitrase dan mekanisme likuidasi yang kuat.\n\nLQTY adalah token sekunder yang diperoleh oleh depositor Stability Pool dan operator frontend. Stability Pool adalah garis pertahanan pertama untuk likuidasi, dengan depositor mendapatkan ETH dari Troves yang dilikuidasi. Liquity V2 (diluncurkan 2024) memperkenalkan tingkat bunga yang ditetapkan pengguna dan beberapa jenis kolateral.",
+	"features": {
+		"1": {
+			"title": "Pinjaman Bunga 0%",
+			"description": "Pinjam LUSD tanpa bunga berkelanjutan—hanya biaya penerbitan satu kali"
+		},
+		"2": {
+			"title": "Rasio Kolateral 110%",
+			"description": "Efisiensi modal terdepan di industri dengan persyaratan kolateral minimum yang rendah"
+		},
+		"3": {
+			"title": "Protokol Immutable",
+			"description": "Tidak ada admin key, tidak ada governance—protokol berjalan secara otonom selamanya"
+		},
+		"4": {
+			"title": "Stability Pool",
+			"description": "Setor LUSD untuk mendapatkan ETH dari likuidasi dan reward LQTY"
+		},
+		"5": {
+			"title": "Likuidasi Instan",
+			"description": "Mekanisme likuidasi efisien mempertahankan solvabilitas sistem secara otomatis"
+		},
+		"6": {
+			"title": "Frontend Terdesentralisasi",
+			"description": "Beberapa frontend independen—tidak ada single point of failure atau sensor"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Leverage Tanpa Bunga",
+			"description": "Pinjam LUSD dengan ETH untuk mendapatkan leverage tanpa membayar bunga berkelanjutan"
+		},
+		"2": {
+			"title": "Yield LUSD",
+			"description": "Setor LUSD di Stability Pool untuk mendapatkan ETH dan reward LQTY"
+		},
+		"3": {
+			"title": "Akses Stablecoin",
+			"description": "Cetak LUSD untuk pembayaran, DeFi, atau memegang nilai stabil"
+		},
+		"4": {
+			"title": "Efisiensi Modal",
+			"description": "Maksimalkan eksposur ETH dengan over-kolateralisasi minimal"
+		},
+		"5": {
+			"title": "Ketahanan Sensor",
+			"description": "Gunakan protokol peminjaman yang immutable dan tidak dapat dihentikan tanpa kontrol pusat"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Liquity dan bagaimana peminjaman tanpa bunga bekerja?",
+			"answer": "Liquity memungkinkan Anda meminjam stablecoin LUSD dengan kolateral ETH tanpa bunga berkelanjutan. Alih-alih bunga, Anda membayar biaya satu kali (0,5-5%) saat membuka atau menyesuaikan Trove Anda. Biaya bervariasi berdasarkan aktivitas sistem baru-baru ini. Pinjaman Anda dapat tetap terbuka tanpa batas waktu selama Anda mempertahankan rasio kolateral minimum 110%."
+		},
+		"2": {
+			"question": "Apa itu LUSD dan bagaimana ia mempertahankan pegnya?",
+			"answer": "LUSD adalah stablecoin yang dipatok ke USD milik Liquity, hanya didukung oleh ETH. Peg dipertahankan melalui: 1) Hard price floor di $1 melalui redemptions (siapa pun dapat menukar LUSD untuk ETH senilai $1), 2) Soft price ceiling sekitar $1,10 (peminjaman menjadi menarik), 3) Likuidasi Stability Pool, dan 4) Peluang arbitrase. LUSD telah mempertahankan stabilitas peg yang sangat baik."
+		},
+		"3": {
+			"question": "Apa itu Stability Pool?",
+			"answer": "Stability Pool adalah tempat pemegang LUSD menyetor untuk mendapatkan reward. Ketika Troves dilikuidasi, deposit Stability Pool digunakan untuk membayar utang, dan depositor menerima ETH yang dilikuidasi (dengan diskon ~10%). Depositor juga mendapatkan reward token LQTY. Ini adalah mekanisme kunci yang memastikan solvabilitas sistem."
+		},
+		"4": {
+			"question": "Mengapa Liquity immutable dan apa artinya?",
+			"answer": "Liquity tidak memiliki admin key, governance, atau mekanisme upgrade. Setelah di-deploy, smart contract tidak dapat diubah oleh siapa pun—mereka berjalan secara otonom di Ethereum selamanya. Ini memberikan ketahanan sensor maksimum dan menghilangkan vektor serangan governance, tetapi juga berarti bug tidak dapat diperbaiki. Ini adalah protokol peminjaman paling terdesentralisasi."
+		},
+		"5": {
+			"question": "Apa itu Liquity V2?",
+			"answer": "Liquity V2 adalah versi baru yang diluncurkan pada tahun 2024 yang memperkenalkan tingkat bunga yang ditetapkan pengguna (peminjam bersaing pada tingkat), beberapa jenis kolateral di luar ETH, dan efisiensi modal yang ditingkatkan. Tidak seperti V1, V2 akan memiliki beberapa kemampuan upgrade. V1 dan V2 akan hidup berdampingan sebagai protokol terpisah."
+		}
+	},
+	"cta": {
+		"ready": "Siap meminjam tanpa bunga?",
+		"button": "Buka Liquity",
+		"note": "Peminjaman tanpa bunga yang immutable dengan ETH"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "Yearn Finance - Agregador de Rendimento DeFi | Vaults com Auto-Compounding",
+		"description": "Descubra o Yearn Finance, o agregador de rendimento líder. Deposite ativos em Vaults para ganhar automaticamente rendimentos DeFi otimizados sem gestão manual.",
+		"keywords": "Yearn Finance, YFI, agregador de rendimento, vaults, DeFi, auto-compound, otimização de rendimento"
+	},
+	"overview": "Yearn Finance é um protocolo de agregação de rendimento descentralizado que automatiza estratégias de yield farming DeFi. Fundado por Andre Cronje no início de 2020, Yearn foi pioneiro no conceito de \"Vaults\"—contratos inteligentes que automaticamente implantam ativos depositados em vários protocolos DeFi para maximizar retornos.\n\nO produto principal são os Yearn Vaults (yVaults), onde usuários depositam ativos e as estratégias do protocolo automaticamente fazem farming dos melhores rendimentos, capitalizam recompensas e rebalanceiam posições. Isso economiza aos usuários de mover fundos manualmente, pagar gas para colheitas e constantemente pesquisar estratégias ótimas. As estratégias de Vault são desenvolvidas por estrategistas especialistas que ganham uma parte dos lucros gerados.\n\nYearn V3 introduziu arquitetura de vault modular, permitindo implantação de estratégia mais flexível e melhor gestão de risco. O token YFI é usado para governança, com veYFI permitindo que detentores de tokens votem em decisões do protocolo. Yearn se tornou infraestrutura DeFi fundamental, com suas estratégias e arquitetura influenciando muitos protocolos de rendimento subsequentes.",
+	"features": {
+		"1": {
+			"title": "Vaults Automatizados",
+			"description": "Deposite ativos e ganhe rendimentos otimizados automaticamente—sem gestão manual"
+		},
+		"2": {
+			"title": "Otimização de Estratégias",
+			"description": "Estrategistas especialistas desenvolvem e melhoram continuamente estratégias de rendimento"
+		},
+		"3": {
+			"title": "Auto-Compounding",
+			"description": "Recompensas são automaticamente coletadas e reinvestidas para crescimento composto"
+		},
+		"4": {
+			"title": "Estratégias Multi-Protocolo",
+			"description": "Estratégias se espalham por Aave, Compound, Curve e mais para rendimentos ótimos"
+		},
+		"5": {
+			"title": "Arquitetura Modular V3",
+			"description": "Design de vault flexível com múltiplas estratégias por vault e melhor isolamento de risco"
+		},
+		"6": {
+			"title": "Governança veYFI",
+			"description": "Bloqueie YFI para votar em decisões do protocolo e emissões de gauge"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Geração de Rendimento Passivo",
+			"description": "Deposite stablecoins ou cripto e ganhe rendimentos otimizados sem esforço"
+		},
+		"2": {
+			"title": "DeFi Simplificado",
+			"description": "Acesse estratégias de rendimento complexas através de depósitos simples em vault"
+		},
+		"3": {
+			"title": "Otimização de Gas",
+			"description": "Compartilhe custos de gas para colheita e capitalização com outros depositantes do vault"
+		},
+		"4": {
+			"title": "Desenvolvimento de Estratégias",
+			"description": "Estrategistas podem construir e implantar estratégias para ganhar taxas de performance"
+		},
+		"5": {
+			"title": "Integração de Protocolo",
+			"description": "Outros protocolos integram yVaults para rendimento automatizado em suas tesourarias"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é o Yearn Finance e como funcionam os Vaults?",
+			"answer": "Yearn é um agregador de rendimento onde você deposita ativos em Vaults. Cada Vault tem estratégias que automaticamente implantam seus fundos em protocolos DeFi (Aave, Compound, Curve, etc.) para ganhar rendimentos. Recompensas são auto-capitalizadas, e estratégias são otimizadas por especialistas. Você recebe yTokens representando sua parte do vault."
+		},
+		"2": {
+			"question": "Quais taxas o Yearn cobra?",
+			"answer": "Vaults Yearn V3 tipicamente cobram uma taxa de performance de 10% sobre rendimentos gerados (não sobre o principal). Alguns vaults podem ter taxas de gestão. As taxas financiam o desenvolvimento do protocolo e recompensas de estrategistas. Não há taxas de depósito ou retirada para a maioria dos vaults."
+		},
+		"3": {
+			"question": "É seguro usar o Yearn?",
+			"answer": "Yearn está operando desde 2020 com extensas auditorias e um forte histórico de segurança. No entanto, riscos incluem vulnerabilidades de contratos inteligentes no Yearn e protocolos subjacentes, riscos de estratégia e potencial para perdas em condições extremas de mercado. Vaults Yearn não são segurados—deposite apenas o que você pode perder."
+		},
+		"4": {
+			"question": "O que é YFI e veYFI?",
+			"answer": "YFI é o token de governança do Yearn com uma oferta fixa de 36.666. veYFI (vote-escrowed YFI) é obtido bloqueando YFI por até 4 anos. Detentores de veYFI podem votar em propostas de governança, direcionar emissões de gauge para vaults específicos e ganhar taxas do protocolo. Bloqueios mais longos fornecem mais poder de voto."
+		},
+		"5": {
+			"question": "Qual é a diferença entre Yearn V2 e V3?",
+			"answer": "V3 introduz arquitetura de vault modular onde cada vault pode ter múltiplas estratégias que são facilmente adicionadas ou removidas. Isso melhora a gestão de risco, permite controle mais granular e possibilita novos tipos de vault. V3 também tem melhor eficiência de gas e melhor integração com outros protocolos."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para ganhar rendimentos otimizados?",
+		"button": "Abrir Yearn",
+		"note": "Otimização de rendimento automatizada para suas criptomoedas"
+	}
+}

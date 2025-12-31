@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Convex Finance - Artırılmış Curve ve Frax Staking | CRV Ödüllerini Maksimize Edin",
+		"description": "Curve ve Frax getirilerini maksimize eden platform Convex Finance'i keşfedin. Kilitleme olmadan artırılmış CRV ödülleri için LP token'larını stake edin veya protokol ücretleri için CVX stake edin.",
+		"keywords": "Convex Finance, CVX, Curve, CRV, getiri artırma, DeFi, likidite staking, veCRV"
+	},
+	"overview": "Convex Finance, veCRV oy gücünü toplayarak Curve Finance likidite sağlayıcıları için getirileri maksimize eden bir DeFi protokolüdür. Mayıs 2021'de başlatılan Convex, önemli bir sorunu çözdü: Curve'de maksimum CRV ödülleri kazanmak, çoğu kullanıcının yapamayacağı veya yapmak istemeyeceği 4 yıla kadar CRV kilitlemeyi gerektirir.\n\nConvex, CRV'lerini stake eden kullanıcılardan veCRV toplar, ardından bu toplu oy gücünü tüm Convex yatırımcıları için ödülleri artırmak için kullanır. Curve LP token sahipleri, kişisel olarak herhangi bir CRV kilitlemeden artırılmış CRV + CVX ödülleri kazanmak için Convex'te stake edebilir. Bu, artırılmış getirilere erişimi demokratikleştirdi ve \"Curve Wars\"ı tetikledi—protokollerin CRV emisyonlarını yönlendirmek için Convex'in CVX oy gücü için rekabet etmesi.\n\nPlatform, Curve'ün ötesinde Frax Finance (cvxFXS) ve f(x) Protocol'ü destekleyecek şekilde genişledi. CVX token sahipleri, gauge ağırlıklarına oy vermek ve emisyon yönlendirme arayan protokollerden rüşvet kazanmak için token'larını vlCVX olarak kilitleyebilir. 1 milyar doların üzerinde TVL ile Convex, Curve ekosisteminin merkezindedir.",
+	"features": {
+		"1": {
+			"title": "Artırılmış CRV Ödülleri",
+			"description": "Kişisel olarak 4 yıl CRV kilitlemeden maksimum Curve ödülleri kazanın"
+		},
+		"2": {
+			"title": "CVX Ödülleri",
+			"description": "Artırılmış CRV'nin üzerine CVX kazanmak için Curve LP token'larını stake edin"
+		},
+		"3": {
+			"title": "cvxCRV Staking",
+			"description": "CRV, CVX ve 3CRV ödülleri kazanmak için CRV'yi cvxCRV olarak stake edin"
+		},
+		"4": {
+			"title": "vlCVX Oylama",
+			"description": "Curve gauge ağırlıklarına oy vermek ve rüşvet kazanmak için CVX kilitleyin"
+		},
+		"5": {
+			"title": "Frax Desteği",
+			"description": "Artırılmış Frax protokol ödülleri için FXS'yi cvxFXS olarak stake edin"
+		},
+		"6": {
+			"title": "Otomatik Bileşikleştirme",
+			"description": "Ödüller yatırımcılar için otomatik olarak talep edilir ve bileşikleştirilir"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Curve LP Artırma",
+			"description": "CRV kilitlemeden Curve LP pozisyonlarınızda maksimum CRV ödülleri kazanın"
+		},
+		"2": {
+			"title": "CRV Staking",
+			"description": "4 yıllık kilitlemeler olmadan getiri kazanmak için CRV'yi cvxCRV'ye dönüştürün"
+		},
+		"3": {
+			"title": "Yönetim Gücü",
+			"description": "Curve emisyonlarını yönlendirmek ve rüşvet kazanmak için CVX'i vlCVX olarak kilitleyin"
+		},
+		"4": {
+			"title": "Pasif Getiri",
+			"description": "Curve ve Frax'ta otomatik bileşikleştirilmiş ödüller kazanmak için stake edin"
+		},
+		"5": {
+			"title": "Protokol Etkisi",
+			"description": "Protokoller havuzlarına CRV emisyonlarını etkilemek için CVX biriktirir"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Convex Finance nedir ve neden var?",
+			"answer": "Convex, Curve'ün boost sorununu çözer. Maksimum CRV ödülleri kazanmak için CRV'yi 4 yıla kadar veCRV olarak kilitlemeniz gerekir. Çoğu kullanıcı bunu yapamaz. Convex, Convex'te Curve LP token'larını stake eden herkese artırılmış ödüller sağlamak için birçok kullanıcıdan veCRV toplar—kişisel kilitleme gerekmez."
+		},
+		"2": {
+			"question": "CRV, cvxCRV ve veCRV arasındaki fark nedir?",
+			"answer": "CRV, Curve'ün token'ıdır. veCRV, 4 yıla kadar doğrudan Curve'de kilitlenmiş oy emanetli CRV'dir—oy gücü ve boost sağlar ancak likittir. cvxCRV, Convex'e yatırılan CRV'dir—likittir (ticarete konu) ve Convex'in toplu veCRV pozisyonundan getiri kazanır. CRV'yi cvxCRV'ye dönüştürmek tek yönlüdür."
+		},
+		"3": {
+			"question": "Curve Wars nedir?",
+			"answer": "Curve Wars, CRV emisyonlarını yönlendirmek için CVX/vlCVX biriktirmek için rekabet eden protokolleri ifade eder. Convex önemli veCRV'yi kontrol ettiğinden, CVX oy gücünü kontrol etmek Curve ödüllerinin nereye gideceğini kontrol etmek anlamına gelir. Protokoller, havuzlarına oy vermek için vlCVX seçmenlerine \"rüşvet\" teklif eder ve emisyon yönlendirme etrafında bir meta oyun oluşturur."
+		},
+		"4": {
+			"question": "vlCVX nedir ve rüşvetler nasıl çalışır?",
+			"answer": "vlCVX (oy kilitli CVX), 16+ hafta kilitlenmiş CVX'tir. vlCVX sahipleri hangi Curve havuzlarının CRV emisyonları alacağına oy verir. Protokoller, emisyonları havuzlarına yönlendiren vlCVX seçmenlerine \"rüşvet\" (token ödülleri) öder. Rüşvetler genellikle kilitli CVX'ten daha değerlidir ve seçmenler için çekici getiriler yaratır."
+		},
+		"5": {
+			"question": "CRV'yi cvxCRV'ye dönüştürmek geri alınabilir mi?",
+			"answer": "Hayır, CRV'yi cvxCRV'ye dönüştürmek tek yönlüdür ve kalıcıdır. Ancak cvxCRV, DEX'lerde takas edilebilir. cvxCRV/CRV döviz kuru piyasa koşullarına göre dalgalanır—bazen cvxCRV, CRV'ye göre indirimli veya primli işlem görür. Dönüştürmeden önce bunu göz önünde bulundurun."
+		}
+	},
+	"cta": {
+		"ready": "Curve getirilerinizi maksimize etmeye hazır mısınız?",
+		"button": "Convex'i Aç",
+		"note": "Curve ve Frax için artırılmış staking"
+	}
+}

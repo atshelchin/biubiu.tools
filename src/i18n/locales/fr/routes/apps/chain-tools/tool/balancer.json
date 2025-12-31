@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Balancer - AMM à Pools Pondérés & Protocole de Liquidité DeFi",
+		"description": "Découvrez Balancer, l'AMM flexible permettant des pools à pondération personnalisée. Créez des pools avec jusqu'à 8 tokens, gagnez des frais de trading et accédez à la liquidité programmable.",
+		"keywords": "Balancer, AMM, pools pondérés, DeFi, liquidité, token BAL, liquidité programmable"
+	},
+	"overview": "Balancer est un exchange décentralisé et gestionnaire de portefeuille automatisé qui a été pionnier des pools de liquidité pondérés—permettant des pools avec jusqu'à 8 tokens dans n'importe quel ratio, plutôt que le 50/50 fixe des AMM traditionnels. Lancé en mars 2020 par Balancer Labs de Fernando Martinelli, le protocole permet une flexibilité sans précédent dans la conception des pools.\n\nL'innovation clé est que les fournisseurs de liquidité peuvent créer des pools qui maintiennent automatiquement des ratios d'actifs personnalisés. Un pool pondéré 80% ETH / 20% WBTC se rééquilibrera par arbitrage pour maintenir ce ratio, créant effectivement un fonds indiciel auto-rééquilibrant qui gagne des frais de trading au lieu de payer des frais de gestion.\n\nBalancer V2 a introduit une architecture de coffre unique pour l'efficacité en gaz, et Balancer V3 (lancement 2024) apporte des pools composables, des hooks pour la logique personnalisée et des pools boostés qui routent la liquidité inactive vers les protocoles de prêt. Le protocole est une pierre angulaire de l'infrastructure DeFi, avec de nombreux projets construisant des types de pools personnalisés sur Balancer.",
+	"features": {
+		"1": {
+			"title": "Pools Pondérés",
+			"description": "Créez des pools avec jusqu'à 8 tokens dans n'importe quel ratio (par ex., 80/20, 60/20/20)"
+		},
+		"2": {
+			"title": "Pools Stables",
+			"description": "Optimisés pour les actifs ancrés avec un slippage minimal entre tokens similaires"
+		},
+		"3": {
+			"title": "Pools Boostés",
+			"description": "La liquidité inactive génère un rendement supplémentaire via les protocoles de prêt"
+		},
+		"4": {
+			"title": "Architecture Vault",
+			"description": "Un coffre unique détient tous les actifs des pools pour des échanges multi-sauts économes en gaz"
+		},
+		"5": {
+			"title": "Liquidité Programmable",
+			"description": "Logique de pool personnalisée et hooks permettent de nouveaux designs AMM"
+		},
+		"6": {
+			"title": "Gouvernance veBAL",
+			"description": "Verrouillez BAL pour obtenir un pouvoir de vote et des récompenses de liquidity mining boostées"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Création de Fonds Indiciels",
+			"description": "Créez des portefeuilles auto-rééquilibrants qui gagnent des frais au lieu de les payer"
+		},
+		"2": {
+			"title": "Liquidité de Protocole",
+			"description": "Les projets utilisent Balancer pour la diversification de trésorerie et la liquidité de tokens"
+		},
+		"3": {
+			"title": "Trading de Stablecoins",
+			"description": "Les pools stables permettent des échanges à faible slippage entre actifs ancrés"
+		},
+		"4": {
+			"title": "Liquidity Mining",
+			"description": "Gagnez des récompenses BAL en fournissant de la liquidité aux pools incités"
+		},
+		"5": {
+			"title": "Développement AMM Personnalisé",
+			"description": "Construisez de nouveaux types de pools en utilisant l'infrastructure programmable de Balancer"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Balancer et comment fonctionnent les pools pondérés ?",
+			"answer": "Balancer est un AMM qui permet des pools avec des pondérations de tokens personnalisées. Contrairement aux pools 50/50 fixes de Uniswap, les pools Balancer peuvent être 80/20, 60/20/20 ou n'importe quel ratio. Les arbitragistes rééquilibrent le pool pour maintenir les pondérations, donc un portefeuille reste aux allocations cibles tout en gagnant des frais de trading. C'est comme un fonds indiciel qui vous paie."
+		},
+		"2": {
+			"question": "Quelle est la différence entre Balancer V2 et V3 ?",
+			"answer": "V2 a introduit l'architecture de coffre où tous les pools partagent un seul contrat détenant les actifs, permettant des échanges multi-sauts économes en gaz. V3 ajoute des pools composables (combinant stable et pondéré), des hooks pour la logique de pool personnalisée, une comptabilité transitoire pour des économies de gaz supplémentaires et une meilleure intégration des pools boostés."
+		},
+		"3": {
+			"question": "Qu'est-ce que veBAL et comment fonctionne la gouvernance ?",
+			"answer": "veBAL (vote-escrowed BAL) est obtenu en verrouillant des tokens LP BAL/ETH 80/20 pour jusqu'à 1 an. Les détenteurs de veBAL peuvent voter sur les pondérations de gauge (quels pools reçoivent des émissions BAL), booster leurs propres récompenses de farming jusqu'à 2,5x et participer aux propositions de gouvernance. Des verrouillages plus longs donnent plus de pouvoir de vote."
+		},
+		"4": {
+			"question": "Que sont les pools boostés ?",
+			"answer": "Les pools boostés routent la liquidité inactive (tokens non nécessaires pour les échanges actuels) vers des protocoles de prêt comme Aave pour gagner un rendement supplémentaire. Les LP gagnent à la fois des frais de trading et des intérêts de prêt. Cela augmente significativement l'efficacité du capital par rapport aux AMM traditionnels où le capital inactif ne gagne rien."
+		},
+		"5": {
+			"question": "Est-il sûr d'utiliser Balancer ?",
+			"answer": "Balancer est éprouvé depuis 2020 avec de nombreux audits. Cependant, il a connu des exploits par le passé, incluant une attaque par flash loan en 2020 et une divulgation de vulnérabilité en 2023. L'architecture de coffre V2 réduit la surface d'attaque. Comme toujours en DeFi, les risques incluent les smart contracts, la perte impermanente et les risques spécifiques aux pools."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à explorer la liquidité flexible ?",
+		"button": "Ouvrir Balancer",
+		"note": "Liquidité programmable pour DeFi"
+	}
+}

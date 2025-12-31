@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "Chainlink - Rede de Oráculos Descentralizada | Conecte Contratos Inteligentes a Dados do Mundo Real",
+		"description": "Descubra o Chainlink, a principal rede de oráculos descentralizada. Conecte contratos inteligentes a dados do mundo real, APIs e computação off-chain com segurança.",
+		"keywords": "Chainlink, LINK, oracle, price feeds, VRF, CCIP, smart contracts, DeFi"
+	},
+	"overview": "Chainlink é a rede de oráculos descentralizada padrão da indústria que permite contratos inteligentes acessarem com segurança dados off-chain, APIs e computação. Fundada por Sergey Nazarov e Steve Ellis em 2017, a Chainlink resolve o 'problema do oráculo' - o desafio de obter dados externos confiáveis em ambientes blockchain.\n\nA rede opera através de operadores de nós independentes que agregam dados de múltiplas fontes, fornecendo entradas e saídas à prova de adulteração para contratos inteligentes. Os produtos da Chainlink incluem Price Feeds (usados pela maioria dos protocolos DeFi), VRF (funções randômicas verificáveis para jogos/NFTs), Automation (execução descentralizada de contratos), Functions (computação serverless) e CCIP (Protocolo de Interoperabilidade Cross-Chain).\n\nA Chainlink protege mais de $75 bilhões em valor em DeFi, seguros, jogos e aplicações empresariais. O token LINK é usado para pagamento aos operadores de nós e como garantia de staking. Com suas extensas integrações e histórico comprovado, a Chainlink tornou-se infraestrutura crítica para todo o ecossistema blockchain.",
+	"features": {
+		"1": {
+			"title": "Price Feeds",
+			"description": "Oráculos de preço descentralizados que alimentam a maioria dos protocolos DeFi com dados de mercado precisos"
+		},
+		"2": {
+			"title": "VRF",
+			"description": "Função Randômica Verificável para aleatoriedade comprovadamente justa em jogos e NFTs"
+		},
+		"3": {
+			"title": "CCIP",
+			"description": "Protocolo de Interoperabilidade Cross-Chain para transferências seguras de tokens e mensagens"
+		},
+		"4": {
+			"title": "Automation",
+			"description": "Automação descentralizada de contratos inteligentes para manutenção e gatilhos"
+		},
+		"5": {
+			"title": "Functions",
+			"description": "Plataforma de computação serverless para conectar contratos inteligentes a qualquer API"
+		},
+		"6": {
+			"title": "Proof of Reserve",
+			"description": "Verificação on-chain de reservas de ativos off-chain ou cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Dados de Preço DeFi",
+			"description": "Fornecer feeds de preço precisos para protocolos de empréstimo, derivativos e DEX"
+		},
+		"2": {
+			"title": "Aleatoriedade em Jogos",
+			"description": "Gerar números aleatórios verificáveis para mints justos de NFT e mecânicas de jogos"
+		},
+		"3": {
+			"title": "Transferências Cross-Chain",
+			"description": "Fazer bridge de tokens e mensagens com segurança entre diferentes blockchains"
+		},
+		"4": {
+			"title": "Ações Automatizadas",
+			"description": "Acionar funções de contratos inteligentes baseadas em tempo ou condições externas"
+		},
+		"5": {
+			"title": "Integração com o Mundo Real",
+			"description": "Conectar aplicações blockchain a APIs e fontes de dados tradicionais"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é Chainlink e por que contratos inteligentes precisam de oráculos?",
+			"answer": "Chainlink é uma rede de oráculos descentralizada que alimenta contratos inteligentes com dados externos. Blockchains são sistemas isolados que não podem acessar dados externos diretamente. Oráculos preenchem essa lacuna buscando com segurança informações do mundo real (preços, clima, resultados esportivos, etc.) e entregando-as on-chain. Sem oráculos, DeFi e a maioria das aplicações blockchain não poderiam funcionar."
+		},
+		"2": {
+			"question": "Como a Chainlink garante a precisão dos dados?",
+			"answer": "A Chainlink usa múltiplas camadas de descentralização: dados são obtidos de muitos provedores de dados premium, agregados por múltiplos operadores de nós independentes, e o resultado mediano/consenso é entregue on-chain. Operadores de nós fazem stake de LINK como garantia e podem ser penalizados por fornecer dados ruins. Isso torna a manipulação economicamente inviável."
+		},
+		"3": {
+			"question": "O que é CCIP e como funciona?",
+			"answer": "CCIP (Protocolo de Interoperabilidade Cross-Chain) é a solução da Chainlink para comunicação segura entre cadeias. Ele permite transferências de tokens e mensagens arbitrárias entre blockchains usando a rede de oráculos descentralizada da Chainlink para segurança. Ao contrário de bridges que foram exploradas por bilhões, o CCIP aproveita a infraestrutura de segurança existente da Chainlink."
+		},
+		"4": {
+			"question": "Para que o token LINK é usado?",
+			"answer": "LINK é o token nativo da Chainlink com múltiplos usos: pagamento aos operadores de nós por serviços de oráculo, garantia de staking para operadores de nós (com penalização por dados ruins) e participação na governança. dApps pagam LINK pelos serviços da Chainlink, criando demanda à medida que o uso da rede cresce."
+		},
+		"5": {
+			"question": "Quais protocolos usam Chainlink?",
+			"answer": "Chainlink é usado pela maioria dos principais protocolos DeFi, incluindo Aave, Compound, Synthetix, dYdX, GMX e centenas de outros. Também é usado por empresas tradicionais como Swift, DTCC e ANZ Bank para experimentos blockchain. Mais de 1.800 projetos em DeFi, jogos, NFTs e seguros dependem dos oráculos da Chainlink."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para explorar os oráculos Chainlink?",
+		"button": "Abrir Chainlink",
+		"note": "A rede de oráculos padrão da indústria"
+	}
+}

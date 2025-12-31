@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Liquity - Protocole d'Emprunt Sans Intérêts | Empruntez LUSD Contre ETH",
+		"description": "Découvrez Liquity, le protocole d'emprunt décentralisé. Empruntez le stablecoin LUSD contre des garanties ETH avec 0% d'intérêts—juste des frais uniques. Entièrement immuable.",
+		"keywords": "Liquity, LUSD, LQTY, emprunt sans intérêts, stablecoin, garantie ETH, DeFi"
+	},
+	"overview": "Liquity est un protocole d'emprunt décentralisé qui permet aux utilisateurs de contracter des prêts sans intérêts contre des garanties ETH. Fondé par Robert Lauko en 2020 et lancé en 2021, Liquity a été pionnier de la DeFi véritablement immuable—le protocole n'a pas de clés admin et ne peut pas être mis à jour ou fermé.\n\nLes utilisateurs déposent de l'ETH dans des 'Troves' et empruntent du stablecoin LUSD contre celui-ci. Il n'y a pas de taux d'intérêt continu—juste des frais d'emprunt uniques (0,5-5% selon les conditions du marché). Le ratio de collatéralisation minimum est de 110%, parmi les plus efficaces en capital dans la DeFi. LUSD maintient son ancrage grâce à des incitations d'arbitrage et un mécanisme de liquidation robuste.\n\nLQTY est le jeton secondaire gagné par les déposants du Stability Pool et les opérateurs de frontend. Le Stability Pool est la première ligne de défense pour les liquidations, les déposants gagnant de l'ETH des Troves liquidés. Liquity V2 (lancement 2024) introduit des taux d'intérêt définis par l'utilisateur et plusieurs types de garantie.",
+	"features": {
+		"1": {
+			"title": "Prêts à 0% d'Intérêt",
+			"description": "Empruntez LUSD sans intérêts continus—seulement des frais d'émission uniques"
+		},
+		"2": {
+			"title": "Ratio de Garantie 110%",
+			"description": "Efficacité du capital leader de l'industrie avec des exigences de garantie minimales basses"
+		},
+		"3": {
+			"title": "Protocole Immuable",
+			"description": "Pas de clés admin, pas de gouvernance—le protocole fonctionne de manière autonome pour toujours"
+		},
+		"4": {
+			"title": "Stability Pool",
+			"description": "Déposez LUSD pour gagner de l'ETH des liquidations et des récompenses LQTY"
+		},
+		"5": {
+			"title": "Liquidations Instantanées",
+			"description": "Mécanisme de liquidation efficace maintenant la solvabilité du système automatiquement"
+		},
+		"6": {
+			"title": "Frontends Décentralisés",
+			"description": "Plusieurs frontends indépendants—pas de point de défaillance ou de censure unique"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Effet de Levier Sans Intérêts",
+			"description": "Empruntez LUSD contre ETH pour obtenir un effet de levier sans payer d'intérêts continus"
+		},
+		"2": {
+			"title": "Rendement LUSD",
+			"description": "Déposez LUSD dans le Stability Pool pour gagner des récompenses ETH et LQTY"
+		},
+		"3": {
+			"title": "Accès aux Stablecoins",
+			"description": "Créez LUSD pour les paiements, DeFi ou détenir une valeur stable"
+		},
+		"4": {
+			"title": "Efficacité du Capital",
+			"description": "Maximisez l'exposition ETH avec une sur-collatéralisation minimale"
+		},
+		"5": {
+			"title": "Résistance à la Censure",
+			"description": "Utilisez un protocole d'emprunt immuable et imparable sans contrôle central"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Liquity et comment fonctionne l'emprunt sans intérêts ?",
+			"answer": "Liquity vous permet d'emprunter le stablecoin LUSD contre des garanties ETH sans intérêts continus. Au lieu d'intérêts, vous payez des frais uniques (0,5-5%) lors de l'ouverture ou de l'ajustement de votre Trove. Les frais varient en fonction de l'activité récente du système. Votre prêt peut rester ouvert indéfiniment tant que vous maintenez le ratio de garantie minimum de 110%."
+		},
+		"2": {
+			"question": "Qu'est-ce que LUSD et comment maintient-il son ancrage ?",
+			"answer": "LUSD est le stablecoin indexé sur l'USD de Liquity, adossé uniquement à l'ETH. L'ancrage est maintenu grâce à : 1) Plancher de prix ferme à 1$ via les rachats (n'importe qui peut racheter LUSD contre 1$ d'ETH), 2) Plafond de prix souple autour de 1,10$ (l'emprunt devient attractif), 3) Liquidations du Stability Pool, et 4) Opportunités d'arbitrage. LUSD a maintenu une excellente stabilité d'ancrage."
+		},
+		"3": {
+			"question": "Qu'est-ce que le Stability Pool ?",
+			"answer": "Le Stability Pool est l'endroit où les détenteurs de LUSD déposent pour gagner des récompenses. Lorsque les Troves sont liquidés, les dépôts du Stability Pool sont utilisés pour rembourser la dette, et les déposants reçoivent l'ETH liquidé (avec une réduction d'environ 10%). Les déposants gagnent également des récompenses en jetons LQTY. C'est un mécanisme clé assurant la solvabilité du système."
+		},
+		"4": {
+			"question": "Pourquoi Liquity est-il immuable et qu'est-ce que cela signifie ?",
+			"answer": "Liquity n'a pas de clés admin, de gouvernance ou de mécanisme de mise à jour. Une fois déployés, les smart contracts ne peuvent être modifiés par personne—ils fonctionnent de manière autonome sur Ethereum pour toujours. Cela offre une résistance maximale à la censure et élimine les vecteurs d'attaque de gouvernance, mais signifie également que les bugs ne peuvent pas être corrigés. C'est le protocole d'emprunt le plus décentralisé."
+		},
+		"5": {
+			"question": "Qu'est-ce que Liquity V2 ?",
+			"answer": "Liquity V2 est une nouvelle version lancée en 2024 qui introduit des taux d'intérêt définis par l'utilisateur (les emprunteurs sont en concurrence sur les taux), plusieurs types de garantie au-delà de l'ETH, et une efficacité du capital améliorée. Contrairement à V1, V2 aura une certaine capacité de mise à jour. V1 et V2 coexisteront en tant que protocoles séparés."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à emprunter sans intérêts ?",
+		"button": "Ouvrir Liquity",
+		"note": "Emprunt immuable sans intérêts contre ETH"
+	}
+}

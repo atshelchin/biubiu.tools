@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷",
+		"code": "ko"
+	},
+	"seo": {
+		"title": "SushiSwap - 멀티체인 DEX & DeFi 플랫폼 | 스왑, 수익 창출, 브리지",
+		"description": "커뮤니티 중심의 멀티체인 DEX인 SushiSwap을 경험하세요. 토큰 거래, 유동성 공급, 30개 이상의 네트워크에서 크로스체인 스왑에 접근하세요.",
+		"keywords": "SushiSwap, Sushi, DEX, 멀티체인, DeFi, 유동성, SUSHI 토큰, 크로스체인"
+	},
+	"overview": "SushiSwap은 Uniswap 포크에서 포괄적인 멀티체인 DeFi 플랫폼으로 진화한 커뮤니티 중심의 탈중앙화 거래소입니다. \"DeFi Summer\" 기간인 2020년 8월에 출시된 Sushi는 뱀파이어 공격과 유동성 마이닝 인센티브의 개념을 개척하여 DeFi 프로토콜이 사용자를 놓고 경쟁하는 방식을 재편했습니다.\n\n이 플랫폼은 현재 Ethereum, Arbitrum, Polygon, Avalanche 등을 포함한 30개 이상의 네트워크에서 운영됩니다. 단순한 스왑을 넘어 Sushi는 집중 유동성 풀(SushiSwap V3), SushiXSwap을 통한 크로스체인 스왑, 그리고 포괄적인 DeFi 도구 세트를 제공합니다. SUSHI 토큰은 거버넌스에 사용되며 프로토콜 수수료를 얻기 위해 xSUSHI로 스테이킹할 수 있습니다.\n\nSushi는 다양한 리더십과 구조조정 단계를 거치며 상당한 진화를 겪었습니다. 오늘날 라우트 최적화, MEV 보호, 원활한 크로스체인 거래와 같은 기능을 갖춘 최고의 멀티체인 스왑 경험을 제공하는 데 중점을 두고 있습니다.",
+	"features": {
+		"1": {
+			"title": "30개 이상의 체인 지원",
+			"description": "Ethereum, Arbitrum, Polygon, Avalanche, BSC 등 다양한 네트워크에서 거래"
+		},
+		"2": {
+			"title": "SushiXSwap",
+			"description": "Stargate 및 Axelar로 구동되는 크로스체인 스왑으로 원활한 멀티체인 거래"
+		},
+		"3": {
+			"title": "집중 유동성",
+			"description": "자본 효율적인 유동성 공급을 위한 맞춤형 가격 범위를 가진 V3 풀"
+		},
+		"4": {
+			"title": "라우트 최적화",
+			"description": "스마트 라우팅이 여러 유동성 소스에서 최상의 가격 발견"
+		},
+		"5": {
+			"title": "xSUSHI 스테이킹",
+			"description": "SUSHI를 스테이킹하여 프로토콜 거래 수수료의 일부 획득"
+		},
+		"6": {
+			"title": "Furo 스트리밍",
+			"description": "급여 및 보조금을 위한 토큰 스트리밍 및 베스팅 솔루션"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "멀티체인 거래",
+			"description": "단일 인터페이스에서 30개 이상의 네트워크에서 토큰 스왑"
+		},
+		"2": {
+			"title": "크로스체인 스왑",
+			"description": "SushiXSwap으로 하나의 거래로 브리지 및 스왑"
+		},
+		"3": {
+			"title": "유동성 공급",
+			"description": "풀에 유동성을 제공하여 거래 수수료 획득"
+		},
+		"4": {
+			"title": "수동 소득",
+			"description": "xSUSHI를 위해 SUSHI를 스테이킹하여 프로토콜 수익 공유 획득"
+		},
+		"5": {
+			"title": "토큰 스트리밍",
+			"description": "급여, 베스팅 일정 및 보조금에 Furo 사용"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "SushiSwap이란 무엇이며 Uniswap과 어떻게 다른가요?",
+			"answer": "SushiSwap은 Uniswap 포크로 시작했지만 독특한 멀티체인 플랫폼으로 진화했습니다. 주요 차이점은 다음과 같습니다: 30개 이상의 체인 지원(Uniswap의 더 적은 수 대비), SushiXSwap을 통한 크로스체인 스왑, 수익 공유가 있는 SUSHI 토큰, 커뮤니티 우선 거버넌스 모델. 둘 다 AMM 메커니즘을 사용하지만 상당히 분기되었습니다."
+		},
+		"2": {
+			"question": "xSUSHI란 무엇이며 스테이킹은 어떻게 작동하나요?",
+			"answer": "xSUSHI는 SUSHI의 스테이킹된 버전입니다. SushiBar에서 SUSHI를 스테이킹하면 프로토콜 수수료가 축적됨에 따라 가치가 상승하는 xSUSHI를 받습니다. 모든 거래 수수료의 일부는 SUSHI를 구매하고 xSUSHI 보유자에게 배포하는 데 사용됩니다. 언제든지 스테이킹을 해제하여 획득한 보상과 함께 SUSHI를 받을 수 있습니다."
+		},
+		"3": {
+			"question": "SushiXSwap 크로스체인 스왑은 어떻게 작동하나요?",
+			"answer": "SushiXSwap은 Stargate 및 Axelar와 같은 브리징 프로토콜을 사용하여 크로스체인 스왑을 가능하게 합니다. 하나의 거래로 한 체인의 토큰을 다른 체인의 다른 토큰으로 스왑할 수 있습니다. 시스템은 브리징, 양쪽 체인에서의 스왑을 처리하고 최종 토큰을 지갑에 전달합니다."
+		},
+		"4": {
+			"question": "SushiSwap은 안전하게 사용할 수 있나요?",
+			"answer": "SushiSwap은 여러 보안 감사를 받으며 2020년부터 운영되어 왔습니다. 그러나 모든 DeFi와 마찬가지로 스마트 컨트랙트 버그, 비영구적 손실, 크로스체인 기능에 대한 브리지 취약점, 토큰별 위험을 포함한 위험이 존재합니다. 프로토콜은 과거에 보안 사고를 겪었으므로 항상 주의를 기울이세요."
+		},
+		"5": {
+			"question": "Sushi의 리더십에 무슨 일이 있었나요?",
+			"answer": "Sushi는 격동의 거버넌스 역사를 가지고 있습니다. 원래 가명으로 출시되었으며 중앙집중식 리더십, 재무 분쟁, 구조조정의 기간을 거쳤습니다. 오늘날 선출된 리더십을 가진 DAO로 운영됩니다. 프로토콜은 이러한 도전에도 불구하고 계속해서 개발하고 확장하고 있습니다."
+		}
+	},
+	"cta": {
+		"ready": "체인 간 거래할 준비가 되셨나요?",
+		"button": "SushiSwap 열기",
+		"note": "커뮤니티 중심의 멀티체인 DEX"
+	}
+}

@@ -23,7 +23,7 @@ export const makerDetail: ToolDetail = {
 	// Social links
 	socialLinks: {
 		twitter: 'https://twitter.com/MakerDAO',
-		discord: 'https://discord.com/invite/RBRumCpEDH',
+		discord: 'https://discord.com/invite/XeZQ8HxSEN',
 		github: 'https://github.com/makerdao',
 		docs: 'https://docs.makerdao.com'
 	},

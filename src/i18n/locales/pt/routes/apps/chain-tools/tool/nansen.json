@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "Nansen - Análise On-Chain Potencializada por IA | Rastreamento de Smart Money e Rótulos de Carteiras",
+		"description": "Descubra o Nansen, a plataforma líder de análise on-chain. Rastreie smart money, analise mais de 500 milhões de carteiras rotuladas e obtenha insights potencializados por IA para investimentos cripto.",
+		"keywords": "Nansen, on-chain analytics, smart money, wallet labels, crypto analytics, DeFi research, AI"
+	},
+	"overview": "Nansen é uma plataforma de análise blockchain potencializada por IA que fornece insights acionáveis ao enriquecer dados on-chain com rótulos de carteiras. Fundado por Alex Svanevik, Evgeny Medvedev e Lars Bakke Krogvig em 2019, o Nansen foi pioneiro no conceito de rastreamento de 'smart money' - identificando e seguindo carteiras com históricos comprovados.\n\nA plataforma rotulou mais de 500 milhões de carteiras em múltiplas cadeias, categorizando-as como smart money, fundos, exchanges, baleias e mais. Essa rotulagem permite que usuários vejam não apenas o que está acontecendo on-chain, mas quem está por trás da atividade. Os produtos do Nansen incluem rastreamento de portfólio, análise de tokens, análise de NFT e alertas em tempo real.\n\nNansen atende tanto usuários de varejo quanto institucionais, com recursos que vão desde rastreamento simples de smart money até acesso API avançado e dashboards personalizados. As capacidades de IA da plataforma ajudam a revelar insights da enorme quantidade de dados on-chain, tornando mais fácil identificar oportunidades e riscos.",
+	"features": {
+		"1": {
+			"title": "Mais de 500 Milhões de Carteiras Rotuladas",
+			"description": "Identifique smart money, fundos, exchanges e traders notáveis em cadeias"
+		},
+		"2": {
+			"title": "Rastreamento de Smart Money",
+			"description": "Siga o que traders e fundos de topo estão comprando, vendendo e acumulando"
+		},
+		"3": {
+			"title": "Alertas em Tempo Real",
+			"description": "Seja notificado quando smart money se move para tokens ou coleções NFT"
+		},
+		"4": {
+			"title": "Análise de Tokens",
+			"description": "Analise distribuição de detentores, padrões de acumulação e fluxos de exchange"
+		},
+		"5": {
+			"title": "Análise de NFT",
+			"description": "Rastreie atividade NFT de smart money, preços mínimos e tendências de coleção"
+		},
+		"6": {
+			"title": "Insights de IA",
+			"description": "Análise potencializada por IA revelando padrões e anomalias on-chain notáveis"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Seguindo Smart Money",
+			"description": "Rastreie o que traders de topo estão acumulando antes de movimentos de mercado"
+		},
+		"2": {
+			"title": "Due Diligence de Tokens",
+			"description": "Pesquise composição de detentores, distribuição e interesse de smart money"
+		},
+		"3": {
+			"title": "Observando Baleias",
+			"description": "Monitore movimentos de carteiras grandes e entradas/saídas de exchanges"
+		},
+		"4": {
+			"title": "Negociação de NFT",
+			"description": "Identifique coleções NFT ganhando interesse de smart money"
+		},
+		"5": {
+			"title": "Monitoramento de Portfólio",
+			"description": "Rastreie seu portfólio e compare desempenho com smart money"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é Nansen e como funciona?",
+			"answer": "Nansen é uma plataforma de análise on-chain que rotula carteiras blockchain para mostrar quem está por trás das transações. Ao invés de ver endereços anônimos, você vê 'Smart Money', 'Fund', 'Exchange', etc. Isso revela padrões como smart money acumulando um token antes de ele subir, ou baleias movendo fundos para exchanges antes de vender. Transforma dados blockchain brutos em inteligência acionável."
+		},
+		"2": {
+			"question": "O que é 'Smart Money' e como é identificado?",
+			"answer": "Smart Money refere-se a carteiras com históricos comprovados de lucro. Nansen as identifica através de análise histórica - carteiras que consistentemente compraram tokens cedo antes de aumentos de preço, fizeram movimentos DeFi lucrativos, ou pertencem a traders/fundos de sucesso conhecidos. Esses rótulos são constantemente atualizados baseado em desempenho contínuo."
+		},
+		"3": {
+			"question": "O Nansen é gratuito para usar?",
+			"answer": "Nansen oferece um plano gratuito com recursos limitados. Acesso completo requer planos pagos: Lite (~$100/mês) para recursos básicos, Standard (~$150/mês) para rastreamento completo de smart money, e planos VIP/Enterprise para acesso API avançado e soluções personalizadas. Planos incluem diferentes níveis de acesso a dados, alertas e dados históricos."
+		},
+		"4": {
+			"question": "Como o Nansen se compara ao Dune?",
+			"answer": "Eles servem propósitos diferentes. Dune é uma plataforma de consultas onde você escreve SQL para analisar dados brutos - flexível mas requer habilidades SQL. Nansen fornece análises pré-construídas com rótulos de carteiras - insights prontos para uso sem consultas. Muitos pesquisadores sérios usam ambos: Dune para análise personalizada, Nansen para rastreamento de smart money e alertas."
+		},
+		"5": {
+			"question": "Posso rastrear meu próprio portfólio no Nansen?",
+			"answer": "Sim. O recurso de portfólio do Nansen permite que você conecte carteiras ou insira endereços para rastrear posses, P&L e histórico de transações. Você pode ver como seu desempenho se compara ao smart money e receber alertas quando carteiras que você segue fazem movimentos. Isso está disponível em todas as cadeias suportadas."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para seguir smart money?",
+		"button": "Abrir Nansen",
+		"note": "Análise on-chain potencializada por IA"
+	}
+}

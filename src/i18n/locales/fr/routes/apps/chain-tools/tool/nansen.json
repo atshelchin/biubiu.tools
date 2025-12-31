@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Nansen - Analyse On-Chain Propulsée par l'IA | Suivi du Smart Money et Étiquettes de Portefeuilles",
+		"description": "Découvrez Nansen, la plateforme d'analyse on-chain de référence. Suivez le smart money, analysez plus de 500 millions de portefeuilles étiquetés et obtenez des insights propulsés par l'IA pour investir dans la crypto.",
+		"keywords": "Nansen, on-chain analytics, smart money, wallet labels, crypto analytics, DeFi research, AI"
+	},
+	"overview": "Nansen est une plateforme d'analyse blockchain propulsée par l'IA qui fournit des insights actionnables en enrichissant les données on-chain avec des étiquettes de portefeuilles. Fondée par Alex Svanevik, Evgeny Medvedev et Lars Bakke Krogvig en 2019, Nansen a été le pionnier du concept de suivi du 'smart money' - identifier et suivre les portefeuilles avec des historiques prouvés.\n\nLa plateforme a étiqueté plus de 500 millions de portefeuilles sur plusieurs chaînes, les catégorisant comme smart money, fonds, exchanges, baleines et plus. Cet étiquetage permet aux utilisateurs de voir non seulement ce qui se passe on-chain, mais qui est derrière l'activité. Les produits de Nansen incluent le suivi de portefeuille, l'analyse de tokens, l'analyse NFT et les alertes en temps réel.\n\nNansen sert à la fois les utilisateurs particuliers et institutionnels, avec des fonctionnalités allant du simple suivi du smart money à l'accès API avancé et aux dashboards personnalisés. Les capacités IA de la plateforme aident à faire ressortir des insights de la quantité massive de données on-chain, facilitant l'identification des opportunités et des risques.",
+	"features": {
+		"1": {
+			"title": "Plus de 500 Millions de Portefeuilles Étiquetés",
+			"description": "Identifiez le smart money, les fonds, les exchanges et les traders notables sur les chaînes"
+		},
+		"2": {
+			"title": "Suivi du Smart Money",
+			"description": "Suivez ce que les meilleurs traders et fonds achètent, vendent et accumulent"
+		},
+		"3": {
+			"title": "Alertes en Temps Réel",
+			"description": "Soyez notifié lorsque le smart money se déplace vers des tokens ou collections NFT"
+		},
+		"4": {
+			"title": "Analyse de Tokens",
+			"description": "Analysez la distribution des détenteurs, les modèles d'accumulation et les flux d'exchange"
+		},
+		"5": {
+			"title": "Analyse NFT",
+			"description": "Suivez l'activité NFT du smart money, les prix planchers et les tendances de collection"
+		},
+		"6": {
+			"title": "Insights IA",
+			"description": "Analyse propulsée par l'IA révélant des modèles et anomalies on-chain notables"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Suivi du Smart Money",
+			"description": "Suivez ce que les meilleurs traders accumulent avant les mouvements du marché"
+		},
+		"2": {
+			"title": "Due Diligence de Tokens",
+			"description": "Recherchez la composition des détenteurs, la distribution et l'intérêt du smart money"
+		},
+		"3": {
+			"title": "Observation des Baleines",
+			"description": "Surveillez les mouvements de gros portefeuilles et les entrées/sorties d'exchanges"
+		},
+		"4": {
+			"title": "Trading NFT",
+			"description": "Identifiez les collections NFT gagnant l'intérêt du smart money"
+		},
+		"5": {
+			"title": "Surveillance de Portefeuille",
+			"description": "Suivez votre portefeuille et comparez les performances avec le smart money"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Nansen et comment ça fonctionne ?",
+			"answer": "Nansen est une plateforme d'analyse on-chain qui étiquette les portefeuilles blockchain pour montrer qui est derrière les transactions. Au lieu de voir des adresses anonymes, vous voyez 'Smart Money', 'Fund', 'Exchange', etc. Cela révèle des modèles comme le smart money accumulant un token avant qu'il ne monte, ou des baleines déplaçant des fonds vers des exchanges avant de vendre. Il transforme les données blockchain brutes en intelligence actionnable."
+		},
+		"2": {
+			"question": "Qu'est-ce que le 'Smart Money' et comment est-il identifié ?",
+			"answer": "Smart Money fait référence aux portefeuilles avec des historiques de profit prouvés. Nansen les identifie par analyse historique - portefeuilles qui ont constamment acheté des tokens tôt avant les augmentations de prix, fait des mouvements DeFi rentables, ou appartiennent à des traders/fonds de succès connus. Ces étiquettes sont constamment mises à jour en fonction des performances continues."
+		},
+		"3": {
+			"question": "Nansen est-il gratuit à utiliser ?",
+			"answer": "Nansen offre un plan gratuit avec des fonctionnalités limitées. L'accès complet nécessite des plans payants : Lite (~100$/mois) pour les fonctionnalités de base, Standard (~150$/mois) pour le suivi complet du smart money, et les plans VIP/Enterprise pour l'accès API avancé et les solutions personnalisées. Les plans incluent différents niveaux d'accès aux données, alertes et données historiques."
+		},
+		"4": {
+			"question": "Comment Nansen se compare-t-il à Dune ?",
+			"answer": "Ils servent des objectifs différents. Dune est une plateforme de requêtes où vous écrivez du SQL pour analyser des données brutes - flexible mais nécessite des compétences SQL. Nansen fournit des analyses pré-construites avec des étiquettes de portefeuilles - insights prêts à l'emploi sans requêtes. Beaucoup de chercheurs sérieux utilisent les deux : Dune pour l'analyse personnalisée, Nansen pour le suivi du smart money et les alertes."
+		},
+		"5": {
+			"question": "Puis-je suivre mon propre portefeuille sur Nansen ?",
+			"answer": "Oui. La fonctionnalité de portefeuille de Nansen vous permet de connecter des portefeuilles ou d'entrer des adresses pour suivre les avoirs, P&L et l'historique des transactions. Vous pouvez voir comment votre performance se compare au smart money et recevoir des alertes lorsque les portefeuilles que vous suivez font des mouvements. Cela est disponible sur toutes les chaînes prises en charge."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à suivre le smart money ?",
+		"button": "Ouvrir Nansen",
+		"note": "Analyse on-chain propulsée par l'IA"
+	}
+}

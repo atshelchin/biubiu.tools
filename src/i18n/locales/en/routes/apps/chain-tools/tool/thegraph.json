@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "The Graph - Decentralized Indexing Protocol | Query Blockchain Data",
+		"description": "Explore The Graph, the decentralized indexing protocol for Web3. Build subgraphs to query blockchain data efficiently with GraphQL.",
+		"keywords": "The Graph, GRT, subgraph, blockchain indexing, GraphQL, Web3 data, decentralized protocol"
+	},
+	"overview": "The Graph is a decentralized indexing protocol that enables efficient querying of blockchain data. Founded in 2018 by Yaniv Tal, Jannis Pohlmann, and Brandon Ramirez, The Graph solves a fundamental problem: blockchain data is stored in formats optimized for consensus, not querying. Reading data directly from nodes is slow and limited.\n\nThe Graph works through 'subgraphs'—open APIs that index and organize specific blockchain data. Developers define what data to index (events, entities, relationships), and The Graph network indexes it into a queryable format accessible via GraphQL. Indexers run nodes that process and serve queries, Curators signal which subgraphs are valuable, and Delegators stake GRT to support indexers.\n\nWith 195+ billion queries served and thousands of subgraphs deployed, The Graph powers most major dApps including Uniswap, Aave, Synthetix, and many others. The decentralized network ensures no single point of failure and censorship resistance. GRT token is used for staking, curation, and paying query fees. The Graph has become essential infrastructure for Web3, often called the 'Google of blockchains.'",
+	"features": {
+		"1": {
+			"title": "Subgraph Indexing",
+			"description": "Create custom APIs that index specific blockchain data for your application"
+		},
+		"2": {
+			"title": "GraphQL Queries",
+			"description": "Query blockchain data with GraphQL—flexible, efficient, and developer-friendly"
+		},
+		"3": {
+			"title": "Multi-Chain",
+			"description": "Index data from Ethereum, Polygon, Arbitrum, and many other chains"
+		},
+		"4": {
+			"title": "Decentralized Network",
+			"description": "Queries served by a network of independent indexers for reliability"
+		},
+		"5": {
+			"title": "Subgraph Studio",
+			"description": "Build, test, and deploy subgraphs with the developer-friendly studio"
+		},
+		"6": {
+			"title": "Real-Time Updates",
+			"description": "Subgraphs automatically update as new blocks are produced"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Dashboards",
+			"description": "Power analytics dashboards with indexed protocol data"
+		},
+		"2": {
+			"title": "NFT Marketplaces",
+			"description": "Query NFT ownership, transfers, and metadata efficiently"
+		},
+		"3": {
+			"title": "Protocol Frontends",
+			"description": "Build responsive dApp UIs with fast blockchain data access"
+		},
+		"4": {
+			"title": "Wallet Apps",
+			"description": "Display transaction history and portfolio data to users"
+		},
+		"5": {
+			"title": "Data Analysis",
+			"description": "Researchers query on-chain data for analysis and reporting"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is The Graph and why is it needed?",
+			"answer": "The Graph is an indexing protocol that makes blockchain data queryable. Blockchains store data for consensus, not queries—reading data directly is slow and limited. The Graph indexes blockchain data into a structured format, letting you query with GraphQL (like 'get all swaps over $100k in the last hour'). Most major dApps use The Graph because direct node queries can't support responsive UIs."
+		},
+		"2": {
+			"question": "What is a subgraph?",
+			"answer": "A subgraph is an open API that defines what blockchain data to index and how to organize it. You write a 'subgraph manifest' specifying which smart contracts and events to watch, and 'mappings' that transform blockchain events into entities. Once deployed, The Graph network indexes the data and serves it via GraphQL. Anyone can create subgraphs, and popular ones are reused by many apps."
+		},
+		"3": {
+			"question": "How do I query a subgraph?",
+			"answer": "Subgraphs are queried using GraphQL. Each subgraph has an endpoint URL where you send GraphQL queries. For example: query { swaps(first: 10, orderBy: amountUSD) { ... } }. The Graph Explorer lets you browse and test subgraphs. For production, you get an API key from Subgraph Studio and pay for queries with GRT or credit card."
+		},
+		"4": {
+			"question": "What is GRT token used for?",
+			"answer": "GRT is The Graph's native token with several uses: Indexers stake GRT to participate in the network and earn query fees. Curators stake GRT to signal which subgraphs are valuable (earn portion of fees). Delegators stake GRT with indexers to earn rewards. Query fees are paid in GRT (or via billing in fiat that converts to GRT). GRT aligns incentives across the network."
+		},
+		"5": {
+			"question": "How does The Graph's decentralized network work?",
+			"answer": "Three main roles: Indexers run nodes that index subgraphs and serve queries, staking GRT and earning fees. Curators signal valuable subgraphs by staking GRT, helping indexers prioritize what to index. Delegators stake GRT with indexers they trust, sharing in rewards. This creates a decentralized network where no single entity controls the infrastructure—different from centralized indexing services."
+		}
+	},
+	"cta": {
+		"ready": "Ready to query blockchain data?",
+		"button": "Open The Graph",
+		"note": "The decentralized indexing protocol for Web3"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Chainlink - Merkezi Olmayan Oracle Ağı | Akıllı Sözleşmeleri Gerçek Dünya Verilerine Bağlayın",
+		"description": "Önde gelen merkezi olmayan oracle ağı Chainlink'i keşfedin. Akıllı sözleşmeleri gerçek dünya verilerine, API'lere ve zincir dışı hesaplamalara güvenli bir şekilde bağlayın.",
+		"keywords": "Chainlink, LINK, oracle, fiyat beslemeleri, VRF, CCIP, akıllı sözleşmeler, DeFi"
+	},
+	"overview": "Chainlink, akıllı sözleşmelerin zincir dışı verilere, API'lere ve hesaplamalara güvenli bir şekilde erişmesini sağlayan endüstri standardı merkezi olmayan oracle ağıdır. 2017 yılında Sergey Nazarov ve Steve Ellis tarafından kurulan Chainlink, 'oracle problemi'ni çözer—güvenilir harici verilerin blokzincir ortamlarına aktarılması zorluğunu.\n\nAğ, birden fazla kaynaktan veri toplayan bağımsız düğüm operatörleri aracılığıyla çalışır ve akıllı sözleşmeler için kurcalanmaya karşı korumalı girdiler ve çıktılar sağlar. Chainlink'in ürünleri arasında Price Feeds (çoğu DeFi protokolü tarafından kullanılır), VRF (oyun/NFT'ler için doğrulanabilir rastgele fonksiyonlar), Automation (merkezi olmayan sözleşme yürütme), Functions (sunucusuz hesaplama) ve CCIP (Çapraz Zincir Birlikte Çalışabilirlik Protokolü) bulunur.\n\nChainlink, DeFi, sigorta, oyun ve kurumsal uygulamalarda 75 milyar doların üzerinde değeri güvence altına alır. LINK token'ı düğüm operatörlerine ödeme ve stake teminatı olarak kullanılır. Kapsamlı entegrasyonları ve kanıtlanmış geçmişiyle Chainlink, tüm blokzincir ekosistemi için kritik bir altyapı haline gelmiştir.",
+	"features": {
+		"1": {
+			"title": "Price Feeds",
+			"description": "Çoğu DeFi protokolünü doğru piyasa verileriyle güçlendiren merkezi olmayan fiyat oracle'ları"
+		},
+		"2": {
+			"title": "VRF",
+			"description": "Oyun ve NFT'lerde kanıtlanabilir şekilde adil rastgelelik için Doğrulanabilir Rastgele Fonksiyon"
+		},
+		"3": {
+			"title": "CCIP",
+			"description": "Güvenli token ve mesaj transferleri için Çapraz Zincir Birlikte Çalışabilirlik Protokolü"
+		},
+		"4": {
+			"title": "Automation",
+			"description": "Bakım ve tetikleyiciler için merkezi olmayan akıllı sözleşme otomasyonu"
+		},
+		"5": {
+			"title": "Functions",
+			"description": "Akıllı sözleşmeleri herhangi bir API'ye bağlamak için sunucusuz hesaplama platformu"
+		},
+		"6": {
+			"title": "Proof of Reserve",
+			"description": "Zincir dışı veya çapraz zincir varlık rezervlerinin zincir üstü doğrulaması"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Fiyat Verileri",
+			"description": "Borç verme, türevler ve DEX protokolleri için doğru fiyat beslemeleri sağlayın"
+		},
+		"2": {
+			"title": "Oyun Rastgeleliği",
+			"description": "Adil NFT dağıtımları ve oyun mekanikleri için doğrulanabilir rastgele sayılar üretin"
+		},
+		"3": {
+			"title": "Çapraz Zincir Transferleri",
+			"description": "Farklı blokzincirler arasında token'ları ve mesajları güvenli bir şekilde köprüleyin"
+		},
+		"4": {
+			"title": "Otomatik Eylemler",
+			"description": "Zamana veya harici koşullara dayalı olarak akıllı sözleşme fonksiyonlarını tetikleyin"
+		},
+		"5": {
+			"title": "Gerçek Dünya Entegrasyonu",
+			"description": "Blokzincir uygulamalarını geleneksel API'lere ve veri kaynaklarına bağlayın"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Chainlink nedir ve akıllı sözleşmelerin neden oracle'lara ihtiyacı var?",
+			"answer": "Chainlink, akıllı sözleşmelere harici veri besleyen merkezi olmayan bir oracle ağıdır. Blokzincirler, dış verilere doğrudan erişemeyen izole sistemlerdir. Oracle'lar, gerçek dünya bilgilerini (fiyatlar, hava durumu, spor skorları vb.) güvenli bir şekilde alıp zincir üstüne ileterek bu boşluğu doldurur. Oracle'lar olmadan DeFi ve çoğu blokzincir uygulaması çalışamazdı."
+		},
+		"2": {
+			"question": "Chainlink veri doğruluğunu nasıl garanti eder?",
+			"answer": "Chainlink, birden fazla merkeziyetsizlik katmanı kullanır: veriler birçok premium veri sağlayıcısından alınır, birden fazla bağımsız düğüm operatörü tarafından toplanır ve medyan/konsensüs sonucu zincir üstüne iletilir. Düğüm operatörleri teminat olarak LINK stake eder ve kötü veri sağlamak için cezalandırılabilir. Bu, manipülasyonu ekonomik olarak imkansız hale getirir."
+		},
+		"3": {
+			"question": "CCIP nedir ve nasıl çalışır?",
+			"answer": "CCIP (Çapraz Zincir Birlikte Çalışabilirlik Protokolü), Chainlink'in güvenli çapraz zincir iletişim çözümüdür. Güvenlik için Chainlink'in merkezi olmayan oracle ağını kullanarak blokzincirler arasında token transferlerini ve rastgele mesajlaşmayı sağlar. Milyarlarca dolar için istismar edilen köprülerin aksine CCIP, Chainlink'in mevcut güvenlik altyapısından yararlanır."
+		},
+		"4": {
+			"question": "LINK token'ı ne için kullanılır?",
+			"answer": "LINK, Chainlink'in birden fazla kullanımı olan yerel token'ıdır: oracle hizmetleri için düğüm operatörlerine ödeme, düğüm operatörleri için stake teminatı (kötü veri için cezalandırmayla) ve yönetime katılım. dApp'ler Chainlink hizmetleri için LINK öder, bu da ağ kullanımı arttıkça talep yaratır."
+		},
+		"5": {
+			"question": "Hangi protokoller Chainlink kullanıyor?",
+			"answer": "Chainlink, Aave, Compound, Synthetix, dYdX, GMX ve yüzlerce protokol dahil olmak üzere çoğu büyük DeFi protokolü tarafından kullanılır. Ayrıca Swift, DTCC ve ANZ Bank gibi geleneksel işletmeler tarafından blokzincir deneyleri için kullanılır. DeFi, oyun, NFT'ler ve sigorta alanlarında 1.800'den fazla proje Chainlink oracle'larına güveniyor."
+		}
+	},
+	"cta": {
+		"ready": "Chainlink oracle'larını keşfetmeye hazır mısınız?",
+		"button": "Chainlink'i Aç",
+		"note": "Endüstri standardı oracle ağı"
+	}
+}

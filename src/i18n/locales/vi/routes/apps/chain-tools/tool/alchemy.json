@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Alchemy - Nền Tảng Nhà Phát Triển Blockchain | Xây Dựng Ứng Dụng Web3",
+		"description": "Khám phá Alchemy, nền tảng nhà phát triển blockchain hàng đầu. Xây dựng ứng dụng Web3 có khả năng mở rộng với cơ sở hạ tầng node đáng tin cậy, API và công cụ phát triển.",
+		"keywords": "Alchemy, API blockchain, phát triển Web3, cơ sở hạ tầng node, API NFT, phát triển dApp, API Ethereum"
+	},
+	"overview": "Alchemy là nền tảng nhà phát triển blockchain hàng đầu, cung cấp cơ sở hạ tầng và công cụ cần thiết để xây dựng các ứng dụng Web3 có khả năng mở rộng. Được thành lập vào năm 2017 bởi Nikil Viswanathan và Joe Lau, Alchemy cung cấp năng lượng cho các công ty lớn bao gồm OpenSea, Adobe, Shopify và nhiều giao thức DeFi hàng đầu.\n\nNền tảng cung cấp cơ sở hạ tầng node đáng tin cậy cho Ethereum, Polygon, Arbitrum, Optimism, Solana và các chuỗi lớn khác. Ngoài quyền truy cập RPC cơ bản, Alchemy cung cấp các API nâng cao cho NFT, token, giao dịch và webhook. Công nghệ Supernode của họ mang lại độ tin cậy cao hơn và độ trễ thấp hơn so với chạy node của riêng bạn. Các công cụ phát triển bao gồm Alchemy SDK, trình khám phá blockchain, trình trực quan hóa mempool và công cụ gỡ lỗi.\n\nAlchemy đã xử lý hàng nghìn tỷ yêu cầu và hỗ trợ các ứng dụng đã chuyển hơn 100 tỷ đô la giá trị. Với định giá 10.2 tỷ đô la tính đến năm 2022, Alchemy đã trở thành AWS của blockchain—cơ sở hạ tầng thiết yếu mà hầu hết các nhà phát triển Web3 dựa vào. Cấp miễn phí của họ làm cho nó có thể tiếp cận được đối với các nhà phát triển độc lập trong khi các gói doanh nghiệp mở rộng đến hàng triệu yêu cầu.",
+	"features": {
+		"1": {
+			"title": "Supernode RPC",
+			"description": "Cơ sở hạ tầng node độ tin cậy cao với thời gian hoạt động 99.9%+ trên các chuỗi lớn"
+		},
+		"2": {
+			"title": "API Nâng Cao",
+			"description": "API chuyên biệt cho metadata NFT, số dư token, lịch sử giao dịch và hơn thế nữa"
+		},
+		"3": {
+			"title": "Webhook",
+			"description": "Thông báo thời gian thực cho các sự kiện on-chain như chuyển khoản và gọi hợp đồng"
+		},
+		"4": {
+			"title": "Alchemy SDK",
+			"description": "SDK thân thiện với nhà phát triển giúp đơn giản hóa các hoạt động blockchain phổ biến"
+		},
+		"5": {
+			"title": "Account Kit",
+			"description": "Cơ sở hạ tầng ví thông minh cho giao dịch không có gas và đăng nhập xã hội"
+		},
+		"6": {
+			"title": "Giải Pháp Rollup",
+			"description": "Triển khai các chuỗi L2/L3 tùy chỉnh với nền tảng rollup-as-a-service của Alchemy"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Phát Triển dApp",
+			"description": "Xây dựng ứng dụng phi tập trung đáng tin cậy với cơ sở hạ tầng blockchain mạnh mẽ"
+		},
+		"2": {
+			"title": "Nền Tảng NFT",
+			"description": "Cung cấp năng lượng cho thị trường và ứng dụng NFT với API metadata toàn diện"
+		},
+		"3": {
+			"title": "Dịch Vụ Ví",
+			"description": "Xây dựng ví với cập nhật số dư thời gian thực và lịch sử giao dịch"
+		},
+		"4": {
+			"title": "Giao Thức DeFi",
+			"description": "Truy cập dữ liệu giá đáng tin cậy và phát sóng giao dịch cho ứng dụng DeFi"
+		},
+		"5": {
+			"title": "Web3 Doanh Nghiệp",
+			"description": "Tích hợp các tính năng blockchain vào ứng dụng doanh nghiệp ở quy mô lớn"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Alchemy là gì và tại sao các nhà phát triển sử dụng nó?",
+			"answer": "Alchemy là cơ sở hạ tầng blockchain cung cấp quyền truy cập node và API để các nhà phát triển không phải chạy node của riêng họ. Chạy node Ethereum yêu cầu tài nguyên đáng kể (TB lưu trữ, đồng bộ hóa liên tục, DevOps). Alchemy xử lý cơ sở hạ tầng này trong khi thêm các tính năng nâng cao như API NFT, webhook và công cụ gỡ lỗi. Hầu hết các dApp lớn sử dụng Alchemy hoặc các nhà cung cấp tương tự."
+		},
+		"2": {
+			"question": "Alchemy so sánh như thế nào với việc chạy node của riêng bạn?",
+			"answer": "Chạy node của riêng bạn cho phép kiểm soát hoàn toàn nhưng yêu cầu tài nguyên đáng kể: phần cứng, lưu trữ (1-2TB cho Ethereum), băng thông và bảo trì liên tục. Supernode của Alchemy cung cấp độ tin cậy cao hơn (thời gian hoạt động 99.9%+), độ trễ thấp hơn, API nâng cao và tự động mở rộng. Đối với hầu hết các dự án, sử dụng Alchemy tiết kiệm chi phí hơn so với tự lưu trữ cho đến khi bạn đạt đến khối lượng rất cao."
+		},
+		"3": {
+			"question": "Alchemy có miễn phí không?",
+			"answer": "Alchemy cung cấp một cấp miễn phí hào phóng: 300M đơn vị tính toán/tháng, bao gồm hầu hết các dự án indie và startup giai đoạn đầu. Các gói trả phí (Growth, Scale, Enterprise) cung cấp nhiều đơn vị tính toán hơn, giới hạn tỷ lệ cao hơn, hỗ trợ chuyên dụng và tính năng nâng cao. Nhiều nhà phát triển bắt đầu miễn phí và nâng cấp khi ứng dụng của họ phát triển."
+		},
+		"4": {
+			"question": "Alchemy hỗ trợ những chuỗi nào?",
+			"answer": "Alchemy hỗ trợ các chuỗi lớn bao gồm Ethereum, Polygon, Arbitrum, Optimism, Base, Solana và hơn thế nữa. Mỗi chuỗi có hỗ trợ RPC đầy đủ cộng với các API nâng cao dành riêng cho chuỗi. Họ liên tục thêm các chuỗi mới dựa trên nhu cầu của nhà phát triển. Kiểm tra tài liệu của họ để biết danh sách hiện tại các mạng được hỗ trợ."
+		},
+		"5": {
+			"question": "Alchemy Account Kit là gì?",
+			"answer": "Account Kit là cơ sở hạ tầng ví thông minh của Alchemy cho phép trừu tượng hóa tài khoản (ERC-4337). Nó cho phép các dApp cung cấp giao dịch không có gas (tài trợ gas cho người dùng), đăng nhập xã hội (đăng nhập bằng email/Google) và ví có thể lập trình. Điều này cải thiện UX bằng cách loại bỏ nhu cầu người dùng quản lý cụm từ khởi tạo hoặc giữ ETH cho gas."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng xây dựng trên Web3?",
+		"button": "Mở Alchemy",
+		"note": "Nền tảng nhà phát triển blockchain hàng đầu"
+	}
+}

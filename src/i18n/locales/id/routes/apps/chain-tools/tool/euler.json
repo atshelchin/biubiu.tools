@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Euler Finance - Protokol Lending Modular | Pasar Kredit DeFi yang Dapat Disesuaikan",
+		"description": "Temukan Euler Finance V2, platform lending modular. Buat vault lending khusus, gunakan aset apa pun sebagai kolateral, dan bangun strategi kredit yang canggih.",
+		"keywords": "Euler Finance, EUL, lending, borrowing, modular, vaults, DeFi, kredit"
+	},
+	"overview": "Euler Finance adalah protokol lending modular yang memungkinkan pembuatan pasar kredit yang dapat disesuaikan. Awalnya diluncurkan pada tahun 2021, Euler V2 mewakili pembangunan ulang lengkap setelah pekerjaan keamanan ekstensif menyusul eksploit 2023. Versi baru memperkenalkan fleksibilitas yang belum pernah ada sebelumnya dalam lending DeFi.\n\nEuler V2 terdiri dari dua komponen inti: Euler Vault Kit (EVK) untuk men-deploy vault lending khusus dengan parameter yang dapat dikonfigurasi, dan Ethereum Vault Connector (EVC) yang memungkinkan vault mengenali kolateral dari vault lain. Ini memungkinkan struktur kredit yang canggih—satu posisi kolateral dapat mendukung peminjaman di beberapa pasar.\n\nDesain modular berarti siapa pun dapat membuat pasar lending dengan parameter risiko khusus, konfigurasi oracle, model tingkat bunga, dan mekanik likuidasi. Ini berkisar dari vault institusional yang memerlukan izin hingga pasar publik permissionless. Euler telah dibangun kembali dengan langkah-langkah keamanan komprehensif dan mencapai pertumbuhan TVL signifikan sejak peluncuran ulang V2.",
+	"features": {
+		"1": {
+			"title": "Euler Vault Kit",
+			"description": "Buat vault lending khusus dengan parameter risiko dan oracle yang dapat dikonfigurasi"
+		},
+		"2": {
+			"title": "Ethereum Vault Connector",
+			"description": "Gunakan kolateral di beberapa vault untuk peminjaman yang efisien modal"
+		},
+		"3": {
+			"title": "Pasar Modular",
+			"description": "Pembuatan pasar lending permissionless untuk pasangan aset apa pun"
+		},
+		"4": {
+			"title": "Oracle Fleksibel",
+			"description": "Dukungan untuk Chainlink, Uniswap TWAP, Redstone, dan oracle khusus"
+		},
+		"5": {
+			"title": "Isolasi Risiko",
+			"description": "Pool lending terisolasi mencegah penularan antar pasar berbeda"
+		},
+		"6": {
+			"title": "Kontrol Governance",
+			"description": "Vault dapat dikelola, immutable, atau dapat diupgrade berdasarkan pilihan pembuat"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Lending Standar",
+			"description": "Pinjam dengan aset utama di vault yang dikurasi dan teruji"
+		},
+		"2": {
+			"title": "Aset Long-Tail",
+			"description": "Akses pasar lending untuk token yang lebih baru atau kurang likuid"
+		},
+		"3": {
+			"title": "Pasar Institusional",
+			"description": "Buat vault yang memerlukan izin dengan persyaratan KYC dan ketentuan khusus"
+		},
+		"4": {
+			"title": "Strategi Leverage",
+			"description": "Gunakan kolateral cross-vault untuk posisi leverage yang efisien"
+		},
+		"5": {
+			"title": "Pembuatan Pasar",
+			"description": "Deploy pasar lending khusus untuk aset atau use case tertentu"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Euler Finance dan bagaimana V2 bekerja?",
+			"answer": "Euler adalah protokol lending modular. V2 memungkinkan siapa pun membuat vault lending khusus menggunakan Euler Vault Kit (EVK). Setiap vault dapat memiliki jenis kolateral sendiri, oracle, model tingkat bunga, dan parameter risiko. Ethereum Vault Connector (EVC) menghubungkan vault bersama-sama, memungkinkan kolateral di satu vault untuk mendukung peminjaman di vault lainnya."
+		},
+		"2": {
+			"question": "Apa yang terjadi dengan Euler V1?",
+			"answer": "Euler V1 mengalami eksploit $197M pada Maret 2023 karena kerentanan dalam vektor serangan donasi. Penyerang kemudian mengembalikan dana. Euler Labs menghabiskan lebih dari satu tahun untuk V2, melakukan audit keamanan ekstensif dan menerapkan program bug bounty komprehensif. V2 adalah redesain arsitektur lengkap, bukan tambalan dari V1."
+		},
+		"3": {
+			"question": "Apa itu Ethereum Vault Connector (EVC)?",
+			"answer": "EVC adalah inovasi Euler yang memungkinkan pengenalan kolateral cross-vault. Alih-alih menyetor kolateral ke setiap pasar lending secara terpisah, Anda dapat menyetor sekali dan memiliki beberapa vault yang mengenalinya. Ini secara dramatis meningkatkan efisiensi modal dan memungkinkan strategi peminjaman multi-leg yang kompleks."
+		},
+		"4": {
+			"question": "Siapa yang bisa membuat vault Euler?",
+			"answer": "Siapa pun dapat membuat vault menggunakan EVK. Pembuat vault memilih semua parameter: kolateral yang diterima, oracle, tingkat bunga, kondisi likuidasi, dan governance. Vault dapat sepenuhnya permissionless, memerlukan whitelist, atau memiliki kontrol akses khusus apa pun. Ini memungkinkan segala sesuatu dari pasar privat institusional hingga lending publik permissionless."
+		},
+		"5": {
+			"question": "Apakah Euler V2 aman digunakan?",
+			"answer": "Euler V2 menjalani salah satu proses keamanan paling komprehensif di DeFi—audit ekstensif, verifikasi formal, dan bug bounty $1M+. Namun, DeFi selalu membawa risiko. Desain modular berarti setiap vault memiliki risiko independen—vault yang dikonfigurasi dengan buruk tidak mempengaruhi yang lain. Selalu teliti vault tertentu sebelum menyetor."
+		}
+	},
+	"cta": {
+		"ready": "Siap menjelajahi lending modular?",
+		"button": "Buka Euler Finance",
+		"note": "Vault lending yang dapat disesuaikan untuk aset apa pun"
+	}
+}

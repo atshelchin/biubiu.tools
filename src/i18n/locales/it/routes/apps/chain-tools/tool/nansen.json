@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Nansen - Analytics On-Chain Potenziata da AI | Tracking Smart Money e Etichette Wallet",
+		"description": "Scopri Nansen, la principale piattaforma di analytics on-chain. Traccia smart money, analizza 500M+ wallet etichettati e ottieni insights potenziati da AI per investire in crypto.",
+		"keywords": "Nansen, analytics on-chain, smart money, etichette wallet, analytics crypto, ricerca DeFi, AI"
+	},
+	"overview": "Nansen è una piattaforma di analytics blockchain potenziata da AI che fornisce insights azionabili arricchendo i dati on-chain con etichette wallet. Fondata da Alex Svanevik, Evgeny Medvedev e Lars Bakke Krogvig nel 2019, Nansen ha pionerato il concetto di tracking 'smart money'—identificare e seguire wallet con track record comprovati.\n\nLa piattaforma ha etichettato oltre 500 milioni di wallet su più chain, categorizzandoli come smart money, fondi, exchange, whale e altro. Questa etichettatura consente agli utenti di vedere non solo cosa sta succedendo on-chain, ma chi c'è dietro l'attività. I prodotti di Nansen includono tracking portfolio, analytics token, analytics NFT e alert in tempo reale.\n\nNansen serve sia utenti retail che istituzionali, con funzionalità che vanno dal semplice tracking smart money all'accesso API avanzato e dashboard personalizzate. Le capacità AI della piattaforma aiutano a far emergere insights dalla massiccia quantità di dati on-chain, rendendo più facile identificare opportunità e rischi.",
+	"features": {
+		"1": {
+			"title": "500M+ Wallet Etichettati",
+			"description": "Identifica smart money, fondi, exchange e trader notevoli su più chain"
+		},
+		"2": {
+			"title": "Tracking Smart Money",
+			"description": "Segui cosa stanno comprando, vendendo e accumulando i top trader e i fondi"
+		},
+		"3": {
+			"title": "Alert in Tempo Reale",
+			"description": "Ricevi notifiche quando smart money si muove su token o collezioni NFT"
+		},
+		"4": {
+			"title": "Analytics Token",
+			"description": "Analizza distribuzione possessori, pattern di accumulo e flussi exchange"
+		},
+		"5": {
+			"title": "Analytics NFT",
+			"description": "Traccia attività NFT di smart money, floor price e trend collezioni"
+		},
+		"6": {
+			"title": "Insights AI",
+			"description": "Analisi potenziata da AI che fa emergere pattern e anomalie on-chain notevoli"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Seguire Smart Money",
+			"description": "Traccia cosa stanno accumulando i top trader prima dei movimenti di mercato"
+		},
+		"2": {
+			"title": "Due Diligence Token",
+			"description": "Ricerca composizione possessori, distribuzione e interesse smart money"
+		},
+		"3": {
+			"title": "Whale Watching",
+			"description": "Monitora movimenti wallet grandi e inflows/outflows exchange"
+		},
+		"4": {
+			"title": "Trading NFT",
+			"description": "Identifica collezioni NFT che stanno guadagnando interesse smart money"
+		},
+		"5": {
+			"title": "Monitoraggio Portfolio",
+			"description": "Traccia il tuo portfolio e confronta le performance con smart money"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Nansen e come funziona?",
+			"answer": "Nansen è una piattaforma di analytics on-chain che etichetta wallet blockchain per mostrare chi c'è dietro le transazioni. Invece di vedere indirizzi anonimi, vedi 'Smart Money', 'Fund', 'Exchange', ecc. Questo rivela pattern come smart money che accumula un token prima che pompi, o whale che spostano fondi agli exchange prima di vendere. Trasforma dati blockchain grezzi in intelligence azionabile."
+		},
+		"2": {
+			"question": "Cos'è 'Smart Money' e come viene identificato?",
+			"answer": "Smart Money si riferisce a wallet con track record profittevoli comprovati. Nansen li identifica attraverso analisi storica—wallet che hanno costantemente comprato token early prima di aumenti di prezzo, fatto mosse DeFi profittevoli o appartengono a trader/fondi di successo noti. Queste etichette sono costantemente aggiornate in base alle performance in corso."
+		},
+		"3": {
+			"question": "Nansen è gratuito?",
+			"answer": "Nansen offre un tier gratuito con funzionalità limitate. L'accesso completo richiede piani a pagamento: Lite (~$100/mese) per funzionalità base, Standard (~$150/mese) per tracking smart money completo e tier VIP/Enterprise per accesso API avanzato e soluzioni personalizzate. I piani includono diversi livelli di accesso dati, alert e dati storici."
+		},
+		"4": {
+			"question": "Come si confronta Nansen con Dune?",
+			"answer": "Servono scopi diversi. Dune è una piattaforma di query dove scrivi SQL per analizzare dati grezzi—flessibile ma richiede competenze SQL. Nansen fornisce analytics pre-costruite con etichette wallet—insights pronti all'uso senza query. Molti ricercatori seri usano entrambi: Dune per analisi personalizzate, Nansen per tracking smart money e alert."
+		},
+		"5": {
+			"question": "Posso tracciare il mio portfolio su Nansen?",
+			"answer": "Sì. La funzione portfolio di Nansen ti permette di connettere wallet o inserire indirizzi per tracciare holdings, P&L e storico transazioni. Puoi vedere come le tue performance si confrontano con smart money e ricevere alert quando i wallet che segui fanno mosse. Questo è disponibile su tutte le chain supportate."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a seguire smart money?",
+		"button": "Apri Nansen",
+		"note": "Analytics on-chain potenziata da AI"
+	}
+}

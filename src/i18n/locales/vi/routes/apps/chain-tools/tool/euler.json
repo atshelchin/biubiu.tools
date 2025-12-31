@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Euler Finance - Giao thức Cho vay Modular | Thị trường Tín dụng DeFi Có thể Tùy chỉnh",
+		"description": "Khám phá Euler Finance V2, nền tảng cho vay modular. Tạo vault cho vay tùy chỉnh, sử dụng bất kỳ tài sản nào làm thế chấp, và xây dựng chiến lược tín dụng phức tạp.",
+		"keywords": "Euler Finance, EUL, cho vay, vay, modular, vaults, DeFi, tín dụng"
+	},
+	"overview": "Euler Finance là giao thức cho vay modular cho phép tạo thị trường tín dụng có thể tùy chỉnh. Ban đầu ra mắt vào năm 2021, Euler V2 đại diện cho một bản xây dựng lại hoàn toàn sau công việc bảo mật rộng rãi sau một cuộc khai thác năm 2023. Phiên bản mới giới thiệu sự linh hoạt chưa từng có trong cho vay DeFi.\n\nEuler V2 bao gồm hai thành phần cốt lõi: Euler Vault Kit (EVK) để triển khai các vault cho vay tùy chỉnh với thông số có thể cấu hình, và Ethereum Vault Connector (EVC) cho phép các vault nhận diện tài sản thế chấp từ các vault khác. Điều này cho phép cấu trúc tín dụng phức tạp—một vị thế thế chấp đơn có thể đảm bảo cho vay trên nhiều thị trường.\n\nThiết kế modular có nghĩa là bất kỳ ai cũng có thể tạo thị trường cho vay với thông số rủi ro tùy chỉnh, cấu hình oracle, mô hình lãi suất và cơ chế thanh lý. Điều này dao động từ các vault tổ chức được cấp phép đến thị trường công cộng permissionless. Euler đã xây dựng lại với các biện pháp bảo mật toàn diện và đạt được tăng trưởng TVL đáng kể kể từ khi tái ra mắt V2.",
+	"features": {
+		"1": {
+			"title": "Euler Vault Kit",
+			"description": "Tạo vault cho vay tùy chỉnh với thông số rủi ro và oracle có thể cấu hình"
+		},
+		"2": {
+			"title": "Ethereum Vault Connector",
+			"description": "Sử dụng tài sản thế chấp trên nhiều vault để vay hiệu quả vốn"
+		},
+		"3": {
+			"title": "Thị trường Modular",
+			"description": "Tạo permissionless thị trường cho vay cho bất kỳ cặp tài sản nào"
+		},
+		"4": {
+			"title": "Oracle Linh hoạt",
+			"description": "Hỗ trợ Chainlink, Uniswap TWAP, Redstone và oracle tùy chỉnh"
+		},
+		"5": {
+			"title": "Cô lập Rủi ro",
+			"description": "Các pool cho vay cô lập ngăn lây lan giữa các thị trường khác nhau"
+		},
+		"6": {
+			"title": "Kiểm soát Quản trị",
+			"description": "Vault có thể được quản trị, bất biến hoặc nâng cấp được dựa trên lựa chọn của người tạo"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Cho vay Tiêu chuẩn",
+			"description": "Vay với tài sản thế chấp chính trong các vault được tuyển chọn, đã thử nghiệm"
+		},
+		"2": {
+			"title": "Tài sản Long-Tail",
+			"description": "Truy cập thị trường cho vay cho các token mới hơn hoặc thanh khoản kém hơn"
+		},
+		"3": {
+			"title": "Thị trường Tổ chức",
+			"description": "Tạo vault được cấp phép với yêu cầu KYC và điều khoản tùy chỉnh"
+		},
+		"4": {
+			"title": "Chiến lược Đòn bẩy",
+			"description": "Sử dụng tài sản thế chấp đa vault cho vị thế đòn bẩy hiệu quả"
+		},
+		"5": {
+			"title": "Tạo Thị trường",
+			"description": "Triển khai thị trường cho vay tùy chỉnh cho tài sản hoặc trường hợp sử dụng cụ thể"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Euler Finance là gì và V2 hoạt động như thế nào?",
+			"answer": "Euler là giao thức cho vay modular. V2 cho phép bất kỳ ai tạo vault cho vay tùy chỉnh sử dụng Euler Vault Kit (EVK). Mỗi vault có thể có loại tài sản thế chấp, oracle, mô hình lãi suất và thông số rủi ro riêng. Ethereum Vault Connector (EVC) liên kết các vault với nhau, cho phép tài sản thế chấp trong một vault đảm bảo vay trong vault khác."
+		},
+		"2": {
+			"question": "Chuyện gì đã xảy ra với Euler V1?",
+			"answer": "Euler V1 đã bị khai thác $197M vào tháng 3/2023 do lỗ hổng trong vector tấn công donation. Kẻ tấn công sau đó đã trả lại tiền. Euler Labs đã dành hơn một năm cho V2, tiến hành kiểm toán bảo mật rộng rãi và triển khai chương trình bug bounty toàn diện. V2 là một thiết kế kiến trúc hoàn toàn mới, không phải bản vá của V1."
+		},
+		"3": {
+			"question": "Ethereum Vault Connector (EVC) là gì?",
+			"answer": "EVC là đổi mới của Euler cho phép nhận diện tài sản thế chấp đa vault. Thay vì gửi tài sản thế chấp vào từng thị trường cho vay riêng biệt, bạn có thể gửi một lần và nhiều vault nhận diện nó. Điều này cải thiện đáng kể hiệu quả vốn và cho phép chiến lược vay nhiều nhánh phức tạp."
+		},
+		"4": {
+			"question": "Ai có thể tạo vault Euler?",
+			"answer": "Bất kỳ ai cũng có thể tạo vault sử dụng EVK. Người tạo vault chọn tất cả thông số: tài sản thế chấp được chấp nhận, oracle, lãi suất, điều kiện thanh lý và quản trị. Vault có thể hoàn toàn permissionless, yêu cầu whitelist hoặc có bất kỳ kiểm soát truy cập tùy chỉnh nào. Điều này cho phép mọi thứ từ thị trường tư nhân tổ chức đến cho vay permissionless công cộng."
+		},
+		"5": {
+			"question": "Euler V2 có an toàn để sử dụng không?",
+			"answer": "Euler V2 đã trải qua một trong những quy trình bảo mật toàn diện nhất trong DeFi—kiểm toán rộng rãi, xác minh chính thức và bug bounty $1M+. Tuy nhiên, DeFi luôn có rủi ro. Thiết kế modular có nghĩa là mỗi vault có rủi ro độc lập—vault được cấu hình kém không ảnh hưởng đến vault khác. Luôn nghiên cứu vault cụ thể trước khi gửi tiền."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng khám phá cho vay modular?",
+		"button": "Mở Euler Finance",
+		"note": "Vault cho vay có thể tùy chỉnh cho bất kỳ tài sản nào"
+	}
+}

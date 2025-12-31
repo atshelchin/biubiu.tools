@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Safe - Multi-Signature Wallet | Secure Digital Asset Management",
+		"description": "Explore Safe (formerly Gnosis Safe), the leading multi-signature wallet. Secure digital assets with customizable approval thresholds and smart contract security.",
+		"keywords": "Safe, Gnosis Safe, multisig, multi-signature wallet, DAO treasury, smart contract wallet, crypto security"
+	},
+	"overview": "Safe (formerly Gnosis Safe) is the industry-standard smart contract wallet for securing digital assets. Originally developed by the Gnosis team and launched in 2018, Safe has become the most trusted solution for DAOs, protocols, and institutions managing crypto treasuries.\n\nUnlike traditional wallets controlled by a single private key, Safe uses multi-signature (multisig) security requiring multiple approvals for transactions. You configure M-of-N signers—for example, 3-of-5 means any 3 of 5 designated signers must approve. This eliminates single points of failure: no one person can unilaterally move funds. Safe also supports spending limits, transaction batching, and modular extensions.\n\nSafe has secured over $100 billion in assets across 10+ million transactions. Major protocols like Uniswap, Aave, ENS, and countless DAOs use Safe for treasury management. The Safe ecosystem includes Safe{Wallet} (user interface), Safe{Core} (smart account infrastructure for developers), and integration with hardware wallets, mobile apps, and transaction builders. Safe represents the evolution from EOA wallets to programmable smart accounts.",
+	"features": {
+		"1": {
+			"title": "Multi-Sig Security",
+			"description": "Require multiple approvals (e.g., 3-of-5) for transactions—no single point of failure"
+		},
+		"2": {
+			"title": "Transaction Batching",
+			"description": "Bundle multiple transactions into one, saving gas and enabling complex operations"
+		},
+		"3": {
+			"title": "Spending Limits",
+			"description": "Set allowances for signers to spend up to limits without full approval"
+		},
+		"4": {
+			"title": "Multi-Chain",
+			"description": "Deploy Safe on Ethereum, Polygon, Arbitrum, Optimism, and other EVM chains"
+		},
+		"5": {
+			"title": "Safe Apps",
+			"description": "Interact with DeFi protocols directly from Safe through integrated apps"
+		},
+		"6": {
+			"title": "Recovery Options",
+			"description": "Configure guardians and recovery mechanisms for account recovery"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DAO Treasury",
+			"description": "Manage community funds with transparent multisig governance"
+		},
+		"2": {
+			"title": "Protocol Ownership",
+			"description": "Control smart contract admin keys with distributed signing"
+		},
+		"3": {
+			"title": "Team Wallets",
+			"description": "Secure company crypto with approval from multiple team members"
+		},
+		"4": {
+			"title": "Personal Security",
+			"description": "Protect personal holdings with hardware wallet + phone + backup signer"
+		},
+		"5": {
+			"title": "Investment Funds",
+			"description": "Manage fund assets with investor protection through multisig"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Safe and how is it different from MetaMask?",
+			"answer": "Safe is a smart contract wallet requiring multiple signatures (multisig) for transactions. MetaMask is an EOA (externally owned account) controlled by a single private key. If you lose your MetaMask seed phrase or it's stolen, funds are gone. With Safe, you need multiple signers to approve—even if one key is compromised, funds are protected. Safe is for high-security use cases; MetaMask is for everyday transactions."
+		},
+		"2": {
+			"question": "How do I set up a Safe multisig?",
+			"answer": "Go to safe.global, connect your wallet, and click 'Create Safe.' Choose a network (Ethereum, Polygon, etc.), add signer addresses (wallets that can approve transactions), and set the threshold (how many must sign). For example, add 5 signers with 3-of-5 threshold. You'll pay gas to deploy the Safe smart contract. Then transfer assets to your new Safe address."
+		},
+		"3": {
+			"question": "What happens if I lose access to a signer?",
+			"answer": "If you lose one signer but still have enough to meet threshold, you can propose a transaction to replace the lost signer with a new address. The remaining signers approve, and the Safe updates. This is why threshold should be less than total signers (e.g., 3-of-5, not 5-of-5). With proper setup, losing one device or key doesn't mean losing funds."
+		},
+		"4": {
+			"question": "Is Safe only for DAOs and teams?",
+			"answer": "Safe is popular with DAOs but works for personal security too. Individuals use Safe with 2-of-3 setups: hardware wallet + phone + backup (paper or trusted person). This protects against losing one device or a single key being stolen. The overhead of multiple signatures is worth it for significant holdings. Many crypto-native individuals use Safe for cold storage."
+		},
+		"5": {
+			"question": "What are Safe Apps and Safe Modules?",
+			"answer": "Safe Apps are dApps integrated into the Safe interface—you can interact with Uniswap, Aave, etc. directly from Safe without switching contexts. Safe Modules are extensions that add functionality: spending limits (allowance module), recurring payments, recovery mechanisms, etc. This modularity makes Safe a programmable platform, not just a wallet."
+		}
+	},
+	"cta": {
+		"ready": "Ready to secure your assets?",
+		"button": "Open Safe",
+		"note": "The industry-standard smart contract wallet"
+	}
+}

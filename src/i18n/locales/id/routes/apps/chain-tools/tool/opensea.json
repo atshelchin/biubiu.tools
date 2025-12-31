@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "OpenSea - Marketplace NFT Terkemuka | Beli, Jual, dan Temukan Koleksi Digital",
+		"description": "Temukan OpenSea, marketplace NFT terbesar di dunia. Beli, jual, dan jelajahi seni digital, koleksi, item game, dan lainnya di berbagai blockchain.",
+		"keywords": "OpenSea, NFT, marketplace, seni digital, koleksi, Ethereum, Seaport, trading NFT"
+	},
+	"overview": "OpenSea adalah marketplace NFT terbesar di dunia, memungkinkan pengguna untuk membeli, menjual, dan menemukan koleksi digital di berbagai blockchain. Didirikan oleh Devin Finzer dan Alex Atallah pada tahun 2017, OpenSea mempelopori konsep marketplace NFT dan tetap menjadi platform dominan meskipun persaingan yang meningkat.\n\nPlatform mendukung NFT di Ethereum, Polygon, Klaytn, Solana, Arbitrum, Optimism, Avalanche, Base, dan lainnya. OpenSea menawarkan fitur termasuk listing gaya lelang dan harga tetap, penawaran koleksi, penawaran berbasis trait, dan alat kelangkaan. Protokol Seaport, protokol marketplace open-source OpenSea, mendukung perdagangan dengan fitur canggih seperti penjualan bundel dan pengisian parsial.\n\nOpenSea telah memproses miliaran volume perdagangan NFT dan menampung jutaan koleksi NFT. Dengan OS2 (OpenSea 2.0), platform diperluas untuk mendukung perdagangan token bersama NFT, memperkenalkan program hadiah, dan meluncurkan hub komunitas, memposisikan diri sebagai marketplace Web3 yang komprehensif.",
+	"features": {
+		"1": {
+			"title": "Dukungan Multi-Chain",
+			"description": "Perdagangkan NFT di Ethereum, Polygon, Solana, Base, dan 15+ chain lainnya"
+		},
+		"2": {
+			"title": "Protokol Seaport",
+			"description": "Protokol marketplace open-source yang memungkinkan fitur trading canggih"
+		},
+		"3": {
+			"title": "Penawaran Koleksi",
+			"description": "Buat penawaran pada seluruh koleksi atau trait tertentu untuk pembelian efisien"
+		},
+		"4": {
+			"title": "Alat Kreator",
+			"description": "Luncurkan koleksi NFT dengan royalti yang dapat disesuaikan dan mekanik reveal"
+		},
+		"5": {
+			"title": "Trading Token OS2",
+			"description": "Perdagangkan token bersama NFT dengan pengalaman OpenSea 2.0 baru"
+		},
+		"6": {
+			"title": "Drops & Minting",
+			"description": "Berpartisipasi dalam NFT drops dan mint langsung melalui OpenSea"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading NFT",
+			"description": "Beli dan jual seni digital, PFP, dan koleksi di marketplace terbesar"
+		},
+		"2": {
+			"title": "Peluncuran Koleksi",
+			"description": "Buat dan luncurkan koleksi NFT dengan alat minting dan penjualan bawaan"
+		},
+		"3": {
+			"title": "Manajemen Portofolio",
+			"description": "Lacak, atur, dan kelola kepemilikan NFT Anda di berbagai chain"
+		},
+		"4": {
+			"title": "Penemuan Harga",
+			"description": "Teliti floor price, riwayat penjualan, dan kelangkaan untuk keputusan yang tepat"
+		},
+		"5": {
+			"title": "Aset Gaming",
+			"description": "Perdagangkan item dalam game dan NFT gaming di berbagai game blockchain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu OpenSea dan bagaimana cara kerjanya?",
+			"answer": "OpenSea adalah marketplace NFT di mana pengguna dapat membeli, menjual, dan menemukan koleksi digital. Anda menghubungkan dompet, menelusuri atau mencari NFT, dan dapat membeli dengan harga yang terdaftar atau membuat penawaran. Penjual mendaftarkan NFT dengan menandatangani pesan (tidak ada gas untuk listing). Ketika penjualan terjadi, OpenSea memfasilitasi pertukaran NFT dengan pembayaran, mengambil biaya kecil."
+		},
+		"2": {
+			"question": "Biaya apa yang dikenakan OpenSea?",
+			"answer": "OpenSea mengenakan biaya 2,5% pada penjualan. Selain itu, kreator dapat menetapkan royalti (biasanya 5-10%) yang mereka terima dari penjualan sekunder. Pembeli membayar biaya gas untuk transaksi on-chain. Protokol Seaport adalah open-source, sehingga marketplace lain dapat menggunakannya dengan struktur biaya yang berbeda."
+		},
+		"3": {
+			"question": "Apa itu OpenSea Pro (sebelumnya Gem)?",
+			"answer": "OpenSea Pro adalah antarmuka trading NFT canggih untuk pengguna power. Ini menawarkan fitur seperti agregasi cross-marketplace (menemukan harga terbaik di OpenSea, Blur, dll.), analitik portofolio, penyaringan canggih, dan alat sweep untuk membeli beberapa NFT secara efisien. Pro ditujukan untuk trader dan kolektor profesional."
+		},
+		"4": {
+			"question": "Bagaimana OpenSea dibandingkan dengan Blur?",
+			"answer": "OpenSea adalah marketplace NFT utama asli dengan pilihan terluas dan basis pengguna terbesar. Blur muncul sebagai pesaing yang berfokus pada trader profesional dengan biaya nol, trading lebih cepat, dan insentif token. OpenSea memiliki lebih banyak pengguna kasual dan penemuan yang lebih baik; Blur memimpin dalam volume trading profesional. Banyak trader menggunakan keduanya."
+		},
+		"5": {
+			"question": "Apakah OpenSea aman digunakan?",
+			"answer": "OpenSea umumnya aman tetapi memerlukan kehati-hatian. Risiko termasuk: koleksi palsu/disalin (selalu verifikasi alamat kontrak), situs phishing yang menyamar sebagai OpenSea, NFT berbahaya dengan persetujuan tersembunyi, dan NFT yang dicuri. OpenSea memiliki lencana verifikasi untuk koleksi yang sah dan alat untuk melaporkan penipuan, tetapi pengguna harus tetap waspada."
+		}
+	},
+	"cta": {
+		"ready": "Siap menjelajahi NFT?",
+		"button": "Buka OpenSea",
+		"note": "Marketplace NFT terbesar di dunia"
+	}
+}

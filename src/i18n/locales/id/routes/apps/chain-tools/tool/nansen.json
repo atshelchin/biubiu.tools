@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Nansen - Analytics On-Chain Bertenaga AI | Pelacakan Smart Money & Label Wallet",
+		"description": "Temukan Nansen, platform analytics on-chain terkemuka. Lacak smart money, analisis 500M+ wallet yang dilabeli, dan dapatkan insights bertenaga AI untuk investasi crypto.",
+		"keywords": "Nansen, analytics on-chain, smart money, label wallet, analytics crypto, riset DeFi, AI"
+	},
+	"overview": "Nansen adalah platform analytics blockchain bertenaga AI yang menyediakan insights yang dapat ditindaklanjuti dengan memperkaya data on-chain dengan label wallet. Didirikan oleh Alex Svanevik, Evgeny Medvedev, dan Lars Bakke Krogvig pada tahun 2019, Nansen mempelopori konsep pelacakan 'smart money'—mengidentifikasi dan mengikuti wallet dengan rekam jejak yang terbukti.\n\nPlatform telah melabeli lebih dari 500 juta wallet di berbagai chain, mengkategorikan mereka sebagai smart money, dana, exchange, whale, dan lainnya. Pelabelan ini memungkinkan pengguna untuk melihat tidak hanya apa yang terjadi on-chain, tetapi siapa yang berada di balik aktivitas tersebut. Produk Nansen termasuk pelacakan portofolio, analytics token, analytics NFT, dan alert real-time.\n\nNansen melayani pengguna ritel dan institusi, dengan fitur mulai dari pelacakan smart money sederhana hingga akses API canggih dan dashboard kustom. Kemampuan AI platform membantu mengungkap insights dari jumlah data on-chain yang masif, membuatnya lebih mudah untuk mengidentifikasi peluang dan risiko.",
+	"features": {
+		"1": {
+			"title": "500M+ Wallet Dilabeli",
+			"description": "Identifikasi smart money, dana, exchange, dan trader terkenal di berbagai chain"
+		},
+		"2": {
+			"title": "Pelacakan Smart Money",
+			"description": "Ikuti apa yang dibeli, dijual, dan diakumulasi oleh trader dan dana top"
+		},
+		"3": {
+			"title": "Alert Real-Time",
+			"description": "Dapatkan notifikasi ketika smart money bergerak ke token atau koleksi NFT"
+		},
+		"4": {
+			"title": "Analytics Token",
+			"description": "Analisis distribusi holder, pola akumulasi, dan aliran exchange"
+		},
+		"5": {
+			"title": "Analytics NFT",
+			"description": "Lacak aktivitas NFT smart money, floor price, dan tren koleksi"
+		},
+		"6": {
+			"title": "Insights AI",
+			"description": "Analisis bertenaga AI yang mengungkap pola dan anomali on-chain yang penting"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Mengikuti Smart Money",
+			"description": "Lacak apa yang diakumulasi oleh trader top sebelum pergerakan pasar"
+		},
+		"2": {
+			"title": "Uji Tuntas Token",
+			"description": "Riset komposisi holder, distribusi, dan minat smart money"
+		},
+		"3": {
+			"title": "Pengawasan Whale",
+			"description": "Pantau pergerakan wallet besar dan inflow/outflow exchange"
+		},
+		"4": {
+			"title": "Trading NFT",
+			"description": "Identifikasi koleksi NFT yang mendapat minat smart money"
+		},
+		"5": {
+			"title": "Pemantauan Portofolio",
+			"description": "Lacak portofolio Anda dan bandingkan kinerja dengan smart money"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Nansen dan bagaimana cara kerjanya?",
+			"answer": "Nansen adalah platform analytics on-chain yang melabeli wallet blockchain untuk menunjukkan siapa yang berada di balik transaksi. Alih-alih melihat alamat anonim, Anda melihat 'Smart Money', 'Fund', 'Exchange', dll. Ini mengungkapkan pola seperti smart money yang mengakumulasi token sebelum naik, atau whale yang memindahkan dana ke exchange sebelum menjual. Ini mengubah data blockchain mentah menjadi intelijen yang dapat ditindaklanjuti."
+		},
+		"2": {
+			"question": "Apa itu 'Smart Money' dan bagaimana diidentifikasi?",
+			"answer": "Smart Money mengacu pada wallet dengan rekam jejak keuntungan yang terbukti. Nansen mengidentifikasi mereka melalui analisis historis—wallet yang secara konsisten membeli token lebih awal sebelum kenaikan harga, melakukan gerakan DeFi yang menguntungkan, atau milik trader/dana sukses yang dikenal. Label ini terus diperbarui berdasarkan kinerja yang sedang berlangsung."
+		},
+		"3": {
+			"question": "Apakah Nansen gratis?",
+			"answer": "Nansen menawarkan tier gratis dengan fitur terbatas. Akses penuh memerlukan paket berbayar: Lite (~$100/bulan) untuk fitur dasar, Standard (~$150/bulan) untuk pelacakan smart money penuh, dan tier VIP/Enterprise untuk akses API canggih dan solusi kustom. Paket termasuk tingkat akses data, alert, dan data historis yang berbeda."
+		},
+		"4": {
+			"question": "Bagaimana Nansen dibandingkan dengan Dune?",
+			"answer": "Mereka melayani tujuan yang berbeda. Dune adalah platform query di mana Anda menulis SQL untuk menganalisis data mentah—fleksibel tetapi memerlukan keterampilan SQL. Nansen menyediakan analytics yang telah dibangun dengan label wallet—insights siap pakai tanpa query. Banyak peneliti serius menggunakan keduanya: Dune untuk analisis kustom, Nansen untuk pelacakan smart money dan alert."
+		},
+		"5": {
+			"question": "Bisakah saya melacak portofolio saya sendiri di Nansen?",
+			"answer": "Ya. Fitur portofolio Nansen memungkinkan Anda menghubungkan wallet atau memasukkan alamat untuk melacak kepemilikan, P&L, dan riwayat transaksi. Anda dapat melihat bagaimana kinerja Anda dibandingkan dengan smart money dan mendapatkan alert ketika wallet yang Anda ikuti melakukan gerakan. Ini tersedia di semua chain yang didukung."
+		}
+	},
+	"cta": {
+		"ready": "Siap mengikuti smart money?",
+		"button": "Buka Nansen",
+		"note": "Analytics on-chain bertenaga AI"
+	}
+}

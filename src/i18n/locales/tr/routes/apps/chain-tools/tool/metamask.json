@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "MetaMask - Lider Kripto Cüzdan | DeFi, NFT & Web3'e Erişim",
+		"description": "Lider self-custodial kripto cüzdan MetaMask'ı keşfedin. Ethereum ve EVM uyumlu zincirlerde DeFi protokollerine, NFT pazaryerlerine ve Web3 uygulamalarına erişin.",
+		"keywords": "MetaMask, kripto cüzdan, Ethereum cüzdan, Web3, DeFi, NFT, tarayıcı eklentisi, mobil cüzdan"
+	},
+	"overview": "MetaMask, dünyanın en popüler self-custodial kripto cüzdanıdır ve kullanıcıların Ethereum ve EVM uyumlu blokzincirlerde merkezi olmayan uygulamalara erişmesini sağlar. 2016 yılında ConsenSys'te Aaron Davis ve Dan Finlay tarafından oluşturulan MetaMask, Web3'ü ana akım kullanıcılara erişilebilir kılan tarayıcı eklentisi cüzdan konseptini öncülük etti.\n\nChrome, Firefox, Brave ve Edge için tarayıcı eklentisi olarak ve iOS ve Android için mobil uygulamalar olarak mevcut olan MetaMask, 30 milyondan fazla aylık aktif kullanıcıya hizmet veriyor. Cüzdan, kullanıcıların ETH ve ERC-20 tokenlarını saklamasına, dApp'lerle etkileşim kurmasına, token takası yapmasına, fiat ile kripto satın almasına ve NFT'leri yönetmesine olanak tanır. MetaMask Snaps, EVM olmayan zincirlere destek gibi işlevsellik eklemek için üçüncü taraf eklentilere olanak tanır.\n\nMetaMask, çoğu dApp 'MetaMask ile Bağlan' özelliğini birincil giriş yöntemi olarak kullandığından Web3 kimlik doğrulaması için fiili standart haline gelmiştir. Cüzdan, takas ücretleri (%0.875) ve on-ramp ortaklıkları aracılığıyla gelir elde eder. Milyonlarca kullanıcı için DeFi, NFT'ler ve Web3'e geçit olarak MetaMask, Ethereum ekosisteminde temel altyapı olmaya devam ediyor.",
+	"features": {
+		"1": {
+			"title": "Çoklu Zincir Desteği",
+			"description": "Ethereum, Polygon, Arbitrum, Optimism, BSC ve yüzlerce EVM zincirine bağlanın"
+		},
+		"2": {
+			"title": "Uygulama İçi Takaslar",
+			"description": "Birden fazla DEX'ten toplanan fiyat teklifleriyle doğrudan cüzdanda token takası yapın"
+		},
+		"3": {
+			"title": "NFT Yönetimi",
+			"description": "Desteklenen ağlarda NFT koleksiyonlarını görüntüleyin, gönderin ve yönetin"
+		},
+		"4": {
+			"title": "Donanım Cüzdanı",
+			"description": "Gelişmiş güvenlik için Ledger ve Trezor donanım cüzdanlarını bağlayın"
+		},
+		"5": {
+			"title": "MetaMask Snaps",
+			"description": "EVM olmayan zincirler ve özellikler için üçüncü taraf eklentilerle işlevselliği genişletin"
+		},
+		"6": {
+			"title": "Portföy Görünümü",
+			"description": "Entegre portföy panosuyla varlıklarınızı zincirler arasında takip edin"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Erişimi",
+			"description": "Ethereum ve L2'lerde lending, DEX ve yield protokollerine bağlanın"
+		},
+		"2": {
+			"title": "NFT Ticareti",
+			"description": "OpenSea, Blur ve diğer pazaryerlerinde NFT'leri alın, satın ve yönetin"
+		},
+		"3": {
+			"title": "Token Takasları",
+			"description": "Entegre DEX toplamasıyla rekabetçi oranlarla token ticareti yapın"
+		},
+		"4": {
+			"title": "Web3 Girişi",
+			"description": "Cüzdan adresinizi kullanarak dApp'lere ve web sitelerine giriş yapın"
+		},
+		"5": {
+			"title": "Çapraz Zincir",
+			"description": "Varlıkları köprüleyin ve birden fazla EVM ağında uygulamalarla etkileşim kurun"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "MetaMask nedir ve güvenli mi?",
+			"answer": "MetaMask, özel anahtarlarınızı siz kontrol ettiğiniz bir self-custodial kripto cüzdandır—MetaMask veya ConsenSys değil. Düzgün kullanıldığında genellikle güvenli kabul edilir: parola korumasını etkinleştirin, Gizli Kurtarma İfadenizi asla paylaşmayın, imzalamadan önce işlem ayrıntılarını doğrulayın ve kimlik avı sitelerine karşı dikkatli olun. Ana riskler, yazılım güvenlik açıklarından ziyade kullanıcı hatasıdır (seed phrase'i kaybetmek, kötü niyetli işlemleri imzalamak)."
+		},
+		"2": {
+			"question": "MetaMask'a yeni bir ağ nasıl eklerim?",
+			"answer": "Üstteki ağ açılır menüsüne tıklayın, ardından 'Ağ Ekle'ye tıklayın. Polygon veya Arbitrum gibi popüler ağları tek tıklamayla ekleyebilir veya diğer zincirler için RPC ayrıntılarını manuel olarak girebilirsiniz. Chainlist.org gibi siteler, otomatik olarak ekleyebileceğiniz doğrulanmış ağ yapılandırmaları sağlar. Kötü niyetli düğümlere bağlanmaktan kaçınmak için RPC URL'lerini her zaman resmi kaynaklardan doğrulayın."
+		},
+		"3": {
+			"question": "MetaMask Snaps nedir?",
+			"answer": "Snaps, MetaMask'a işlevsellik ekleyen üçüncü taraf eklentilerdir. EVM olmayan zincirler (Bitcoin, Solana, Cosmos gibi) için destek sağlayabilir, yeni işlem içgörüleri ekleyebilir, özel bildirimler sağlayabilir ve daha fazlasını yapabilir. Snaps, güvenlik için izole ortamlarda çalışır. Bunları MetaMask Snaps dizininden yüklersiniz ve her Snap'in onaylamanız gereken belirli izinleri vardır."
+		},
+		"4": {
+			"question": "İşlemlerim neden takılıyor veya başarısız oluyor?",
+			"answer": "Yaygın nedenler: gaz fiyatı çok düşük (gazı artırın), nonce sorunları (ayarlarda hesabı sıfırlayın), ağ tıkanıklığı (bekleyin veya hızlandırın) veya akıllı kontrat hataları (dApp'i kontrol edin). Takılan işlemler için 'Hızlandır' (daha fazla gaz öde) veya 'İptal Et' (aynı nonce ile kendinize 0 ETH gönderin) yapabilirsiniz. MetaMask'ın etkinlik sekmesi, yönetebileceğiniz bekleyen işlemleri gösterir."
+		},
+		"5": {
+			"question": "MetaMask nasıl para kazanıyor?",
+			"answer": "MetaMask, takas ücretleri (MetaMask Swaps aracılığıyla uygulama içi token takaslarında %0.875), on-ramp ortaklıkları (MoonPay/Transak gibi sağlayıcılar aracılığıyla fiat-kripto alımlarından ücretler) ve kuruluşlar için MetaMask Institutional hizmetleri aracılığıyla kazanç sağlar. Temel cüzdan işlevselliği ücretsizdir—yalnızca işlemler için ağ gaz ücretlerini ödersiniz."
+		}
+	},
+	"cta": {
+		"ready": "Web3'ü keşfetmeye hazır mısınız?",
+		"button": "MetaMask'ı Aç",
+		"note": "Lider self-custodial kripto cüzdan"
+	}
+}
