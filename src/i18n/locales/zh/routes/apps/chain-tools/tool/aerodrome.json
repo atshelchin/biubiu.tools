@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Aerodrome - Base 的流动性中心",
+		"description": "Aerodrome 是 Base 上领先的 DEX，使用 ve(3,3) 代币经济学。交易、提供流动性并赚取 AERO 奖励。",
+		"keywords": "Aerodrome, AERO, Base DEX, ve(3,3), 流动性, AMM"
+	},
+	"overview": "Aerodrome 是 Base（Coinbase 的 L2 网络）的中央流动性中心。从 Optimism 上的 Velodrome 分叉，Aerodrome 使用 ve(3,3) 代币经济学，通过投票托管治理激励深度流动性。\n\n该协议已成为 Base 上的主导 DEX，处理大量交易量和 TVL。AERO 代币持有者可以锁定代币获得 veAERO，投票决定排放分配并从选定的池中赚取交易费。\n\nAerodrome 在 Base 上的成功使其成为 L2 流动性引导的典范。ve(3,3) 模型使交易者、LP 和代币持有者的激励保持一致。",
+	"features": {
+		"1": {
+			"title": "ve(3,3) 代币经济学",
+			"description": "排放的投票托管治理"
+		},
+		"2": {
+			"title": "Base 原生",
+			"description": "为 Coinbase 的 L2 生态系统构建"
+		},
+		"3": {
+			"title": "深度流动性",
+			"description": "Base 上最大的流动性池"
+		},
+		"4": {
+			"title": "费用分享",
+			"description": "veAERO 持有者赚取交易费"
+		},
+		"5": {
+			"title": "贿赂市场",
+			"description": "协议激励投票以获取流动性"
+		},
+		"6": {
+			"title": "多种池类型",
+			"description": "稳定和波动交易对 AMM"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "在 Base 上交易",
+			"description": "以 Base 最佳流动性交换代币"
+		},
+		"2": {
+			"title": "提供流动性",
+			"description": "作为 LP 赚取 AERO 奖励"
+		},
+		"3": {
+			"title": "veAERO 投票",
+			"description": "锁定 AERO，投票，赚取费用"
+		},
+		"4": {
+			"title": "协议流动性",
+			"description": "为新代币引导流动性"
+		},
+		"5": {
+			"title": "收益策略",
+			"description": "基于 AERO 排放构建策略"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 AERO 代币？",
+			"answer": "AERO 是 Aerodrome 的治理和实用代币。它作为奖励发放给流动性提供者。用户可以锁定 AERO 获得 veAERO（最长 4 年），投票决定排放分配并从选定的池中赚取 100% 的交易费。"
+		},
+		"2": {
+			"question": "ve(3,3) 如何工作？",
+			"answer": "ve(3,3) 结合了投票托管（ve）和 (3,3) 博弈论。锁定 AERO 获得 veAERO，投票决定哪些池获得排放，并从这些池中赚取费用。该系统激励长期锁定并创造对排放的竞争。"
+		},
+		"3": {
+			"question": "如何在 Aerodrome 上赚钱？",
+			"answer": "三种主要方式：1) 提供流动性赚取 AERO 排放，2) 锁定 AERO 获得 veAERO 赚取交易费和贿赂，3) 交易 AERO 代币。LP 从排放中获利，veAERO 持有者从费用和协议贿赂中获利。"
+		},
+		"4": {
+			"question": "什么是贿赂？",
+			"answer": "协议向 veAERO 投票者支付贿赂以将排放导向他们的池。如果协议想要更多流动性，他们会贿赂投票者。贿赂是 veAERO 持有者除交易费之外的额外收入来源。"
+		},
+		"5": {
+			"question": "Aerodrome 与 Uniswap 在 Base 上哪个更好？",
+			"answer": "由于排放激励，Aerodrome 对许多 Base 交易对有更深的流动性。Uniswap 有品牌认可度和 v3 集中流动性。对于大多数 Base 交易，Aerodrome 提供更好的价格。使用 DEX 聚合器进行比较。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Aerodrome 上交易了吗？",
+		"button": "探索 Aerodrome",
+		"note": "Base 的流动性中心"
+	}
+}

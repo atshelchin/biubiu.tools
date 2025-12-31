@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "ENS - 以太坊域名服务",
+		"description": "ENS 为以太坊地址提供人类可读的名称。用 .eth 名称替换 0x 地址，方便发送和身份识别。",
+		"keywords": "ENS, 以太坊域名服务, .eth, 域名, Web3 身份, 加密名称"
+	},
+	"overview": "ENS（以太坊域名服务）是以太坊和 Web3 的去中心化命名系统。ENS 让你使用像 'alice.eth' 这样的人类可读名称代替长十六进制地址，用于钱包、网站等。\n\n于 2017 年推出，ENS 已成为 Web3 身份的标准。已注册超过 200 万个名称。ENS 名称可以指向钱包地址、内容哈希和其他区块链数据。\n\nENS 由 ENS DAO 通过 ENS 代币治理。该协议深度集成到钱包、dApps 和更广泛的以太坊生态系统中。",
+	"features": {
+		"1": {
+			"title": "人类可读名称",
+			"description": "用 .eth 名称替换 0x 地址"
+		},
+		"2": {
+			"title": "去中心化",
+			"description": "没有中央机构控制名称"
+		},
+		"3": {
+			"title": "多币种支持",
+			"description": "一个名称对应所有加密地址"
+		},
+		"4": {
+			"title": "网站托管",
+			"description": "托管去中心化网站"
+		},
+		"5": {
+			"title": "个人资料记录",
+			"description": "添加社交链接、头像、简介"
+		},
+		"6": {
+			"title": "DAO 治理",
+			"description": "社区拥有的协议"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "轻松支付",
+			"description": "发送到 alice.eth 而不是 0x..."
+		},
+		"2": {
+			"title": "Web3 身份",
+			"description": "你的 .eth 名称作为数字身份"
+		},
+		"3": {
+			"title": "去中心化网站",
+			"description": "用 .eth 在 IPFS 上托管网站"
+		},
+		"4": {
+			"title": "多链接收",
+			"description": "一个名称用于 ETH、BTC、SOL 等"
+		},
+		"5": {
+			"title": "社交资料",
+			"description": "链接社交账号并建立声誉"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "ENS 名称要多少钱？",
+			"answer": "ENS 名称费用：5+ 字符名称 $5/年，4 字符名称 $160/年，3 字符名称 $640/年。你还需支付注册的 Gas 费。名称以当前汇率用 ETH 支付。"
+		},
+		"2": {
+			"question": "什么是 ENS 代币？",
+			"answer": "ENS 是 ENS DAO 的治理代币。代币持有者对协议升级、国库分配和治理事项进行投票。ENS 于 2021 年空投给早期用户和 .eth 名称持有者。"
+		},
+		"3": {
+			"question": "我可以出售我的 ENS 名称吗？",
+			"answer": "是的，ENS 名称是可以在 OpenSea 等市场上交易的 NFT（ERC-721）。热门名称已以可观的价格售出。在注册期间，你可以随时转让或出售你的名称。"
+		},
+		"4": {
+			"question": "我的 ENS 名称过期会怎样？",
+			"answer": "过期后有 90 天的宽限期，你仍可续费。之后，名称进入临时溢价拍卖，然后任何人都可以注册。设置自动续费或日历提醒。"
+		},
+		"5": {
+			"question": "ENS 名称在其他链上有效吗？",
+			"answer": "ENS 可以存储任何加密货币的地址（BTC、SOL 等）。用户可以在任何支持的链上发送到 yourname.eth。ENS 正在通过 ENS on L2 计划扩展到 L2，以实现更便宜的注册和管理。"
+		}
+	},
+	"cta": {
+		"ready": "准备好获取你的 .eth 名称了吗？",
+		"button": "探索 ENS",
+		"note": "你的 Web3 身份"
+	}
+}

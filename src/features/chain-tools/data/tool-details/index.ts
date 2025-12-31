@@ -100,6 +100,12 @@ import { bnbchainDetail } from './bnbchain';
 import { solanaDetail } from './solana';
 import { morphoDetail } from './morpho';
 import { sparkDetail } from './spark';
+import { ethenaDetail } from './ethena';
+import { aerodromeDetail } from './aerodrome';
+import { ondoDetail } from './ondo';
+import { hyperliquidDetail } from './hyperliquid';
+import { ensDetail } from './ens';
+import { pythDetail } from './pyth';
 
 /**
  * All tool details mapped by tool ID
@@ -196,7 +202,13 @@ export const toolDetails: Record<string, ToolDetail> = {
 	bnbchain: bnbchainDetail,
 	solana: solanaDetail,
 	morpho: morphoDetail,
-	spark: sparkDetail
+	spark: sparkDetail,
+	ethena: ethenaDetail,
+	aerodrome: aerodromeDetail,
+	ondo: ondoDetail,
+	hyperliquid: hyperliquidDetail,
+	ens: ensDetail,
+	pyth: pythDetail
 };
 
 /**

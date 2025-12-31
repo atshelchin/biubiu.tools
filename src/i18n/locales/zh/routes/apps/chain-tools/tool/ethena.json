@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Ethena - 合成美元协议",
+		"description": "Ethena 是提供高收益 USDe 稳定币的合成美元协议。由质押 ETH 支持的 Delta 中性策略。",
+		"keywords": "Ethena, USDe, 合成美元, sUSDe, 收益稳定币, DeFi"
+	},
+	"overview": "Ethena 是一个发行 USDe 的合成美元协议——一种由 Delta 中性仓位支持的加密原生稳定币。于 2024 年推出，Ethena 迅速成为 TVL 最大的稳定币协议之一。\n\nUSDe 通过 Delta 中性策略维持锚定：质押 ETH（stETH）用作抵押品，同时做空永续期货对冲价格风险。这从质押奖励和资金费率中产生收益。\n\nsUSDe（质押的 USDe）提供 DeFi 中最高的收益之一，吸引了数十亿存款。该协议已与主要 DeFi 平台集成，并在多条链上推出。",
+	"features": {
+		"1": {
+			"title": "合成美元",
+			"description": "USDe 通过 Delta 中性维持 $1 锚定"
+		},
+		"2": {
+			"title": "高收益",
+			"description": "sUSDe 从质押 + 资金费率中获利"
+		},
+		"3": {
+			"title": "Delta 中性",
+			"description": "做多 stETH，做空永续对冲策略"
+		},
+		"4": {
+			"title": "加密原生",
+			"description": "无传统银行依赖"
+		},
+		"5": {
+			"title": "多链",
+			"description": "在以太坊和 L2 上可用"
+		},
+		"6": {
+			"title": "DeFi 集成",
+			"description": "广泛被各协议支持"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "赚取收益",
+			"description": "质押 USDe 获取高 sUSDe 收益"
+		},
+		"2": {
+			"title": "稳定币持有",
+			"description": "持有 USDe 作为加密原生美元"
+		},
+		"3": {
+			"title": "DeFi 抵押品",
+			"description": "在借贷中使用 sUSDe 作为抵押品"
+		},
+		"4": {
+			"title": "收益策略",
+			"description": "基于 sUSDe 收益构建策略"
+		},
+		"5": {
+			"title": "流动性提供",
+			"description": "在 USDe 交易对中提供流动性"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "USDe 如何维持锚定？",
+			"answer": "USDe 使用 Delta 中性仓位：每 $1 的 stETH 抵押品都有 $1 的 ETH 永续空头。这对冲了价格风险，同时从质押和资金费率中获利。套利者通过铸造/赎回维持锚定。"
+		},
+		"2": {
+			"question": "Ethena 有什么风险？",
+			"answer": "主要风险包括：负资金费率（空头付给多头时）、智能合约风险、极端情况下的清算风险，以及中心化交易所对手方风险。收益补偿这些风险，但应该理解它们。"
+		},
+		"3": {
+			"question": "什么是 sUSDe？",
+			"answer": "sUSDe 是质押的 USDe，从协议的 Delta 中性策略中赚取收益。当你质押 USDe 时，你收到 sUSDe，它相对于 USDe 的价值随时间增加。解除质押将 sUSDe 转换回 USDe 加上赚取的收益。"
+		},
+		"4": {
+			"question": "Ethena 与 USDC 有什么不同？",
+			"answer": "USDC 由银行存款和国债支持，需要银行关系。USDe 是加密原生的，由链上资产和衍生品支持。USDe 通过 sUSDe 提供收益，而 USDC 不提供。USDe 有不同的风险（资金费率 vs 银行风险）。"
+		},
+		"5": {
+			"question": "Ethena 可持续吗？",
+			"answer": "收益来自真实来源：ETH 质押（约 3-4%）和永续资金费率（可变，通常为正）。在牛市中，资金费率通常为正。可持续性取决于市场条件。协议有负资金费率期间的储备。"
+		}
+	},
+	"cta": {
+		"ready": "准备好用 Ethena 赚取收益了吗？",
+		"button": "探索 Ethena",
+		"note": "带收益的合成美元"
+	}
+}

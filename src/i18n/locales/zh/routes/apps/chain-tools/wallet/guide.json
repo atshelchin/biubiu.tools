@@ -1,0 +1,192 @@
+{
+	"title": "加密钱包指南：从基础到高级安全",
+	"subtitle": "掌握钱包安全、理解账户抽象，保护您的数字资产",
+	"sections": {
+		"intro": {
+			"title": "理解加密钱包",
+			"content": "<p>加密货币钱包是您进入区块链世界的入口。与存储现金的传统钱包不同，加密钱包存储的是证明您数字资产所有权的加密密钥。资产本身存在于区块链上。</p><p>选择正确的钱包——并正确使用它——是您在加密领域做出的最重要决定之一。私钥的一个错误可能意味着资金的永久损失。</p><p>本指南涵盖从基本钱包概念到账户抽象和机构托管解决方案等高级主题的所有内容。</p>"
+		},
+		"wallet_basics": {
+			"title": "钱包基础知识",
+			"content": "<p>在使用任何钱包之前，您需要了解使加密所有权运作的核心概念。</p>",
+			"keys_addresses": {
+				"title": "密钥和地址",
+				"content": "<p><strong>私钥：</strong>一个证明所有权的 256 位随机数。任何拥有您私钥的人都可以控制您的资产。永远不要分享它。</p><p><strong>公钥：</strong>使用密码学从私钥派生。可以自由分享。</p><p><strong>地址：</strong>公钥的缩短、人类可读版本（例如 0x1234...abcd）。这是您分享用于接收资金的内容。</p><p><strong>关系：</strong></p><ul><li>私钥 → 公钥 → 地址</li><li>您始终可以从私钥派生公钥</li><li>您无法从公钥派生私钥（这就是安全性所在）</li></ul>"
+			},
+			"seed_phrases": {
+				"title": "助记词（恢复短语）",
+				"content": "<p>助记词（也称为恢复短语或记忆词）是私钥的人类可读表示。</p><p><strong>工作原理：</strong></p><ul><li>来自标准化列表（BIP-39）的 12 或 24 个单词</li><li>可以重新生成钱包的所有私钥</li><li>写在纸上——永远不要数字存储</li></ul><p><strong>关键规则：</strong></p><ul><li>永远不要在任何网站上输入您的助记词</li><li>永远不要与任何人分享，包括\"客服\"</li><li>存放在防火、防水的位置</li><li>考虑使用金属备份板</li></ul><p>如果有人要求您的助记词，那一定是骗局。</p>"
+			},
+			"custodial_vs_non": {
+				"title": "托管与非托管",
+				"content": "<p><strong>非托管（自托管）：</strong></p><ul><li>您控制您的私钥</li><li>没有第三方可以冻结或没收您的资金</li><li>您负责安全和备份</li><li>示例：MetaMask、Ledger、Rabby</li></ul><p><strong>托管：</strong></p><ul><li>第三方持有您的密钥</li><li>如果您失去访问权限，更容易恢复</li><li>您信任托管方持有您的资产</li><li>示例：Coinbase 账户、Binance 账户</li></ul><p><strong>俗话说：</strong>\"不是你的密钥，就不是你的币。\"</p><p>对于大额持仓，强烈建议自托管。交易所黑客和破产已经导致数十亿美元的用户资金损失。</p>"
+			}
+		},
+		"wallet_types": {
+			"title": "钱包类型",
+			"content": "<p>不同的钱包服务于不同的需求。了解权衡有助于您选择正确的工具。</p>",
+			"hot_wallets": {
+				"title": "热钱包",
+				"content": "<p>热钱包连接到互联网，使用方便但更容易受到攻击。</p><p><strong>浏览器扩展：</strong></p><ul><li><strong>MetaMask：</strong>最流行，几乎与所有应用兼容</li><li><strong>Rabby：</strong>注重安全，带有交易预览和风险警报</li><li><strong>Frame：</strong>桌面应用，与硬件钱包集成良好</li></ul><p><strong>移动钱包：</strong></p><ul><li><strong>Rainbow：</strong>精美的用户体验，适合 NFT</li><li><strong>Coinbase Wallet：</strong>入门简单，连接到 Coinbase</li><li><strong>Trust Wallet：</strong>多链支持</li></ul><p><strong>适用于：</strong>日常交易、小额资金、DeFi 交互</p><p><strong>不建议用于：</strong>您不常用的大额持仓</p>"
+			},
+			"cold_wallets": {
+				"title": "冷钱包（硬件钱包）",
+				"content": "<p>冷钱包使您的私钥保持离线，为大额持仓提供最高安全性。</p><p><strong>工作原理：</strong></p><ol><li>私钥在设备上生成和存储</li><li>密钥永远不会离开设备，即使在签署交易时也是如此</li><li>您通过物理按下按钮来批准交易</li></ol><p><strong>热门选择：</strong></p><ul><li><strong>Ledger：</strong>Nano X、Nano S Plus - 最流行，支持蓝牙</li><li><strong>Trezor：</strong>Model T、Safe 3 - 开源固件</li><li><strong>Keystone：</strong>气隙隔离（使用二维码，无 USB/蓝牙）</li></ul><p><strong>最佳实践：</strong></p><ul><li>仅从官方渠道购买（永远不要买二手或从亚马逊购买）</li><li>在私密位置设置</li><li>与单独的\"热钱包\"电脑账户一起使用</li><li>考虑使用密码短语以获得额外安全性</li></ul>"
+			},
+			"smart_wallets": {
+				"title": "智能钱包（合约钱包）",
+				"content": "<p>智能钱包作为智能合约部署，实现了普通钱包无法实现的功能。</p><p><strong>主要特点：</strong></p><ul><li><strong>多签：</strong>需要多个签名（例如 2-of-3）</li><li><strong>社交恢复：</strong>受信任的联系人可以帮助恢复访问</li><li><strong>支出限制：</strong>每日交易上限</li><li><strong>会话密钥：</strong>特定应用的有限权限</li></ul><p><strong>热门选择：</strong></p><ul><li><strong>Safe（Gnosis Safe）：</strong>多签的黄金标准，大多数 DAO 使用</li><li><strong>Argent：</strong>带有监护人的社交恢复钱包</li><li><strong>Ambire：</strong>电子邮件登录和无 Gas 交易</li></ul><p><strong>权衡：</strong></p><ul><li>交易的 Gas 成本更高</li><li>设置更复杂</li><li>配置得当时安全性出色</li></ul>"
+			},
+			"multichain_wallets": {
+				"title": "多链钱包",
+				"content": "<p>不同的区块链使用不同的地址格式和签名方案。多链钱包处理这种复杂性。</p><p><strong>EVM 兼容链：</strong>一个钱包可在 Ethereum、Polygon、Arbitrum 等上使用。</p><p><strong>非 EVM 链需要特定钱包：</strong></p><ul><li><strong>Phantom：</strong>Solana、Ethereum、Polygon、Bitcoin</li><li><strong>Keplr：</strong>Cosmos 生态系统（Osmosis、Celestia、dYdX）</li><li><strong>OKX Wallet：</strong>80+ 条链，包括 Bitcoin、TON、Tron</li></ul><p><strong>注意事项：</strong></p><ul><li>一个助记词通常可以为多条链生成地址</li><li>交易前始终验证您在正确的网络上</li><li>某些链有不同的地址格式，看起来相似但实际不同</li></ul>"
+			}
+		},
+		"getting_started": {
+			"title": "设置您的第一个钱包",
+			"content": "<p>准备好开始了吗？以下是如何安全设置您的第一个钱包。</p>",
+			"first_wallet": {
+				"title": "分步设置指南",
+				"content": "<p><strong>推荐的第一个钱包：</strong>Rabby（浏览器扩展），因为其安全功能和交易预览。</p><p><strong>设置过程：</strong></p><ol><li>仅从官方网站（rabby.io）下载</li><li>创建新钱包并设置强密码</li><li>将 12 个单词的助记词写在纸上</li><li>在提示时验证助记词</li><li>安全存储助记词（不要存在电脑上）</li></ol><p><strong>重要提示：</strong></p><ul><li>永远不要截图您的助记词</li><li>永远不要存储在云存储、笔记应用或电子邮件中</li><li>在存入大量资金前测试恢复</li></ul>"
+			},
+			"backup_recovery": {
+				"title": "备份和恢复",
+				"content": "<p><strong>3-2-1 备份规则：</strong></p><ul><li>助记词的 3 份副本</li><li>2 种不同的存储类型（纸质 + 金属）</li><li>1 份副本在不同的物理位置</li></ul><p><strong>测试恢复：</strong></p><ol><li>写下您的助记词</li><li>卸载钱包</li><li>重新安装并使用\"导入现有钱包\"</li><li>输入您的助记词</li><li>验证您的账户和余额是否出现</li></ol><p><strong>金属备份选项：</strong></p><ul><li>Cryptosteel Capsule</li><li>Billfodl</li><li>DIY 冲压钢垫圈</li></ul><p>纸会燃烧和褪色。金属能经受火灾和洪水。</p>"
+			},
+			"connecting_dapps": {
+				"title": "连接到 dApp",
+				"content": "<p>当您与 DeFi 协议或 NFT 市场交互时，您需要\"连接\"您的钱包。</p><p><strong>连接的作用：</strong></p><ul><li>分享您的公开地址（不是您的私钥）</li><li>允许网站请求交易签名</li><li>您仍然需要批准每笔交易</li></ul><p><strong>安全提示：</strong></p><ul><li>验证您在真实网站上（收藏受信任的网站）</li><li>在批准前检查您要签署什么</li><li>撤销您不再使用的网站的权限</li><li>为有风险的实验使用单独的钱包</li></ul><p><strong>WalletConnect：</strong>一种协议，让您使用二维码或深度链接连接到 dApp。适用于在移动钱包中使用桌面 dApp。</p>"
+			}
+		},
+		"portfolio": {
+			"title": "投资组合管理",
+			"content": "<p>当您在多个钱包和链上积累资产时，追踪变得至关重要。</p>",
+			"tracking_assets": {
+				"title": "投资组合追踪器",
+				"content": "<p>投资组合追踪器将您在钱包和链上的持仓汇总到单一视图中。</p><p><strong>顶级选项：</strong></p><ul><li><strong>DeBank：</strong>最全面的 DeFi 投资组合追踪器。显示头寸、健康因子、协议交互和历史数据。</li><li><strong>Zapper：</strong>简洁的界面，有 NFT 展示和交易历史</li><li><strong>Zerion：</strong>结合钱包与投资组合追踪</li></ul><p><strong>它们追踪的内容：</strong></p><ul><li>跨链代币余额</li><li>DeFi 头寸（借贷、LP 代币、质押）</li><li>NFT 收藏</li><li>交易历史</li><li>随时间变化的净值</li></ul><p>这些服务是只读的——它们无法转移您的资金。</p>"
+			},
+			"batch_operations": {
+				"title": "批量操作",
+				"content": "<p>管理多个钱包或向多个地址分发代币？批量工具可以节省时间和 Gas 费。</p><p><strong>常见批量操作：</strong></p><ul><li><strong>钱包归集：</strong>将多个钱包的资产整合到一个钱包</li><li><strong>一对多转账：</strong>在一笔交易中向多个接收者分发代币</li><li><strong>余额扫描：</strong>一次性检查多个地址的余额</li></ul><p><strong>使用场景：</strong></p><ul><li>空投分发</li><li>整合旧钱包</li><li>团队工资发放</li><li>向多个地址铸造 NFT</li></ul><p>始终先用小额进行测试。</p>"
+			}
+		},
+		"security": {
+			"title": "钱包安全",
+			"content": "<p>加密是一个高风险环境。了解威胁有助于您保护资产。</p>",
+			"common_threats": {
+				"title": "常见威胁",
+				"content": "<p><strong>钓鱼：</strong></p><ul><li>看起来与真实网站完全相同的假网站</li><li>通常通过广告、私信或搜索结果推广</li><li>始终仔细验证 URL</li></ul><p><strong>恶意授权：</strong></p><ul><li>签署一笔授予对您代币无限访问权限的交易</li><li>攻击者以后可以清空您的钱包</li><li>始终检查您正在批准什么</li></ul><p><strong>助记词盗窃：</strong></p><ul><li>窃取您助记词的假钱包应用</li><li>要求您\"验证\"助记词的客服骗局</li><li>替换复制地址的剪贴板恶意软件</li></ul><p><strong>SIM 卡交换：</strong></p><ul><li>攻击者接管您的电话号码</li><li>可以绕过短信双因素认证</li><li>使用硬件密钥而不是短信</li></ul>"
+			},
+			"security_practices": {
+				"title": "安全最佳实践",
+				"content": "<p><strong>基本习惯：</strong></p><ul><li>对大额持仓使用硬件钱包</li><li>永远不要与任何人分享您的助记词</li><li>收藏您经常使用的网站</li><li>为加密使用单独的浏览器配置文件</li><li>启用交易模拟（Rabby 内置此功能）</li></ul><p><strong>授权管理：</strong></p><ul><li>定期审查和撤销代币授权</li><li>使用 Revoke.cash 审计您的授权</li><li>尽可能使用有限授权而不是无限授权</li></ul><p><strong>冷/热策略：</strong></p><ul><li>在热钱包中保留日常资金</li><li>在冷存储中保留长期持仓</li><li>永远不要将冷存储连接到随机网站</li></ul>"
+			},
+			"wallet_drains": {
+				"title": "钱包清空攻击",
+				"content": "<p>当攻击者诱骗用户签署恶意交易时，就会发生钱包清空。</p>",
+				"case_ledger": {
+					"title": "Ledger Connect Kit 黑客攻击（60 万美元）",
+					"description": "2023 年 12 月，攻击者入侵了 Ledger 的 Connect Kit 库，该库被许多 dApp 使用。恶意代码向使用该库的网站注入了钱包清空器。在攻击期间连接钱包并签署交易的用户资金被盗。这突显了供应链攻击的风险以及验证签署内容的重要性。"
+				}
+			},
+			"multisig": {
+				"title": "多签安全",
+				"content": "<p>多签需要多个密钥来授权交易——就像支票需要多个签名一样。</p><p><strong>常见配置：</strong></p><ul><li><strong>2-of-3：</strong>3 个密钥持有者中的任意 2 个必须签名</li><li><strong>3-of-5：</strong>5 个中的任意 3 个必须签名</li><li><strong>2-of-2：</strong>两者都必须签名（无冗余）</li></ul><p><strong>优点：</strong></p><ul><li>没有单点故障</li><li>防止密钥泄露</li><li>支持团队/DAO 资金管理</li></ul><p><strong>最佳实践：</strong></p><ul><li>使用 Safe（Gnosis Safe）——最经过实战检验的选项</li><li>地理分布式分配密钥</li><li>每个签名者使用硬件钱包</li><li>记录恢复流程</li></ul><p><strong>对于 Solana：</strong>使用 Squads 实现多签功能。</p>"
+			}
+		},
+		"account_abstraction": {
+			"title": "账户抽象",
+			"content": "<p>账户抽象（AA）是以太坊账户工作方式的范式转变，实现了强大的新功能。</p>",
+			"what_is_aa": {
+				"title": "什么是账户抽象？",
+				"content": "<p>传统以太坊账户（EOA）有固定规则：一个私钥、必须用 ETH 支付 Gas、签名方案永远不变。</p><p><strong>账户抽象允许：</strong></p><ul><li>自定义验证逻辑（任何签名方案）</li><li>赞助交易（别人支付 Gas）</li><li>批量交易（一次多个操作）</li><li>会话密钥（特定应用的有限权限）</li><li>社交恢复，无需更改地址</li></ul><p>把它想象成可编程的账户规则，而不是硬编码的规则。</p>"
+			},
+			"erc_4337": {
+				"title": "ERC-4337 解释",
+				"content": "<p>ERC-4337 将账户抽象带到以太坊，而无需更改协议。</p><p><strong>关键组件：</strong></p><ul><li><strong>智能账户：</strong>作为智能合约的钱包</li><li><strong>UserOperation：</strong>智能账户的新交易类型</li><li><strong>Bundler：</strong>收集 UserOperation 并提交到链上</li><li><strong>Paymaster：</strong>赞助 Gas 费的可选合约</li><li><strong>EntryPoint：</strong>处理所有操作的中央合约</li></ul><p><strong>基础设施提供商：</strong></p><ul><li><strong>Pimlico：</strong>Bundler 和 Paymaster 基础设施</li><li><strong>Stackup：</strong>SDK 和 bundler 服务</li><li><strong>Biconomy：</strong>完整的 AA SDK，带无 Gas 选项</li></ul>"
+			},
+			"aa_wallets": {
+				"title": "AA 驱动的钱包",
+				"content": "<p>多个项目正在使用账户抽象构建下一代钱包。</p><p><strong>面向开发者：</strong></p><ul><li><strong>ZeroDev：</strong>带 Kernel 的模块化智能账户</li><li><strong>Alchemy Account Kit：</strong>完整的 AA 基础设施</li><li><strong>Biconomy：</strong>无 Gas 交易和社交登录</li></ul><p><strong>消费者钱包：</strong></p><ul><li><strong>Soul Wallet：</strong>原生 ERC-4337 钱包</li><li><strong>Obvious：</strong>带社交恢复的智能钱包</li><li><strong>Candide：</strong>开源智能钱包</li></ul><p><strong>这实现了：</strong></p><ul><li>电子邮件/社交登录（无需助记词！）</li><li>用任何代币支付 Gas（或被赞助）</li><li>自动化策略，无需签署每笔交易</li><li>通过受信任联系人恢复</li></ul>"
+			},
+			"embedded_wallets": {
+				"title": "嵌入式钱包",
+				"content": "<p>嵌入式钱包让应用可以为用户创建钱包，无需浏览器扩展或应用下载。</p><p><strong>工作原理：</strong></p><ol><li>用户使用电子邮件、社交或电话登录</li><li>钱包在后台创建</li><li>私钥被分片和分布（MPC）</li><li>用户与应用交互，不知道这是\"加密\"</li></ol><p><strong>提供商：</strong></p><ul><li><strong>Privy：</strong>社交登录与渐进式入门</li><li><strong>Dynamic：</strong>多钱包认证</li><li><strong>Web3Auth：</strong>基于 MPC 的密钥管理</li><li><strong>Particle Network：</strong>完整的钱包即服务</li></ul><p><strong>权衡：</strong></p><ul><li>更简单的入门 vs 更少的用户控制</li><li>有些仍然允许导出密钥</li><li>信任提供商的密钥管理</li></ul>"
+			}
+		},
+		"advanced": {
+			"title": "高级主题",
+			"content": "<p>面向高级用户和管理大额资产的人。</p>",
+			"hd_wallets": {
+				"title": "HD 钱包和派生路径",
+				"content": "<p>分层确定性（HD）钱包从单个助记词生成无限地址。</p><p><strong>工作原理：</strong></p><ul><li>一个助记词 → 无限私钥</li><li>使用带编号分支的树结构</li><li>相同的助记词 + 相同的路径 = 相同的密钥</li></ul><p><strong>派生路径（BIP-44）：</strong></p><p><code>m / purpose' / coin_type' / account' / change / index</code></p><ul><li>以太坊：m/44'/60'/0'/0/0</li><li>比特币：m/44'/0'/0'/0/0</li><li>Ledger Live 使用与 MetaMask 不同的路径</li></ul><p><strong>为什么这很重要：</strong></p><ul><li>相同的助记词在不同钱包中可能显示不同地址</li><li>恢复时，使用相同的派生路径</li><li>记录您使用的路径</li></ul>"
+			},
+			"hardware_best": {
+				"title": "硬件钱包深入探讨",
+				"content": "<p>从硬件钱包获得最高安全性。</p><p><strong>初始设置：</strong></p><ul><li>仅从官方渠道购买</li><li>检查防拆包装</li><li>首次使用前更新固件</li><li>在设备上生成助记词（不要导入）</li></ul><p><strong>密码短语（第 25 个词）：</strong></p><ul><li>创建完全独立的账户集</li><li>提供合理推诿性</li><li>如果忘记，那些资金就没了</li><li>将密码短语与助记词分开存储</li></ul><p><strong>气隙设置：</strong></p><ul><li>Keystone 使用二维码——无 USB 或蓝牙</li><li>与在线威胁最大程度隔离</li><li>更复杂但安全性最高</li></ul><p><strong>连接到 dApp：</strong></p><ul><li>使用 Rabby 或 Frame 作为前端</li><li>交易详情显示在设备屏幕上</li><li>签名前在设备上验证详情</li></ul>"
+			},
+			"institutional": {
+				"title": "机构托管",
+				"content": "<p>管理大额资金的组织需要企业级解决方案。</p><p><strong>要求：</strong></p><ul><li>基于角色权限的多用户访问</li><li>审批工作流程（多个签名者）</li><li>保险覆盖</li><li>监管合规（SOC 2 等）</li><li>与会计系统集成</li></ul><p><strong>选项：</strong></p><ul><li><strong>Fireblocks：</strong>基于 MPC 的托管，机构最流行</li><li><strong>BitGo：</strong>带保险的多签托管</li><li><strong>Anchorage：</strong>受监管的数字资产银行</li><li><strong>Copper：</strong>欧洲机构托管</li></ul><p><strong>MPC vs 多签：</strong></p><ul><li>MPC：密钥分片分布，永远不会完全组装</li><li>多签：需要多个完整密钥</li><li>两者都提供阈值安全性</li></ul>"
+			}
+		}
+	},
+	"glossary": {
+		"private_key": {
+			"term": "私钥",
+			"definition": "控制您加密资产访问权限的 256 位随机数。任何拥有您私钥的人都可以完全控制您的资金。永远不要与任何人分享。"
+		},
+		"public_key": {
+			"term": "公钥",
+			"definition": "使用密码学从私钥派生。可以公开分享。用于验证交易是否由相应的私钥签署。"
+		},
+		"seed_phrase": {
+			"term": "助记词",
+			"definition": "以人类可读形式表示私钥的 12 或 24 个单词短语。用于备份和恢复钱包。也称为恢复短语或记忆词。"
+		},
+		"hd_wallet": {
+			"term": "HD 钱包",
+			"definition": "分层确定性钱包。使用树结构和派生路径从单个助记词生成无限地址。"
+		},
+		"hot_wallet": {
+			"term": "热钱包",
+			"definition": "连接到互联网的钱包（浏览器扩展、移动应用）。日常使用方便但更容易受到黑客攻击。只在这里保留小额资金。"
+		},
+		"cold_wallet": {
+			"term": "冷钱包",
+			"definition": "使私钥保持离线的钱包（硬件钱包、纸钱包）。长期存储的最高安全性。密钥永远不会接触互联网。"
+		},
+		"multisig": {
+			"term": "多签",
+			"definition": "需要多个密钥来授权交易的多签名钱包（例如 2-of-3）。消除单点故障，支持团队管理。"
+		},
+		"smart_wallet": {
+			"term": "智能钱包",
+			"definition": "作为智能合约部署的钱包，实现社交恢复、支出限制和会话密钥等普通钱包无法实现的功能。"
+		},
+		"account_abstraction": {
+			"term": "账户抽象",
+			"definition": "允许智能合约作为账户使用的范式，实现自定义验证逻辑、赞助交易和可编程安全规则。"
+		},
+		"eoa": {
+			"term": "EOA",
+			"definition": "外部拥有账户。由私钥控制的传统以太坊账户，与智能合约账户相对。"
+		},
+		"bundler": {
+			"term": "Bundler",
+			"definition": "在 ERC-4337 中，收集智能账户的 UserOperation 并批量提交到链上的服务。账户抽象基础设施的一部分。"
+		},
+		"paymaster": {
+			"term": "Paymaster",
+			"definition": "在 ERC-4337 中为用户赞助 Gas 费的智能合约。实现无 Gas 交易，用户无需 ETH 即可与 dApp 交互。"
+		},
+		"token_approval": {
+			"term": "代币授权",
+			"definition": "您授予智能合约花费您代币的权限。无限授权是有风险的——如果合约被入侵，您的代币可能被盗。"
+		},
+		"social_recovery": {
+			"term": "社交恢复",
+			"definition": "一种钱包恢复方法，受信任的联系人（监护人）可以在您丢失密钥时帮助恢复访问。单个监护人无法独自访问您的资金。"
+		}
+	}
+}

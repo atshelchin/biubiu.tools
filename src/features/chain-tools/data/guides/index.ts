@@ -7,13 +7,15 @@ import { bridgeGuide } from './bridge';
 import { defiGuide } from './defi';
 import { nftGuide } from './nft';
 import { securityGuide } from './security';
+import { walletGuide } from './wallet';
 
 // Map of all available guides
 export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
 	bridge: bridgeGuide,
 	defi: defiGuide,
 	nft: nftGuide,
-	security: securityGuide
+	security: securityGuide,
+	wallet: walletGuide
 	// Add more guides as they are created
 };
 

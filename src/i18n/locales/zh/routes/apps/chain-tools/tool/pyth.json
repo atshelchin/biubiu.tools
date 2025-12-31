@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Pyth Network - 实时预言机",
+		"description": "Pyth Network 为 DeFi 提供高保真金融数据。来自主要交易所的第一方数据，亚秒级更新。",
+		"keywords": "Pyth, 预言机, 价格馈送, DeFi 数据, PYTH 代币, 金融数据"
+	},
+	"overview": "Pyth Network 是为智能合约提供实时金融数据的去中心化预言机。与传统预言机不同，Pyth 直接从第一方提供者（主要交易所、做市商和交易公司）获取数据。\n\nPyth 提供带置信区间的亚秒级价格更新，适合高频 DeFi 应用。网络支持 400+ 价格馈送，涵盖加密货币、股票、外汇和商品。\n\nPyth 最初在 Solana 上构建，现在通过跨链消息传递服务 50+ 区块链。它为 GMX、Synthetix 和许多衍生品平台等主要协议提供支持。",
+	"features": {
+		"1": {
+			"title": "第一方数据",
+			"description": "直接来自交易所和做市商"
+		},
+		"2": {
+			"title": "亚秒级更新",
+			"description": "高频价格馈送"
+		},
+		"3": {
+			"title": "置信区间",
+			"description": "价格不确定性量化"
+		},
+		"4": {
+			"title": "400+ 价格馈送",
+			"description": "加密货币、股票、外汇、商品"
+		},
+		"5": {
+			"title": "跨链",
+			"description": "在 50+ 区块链上可用"
+		},
+		"6": {
+			"title": "拉取式",
+			"description": "按需更新节省 Gas"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 定价",
+			"description": "为 DEX 和借贷协议提供动力"
+		},
+		"2": {
+			"title": "衍生品",
+			"description": "为永续合约和期权定价"
+		},
+		"3": {
+			"title": "清算",
+			"description": "抵押品的准确价格"
+		},
+		"4": {
+			"title": "跨链应用",
+			"description": "跨链一致的价格"
+		},
+		"5": {
+			"title": "传统金融集成",
+			"description": "链上的股票和外汇数据"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 PYTH 代币？",
+			"answer": "PYTH 是 Pyth Network 的治理代币。代币持有者可以质押 PYTH 参与治理并赚取奖励。PYTH 已空投给多条链上使用 Pyth 数据的协议用户。"
+		},
+		"2": {
+			"question": "Pyth 与 Chainlink 有什么不同？",
+			"answer": "Pyth 使用第一方数据（直接来自交易所）vs Chainlink 的第三方聚合。Pyth 提供亚秒级更新 vs Chainlink 的周期性更新。Pyth 是拉取式（按需），Chainlink 是推送式。两者都广泛用于不同需求。"
+		},
+		"3": {
+			"question": "什么是拉取式预言机？",
+			"answer": "拉取式意味着价格仅在请求时才更新到链上，节省 Gas。Pyth 将价格存储在链下，用户/协议在需要时拉取最新价格。这实现亚秒级新鲜度而无需持续的链上更新。"
+		},
+		"4": {
+			"question": "Pyth 可靠吗？",
+			"answer": "Pyth 从 Jane Street、CBOE 和 Binance 等主要机构获取数据。网络已处理数十亿 DeFi 交易量。置信区间显示数据质量。它已在主要协议中经过实战检验。"
+		},
+		"5": {
+			"question": "如何使用 Pyth 数据？",
+			"answer": "对于用户：使用 Pyth 的协议会自动处理。对于开发者：集成 Pyth SDK，获取价格更新，并随交易提交。文档为所有支持的链提供示例。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用实时数据了吗？",
+		"button": "探索 Pyth",
+		"note": "高保真预言机"
+	}
+}

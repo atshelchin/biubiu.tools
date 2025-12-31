@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Hyperliquid - 高性能永续合约 DEX",
+		"description": "Hyperliquid 是具有 CEX 级性能的永续期货 DEX。链上订单簿、亚秒级延迟、高达 50 倍杠杆。",
+		"keywords": "Hyperliquid, 永续期货, 永续合约 DEX, HYPE, 订单簿, 衍生品"
+	},
+	"overview": "Hyperliquid 是在自己的 L1 区块链上构建的永续期货交易所，在去中心化环境中提供类似 CEX 的性能。具有亚秒级延迟和链上订单簿，与中心化交易所竞争。\n\n该平台支持主要加密货币交易对高达 50 倍杠杆，具有深度流动性和紧密价差。其自己的 HyperBFT 共识实现高吞吐量而不妥协去中心化。\n\nHyperliquid 吸引了大量交易量和 TVL，直接与中心化衍生品交易所竞争。HYPE 代币空投奖励了早期用户，创造了最大的社区分发之一。",
+	"features": {
+		"1": {
+			"title": "链上订单簿",
+			"description": "L1 区块链上的完整订单簿"
+		},
+		"2": {
+			"title": "亚秒级延迟",
+			"description": "CEX 级执行速度"
+		},
+		"3": {
+			"title": "高达 50 倍杠杆",
+			"description": "主要交易对的高杠杆"
+		},
+		"4": {
+			"title": "自有 L1",
+			"description": "专门构建的 HyperBFT 链"
+		},
+		"5": {
+			"title": "深度流动性",
+			"description": "紧密价差，最小滑点"
+		},
+		"6": {
+			"title": "自托管",
+			"description": "非托管交易"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "永续合约交易",
+			"description": "高杠杆交易永续合约"
+		},
+		"2": {
+			"title": "对冲",
+			"description": "在链上对冲现货仓位"
+		},
+		"3": {
+			"title": "套利",
+			"description": "CEX 和 DEX 之间套利"
+		},
+		"4": {
+			"title": "做市",
+			"description": "在订单簿上提供流动性"
+		},
+		"5": {
+			"title": "投机",
+			"description": "杠杆方向性押注"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 HYPE 代币？",
+			"answer": "HYPE 是 Hyperliquid 的原生代币，通过加密历史上最大的空投之一分发。它用于质押、治理，并可能在平台上有未来用途。空投根据活跃交易者的活动奖励他们。"
+		},
+		"2": {
+			"question": "Hyperliquid 为什么这么快？",
+			"answer": "Hyperliquid 构建了自己的针对交易优化的 L1。HyperBFT 共识专为订单匹配设计，实现亚秒级确认。整个订单簿在链上运行，进行了通用链上不可能的优化。"
+		},
+		"3": {
+			"question": "Hyperliquid 安全吗？",
+			"answer": "Hyperliquid 是非托管的——你控制你的密钥。L1 已经可靠地运行了数十亿交易量。风险包括智能合约风险、杠杆清算风险和协议的新颖性。从较小仓位开始。"
+		},
+		"4": {
+			"question": "如何开始在 Hyperliquid 上交易？",
+			"answer": "连接你的钱包（MetaMask 等），通过他们的桥将 USDC 存入 Hyperliquid L1，然后开始交易。界面类似于中心化交易所。交易无需 KYC。"
+		},
+		"5": {
+			"question": "Hyperliquid 与 dYdX 哪个更好？",
+			"answer": "两者都是领先的永续合约 DEX。Hyperliquid 执行更快，在自己的 L1 上发布。dYdX 更成熟，运行记录更长。Hyperliquid 的 HYPE 空投创造了强大的社区。尝试两者看哪个适合你的交易风格。"
+		}
+	},
+	"cta": {
+		"ready": "准备好高速永续合约了吗？",
+		"button": "探索 Hyperliquid",
+		"note": "CEX 速度的永续合约 DEX"
+	}
+}

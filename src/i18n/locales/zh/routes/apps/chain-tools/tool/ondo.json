@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Ondo Finance - 代币化真实世界资产",
+		"description": "Ondo Finance 将代币化国债和债券带到链上。通过 OUSG 和 USDY 获取机构级 RWA 收益。",
+		"keywords": "Ondo, OUSG, USDY, RWA, 代币化国债, 真实世界资产"
+	},
+	"overview": "Ondo Finance 是代币化真实世界资产（RWA）的领导者，将美国国债和其他机构产品带到链上。成立于 2021 年，Ondo 已成为最大的 RWA 协议之一。\n\nOUSG（Ondo 美国政府债券）提供对短期美国国债的代币化敞口。USDY（美元收益）提供由国债支持的收益稳定币。两种产品都将传统金融收益带到 DeFi。\n\nOndo 桥接机构金融和 DeFi，与贝莱德的 BUIDL 基金和主要 DeFi 协议合作。该协议面向全球合格投资者开放。",
+	"features": {
+		"1": {
+			"title": "代币化国债",
+			"description": "OUSG 由美国政府债券支持"
+		},
+		"2": {
+			"title": "收益稳定币",
+			"description": "USDY 赚取国债收益"
+		},
+		"3": {
+			"title": "机构级",
+			"description": "受监管、合规的产品"
+		},
+		"4": {
+			"title": "DeFi 集成",
+			"description": "在 DeFi 协议中使用 RWA 代币"
+		},
+		"5": {
+			"title": "多链",
+			"description": "在多条区块链上可用"
+		},
+		"6": {
+			"title": "贝莱德合作",
+			"description": "与 BUIDL 基金集成"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "国债敞口",
+			"description": "持有代币化美国国债"
+		},
+		"2": {
+			"title": "赚取收益",
+			"description": "在链上赚取国债利率"
+		},
+		"3": {
+			"title": "DeFi 抵押品",
+			"description": "使用 OUSG/USDY 作为抵押品"
+		},
+		"4": {
+			"title": "机构配置",
+			"description": "链上国债配置"
+		},
+		"5": {
+			"title": "稳定币替代",
+			"description": "带收益的美元持有"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 OUSG？",
+			"answer": "OUSG（Ondo 美国政府债券）是投资于短期美国国债的代币化基金。它在链上提供国债收益敞口。OUSG 面向合格购买者开放，可在 DeFi 协议中使用。"
+		},
+		"2": {
+			"question": "什么是 USDY？",
+			"answer": "USDY（美元收益）是由短期国债支持的代币化票据。与 OUSG 不同，USDY 设计为每日增值的收益稳定币。对于普通用户比 OUSG 更易获取。"
+		},
+		"3": {
+			"question": "谁可以使用 Ondo？",
+			"answer": "OUSG 需要合格购买者身份（美国）或同等资质。USDY 限制较少但可能有司法管辖限制。需要 KYC。查看 Ondo 文档了解你所在司法管辖区的要求。"
+		},
+		"4": {
+			"question": "Ondo 安全吗？",
+			"answer": "Ondo 产品由合格托管人持有的实际美国国债支持。协议受监管并经过审计。风险包括智能合约风险、监管变化和国债市场风险。这是机构级基础设施。"
+		},
+		"5": {
+			"question": "Ondo 与传统国债 ETF 相比如何？",
+			"answer": "Ondo 提供类似的国债敞口但在链上。优势：24/7 交易、DeFi 可组合性、可编程。权衡：需要 KYC、智能合约风险。收益与传统国债产品相当，减去协议费用。"
+		}
+	},
+	"cta": {
+		"ready": "准备好获取 RWA 收益了吗？",
+		"button": "探索 Ondo",
+		"note": "代币化国债"
+	}
+}
