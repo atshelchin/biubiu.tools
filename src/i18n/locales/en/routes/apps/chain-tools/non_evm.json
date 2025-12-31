@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "Non-EVM Blockchains - Solana, Bitcoin, Cosmos & More | BiuBiu Tools",
 		"description": "Explore non-EVM blockchain ecosystems. Solana, Bitcoin, Cosmos, Aptos, Sui, and their unique tools and dApps.",
+		"keywords": "non-evm chains, solana, bitcoin, cosmos, aptos, sui, ton, near, polkadot",
 		"faqs": [
 			{
 				"question": "What are non-EVM chains?",
@@ -18,23 +19,56 @@
 		]
 	},
 	"tools": {
+		"solana_network": {
+			"description": "High-performance blockchain with sub-second finality and low fees"
+		},
+		"solana_explorer": {
+			"description": "Official Solana blockchain explorer for transactions and accounts"
+		},
 		"solscan": {
 			"description": "Popular Solana explorer with token analytics and NFT support"
 		},
-		"mintscan": {
-			"description": "Multi-chain Cosmos ecosystem explorer"
-		},
-		"tonscan": {
-			"description": "TON blockchain explorer for transactions and jettons"
+		"jupiter_solana": {
+			"description": "Leading Solana DEX aggregator for best swap rates"
 		},
 		"raydium": {
 			"description": "Solana AMM and liquidity provider with concentrated pools"
 		},
+		"marinade_finance": {
+			"description": "Largest Solana liquid staking protocol with mSOL token"
+		},
+		"phantom_wallet": {
+			"description": "Popular Solana wallet with multi-chain support"
+		},
+		"magic_eden_solana": {
+			"description": "Leading NFT marketplace on Solana and Bitcoin Ordinals"
+		},
+		"tensor_nft": {
+			"description": "Professional NFT trading platform on Solana with AMM"
+		},
+		"drift_protocol": {
+			"description": "Solana perpetuals DEX with up to 10x leverage"
+		},
+		"cosmos_network": {
+			"description": "Internet of Blockchains enabling cross-chain communication via IBC"
+		},
+		"mintscan": {
+			"description": "Multi-chain Cosmos ecosystem explorer"
+		},
+		"keplr_wallet": {
+			"description": "Standard Cosmos ecosystem wallet with IBC support"
+		},
 		"osmosis": {
 			"description": "Leading DEX in Cosmos ecosystem with IBC integration"
 		},
+		"stride_zone": {
+			"description": "Multichain liquid staking for Cosmos ecosystem"
+		},
 		"injective": {
 			"description": "DeFi-focused Cosmos chain for derivatives trading"
+		},
+		"sei_network": {
+			"description": "Fastest layer 1 optimized for trading with 400ms finality"
 		},
 		"celestia": {
 			"description": "Modular data availability layer for rollups"
@@ -42,20 +76,59 @@
 		"dymension": {
 			"description": "RollApp hub built on Cosmos for modular rollups"
 		},
+		"sui_network": {
+			"description": "Move-based layer 1 with parallel transaction execution"
+		},
+		"sui_explorer": {
+			"description": "Official Sui blockchain explorer and analytics"
+		},
+		"sui_wallet": {
+			"description": "Official Sui Wallet for managing assets on Sui"
+		},
+		"turbos_finance": {
+			"description": "Concentrated liquidity DEX on Sui blockchain"
+		},
+		"cetus_protocol": {
+			"description": "Pioneer DEX and liquidity protocol on Sui and Aptos"
+		},
+		"aptos_network": {
+			"description": "Move-based layer 1 with Block-STM parallel execution"
+		},
+		"aptos_explorer": {
+			"description": "Official Aptos blockchain explorer for transactions"
+		},
+		"petra_wallet": {
+			"description": "Official Aptos wallet by Aptos Labs"
+		},
+		"pontem_wallet": {
+			"description": "Multi-chain wallet for Aptos and Move ecosystems"
+		},
 		"liquidswap": {
 			"description": "First AMM DEX on Aptos by Pontem"
+		},
+		"ton_network": {
+			"description": "The Open Network with Telegram integration and mass adoption"
+		},
+		"tonscan": {
+			"description": "TON blockchain explorer for transactions and jettons"
 		},
 		"tonkeeper": {
 			"description": "Popular TON wallet with Telegram integration"
 		},
+		"ston_fi": {
+			"description": "Leading DEX on TON with low fees and fast swaps"
+		},
 		"dedust": {
 			"description": "DEX and DeFi platform on TON"
 		},
-		"algorand": {
-			"description": "Pure Proof of Stake blockchain with instant finality"
+		"near_protocol": {
+			"description": "Sharded proof-of-stake blockchain with account abstraction"
 		},
-		"cardano": {
-			"description": "Research-driven blockchain with peer-reviewed development"
+		"near_explorer": {
+			"description": "Official NEAR Protocol blockchain explorer"
+		},
+		"ref_finance": {
+			"description": "Leading multi-purpose DeFi platform on NEAR"
 		},
 		"polkadot": {
 			"description": "Heterogeneous multi-chain network with parachains"
@@ -63,107 +136,35 @@
 		"subscan": {
 			"description": "Multi-chain explorer for Polkadot and Substrate networks"
 		},
+		"algorand": {
+			"description": "Pure Proof of Stake blockchain with instant finality"
+		},
+		"cardano": {
+			"description": "Research-driven blockchain with peer-reviewed development"
+		},
 		"tezos": {
 			"description": "Self-amending blockchain with formal verification"
 		},
 		"stacks": {
 			"description": "Bitcoin L2 bringing smart contracts to BTC"
 		},
+		"lightning_network": {
+			"description": "Bitcoin layer 2 for instant, low-cost payments"
+		},
+		"rsk_rootstock": {
+			"description": "Bitcoin sidechain with EVM-compatible smart contracts"
+		},
+		"ibc_protocol": {
+			"description": "Inter-Blockchain Communication protocol for Cosmos chains"
+		},
+		"wormhole_bridge": {
+			"description": "Cross-chain messaging protocol connecting major blockchains"
+		},
+		"axelar_network": {
+			"description": "Universal cross-chain communication network"
+		},
 		"layerzero": {
 			"description": "Omnichain interoperability protocol for trustless messaging"
-		},
-		"solana-network": {
-			"description": "Solana - Tool"
-		},
-		"solana-explorer": {
-			"description": "Solana Explorer - Tool"
-		},
-		"jupiter-solana": {
-			"description": "Jupiter (Solana) - Tool"
-		},
-		"marinade-finance": {
-			"description": "Marinade Finance - Tool"
-		},
-		"phantom-wallet": {
-			"description": "Phantom Wallet - Tool"
-		},
-		"magic-eden-solana": {
-			"description": "Magic Eden - Tool"
-		},
-		"tensor-nft": {
-			"description": "Tensor - Tool"
-		},
-		"drift-protocol": {
-			"description": "Drift Protocol - Tool"
-		},
-		"cosmos-network": {
-			"description": "Cosmos Hub - Tool"
-		},
-		"keplr-wallet": {
-			"description": "Keplr Wallet - Tool"
-		},
-		"stride-zone": {
-			"description": "Stride - Tool"
-		},
-		"sei-network": {
-			"description": "Sei Network - Tool"
-		},
-		"sui-network": {
-			"description": "Sui - Tool"
-		},
-		"sui-explorer": {
-			"description": "SuiScan - Tool"
-		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
-		},
-		"turbos-finance": {
-			"description": "Turbos Finance - Tool"
-		},
-		"cetus-protocol": {
-			"description": "Cetus Protocol - Tool"
-		},
-		"aptos-network": {
-			"description": "Aptos - Tool"
-		},
-		"aptos-explorer": {
-			"description": "Aptos Explorer - Tool"
-		},
-		"petra-wallet": {
-			"description": "Petra Wallet - Tool"
-		},
-		"pontem-wallet": {
-			"description": "Pontem Wallet - Tool"
-		},
-		"ton-network": {
-			"description": "TON (The Open Network) - Tool"
-		},
-		"ston-fi": {
-			"description": "STON.fi - Tool"
-		},
-		"near-protocol": {
-			"description": "NEAR Protocol - Tool"
-		},
-		"near-explorer": {
-			"description": "NEAR Explorer - Tool"
-		},
-		"ref-finance": {
-			"description": "Ref Finance - Tool"
-		},
-		"lightning-network": {
-			"description": "Lightning Network - Tool"
-		},
-		"rsk-rootstock": {
-			"description": "Rootstock (RSK) - Tool"
-		},
-		"ibc-protocol": {
-			"description": "IBC Protocol - Tool"
-		},
-		"wormhole-bridge": {
-			"description": "Wormhole - Tool"
-		},
-		"axelar-network": {
-			"description": "Axelar - Tool"
 		}
 	}
 }

@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "非EVMブロックチェーン - Solana、Bitcoin、Cosmosなど | BiuBiu Tools",
 		"description": "非EVMブロックチェーンエコシステムを探索。Solana、Bitcoin、Cosmos、Aptos、SuiとそのユニークなツールとdApps。",
-		"keywords": "",
+		"keywords": "非evmチェーン, solana, bitcoin, cosmos, aptos, sui, ton, near, polkadot",
 		"faqs": [
 			{
 				"question": "非EVMチェーンとは何ですか？",
@@ -19,23 +19,56 @@
 		]
 	},
 	"tools": {
+		"solana_network": {
+			"description": "サブ秒のファイナリティと低手数料を持つ高性能ブロックチェーン"
+		},
+		"solana_explorer": {
+			"description": "トランザクションとアカウント用の公式Solanaエクスプローラー"
+		},
 		"solscan": {
 			"description": "トークン分析とNFTサポート付き人気Solanaエクスプローラー"
 		},
-		"mintscan": {
-			"description": "マルチチェーンCosmosエコシステムエクスプローラー"
-		},
-		"tonscan": {
-			"description": "トランザクションとジェットン用TONブロックチェーンエクスプローラー"
+		"jupiter_solana": {
+			"description": "最良のスワップレートのための主要Solana DEXアグリゲーター"
 		},
 		"raydium": {
 			"description": "集中プール付きSolana AMMと流動性プロバイダー"
 		},
+		"marinade_finance": {
+			"description": "mSOLトークン付き最大のSolanaリキッドステーキングプロトコル"
+		},
+		"phantom_wallet": {
+			"description": "マルチチェーンサポート付き人気Solanaウォレット"
+		},
+		"magic_eden_solana": {
+			"description": "SolanaとBitcoin Ordinalsの主要NFTマーケットプレイス"
+		},
+		"tensor_nft": {
+			"description": "AMM付きSolana上のプロフェッショナルNFTトレーディングプラットフォーム"
+		},
+		"drift_protocol": {
+			"description": "最大10倍レバレッジのSolanaパーペチュアルDEX"
+		},
+		"cosmos_network": {
+			"description": "IBCを介したクロスチェーン通信を可能にするブロックチェーンのインターネット"
+		},
+		"mintscan": {
+			"description": "マルチチェーンCosmosエコシステムエクスプローラー"
+		},
+		"keplr_wallet": {
+			"description": "IBCサポート付き標準Cosmosエコシステムウォレット"
+		},
 		"osmosis": {
-			"description": "IBC統合付きCosmosエコシステムの大手DEX"
+			"description": "IBC統合付きCosmosエコシステムの主要DEX"
+		},
+		"stride_zone": {
+			"description": "Cosmosエコシステム向けマルチチェーンリキッドステーキング"
 		},
 		"injective": {
 			"description": "デリバティブ取引向けDeFi特化Cosmosチェーン"
+		},
+		"sei_network": {
+			"description": "400msファイナリティでトレーディング用に最適化された最速L1"
 		},
 		"celestia": {
 			"description": "ロールアップ用モジュラーデータ可用性レイヤー"
@@ -43,20 +76,59 @@
 		"dymension": {
 			"description": "モジュラーロールアップ向けCosmos上に構築されたRollAppハブ"
 		},
+		"sui_network": {
+			"description": "並列トランザクション実行を持つMoveベースL1"
+		},
+		"sui_explorer": {
+			"description": "公式Suiブロックチェーンエクスプローラーと分析"
+		},
+		"sui_wallet": {
+			"description": "Sui上の資産管理用公式Suiウォレット"
+		},
+		"turbos_finance": {
+			"description": "Suiブロックチェーン上の集中流動性DEX"
+		},
+		"cetus_protocol": {
+			"description": "SuiとAptos上のパイオニアDEXと流動性プロトコル"
+		},
+		"aptos_network": {
+			"description": "Block-STM並列実行を持つMoveベースL1"
+		},
+		"aptos_explorer": {
+			"description": "トランザクション用公式Aptosブロックチェーンエクスプローラー"
+		},
+		"petra_wallet": {
+			"description": "Aptos Labs製公式Aptosウォレット"
+		},
+		"pontem_wallet": {
+			"description": "AptosとMoveエコシステム向けマルチチェーンウォレット"
+		},
 		"liquidswap": {
 			"description": "PontemによるAptos上の初のAMM DEX"
+		},
+		"ton_network": {
+			"description": "Telegram統合と大量採用を持つThe Open Network"
+		},
+		"tonscan": {
+			"description": "トランザクションとジェットン用TONブロックチェーンエクスプローラー"
 		},
 		"tonkeeper": {
 			"description": "Telegram統合付き人気TONウォレット"
 		},
+		"ston_fi": {
+			"description": "低手数料と高速スワップを持つTON上の主要DEX"
+		},
 		"dedust": {
 			"description": "TON上のDEXとDeFiプラットフォーム"
 		},
-		"algorand": {
-			"description": "即時ファイナリティ付き純粋Proof of Stakeブロックチェーン"
+		"near_protocol": {
+			"description": "アカウント抽象化を持つシャードPoSブロックチェーン"
 		},
-		"cardano": {
-			"description": "ピアレビュー開発付きリサーチ主導ブロックチェーン"
+		"near_explorer": {
+			"description": "公式NEAR Protocolブロックチェーンエクスプローラー"
+		},
+		"ref_finance": {
+			"description": "NEAR上の主要多目的DeFiプラットフォーム"
 		},
 		"polkadot": {
 			"description": "パラチェーン付き異種マルチチェーンネットワーク"
@@ -64,107 +136,35 @@
 		"subscan": {
 			"description": "PolkadotとSubstrateネットワーク向けマルチチェーンエクスプローラー"
 		},
+		"algorand": {
+			"description": "即時ファイナリティ付き純粋Proof of Stakeブロックチェーン"
+		},
+		"cardano": {
+			"description": "ピアレビュー開発付きリサーチ主導ブロックチェーン"
+		},
 		"tezos": {
 			"description": "形式検証付き自己修正ブロックチェーン"
 		},
 		"stacks": {
 			"description": "BTCにスマートコントラクトをもたらすBitcoin L2"
 		},
+		"lightning_network": {
+			"description": "即時・低コスト決済用Bitcoin L2"
+		},
+		"rsk_rootstock": {
+			"description": "EVM互換スマートコントラクト付きBitcoinサイドチェーン"
+		},
+		"ibc_protocol": {
+			"description": "Cosmosチェーン用ブロックチェーン間通信プロトコル"
+		},
+		"wormhole_bridge": {
+			"description": "主要ブロックチェーンを接続するクロスチェーンメッセージングプロトコル"
+		},
+		"axelar_network": {
+			"description": "ユニバーサルクロスチェーン通信ネットワーク"
+		},
 		"layerzero": {
 			"description": "トラストレスメッセージング用オムニチェーン相互運用プロトコル"
-		},
-		"solana-network": {
-			"description": "Solana - Tool"
-		},
-		"solana-explorer": {
-			"description": "Solana Explorer - Tool"
-		},
-		"jupiter-solana": {
-			"description": "Jupiter (Solana) - Tool"
-		},
-		"marinade-finance": {
-			"description": "Marinade Finance - Tool"
-		},
-		"phantom-wallet": {
-			"description": "Phantom Wallet - Tool"
-		},
-		"magic-eden-solana": {
-			"description": "Magic Eden - Tool"
-		},
-		"tensor-nft": {
-			"description": "Tensor - Tool"
-		},
-		"drift-protocol": {
-			"description": "Drift Protocol - Tool"
-		},
-		"cosmos-network": {
-			"description": "Cosmos Hub - Tool"
-		},
-		"keplr-wallet": {
-			"description": "Keplr Wallet - Tool"
-		},
-		"stride-zone": {
-			"description": "Stride - Tool"
-		},
-		"sei-network": {
-			"description": "Sei Network - Tool"
-		},
-		"sui-network": {
-			"description": "Sui - Tool"
-		},
-		"sui-explorer": {
-			"description": "SuiScan - Tool"
-		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
-		},
-		"turbos-finance": {
-			"description": "Turbos Finance - Tool"
-		},
-		"cetus-protocol": {
-			"description": "Cetus Protocol - Tool"
-		},
-		"aptos-network": {
-			"description": "Aptos - Tool"
-		},
-		"aptos-explorer": {
-			"description": "Aptos Explorer - Tool"
-		},
-		"petra-wallet": {
-			"description": "Petra Wallet - Tool"
-		},
-		"pontem-wallet": {
-			"description": "Pontem Wallet - Tool"
-		},
-		"ton-network": {
-			"description": "TON (The Open Network) - Tool"
-		},
-		"ston-fi": {
-			"description": "STON.fi - Tool"
-		},
-		"near-protocol": {
-			"description": "NEAR Protocol - Tool"
-		},
-		"near-explorer": {
-			"description": "NEAR Explorer - Tool"
-		},
-		"ref-finance": {
-			"description": "Ref Finance - Tool"
-		},
-		"lightning-network": {
-			"description": "Lightning Network - Tool"
-		},
-		"rsk-rootstock": {
-			"description": "Rootstock (RSK) - Tool"
-		},
-		"ibc-protocol": {
-			"description": "IBC Protocol - Tool"
-		},
-		"wormhole-bridge": {
-			"description": "Wormhole - Tool"
-		},
-		"axelar-network": {
-			"description": "Axelar - Tool"
 		}
 	}
 }
