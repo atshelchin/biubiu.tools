@@ -1,10 +1,10 @@
 <script lang="ts">
 	import Hero from './Hero.svelte';
 	import Features from './Features.svelte';
-	// import Stats from './Stats.svelte';
-	// import Pricing from './/Pricing.svelte';
-	// import FAQs from './FAQs.svelte';
-	// import CTA from './CTA.svelte';
+	import Stats from './Stats.svelte';
+	import Pricing from './/Pricing.svelte';
+	import FAQs from './FAQs.svelte';
+	import CTA from './CTA.svelte';
 </script>
 
 <!-- Landing page layout | 着陆页布局 -->
@@ -16,16 +16,16 @@
 	<Features />
 
 	<!-- Stats section | 统计数据区 -->
-	<!-- <Stats /> -->
+	<Stats />
 
 	<!-- Pricing section | 定价部分 -->
-	<!-- <Pricing /> -->
+	<Pricing />
 
 	<!-- FAQs section | 常见问题部分 -->
-	<!-- <FAQs /> -->
+	<FAQs />
 
 	<!-- Call to action | 行动号召区 -->
-	<!-- <CTA /> -->
+	<CTA />
 </div>
 
 <style>

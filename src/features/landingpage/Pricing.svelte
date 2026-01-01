@@ -1,208 +1,306 @@
 <script lang="ts">
-	import { Check, Star, Zap } from '@lucide/svelte';
+	import { Check, X, Zap, Crown, AlertTriangle, Github, Server } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n';
+	import { localizeHref } from '$lib/utils/localized-url';
 
 	const i18n = useI18n();
 	const t = i18n.t.bind(i18n);
-	// Pricing plan structure
-	interface PricingPlan {
-		name: string;
-		price: string;
-		period: string;
-		description: string;
-		features: string[];
-		highlighted?: boolean;
-		ctaText: string;
-	}
 
-	// Get pricing plans dynamically
-	function getPlans(): PricingPlan[] {
-		return [
-			{
-				name: t('pricing.free.name'),
-				price: t('pricing.free.price'),
-				period: t('pricing.free.period'),
-				description: t('pricing.free.description'),
-				features: i18n.t<string[]>('pricing.free.features'),
-				ctaText: t('pricing.free.cta')
-			},
-			{
-				name: t('pricing.pro.name'),
-				price: t('pricing.pro.price'),
-				period: t('pricing.pro.period'),
-				description: t('pricing.pro.description'),
-				features: i18n.t<string[]>('pricing.pro.features'),
-				highlighted: true,
-				ctaText: t('pricing.pro.cta')
-			},
-			{
-				name: t('pricing.enterprise.name'),
-				price: t('pricing.enterprise.price'),
-				period: t('pricing.enterprise.period'),
-				description: t('pricing.enterprise.description'),
-				features: i18n.t<string[]>('pricing.enterprise.features'),
-				ctaText: t('pricing.enterprise.cta')
-			}
-		];
-	}
+	// Membership billing cycle
+	type BillingCycle = 'daily' | 'monthly' | 'yearly';
+	let selectedCycle: BillingCycle = $state('monthly');
+
+	// Pricing data
+	const membershipPricing = {
+		daily: { price: '0.01', duration: '1 day', savePercent: 0 },
+		monthly: { price: '0.05', duration: '30 days', savePercent: 83 },
+		yearly: { price: '0.1', duration: '365 days', savePercent: 97 }
+	};
+
+	const payPerUseFee = '0.005';
+
+	// Available tool paths for random navigation
+	const toolPaths = [
+		'/apps/token-deployer',
+		'/apps/wallet-generator',
+		'/apps/one-to-many-transfer',
+		'/apps/nft-deployer',
+		'/apps/contract-deployer',
+		'/apps/wallet-sweep'
+	];
+
+	// Get a random tool path
+	const randomToolPath = toolPaths[Math.floor(Math.random() * toolPaths.length)];
 </script>
 
-<!-- Pricing section with premium design -->
+<!-- Pricing section -->
 <section id="pricing" class="pricing-section">
 	<div class="container">
 		<!-- Section header -->
 		<div class="section-header">
-			<div class="badge">
-				<Zap class="badge-icon" />
-				<span>Simple Pricing</span>
-			</div>
-
 			<h2 class="section-title">
-				{t('pricing.title')}
+				{t('common.pricing.title')}
 			</h2>
-
 			<p class="section-subtitle">
-				{t('pricing.subtitle')}
+				{t('common.pricing.subtitle')}
 			</p>
 		</div>
 
-		<!-- Pricing cards grid -->
+		<!-- Pricing grid - 3 cards in a row -->
 		<div class="pricing-grid">
-			{#each getPlans() as plan, index (plan.name)}
-				<article
-					class="pricing-card {plan.highlighted ? 'featured' : ''}"
-					style="--index: {index};"
+			<!-- Self Host Card -->
+			<article class="pricing-card self-host">
+				<div class="card-header">
+					<div class="card-icon self-host-icon">
+						<Server size={24} />
+					</div>
+					<h3 class="card-title">{t('common.pricing.self_host.title')}</h3>
+					<p class="card-description">{t('common.pricing.self_host.description')}</p>
+				</div>
+
+				<div class="price-display">
+					<span class="price-value">{t('common.pricing.self_host.price')}</span>
+				</div>
+
+				<div class="divider"></div>
+
+				<ul class="features-list">
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.self_host.features.full_source')}</span>
+					</li>
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.self_host.features.no_fees')}</span>
+					</li>
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.self_host.features.full_control')}</span>
+					</li>
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.self_host.features.community_support')}</span>
+					</li>
+				</ul>
+
+				<div class="self-host-note">
+					<Server size={16} />
+					<span>{t('common.pricing.self_host.note')}</span>
+				</div>
+
+				<div class="security-warning">
+					<AlertTriangle size={16} />
+					<span>{t('common.pricing.self_host.security_warning')}</span>
+				</div>
+
+				<a
+					href="https://github.com/atshelchin/biubiu.tools"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="cta-button tertiary"
 				>
-					{#if plan.highlighted}
-						<div class="popular-badge">
-							<Star class="star-icon" />
-							<span>Most Popular</span>
-						</div>
+					<Github size={18} />
+					{t('common.pricing.self_host.cta')}
+				</a>
+			</article>
+
+			<!-- Pay per Use Card -->
+			<article class="pricing-card pay-per-use">
+				<div class="card-header">
+					<div class="card-icon pay-per-use-icon">
+						<Zap size={24} />
+					</div>
+					<h3 class="card-title">{t('common.pricing.pay_per_use.title')}</h3>
+					<p class="card-description">{t('common.pricing.pay_per_use.description')}</p>
+				</div>
+
+				<div class="price-display">
+					<span class="price-value">{payPerUseFee}</span>
+					<span class="price-unit">{t('common.pricing.pay_per_use.unit')}</span>
+				</div>
+
+				<div class="divider"></div>
+
+				<ul class="features-list">
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.pay_per_use.features.no_subscription')}</span>
+					</li>
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.pay_per_use.features.pay_as_you_go')}</span>
+					</li>
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.pay_per_use.features.onchain_tools')}</span>
+					</li>
+					<li class="feature-item excluded">
+						<X size={18} class="feature-icon" />
+						<span>{t('common.pricing.pay_per_use.features.no_query_tools')}</span>
+					</li>
+				</ul>
+
+				<div class="tool-examples">
+					<p class="examples-label">{t('common.pricing.pay_per_use.examples_label')}</p>
+					<p class="examples-text">{t('common.pricing.pay_per_use.examples')}</p>
+				</div>
+
+				<a href={localizeHref(randomToolPath)} class="cta-button secondary">
+					{t('common.pricing.pay_per_use.cta')}
+				</a>
+			</article>
+
+			<!-- Membership Card -->
+			<article class="pricing-card membership featured">
+				<div class="popular-badge">
+					<Crown size={14} />
+					<span>{t('common.pricing.membership.badge')}</span>
+				</div>
+
+				<div class="card-header">
+					<div class="card-icon membership-icon">
+						<Crown size={24} />
+					</div>
+					<h3 class="card-title">{t('common.pricing.membership.title')}</h3>
+					<p class="card-description">{t('common.pricing.membership.description')}</p>
+				</div>
+
+				<!-- Billing cycle tabs -->
+				<div class="billing-tabs">
+					<button
+						class="tab-button {selectedCycle === 'daily' ? 'active' : ''}"
+						onclick={() => (selectedCycle = 'daily')}
+					>
+						{t('common.pricing.membership.daily')}
+					</button>
+					<button
+						class="tab-button {selectedCycle === 'monthly' ? 'active' : ''}"
+						onclick={() => (selectedCycle = 'monthly')}
+					>
+						{t('common.pricing.membership.monthly')}
+					</button>
+					<button
+						class="tab-button {selectedCycle === 'yearly' ? 'active' : ''}"
+						onclick={() => (selectedCycle = 'yearly')}
+					>
+						{t('common.pricing.membership.yearly')}
+					</button>
+				</div>
+
+				<div class="price-display">
+					<span class="price-value">{membershipPricing[selectedCycle].price}</span>
+					<span class="price-unit">{t('common.pricing.membership.unit')}</span>
+					{#if membershipPricing[selectedCycle].savePercent > 0}
+						<span class="save-badge">
+							{t('common.pricing.membership.save', {
+								percent: membershipPricing[selectedCycle].savePercent
+							})}
+						</span>
 					{/if}
+				</div>
 
-					<!-- Plan header -->
-					<div class="plan-header">
-						<h3 class="plan-name">{plan.name}</h3>
-						<p class="plan-description">{plan.description}</p>
-					</div>
+				<p class="duration-text">
+					{t('common.pricing.membership.duration', {
+						days: membershipPricing[selectedCycle].duration
+					})}
+				</p>
 
-					<!-- Price display -->
-					<div class="price-section">
-						<div class="price-wrapper">
-							<span class="price">{plan.price}</span>
-							<span class="period">/{plan.period}</span>
-						</div>
-					</div>
+				<div class="divider"></div>
 
-					<!-- Divider -->
-					<div class="divider"></div>
+				<ul class="features-list">
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.membership.features.all_onchain')}</span>
+					</li>
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.membership.features.all_query')}</span>
+					</li>
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.membership.features.unlimited')}</span>
+					</li>
+					<li class="feature-item included">
+						<Check size={18} class="feature-icon" />
+						<span>{t('common.pricing.membership.features.priority_support')}</span>
+					</li>
+				</ul>
 
-					<!-- Features list -->
-					<ul class="features-list">
-						{#each plan.features as feature (feature)}
-							<li class="feature-item">
-								<Check class="check-icon" />
-								<span class="feature-text">{feature}</span>
-							</li>
-						{/each}
-					</ul>
+				<div class="chain-notice">
+					<AlertTriangle size={16} />
+					<span>{t('common.pricing.membership.chain_notice')}</span>
+				</div>
 
-					<!-- CTA button -->
-					<div class="action-section">
-						<button class="cta-button {plan.highlighted ? 'primary' : 'secondary'}">
-							{plan.ctaText}
-						</button>
-					</div>
-				</article>
-			{/each}
+				<a href={localizeHref(randomToolPath)} class="cta-button primary">
+					{t('common.pricing.membership.cta')}
+				</a>
+				<!-- <p class="purchase-hint">{t('common.pricing.membership.purchase_hint')}</p> -->
+			</article>
 		</div>
 
-		<!-- Trust note -->
-		<div class="trust-note">
-			<p class="note-text">{t('pricing.note')}</p>
-			<p class="note-text">
-				{t('pricing.custom_plan')}
-				<a href="#contact" class="contact-link">
-					{t('pricing.contact_us')}
-				</a>
-			</p>
+		<!-- Tips section -->
+		<div class="tips-section">
+			<p class="tip-item">{t('common.pricing.tips.heavy_user')}</p>
+			<p class="tip-item">{t('common.pricing.tips.query_tools')}</p>
+			<p class="tip-item">{t('common.pricing.tips.multi_chain')}</p>
 		</div>
 	</div>
 </section>
 
 <style>
-	/* Section layout */
 	.pricing-section {
 		position: relative;
-		padding: var(--spacing-20) var(--spacing-6);
+		padding: var(--space-20) var(--space-4);
 		background: var(--color-background);
-		overflow: hidden;
 	}
 
 	.container {
-		max-width: 72rem;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 
 	/* Section header */
 	.section-header {
 		text-align: center;
-		margin-bottom: var(--spacing-16);
+		margin-bottom: var(--space-12);
 	}
 
-	.badge {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--spacing-2);
-		padding: var(--spacing-2) var(--spacing-4);
-		margin-bottom: var(--spacing-4);
-		border-radius: var(--radius-full);
-		background: var(--color-panel-2);
-		border: 1px solid var(--color-border-subtle);
-		font-size: var(--font-size-sm);
-		font-weight: var(--font-weight-medium);
-		color: var(--color-muted-foreground);
-	}
-
-	:global(.badge-icon) {
-		width: 1rem;
-		height: 1rem;
-		color: var(--color-brand-primary);
-	}
-
-	/* Title with gradient */
 	.section-title {
-		font-size: var(--font-size-4xl);
-		font-weight: var(--font-weight-bold);
-		line-height: 1.2;
-		margin-bottom: var(--spacing-4);
-		background: linear-gradient(to right, var(--color-text-primary), var(--color-muted-foreground));
+		font-size: var(--text-3xl);
+		font-weight: var(--font-bold);
+		margin-bottom: var(--space-4);
+		background: linear-gradient(to right, var(--color-foreground), var(--color-muted-foreground));
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
 
 	.section-subtitle {
+		font-size: var(--text-lg);
+		color: var(--color-muted-foreground);
 		max-width: 36rem;
 		margin: 0 auto;
-		font-size: var(--font-size-lg);
-		line-height: 1.7;
-		color: var(--color-text-muted);
 	}
 
-	/* Pricing grid */
+	/* Pricing grid - 3 cards in a row */
 	.pricing-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: var(--spacing-8);
-		padding: 0 var(--spacing-4);
-		margin-bottom: var(--spacing-12);
+		grid-template-columns: 1fr;
+		gap: var(--space-6);
+		margin-bottom: var(--space-10);
+	}
+
+	@media (min-width: 768px) {
+		.pricing-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--space-6);
+		}
 	}
 
 	@media (min-width: 1024px) {
 		.pricing-grid {
 			grid-template-columns: repeat(3, 1fr);
-			gap: var(--spacing-10);
+			gap: var(--space-6);
 		}
 	}
 
@@ -211,253 +309,364 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		padding: var(--spacing-8);
+		padding: var(--space-6);
 		background: var(--color-panel-1);
-		border: 1px solid var(--color-border-subtle);
+		border: 1px solid var(--color-border);
 		border-radius: var(--radius-xl);
-		transition: all var(--duration-normal) var(--ease-smooth);
-		animation: fadeIn 0.5s calc(var(--index) * 0.1s) both;
-	}
-
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
+		transition: all 200ms ease;
 	}
 
 	.pricing-card:hover {
 		transform: translateY(-4px);
-		background: var(--color-panel-2);
-		border-color: var(--color-border);
 		box-shadow: var(--shadow-lg);
 	}
 
-	/* Featured card */
 	.pricing-card.featured {
-		transform: scale(1.05);
-		background: var(--color-panel-2);
-		border-color: var(--color-brand-primary);
-		box-shadow: var(--shadow-xl);
-	}
-
-	.pricing-card.featured:hover {
-		transform: scale(1.05) translateY(-4px);
+		border-color: var(--color-primary);
+		background: linear-gradient(
+			135deg,
+			var(--color-panel-1) 0%,
+			hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.05) 100%
+		);
 	}
 
 	/* Popular badge */
 	.popular-badge {
 		position: absolute;
-		top: -1rem;
-		right: var(--spacing-4);
+		top: -0.75rem;
+		left: 50%;
+		transform: translateX(-50%);
 		display: flex;
 		align-items: center;
-		gap: var(--spacing-1);
-		padding: var(--spacing-2) var(--spacing-3);
-		border-radius: var(--radius-md);
-		background: var(--color-brand-primary);
+		gap: var(--space-1);
+		padding: var(--space-1) var(--space-3);
+		background: var(--color-primary);
 		color: white;
-		font-size: var(--font-size-xs);
-		font-weight: var(--font-weight-semibold);
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
+		font-size: var(--text-xs);
+		font-weight: var(--font-semibold);
+		border-radius: var(--radius-full);
+		white-space: nowrap;
 	}
 
-	:global(.star-icon) {
-		width: 0.875rem;
-		height: 0.875rem;
+	/* Card header */
+	.card-header {
+		text-align: center;
+		margin-bottom: var(--space-6);
 	}
 
-	/* Plan header */
-	.plan-header {
-		margin-bottom: var(--spacing-6);
+	.card-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 3rem;
+		height: 3rem;
+		border-radius: var(--radius-lg);
+		margin-bottom: var(--space-3);
 	}
 
-	.plan-name {
-		margin-bottom: var(--spacing-2);
-		font-size: var(--font-size-xl);
-		font-weight: var(--font-weight-semibold);
-		color: var(--color-text-primary);
+	.pay-per-use-icon {
+		background: hsla(45, 90%, 50%, 0.15);
+		color: hsl(45, 90%, 45%);
 	}
 
-	.featured .plan-name {
-		background: linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-secondary));
-		-webkit-background-clip: text;
-		background-clip: text;
-		-webkit-text-fill-color: transparent;
+	.membership-icon {
+		background: hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.15);
+		color: var(--color-primary);
 	}
 
-	.plan-description {
-		font-size: var(--font-size-sm);
-		color: var(--color-text-muted);
-		line-height: 1.5;
+	.self-host-icon {
+		background: hsla(200, 80%, 50%, 0.15);
+		color: hsl(200, 80%, 45%);
 	}
 
-	/* Price section */
-	.price-section {
-		margin-bottom: var(--spacing-6);
+	.card-title {
+		font-size: var(--text-xl);
+		font-weight: var(--font-semibold);
+		margin-bottom: var(--space-2);
+		color: var(--color-foreground);
 	}
 
-	.price-wrapper {
+	.card-description {
+		font-size: var(--text-sm);
+		color: var(--color-muted-foreground);
+	}
+
+	/* Billing tabs */
+	.billing-tabs {
+		display: flex;
+		gap: var(--space-2);
+		padding: var(--space-1);
+		background: var(--color-panel-2);
+		border-radius: var(--radius-lg);
+		margin-bottom: var(--space-4);
+	}
+
+	.tab-button {
+		flex: 1;
+		padding: var(--space-2) var(--space-3);
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		color: var(--color-muted-foreground);
+		background: transparent;
+		border: none;
+		border-radius: var(--radius-md);
+		cursor: pointer;
+		transition: all 150ms ease;
+	}
+
+	.tab-button:hover {
+		color: var(--color-foreground);
+	}
+
+	.tab-button.active {
+		background: var(--color-background);
+		color: var(--color-primary);
+		box-shadow: var(--shadow-sm);
+	}
+
+	/* Price display */
+	.price-display {
 		display: flex;
 		align-items: baseline;
-		gap: var(--spacing-2);
+		justify-content: center;
+		gap: var(--space-2);
+		margin-bottom: var(--space-2);
+		flex-wrap: wrap;
 	}
 
-	.price {
-		font-size: var(--font-size-4xl);
-		font-weight: var(--font-weight-bold);
-		color: var(--color-text-primary);
+	.price-value {
+		font-size: var(--text-4xl);
+		font-weight: var(--font-bold);
+		color: var(--color-foreground);
 	}
 
-	.featured .price {
-		background: linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-secondary));
+	.featured .price-value {
+		background: linear-gradient(135deg, var(--color-primary), var(--brand-600));
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
 
-	.period {
-		font-size: var(--font-size-base);
-		color: var(--color-text-muted);
+	.price-unit {
+		font-size: var(--text-lg);
+		color: var(--color-muted-foreground);
+	}
+
+	.save-badge {
+		padding: var(--space-1) var(--space-2);
+		background: hsla(142, 76%, 36%, 0.15);
+		color: hsl(142, 76%, 36%);
+		font-size: var(--text-xs);
+		font-weight: var(--font-semibold);
+		border-radius: var(--radius-full);
+	}
+
+	.duration-text {
+		text-align: center;
+		font-size: var(--text-sm);
+		color: var(--color-muted-foreground);
+		margin-bottom: var(--space-4);
 	}
 
 	/* Divider */
 	.divider {
 		height: 1px;
-		margin-bottom: var(--spacing-6);
-		background: var(--color-border-subtle);
+		background: var(--color-border);
+		margin: var(--space-4) 0;
 	}
 
 	/* Features list */
 	.features-list {
-		flex: 1;
 		list-style: none;
 		padding: 0;
-		margin: 0 0 var(--spacing-8) 0;
+		margin: 0 0 var(--space-6) 0;
 		display: flex;
 		flex-direction: column;
-		gap: var(--spacing-4);
+		gap: var(--space-3);
 	}
 
 	.feature-item {
 		display: flex;
 		align-items: center;
-		gap: var(--spacing-3);
-		transition: transform var(--duration-fast);
+		gap: var(--space-3);
+		font-size: var(--text-sm);
 	}
 
-	.feature-item:hover {
-		transform: translateX(2px);
+	.feature-item.included {
+		color: var(--color-foreground);
 	}
 
-	:global(.check-icon) {
-		flex-shrink: 0;
-		width: 1.25rem;
-		height: 1.25rem;
-		color: var(--color-success);
+	.feature-item.included :global(.feature-icon) {
+		color: hsl(142, 76%, 36%);
 	}
 
-	.featured :global(.check-icon) {
-		color: var(--color-brand-primary);
-	}
-
-	.feature-text {
-		font-size: var(--font-size-base);
+	.feature-item.excluded {
 		color: var(--color-muted-foreground);
-		line-height: 1.5;
 	}
 
-	.feature-item:hover .feature-text {
-		color: var(--color-text-primary);
+	.feature-item.excluded :global(.feature-icon) {
+		color: var(--color-muted-foreground);
 	}
 
-	/* Action section */
-	.action-section {
-		padding-top: var(--spacing-4);
-		border-top: 1px solid var(--color-border-subtle);
-	}
-
-	.cta-button {
-		width: 100%;
-		padding: var(--spacing-4) var(--spacing-6);
+	/* Tool examples */
+	.tool-examples {
+		padding: var(--space-3);
+		background: var(--color-panel-2);
 		border-radius: var(--radius-md);
-		font-size: var(--font-size-base);
-		font-weight: var(--font-weight-medium);
-		border: none;
+		margin-bottom: var(--space-6);
+	}
+
+	.examples-label {
+		font-size: var(--text-xs);
+		font-weight: var(--font-medium);
+		color: var(--color-muted-foreground);
+		margin-bottom: var(--space-1);
+	}
+
+	.examples-text {
+		font-size: var(--text-sm);
+		color: var(--color-foreground);
+	}
+
+	/* Chain notice */
+	.chain-notice {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-3);
+		background: hsla(45, 90%, 50%, 0.1);
+		border-radius: var(--radius-md);
+		margin-bottom: var(--space-6);
+		font-size: var(--text-xs);
+		color: hsl(45, 90%, 35%);
+	}
+
+	/* Self host note */
+	.self-host-note {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-3);
+		background: hsla(200, 80%, 50%, 0.1);
+		border-radius: var(--radius-md);
+		margin-bottom: var(--space-3);
+		font-size: var(--text-xs);
+		color: hsl(200, 80%, 35%);
+	}
+
+	/* Security warning */
+	.security-warning {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--space-2);
+		padding: var(--space-3);
+		background: hsla(0, 80%, 50%, 0.1);
+		border: 1px solid hsla(0, 80%, 50%, 0.2);
+		border-radius: var(--radius-md);
+		margin-bottom: var(--space-6);
+		font-size: var(--text-xs);
+		color: hsl(0, 70%, 45%);
+		line-height: 1.4;
+	}
+
+	.security-warning :global(svg) {
+		flex-shrink: 0;
+		margin-top: 0.1rem;
+	}
+
+	/* CTA button */
+	.cta-button {
+		display: block;
+		width: 100%;
+		padding: var(--space-3) var(--space-6);
+		font-size: var(--text-base);
+		font-weight: var(--font-medium);
+		border-radius: var(--radius-lg);
 		cursor: pointer;
-		transition: all var(--duration-fast);
+		transition: all 200ms ease;
+		margin-top: auto;
+		text-align: center;
+		text-decoration: none;
 	}
 
 	.cta-button.primary {
-		background: var(--color-brand-primary);
+		background: var(--color-primary);
 		color: white;
+		border: none;
 	}
 
 	.cta-button.primary:hover {
-		background: var(--color-brand-primary-dark);
+		background: var(--brand-600);
 		transform: translateY(-1px);
 		box-shadow: var(--shadow-md);
 	}
 
 	.cta-button.secondary {
-		background: var(--color-panel-2);
-		color: var(--color-muted-foreground);
-		border: 1px solid var(--color-border);
+		background: transparent;
+		color: var(--color-foreground);
+		border: 2px solid var(--color-border);
 	}
 
 	.cta-button.secondary:hover {
-		background: var(--color-panel-3);
-		color: var(--color-text-primary);
-		border-color: var(--color-brand-primary);
-		transform: translateY(-1px);
+		border-color: var(--color-primary);
+		color: var(--color-primary);
 	}
 
-	/* Trust note */
-	.trust-note {
+	.cta-button.tertiary {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-2);
+		background: transparent;
+		color: hsl(200, 80%, 45%);
+		border: 2px solid hsl(200, 80%, 45%);
+	}
+
+	.cta-button.tertiary:hover {
+		background: hsla(200, 80%, 50%, 0.1);
+		border-color: hsl(200, 80%, 35%);
+		color: hsl(200, 80%, 35%);
+	}
+
+	/* Purchase hint */
+	.purchase-hint {
+		margin-top: var(--space-3);
+		font-size: var(--text-xs);
+		color: var(--color-muted-foreground);
 		text-align: center;
-		padding: var(--spacing-6);
+	}
+
+	/* Tips section */
+	.tips-section {
+		text-align: center;
+		padding: var(--space-6);
 		background: var(--color-panel-1);
 		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border-subtle);
-		max-width: 48rem;
-		margin: 0 auto;
+		border: 1px solid var(--color-border);
 	}
 
-	.note-text {
-		margin-bottom: var(--spacing-2);
-		font-size: var(--font-size-sm);
-		color: var(--color-text-muted);
+	.tip-item {
+		font-size: var(--text-sm);
+		color: var(--color-muted-foreground);
+		margin-bottom: var(--space-2);
 	}
 
-	.note-text:last-child {
+	.tip-item:last-child {
 		margin-bottom: 0;
 	}
 
-	.contact-link {
-		color: var(--color-brand-primary);
-		text-decoration: none;
-		font-weight: var(--font-weight-medium);
-		transition: color var(--duration-fast);
-	}
-
-	.contact-link:hover {
-		color: var(--color-brand-primary-dark);
-		text-decoration: underline;
-	}
-
-	/* Responsive adjustments */
+	/* Responsive */
 	@media (min-width: 768px) {
 		.pricing-section {
-			padding: var(--spacing-32) var(--spacing-8);
+			padding: var(--space-24) var(--space-6);
 		}
 
 		.section-title {
-			font-size: var(--font-size-5xl);
+			font-size: var(--text-4xl);
+		}
+
+		.pricing-card {
+			padding: var(--space-8);
 		}
 	}
 </style>
