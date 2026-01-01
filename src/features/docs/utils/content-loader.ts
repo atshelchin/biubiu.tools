@@ -198,3 +198,27 @@ export async function getFirstDocument(version: string): Promise<string | null> 
 	const firstDoc = firstCategory.items[0];
 	return `/docs${firstDoc.path}`;
 }
+
+/**
+ * Get all document slugs for a specific version (for prerender entries)
+ * Returns slugs in format "category/document"
+ */
+export async function getAllDocSlugs(version: string): Promise<string[]> {
+	const slugs: string[] = [];
+
+	for (const path of Object.keys(contentModules)) {
+		const parsed = parseFilePath(path);
+		if (!parsed || parsed.version !== version) continue;
+
+		// Load to check for drafts
+		const rawContent = (await contentModules[path]()) as string;
+		const { frontmatter } = await parseDocument(rawContent);
+
+		if (frontmatter.draft && import.meta.env.PROD) continue;
+
+		// Return slug in format: category/document
+		slugs.push(`${parsed.category}/${parsed.slug}`);
+	}
+
+	return slugs;
+}

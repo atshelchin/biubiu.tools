@@ -11,9 +11,10 @@
  * - sitemap-addresses.xml
  * - sitemap-names.xml
  * - sitemap-tools.xml
+ * - sitemap-docs.xml
  */
 
-import { writeFileSync, mkdirSync, existsSync } from 'fs';
+import { writeFileSync, mkdirSync, existsSync, readdirSync, statSync } from 'fs';
 import { join } from 'path';
 
 // Import data sources
@@ -23,6 +24,7 @@ import { getToolIdsWithDetailPages } from '../src/features/chain-tools/data/tool
 import { getGuideCategoryIds } from '../src/features/chain-tools/data/guides';
 import { allAddresses, allNames } from '../src/features/address/data/index';
 import { localeMetas } from '../src/i18n/i18n.svelte';
+import { docsConfig } from '../src/features/docs/config';
 
 const SITE = 'https://biubiu.tools';
 const OUTPUT_DIR = join(process.cwd(), 'static');
@@ -378,6 +380,62 @@ function generateToolsSitemap(): string {
 }
 
 /**
+ * Get all documentation page paths by scanning the content directory
+ */
+function getDocsPaths(): string[] {
+	const DOCS_CONTENT_DIR = join(process.cwd(), 'src/features/docs/content');
+	const paths: string[] = [];
+
+	function scanDir(dir: string, basePath: string) {
+		if (!existsSync(dir)) return;
+
+		const entries = readdirSync(dir);
+		for (const entry of entries) {
+			const fullPath = join(dir, entry);
+			const stat = statSync(fullPath);
+
+			if (stat.isDirectory()) {
+				scanDir(fullPath, `${basePath}/${entry}`);
+			} else if (entry.endsWith('.md')) {
+				// Remove .md extension to get the slug
+				const slug = entry.replace('.md', '');
+				paths.push(`${basePath}/${slug}`);
+			}
+		}
+	}
+
+	// Scan each version directory
+	for (const version of docsConfig.versions) {
+		const versionDir = join(DOCS_CONTENT_DIR, version.id);
+		scanDir(versionDir, `/docs/${version.id}`);
+	}
+
+	return paths;
+}
+
+/**
+ * Generate docs sitemap
+ */
+function generateDocsSitemap(): string {
+	const urls: string[] = [];
+	const docsPaths = getDocsPaths();
+
+	for (const path of docsPaths) {
+		// Main route
+		urls.push(generateUrl(path, { priority: 0.7, changefreq: 'weekly', baseRoute: path }));
+
+		// Localized routes
+		for (const locale of SUPPORTED_LOCALES) {
+			urls.push(
+				generateUrl(`/${locale}${path}`, { priority: 0.6, changefreq: 'weekly', baseRoute: path })
+			);
+		}
+	}
+
+	return wrapSitemap(urls);
+}
+
+/**
  * Main function
  */
 function main() {
@@ -432,6 +490,14 @@ function main() {
 	console.log(
 		`   ✓ ${categories.length} tool categories + ${guideCategoryIds.length} guide pages + ${toolDetailIds.length} tool detail pages indexed`
 	);
+
+	// Generate docs sitemap
+	const docsPaths = getDocsPaths();
+	console.log('📚 Generating sitemap-docs.xml...');
+	const docsSitemap = generateDocsSitemap();
+	writeFileSync(join(OUTPUT_DIR, 'sitemap-docs.xml'), docsSitemap);
+	sitemapFiles.push('sitemap-docs.xml');
+	console.log(`   ✓ ${docsPaths.length} documentation pages indexed`);
 
 	// Generate sitemap index
 	console.log('\n📑 Generating sitemap.xml (index)...');

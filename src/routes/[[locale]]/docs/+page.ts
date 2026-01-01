@@ -5,9 +5,18 @@
 import { redirect } from '@sveltejs/kit';
 import { getDefaultVersion } from '@/features/docs/config';
 import { getFirstDocument } from '@/features/docs/utils';
-import type { PageLoad } from './$types';
+import { localeMetas } from '@/i18n/i18n.svelte';
+import type { PageLoad, EntryGenerator } from './$types';
 
 export const prerender = true;
+
+// Generate entries for all locales (empty string = no locale prefix)
+export const entries: EntryGenerator = () => {
+	return [
+		{ locale: '' },
+		...localeMetas.map((l) => ({ locale: l.code }))
+	];
+};
 
 export const load: PageLoad = async () => {
 	const defaultVersion = getDefaultVersion();
