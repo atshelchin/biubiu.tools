@@ -11,17 +11,90 @@
 	"cta_get_started": "Get Started",
 	"cta_learn_more": "Learn More",
 	"cta": {
-		"title": "Ready to Get Started?",
-		"subtitle": "Join thousands of users who are already using biubiu.tools to streamline their Web3 operations",
-		"button_text": "Start Now - It's Free"
+		"title": "Ready to Supercharge Your Web3 Workflow?",
+		"subtitle": "Join developers and power users who save hours every week with our professional-grade toolkit. No registration, no wallet connection required to get started.",
+		"button_text": "Explore All Tools",
+		"secondary_button": "View Documentation",
+		"trust": {
+			"no_registration": "No Registration Required",
+			"free_tools": "Free Core Tools",
+			"open_source": "100% Open Source",
+			"privacy_first": "Your Keys Stay Local"
+		}
+	},
+	"faqs": {
+		"badge": "Common Questions",
+		"title": "Frequently Asked Questions",
+		"subtitle": "Everything you need to know about biubiu.tools. Can't find what you're looking for? Reach out to our community.",
+		"items": [
+			{
+				"question": "What is biubiu.tools?",
+				"answer": "biubiu.tools is a comprehensive Web3 toolkit designed for developers, traders, and power users. It provides essential tools like token creation, batch transfers, wallet management, and contract interactions - all in one place with a clean, professional interface."
+			},
+			{
+				"question": "Is biubiu.tools free to use?",
+				"answer": "Yes! Core features are completely free. For on-chain operations (like token creation or batch transfers), you only pay the network gas fees plus a small protocol fee. Alternatively, you can purchase a membership for unlimited access to all tools on your preferred chain."
+			},
+			{
+				"question": "Which blockchain networks are supported?",
+				"answer": "We support 20+ EVM-compatible networks including Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, and many more. You can also add custom networks through our network settings."
+			},
+			{
+				"question": "Is my private key safe?",
+				"answer": "Absolutely. Your private keys never leave your browser. All cryptographic operations are performed locally on your device. We don't have access to your keys, and no data is sent to our servers. You can verify this yourself - our code is 100% open source."
+			},
+			{
+				"question": "What's the difference between Pay-Per-Use and Membership?",
+				"answer": "Pay-Per-Use charges a small fee for each on-chain operation and doesn't include query tools. Membership gives you unlimited access to ALL tools (including premium query tools) on your purchased chain for a fixed duration. Heavy users typically save 50%+ with membership."
+			},
+			{
+				"question": "Do I need to connect my wallet to use the tools?",
+				"answer": "It depends on the tool. Read-only tools (like contract explorers, unit converters, etc.) work without any connection. For on-chain operations, you'll need to either connect your wallet or import a private key - but remember, keys are processed locally only."
+			},
+			{
+				"question": "Is biubiu.tools open source?",
+				"answer": "Yes! Our entire codebase is open source and available on GitHub. You can review the code, contribute improvements, or even self-host your own instance. We believe in transparency and community-driven development."
+			},
+			{
+				"question": "How can I get support or report issues?",
+				"answer": "Join our Discord community for real-time support and discussions. For bug reports and feature requests, please open an issue on our GitHub repository. We actively monitor both channels and typically respond within 24 hours."
+			}
+		],
+		"still_questions": "Still have questions?",
+		"contact_text": "Our community is here to help. Join our Discord for real-time support or send us an email.",
+		"join_discord": "Join Discord",
+		"email_support": "Email Us"
 	},
 	"stats": {
-		"title": "Trusted by Web3 Users",
-		"registered_users": "Active Users",
-		"transactions": "Transactions",
-		"total_volume": "Total Volume",
-		"chains_supported": "Chains Supported",
-		"last_updated": "Live Statistics"
+		"title": "Platform Statistics",
+		"subtitle": "Real-time on-chain data from deployed contracts",
+		"demo_notice": "Demo data shown - real data coming soon after launch",
+		"premium_subscribers": "Trusted Members",
+		"tool_usage": "Transactions Completed",
+		"active_networks": "Active Networks",
+		"networks_hint": "Partial stats. Permissionlessly supports any EVM chain.",
+		"sort_by_members": "By Members",
+		"sort_by_usage": "By Usage",
+		"loading": "Loading stats...",
+		"loading_chains": "Checking {completed}/{total} networks...",
+		"refresh": "Refresh",
+		"refreshing": "Refreshing...",
+		"cooldown": "Wait {seconds}s",
+		"live_activity": "Live Activity",
+		"no_activity": "Waiting for activity...",
+		"top_networks": "Top Networks by Usage",
+		"no_contracts": "No contracts deployed yet",
+		"contracts_deployed": "{count}/5 tools deployed",
+		"last_updated": "Live On-Chain Data",
+		"error": "Failed to load stats",
+		"activity": {
+			"subscription": "New Premium subscriber",
+			"token_created": "Token created",
+			"nft_created": "NFT deployed",
+			"distribution": "Batch distribution",
+			"sweep": "Token sweep",
+			"on_chain": "on {chain}"
+		}
 	},
 	"footer": {
 		"tagline": "Your all-in-one Web3 toolkit",
@@ -114,5 +187,61 @@
 		"last": "Last",
 		"page": "Page",
 		"showing_range": "Showing {start}-{end} of {total}"
+	},
+	"pricing": {
+		"title": "Simple, Transparent Pricing",
+		"subtitle": "Choose the plan that works best for you. Pay per use or unlock everything with a membership.",
+		"pay_per_use": {
+			"title": "Pay Per Use",
+			"description": "Perfect for occasional users",
+			"unit": "Native Token / tx",
+			"features": {
+				"no_subscription": "No subscription required",
+				"pay_as_you_go": "Pay only when you use",
+				"onchain_tools": "All on-chain tools",
+				"no_query_tools": "Query tools not included"
+			},
+			"examples_label": "Supported tools:",
+			"examples": "Token creation, Batch transfers, Contract interactions, etc.",
+			"cta": "Start Using"
+		},
+		"membership": {
+			"title": "Membership",
+			"description": "Full access to all tools on your chain",
+			"badge": "Best Value",
+			"daily": "Daily",
+			"monthly": "Monthly",
+			"yearly": "Yearly",
+			"unit": "Native Token",
+			"save": "Save {percent}%",
+			"duration": "Valid for {days}",
+			"features": {
+				"all_onchain": "All on-chain tools",
+				"all_query": "All query tools",
+				"unlimited": "Unlimited usage",
+				"priority_support": "Priority support"
+			},
+			"chain_notice": "Membership valid on the purchased chain only",
+			"cta": "Get Membership",
+			"purchase_hint": "Purchase available on tool pages"
+		},
+		"tips": {
+			"heavy_user": "Heavy user? Membership saves you more on frequent operations.",
+			"query_tools": "Need query tools? They're exclusively available with membership.",
+			"multi_chain": "Working across multiple chains? You'll need a membership for each chain."
+		},
+		"self_host": {
+			"title": "Self Host",
+			"description": "For developers who want full control",
+			"price": "Free",
+			"features": {
+				"full_source": "Full source code access",
+				"no_fees": "Zero protocol fees",
+				"full_control": "Complete infrastructure control",
+				"community_support": "Community support via GitHub"
+			},
+			"note": "Requires technical setup: Node.js, Docker, deployment infrastructure",
+			"cta": "View on GitHub"
+		}
 	}
 }

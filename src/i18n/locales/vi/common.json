@@ -11,17 +11,86 @@
 	"cta_get_started": "Bắt đầu",
 	"cta_learn_more": "Tìm hiểu thêm",
 	"cta": {
-		"title": "Sẵn sàng bắt đầu?",
-		"subtitle": "Tham gia cùng hàng nghìn người dùng đang sử dụng biubiu.tools để tối ưu hóa các hoạt động Web3",
-		"button_text": "Bắt đầu ngay - Miễn phí"
+		"title": "Sẵn sàng tăng cường quy trình làm việc Web3 của bạn?",
+		"subtitle": "Tham gia cùng các nhà phát triển và người dùng chuyên nghiệp tiết kiệm hàng giờ mỗi tuần với bộ công cụ cấp chuyên nghiệp của chúng tôi. Không cần đăng ký, không cần kết nối ví để bắt đầu.",
+		"button_text": "Khám phá tất cả công cụ",
+		"secondary_button": "Xem tài liệu",
+		"trust": {
+			"no_registration": "Không cần đăng ký",
+			"free_tools": "Công cụ cốt lõi miễn phí",
+			"open_source": "100% Mã nguồn mở",
+			"privacy_first": "Khóa của bạn ở cục bộ"
+		}
+	},
+	"faqs": {
+		"badge": "Câu hỏi thường gặp",
+		"title": "Những câu hỏi thường gặp",
+		"subtitle": "Tất cả những gì bạn cần biết về biubiu.tools. Không tìm thấy thông tin bạn cần? Liên hệ với cộng đồng của chúng tôi.",
+		"items": [
+			{
+				"question": "biubiu.tools là gì?",
+				"answer": "biubiu.tools là một bộ công cụ Web3 toàn diện được thiết kế cho các nhà phát triển, trader và người dùng chuyên nghiệp. Nó cung cấp các công cụ thiết yếu như tạo token, chuyển hàng loạt, quản lý ví và tương tác hợp đồng - tất cả ở một nơi với giao diện sạch sẽ, chuyên nghiệp."
+			},
+			{
+				"question": "biubiu.tools có miễn phí không?",
+				"answer": "Có! Các tính năng cốt lõi hoàn toàn miễn phí. Đối với các thao tác on-chain (như tạo token hoặc chuyển hàng loạt), bạn chỉ trả phí gas mạng cộng với một khoản phí giao thức nhỏ. Ngoài ra, bạn có thể mua thành viên để truy cập không giới hạn tất cả các công cụ trên chuỗi ưa thích của bạn."
+			},
+			{
+				"question": "Những mạng blockchain nào được hỗ trợ?",
+				"answer": "Chúng tôi hỗ trợ hơn 20 mạng tương thích EVM bao gồm Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche và nhiều mạng khác. Bạn cũng có thể thêm các mạng tùy chỉnh thông qua cài đặt mạng của chúng tôi."
+			},
+			{
+				"question": "Khóa riêng tư của tôi có an toàn không?",
+				"answer": "Hoàn toàn an toàn. Khóa riêng tư của bạn không bao giờ rời khỏi trình duyệt. Tất cả các thao tác mã hóa được thực hiện cục bộ trên thiết bị của bạn. Chúng tôi không có quyền truy cập vào khóa của bạn và không có dữ liệu nào được gửi đến máy chủ của chúng tôi. Bạn có thể tự xác minh điều này - mã nguồn của chúng tôi 100% mở."
+			},
+			{
+				"question": "Sự khác biệt giữa Trả theo lần dùng và Thành viên là gì?",
+				"answer": "Trả theo lần dùng tính phí nhỏ cho mỗi thao tác on-chain và không bao gồm các công cụ truy vấn. Thành viên cung cấp cho bạn quyền truy cập không giới hạn vào TẤT CẢ các công cụ (bao gồm cả công cụ truy vấn cao cấp) trên chuỗi bạn đã mua trong một khoảng thời gian cố định. Người dùng thường xuyên thường tiết kiệm hơn 50% với thành viên."
+			},
+			{
+				"question": "Tôi có cần kết nối ví để sử dụng các công cụ không?",
+				"answer": "Tùy thuộc vào công cụ. Các công cụ chỉ đọc (như trình khám phá hợp đồng, bộ chuyển đổi đơn vị, v.v.) hoạt động mà không cần bất kỳ kết nối nào. Đối với các thao tác on-chain, bạn sẽ cần kết nối ví hoặc nhập khóa riêng tư - nhưng hãy nhớ rằng, khóa chỉ được xử lý cục bộ."
+			},
+			{
+				"question": "biubiu.tools có mã nguồn mở không?",
+				"answer": "Có! Toàn bộ mã nguồn của chúng tôi là mã nguồn mở và có sẵn trên GitHub. Bạn có thể xem xét mã, đóng góp cải tiến hoặc thậm chí tự lưu trữ phiên bản riêng của mình. Chúng tôi tin tưởng vào tính minh bạch và phát triển hướng cộng đồng."
+			},
+			{
+				"question": "Làm thế nào để nhận hỗ trợ hoặc báo cáo vấn đề?",
+				"answer": "Tham gia cộng đồng Discord của chúng tôi để được hỗ trợ và thảo luận theo thời gian thực. Đối với báo cáo lỗi và yêu cầu tính năng, vui lòng mở vấn đề trên kho lưu trữ GitHub của chúng tôi. Chúng tôi theo dõi tích cực cả hai kênh và thường phản hồi trong vòng 24 giờ."
+			}
+		],
+		"still_questions": "Vẫn còn câu hỏi?",
+		"contact_text": "Cộng đồng của chúng tôi sẵn sàng giúp đỡ. Tham gia Discord của chúng tôi để được hỗ trợ theo thời gian thực hoặc gửi email cho chúng tôi.",
+		"join_discord": "Tham gia Discord",
+		"email_support": "Gửi Email"
 	},
 	"stats": {
-		"title": "Được tin dùng bởi người dùng Web3",
-		"registered_users": "Người dùng hoạt động",
-		"transactions": "Giao dịch",
-		"total_volume": "Tổng khối lượng",
-		"chains_supported": "Chuỗi được hỗ trợ",
-		"last_updated": "Thống kê trực tiếp"
+		"title": "Thống kê Nền tảng",
+		"subtitle": "Dữ liệu on-chain thời gian thực từ các hợp đồng đã triển khai",
+		"premium_subscribers": "Người dùng Tin cậy",
+		"tool_usage": "Giao dịch Hoàn thành",
+		"active_networks": "Mạng Được hỗ trợ",
+		"loading": "Đang tải thống kê...",
+		"loading_chains": "Đang kiểm tra {completed}/{total} mạng...",
+		"refresh": "Làm mới",
+		"refreshing": "Đang làm mới...",
+		"cooldown": "Đợi {seconds}s",
+		"live_activity": "Hoạt động Trực tiếp",
+		"no_activity": "Đang chờ hoạt động...",
+		"top_networks": "Mạng Hàng đầu theo Sử dụng",
+		"no_contracts": "Chưa có hợp đồng nào được triển khai",
+		"contracts_deployed": "{count}/5 công cụ đã triển khai",
+		"last_updated": "Dữ liệu On-Chain Trực tiếp",
+		"error": "Không thể tải thống kê",
+		"activity": {
+			"subscription": "Thành viên Premium mới",
+			"token_created": "Token đã tạo",
+			"nft_created": "NFT đã triển khai",
+			"distribution": "Phân phối hàng loạt",
+			"sweep": "Thu gom token",
+			"on_chain": "trên {chain}"
+		}
 	},
 	"footer": {
 		"tagline": "Bộ công cụ Web3 tất cả trong một",
@@ -103,5 +172,48 @@
 		"last": "Cuối",
 		"page": "Trang",
 		"showing_range": "Hiển thị {start}-{end} trong {total}"
+	},
+	"pricing": {
+		"title": "Giá đơn giản và minh bạch",
+		"subtitle": "Chọn gói phù hợp với bạn. Trả theo lần dùng hoặc mở khóa tất cả với thành viên.",
+		"pay_per_use": {
+			"title": "Trả theo lần dùng",
+			"description": "Hoàn hảo cho người dùng không thường xuyên",
+			"unit": "Token Gốc / tx",
+			"features": {
+				"no_subscription": "Không cần đăng ký",
+				"pay_as_you_go": "Chỉ trả khi sử dụng",
+				"onchain_tools": "Tất cả công cụ on-chain",
+				"no_query_tools": "Không bao gồm công cụ truy vấn"
+			},
+			"examples_label": "Công cụ được hỗ trợ:",
+			"examples": "Tạo token, Chuyển hàng loạt, Tương tác hợp đồng, v.v.",
+			"cta": "Bắt đầu sử dụng"
+		},
+		"membership": {
+			"title": "Thành viên",
+			"description": "Truy cập đầy đủ tất cả công cụ trên chuỗi của bạn",
+			"badge": "Giá trị tốt nhất",
+			"daily": "Ngày",
+			"monthly": "Tháng",
+			"yearly": "Năm",
+			"unit": "Token Gốc",
+			"save": "Tiết kiệm {percent}%",
+			"duration": "Có hiệu lực trong {days}",
+			"features": {
+				"all_onchain": "Tất cả công cụ on-chain",
+				"all_query": "Tất cả công cụ truy vấn",
+				"unlimited": "Sử dụng không giới hạn",
+				"priority_support": "Hỗ trợ ưu tiên"
+			},
+			"chain_notice": "Thành viên chỉ có hiệu lực trên chuỗi đã mua",
+			"cta": "Đăng ký thành viên",
+			"purchase_hint": "Có thể mua trên trang công cụ"
+		},
+		"tips": {
+			"heavy_user": "Người dùng thường xuyên? Thành viên tiết kiệm hơn cho các thao tác thường xuyên.",
+			"query_tools": "Cần công cụ truy vấn? Chỉ dành riêng cho thành viên.",
+			"multi_chain": "Làm việc trên nhiều chuỗi? Bạn cần thành viên cho mỗi chuỗi."
+		}
 	}
 }

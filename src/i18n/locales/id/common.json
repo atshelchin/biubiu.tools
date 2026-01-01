@@ -11,17 +11,86 @@
 	"cta_get_started": "Mulai",
 	"cta_learn_more": "Pelajari lebih lanjut",
 	"cta": {
-		"title": "Siap untuk memulai?",
-		"subtitle": "Bergabunglah dengan ribuan pengguna yang sudah menggunakan biubiu.tools untuk menyederhanakan operasi Web3 mereka",
-		"button_text": "Mulai sekarang - Gratis"
+		"title": "Siap Meningkatkan Alur Kerja Web3 Anda?",
+		"subtitle": "Bergabunglah dengan para developer dan pengguna profesional yang menghemat berjam-jam setiap minggu dengan toolkit tingkat profesional kami. Tanpa registrasi, tanpa koneksi wallet untuk memulai.",
+		"button_text": "Jelajahi Semua Alat",
+		"secondary_button": "Lihat Dokumentasi",
+		"trust": {
+			"no_registration": "Tanpa Registrasi",
+			"free_tools": "Alat Inti Gratis",
+			"open_source": "100% Open Source",
+			"privacy_first": "Kunci Anda Tetap Lokal"
+		}
+	},
+	"faqs": {
+		"badge": "Pertanyaan Umum",
+		"title": "Pertanyaan yang Sering Diajukan",
+		"subtitle": "Semua yang perlu Anda ketahui tentang biubiu.tools. Tidak menemukan yang Anda cari? Hubungi komunitas kami.",
+		"items": [
+			{
+				"question": "Apa itu biubiu.tools?",
+				"answer": "biubiu.tools adalah toolkit Web3 komprehensif yang dirancang untuk developer, trader, dan pengguna profesional. Menyediakan alat-alat penting seperti pembuatan token, transfer batch, manajemen wallet, dan interaksi kontrak - semua dalam satu tempat dengan antarmuka yang bersih dan profesional."
+			},
+			{
+				"question": "Apakah biubiu.tools gratis digunakan?",
+				"answer": "Ya! Fitur inti sepenuhnya gratis. Untuk operasi on-chain (seperti pembuatan token atau transfer batch), Anda hanya membayar biaya gas jaringan ditambah biaya protokol kecil. Alternatifnya, Anda dapat membeli keanggotaan untuk akses tak terbatas ke semua alat di chain pilihan Anda."
+			},
+			{
+				"question": "Jaringan blockchain apa saja yang didukung?",
+				"answer": "Kami mendukung 20+ jaringan kompatibel EVM termasuk Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, dan banyak lagi. Anda juga dapat menambahkan jaringan kustom melalui pengaturan jaringan kami."
+			},
+			{
+				"question": "Apakah private key saya aman?",
+				"answer": "Sangat aman. Private key Anda tidak pernah meninggalkan browser Anda. Semua operasi kriptografi dilakukan secara lokal di perangkat Anda. Kami tidak memiliki akses ke kunci Anda, dan tidak ada data yang dikirim ke server kami. Anda dapat memverifikasi sendiri - kode kami 100% open source."
+			},
+			{
+				"question": "Apa perbedaan antara Bayar per Penggunaan dan Keanggotaan?",
+				"answer": "Bayar per Penggunaan membebankan biaya kecil untuk setiap operasi on-chain dan tidak termasuk alat query. Keanggotaan memberi Anda akses tak terbatas ke SEMUA alat (termasuk alat query premium) di chain yang Anda beli untuk durasi tetap. Pengguna aktif biasanya menghemat 50%+ dengan keanggotaan."
+			},
+			{
+				"question": "Apakah saya perlu menghubungkan wallet untuk menggunakan alat?",
+				"answer": "Tergantung pada alatnya. Alat read-only (seperti contract explorer, konverter unit, dll.) bekerja tanpa koneksi. Untuk operasi on-chain, Anda perlu menghubungkan wallet atau mengimpor private key - tetapi ingat, kunci diproses hanya secara lokal."
+			},
+			{
+				"question": "Apakah biubiu.tools open source?",
+				"answer": "Ya! Seluruh codebase kami adalah open source dan tersedia di GitHub. Anda dapat meninjau kode, berkontribusi perbaikan, atau bahkan meng-host sendiri instance Anda. Kami percaya pada transparansi dan pengembangan berbasis komunitas."
+			},
+			{
+				"question": "Bagaimana cara mendapatkan dukungan atau melaporkan masalah?",
+				"answer": "Bergabunglah dengan komunitas Discord kami untuk dukungan dan diskusi real-time. Untuk laporan bug dan permintaan fitur, silakan buka issue di repositori GitHub kami. Kami secara aktif memantau kedua saluran dan biasanya merespons dalam 24 jam."
+			}
+		],
+		"still_questions": "Masih ada pertanyaan?",
+		"contact_text": "Komunitas kami siap membantu. Bergabunglah dengan Discord kami untuk dukungan real-time atau kirimkan email kepada kami.",
+		"join_discord": "Gabung Discord",
+		"email_support": "Kirim Email"
 	},
 	"stats": {
-		"title": "Dipercaya oleh pengguna Web3",
-		"registered_users": "Pengguna aktif",
-		"transactions": "Transaksi",
-		"total_volume": "Total volume",
-		"chains_supported": "Chain yang didukung",
-		"last_updated": "Statistik langsung"
+		"title": "Statistik Platform",
+		"subtitle": "Data on-chain real-time dari kontrak yang telah di-deploy",
+		"premium_subscribers": "Pengguna Terpercaya",
+		"tool_usage": "Transaksi Selesai",
+		"active_networks": "Jaringan Didukung",
+		"loading": "Memuat statistik...",
+		"loading_chains": "Memeriksa {completed}/{total} jaringan...",
+		"refresh": "Segarkan",
+		"refreshing": "Menyegarkan...",
+		"cooldown": "Tunggu {seconds}s",
+		"live_activity": "Aktivitas Langsung",
+		"no_activity": "Menunggu aktivitas...",
+		"top_networks": "Jaringan Teratas berdasarkan Penggunaan",
+		"no_contracts": "Belum ada kontrak yang di-deploy",
+		"contracts_deployed": "{count}/5 alat di-deploy",
+		"last_updated": "Data On-Chain Langsung",
+		"error": "Gagal memuat statistik",
+		"activity": {
+			"subscription": "Pelanggan Premium baru",
+			"token_created": "Token dibuat",
+			"nft_created": "NFT di-deploy",
+			"distribution": "Distribusi batch",
+			"sweep": "Penyapuan token",
+			"on_chain": "di {chain}"
+		}
 	},
 	"footer": {
 		"tagline": "Toolkit Web3 serba ada Anda",
@@ -103,5 +172,48 @@
 		"last": "Terakhir",
 		"page": "Halaman",
 		"showing_range": "Menampilkan {start}-{end} dari {total}"
+	},
+	"pricing": {
+		"title": "Harga Sederhana dan Transparan",
+		"subtitle": "Pilih paket yang cocok untuk Anda. Bayar per penggunaan atau buka semua fitur dengan keanggotaan.",
+		"pay_per_use": {
+			"title": "Bayar per Penggunaan",
+			"description": "Sempurna untuk pengguna sesekali",
+			"unit": "Token Natif / tx",
+			"features": {
+				"no_subscription": "Tanpa langganan",
+				"pay_as_you_go": "Bayar hanya saat menggunakan",
+				"onchain_tools": "Semua alat on-chain",
+				"no_query_tools": "Alat query tidak termasuk"
+			},
+			"examples_label": "Alat yang didukung:",
+			"examples": "Pembuatan token, Transfer batch, Interaksi kontrak, dll.",
+			"cta": "Mulai Gunakan"
+		},
+		"membership": {
+			"title": "Keanggotaan",
+			"description": "Akses penuh ke semua alat di chain Anda",
+			"badge": "Nilai Terbaik",
+			"daily": "Harian",
+			"monthly": "Bulanan",
+			"yearly": "Tahunan",
+			"unit": "Token Natif",
+			"save": "Hemat {percent}%",
+			"duration": "Berlaku selama {days}",
+			"features": {
+				"all_onchain": "Semua alat on-chain",
+				"all_query": "Semua alat query",
+				"unlimited": "Penggunaan tidak terbatas",
+				"priority_support": "Dukungan prioritas"
+			},
+			"chain_notice": "Keanggotaan hanya berlaku pada chain yang dibeli",
+			"cta": "Dapatkan Keanggotaan",
+			"purchase_hint": "Pembelian tersedia di halaman alat"
+		},
+		"tips": {
+			"heavy_user": "Pengguna aktif? Keanggotaan lebih hemat untuk operasi sering.",
+			"query_tools": "Butuh alat query? Hanya tersedia dengan keanggotaan.",
+			"multi_chain": "Bekerja di banyak chain? Anda perlu keanggotaan untuk setiap chain."
+		}
 	}
 }

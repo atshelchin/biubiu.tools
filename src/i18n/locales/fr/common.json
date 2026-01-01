@@ -11,17 +11,86 @@
 	"cta_get_started": "Commencer",
 	"cta_learn_more": "En savoir plus",
 	"cta": {
-		"title": "Prêt à commencer ?",
-		"subtitle": "Rejoignez des milliers d'utilisateurs qui utilisent déjà biubiu.tools pour simplifier leurs opérations Web3",
-		"button_text": "Commencer maintenant - C'est gratuit"
+		"title": "Prêt à booster votre flux de travail Web3 ?",
+		"subtitle": "Rejoignez les développeurs et utilisateurs avancés qui économisent des heures chaque semaine avec notre boîte à outils professionnelle. Aucune inscription ni connexion de portefeuille requise pour commencer.",
+		"button_text": "Explorer tous les outils",
+		"secondary_button": "Voir la documentation",
+		"trust": {
+			"no_registration": "Aucune inscription requise",
+			"free_tools": "Outils de base gratuits",
+			"open_source": "100% Open Source",
+			"privacy_first": "Vos clés restent locales"
+		}
+	},
+	"faqs": {
+		"badge": "Questions courantes",
+		"title": "Questions fréquemment posées",
+		"subtitle": "Tout ce que vous devez savoir sur biubiu.tools. Vous ne trouvez pas ce que vous cherchez ? Contactez notre communauté.",
+		"items": [
+			{
+				"question": "Qu'est-ce que biubiu.tools ?",
+				"answer": "biubiu.tools est une boîte à outils Web3 complète conçue pour les développeurs, traders et utilisateurs avancés. Elle fournit des outils essentiels comme la création de tokens, les transferts en lot, la gestion de portefeuilles et les interactions avec les contrats - le tout en un seul endroit avec une interface claire et professionnelle."
+			},
+			{
+				"question": "biubiu.tools est-il gratuit ?",
+				"answer": "Oui ! Les fonctionnalités de base sont entièrement gratuites. Pour les opérations on-chain (comme la création de tokens ou les transferts en lot), vous ne payez que les frais de gas du réseau plus des frais de protocole minimes. Vous pouvez également souscrire un abonnement pour un accès illimité à tous les outils sur la chaîne de votre choix."
+			},
+			{
+				"question": "Quels réseaux blockchain sont pris en charge ?",
+				"answer": "Nous prenons en charge plus de 20 réseaux compatibles EVM, notamment Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche et bien d'autres. Vous pouvez également ajouter des réseaux personnalisés via nos paramètres réseau."
+			},
+			{
+				"question": "Ma clé privée est-elle sécurisée ?",
+				"answer": "Absolument. Vos clés privées ne quittent jamais votre navigateur. Toutes les opérations cryptographiques sont effectuées localement sur votre appareil. Nous n'avons pas accès à vos clés et aucune donnée n'est envoyée à nos serveurs. Vous pouvez le vérifier vous-même - notre code est 100% open source."
+			},
+			{
+				"question": "Quelle est la différence entre le paiement à l'usage et l'abonnement ?",
+				"answer": "Le paiement à l'usage facture des frais minimes pour chaque opération on-chain et n'inclut pas les outils de requête. L'abonnement vous donne un accès illimité à TOUS les outils (y compris les outils de requête premium) sur la chaîne achetée pour une durée déterminée. Les utilisateurs intensifs économisent généralement plus de 50% avec l'abonnement."
+			},
+			{
+				"question": "Dois-je connecter mon portefeuille pour utiliser les outils ?",
+				"answer": "Cela dépend de l'outil. Les outils en lecture seule (comme les explorateurs de contrats, convertisseurs d'unités, etc.) fonctionnent sans connexion. Pour les opérations on-chain, vous devrez soit connecter votre portefeuille, soit importer une clé privée - mais rappelez-vous, les clés sont traitées localement uniquement."
+			},
+			{
+				"question": "biubiu.tools est-il open source ?",
+				"answer": "Oui ! Notre code source complet est open source et disponible sur GitHub. Vous pouvez consulter le code, contribuer aux améliorations ou même héberger votre propre instance. Nous croyons en la transparence et au développement communautaire."
+			},
+			{
+				"question": "Comment obtenir de l'aide ou signaler des problèmes ?",
+				"answer": "Rejoignez notre communauté Discord pour obtenir de l'aide en temps réel et participer aux discussions. Pour signaler des bugs et demander des fonctionnalités, veuillez ouvrir une issue sur notre dépôt GitHub. Nous surveillons activement les deux canaux et répondons généralement sous 24 heures."
+			}
+		],
+		"still_questions": "Vous avez encore des questions ?",
+		"contact_text": "Notre communauté est là pour vous aider. Rejoignez notre Discord pour une assistance en temps réel ou envoyez-nous un e-mail.",
+		"join_discord": "Rejoindre Discord",
+		"email_support": "Nous contacter par e-mail"
 	},
 	"stats": {
-		"title": "Approuvé par les utilisateurs Web3",
-		"registered_users": "Utilisateurs actifs",
-		"transactions": "Transactions",
-		"total_volume": "Volume total",
-		"chains_supported": "Chaînes supportées",
-		"last_updated": "Statistiques en direct"
+		"title": "Statistiques de la Plateforme",
+		"subtitle": "Données on-chain en temps réel des contrats déployés",
+		"premium_subscribers": "Utilisateurs de Confiance",
+		"tool_usage": "Transactions Complétées",
+		"active_networks": "Réseaux Supportés",
+		"loading": "Chargement des statistiques...",
+		"loading_chains": "Vérification de {completed}/{total} réseaux...",
+		"refresh": "Actualiser",
+		"refreshing": "Actualisation...",
+		"cooldown": "Attendre {seconds}s",
+		"live_activity": "Activité en Direct",
+		"no_activity": "En attente d'activité...",
+		"top_networks": "Principaux Réseaux par Usage",
+		"no_contracts": "Aucun contrat déployé",
+		"contracts_deployed": "{count}/5 outils déployés",
+		"last_updated": "Données On-Chain en Direct",
+		"error": "Échec du chargement des statistiques",
+		"activity": {
+			"subscription": "Nouvel abonné Premium",
+			"token_created": "Token créé",
+			"nft_created": "NFT déployé",
+			"distribution": "Distribution en lot",
+			"sweep": "Balayage de tokens",
+			"on_chain": "sur {chain}"
+		}
 	},
 	"footer": {
 		"tagline": "Votre boîte à outils Web3 tout-en-un",
@@ -66,7 +135,6 @@
 	"show_more": "Voir plus",
 	"show_less": "Voir moins",
 	"back_to_home": "Retour à l'accueil",
-	"faqs": "Questions fréquentes",
 	"total_checks": "Total des vérifications",
 	"passed": "Réussi",
 	"failed": "Échoué",
@@ -103,5 +171,48 @@
 		"last": "Dernière",
 		"page": "Page",
 		"showing_range": "Affichage {start}-{end} sur {total}"
+	},
+	"pricing": {
+		"title": "Tarification simple et transparente",
+		"subtitle": "Choisissez le plan qui vous convient. Payez à l'usage ou débloquez tout avec un abonnement.",
+		"pay_per_use": {
+			"title": "Paiement à l'usage",
+			"description": "Parfait pour les utilisateurs occasionnels",
+			"unit": "Token Natif / tx",
+			"features": {
+				"no_subscription": "Sans abonnement",
+				"pay_as_you_go": "Payez uniquement quand vous utilisez",
+				"onchain_tools": "Tous les outils on-chain",
+				"no_query_tools": "Outils de requête non inclus"
+			},
+			"examples_label": "Outils pris en charge :",
+			"examples": "Création de tokens, Transferts en lot, Interactions avec contrats, etc.",
+			"cta": "Commencer à utiliser"
+		},
+		"membership": {
+			"title": "Abonnement",
+			"description": "Accès complet à tous les outils sur votre chaîne",
+			"badge": "Meilleur rapport qualité-prix",
+			"daily": "Journalier",
+			"monthly": "Mensuel",
+			"yearly": "Annuel",
+			"unit": "Token Natif",
+			"save": "Économisez {percent}%",
+			"duration": "Valide pour {days}",
+			"features": {
+				"all_onchain": "Tous les outils on-chain",
+				"all_query": "Tous les outils de requête",
+				"unlimited": "Utilisation illimitée",
+				"priority_support": "Support prioritaire"
+			},
+			"chain_notice": "Abonnement valide uniquement sur la chaîne achetée",
+			"cta": "Obtenir l'abonnement",
+			"purchase_hint": "Achat disponible sur les pages d'outils"
+		},
+		"tips": {
+			"heavy_user": "Utilisateur intensif ? L'abonnement vous fait économiser sur les opérations fréquentes.",
+			"query_tools": "Besoin d'outils de requête ? Exclusivement disponibles avec l'abonnement.",
+			"multi_chain": "Travaillez sur plusieurs chaînes ? Vous aurez besoin d'un abonnement pour chaque chaîne."
+		}
 	}
 }

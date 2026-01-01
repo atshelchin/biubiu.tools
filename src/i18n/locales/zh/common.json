@@ -11,17 +11,90 @@
 	"cta_get_started": "开始使用",
 	"cta_learn_more": "了解更多",
 	"cta": {
-		"title": "准备好开始了吗？",
-		"subtitle": "加入数千名已经使用 biubiu.tools 简化 Web3 操作的用户",
-		"button_text": "立即开始 - 完全免费"
+		"title": "准备好提升你的 Web3 效率了吗？",
+		"subtitle": "加入开发者和资深用户的行列，使用我们的专业工具每周节省数小时。无需注册，无需连接钱包即可开始。",
+		"button_text": "浏览全部工具",
+		"secondary_button": "查看文档",
+		"trust": {
+			"no_registration": "无需注册",
+			"free_tools": "核心功能免费",
+			"open_source": "100% 开源",
+			"privacy_first": "私钥本地保存"
+		}
+	},
+	"faqs": {
+		"badge": "常见问题",
+		"title": "常见问题解答",
+		"subtitle": "关于 biubiu.tools 你需要知道的一切。找不到答案？欢迎联系我们的社区。",
+		"items": [
+			{
+				"question": "什么是 biubiu.tools？",
+				"answer": "biubiu.tools 是一个专为开发者、交易员和资深用户设计的综合性 Web3 工具箱。它提供代币创建、批量转账、钱包管理、合约交互等核心功能 - 所有工具集于一处，界面简洁专业。"
+			},
+			{
+				"question": "biubiu.tools 免费吗？",
+				"answer": "是的！核心功能完全免费。对于链上操作（如代币创建或批量转账），你只需支付网络 Gas 费加少量协议费用。你也可以购买会员，解锁所选链上的所有工具无限使用。"
+			},
+			{
+				"question": "支持哪些区块链网络？",
+				"answer": "我们支持 20+ 条 EVM 兼容链，包括以太坊、BSC、Polygon、Arbitrum、Optimism、Base、Avalanche 等。你也可以通过网络设置添加自定义网络。"
+			},
+			{
+				"question": "我的私钥安全吗？",
+				"answer": "绝对安全。你的私钥永远不会离开你的浏览器。所有加密操作都在你的设备本地执行。我们无法访问你的密钥，也不会向我们的服务器发送任何数据。你可以自行验证 - 我们的代码 100% 开源。"
+			},
+			{
+				"question": "按次付费和会员有什么区别？",
+				"answer": "按次付费对每次链上操作收取少量费用，且不包含查询工具。会员则可以在固定期限内无限使用所购买链上的所有工具（包括高级查询工具）。高频用户通常可节省 50% 以上。"
+			},
+			{
+				"question": "使用工具需要连接钱包吗？",
+				"answer": "取决于具体工具。只读工具（如合约浏览器、单位转换器等）无需任何连接。对于链上操作，你需要连接钱包或导入私钥 - 但请放心，密钥仅在本地处理。"
+			},
+			{
+				"question": "biubiu.tools 开源吗？",
+				"answer": "是的！我们的全部代码都是开源的，可以在 GitHub 上查看。你可以审查代码、贡献改进，甚至自己部署一个实例。我们相信透明和社区驱动的开发。"
+			},
+			{
+				"question": "如何获得支持或报告问题？",
+				"answer": "加入我们的 Discord 社区获取实时支持和讨论。如需报告 Bug 或提交功能请求，请在 GitHub 仓库提交 Issue。我们会积极关注这两个渠道，通常在 24 小时内回复。"
+			}
+		],
+		"still_questions": "还有其他问题？",
+		"contact_text": "我们的社区随时为你提供帮助。加入 Discord 获得实时支持，或发送邮件给我们。",
+		"join_discord": "加入 Discord",
+		"email_support": "发送邮件"
 	},
 	"stats": {
-		"title": "受 Web3 用户信赖",
-		"registered_users": "活跃用户",
-		"transactions": "交易数量",
-		"total_volume": "总交易量",
-		"chains_supported": "支持的链",
-		"last_updated": "实时统计"
+		"title": "平台统计",
+		"subtitle": "来自已部署合约的实时链上数据",
+		"demo_notice": "当前为模拟数据 - 正式上线后将展示真实数据",
+		"premium_subscribers": "信赖用户",
+		"tool_usage": "链上交易",
+		"active_networks": "活跃网络",
+		"networks_hint": "部分统计，无需许可支持任意 EVM 链",
+		"loading": "加载统计中...",
+		"sort_by_members": "按会员数",
+		"sort_by_usage": "按使用量",
+		"loading_chains": "正在检查 {completed}/{total} 个网络...",
+		"refresh": "刷新",
+		"refreshing": "刷新中...",
+		"cooldown": "等待 {seconds}s",
+		"live_activity": "实时动态",
+		"no_activity": "等待活动...",
+		"top_networks": "网络使用排行",
+		"no_contracts": "暂无部署的合约",
+		"contracts_deployed": "已部署 {count}/5 个工具",
+		"last_updated": "实时链上数据",
+		"error": "加载统计失败",
+		"activity": {
+			"subscription": "新 Premium 会员",
+			"token_created": "代币已创建",
+			"nft_created": "NFT 已部署",
+			"distribution": "批量分发",
+			"sweep": "代币归集",
+			"on_chain": "在 {chain}"
+		}
 	},
 	"footer": {
 		"tagline": "一站式 Web3 工具箱",
@@ -114,5 +187,61 @@
 		"last": "末页",
 		"page": "第",
 		"showing_range": "显示 {start}-{end}，共 {total} 个"
+	},
+	"pricing": {
+		"title": "简单透明的定价",
+		"subtitle": "选择最适合您的方案。按次付费或订阅会员解锁全部功能。",
+		"pay_per_use": {
+			"title": "按次付费",
+			"description": "适合偶尔使用的用户",
+			"unit": "原生代币 / 笔",
+			"features": {
+				"no_subscription": "无需订阅",
+				"pay_as_you_go": "用多少付多少",
+				"onchain_tools": "所有上链工具",
+				"no_query_tools": "不支持查询工具"
+			},
+			"examples_label": "支持的工具：",
+			"examples": "代币创建、批量转账、合约交互等",
+			"cta": "立即使用"
+		},
+		"membership": {
+			"title": "会员订阅",
+			"description": "解锁所在链的全部工具",
+			"badge": "超值之选",
+			"daily": "日卡",
+			"monthly": "月卡",
+			"yearly": "年卡",
+			"unit": "原生代币",
+			"save": "省 {percent}%",
+			"duration": "有效期 {days}",
+			"features": {
+				"all_onchain": "所有上链工具",
+				"all_query": "所有查询工具",
+				"unlimited": "无限次使用",
+				"priority_support": "优先支持"
+			},
+			"chain_notice": "会员权益仅在购买时所选链上有效",
+			"cta": "开通会员",
+			"purchase_hint": "可在工具页面购买"
+		},
+		"tips": {
+			"heavy_user": "高频用户？会员订阅更省钱。",
+			"query_tools": "需要查询工具？仅会员可用。",
+			"multi_chain": "多链操作？每条链需单独订阅会员。"
+		},
+		"self_host": {
+			"title": "自托管",
+			"description": "为追求完全掌控的开发者而生",
+			"price": "免费",
+			"features": {
+				"full_source": "完整源代码访问",
+				"no_fees": "零协议费用",
+				"full_control": "基础设施完全可控",
+				"community_support": "GitHub 社区支持"
+			},
+			"note": "需要技术配置：Node.js、Docker、部署环境",
+			"cta": "前往 GitHub"
+		}
 	}
 }

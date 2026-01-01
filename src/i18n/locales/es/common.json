@@ -11,17 +11,86 @@
 	"cta_get_started": "Comenzar",
 	"cta_learn_more": "Más información",
 	"cta": {
-		"title": "¿Listo para empezar?",
-		"subtitle": "Únete a miles de usuarios que ya utilizan biubiu.tools para simplificar sus operaciones Web3",
-		"button_text": "Empieza ahora - Es gratis"
+		"title": "¿Listo para potenciar tu flujo de trabajo Web3?",
+		"subtitle": "Únete a desarrolladores y usuarios avanzados que ahorran horas cada semana con nuestro kit de herramientas de grado profesional. Sin registro, sin conexión de billetera requerida para comenzar.",
+		"button_text": "Explorar todas las herramientas",
+		"secondary_button": "Ver documentación",
+		"trust": {
+			"no_registration": "Sin registro requerido",
+			"free_tools": "Herramientas básicas gratuitas",
+			"open_source": "100% Código abierto",
+			"privacy_first": "Tus claves permanecen locales"
+		}
+	},
+	"faqs": {
+		"badge": "Preguntas comunes",
+		"title": "Preguntas frecuentes",
+		"subtitle": "Todo lo que necesitas saber sobre biubiu.tools. ¿No encuentras lo que buscas? Contacta a nuestra comunidad.",
+		"items": [
+			{
+				"question": "¿Qué es biubiu.tools?",
+				"answer": "biubiu.tools es un kit de herramientas Web3 integral diseñado para desarrolladores, traders y usuarios avanzados. Proporciona herramientas esenciales como creación de tokens, transferencias masivas, gestión de billeteras e interacciones con contratos, todo en un solo lugar con una interfaz limpia y profesional."
+			},
+			{
+				"question": "¿Es gratis usar biubiu.tools?",
+				"answer": "¡Sí! Las funciones principales son completamente gratuitas. Para operaciones en la cadena (como creación de tokens o transferencias masivas), solo pagas las tarifas de gas de la red más una pequeña tarifa de protocolo. Alternativamente, puedes comprar una membresía para acceso ilimitado a todas las herramientas en tu cadena preferida."
+			},
+			{
+				"question": "¿Qué redes blockchain están soportadas?",
+				"answer": "Soportamos más de 20 redes compatibles con EVM, incluyendo Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche y muchas más. También puedes agregar redes personalizadas a través de nuestra configuración de red."
+			},
+			{
+				"question": "¿Mi clave privada está segura?",
+				"answer": "Absolutamente. Tus claves privadas nunca salen de tu navegador. Todas las operaciones criptográficas se realizan localmente en tu dispositivo. No tenemos acceso a tus claves y no se envían datos a nuestros servidores. Puedes verificar esto tú mismo: nuestro código es 100% código abierto."
+			},
+			{
+				"question": "¿Cuál es la diferencia entre pago por uso y membresía?",
+				"answer": "El pago por uso cobra una pequeña tarifa por cada operación en la cadena y no incluye herramientas de consulta. La membresía te da acceso ilimitado a TODAS las herramientas (incluidas las herramientas de consulta premium) en tu cadena comprada por una duración fija. Los usuarios frecuentes generalmente ahorran más del 50% con la membresía."
+			},
+			{
+				"question": "¿Necesito conectar mi billetera para usar las herramientas?",
+				"answer": "Depende de la herramienta. Las herramientas de solo lectura (como exploradores de contratos, convertidores de unidades, etc.) funcionan sin ninguna conexión. Para operaciones en la cadena, necesitarás conectar tu billetera o importar una clave privada, pero recuerda, las claves se procesan solo localmente."
+			},
+			{
+				"question": "¿Es biubiu.tools de código abierto?",
+				"answer": "¡Sí! Toda nuestra base de código es de código abierto y está disponible en GitHub. Puedes revisar el código, contribuir con mejoras o incluso alojar tu propia instancia. Creemos en la transparencia y el desarrollo impulsado por la comunidad."
+			},
+			{
+				"question": "¿Cómo puedo obtener soporte o reportar problemas?",
+				"answer": "Únete a nuestra comunidad de Discord para soporte en tiempo real y discusiones. Para reportes de errores y solicitudes de funciones, por favor abre un issue en nuestro repositorio de GitHub. Monitoreamos activamente ambos canales y generalmente respondemos en 24 horas."
+			}
+		],
+		"still_questions": "¿Aún tienes preguntas?",
+		"contact_text": "Nuestra comunidad está aquí para ayudar. Únete a nuestro Discord para soporte en tiempo real o envíanos un correo electrónico.",
+		"join_discord": "Unirse a Discord",
+		"email_support": "Envíanos un correo"
 	},
 	"stats": {
-		"title": "Confianza de usuarios Web3",
-		"registered_users": "Usuarios activos",
-		"transactions": "Transacciones",
-		"total_volume": "Volumen total",
-		"chains_supported": "Cadenas soportadas",
-		"last_updated": "Estadísticas en vivo"
+		"title": "Estadísticas de la Plataforma",
+		"subtitle": "Datos en cadena en tiempo real de contratos desplegados",
+		"premium_subscribers": "Usuarios de Confianza",
+		"tool_usage": "Transacciones Completadas",
+		"active_networks": "Redes Soportadas",
+		"loading": "Cargando estadísticas...",
+		"loading_chains": "Verificando {completed}/{total} redes...",
+		"refresh": "Actualizar",
+		"refreshing": "Actualizando...",
+		"cooldown": "Espera {seconds}s",
+		"live_activity": "Actividad en Vivo",
+		"no_activity": "Esperando actividad...",
+		"top_networks": "Principales Redes por Uso",
+		"no_contracts": "Sin contratos desplegados todavía",
+		"contracts_deployed": "{count}/5 herramientas desplegadas",
+		"last_updated": "Datos en Cadena en Vivo",
+		"error": "Error al cargar estadísticas",
+		"activity": {
+			"subscription": "Nuevo suscriptor Premium",
+			"token_created": "Token creado",
+			"nft_created": "NFT desplegado",
+			"distribution": "Distribución masiva",
+			"sweep": "Barrido de tokens",
+			"on_chain": "en {chain}"
+		}
 	},
 	"footer": {
 		"tagline": "Tu kit de herramientas Web3 todo en uno",
@@ -103,5 +172,48 @@
 		"last": "Última",
 		"page": "Página",
 		"showing_range": "Mostrando {start}-{end} de {total}"
+	},
+	"pricing": {
+		"title": "Precios simples y transparentes",
+		"subtitle": "Elige el plan que mejor se adapte a ti. Paga por uso o desbloquea todo con una membresía.",
+		"pay_per_use": {
+			"title": "Pago por uso",
+			"description": "Perfecto para usuarios ocasionales",
+			"unit": "Token Nativo / tx",
+			"features": {
+				"no_subscription": "Sin suscripción requerida",
+				"pay_as_you_go": "Paga solo cuando uses",
+				"onchain_tools": "Todas las herramientas on-chain",
+				"no_query_tools": "Herramientas de consulta no incluidas"
+			},
+			"examples_label": "Herramientas compatibles:",
+			"examples": "Creación de tokens, Transferencias masivas, Interacciones con contratos, etc.",
+			"cta": "Comenzar a usar"
+		},
+		"membership": {
+			"title": "Membresía",
+			"description": "Acceso completo a todas las herramientas en tu cadena",
+			"badge": "Mejor valor",
+			"daily": "Diario",
+			"monthly": "Mensual",
+			"yearly": "Anual",
+			"unit": "Token Nativo",
+			"save": "Ahorra {percent}%",
+			"duration": "Válido por {days}",
+			"features": {
+				"all_onchain": "Todas las herramientas on-chain",
+				"all_query": "Todas las herramientas de consulta",
+				"unlimited": "Uso ilimitado",
+				"priority_support": "Soporte prioritario"
+			},
+			"chain_notice": "Membresía válida solo en la cadena comprada",
+			"cta": "Obtener membresía",
+			"purchase_hint": "Compra disponible en las páginas de herramientas"
+		},
+		"tips": {
+			"heavy_user": "¿Usuario frecuente? La membresía te ahorra más en operaciones frecuentes.",
+			"query_tools": "¿Necesitas herramientas de consulta? Solo disponibles con membresía.",
+			"multi_chain": "¿Trabajas en múltiples cadenas? Necesitarás una membresía para cada cadena."
+		}
 	}
 }

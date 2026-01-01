@@ -11,17 +11,86 @@
 	"cta_get_started": "Inizia",
 	"cta_learn_more": "Scopri di più",
 	"cta": {
-		"title": "Pronto per iniziare?",
-		"subtitle": "Unisciti a migliaia di utenti che già usano biubiu.tools per semplificare le loro operazioni Web3",
-		"button_text": "Inizia ora - È gratis"
+		"title": "Pronto a potenziare il tuo flusso di lavoro Web3?",
+		"subtitle": "Unisciti a sviluppatori e power user che risparmiano ore ogni settimana con il nostro toolkit di livello professionale. Nessuna registrazione, nessuna connessione wallet richiesta per iniziare.",
+		"button_text": "Esplora tutti gli strumenti",
+		"secondary_button": "Vedi documentazione",
+		"trust": {
+			"no_registration": "Nessuna registrazione richiesta",
+			"free_tools": "Strumenti core gratuiti",
+			"open_source": "100% Open Source",
+			"privacy_first": "Le tue chiavi rimangono locali"
+		}
+	},
+	"faqs": {
+		"badge": "Domande comuni",
+		"title": "Domande frequenti",
+		"subtitle": "Tutto ciò che devi sapere su biubiu.tools. Non trovi quello che cerchi? Contatta la nostra community.",
+		"items": [
+			{
+				"question": "Cos'è biubiu.tools?",
+				"answer": "biubiu.tools è un toolkit Web3 completo progettato per sviluppatori, trader e power user. Fornisce strumenti essenziali come creazione di token, trasferimenti batch, gestione wallet e interazioni con contratti - tutto in un unico posto con un'interfaccia pulita e professionale."
+			},
+			{
+				"question": "biubiu.tools è gratuito?",
+				"answer": "Sì! Le funzionalità core sono completamente gratuite. Per le operazioni on-chain (come la creazione di token o i trasferimenti batch), paghi solo le commissioni gas di rete più una piccola commissione di protocollo. In alternativa, puoi acquistare un abbonamento per accesso illimitato a tutti gli strumenti sulla tua chain preferita."
+			},
+			{
+				"question": "Quali reti blockchain sono supportate?",
+				"answer": "Supportiamo oltre 20 reti compatibili con EVM, tra cui Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche e molte altre. Puoi anche aggiungere reti personalizzate attraverso le nostre impostazioni di rete."
+			},
+			{
+				"question": "La mia chiave privata è al sicuro?",
+				"answer": "Assolutamente. Le tue chiavi private non lasciano mai il tuo browser. Tutte le operazioni crittografiche vengono eseguite localmente sul tuo dispositivo. Non abbiamo accesso alle tue chiavi e nessun dato viene inviato ai nostri server. Puoi verificarlo tu stesso - il nostro codice è 100% open source."
+			},
+			{
+				"question": "Qual è la differenza tra Paga a consumo e Abbonamento?",
+				"answer": "Paga a consumo addebita una piccola commissione per ogni operazione on-chain e non include gli strumenti di query. L'abbonamento ti dà accesso illimitato a TUTTI gli strumenti (inclusi gli strumenti di query premium) sulla tua chain acquistata per una durata fissa. Gli utenti intensivi risparmiano tipicamente oltre il 50% con l'abbonamento."
+			},
+			{
+				"question": "Devo connettere il mio wallet per usare gli strumenti?",
+				"answer": "Dipende dallo strumento. Gli strumenti di sola lettura (come esploratori di contratti, convertitori di unità, ecc.) funzionano senza alcuna connessione. Per le operazioni on-chain, dovrai connettere il tuo wallet o importare una chiave privata - ma ricorda, le chiavi vengono elaborate solo localmente."
+			},
+			{
+				"question": "biubiu.tools è open source?",
+				"answer": "Sì! L'intera nostra codebase è open source e disponibile su GitHub. Puoi rivedere il codice, contribuire con miglioramenti o persino ospitare la tua istanza. Crediamo nella trasparenza e nello sviluppo guidato dalla community."
+			},
+			{
+				"question": "Come posso ottenere supporto o segnalare problemi?",
+				"answer": "Unisciti alla nostra community Discord per supporto e discussioni in tempo reale. Per segnalazioni di bug e richieste di funzionalità, apri un issue sul nostro repository GitHub. Monitoriamo attivamente entrambi i canali e rispondiamo tipicamente entro 24 ore."
+			}
+		],
+		"still_questions": "Hai ancora domande?",
+		"contact_text": "La nostra community è qui per aiutarti. Unisciti al nostro Discord per supporto in tempo reale o inviaci un'email.",
+		"join_discord": "Unisciti a Discord",
+		"email_support": "Scrivici"
 	},
 	"stats": {
-		"title": "Scelto dagli utenti Web3",
-		"registered_users": "Utenti attivi",
-		"transactions": "Transazioni",
-		"total_volume": "Volume totale",
-		"chains_supported": "Chain supportate",
-		"last_updated": "Statistiche in tempo reale"
+		"title": "Statistiche della Piattaforma",
+		"subtitle": "Dati on-chain in tempo reale dai contratti distribuiti",
+		"premium_subscribers": "Utenti Fidati",
+		"tool_usage": "Transazioni Completate",
+		"active_networks": "Reti Supportate",
+		"loading": "Caricamento statistiche...",
+		"loading_chains": "Controllo {completed}/{total} reti...",
+		"refresh": "Aggiorna",
+		"refreshing": "Aggiornamento...",
+		"cooldown": "Attendi {seconds}s",
+		"live_activity": "Attività in Tempo Reale",
+		"no_activity": "In attesa di attività...",
+		"top_networks": "Principali Reti per Utilizzo",
+		"no_contracts": "Nessun contratto distribuito",
+		"contracts_deployed": "{count}/5 strumenti distribuiti",
+		"last_updated": "Dati On-Chain in Tempo Reale",
+		"error": "Caricamento statistiche fallito",
+		"activity": {
+			"subscription": "Nuovo abbonato Premium",
+			"token_created": "Token creato",
+			"nft_created": "NFT distribuito",
+			"distribution": "Distribuzione batch",
+			"sweep": "Sweep di token",
+			"on_chain": "su {chain}"
+		}
 	},
 	"footer": {
 		"tagline": "Il tuo toolkit Web3 tutto-in-uno",
@@ -66,7 +135,6 @@
 	"show_more": "Mostra di più",
 	"show_less": "Mostra meno",
 	"back_to_home": "Torna alla home",
-	"faqs": "Domande frequenti",
 	"total_checks": "Controlli totali",
 	"passed": "Superato",
 	"failed": "Fallito",
@@ -103,5 +171,48 @@
 		"last": "Ultima",
 		"page": "Pagina",
 		"showing_range": "Visualizzazione {start}-{end} di {total}"
+	},
+	"pricing": {
+		"title": "Prezzi semplici e trasparenti",
+		"subtitle": "Scegli il piano più adatto a te. Paga a consumo o sblocca tutto con un abbonamento.",
+		"pay_per_use": {
+			"title": "Paga a consumo",
+			"description": "Perfetto per utenti occasionali",
+			"unit": "Token Nativo / tx",
+			"features": {
+				"no_subscription": "Nessun abbonamento richiesto",
+				"pay_as_you_go": "Paga solo quando usi",
+				"onchain_tools": "Tutti gli strumenti on-chain",
+				"no_query_tools": "Strumenti di query non inclusi"
+			},
+			"examples_label": "Strumenti supportati:",
+			"examples": "Creazione token, Trasferimenti batch, Interazioni con contratti, ecc.",
+			"cta": "Inizia a usare"
+		},
+		"membership": {
+			"title": "Abbonamento",
+			"description": "Accesso completo a tutti gli strumenti sulla tua chain",
+			"badge": "Miglior valore",
+			"daily": "Giornaliero",
+			"monthly": "Mensile",
+			"yearly": "Annuale",
+			"unit": "Token Nativo",
+			"save": "Risparmia {percent}%",
+			"duration": "Valido per {days}",
+			"features": {
+				"all_onchain": "Tutti gli strumenti on-chain",
+				"all_query": "Tutti gli strumenti di query",
+				"unlimited": "Uso illimitato",
+				"priority_support": "Supporto prioritario"
+			},
+			"chain_notice": "L'abbonamento è valido solo sulla chain acquistata",
+			"cta": "Ottieni abbonamento",
+			"purchase_hint": "Acquisto disponibile nelle pagine degli strumenti"
+		},
+		"tips": {
+			"heavy_user": "Utente frequente? L'abbonamento ti fa risparmiare sulle operazioni frequenti.",
+			"query_tools": "Hai bisogno di strumenti di query? Disponibili solo con abbonamento.",
+			"multi_chain": "Lavori su più chain? Avrai bisogno di un abbonamento per ogni chain."
+		}
 	}
 }

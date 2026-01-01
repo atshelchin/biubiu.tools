@@ -11,17 +11,86 @@
 	"cta_get_started": "Başla",
 	"cta_learn_more": "Daha fazla bilgi",
 	"cta": {
-		"title": "Başlamaya hazır mısınız?",
-		"subtitle": "Web3 işlemlerini kolaylaştırmak için biubiu.tools kullanan binlerce kullanıcıya katılın",
-		"button_text": "Şimdi başla - Ücretsiz"
+		"title": "Web3 İş Akışınızı Güçlendirmeye Hazır mısınız?",
+		"subtitle": "Profesyonel seviye araç setimizle her hafta saatler tasarruf eden geliştiricilere ve ileri düzey kullanıcılara katılın. Başlamak için kayıt veya cüzdan bağlantısı gerekmez.",
+		"button_text": "Tüm Araçları Keşfet",
+		"secondary_button": "Dokümantasyonu Görüntüle",
+		"trust": {
+			"no_registration": "Kayıt Gerekmez",
+			"free_tools": "Ücretsiz Temel Araçlar",
+			"open_source": "100% Açık Kaynak",
+			"privacy_first": "Anahtarlarınız Yerel Kalır"
+		}
+	},
+	"faqs": {
+		"badge": "Sık Sorulan Sorular",
+		"title": "Sıkça Sorulan Sorular",
+		"subtitle": "biubiu.tools hakkında bilmeniz gereken her şey. Aradığınızı bulamıyor musunuz? Topluluğumuzla iletişime geçin.",
+		"items": [
+			{
+				"question": "biubiu.tools nedir?",
+				"answer": "biubiu.tools, geliştiriciler, yatırımcılar ve ileri düzey kullanıcılar için tasarlanmış kapsamlı bir Web3 araç setidir. Token oluşturma, toplu transferler, cüzdan yönetimi ve sözleşme etkileşimleri gibi temel araçları temiz ve profesyonel bir arayüzle tek bir yerde sunar."
+			},
+			{
+				"question": "biubiu.tools kullanımı ücretsiz mi?",
+				"answer": "Evet! Temel özellikler tamamen ücretsizdir. On-chain işlemler için (token oluşturma veya toplu transferler gibi) yalnızca ağ gas ücretleri ve küçük bir protokol ücreti ödersiniz. Alternatif olarak, tercih ettiğiniz zincirdeki tüm araçlara sınırsız erişim için üyelik satın alabilirsiniz."
+			},
+			{
+				"question": "Hangi blockchain ağları destekleniyor?",
+				"answer": "Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche ve daha fazlası dahil 20'den fazla EVM uyumlu ağı destekliyoruz. Ağ ayarlarımız üzerinden özel ağlar da ekleyebilirsiniz."
+			},
+			{
+				"question": "Özel anahtarım güvende mi?",
+				"answer": "Kesinlikle. Özel anahtarlarınız asla tarayıcınızdan ayrılmaz. Tüm kriptografik işlemler cihazınızda yerel olarak gerçekleştirilir. Anahtarlarınıza erişimimiz yoktur ve hiçbir veri sunucularımıza gönderilmez. Bunu kendiniz doğrulayabilirsiniz - kodumuz 100% açık kaynaktır."
+			},
+			{
+				"question": "Kullandıkça Öde ile Üyelik arasındaki fark nedir?",
+				"answer": "Kullandıkça Öde, her on-chain işlem için küçük bir ücret alır ve sorgu araçlarını içermez. Üyelik, satın aldığınız zincirdeki TÜM araçlara (premium sorgu araçları dahil) belirli bir süre için sınırsız erişim sağlar. Yoğun kullanıcılar genellikle üyelikle %50'den fazla tasarruf eder."
+			},
+			{
+				"question": "Araçları kullanmak için cüzdanımı bağlamam gerekiyor mu?",
+				"answer": "Araca göre değişir. Salt okunur araçlar (sözleşme keşfedicileri, birim dönüştürücüler vb.) herhangi bir bağlantı olmadan çalışır. On-chain işlemler için cüzdanınızı bağlamanız veya özel anahtar içe aktarmanız gerekir - ancak unutmayın, anahtarlar yalnızca yerel olarak işlenir."
+			},
+			{
+				"question": "biubiu.tools açık kaynak mı?",
+				"answer": "Evet! Tüm kod tabanımız açık kaynak ve GitHub'da mevcuttur. Kodu inceleyebilir, iyileştirmelere katkıda bulunabilir veya kendi örneğinizi bile barındırabilirsiniz. Şeffaflığa ve topluluk odaklı geliştirmeye inanıyoruz."
+			},
+			{
+				"question": "Nasıl destek alabilirim veya sorun bildirebilirim?",
+				"answer": "Gerçek zamanlı destek ve tartışmalar için Discord topluluğumuza katılın. Hata raporları ve özellik istekleri için lütfen GitHub depomuzda bir issue açın. Her iki kanalı da aktif olarak takip ediyoruz ve genellikle 24 saat içinde yanıt veriyoruz."
+			}
+		],
+		"still_questions": "Hala sorularınız mı var?",
+		"contact_text": "Topluluğumuz yardımcı olmak için burada. Gerçek zamanlı destek için Discord'umuza katılın veya bize e-posta gönderin.",
+		"join_discord": "Discord'a Katıl",
+		"email_support": "E-posta Gönder"
 	},
 	"stats": {
-		"title": "Web3 kullanıcıları tarafından güvenilir",
-		"registered_users": "Aktif kullanıcılar",
-		"transactions": "İşlemler",
-		"total_volume": "Toplam hacim",
-		"chains_supported": "Desteklenen zincirler",
-		"last_updated": "Canlı istatistikler"
+		"title": "Platform İstatistikleri",
+		"subtitle": "Dağıtılmış sözleşmelerden gerçek zamanlı on-chain verileri",
+		"premium_subscribers": "Güvenilen Kullanıcılar",
+		"tool_usage": "Tamamlanan İşlemler",
+		"active_networks": "Desteklenen Ağlar",
+		"loading": "İstatistikler yükleniyor...",
+		"loading_chains": "{completed}/{total} ağ kontrol ediliyor...",
+		"refresh": "Yenile",
+		"refreshing": "Yenileniyor...",
+		"cooldown": "{seconds}s bekle",
+		"live_activity": "Canlı Aktivite",
+		"no_activity": "Aktivite bekleniyor...",
+		"top_networks": "Kullanıma Göre En İyi Ağlar",
+		"no_contracts": "Henüz dağıtılmış sözleşme yok",
+		"contracts_deployed": "{count}/5 araç dağıtıldı",
+		"last_updated": "Canlı On-Chain Verileri",
+		"error": "İstatistikler yüklenemedi",
+		"activity": {
+			"subscription": "Yeni Premium abone",
+			"token_created": "Token oluşturuldu",
+			"nft_created": "NFT dağıtıldı",
+			"distribution": "Toplu dağıtım",
+			"sweep": "Token süpürme",
+			"on_chain": "{chain} üzerinde"
+		}
 	},
 	"footer": {
 		"tagline": "Hepsi bir arada Web3 araç setiniz",
@@ -66,7 +135,6 @@
 	"show_more": "Daha fazla göster",
 	"show_less": "Daha az göster",
 	"back_to_home": "Ana sayfaya dön",
-	"faqs": "Sık sorulan sorular",
 	"total_checks": "Toplam kontroller",
 	"passed": "Başarılı",
 	"failed": "Başarısız",
@@ -103,5 +171,48 @@
 		"last": "Son",
 		"page": "Sayfa",
 		"showing_range": "{total} içinden {start}-{end} gösteriliyor"
+	},
+	"pricing": {
+		"title": "Basit ve Şeffaf Fiyatlandırma",
+		"subtitle": "Size uygun planı seçin. Kullandıkça ödeyin veya üyelikle her şeyi açın.",
+		"pay_per_use": {
+			"title": "Kullandıkça Öde",
+			"description": "Ara sıra kullananlar için ideal",
+			"unit": "Yerel Token / tx",
+			"features": {
+				"no_subscription": "Abonelik gerektirmez",
+				"pay_as_you_go": "Sadece kullandığınızda ödeyin",
+				"onchain_tools": "Tüm on-chain araçlar",
+				"no_query_tools": "Sorgu araçları dahil değil"
+			},
+			"examples_label": "Desteklenen araçlar:",
+			"examples": "Token oluşturma, Toplu transferler, Sözleşme etkileşimleri, vb.",
+			"cta": "Kullanmaya Başla"
+		},
+		"membership": {
+			"title": "Üyelik",
+			"description": "Zincirinizde tüm araçlara tam erişim",
+			"badge": "En İyi Değer",
+			"daily": "Günlük",
+			"monthly": "Aylık",
+			"yearly": "Yıllık",
+			"unit": "Yerel Token",
+			"save": "%{percent} Tasarruf",
+			"duration": "{days} geçerli",
+			"features": {
+				"all_onchain": "Tüm on-chain araçlar",
+				"all_query": "Tüm sorgu araçları",
+				"unlimited": "Sınırsız kullanım",
+				"priority_support": "Öncelikli destek"
+			},
+			"chain_notice": "Üyelik yalnızca satın alınan zincirde geçerlidir",
+			"cta": "Üyelik Al",
+			"purchase_hint": "Araç sayfalarında satın alınabilir"
+		},
+		"tips": {
+			"heavy_user": "Yoğun kullanıcı mısınız? Üyelik sık işlemlerde daha tasarruflu.",
+			"query_tools": "Sorgu araçlarına mı ihtiyacınız var? Sadece üyelikle kullanılabilir.",
+			"multi_chain": "Birden fazla zincirde mi çalışıyorsunuz? Her zincir için ayrı üyelik gerekir."
+		}
 	}
 }
