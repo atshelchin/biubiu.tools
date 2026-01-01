@@ -107,7 +107,7 @@ Once deployed, you can:
 1. **Add to wallet** - Import token to MetaMask
 2. **Verify on explorer** - Publish source code
 3. **Add liquidity** - Create trading pairs
-4. **Distribute tokens** - Use [One-to-Many Transfer](/docs/v1/guides/one-to-many-transfer)
+4. **Distribute tokens** - Use [One-to-Many Transfer](/apps/one-to-many-transfer)
 
 ## Common Issues
 
