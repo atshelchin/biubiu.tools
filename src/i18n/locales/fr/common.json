@@ -171,6 +171,16 @@
 		"page": "Page",
 		"showing_range": "Affichage {start}-{end} sur {total}"
 	},
+	"docs": {
+		"title": "Documentation",
+		"back_to_home": "Retour à l'accueil",
+		"on_this_page": "Sur cette page",
+		"previous": "Précédent",
+		"next": "Suivant",
+		"edit_on_github": "Modifier cette page sur GitHub",
+		"no_documents": "Aucun document",
+		"no_documents_description": "Il n'y a pas encore de documents dans cette section."
+	},
 	"pricing": {
 		"title": "Tarification simple et transparente",
 		"subtitle": "Choisissez le plan qui vous convient. Payez à l'usage ou débloquez tout avec un abonnement.",
