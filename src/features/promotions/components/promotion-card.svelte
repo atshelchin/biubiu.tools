@@ -1,11 +1,45 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	import * as icons from '@lucide/svelte';
-	import { ArrowRight } from '@lucide/svelte';
+	import {
+		ArrowRight,
+		AtSign,
+		Bell,
+		Coins,
+		FileCode,
+		Image,
+		KeyRound,
+		LayoutGrid,
+		LineChart,
+		Link,
+		Search,
+		Send,
+		Terminal,
+		TrendingUp,
+		Wallet
+	} from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n';
 	import type { Promotion } from '../types';
 	import { addTrackingParams, isBrowser } from '../utils/tracking';
+	import type { Component } from 'svelte';
+
+	// Icon mapping for promotable tools
+	const iconMap: Record<string, Component<{ size?: number }>> = {
+		AtSign,
+		Bell,
+		Coins,
+		FileCode,
+		Image,
+		KeyRound,
+		LayoutGrid,
+		LineChart,
+		Link,
+		Search,
+		Send,
+		Terminal,
+		TrendingUp,
+		Wallet
+	};
 
 	interface Props {
 		promotion: Promotion;
@@ -19,10 +53,8 @@
 
 	const i18n = useI18n();
 
-	// Get icon component dynamically
-	const IconComponent = $derived(
-		icons[promotion.tool.icon as keyof typeof icons] as typeof icons.Coins
-	);
+	// Get icon component from mapping
+	const IconComponent = $derived(iconMap[promotion.tool.icon]);
 
 	// SSR: clean URL, Client: add tracking params after hydration
 	// Use derived to capture latest promotion value
