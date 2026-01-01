@@ -12,10 +12,7 @@ export const prerender = true;
 
 // Generate entries for all locales (empty string = no locale prefix)
 export const entries: EntryGenerator = () => {
-	return [
-		{ locale: '' },
-		...localeMetas.map((l) => ({ locale: l.code }))
-	];
+	return [{ locale: '' }, ...localeMetas.map((l) => ({ locale: l.code }))];
 };
 
 export const load: PageLoad = async () => {
