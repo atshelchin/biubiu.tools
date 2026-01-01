@@ -68,7 +68,9 @@
 				<span class="separator">·</span>
 				<a href={localizeHref('/terms')} class="legal-link">{i18n.t('common.footer.terms')}</a>
 				<span class="separator">·</span>
-				<a href="/sitemap.xml" class="legal-link">Sitemap</a>
+				<a href={localizeHref('/roadmap')} class="legal-link">{i18n.t('common.footer.roadmap')}</a>
+				<span class="separator">·</span>
+				<a href="/sitemap.xml" class="legal-link">{i18n.t('common.footer.sitemap')}</a>
 				<span class="separator">·</span>
 				<span class="english-hint">{i18n.t('common.language.english_most_complete')}</span>
 			</div>
