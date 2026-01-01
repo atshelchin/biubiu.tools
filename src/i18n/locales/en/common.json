@@ -11,15 +11,15 @@
 	"cta_get_started": "Get Started",
 	"cta_learn_more": "Learn More",
 	"cta": {
-		"title": "Ready to Supercharge Your Web3 Workflow?",
-		"subtitle": "Join developers and power users who save hours every week with our professional-grade toolkit. No registration, no wallet connection required to get started.",
-		"button_text": "Explore All Tools",
-		"secondary_button": "View Documentation",
+		"title": "The Ultimate Batch Operations Toolkit",
+		"subtitle": "Send to thousands of addresses in one tx. Sweep multi-wallet balances instantly. Scan 100k addresses in seconds. Keys never leave your browser, fully auditable — a no-compromise toolkit built for power users.",
+		"button_text": "Try It Now",
+		"secondary_button": "Audit the Code",
 		"trust": {
-			"no_registration": "No Registration Required",
-			"free_tools": "Free Core Tools",
-			"open_source": "100% Open Source",
-			"privacy_first": "Your Keys Stay Local"
+			"no_registration": "No Sign-Up",
+			"free_tools": "Core Free",
+			"open_source": "Fully Auditable",
+			"privacy_first": "Zero Key Upload"
 		}
 	},
 	"faqs": {
@@ -41,7 +41,7 @@
 			},
 			{
 				"question": "Is my private key safe?",
-				"answer": "Absolutely. Your private keys never leave your browser. All cryptographic operations are performed locally on your device. We don't have access to your keys, and no data is sent to our servers. You can verify this yourself - our code is 100% open source."
+				"answer": "Absolutely. Your private keys never leave your browser. All cryptographic operations are performed locally on your device. You can verify this yourself - our code is 100% open source."
 			},
 			{
 				"question": "What's the difference between Pay-Per-Use and Membership?",
@@ -57,13 +57,12 @@
 			},
 			{
 				"question": "How can I get support or report issues?",
-				"answer": "Join our Discord community for real-time support and discussions. For bug reports and feature requests, please open an issue on our GitHub repository. We actively monitor both channels and typically respond within 24 hours."
+				"answer": "Join our Telegram group for real-time support and discussions. For bug reports and feature requests, please open an issue on our GitHub repository. We typically respond within 24 hours."
 			}
 		],
 		"still_questions": "Still have questions?",
-		"contact_text": "Our community is here to help. Join our Discord for real-time support or send us an email.",
-		"join_discord": "Join Discord",
-		"email_support": "Email Us"
+		"contact_text": "Our community is here to help. Join our Telegram group for real-time support.",
+		"join_telegram": "Join Telegram"
 	},
 	"stats": {
 		"title": "Platform Statistics",
@@ -140,7 +139,6 @@
 	"show_more": "Show More",
 	"show_less": "Show Less",
 	"back_to_home": "Back to Home",
-	"faqs": "Frequently Asked Questions",
 	"total_checks": "Total Checks",
 	"passed": "Passed",
 	"failed": "Failed",
@@ -191,6 +189,7 @@
 	"pricing": {
 		"title": "Simple, Transparent Pricing",
 		"subtitle": "Choose the plan that works best for you. Pay per use or unlock everything with a membership.",
+		"transition": "Don't want to deploy? Use our hosted service",
 		"pay_per_use": {
 			"title": "Pay Per Use",
 			"description": "Perfect for occasional users",
@@ -240,7 +239,8 @@
 				"full_control": "Complete infrastructure control",
 				"community_support": "Community support via GitHub"
 			},
-			"note": "Requires technical setup: Node.js, Docker, deployment infrastructure",
+			"note": "Requires: Node.js, Docker, deployment infrastructure",
+			"security_warning": "Using untrusted deployments may result in loss of funds. Only use biubiu.tools or self-host.",
 			"cta": "View on GitHub"
 		}
 	}

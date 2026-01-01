@@ -11,15 +11,15 @@
 	"cta_get_started": "Mulai",
 	"cta_learn_more": "Pelajari lebih lanjut",
 	"cta": {
-		"title": "Siap Meningkatkan Alur Kerja Web3 Anda?",
-		"subtitle": "Bergabunglah dengan para developer dan pengguna profesional yang menghemat berjam-jam setiap minggu dengan toolkit tingkat profesional kami. Tanpa registrasi, tanpa koneksi wallet untuk memulai.",
-		"button_text": "Jelajahi Semua Alat",
-		"secondary_button": "Lihat Dokumentasi",
+		"title": "Senjata Utama untuk Operasi Massal",
+		"subtitle": "Kirim ke ribuan alamat dalam satu transaksi. Konsolidasi saldo multi-wallet secara instan. Pindai 100k alamat dalam hitungan detik. Kunci tidak pernah meninggalkan browser, sepenuhnya dapat diaudit — toolkit tanpa kompromi untuk power user.",
+		"button_text": "Coba Sekarang",
+		"secondary_button": "Audit Kode",
 		"trust": {
-			"no_registration": "Tanpa Registrasi",
-			"free_tools": "Alat Inti Gratis",
-			"open_source": "100% Open Source",
-			"privacy_first": "Kunci Anda Tetap Lokal"
+			"no_registration": "Tanpa Daftar",
+			"free_tools": "Core Gratis",
+			"open_source": "Sepenuhnya Dapat Diaudit",
+			"privacy_first": "Zero Upload Kunci"
 		}
 	},
 	"faqs": {
@@ -57,13 +57,12 @@
 			},
 			{
 				"question": "Bagaimana cara mendapatkan dukungan atau melaporkan masalah?",
-				"answer": "Bergabunglah dengan komunitas Discord kami untuk dukungan dan diskusi real-time. Untuk laporan bug dan permintaan fitur, silakan buka issue di repositori GitHub kami. Kami secara aktif memantau kedua saluran dan biasanya merespons dalam 24 jam."
+				"answer": "Bergabunglah dengan grup Telegram kami untuk dukungan dan diskusi real-time. Untuk laporan bug dan permintaan fitur, silakan buka issue di repositori GitHub kami. Kami biasanya merespons dalam 24 jam."
 			}
 		],
 		"still_questions": "Masih ada pertanyaan?",
-		"contact_text": "Komunitas kami siap membantu. Bergabunglah dengan Discord kami untuk dukungan real-time atau kirimkan email kepada kami.",
-		"join_discord": "Gabung Discord",
-		"email_support": "Kirim Email"
+		"contact_text": "Komunitas kami siap membantu. Bergabunglah dengan grup Telegram kami untuk dukungan real-time.",
+		"join_telegram": "Gabung Telegram"
 	},
 	"stats": {
 		"title": "Statistik Platform",
@@ -135,7 +134,6 @@
 	"show_more": "Tampilkan lebih banyak",
 	"show_less": "Tampilkan lebih sedikit",
 	"back_to_home": "Kembali ke beranda",
-	"faqs": "Pertanyaan yang sering diajukan",
 	"total_checks": "Total pemeriksaan",
 	"passed": "Lulus",
 	"failed": "Gagal",
@@ -176,6 +174,7 @@
 	"pricing": {
 		"title": "Harga Sederhana dan Transparan",
 		"subtitle": "Pilih paket yang cocok untuk Anda. Bayar per penggunaan atau buka semua fitur dengan keanggotaan.",
+		"transition": "Tidak mau deploy? Gunakan layanan hosting kami",
 		"pay_per_use": {
 			"title": "Bayar per Penggunaan",
 			"description": "Sempurna untuk pengguna sesekali",
@@ -214,6 +213,20 @@
 			"heavy_user": "Pengguna aktif? Keanggotaan lebih hemat untuk operasi sering.",
 			"query_tools": "Butuh alat query? Hanya tersedia dengan keanggotaan.",
 			"multi_chain": "Bekerja di banyak chain? Anda perlu keanggotaan untuk setiap chain."
+		},
+		"self_host": {
+			"title": "Self-hosting",
+			"description": "Untuk developer yang ingin kontrol penuh",
+			"price": "Gratis",
+			"features": {
+				"full_source": "Akses kode sumber lengkap",
+				"no_fees": "Nol biaya protokol",
+				"full_control": "Kontrol penuh infrastruktur",
+				"community_support": "Dukungan komunitas via GitHub"
+			},
+			"note": "Membutuhkan: Node.js, Docker, infrastruktur deployment",
+			"security_warning": "Menggunakan deployment tidak terpercaya dapat mengakibatkan kehilangan dana. Hanya gunakan biubiu.tools atau self-hosting.",
+			"cta": "Lihat di GitHub"
 		}
 	}
 }

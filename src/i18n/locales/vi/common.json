@@ -11,15 +11,15 @@
 	"cta_get_started": "Bắt đầu",
 	"cta_learn_more": "Tìm hiểu thêm",
 	"cta": {
-		"title": "Sẵn sàng tăng cường quy trình làm việc Web3 của bạn?",
-		"subtitle": "Tham gia cùng các nhà phát triển và người dùng chuyên nghiệp tiết kiệm hàng giờ mỗi tuần với bộ công cụ cấp chuyên nghiệp của chúng tôi. Không cần đăng ký, không cần kết nối ví để bắt đầu.",
-		"button_text": "Khám phá tất cả công cụ",
-		"secondary_button": "Xem tài liệu",
+		"title": "Vũ Khí Tối Thượng Cho Thao Tác Hàng Loạt",
+		"subtitle": "Gửi đến hàng nghìn địa chỉ trong một giao dịch. Hợp nhất số dư đa ví tức thì. Quét 100k địa chỉ trong vài giây. Khóa không bao giờ rời trình duyệt, hoàn toàn có thể kiểm toán — bộ công cụ không thỏa hiệp cho power user.",
+		"button_text": "Dùng Thử Ngay",
+		"secondary_button": "Kiểm Tra Mã Nguồn",
 		"trust": {
-			"no_registration": "Không cần đăng ký",
-			"free_tools": "Công cụ cốt lõi miễn phí",
-			"open_source": "100% Mã nguồn mở",
-			"privacy_first": "Khóa của bạn ở cục bộ"
+			"no_registration": "Không Đăng Ký",
+			"free_tools": "Core Miễn Phí",
+			"open_source": "Hoàn Toàn Kiểm Toán Được",
+			"privacy_first": "Không Upload Khóa"
 		}
 	},
 	"faqs": {
@@ -57,13 +57,12 @@
 			},
 			{
 				"question": "Làm thế nào để nhận hỗ trợ hoặc báo cáo vấn đề?",
-				"answer": "Tham gia cộng đồng Discord của chúng tôi để được hỗ trợ và thảo luận theo thời gian thực. Đối với báo cáo lỗi và yêu cầu tính năng, vui lòng mở vấn đề trên kho lưu trữ GitHub của chúng tôi. Chúng tôi theo dõi tích cực cả hai kênh và thường phản hồi trong vòng 24 giờ."
+				"answer": "Tham gia nhóm Telegram của chúng tôi để được hỗ trợ và thảo luận theo thời gian thực. Đối với báo cáo lỗi và yêu cầu tính năng, vui lòng mở issue trên kho lưu trữ GitHub của chúng tôi. Chúng tôi thường phản hồi trong vòng 24 giờ."
 			}
 		],
 		"still_questions": "Vẫn còn câu hỏi?",
-		"contact_text": "Cộng đồng của chúng tôi sẵn sàng giúp đỡ. Tham gia Discord của chúng tôi để được hỗ trợ theo thời gian thực hoặc gửi email cho chúng tôi.",
-		"join_discord": "Tham gia Discord",
-		"email_support": "Gửi Email"
+		"contact_text": "Cộng đồng của chúng tôi sẵn sàng giúp đỡ. Tham gia nhóm Telegram của chúng tôi để được hỗ trợ theo thời gian thực.",
+		"join_telegram": "Tham gia Telegram"
 	},
 	"stats": {
 		"title": "Thống kê Nền tảng",
@@ -135,7 +134,6 @@
 	"show_more": "Xem thêm",
 	"show_less": "Thu gọn",
 	"back_to_home": "Về trang chủ",
-	"faqs": "Câu hỏi thường gặp",
 	"total_checks": "Tổng số kiểm tra",
 	"passed": "Đạt",
 	"failed": "Thất bại",
@@ -176,6 +174,7 @@
 	"pricing": {
 		"title": "Giá đơn giản và minh bạch",
 		"subtitle": "Chọn gói phù hợp với bạn. Trả theo lần dùng hoặc mở khóa tất cả với thành viên.",
+		"transition": "Không muốn triển khai? Sử dụng dịch vụ hosting của chúng tôi",
 		"pay_per_use": {
 			"title": "Trả theo lần dùng",
 			"description": "Hoàn hảo cho người dùng không thường xuyên",
@@ -214,6 +213,20 @@
 			"heavy_user": "Người dùng thường xuyên? Thành viên tiết kiệm hơn cho các thao tác thường xuyên.",
 			"query_tools": "Cần công cụ truy vấn? Chỉ dành riêng cho thành viên.",
 			"multi_chain": "Làm việc trên nhiều chuỗi? Bạn cần thành viên cho mỗi chuỗi."
+		},
+		"self_host": {
+			"title": "Tự triển khai",
+			"description": "Dành cho lập trình viên muốn kiểm soát hoàn toàn",
+			"price": "Miễn phí",
+			"features": {
+				"full_source": "Truy cập mã nguồn đầy đủ",
+				"no_fees": "Không phí giao thức",
+				"full_control": "Kiểm soát hoàn toàn hạ tầng",
+				"community_support": "Hỗ trợ cộng đồng qua GitHub"
+			},
+			"note": "Yêu cầu: Node.js, Docker, hạ tầng triển khai",
+			"security_warning": "Sử dụng triển khai không đáng tin cậy có thể dẫn đến mất tiền. Chỉ sử dụng biubiu.tools hoặc tự triển khai.",
+			"cta": "Xem trên GitHub"
 		}
 	}
 }

@@ -11,15 +11,15 @@
 	"cta_get_started": "开始使用",
 	"cta_learn_more": "了解更多",
 	"cta": {
-		"title": "准备好提升你的 Web3 效率了吗？",
-		"subtitle": "加入开发者和资深用户的行列，使用我们的专业工具每周节省数小时。无需注册，无需连接钱包即可开始。",
-		"button_text": "浏览全部工具",
-		"secondary_button": "查看文档",
+		"title": "批量操作的终极武器",
+		"subtitle": "一笔交易发送上千地址、多钱包余额一键归集、扫描 10 万地址只需几秒。私钥永不离开浏览器，全开源可审计 — 为 Power User 打造的无妥协工具箱。",
+		"button_text": "立即体验",
+		"secondary_button": "审查源码",
 		"trust": {
-			"no_registration": "无需注册",
-			"free_tools": "核心功能免费",
-			"open_source": "100% 开源",
-			"privacy_first": "私钥本地保存"
+			"no_registration": "即开即用",
+			"free_tools": "核心免费",
+			"open_source": "全开源可审计",
+			"privacy_first": "私钥零上传"
 		}
 	},
 	"faqs": {
@@ -41,7 +41,7 @@
 			},
 			{
 				"question": "我的私钥安全吗？",
-				"answer": "绝对安全。你的私钥永远不会离开你的浏览器。所有加密操作都在你的设备本地执行。我们无法访问你的密钥，也不会向我们的服务器发送任何数据。你可以自行验证 - 我们的代码 100% 开源。"
+				"answer": "绝对安全。你的私钥永远不会离开你的浏览器。所有加密操作都在你的设备本地执行。你可以自行验证 - 我们的代码 100% 开源。"
 			},
 			{
 				"question": "按次付费和会员有什么区别？",
@@ -57,13 +57,12 @@
 			},
 			{
 				"question": "如何获得支持或报告问题？",
-				"answer": "加入我们的 Discord 社区获取实时支持和讨论。如需报告 Bug 或提交功能请求，请在 GitHub 仓库提交 Issue。我们会积极关注这两个渠道，通常在 24 小时内回复。"
+				"answer": "加入我们的 Telegram 群获取实时支持和讨论。如需报告 Bug 或提交功能请求，请在 GitHub 仓库提交 Issue。我们通常在 24 小时内回复。"
 			}
 		],
 		"still_questions": "还有其他问题？",
-		"contact_text": "我们的社区随时为你提供帮助。加入 Discord 获得实时支持，或发送邮件给我们。",
-		"join_discord": "加入 Discord",
-		"email_support": "发送邮件"
+		"contact_text": "我们的社区随时为你提供帮助。加入 Telegram 群获得实时支持。",
+		"join_telegram": "加入 Telegram 群"
 	},
 	"stats": {
 		"title": "平台统计",
@@ -140,7 +139,6 @@
 	"show_more": "查看更多",
 	"show_less": "收起",
 	"back_to_home": "回到首页",
-	"faqs": "常见问题",
 	"total_checks": "总检查数",
 	"passed": "通过",
 	"failed": "失败",
@@ -191,6 +189,7 @@
 	"pricing": {
 		"title": "简单透明的定价",
 		"subtitle": "选择最适合您的方案。按次付费或订阅会员解锁全部功能。",
+		"transition": "嫌部署太麻烦？直接付费使用",
 		"pay_per_use": {
 			"title": "按次付费",
 			"description": "适合偶尔使用的用户",
@@ -240,7 +239,8 @@
 				"full_control": "基础设施完全可控",
 				"community_support": "GitHub 社区支持"
 			},
-			"note": "需要技术配置：Node.js、Docker、部署环境",
+			"note": "需要配置：Node.js、Docker、部署环境",
+			"security_warning": "使用不可信部署版本可能导致资产损失。请只使用 biubiu.tools 官方站或自行部署。",
 			"cta": "前往 GitHub"
 		}
 	}

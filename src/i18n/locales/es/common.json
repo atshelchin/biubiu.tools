@@ -11,15 +11,15 @@
 	"cta_get_started": "Comenzar",
 	"cta_learn_more": "Más información",
 	"cta": {
-		"title": "¿Listo para potenciar tu flujo de trabajo Web3?",
-		"subtitle": "Únete a desarrolladores y usuarios avanzados que ahorran horas cada semana con nuestro kit de herramientas de grado profesional. Sin registro, sin conexión de billetera requerida para comenzar.",
-		"button_text": "Explorar todas las herramientas",
-		"secondary_button": "Ver documentación",
+		"title": "El Arma Definitiva para Operaciones Masivas",
+		"subtitle": "Envía a miles de direcciones en una sola transacción. Consolida saldos de múltiples billeteras al instante. Escanea 100k direcciones en segundos. Claves que nunca salen de tu navegador, totalmente auditable — kit sin compromisos para usuarios avanzados.",
+		"button_text": "Probar Ahora",
+		"secondary_button": "Auditar Código",
 		"trust": {
-			"no_registration": "Sin registro requerido",
-			"free_tools": "Herramientas básicas gratuitas",
-			"open_source": "100% Código abierto",
-			"privacy_first": "Tus claves permanecen locales"
+			"no_registration": "Sin Registro",
+			"free_tools": "Núcleo Gratis",
+			"open_source": "Totalmente Auditable",
+			"privacy_first": "Cero Subida de Claves"
 		}
 	},
 	"faqs": {
@@ -57,13 +57,12 @@
 			},
 			{
 				"question": "¿Cómo puedo obtener soporte o reportar problemas?",
-				"answer": "Únete a nuestra comunidad de Discord para soporte en tiempo real y discusiones. Para reportes de errores y solicitudes de funciones, por favor abre un issue en nuestro repositorio de GitHub. Monitoreamos activamente ambos canales y generalmente respondemos en 24 horas."
+				"answer": "Únete a nuestro grupo de Telegram para soporte en tiempo real y discusiones. Para reportes de errores y solicitudes de funciones, por favor abre un issue en nuestro repositorio de GitHub. Generalmente respondemos en 24 horas."
 			}
 		],
 		"still_questions": "¿Aún tienes preguntas?",
-		"contact_text": "Nuestra comunidad está aquí para ayudar. Únete a nuestro Discord para soporte en tiempo real o envíanos un correo electrónico.",
-		"join_discord": "Unirse a Discord",
-		"email_support": "Envíanos un correo"
+		"contact_text": "Nuestra comunidad está aquí para ayudar. Únete a nuestro grupo de Telegram para soporte en tiempo real.",
+		"join_telegram": "Unirse a Telegram"
 	},
 	"stats": {
 		"title": "Estadísticas de la Plataforma",
@@ -135,7 +134,6 @@
 	"show_more": "Ver más",
 	"show_less": "Ver menos",
 	"back_to_home": "Volver al inicio",
-	"faqs": "Preguntas frecuentes",
 	"total_checks": "Total de verificaciones",
 	"passed": "Aprobado",
 	"failed": "Fallido",
@@ -176,6 +174,7 @@
 	"pricing": {
 		"title": "Precios simples y transparentes",
 		"subtitle": "Elige el plan que mejor se adapte a ti. Paga por uso o desbloquea todo con una membresía.",
+		"transition": "¿No quieres desplegar? Usa nuestro servicio alojado",
 		"pay_per_use": {
 			"title": "Pago por uso",
 			"description": "Perfecto para usuarios ocasionales",
@@ -214,6 +213,20 @@
 			"heavy_user": "¿Usuario frecuente? La membresía te ahorra más en operaciones frecuentes.",
 			"query_tools": "¿Necesitas herramientas de consulta? Solo disponibles con membresía.",
 			"multi_chain": "¿Trabajas en múltiples cadenas? Necesitarás una membresía para cada cadena."
+		},
+		"self_host": {
+			"title": "Auto-alojamiento",
+			"description": "Para desarrolladores que quieren control total",
+			"price": "Gratis",
+			"features": {
+				"full_source": "Acceso completo al código fuente",
+				"no_fees": "Cero comisiones de protocolo",
+				"full_control": "Control total de la infraestructura",
+				"community_support": "Soporte comunitario vía GitHub"
+			},
+			"note": "Requiere: Node.js, Docker, infraestructura de despliegue",
+			"security_warning": "Usar despliegues no confiables puede resultar en pérdida de fondos. Solo usa biubiu.tools o auto-alojamiento.",
+			"cta": "Ver en GitHub"
 		}
 	}
 }

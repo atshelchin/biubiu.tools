@@ -11,15 +11,15 @@
 	"cta_get_started": "Başla",
 	"cta_learn_more": "Daha fazla bilgi",
 	"cta": {
-		"title": "Web3 İş Akışınızı Güçlendirmeye Hazır mısınız?",
-		"subtitle": "Profesyonel seviye araç setimizle her hafta saatler tasarruf eden geliştiricilere ve ileri düzey kullanıcılara katılın. Başlamak için kayıt veya cüzdan bağlantısı gerekmez.",
-		"button_text": "Tüm Araçları Keşfet",
-		"secondary_button": "Dokümantasyonu Görüntüle",
+		"title": "Toplu İşlemlerin Nihai Silahı",
+		"subtitle": "Tek işlemde binlerce adrese gönderin. Çoklu cüzdan bakiyelerini anında birleştirin. 100k adresi saniyeler içinde tarayın. Anahtarlar tarayıcıdan asla çıkmaz, tamamen denetlenebilir — uzlaşmasız power user araç seti.",
+		"button_text": "Hemen Dene",
+		"secondary_button": "Kodu Denetle",
 		"trust": {
-			"no_registration": "Kayıt Gerekmez",
-			"free_tools": "Ücretsiz Temel Araçlar",
-			"open_source": "100% Açık Kaynak",
-			"privacy_first": "Anahtarlarınız Yerel Kalır"
+			"no_registration": "Kayıt Yok",
+			"free_tools": "Çekirdek Ücretsiz",
+			"open_source": "Tamamen Denetlenebilir",
+			"privacy_first": "Anahtar Yüklemesi Sıfır"
 		}
 	},
 	"faqs": {
@@ -57,13 +57,12 @@
 			},
 			{
 				"question": "Nasıl destek alabilirim veya sorun bildirebilirim?",
-				"answer": "Gerçek zamanlı destek ve tartışmalar için Discord topluluğumuza katılın. Hata raporları ve özellik istekleri için lütfen GitHub depomuzda bir issue açın. Her iki kanalı da aktif olarak takip ediyoruz ve genellikle 24 saat içinde yanıt veriyoruz."
+				"answer": "Gerçek zamanlı destek ve tartışmalar için Telegram grubumuza katılın. Hata raporları ve özellik istekleri için lütfen GitHub depomuzda bir issue açın. Genellikle 24 saat içinde yanıt veriyoruz."
 			}
 		],
 		"still_questions": "Hala sorularınız mı var?",
-		"contact_text": "Topluluğumuz yardımcı olmak için burada. Gerçek zamanlı destek için Discord'umuza katılın veya bize e-posta gönderin.",
-		"join_discord": "Discord'a Katıl",
-		"email_support": "E-posta Gönder"
+		"contact_text": "Topluluğumuz yardımcı olmak için burada. Gerçek zamanlı destek için Telegram grubumuza katılın.",
+		"join_telegram": "Telegram'a Katıl"
 	},
 	"stats": {
 		"title": "Platform İstatistikleri",
@@ -175,6 +174,7 @@
 	"pricing": {
 		"title": "Basit ve Şeffaf Fiyatlandırma",
 		"subtitle": "Size uygun planı seçin. Kullandıkça ödeyin veya üyelikle her şeyi açın.",
+		"transition": "Dağıtım yapmak istemiyor musunuz? Barındırma hizmetimizi kullanın",
 		"pay_per_use": {
 			"title": "Kullandıkça Öde",
 			"description": "Ara sıra kullananlar için ideal",
@@ -213,6 +213,20 @@
 			"heavy_user": "Yoğun kullanıcı mısınız? Üyelik sık işlemlerde daha tasarruflu.",
 			"query_tools": "Sorgu araçlarına mı ihtiyacınız var? Sadece üyelikle kullanılabilir.",
 			"multi_chain": "Birden fazla zincirde mi çalışıyorsunuz? Her zincir için ayrı üyelik gerekir."
+		},
+		"self_host": {
+			"title": "Kendi Sunucunda Barındır",
+			"description": "Tam kontrol isteyen geliştiriciler için",
+			"price": "Ücretsiz",
+			"features": {
+				"full_source": "Tam kaynak kodu erişimi",
+				"no_fees": "Sıfır protokol ücreti",
+				"full_control": "Altyapı üzerinde tam kontrol",
+				"community_support": "GitHub üzerinden topluluk desteği"
+			},
+			"note": "Gereksinimler: Node.js, Docker, dağıtım altyapısı",
+			"security_warning": "Güvenilmez dağıtımları kullanmak fon kaybına neden olabilir. Yalnızca biubiu.tools veya kendi sunucunuzu kullanın.",
+			"cta": "GitHub'da Görüntüle"
 		}
 	}
 }
