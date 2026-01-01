@@ -1,10 +1,11 @@
 <script lang="ts">
 	import GitHubStarButton from '$lib/components/widgets/github-star-button.svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 </script>
 
 <div class="top-toolbar">
 	<div class="toolbar-container">
-		<a href="/" class="logo-section">
+		<a href={localizeHref('/')} class="logo-section">
 			<img src="/logo.svg" alt="BiuBiu Tools Logo" class="logo" />
 			<span class="site-title">BiuBiu Tools</span>
 		</a>

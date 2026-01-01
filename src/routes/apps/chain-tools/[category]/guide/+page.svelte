@@ -317,7 +317,7 @@
 
 			<!-- Back to category -->
 			<div class="article-footer">
-				<a href="/" class="back-link-footer">
+				<a href={localizeHref('/')} class="back-link-footer">
 					<BookOpen class="footer-icon" />
 					{t('routes/apps/chain-tools.explore_more_tools')}
 				</a>
