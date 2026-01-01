@@ -56,7 +56,8 @@
       "Bash(npm run lint:*)",
       "Bash(npm run format:*)",
       "Bash(npm run check:*)",
-      "Bash(bun build:*)"
+      "Bash(bun build:*)",
+      "Bash(jobs)"
     ],
     "deny": [],
     "ask": []
