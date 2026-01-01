@@ -2,6 +2,7 @@
 	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import { ArrowLeft, Tag } from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
 	import { CHAIN_META, LABEL_META } from '@/features/address/types';
 	import { getEntity } from '@/features/address/data';
@@ -28,7 +29,7 @@
 <div class="label-page">
 	<!-- Breadcrumb -->
 	<nav class="breadcrumb">
-		<a href="/address" class="back-link">
+		<a href={localizeHref('/address')} class="back-link">
 			<ArrowLeft class="icon" />
 			<span>{i18n.t('routes/address.all_addresses')}</span>
 		</a>
@@ -50,7 +51,7 @@
 	<div class="address-list">
 		{#each data.addresses as addr (`${addr.chainId}-${addr.address}`)}
 			{@const entity = addr.entityId ? getEntity(addr.entityId) : undefined}
-			<a href="/address/{addr.chainId}/{addr.address}" class="address-card">
+			<a href={localizeHref(`/address/${addr.chainId}/${addr.address}`)} class="address-card">
 				<div class="address-info">
 					<span class="address-name">{addr.name}</span>
 					<span class="address-entity">{entity?.name || ''}</span>

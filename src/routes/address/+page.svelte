@@ -3,6 +3,7 @@
 	import { Search, Loader2 } from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import { PromotionFooter } from '@/features/promotions';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
 	import { CHAIN_META } from '@/features/address/types';
 	import { getEntity } from '@/features/address/data';
@@ -251,7 +252,7 @@
 		<h2 class="section-title">{i18n.t('routes/address.browse_by_label')}</h2>
 		<div class="label-grid">
 			{#each labelCategories as label (label.id)}
-				<a href="/address/labels/{label.id}" class="label-card">
+				<a href={localizeHref(`/address/labels/${label.id}`)} class="label-card">
 					<span class="label-icon">{label.icon}</span>
 					<span class="label-name"
 						>{i18n.t(`routes/address.labels.${label.id}` as keyof TranslationKeys)}</span
@@ -267,7 +268,7 @@
 		<div class="address-list">
 			{#each data.popularAddresses as addr (`${addr.chainId}-${addr.address}`)}
 				{@const entity = addr.entityId ? getEntity(addr.entityId) : undefined}
-				<a href="/address/{addr.chainId}/{addr.address}" class="address-card">
+				<a href={localizeHref(`/address/${addr.chainId}/${addr.address}`)} class="address-card">
 					<div class="address-info">
 						<span class="address-name">{addr.name}</span>
 						<span class="address-entity">{entity?.name || ''}</span>
@@ -286,7 +287,7 @@
 		<h2 class="section-title">{i18n.t('routes/address.popular_names')}</h2>
 		<div class="name-grid">
 			{#each data.popularNames as name (name.name)}
-				<a href="/name/{name.name}" class="name-card">
+				<a href={localizeHref(`/name/${name.name}`)} class="name-card">
 					<span class="name-text">{name.name}</span>
 					{#if name.description}
 						<span class="name-desc">{name.description}</span>

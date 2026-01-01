@@ -5,6 +5,7 @@
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import Faqs from '$lib/components/ui/faqs.svelte';
 	import Pagination from '$lib/components/ui/pagination.svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import { allTools as toolsData } from '@/features/chain-tools/data/tools';
 	import { getCategoryGuide } from '@/features/chain-tools/data/guides';
 	import type { ExternalTool } from '@/features/chain-tools/types';
@@ -88,7 +89,7 @@
 
 <!-- Guide Banner -->
 {#if hasGuide}
-	<a href="/apps/chain-tools/{data.categoryId}/guide" class="guide-banner">
+	<a href={localizeHref(`/apps/chain-tools/${data.categoryId}/guide`)} class="guide-banner">
 		<div class="guide-banner-content">
 			<div class="guide-banner-icon">
 				<BookOpen class="icon" />

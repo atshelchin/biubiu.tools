@@ -2,6 +2,7 @@
 	import { useI18n } from '@shelchin/i18n';
 	import { Lock, MessageCircle, ArrowRight } from '@lucide/svelte';
 	import ToolStatusBadge from '$lib/components/ui/tool-status-badge.svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { Component } from 'svelte';
 
 	interface Props {
@@ -96,7 +97,7 @@
 					<span class="btn-text">{t('tools.join_telegram')}</span>
 				</button>
 			{:else}
-				<a href={link} class="action-btn primary">
+				<a href={localizeHref(link)} class="action-btn primary">
 					<span class="btn-text">{t('tools.launch_app')}</span>
 					<ArrowRight class="btn-arrow" />
 				</a>

@@ -7,6 +7,7 @@
 	import Socials from '$lib/components/ui/socials.svelte';
 	import LangToggle from '$lib/components/widgets/lang-toggle.svelte';
 	import ThemeToggle from '$lib/components/widgets/theme-toggle.svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 
 	const i18n = useI18n();
 	const currentYear = new Date().getFullYear();
@@ -63,9 +64,9 @@
 			<div class="footer-info">
 				<span class="copyright">© {currentYear} biubiu.tools</span>
 				<span class="separator">·</span>
-				<a href="/privacy" class="legal-link">{i18n.t('common.footer.privacy')}</a>
+				<a href={localizeHref('/privacy')} class="legal-link">{i18n.t('common.footer.privacy')}</a>
 				<span class="separator">·</span>
-				<a href="/terms" class="legal-link">{i18n.t('common.footer.terms')}</a>
+				<a href={localizeHref('/terms')} class="legal-link">{i18n.t('common.footer.terms')}</a>
 				<span class="separator">·</span>
 				<a href="/sitemap.xml" class="legal-link">Sitemap</a>
 				<span class="separator">·</span>

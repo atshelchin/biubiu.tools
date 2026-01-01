@@ -3,6 +3,7 @@
 	import { useI18n } from '@shelchin/i18n';
 	import { useCookieConsent } from '@shelchin/cookie-consent';
 	import { browser } from '$app/environment';
+	import { localizeHref } from '$lib/utils/localized-url';
 
 	const i18n = useI18n();
 	const consent = useCookieConsent();
@@ -204,7 +205,7 @@
 
 				<p class="privacy-link">
 					{i18n.t('cookie-consent.privacy_notice')}
-					<a href="/privacy">{i18n.t('cookie-consent.privacy_policy')}</a>
+					<a href={localizeHref('/privacy')}>{i18n.t('cookie-consent.privacy_policy')}</a>
 				</p>
 			{/if}
 		</div>

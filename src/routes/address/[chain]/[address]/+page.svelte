@@ -13,6 +13,7 @@
 		Loader2
 	} from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
 	import { CHAIN_META, LABEL_META } from '@/features/address/types';
 	import {
@@ -76,7 +77,7 @@
 <div class="address-detail-page">
 	<!-- Breadcrumb -->
 	<nav class="breadcrumb">
-		<a href="/address" class="back-link">
+		<a href={localizeHref('/address')} class="back-link">
 			<ArrowLeft class="icon" />
 			<span>{i18n.t('routes/address.all_addresses')}</span>
 		</a>
@@ -202,7 +203,7 @@
 			</h2>
 			<div class="related-grid">
 				{#each data.relatedNames as name (name.name)}
-					<a href="/name/{name.name}" class="related-card">
+					<a href={localizeHref(`/name/${name.name}`)} class="related-card">
 						<span class="related-name">{name.name}</span>
 					</a>
 				{/each}
@@ -219,7 +220,10 @@
 			</h2>
 			<div class="related-list">
 				{#each data.relatedAddresses as addr (`${addr.chainId}-${addr.address}`)}
-					<a href="/address/{addr.chainId}/{addr.address}" class="related-address">
+					<a
+						href={localizeHref(`/address/${addr.chainId}/${addr.address}`)}
+						class="related-address"
+					>
 						<span class="related-addr-name">{addr.name}</span>
 						<code class="related-addr-code"
 							>{addr.address.slice(0, 10)}...{addr.address.slice(-6)}</code

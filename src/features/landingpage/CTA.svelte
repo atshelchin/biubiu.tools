@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
+	import { ArrowRight, Sparkles } from '@lucide/svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 
 	const i18n = useI18n();
 	const t = i18n.t.bind(i18n);
-	import { ArrowRight, Sparkles } from '@lucide/svelte';
 </script>
 
 <!-- CTA section with premium design -->
@@ -27,7 +28,7 @@
 
 		<!-- Action buttons -->
 		<div class="button-group">
-			<a href="/tools" class="btn-primary">
+			<a href={localizeHref('/tools')} class="btn-primary">
 				<span>{t('common.cta.button_text')}</span>
 				<ArrowRight class="btn-icon" />
 			</a>

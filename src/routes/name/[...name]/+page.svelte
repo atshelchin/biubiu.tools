@@ -18,6 +18,7 @@
 	} from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import { PromotionFooter } from '@/features/promotions';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
 	// import type { SocialLink } from './+page.server';
 
@@ -106,7 +107,7 @@
 <div class="name-detail-page">
 	<!-- Breadcrumb -->
 	<nav class="breadcrumb">
-		<a href="/address" class="back-link">
+		<a href={localizeHref('/address')} class="back-link">
 			<ArrowLeft class="icon" />
 			<span>{i18n.t('routes/address.all_addresses')}</span>
 		</a>
@@ -259,7 +260,9 @@
 
 				{#if data.resolvedAddress}
 					<a
-						href="/address/{data.resolvedAddress.chainId}/{data.resolvedAddress.address}"
+						href={localizeHref(
+							`/address/${data.resolvedAddress.chainId}/${data.resolvedAddress.address}`
+						)}
 						class="address-link"
 					>
 						<Link2 class="icon" />

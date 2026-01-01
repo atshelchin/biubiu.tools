@@ -13,6 +13,7 @@
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import { PromotionFooter } from '@/features/promotions';
 	import { formatTvl, getChainSlug } from '@/features/chains/data/chains';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
 	import type { Chain } from '@/features/chains/types';
 
@@ -181,7 +182,7 @@
 	<div class="chains-list">
 		{#each displayedChains as chain, index (chain.chainId)}
 			{@const slug = getChainSlug(chain)}
-			<a href="/chains/{slug}" class="chain-card" style="--index: {index % 50}">
+			<a href={localizeHref(`/chains/${slug}`)} class="chain-card" style="--index: {index % 50}">
 				<div class="chain-icon-wrapper">
 					{#if chain.icon}
 						<img

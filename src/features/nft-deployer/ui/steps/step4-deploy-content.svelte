@@ -7,6 +7,7 @@
 	import { encodeFunctionData, type Address } from 'viem';
 	import { KNOWN_CONTRACTS } from '$lib/utils/blockchain-checker';
 	import { getContractMethod } from '$lib/utils/contract-method';
+	import { localizeHref } from '$lib/utils/localized-url';
 
 	const connectStore = useConnectStore();
 
@@ -255,7 +256,7 @@
 				>
 					View on Explorer
 				</a>
-				<a href="/apps/nft-manager" class="action-button">Manage NFTs</a>
+				<a href={localizeHref('/apps/nft-manager')} class="action-button">Manage NFTs</a>
 			</div>
 		</div>
 	{:else if hasError}

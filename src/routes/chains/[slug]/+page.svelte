@@ -10,6 +10,7 @@
 	import FaucetsSection from '@/features/chains/components/faucets-section.svelte';
 	import { PromotionFooter } from '@/features/promotions';
 	import { testMultipleRpcs, sortByLatency } from '@/features/chains/utils/rpc-tester';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
 	import type { ParsedRpcEndpoint, RpcLatencyResult } from '@/features/chains/types';
 
@@ -113,7 +114,7 @@
 <div class="chain-page">
 	<!-- Breadcrumb -->
 	<nav class="breadcrumb">
-		<a href="/chains" class="back-link">
+		<a href={localizeHref('/chains')} class="back-link">
 			<ArrowLeft class="icon" />
 			<span>{i18n.t('routes/chains.all_chains')}</span>
 		</a>

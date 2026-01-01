@@ -3,6 +3,7 @@
 	import { Clock, ExternalLink, ChevronRight, BookOpen } from '@lucide/svelte';
 	import { marked } from 'marked';
 	import SeoHead from '$lib/components/seo-head.svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
 	import type { GuideSection, CaseStudy } from '@/features/chain-tools/types';
 
@@ -104,7 +105,7 @@
 <article class="guide-article">
 	<!-- Header -->
 	<header class="article-header">
-		<a href="/apps/chain-tools/{data.guide.categoryId}" class="back-link">
+		<a href={localizeHref(`/apps/chain-tools/${data.guide.categoryId}`)} class="back-link">
 			← {t('routes/apps/chain-tools.back_to_tools')}
 		</a>
 
@@ -171,7 +172,7 @@
 							{#each section.toolMentions as mention (mention.toolId)}
 								{@const tool = getTool(mention.toolId)}
 								{#if tool}
-									<a href="/apps/chain-tools/tool/{tool.id}" class="tool-chip">
+									<a href={localizeHref(`/apps/chain-tools/tool/${tool.id}`)} class="tool-chip">
 										{tool.name}
 										{#if mention.context}
 											<span class="tool-context">({mention.context})</span>
@@ -200,7 +201,10 @@
 										{#each subsection.toolMentions as mention (mention.toolId)}
 											{@const tool = getTool(mention.toolId)}
 											{#if tool}
-												<a href="/apps/chain-tools/tool/{tool.id}" class="tool-chip">
+												<a
+													href={localizeHref(`/apps/chain-tools/tool/${tool.id}`)}
+													class="tool-chip"
+												>
 													{tool.name}
 												</a>
 											{/if}
@@ -277,7 +281,10 @@
 									{#each term.relatedToolIds as toolId (toolId)}
 										{@const tool = getTool(toolId)}
 										{#if tool}
-											<a href="/apps/chain-tools/tool/{tool.id}" class="tool-chip small">
+											<a
+												href={localizeHref(`/apps/chain-tools/tool/${tool.id}`)}
+												class="tool-chip small"
+											>
 												{tool.name}
 											</a>
 										{/if}
@@ -296,7 +303,10 @@
 					{#each data.guide.featuredToolIds as toolId (toolId)}
 						{@const tool = getTool(toolId)}
 						{#if tool}
-							<a href="/apps/chain-tools/tool/{tool.id}" class="featured-tool-card">
+							<a
+								href={localizeHref(`/apps/chain-tools/tool/${tool.id}`)}
+								class="featured-tool-card"
+							>
 								<span class="featured-tool-name">{tool.name}</span>
 								<ChevronRight class="featured-tool-arrow" />
 							</a>

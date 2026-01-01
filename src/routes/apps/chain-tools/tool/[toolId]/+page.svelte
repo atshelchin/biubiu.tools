@@ -10,6 +10,7 @@
 	import ToolDetailInfo from '@/features/chain-tools/components/tool-detail-info.svelte';
 	import ToolDetailRelated from '@/features/chain-tools/components/tool-detail-related.svelte';
 	import ToolDetailCta from '@/features/chain-tools/components/tool-detail-cta.svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -102,7 +103,7 @@
 <div class="tool-detail-page">
 	<!-- Breadcrumb -->
 	<nav class="breadcrumb">
-		<a href="/apps/chain-tools/{data.tool.category}" class="back-link">
+		<a href={localizeHref(`/apps/chain-tools/${data.tool.category}`)} class="back-link">
 			<ArrowLeft class="icon" />
 			<span>{categoryName}</span>
 		</a>

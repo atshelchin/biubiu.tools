@@ -4,6 +4,7 @@
 	import { tokenDeployerTool } from '@/features/token-deployer/tool';
 	import NetworkSettingsButton from '$lib/components/ui/network-settings-button.svelte';
 	import ReferralButton from '$lib/components/ui/referral-button.svelte';
+	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -16,7 +17,7 @@
 	steps={data.steps}
 >
 	{#snippet toolbarActions()}
-		<a href="/apps/token-deployer/deployed" class="deployed-tokens-link">
+		<a href={localizeHref('/apps/token-deployer/deployed')} class="deployed-tokens-link">
 			<ListIcon size={16} />
 			<span>View Deployed</span>
 		</a>
