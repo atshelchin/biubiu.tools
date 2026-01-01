@@ -114,7 +114,7 @@
 	.hero-section {
 		position: relative;
 		display: flex;
-		min-height: 100vh;
+		min-height: 100svh; /* Use small viewport height for mobile */
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
@@ -125,6 +125,7 @@
 			var(--color-background) 100%
 		);
 		padding-top: 60px; /* Account for fixed toolbar */
+		padding-bottom: var(--space-12); /* Space for scroll indicator */
 	}
 
 	/* Pattern Overlay */
@@ -197,14 +198,13 @@
 		z-index: 10;
 		max-width: 80rem;
 		margin: 0 auto;
-		padding: 0 var(--space-6);
-		padding-bottom: var(--space-16); /* Space for scroll indicator */
+		padding: 0 var(--space-4);
 		text-align: center;
 	}
 
 	/* Logo Container */
 	.logo-container {
-		margin-bottom: var(--space-6);
+		margin-bottom: var(--space-4);
 	}
 
 	.logo-wrapper {
@@ -222,8 +222,8 @@
 
 	.logo-image {
 		position: relative;
-		width: var(--space-24);
-		height: var(--space-24);
+		width: 5rem;
+		height: 5rem;
 		margin: 0 auto;
 		border-radius: var(--radius-full);
 		box-shadow: var(--shadow-2xl);
@@ -231,9 +231,9 @@
 
 	/* Title Styles */
 	.hero-title {
-		margin-bottom: var(--space-8);
+		margin-bottom: var(--space-4);
 		padding: 0;
-		font-size: 2.5rem;
+		font-size: 2rem;
 		font-weight: var(--font-black);
 		line-height: 1.15;
 		letter-spacing: -0.02em;
@@ -254,11 +254,11 @@
 	/* Subtitle */
 	.hero-subtitle {
 		max-width: 52rem;
-		margin: 0 auto var(--space-8) auto;
+		margin: 0 auto var(--space-6) auto;
 		padding: 0;
-		font-size: 1.125rem;
+		font-size: 1rem;
 		font-weight: var(--font-normal);
-		line-height: 1.7;
+		line-height: 1.6;
 		color: var(--color-muted-foreground);
 		opacity: 0.85;
 	}
@@ -300,18 +300,18 @@
 
 	/* Platform Section */
 	.platform-section {
-		margin-top: var(--space-10);
-		padding-top: var(--space-8);
-		border-top: 1px solid hsla(var(--brand-hue), 10%, 50%, 0.05);
+		margin-top: var(--space-8);
+		padding-top: var(--space-6);
+		border-top: 1px solid hsla(var(--brand-hue), 10%, 50%, 0.08);
 	}
 
 	.platform-label {
-		margin-bottom: var(--space-4);
+		margin-bottom: var(--space-3);
 		padding: 0;
-		font-size: var(--text-sm);
+		font-size: var(--text-xs);
 		font-weight: var(--font-medium);
 		color: var(--color-muted-foreground);
-		opacity: 0.8;
+		opacity: 0.7;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 	}
@@ -321,9 +321,9 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		gap: var(--space-4) var(--space-6);
+		gap: var(--space-3) var(--space-5);
 		padding: 0;
-		opacity: 0.6;
+		opacity: 0.7;
 		transition: all 500ms ease;
 	}
 
@@ -333,7 +333,7 @@
 	}
 
 	.platform-item {
-		font-size: 0.9375rem;
+		font-size: 0.8125rem;
 		font-weight: var(--font-semibold);
 		white-space: nowrap;
 	}
@@ -371,22 +371,22 @@
 	/* Responsive Styles */
 	@media (min-width: 640px) {
 		.logo-container {
-			margin-bottom: var(--space-6);
+			margin-bottom: var(--space-5);
 		}
 
 		.logo-image {
-			width: 7rem;
-			height: 7rem;
+			width: 6rem;
+			height: 6rem;
 		}
 
 		.hero-title {
-			margin-bottom: var(--space-8);
+			margin-bottom: var(--space-5);
 			font-size: var(--text-5xl);
 		}
 
 		.hero-subtitle {
 			margin-bottom: var(--space-8);
-			font-size: var(--text-xl);
+			font-size: var(--text-lg);
 			max-width: 56rem;
 		}
 
@@ -398,16 +398,53 @@
 		.button-secondary {
 			width: auto;
 			padding: var(--space-3) var(--space-8);
-			font-size: var(--text-lg);
+			font-size: var(--text-base);
+		}
+
+		.platform-section {
+			margin-top: var(--space-10);
+			padding-top: var(--space-8);
+		}
+
+		.platform-label {
+			margin-bottom: var(--space-4);
+			font-size: var(--text-sm);
+		}
+
+		.platform-list {
+			gap: var(--space-8);
+		}
+
+		.platform-item {
+			font-size: var(--text-base);
+		}
+	}
+
+	@media (min-width: 768px) {
+		.logo-image {
+			width: 7rem;
+			height: 7rem;
+		}
+
+		.hero-title {
+			font-size: 4rem;
+			margin-bottom: var(--space-6);
+		}
+
+		.hero-subtitle {
+			font-size: var(--text-xl);
+			margin-bottom: var(--space-10);
+			max-width: 60rem;
+		}
+
+		.button-secondary {
+			padding: var(--space-3) var(--space-10);
+			font-size: 1.0625rem;
 		}
 
 		.platform-section {
 			margin-top: var(--space-12);
 			padding-top: var(--space-10);
-		}
-
-		.platform-label {
-			margin-bottom: var(--space-5);
 		}
 
 		.platform-list {
@@ -416,29 +453,6 @@
 
 		.platform-item {
 			font-size: var(--text-lg);
-		}
-	}
-
-	@media (min-width: 768px) {
-		.logo-image {
-			width: 9rem;
-			height: 9rem;
-		}
-
-		.hero-title {
-			font-size: 4.5rem;
-			margin-bottom: var(--space-10);
-		}
-
-		.hero-subtitle {
-			font-size: var(--text-2xl);
-			margin-bottom: var(--space-10);
-			max-width: 60rem;
-		}
-
-		.button-secondary {
-			padding: var(--space-4) var(--space-10);
-			font-size: 1.125rem;
 		}
 	}
 
