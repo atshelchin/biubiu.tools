@@ -7,6 +7,7 @@
 import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
 import { defineStepTool } from '$lib/step-tool-system';
 import { stepComponents } from './ui/steps';
+import { getToolPageStatus } from '../roadmap/data/roadmap-items';
 
 export const tokenBalanceScannerTool = defineStepTool({
 	id: 'token-balance-scanner',
@@ -46,7 +47,8 @@ export const tokenBalanceScannerTool = defineStepTool({
 
 	faqsPrefix: 'routes/apps/token-balance-scanner.faqs',
 
-	status: 'alpha'
+	// Status from roadmap data (single source of truth)
+	status: getToolPageStatus('token-balance-scanner')
 });
 
 export default tokenBalanceScannerTool;

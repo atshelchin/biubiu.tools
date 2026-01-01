@@ -3,6 +3,7 @@
 	import { useI18n } from '@shelchin/i18n';
 	import StepBasedApp from '$lib/components/step-based-app.svelte';
 	import { stepComponents } from '@/features/call-master/ui/steps';
+	import { getToolPageStatus } from '@/features/roadmap/data/roadmap-items';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -21,7 +22,7 @@
 			storageKey: 'biubiu-tools-call-master'
 		},
 		stepComponents,
-		status: 'alpha',
+		status: getToolPageStatus('call-master'),
 		toolKey: 'call-master'
 	}}
 />

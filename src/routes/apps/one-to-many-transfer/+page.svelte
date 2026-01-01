@@ -3,6 +3,7 @@
 	import { useI18n } from '@shelchin/i18n';
 	import StepBasedApp from '$lib/components/step-based-app.svelte';
 	import { stepComponents } from '@/features/one-to-many-transfer/ui/steps';
+	import { getToolPageStatus } from '@/features/roadmap/data/roadmap-items';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -75,7 +76,7 @@
 			storageKey: 'biubiu-tools-one-to-many-transfer'
 		},
 		stepComponents,
-		status: 'alpha',
+		status: getToolPageStatus('one-to-many-transfer'),
 		toolKey: 'one-to-many-transfer'
 	}}
 />

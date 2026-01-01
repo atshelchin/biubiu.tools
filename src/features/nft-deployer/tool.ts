@@ -8,6 +8,7 @@
 import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
 import { defineStepTool } from '$lib/step-tool-system';
 import { stepComponents } from './ui/steps';
+import { getToolPageStatus } from '../roadmap/data/roadmap-items';
 
 export const nftDeployerTool = defineStepTool({
 	id: 'nft-deployer',
@@ -32,7 +33,8 @@ export const nftDeployerTool = defineStepTool({
 
 	dependencyChecks: ['rpc', 'create2', 'multicall3', 'biubiu-premium', 'nft-factory'],
 
-	status: 'alpha'
+	// Status from roadmap data (single source of truth)
+	status: getToolPageStatus('nft-deployer')
 });
 
 export default nftDeployerTool;

@@ -3,6 +3,7 @@
 	import { useI18n } from '@shelchin/i18n';
 	import StepBasedApp from '$lib/components/step-based-app.svelte';
 	import { stepComponents } from '@/features/dex-moonshot-trader/ui/steps';
+	import { getToolPageStatus } from '@/features/roadmap/data/roadmap-items';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
@@ -21,7 +22,7 @@
 			storageKey: 'biubiu-tools-dex-moonshot-trader'
 		},
 		stepComponents,
-		status: 'alpha',
+		status: getToolPageStatus('dex-moonshot-trader'),
 		toolKey: 'dex-moonshot-trader'
 	}}
 />

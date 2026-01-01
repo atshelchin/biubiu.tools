@@ -7,6 +7,7 @@
 import { mainnet, polygon, base, bsc, sepolia } from 'viem/chains';
 import { defineStepTool } from '$lib/step-tool-system';
 import { stepComponents } from './ui/steps';
+import { getToolPageStatus } from '../roadmap/data/roadmap-items';
 
 export const contractDeployerTool = defineStepTool({
 	id: 'contract-deployer',
@@ -38,7 +39,8 @@ export const contractDeployerTool = defineStepTool({
 
 	faqsPrefix: 'routes/apps/contract-deployer.faqs',
 
-	status: 'alpha'
+	// Status from roadmap data (single source of truth)
+	status: getToolPageStatus('contract-deployer')
 });
 
 export default contractDeployerTool;

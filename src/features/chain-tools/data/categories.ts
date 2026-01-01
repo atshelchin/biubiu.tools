@@ -2,7 +2,6 @@
  * Category definitions with i18n keys and colors
  */
 import {
-	Award,
 	TrendingUp,
 	Image,
 	BarChart3,

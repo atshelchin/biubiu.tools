@@ -7,6 +7,7 @@
 import { mainnet, polygon, base, bsc } from 'viem/chains';
 import { defineStepTool } from '$lib/step-tool-system';
 import { stepComponents } from './ui/steps';
+import { getToolPageStatus } from '../roadmap/data/roadmap-items';
 
 export const walletSweepTool = defineStepTool({
 	id: 'wallet-sweep',
@@ -46,7 +47,8 @@ export const walletSweepTool = defineStepTool({
 
 	faqsPrefix: 'routes/apps/wallet-sweep.faqs',
 
-	status: 'alpha'
+	// Status from roadmap data (single source of truth)
+	status: getToolPageStatus('wallet-sweep')
 });
 
 export default walletSweepTool;

@@ -15,8 +15,9 @@ export const load: PageServerLoad = (event) => {
 		throw error(404, 'Tool not found');
 	}
 
-	// Exclude icon (Svelte component) which is not serializable
+	// Exclude icon (Svelte component) which is not serializable - eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const { icon, ...tool } = toolData;
+	void icon; // Icon is a Svelte component and not serializable
 
 	// Get tool detail
 	const detail = getToolDetail(toolId);
@@ -30,13 +31,17 @@ export const load: PageServerLoad = (event) => {
 		throw error(500, 'Category not found');
 	}
 	const { icon: categoryIcon, ...category } = categoryData;
+	void categoryIcon; // Icon is a Svelte component and not serializable
 
 	// Get related tools data - exclude icon which is not serializable
 	const relatedToolsData = detail.relatedTools
 		.map((id) => getToolById(id))
 		.filter((t): t is NonNullable<typeof t> => t !== undefined)
 		.slice(0, 6)
-		.map(({ icon, ...rest }) => rest);
+		.map(({ icon: toolIcon, ...rest }) => {
+			void toolIcon; // Icon is a Svelte component and not serializable
+			return rest;
+		});
 
 	// Extract locale
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';

@@ -46,7 +46,6 @@ function extractToolKeysFromTS(): CategoryToolKeys[] {
 		let match;
 
 		while ((match = regex.exec(content)) !== null) {
-			const category = match[1];
 			const toolKey = match[2];
 			keys.push(toolKey);
 		}

@@ -1,0 +1,42 @@
+{
+	"meta": {
+		"title": "开发路线图 - BiuBiu.Tools",
+		"description": "追踪 BiuBiu.Tools 所有功能的开发进度。查看正在开发的内容、即将发布的版本和稳定性状态。"
+	},
+	"title": "开发路线图",
+	"subtitle": "追踪开发进度和即将推出的功能",
+	"stages": {
+		"planning": "规划中",
+		"development": "开发中",
+		"alpha": "Alpha 测试",
+		"beta": "Beta 测试",
+		"stable": "稳定版",
+		"deprecated": "已弃用"
+	},
+	"stability": {
+		"experimental": "实验性",
+		"unstable": "不稳定",
+		"stable": "稳定",
+		"production": "生产就绪"
+	},
+	"audience": {
+		"early_adopter": "早期尝鲜",
+		"developer": "开发者",
+		"power_user": "高级用户",
+		"everyone": "所有人"
+	},
+	"recommendation": {
+		"recommended": "推荐使用",
+		"caution": "谨慎使用",
+		"not-recommended": "不建议使用"
+	},
+	"legend": {
+		"stages": "开发阶段",
+		"audience": "适用人群",
+		"show_all": "显示全部"
+	},
+	"completion": "完成度",
+	"last_updated": "最后更新",
+	"no_items": "没有符合筛选条件的项目",
+	"next": "下一阶段"
+}

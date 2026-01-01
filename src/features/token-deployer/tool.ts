@@ -8,6 +8,7 @@
 import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
 import { defineStepTool } from '$lib/step-tool-system';
 import { stepComponents } from './ui/steps';
+import { getToolPageStatus } from '../roadmap/data/roadmap-items';
 
 export const tokenDeployerTool = defineStepTool({
 	id: 'token-deployer',
@@ -32,7 +33,8 @@ export const tokenDeployerTool = defineStepTool({
 
 	dependencyChecks: ['rpc', 'create2', 'multicall3', 'biubiu-premium', 'token-factory'],
 
-	status: 'alpha'
+	// Status from roadmap data (single source of truth)
+	status: getToolPageStatus('token-deployer')
 });
 
 export default tokenDeployerTool;

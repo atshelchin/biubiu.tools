@@ -1,0 +1,42 @@
+{
+	"meta": {
+		"title": "Development Roadmap - BiuBiu.Tools",
+		"description": "Track the development progress of all BiuBiu.Tools features. See what's in development, upcoming releases, and stability status."
+	},
+	"title": "Development Roadmap",
+	"subtitle": "Track the development progress and upcoming features",
+	"stages": {
+		"planning": "Planning",
+		"development": "In Development",
+		"alpha": "Alpha",
+		"beta": "Beta",
+		"stable": "Stable",
+		"deprecated": "Deprecated"
+	},
+	"stability": {
+		"experimental": "Experimental",
+		"unstable": "Unstable",
+		"stable": "Stable",
+		"production": "Production Ready"
+	},
+	"audience": {
+		"early_adopter": "Early Adopter",
+		"developer": "Developer",
+		"power_user": "Power User",
+		"everyone": "Everyone"
+	},
+	"recommendation": {
+		"recommended": "Recommended",
+		"caution": "Use with Caution",
+		"not-recommended": "Not Recommended"
+	},
+	"legend": {
+		"stages": "Development Stages",
+		"audience": "Target Audience",
+		"show_all": "Show All"
+	},
+	"completion": "Completion",
+	"last_updated": "Last updated",
+	"no_items": "No items match the selected filter",
+	"next": "Next"
+}

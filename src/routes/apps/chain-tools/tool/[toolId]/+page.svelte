@@ -16,6 +16,8 @@
 	let { data }: { data: PageData } = $props();
 
 	const i18n = useI18n();
+	// Use a wrapper that accepts any string key for dynamic translations
+	const t = (key: string, options?: { defaultValue?: string }) => i18n.t(key, options);
 
 	// Load tool-specific translations dynamically
 	// The translation file is loaded as: routes/apps/chain-tools/tool/{toolId}.json
@@ -24,28 +26,19 @@
 
 	// Get SEO data from tool translations
 	const seoTitle = $derived(
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		i18n.t(`${toolI18nPrefix}.seo.title` as any, {
+		t(`${toolI18nPrefix}.seo.title`, {
 			defaultValue: `${data.tool.name} | BiuBiu Tools`
 		})
 	);
-	const seoDescription = $derived(
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		i18n.t(`${toolI18nPrefix}.seo.description` as any, { defaultValue: '' })
-	);
-	const seoKeywords = $derived(
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		i18n.t(`${toolI18nPrefix}.seo.keywords` as any, { defaultValue: '' })
-	);
+	const seoDescription = $derived(t(`${toolI18nPrefix}.seo.description`, { defaultValue: '' }));
+	const seoKeywords = $derived(t(`${toolI18nPrefix}.seo.keywords`, { defaultValue: '' }));
 
 	// Build FAQ data from translations
 	const faqs = $derived.by(() => {
 		const faqList: Array<{ question: string; answer: string }> = [];
 		for (let i = 1; i <= data.detail.faqCount; i++) {
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			const question = i18n.t(`${toolI18nPrefix}.faqs.${i}.question` as any, { defaultValue: '' });
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any
-			const answer = i18n.t(`${toolI18nPrefix}.faqs.${i}.answer` as any, { defaultValue: '' });
+			const question = t(`${toolI18nPrefix}.faqs.${i}.question`, { defaultValue: '' });
+			const answer = t(`${toolI18nPrefix}.faqs.${i}.answer`, { defaultValue: '' });
 			if (question && answer) {
 				faqList.push({ question, answer });
 			}
@@ -70,20 +63,15 @@
 	// Combined structured data
 	const structuredData = $derived([...data.structuredData, faqStructuredData]);
 
-	// UI text with eslint-disable for dynamic i18n keys
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	// UI text for dynamic i18n keys
 	const categoryName = $derived(
-		i18n.t(`routes/apps/chain-tools.categories.${data.tool.category}` as any, {
+		t(`routes/apps/chain-tools.categories.${data.tool.category}`, {
 			defaultValue: 'Back'
 		})
 	);
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const faqsTitle = $derived(
-		i18n.t('routes/apps/chain-tools.faqs_title' as any, { defaultValue: 'FAQ' })
-	);
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const faqsTitle = $derived(t('routes/apps/chain-tools.faqs_title', { defaultValue: 'FAQ' }));
 	const lastUpdatedLabel = $derived(
-		i18n.t('routes/apps/chain-tools.last_updated' as any, {
+		t('routes/apps/chain-tools.last_updated', {
 			defaultValue: 'Last updated'
 		})
 	);
