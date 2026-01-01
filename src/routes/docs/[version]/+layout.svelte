@@ -383,4 +383,9 @@
 	:global([data-theme='dark']) .sidebar-backdrop {
 		background: rgba(0, 0, 0, 0.7);
 	}
+
+	/* Hide global top toolbar on docs pages */
+	:global(.top-toolbar) {
+		display: none !important;
+	}
 </style>

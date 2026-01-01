@@ -38,7 +38,7 @@
 	}
 
 	.toolbar-container {
-		max-width: 80rem;
+		/* max-width: 80rem; */
 		margin: 0 auto;
 		padding: var(--space-4) var(--space-5);
 		display: flex;

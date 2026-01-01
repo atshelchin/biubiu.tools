@@ -97,7 +97,7 @@
 		/* border-top: 1px solid hsla(var(--brand-hue), 10%, 50%, 0.1); */
 		margin-top: auto;
 		/* padding: var(--space-12) 0 var(--space-8); */
-		max-width: 80rem;
+		/* max-width: 80rem; */
 		margin: 0 auto;
 		padding-top: var(--space-12);
 		padding-bottom: var(--space-5);
@@ -105,7 +105,7 @@
 	}
 
 	.footer-container {
-		max-width: 80rem;
+		/* max-width: 80rem; */
 		margin: 0 auto;
 		padding: 0 var(--space-6);
 		display: flex;
