@@ -127,7 +127,7 @@
 		faqs:
 			faqs.length > 0
 				? {
-						title: i18n.t('common.faqs' as never),
+						title: i18n.t('common.faqs.title' as never),
 						items: faqs
 					}
 				: undefined,

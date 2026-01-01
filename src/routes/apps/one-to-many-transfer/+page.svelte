@@ -68,7 +68,7 @@
 		appTitle: i18n.t('routes/apps/one-to-many-transfer.title'),
 		appDescription: i18n.t('routes/apps/one-to-many-transfer.description'),
 		faqs: {
-			title: i18n.t('common.faqs'),
+			title: i18n.t('common.faqs.title'),
 			items: faqs
 		},
 		walletConnect: {
