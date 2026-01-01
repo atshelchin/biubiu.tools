@@ -85,18 +85,17 @@
 
 		<!-- Platform compatibility | 平台兼容性 -->
 		<div class="platform-section">
-			<p class="platform-label animate-fade-in">Powerful Batch Operations</p>
+			<p class="platform-label animate-fade-in">{t('common.hero.platform_label')}</p>
 			<div class="platform-list">
-				<span class="platform-item">Token Collect</span>
-				<span class="platform-item">Airdrop Tools</span>
-				<span class="platform-item">Multi-Wallet</span>
-				<span class="platform-item">Multi-Chain</span>
+				<span class="platform-item">{t('common.hero.platform_open_source')}</span>
+				<span class="platform-item">{t('common.hero.platform_any_chain')}</span>
+				<span class="platform-item">{t('common.hero.platform_batch_ops')}</span>
 			</div>
 		</div>
 	</div>
 
 	<!-- Scroll indicator | 滚动指示器 -->
-	<div class="scroll-indicator">
+	<button class="scroll-indicator" onclick={scrollToFeatures} aria-label="Scroll to features">
 		<svg class="scroll-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 			<path
 				stroke-linecap="round"
@@ -105,7 +104,7 @@
 				d="M19 14l-7 7m0 0l-7-7m7 7V3"
 			></path>
 		</svg>
-	</div>
+	</button>
 </section>
 
 <style>
@@ -199,6 +198,7 @@
 		max-width: 80rem;
 		margin: 0 auto;
 		padding: 0 var(--space-6);
+		padding-bottom: var(--space-16); /* Space for scroll indicator */
 		text-align: center;
 	}
 
@@ -254,7 +254,7 @@
 	/* Subtitle */
 	.hero-subtitle {
 		max-width: 52rem;
-		margin: 0 auto var(--space-12) auto;
+		margin: 0 auto var(--space-8) auto;
 		padding: 0;
 		font-size: 1.125rem;
 		font-weight: var(--font-normal);
@@ -278,11 +278,11 @@
 		width: 100%;
 		max-width: 20rem;
 		margin: 0 auto;
-		padding: 1rem 2rem;
+		padding: 0.75rem 1.5rem;
 		border-radius: var(--radius-lg);
 		background: transparent;
 		color: var(--color-foreground);
-		font-size: 1.0625rem;
+		font-size: 1rem;
 		font-weight: var(--font-medium);
 		border: 2px solid var(--color-border);
 		cursor: pointer;
@@ -300,13 +300,13 @@
 
 	/* Platform Section */
 	.platform-section {
-		margin-top: var(--space-16);
-		padding-top: var(--space-12);
+		margin-top: var(--space-10);
+		padding-top: var(--space-8);
 		border-top: 1px solid hsla(var(--brand-hue), 10%, 50%, 0.05);
 	}
 
 	.platform-label {
-		margin-bottom: var(--space-6);
+		margin-bottom: var(--space-4);
 		padding: 0;
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
@@ -323,8 +323,7 @@
 		justify-content: center;
 		gap: var(--space-4) var(--space-6);
 		padding: 0;
-		opacity: 0.5;
-		filter: grayscale(1);
+		opacity: 0.6;
 		transition: all 500ms ease;
 	}
 
@@ -342,16 +341,31 @@
 	/* Scroll Indicator */
 	.scroll-indicator {
 		position: absolute;
-		bottom: var(--space-8);
+		bottom: var(--space-4);
 		left: 50%;
 		transform: translateX(-50%);
 		animation: bounce 1.5s ease-in-out infinite;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: var(--space-2);
+		border-radius: var(--radius-full);
+		transition: background-color 200ms ease;
+	}
+
+	.scroll-indicator:hover {
+		background: hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.1);
+	}
+
+	.scroll-indicator:hover .scroll-icon {
+		color: var(--color-primary);
 	}
 
 	.scroll-icon {
 		width: var(--space-6);
 		height: var(--space-6);
 		color: var(--color-muted-foreground);
+		transition: color 200ms ease;
 	}
 
 	/* Responsive Styles */
@@ -371,7 +385,7 @@
 		}
 
 		.hero-subtitle {
-			margin-bottom: var(--space-12);
+			margin-bottom: var(--space-8);
 			font-size: var(--text-xl);
 			max-width: 56rem;
 		}
@@ -383,21 +397,21 @@
 
 		.button-secondary {
 			width: auto;
-			padding: var(--space-5) var(--space-12);
-			font-size: var(--text-xl);
+			padding: var(--space-3) var(--space-8);
+			font-size: var(--text-lg);
 		}
 
 		.platform-section {
-			margin-top: var(--space-20);
-			padding-top: var(--space-20);
+			margin-top: var(--space-12);
+			padding-top: var(--space-10);
 		}
 
 		.platform-label {
-			margin-bottom: var(--space-8);
+			margin-bottom: var(--space-5);
 		}
 
 		.platform-list {
-			gap: var(--space-12);
+			gap: var(--space-10);
 		}
 
 		.platform-item {
@@ -418,13 +432,13 @@
 
 		.hero-subtitle {
 			font-size: var(--text-2xl);
-			margin-bottom: var(--space-14);
+			margin-bottom: var(--space-10);
 			max-width: 60rem;
 		}
 
 		.button-secondary {
-			padding: var(--space-6) var(--space-14);
-			font-size: 1.25rem;
+			padding: var(--space-4) var(--space-10);
+			font-size: 1.125rem;
 		}
 	}
 

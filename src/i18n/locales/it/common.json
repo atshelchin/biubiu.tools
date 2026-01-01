@@ -7,7 +7,7 @@
 		"flag": "🇮🇹"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Esplora Web3 in modo semplice e sicuro",
+	"hero_subtitle": "Toolkit Web3 tutto-in-uno",
 	"cta_get_started": "Inizia",
 	"cta_learn_more": "Scopri di più",
 	"cta": {
@@ -24,8 +24,11 @@
 		"last_updated": "Statistiche in tempo reale"
 	},
 	"footer": {
+		"tagline": "Il tuo toolkit Web3 tutto-in-uno",
 		"privacy": "Privacy",
-		"terms": "Termini"
+		"terms": "Termini",
+		"roadmap": "Roadmap",
+		"sitemap": "Mappa del sito"
 	},
 	"helpButton": {
 		"label": "Aiuto e feedback",
@@ -83,6 +86,16 @@
 	},
 	"copy_address": "Copia indirizzo",
 	"copied": "Copiato!",
+	"language": {
+		"recommended": "Consigliato",
+		"english_most_complete": "La versione inglese è la più completa"
+	},
+	"hero": {
+		"platform_label": "Perché sceglierci",
+		"platform_open_source": "100% Open Source",
+		"platform_any_chain": "Supporto Multi-chain",
+		"platform_batch_ops": "Operazioni Batch"
+	},
 	"pagination": {
 		"previous": "Precedente",
 		"next": "Successivo",

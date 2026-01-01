@@ -7,7 +7,7 @@
 		"code": "en"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Web3 discovering made easy & secure for you",
+	"hero_subtitle": "All-in-One Web3 Toolkit",
 	"cta_get_started": "Get Started",
 	"cta_learn_more": "Learn More",
 	"cta": {
@@ -24,6 +24,7 @@
 		"last_updated": "Live Statistics"
 	},
 	"footer": {
+		"tagline": "Your all-in-one Web3 toolkit",
 		"privacy": "Privacy",
 		"terms": "Terms",
 		"roadmap": "Roadmap",
@@ -99,6 +100,12 @@
 	"language": {
 		"recommended": "Recommended",
 		"english_most_complete": "English version is the most complete"
+	},
+	"hero": {
+		"platform_label": "Why Choose Us",
+		"platform_open_source": "100% Open Source",
+		"platform_any_chain": "Any Chain Support",
+		"platform_batch_ops": "Batch Operations"
 	},
 	"pagination": {
 		"previous": "Previous",

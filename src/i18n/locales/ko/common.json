@@ -7,7 +7,7 @@
 		"flag": "🇰🇷"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "쉽고 안전한 Web3 탐색",
+	"hero_subtitle": "올인원 Web3 툴킷",
 	"cta_get_started": "시작하기",
 	"cta_learn_more": "자세히 보기",
 	"cta": {
@@ -24,8 +24,11 @@
 		"last_updated": "실시간 통계"
 	},
 	"footer": {
+		"tagline": "올인원 Web3 툴킷",
 		"privacy": "개인정보처리방침",
-		"terms": "이용약관"
+		"terms": "이용약관",
+		"roadmap": "로드맵",
+		"sitemap": "사이트맵"
 	},
 	"helpButton": {
 		"label": "도움말 및 피드백",
@@ -83,6 +86,16 @@
 	},
 	"copy_address": "주소 복사",
 	"copied": "복사됨!",
+	"language": {
+		"recommended": "추천",
+		"english_most_complete": "영어 버전이 가장 완전합니다"
+	},
+	"hero": {
+		"platform_label": "선택 이유",
+		"platform_open_source": "100% 오픈소스",
+		"platform_any_chain": "모든 체인 지원",
+		"platform_batch_ops": "일괄 작업"
+	},
 	"pagination": {
 		"previous": "이전",
 		"next": "다음",

@@ -7,7 +7,7 @@
 		"flag": "🇷🇺"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Web3 просто и безопасно",
+	"hero_subtitle": "Универсальный набор инструментов Web3",
 	"cta_get_started": "Начать",
 	"cta_learn_more": "Узнать больше",
 	"cta": {
@@ -24,8 +24,11 @@
 		"last_updated": "Статистика в реальном времени"
 	},
 	"footer": {
+		"tagline": "Ваш универсальный набор инструментов Web3",
 		"privacy": "Конфиденциальность",
-		"terms": "Условия"
+		"terms": "Условия",
+		"roadmap": "Дорожная карта",
+		"sitemap": "Карта сайта"
 	},
 	"helpButton": {
 		"label": "Помощь и отзывы",
@@ -83,6 +86,16 @@
 	},
 	"copy_address": "Копировать адрес",
 	"copied": "Скопировано!",
+	"language": {
+		"recommended": "Рекомендуется",
+		"english_most_complete": "Английская версия наиболее полная"
+	},
+	"hero": {
+		"platform_label": "Почему мы",
+		"platform_open_source": "100% Открытый исходный код",
+		"platform_any_chain": "Поддержка любых сетей",
+		"platform_batch_ops": "Пакетные операции"
+	},
 	"pagination": {
 		"previous": "Назад",
 		"next": "Вперёд",

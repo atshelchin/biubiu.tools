@@ -7,7 +7,7 @@
 		"flag": "🇯🇵"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Web3をもっと簡単に、もっと安全に",
+	"hero_subtitle": "オールインワン Web3 ツールキット",
 	"cta_get_started": "始める",
 	"cta_learn_more": "詳しく見る",
 	"cta": {
@@ -24,8 +24,11 @@
 		"last_updated": "リアルタイム統計"
 	},
 	"footer": {
+		"tagline": "オールインワン Web3 ツールキット",
 		"privacy": "プライバシー",
-		"terms": "利用規約"
+		"terms": "利用規約",
+		"roadmap": "ロードマップ",
+		"sitemap": "サイトマップ"
 	},
 	"helpButton": {
 		"label": "ヘルプ＆フィードバック",
@@ -83,6 +86,16 @@
 	},
 	"copy_address": "アドレスをコピー",
 	"copied": "コピーしました！",
+	"language": {
+		"recommended": "おすすめ",
+		"english_most_complete": "英語版が最も完全です"
+	},
+	"hero": {
+		"platform_label": "選ばれる理由",
+		"platform_open_source": "100% オープンソース",
+		"platform_any_chain": "任意チェーン対応",
+		"platform_batch_ops": "バッチ操作"
+	},
 	"pagination": {
 		"previous": "前へ",
 		"next": "次へ",

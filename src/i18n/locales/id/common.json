@@ -7,7 +7,7 @@
 		"flag": "🇮🇩"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Jelajahi Web3 dengan mudah dan aman",
+	"hero_subtitle": "Toolkit Web3 Serba Ada",
 	"cta_get_started": "Mulai",
 	"cta_learn_more": "Pelajari lebih lanjut",
 	"cta": {
@@ -24,8 +24,11 @@
 		"last_updated": "Statistik langsung"
 	},
 	"footer": {
+		"tagline": "Toolkit Web3 serba ada Anda",
 		"privacy": "Privasi",
-		"terms": "Ketentuan"
+		"terms": "Ketentuan",
+		"roadmap": "Peta jalan",
+		"sitemap": "Peta situs"
 	},
 	"helpButton": {
 		"label": "Bantuan & Masukan",
@@ -83,6 +86,16 @@
 	},
 	"copy_address": "Salin alamat",
 	"copied": "Disalin!",
+	"language": {
+		"recommended": "Disarankan",
+		"english_most_complete": "Versi bahasa Inggris paling lengkap"
+	},
+	"hero": {
+		"platform_label": "Mengapa memilih kami",
+		"platform_open_source": "100% Open Source",
+		"platform_any_chain": "Dukungan Semua Chain",
+		"platform_batch_ops": "Operasi Batch"
+	},
 	"pagination": {
 		"previous": "Sebelumnya",
 		"next": "Berikutnya",

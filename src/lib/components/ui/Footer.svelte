@@ -50,7 +50,7 @@
 					<img src="/logo.svg" alt="BiuBiu" class="logo" />
 					<span class="brand-name">biubiu.tools</span>
 				</div>
-				<p class="tagline">Powerful batch operations for Ethereum ecosystem</p>
+				<p class="tagline">{i18n.t('common.footer.tagline')}</p>
 			</div>
 
 			<!-- Socials -->

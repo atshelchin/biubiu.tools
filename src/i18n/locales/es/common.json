@@ -7,7 +7,7 @@
 		"flag": "🇪🇸"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Descubre Web3 de forma fácil y segura",
+	"hero_subtitle": "Kit de herramientas Web3 todo en uno",
 	"cta_get_started": "Comenzar",
 	"cta_learn_more": "Más información",
 	"cta": {
@@ -24,8 +24,11 @@
 		"last_updated": "Estadísticas en vivo"
 	},
 	"footer": {
+		"tagline": "Tu kit de herramientas Web3 todo en uno",
 		"privacy": "Privacidad",
-		"terms": "Términos"
+		"terms": "Términos",
+		"roadmap": "Hoja de ruta",
+		"sitemap": "Mapa del sitio"
 	},
 	"helpButton": {
 		"label": "Ayuda y comentarios",
@@ -83,6 +86,16 @@
 	},
 	"copy_address": "Copiar dirección",
 	"copied": "¡Copiado!",
+	"language": {
+		"recommended": "Recomendado",
+		"english_most_complete": "La versión en inglés es la más completa"
+	},
+	"hero": {
+		"platform_label": "Por qué elegirnos",
+		"platform_open_source": "100% Código Abierto",
+		"platform_any_chain": "Soporte Multicadena",
+		"platform_batch_ops": "Operaciones por Lotes"
+	},
 	"pagination": {
 		"previous": "Anterior",
 		"next": "Siguiente",
