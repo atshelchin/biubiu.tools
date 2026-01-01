@@ -161,6 +161,7 @@ function generateStaticSitemap(): string {
 		{ path: '/apps/contract-events-scanner', priority: 0.8, changefreq: 'monthly' as const },
 		{ path: '/apps/nft-manager', priority: 0.8, changefreq: 'monthly' as const },
 		{ path: '/apps/dex-moonshot-trader', priority: 0.8, changefreq: 'monthly' as const },
+		{ path: '/roadmap', priority: 0.7, changefreq: 'weekly' as const },
 		{ path: '/privacy', priority: 0.3, changefreq: 'yearly' as const },
 		{ path: '/terms', priority: 0.3, changefreq: 'yearly' as const }
 	];
