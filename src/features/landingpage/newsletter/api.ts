@@ -11,7 +11,7 @@ import { collectDeviceInfo, collectLocaleInfo, PROJECT_SOURCE } from './utils';
  * In production, this should be the deployed newsletter service URL
  */
 const API_CONFIG = {
-	baseUrl: import.meta.env.DEV ? 'http://localhost:3000' : 'https://newsletter.appsdata.xyz',
+	baseUrl: 'https://newsletter.appsdata.xyz',
 	endpoints: {
 		subscribe: '/v1/subscribe',
 		unsubscribe: '/v1/unsubscribe'
