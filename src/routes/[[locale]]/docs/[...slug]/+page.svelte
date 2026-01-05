@@ -7,7 +7,6 @@
 	interface Props {
 		data: {
 			doc: ParsedDoc;
-			version: string;
 			navigation: DocNavigation;
 		};
 	}
@@ -29,6 +28,11 @@
 	const currentIndex = $derived(allDocs.findIndex((d) => d.path === $page.url.pathname));
 	const prevDoc = $derived(currentIndex > 0 ? allDocs[currentIndex - 1] : null);
 	const nextDoc = $derived(currentIndex < allDocs.length - 1 ? allDocs[currentIndex + 1] : null);
+
+	// Get localized category label
+	const categoryLabel = $derived(
+		data.navigation.categories.find((c) => c.slug === data.doc.category)?.label ?? data.doc.category
+	);
 
 	// Active TOC tracking
 	let activeTocId = $state('');
@@ -103,9 +107,7 @@
 		<nav class="breadcrumb" aria-label="Breadcrumb">
 			<a href="/docs">{i18n.t('common.docs.title')}</a>
 			<ChevronRight size={14} />
-			<a href="/docs/{data.version}">{data.version}</a>
-			<ChevronRight size={14} />
-			<span>{data.doc.category}</span>
+			<span>{categoryLabel}</span>
 			<ChevronRight size={14} />
 			<span class="current">{data.doc.frontmatter.title}</span>
 		</nav>

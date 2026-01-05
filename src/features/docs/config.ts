@@ -3,46 +3,30 @@
  */
 
 import type { DocsConfig } from './types';
+import { localeMetas } from '@/i18n/i18n.svelte';
 
 export const docsConfig: DocsConfig = {
-	versions: [
-		{
-			id: 'v1',
-			label: 'v1.0',
-			isDefault: true,
-			isLatest: true
-		}
-		// Future versions can be added here
-		// { id: 'v2', label: 'v2.0', isLatest: true }
-	],
-	defaultVersion: 'v1',
+	defaultLanguage: 'en',
 	basePath: '/docs'
 };
 
 /**
- * Get version by ID
+ * Get all supported documentation languages from i18n config
  */
-export function getVersion(versionId: string) {
-	return docsConfig.versions.find((v) => v.id === versionId);
+export function getSupportedLanguages(): string[] {
+	return localeMetas.map((l) => l.code);
 }
 
 /**
- * Get default version
+ * Check if a language is supported for docs
  */
-export function getDefaultVersion() {
-	return docsConfig.versions.find((v) => v.isDefault) ?? docsConfig.versions[0];
+export function isValidLanguage(language: string): boolean {
+	return getSupportedLanguages().includes(language);
 }
 
 /**
- * Get latest version
+ * Get the default/fallback language
  */
-export function getLatestVersion() {
-	return docsConfig.versions.find((v) => v.isLatest) ?? docsConfig.versions[0];
-}
-
-/**
- * Check if version exists
- */
-export function isValidVersion(versionId: string): boolean {
-	return docsConfig.versions.some((v) => v.id === versionId);
+export function getDefaultLanguage(): string {
+	return docsConfig.defaultLanguage;
 }

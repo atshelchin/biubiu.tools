@@ -13,7 +13,7 @@ The Token Deployer allows you to create and deploy ERC20 tokens on any supported
 
 Before deploying a token:
 
-1. **Connect your wallet** - See [Wallet Connection](/docs/v1/getting-started/wallet-connection)
+1. **Connect your wallet** - See [Wallet Connection](/docs/getting-started/wallet-connection)
 2. **Have native tokens for gas** - ETH, MATIC, BNB, etc.
 3. **Plan your token parameters**
 

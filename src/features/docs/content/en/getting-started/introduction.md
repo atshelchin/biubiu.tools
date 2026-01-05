@@ -52,9 +52,9 @@ biubiu.tools supports a wide range of EVM-compatible networks:
 
 Ready to start? Check out our quick start guides:
 
-1. [Connect your wallet](/docs/v1/getting-started/wallet-connection)
-2. [Deploy your first token](/docs/v1/guides/token-deployer)
-3. [Scan token balances](/docs/v1/guides/token-balance-scanner)
+1. [Connect your wallet](/docs/getting-started/wallet-connection)
+2. [Deploy your first token](/docs/guides/token-deployer)
+3. [Scan token balances](/docs/guides/token-balance-scanner)
 
 ## Need Help?
 

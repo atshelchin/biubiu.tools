@@ -93,20 +93,44 @@ export function parseFrontmatter(content: string): {
 }
 
 /**
+ * Generate a URL-safe slug from text, supporting Unicode characters
+ */
+function generateSlug(text: string): string {
+	return (
+		text
+			.toLowerCase()
+			// Keep Unicode letters/numbers, spaces, and hyphens
+			.replace(/[^\p{L}\p{N}\s-]/gu, '')
+			.trim()
+			.replace(/\s+/g, '-')
+	);
+}
+
+/**
  * Extract table of contents from markdown
  */
 export function extractToc(content: string): TocItem[] {
 	const headingRegex = /^(#{2,4})\s+(.+)$/gm;
 	const toc: TocItem[] = [];
+	const usedIds = new Map<string, number>();
 	let match;
 
 	while ((match = headingRegex.exec(content)) !== null) {
 		const level = match[1].length;
 		const text = match[2].trim();
-		const id = text
-			.toLowerCase()
-			.replace(/[^\w\s-]/g, '')
-			.replace(/\s+/g, '-');
+		let id = generateSlug(text);
+
+		// Handle empty or duplicate IDs
+		if (!id) {
+			id = 'section';
+		}
+
+		// Ensure unique IDs by appending a counter if needed
+		const count = usedIds.get(id) || 0;
+		if (count > 0) {
+			id = `${id}-${count}`;
+		}
+		usedIds.set(id.replace(/-\d+$/, ''), count + 1);
 
 		toc.push({ id, text, level });
 	}
@@ -151,14 +175,25 @@ export async function parseMarkdown(content: string): Promise<string> {
 	// Configure marked with custom renderer
 	const renderer = new marked.Renderer();
 
+	// Track used IDs for unique heading anchors
+	const usedIds = new Map<string, number>();
+
 	// Custom heading renderer with IDs for TOC linking
 	renderer.heading = function ({ tokens, depth }: Tokens.Heading): string {
 		const text = this.parser.parseInline(tokens);
-		const id = text
-			.toLowerCase()
-			.replace(/<[^>]*>/g, '') // Remove HTML tags
-			.replace(/[^\w\s-]/g, '')
-			.replace(/\s+/g, '-');
+		const plainText = text.replace(/<[^>]*>/g, ''); // Remove HTML tags
+		let id = generateSlug(plainText);
+
+		// Handle empty or duplicate IDs (same logic as extractToc)
+		if (!id) {
+			id = 'section';
+		}
+
+		const count = usedIds.get(id) || 0;
+		if (count > 0) {
+			id = `${id}-${count}`;
+		}
+		usedIds.set(id.replace(/-\d+$/, ''), count + 1);
 
 		return `<h${depth} id="${id}">${text}</h${depth}>\n`;
 	};

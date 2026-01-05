@@ -3,11 +3,12 @@
  *
  * Loads markdown files from src/features/docs/content/
  * using Vite's import.meta.glob for build-time optimization.
+ * Supports multiple languages with fallback to default language.
  */
 
 import type { DocCategory, DocItem, DocNavigation, CategoryMeta, ParsedDoc } from '../types';
 import { parseDocument } from './markdown-parser';
-import { isValidVersion } from '../config';
+import { isValidLanguage, getDefaultLanguage } from '../config';
 
 // Import all markdown and svx files at build time
 const contentModules = import.meta.glob('/src/features/docs/content/**/*.{md,svx}', {
@@ -23,26 +24,33 @@ const categoryModules = import.meta.glob('/src/features/docs/content/**/_categor
 });
 
 /**
- * Parse file path to extract version, category, and slug
+ * Parse file path to extract language, category, and slug
  */
-function parseFilePath(path: string): { version: string; category: string; slug: string } | null {
-	// Path format: /src/features/docs/content/v1/category/document.md
+function parseFilePath(path: string): { language: string; category: string; slug: string } | null {
+	// Path format: /src/features/docs/content/en/category/document.md
 	const match = path.match(/\/content\/([^/]+)\/([^/]+)\/([^/]+)\.(md|svx)$/);
 	if (!match) return null;
 
 	return {
-		version: match[1],
+		language: match[1],
 		category: match[2],
 		slug: match[3]
 	};
 }
 
 /**
- * Get category metadata for a given version and category
+ * Get category metadata for a given language and category
+ * Falls back to default language if not found
  */
-function getCategoryMeta(version: string, category: string): CategoryMeta {
-	const path = `/src/features/docs/content/${version}/${category}/_category.json`;
-	const meta = categoryModules[path] as CategoryMeta | undefined;
+function getCategoryMeta(language: string, category: string): CategoryMeta {
+	const path = `/src/features/docs/content/${language}/${category}/_category.json`;
+	let meta = categoryModules[path] as CategoryMeta | undefined;
+
+	// Fallback to default language
+	if (!meta) {
+		const fallbackPath = `/src/features/docs/content/${getDefaultLanguage()}/${category}/_category.json`;
+		meta = categoryModules[fallbackPath] as CategoryMeta | undefined;
+	}
 
 	return (
 		meta ?? {
@@ -53,30 +61,45 @@ function getCategoryMeta(version: string, category: string): CategoryMeta {
 }
 
 /**
- * Load navigation structure for a version
+ * Load navigation structure for a language
+ * Uses default language for structure, but loads localized labels and titles
  */
-export async function loadNavigation(version: string): Promise<DocNavigation | null> {
-	if (!isValidVersion(version)) {
+export async function loadNavigation(language: string): Promise<DocNavigation | null> {
+	if (!isValidLanguage(language)) {
 		return null;
 	}
 
+	// Use default language for navigation structure
+	// This ensures consistent navigation across all languages
+	const navLanguage = getDefaultLanguage();
 	const categories: Record<string, DocCategory> = {};
 
 	// Process each content file
 	for (const path of Object.keys(contentModules)) {
 		const parsed = parseFilePath(path);
-		if (!parsed || parsed.version !== version) continue;
+		if (!parsed || parsed.language !== navLanguage) continue;
 
-		// Load the file content to get frontmatter
+		// Load the file content to get frontmatter (from default language for structure)
 		const rawContent = (await contentModules[path]()) as string;
 		const { frontmatter } = await parseDocument(rawContent);
 
 		// Skip drafts in production
 		if (frontmatter.draft && import.meta.env.PROD) continue;
 
+		// Try to load localized title from target language
+		let localizedTitle = frontmatter.title;
+		if (language !== navLanguage) {
+			const localizedPath = path.replace(`/${navLanguage}/`, `/${language}/`);
+			if (contentModules[localizedPath]) {
+				const localizedContent = (await contentModules[localizedPath]()) as string;
+				const { frontmatter: localizedFrontmatter } = await parseDocument(localizedContent);
+				localizedTitle = localizedFrontmatter.title;
+			}
+		}
+
 		// Get or create category
 		if (!categories[parsed.category]) {
-			const meta = getCategoryMeta(version, parsed.category);
+			const meta = getCategoryMeta(language, parsed.category);
 			categories[parsed.category] = {
 				slug: parsed.category,
 				label: meta.label,
@@ -90,10 +113,10 @@ export async function loadNavigation(version: string): Promise<DocNavigation | n
 		// Add document to category
 		const docItem: DocItem = {
 			slug: parsed.slug,
-			title: frontmatter.title,
+			title: localizedTitle,
 			description: frontmatter.description,
 			order: frontmatter.order ?? 999,
-			path: `/${version}/${parsed.category}/${parsed.slug}`,
+			path: `/${parsed.category}/${parsed.slug}`,
 			draft: frontmatter.draft
 		};
 
@@ -109,58 +132,66 @@ export async function loadNavigation(version: string): Promise<DocNavigation | n
 		}));
 
 	return {
-		version,
+		language,
 		categories: sortedCategories
 	};
 }
 
 /**
- * Load a specific document
+ * Load a specific document with language fallback
  */
 export async function loadDocument(
-	version: string,
+	language: string,
 	category: string,
 	slug: string
 ): Promise<ParsedDoc | null> {
-	if (!isValidVersion(version)) {
+	if (!isValidLanguage(language)) {
 		return null;
 	}
 
-	// Try .md first, then .svx
-	const mdPath = `/src/features/docs/content/${version}/${category}/${slug}.md`;
-	const svxPath = `/src/features/docs/content/${version}/${category}/${slug}.svx`;
-
-	let rawContent: string | null = null;
-	let usedPath = mdPath;
-
-	if (contentModules[mdPath]) {
-		rawContent = (await contentModules[mdPath]()) as string;
-	} else if (contentModules[svxPath]) {
-		rawContent = (await contentModules[svxPath]()) as string;
-		usedPath = svxPath;
+	// Try requested language first, then fallback to default
+	const languagesToTry = [language];
+	if (language !== getDefaultLanguage()) {
+		languagesToTry.push(getDefaultLanguage());
 	}
 
-	if (!rawContent) {
-		return null;
+	for (const lang of languagesToTry) {
+		// Try .md first, then .svx
+		const mdPath = `/src/features/docs/content/${lang}/${category}/${slug}.md`;
+		const svxPath = `/src/features/docs/content/${lang}/${category}/${slug}.svx`;
+
+		let rawContent: string | null = null;
+		let usedPath = mdPath;
+
+		if (contentModules[mdPath]) {
+			rawContent = (await contentModules[mdPath]()) as string;
+		} else if (contentModules[svxPath]) {
+			rawContent = (await contentModules[svxPath]()) as string;
+			usedPath = svxPath;
+		}
+
+		if (rawContent) {
+			const { frontmatter, html, toc } = await parseDocument(rawContent);
+
+			// Skip drafts in production
+			if (frontmatter.draft && import.meta.env.PROD) {
+				continue;
+			}
+
+			return {
+				frontmatter,
+				content: rawContent,
+				html,
+				toc,
+				slug,
+				category,
+				language: lang,
+				path: usedPath
+			};
+		}
 	}
 
-	const { frontmatter, html, toc } = await parseDocument(rawContent);
-
-	// Skip drafts in production
-	if (frontmatter.draft && import.meta.env.PROD) {
-		return null;
-	}
-
-	return {
-		frontmatter,
-		content: rawContent,
-		html,
-		toc,
-		slug,
-		category,
-		version,
-		path: usedPath
-	};
+	return null;
 }
 
 /**
@@ -168,10 +199,12 @@ export async function loadDocument(
  */
 export async function getAllDocumentPaths(): Promise<string[]> {
 	const paths: string[] = [];
+	const defaultLang = getDefaultLanguage();
 
 	for (const path of Object.keys(contentModules)) {
 		const parsed = parseFilePath(path);
-		if (!parsed) continue;
+		// Only get paths from default language (structure source)
+		if (!parsed || parsed.language !== defaultLang) continue;
 
 		// Load to check for drafts
 		const rawContent = (await contentModules[path]()) as string;
@@ -179,17 +212,17 @@ export async function getAllDocumentPaths(): Promise<string[]> {
 
 		if (frontmatter.draft && import.meta.env.PROD) continue;
 
-		paths.push(`/docs/${parsed.version}/${parsed.category}/${parsed.slug}`);
+		paths.push(`/docs/${parsed.category}/${parsed.slug}`);
 	}
 
 	return paths;
 }
 
 /**
- * Get the first document in a version (for redirects)
+ * Get the first document (for redirects)
  */
-export async function getFirstDocument(version: string): Promise<string | null> {
-	const nav = await loadNavigation(version);
+export async function getFirstDocument(language: string): Promise<string | null> {
+	const nav = await loadNavigation(language);
 	if (!nav || nav.categories.length === 0) return null;
 
 	const firstCategory = nav.categories[0];
@@ -200,15 +233,17 @@ export async function getFirstDocument(version: string): Promise<string | null> 
 }
 
 /**
- * Get all document slugs for a specific version (for prerender entries)
+ * Get all document slugs (for prerender entries)
  * Returns slugs in format "category/document"
  */
-export async function getAllDocSlugs(version: string): Promise<string[]> {
+export async function getAllDocSlugs(): Promise<string[]> {
 	const slugs: string[] = [];
+	const defaultLang = getDefaultLanguage();
 
 	for (const path of Object.keys(contentModules)) {
 		const parsed = parseFilePath(path);
-		if (!parsed || parsed.version !== version) continue;
+		// Only get slugs from default language (structure source)
+		if (!parsed || parsed.language !== defaultLang) continue;
 
 		// Load to check for drafts
 		const rawContent = (await contentModules[path]()) as string;

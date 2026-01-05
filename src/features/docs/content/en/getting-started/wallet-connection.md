@@ -84,5 +84,5 @@ If the connection fails:
 
 Now that your wallet is connected, you're ready to:
 
-- [Deploy your first token](/docs/v1/guides/token-deployer)
-- [Scan token balances](/docs/v1/guides/token-balance-scanner)
+- [Deploy your first token](/docs/guides/token-deployer)
+- [Scan token balances](/docs/guides/token-balance-scanner)

@@ -381,6 +381,7 @@ function generateToolsSitemap(): string {
 
 /**
  * Get all documentation page paths by scanning the content directory
+ * Uses default language (en) as the source of truth for document structure
  */
 function getDocsPaths(): string[] {
 	const DOCS_CONTENT_DIR = join(process.cwd(), 'src/features/docs/content');
@@ -396,19 +397,17 @@ function getDocsPaths(): string[] {
 
 			if (stat.isDirectory()) {
 				scanDir(fullPath, `${basePath}/${entry}`);
-			} else if (entry.endsWith('.md')) {
-				// Remove .md extension to get the slug
-				const slug = entry.replace('.md', '');
+			} else if (entry.endsWith('.md') || entry.endsWith('.svx')) {
+				// Remove .md or .svx extension to get the slug
+				const slug = entry.replace(/\.(md|svx)$/, '');
 				paths.push(`${basePath}/${slug}`);
 			}
 		}
 	}
 
-	// Scan each version directory
-	for (const version of docsConfig.versions) {
-		const versionDir = join(DOCS_CONTENT_DIR, version.id);
-		scanDir(versionDir, `/docs/${version.id}`);
-	}
+	// Scan default language directory (en) for document structure
+	const defaultLangDir = join(DOCS_CONTENT_DIR, docsConfig.defaultLanguage);
+	scanDir(defaultLangDir, '/docs');
 
 	return paths;
 }

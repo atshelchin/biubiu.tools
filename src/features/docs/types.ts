@@ -41,9 +41,9 @@ export interface DocCategory {
 	items: DocItem[];
 }
 
-/** Navigation structure for a version */
+/** Navigation structure for a language */
 export interface DocNavigation {
-	version: string;
+	language: string;
 	categories: DocCategory[];
 }
 
@@ -63,21 +63,14 @@ export interface ParsedDoc {
 	toc: TocItem[];
 	slug: string;
 	category: string;
-	version: string;
+	language: string;
 	path: string;
-}
-
-/** Version configuration */
-export interface DocVersion {
-	id: string;
-	label: string;
-	isDefault?: boolean;
-	isLatest?: boolean;
 }
 
 /** Global docs configuration */
 export interface DocsConfig {
-	versions: DocVersion[];
-	defaultVersion: string;
+	/** Default/fallback language for docs */
+	defaultLanguage: string;
+	/** Base path for docs URLs */
 	basePath: string;
 }
