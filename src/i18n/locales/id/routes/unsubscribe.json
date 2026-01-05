@@ -1,0 +1,17 @@
+{
+	"page_title": "Berhenti Berlangganan",
+	"page_description": "Berhenti berlangganan newsletter BiuBiu Tools",
+	"title": "Berhenti Berlangganan Newsletter",
+	"description": "Masukkan alamat email Anda untuk berhenti berlangganan. Anda dapat berlangganan kembali kapan saja dari halaman utama kami.",
+	"placeholder": "email@anda.com",
+	"button": "Berhenti Berlangganan",
+	"submitting": "Memproses...",
+	"success_title": "Anda telah berhenti berlangganan",
+	"success_message": "Anda tidak akan lagi menerima email dari kami. Kami sedih melihat Anda pergi!",
+	"note": "Jika Anda tidak meminta ini, Anda dapat mengabaikan halaman ini.",
+	"errors": {
+		"invalid_email": "Masukkan alamat email yang valid",
+		"not_found": "Email ini tidak ada dalam daftar email kami",
+		"server_error": "Terjadi kesalahan. Silakan coba lagi"
+	}
+}

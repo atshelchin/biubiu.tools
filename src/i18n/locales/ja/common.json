@@ -238,5 +238,30 @@
 			"security_warning": "信頼できないデプロイを使用すると資産を失う可能性があります。biubiu.tools公式かセルフホストのみ使用してください。",
 			"cta": "GitHubで見る"
 		}
+	},
+	"newsletter": {
+		"badge": "最新情報を購読",
+		"title": "最新情報をお届け",
+		"subtitle": "新ツールのリリース、機能アップデート、Web3の最新情報をお届けします。スパムなし、価値ある情報のみ。",
+		"placeholder": "your@email.com",
+		"button": "購読する",
+		"submitting": "送信中...",
+		"success_title": "購読完了！",
+		"success_message": "ご登録ありがとうございます。最新情報をお届けします。",
+		"subscribe_another": "別のメールを購読",
+		"trust": {
+			"no_spam": "スパムなし",
+			"unsubscribe": "いつでも解除可能",
+			"privacy": "プライバシー保護"
+		},
+		"unsubscribe_note": "気が変わりましたか？",
+		"unsubscribe_link": "こちらで解除",
+		"errors": {
+			"invalid_email": "有効なメールアドレスを入力してください",
+			"already_subscribed": "このメールは既に購読済みです",
+			"rate_limited": "試行回数が多すぎます。後でお試しください",
+			"invalid_request": "無効なリクエストです。もう一度お試しください",
+			"server_error": "エラーが発生しました。もう一度お試しください"
+		}
 	}
 }

@@ -238,5 +238,30 @@
 			"security_warning": "Güvenilmez dağıtımları kullanmak fon kaybına neden olabilir. Yalnızca biubiu.tools veya kendi sunucunuzu kullanın.",
 			"cta": "GitHub'da Görüntüle"
 		}
+	},
+	"newsletter": {
+		"badge": "Güncel Kalın",
+		"title": "Haberdar Olun",
+		"subtitle": "Yeni araçlar, özellikler ve Web3 içgörüleri hakkında bilgilendirilmek için abone olun. Spam yok, sadece değer.",
+		"placeholder": "email@adresiniz.com",
+		"button": "Abone Ol",
+		"submitting": "Abone olunuyor...",
+		"success_title": "Abone oldunuz!",
+		"success_message": "Abone olduğunuz için teşekkürler. Sizi güncel tutacağız.",
+		"subscribe_another": "Başka bir e-posta abone et",
+		"trust": {
+			"no_spam": "Spam yok",
+			"unsubscribe": "İstediğiniz zaman iptal edin",
+			"privacy": "Gizlilik korunur"
+		},
+		"unsubscribe_note": "Fikrinizi mi değiştirdiniz? ",
+		"unsubscribe_link": "Buradan abonelikten çıkın",
+		"errors": {
+			"invalid_email": "Lütfen geçerli bir e-posta adresi girin",
+			"already_subscribed": "Bu e-posta zaten abone",
+			"rate_limited": "Çok fazla deneme. Daha sonra tekrar deneyin",
+			"invalid_request": "Geçersiz istek. Tekrar deneyin",
+			"server_error": "Bir şeyler ters gitti. Tekrar deneyin"
+		}
 	}
 }

@@ -238,5 +238,30 @@
 			"security_warning": "Usar despliegues no confiables puede resultar en pérdida de fondos. Solo usa biubiu.tools o auto-alojamiento.",
 			"cta": "Ver en GitHub"
 		}
+	},
+	"newsletter": {
+		"badge": "Mantente actualizado",
+		"title": "Mantente informado",
+		"subtitle": "Recibe notificaciones cuando lancemos nuevas herramientas, funciones e información sobre Web3. Sin spam, solo valor.",
+		"placeholder": "tu@email.com",
+		"button": "Suscribirse",
+		"submitting": "Suscribiendo...",
+		"success_title": "¡Suscrito!",
+		"success_message": "Gracias por suscribirte. Te mantendremos informado.",
+		"subscribe_another": "Suscribir otro email",
+		"trust": {
+			"no_spam": "Sin spam",
+			"unsubscribe": "Cancela cuando quieras",
+			"privacy": "Privacidad respetada"
+		},
+		"unsubscribe_note": "¿Cambiaste de opinión? ",
+		"unsubscribe_link": "Cancela aquí",
+		"errors": {
+			"invalid_email": "Por favor ingresa un email válido",
+			"already_subscribed": "Este email ya está suscrito",
+			"rate_limited": "Demasiados intentos. Intenta más tarde",
+			"invalid_request": "Solicitud inválida. Intenta de nuevo",
+			"server_error": "Algo salió mal. Intenta de nuevo"
+		}
 	}
 }

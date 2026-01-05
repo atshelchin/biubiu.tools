@@ -1,0 +1,17 @@
+{
+	"page_title": "Hủy đăng ký",
+	"page_description": "Hủy đăng ký nhận bản tin BiuBiu Tools",
+	"title": "Hủy đăng ký nhận bản tin",
+	"description": "Nhập địa chỉ email để hủy đăng ký. Bạn có thể đăng ký lại bất cứ lúc nào từ trang chủ.",
+	"placeholder": "email@cuaban.com",
+	"button": "Hủy đăng ký",
+	"submitting": "Đang xử lý...",
+	"success_title": "Đã hủy đăng ký",
+	"success_message": "Bạn sẽ không còn nhận được email từ chúng tôi. Rất tiếc khi thấy bạn rời đi!",
+	"note": "Nếu bạn không yêu cầu điều này, bạn có thể bỏ qua trang này.",
+	"errors": {
+		"invalid_email": "Vui lòng nhập địa chỉ email hợp lệ",
+		"not_found": "Email này không có trong danh sách gửi thư",
+		"server_error": "Đã xảy ra lỗi. Vui lòng thử lại"
+	}
+}

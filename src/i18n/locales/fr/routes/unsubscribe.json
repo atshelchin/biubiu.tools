@@ -1,0 +1,17 @@
+{
+	"page_title": "Se désabonner",
+	"page_description": "Se désabonner de la newsletter BiuBiu Tools",
+	"title": "Se désabonner de la newsletter",
+	"description": "Entrez votre adresse email pour vous désabonner. Vous pouvez vous réabonner à tout moment depuis notre page d'accueil.",
+	"placeholder": "votre@email.com",
+	"button": "Se désabonner",
+	"submitting": "Traitement...",
+	"success_title": "Vous êtes désabonné",
+	"success_message": "Vous ne recevrez plus d'emails de notre part. Nous sommes désolés de vous voir partir !",
+	"note": "Si vous n'avez pas demandé cela, vous pouvez ignorer cette page.",
+	"errors": {
+		"invalid_email": "Veuillez entrer une adresse email valide",
+		"not_found": "Cet email n'est pas dans notre liste de diffusion",
+		"server_error": "Une erreur s'est produite. Veuillez réessayer"
+	}
+}

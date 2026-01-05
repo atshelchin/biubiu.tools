@@ -238,5 +238,30 @@
 			"security_warning": "Menggunakan deployment tidak terpercaya dapat mengakibatkan kehilangan dana. Hanya gunakan biubiu.tools atau self-hosting.",
 			"cta": "Lihat di GitHub"
 		}
+	},
+	"newsletter": {
+		"badge": "Tetap Update",
+		"title": "Tetap Terhubung",
+		"subtitle": "Dapatkan notifikasi saat kami meluncurkan alat baru, fitur, dan wawasan Web3. Tanpa spam, hanya nilai.",
+		"placeholder": "email@anda.com",
+		"button": "Berlangganan",
+		"submitting": "Mendaftar...",
+		"success_title": "Berhasil!",
+		"success_message": "Terima kasih telah berlangganan. Kami akan memberi tahu Anda info terbaru.",
+		"subscribe_another": "Daftarkan email lain",
+		"trust": {
+			"no_spam": "Tanpa spam",
+			"unsubscribe": "Berhenti kapan saja",
+			"privacy": "Privasi terjaga"
+		},
+		"unsubscribe_note": "Berubah pikiran? ",
+		"unsubscribe_link": "Berhenti berlangganan di sini",
+		"errors": {
+			"invalid_email": "Masukkan alamat email yang valid",
+			"already_subscribed": "Email ini sudah terdaftar",
+			"rate_limited": "Terlalu banyak percobaan. Coba lagi nanti",
+			"invalid_request": "Permintaan tidak valid. Coba lagi",
+			"server_error": "Terjadi kesalahan. Coba lagi"
+		}
 	}
 }

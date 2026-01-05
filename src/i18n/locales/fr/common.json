@@ -238,5 +238,30 @@
 			"security_warning": "L'utilisation de déploiements non fiables peut entraîner une perte de fonds. Utilisez uniquement biubiu.tools ou auto-hébergez.",
 			"cta": "Voir sur GitHub"
 		}
+	},
+	"newsletter": {
+		"badge": "Restez informé",
+		"title": "Restez à jour",
+		"subtitle": "Soyez notifié lors du lancement de nouveaux outils, fonctionnalités et actualités Web3. Pas de spam, que de la valeur.",
+		"placeholder": "votre@email.com",
+		"button": "S'abonner",
+		"submitting": "Abonnement...",
+		"success_title": "Vous êtes abonné !",
+		"success_message": "Merci de vous être abonné. Nous vous tiendrons informé.",
+		"subscribe_another": "Abonner un autre email",
+		"trust": {
+			"no_spam": "Pas de spam",
+			"unsubscribe": "Désabonnez-vous à tout moment",
+			"privacy": "Vie privée respectée"
+		},
+		"unsubscribe_note": "Vous avez changé d'avis ? ",
+		"unsubscribe_link": "Désabonnez-vous ici",
+		"errors": {
+			"invalid_email": "Veuillez entrer une adresse email valide",
+			"already_subscribed": "Cet email est déjà abonné",
+			"rate_limited": "Trop de tentatives. Réessayez plus tard",
+			"invalid_request": "Requête invalide. Veuillez réessayer",
+			"server_error": "Une erreur s'est produite. Veuillez réessayer"
+		}
 	}
 }

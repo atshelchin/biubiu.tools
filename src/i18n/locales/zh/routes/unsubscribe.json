@@ -1,0 +1,17 @@
+{
+	"page_title": "取消订阅",
+	"page_description": "取消订阅 BiuBiu Tools 邮件通知",
+	"title": "取消订阅邮件通知",
+	"description": "输入您的邮箱地址以取消订阅。您可以随时在首页重新订阅。",
+	"placeholder": "your@email.com",
+	"button": "取消订阅",
+	"submitting": "处理中...",
+	"success_title": "已取消订阅",
+	"success_message": "您将不再收到我们的邮件。感谢您曾经的关注！",
+	"note": "如果您没有请求取消订阅，可以忽略此页面。",
+	"errors": {
+		"invalid_email": "请输入有效的邮箱地址",
+		"not_found": "该邮箱不在我们的邮件列表中",
+		"server_error": "出错了，请重试"
+	}
+}

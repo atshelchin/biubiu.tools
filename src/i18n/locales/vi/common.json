@@ -238,5 +238,30 @@
 			"security_warning": "Sử dụng triển khai không đáng tin cậy có thể dẫn đến mất tiền. Chỉ sử dụng biubiu.tools hoặc tự triển khai.",
 			"cta": "Xem trên GitHub"
 		}
+	},
+	"newsletter": {
+		"badge": "Cập nhật tin tức",
+		"title": "Luôn cập nhật",
+		"subtitle": "Nhận thông báo khi chúng tôi ra mắt công cụ mới, tính năng và thông tin Web3. Không spam, chỉ có giá trị.",
+		"placeholder": "email@cuaban.com",
+		"button": "Đăng ký",
+		"submitting": "Đang đăng ký...",
+		"success_title": "Đăng ký thành công!",
+		"success_message": "Cảm ơn bạn đã đăng ký. Chúng tôi sẽ cập nhật tin tức mới nhất.",
+		"subscribe_another": "Đăng ký email khác",
+		"trust": {
+			"no_spam": "Không spam",
+			"unsubscribe": "Hủy bất cứ lúc nào",
+			"privacy": "Bảo mật riêng tư"
+		},
+		"unsubscribe_note": "Đổi ý rồi? ",
+		"unsubscribe_link": "Hủy đăng ký tại đây",
+		"errors": {
+			"invalid_email": "Vui lòng nhập địa chỉ email hợp lệ",
+			"already_subscribed": "Email này đã được đăng ký",
+			"rate_limited": "Quá nhiều lần thử. Vui lòng thử lại sau",
+			"invalid_request": "Yêu cầu không hợp lệ. Vui lòng thử lại",
+			"server_error": "Đã xảy ra lỗi. Vui lòng thử lại"
+		}
 	}
 }

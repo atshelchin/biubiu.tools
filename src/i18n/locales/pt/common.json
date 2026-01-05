@@ -238,5 +238,30 @@
 			"security_warning": "Usar deployments não confiáveis pode resultar em perda de fundos. Use apenas biubiu.tools ou auto-hospedagem.",
 			"cta": "Ver no GitHub"
 		}
+	},
+	"newsletter": {
+		"badge": "Fique atualizado",
+		"title": "Fique por dentro",
+		"subtitle": "Receba notificações quando lançarmos novas ferramentas, recursos e insights Web3. Sem spam, só valor.",
+		"placeholder": "seu@email.com",
+		"button": "Inscrever-se",
+		"submitting": "Inscrevendo...",
+		"success_title": "Inscrito!",
+		"success_message": "Obrigado por se inscrever. Manteremos você atualizado.",
+		"subscribe_another": "Inscrever outro email",
+		"trust": {
+			"no_spam": "Sem spam",
+			"unsubscribe": "Cancele quando quiser",
+			"privacy": "Privacidade respeitada"
+		},
+		"unsubscribe_note": "Mudou de ideia? ",
+		"unsubscribe_link": "Cancele aqui",
+		"errors": {
+			"invalid_email": "Por favor insira um email válido",
+			"already_subscribed": "Este email já está inscrito",
+			"rate_limited": "Muitas tentativas. Tente novamente mais tarde",
+			"invalid_request": "Requisição inválida. Tente novamente",
+			"server_error": "Algo deu errado. Tente novamente"
+		}
 	}
 }

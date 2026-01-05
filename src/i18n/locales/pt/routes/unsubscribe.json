@@ -1,0 +1,17 @@
+{
+	"page_title": "Cancelar inscrição",
+	"page_description": "Cancelar inscrição na newsletter do BiuBiu Tools",
+	"title": "Cancelar inscrição na newsletter",
+	"description": "Digite seu email para cancelar a inscrição. Você pode se inscrever novamente a qualquer momento na nossa página inicial.",
+	"placeholder": "seu@email.com",
+	"button": "Cancelar inscrição",
+	"submitting": "Processando...",
+	"success_title": "Inscrição cancelada",
+	"success_message": "Você não receberá mais emails nossos. Lamentamos vê-lo partir!",
+	"note": "Se você não solicitou isso, pode ignorar esta página.",
+	"errors": {
+		"invalid_email": "Por favor insira um email válido",
+		"not_found": "Este email não está na nossa lista de emails",
+		"server_error": "Algo deu errado. Por favor tente novamente"
+	}
+}

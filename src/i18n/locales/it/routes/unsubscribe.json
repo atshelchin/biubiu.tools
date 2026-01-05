@@ -1,0 +1,17 @@
+{
+	"page_title": "Annulla iscrizione",
+	"page_description": "Annulla l'iscrizione alla newsletter di BiuBiu Tools",
+	"title": "Annulla iscrizione alla newsletter",
+	"description": "Inserisci la tua email per annullare l'iscrizione. Puoi iscriverti nuovamente in qualsiasi momento dalla nostra homepage.",
+	"placeholder": "tua@email.com",
+	"button": "Annulla iscrizione",
+	"submitting": "Elaborazione...",
+	"success_title": "Iscrizione annullata",
+	"success_message": "Non riceverai più email da noi. Ci dispiace vederti andare!",
+	"note": "Se non hai richiesto questo, puoi ignorare questa pagina.",
+	"errors": {
+		"invalid_email": "Per favore inserisci un'email valida",
+		"not_found": "Questa email non è nella nostra mailing list",
+		"server_error": "Qualcosa è andato storto. Per favore riprova"
+	}
+}

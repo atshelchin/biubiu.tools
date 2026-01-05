@@ -238,5 +238,30 @@
 			"security_warning": "신뢰할 수 없는 배포 사용 시 자산 손실이 발생할 수 있습니다. biubiu.tools 공식 또는 셀프 호스팅만 사용하세요.",
 			"cta": "GitHub에서 보기"
 		}
+	},
+	"newsletter": {
+		"badge": "최신 소식 구독",
+		"title": "최신 소식 받아보기",
+		"subtitle": "새로운 도구 출시, 기능 업데이트, Web3 인사이트를 알려드립니다. 스팸 없이 가치 있는 정보만.",
+		"placeholder": "your@email.com",
+		"button": "구독하기",
+		"submitting": "구독 중...",
+		"success_title": "구독 완료!",
+		"success_message": "구독해 주셔서 감사합니다. 최신 소식을 전해드리겠습니다.",
+		"subscribe_another": "다른 이메일 구독",
+		"trust": {
+			"no_spam": "스팸 없음",
+			"unsubscribe": "언제든 해지 가능",
+			"privacy": "개인정보 보호"
+		},
+		"unsubscribe_note": "마음이 바뀌셨나요?",
+		"unsubscribe_link": "여기서 구독 해지",
+		"errors": {
+			"invalid_email": "유효한 이메일 주소를 입력하세요",
+			"already_subscribed": "이미 구독된 이메일입니다",
+			"rate_limited": "시도 횟수가 너무 많습니다. 나중에 다시 시도하세요",
+			"invalid_request": "잘못된 요청입니다. 다시 시도하세요",
+			"server_error": "오류가 발생했습니다. 다시 시도하세요"
+		}
 	}
 }

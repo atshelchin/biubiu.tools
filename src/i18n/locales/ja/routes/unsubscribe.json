@@ -1,0 +1,17 @@
+{
+	"page_title": "購読解除",
+	"page_description": "BiuBiu Tools ニュースレターの購読を解除",
+	"title": "ニュースレターの購読解除",
+	"description": "購読を解除するにはメールアドレスを入力してください。いつでもホームページから再購読できます。",
+	"placeholder": "your@email.com",
+	"button": "購読解除",
+	"submitting": "処理中...",
+	"success_title": "購読を解除しました",
+	"success_message": "今後メールは届きません。ご利用ありがとうございました！",
+	"note": "これをリクエストしていない場合は、このページを無視してください。",
+	"errors": {
+		"invalid_email": "有効なメールアドレスを入力してください",
+		"not_found": "このメールアドレスは登録されていません",
+		"server_error": "エラーが発生しました。もう一度お試しください"
+	}
+}

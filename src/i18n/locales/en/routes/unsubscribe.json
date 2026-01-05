@@ -1,0 +1,17 @@
+{
+	"page_title": "Unsubscribe",
+	"page_description": "Unsubscribe from the BiuBiu Tools newsletter",
+	"title": "Unsubscribe from Newsletter",
+	"description": "Enter your email address below to unsubscribe from our newsletter. You can re-subscribe anytime from our homepage.",
+	"placeholder": "your@email.com",
+	"button": "Unsubscribe",
+	"submitting": "Processing...",
+	"success_title": "You've been unsubscribed",
+	"success_message": "You will no longer receive emails from us. We're sorry to see you go!",
+	"note": "If you didn't request this, you can safely ignore this page.",
+	"errors": {
+		"invalid_email": "Please enter a valid email address",
+		"not_found": "This email is not in our mailing list",
+		"server_error": "Something went wrong. Please try again"
+	}
+}

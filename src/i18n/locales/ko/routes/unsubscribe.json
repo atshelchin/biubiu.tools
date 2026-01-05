@@ -1,0 +1,17 @@
+{
+	"page_title": "구독 해지",
+	"page_description": "BiuBiu Tools 뉴스레터 구독 해지",
+	"title": "뉴스레터 구독 해지",
+	"description": "구독을 해지하려면 이메일 주소를 입력하세요. 홈페이지에서 언제든지 다시 구독할 수 있습니다.",
+	"placeholder": "your@email.com",
+	"button": "구독 해지",
+	"submitting": "처리 중...",
+	"success_title": "구독이 해지되었습니다",
+	"success_message": "더 이상 이메일을 받지 않습니다. 이용해 주셔서 감사합니다!",
+	"note": "요청하지 않으셨다면 이 페이지를 무시하셔도 됩니다.",
+	"errors": {
+		"invalid_email": "유효한 이메일 주소를 입력하세요",
+		"not_found": "이 이메일은 메일링 리스트에 없습니다",
+		"server_error": "오류가 발생했습니다. 다시 시도해 주세요"
+	}
+}

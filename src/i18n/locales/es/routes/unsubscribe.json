@@ -1,0 +1,17 @@
+{
+	"page_title": "Cancelar suscripción",
+	"page_description": "Cancelar suscripción al boletín de BiuBiu Tools",
+	"title": "Cancelar suscripción al boletín",
+	"description": "Ingresa tu correo electrónico para cancelar la suscripción. Puedes volver a suscribirte en cualquier momento desde nuestra página principal.",
+	"placeholder": "tu@email.com",
+	"button": "Cancelar suscripción",
+	"submitting": "Procesando...",
+	"success_title": "Te has dado de baja",
+	"success_message": "Ya no recibirás correos de nosotros. ¡Lamentamos verte ir!",
+	"note": "Si no solicitaste esto, puedes ignorar esta página.",
+	"errors": {
+		"invalid_email": "Por favor ingresa un email válido",
+		"not_found": "Este email no está en nuestra lista de correo",
+		"server_error": "Algo salió mal. Por favor intenta de nuevo"
+	}
+}

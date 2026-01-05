@@ -1,0 +1,17 @@
+{
+	"page_title": "Abonelikten Çık",
+	"page_description": "BiuBiu Tools bülteninden abonelikten çık",
+	"title": "Bülten Aboneliğinden Çık",
+	"description": "Abonelikten çıkmak için e-posta adresinizi girin. Ana sayfamızdan istediğiniz zaman tekrar abone olabilirsiniz.",
+	"placeholder": "email@adresiniz.com",
+	"button": "Abonelikten Çık",
+	"submitting": "İşleniyor...",
+	"success_title": "Abonelikten çıktınız",
+	"success_message": "Artık bizden e-posta almayacaksınız. Gittiğinizi görmek bizi üzüyor!",
+	"note": "Bunu siz talep etmediyseniz, bu sayfayı görmezden gelebilirsiniz.",
+	"errors": {
+		"invalid_email": "Lütfen geçerli bir e-posta adresi girin",
+		"not_found": "Bu e-posta listemizde bulunmuyor",
+		"server_error": "Bir şeyler ters gitti. Lütfen tekrar deneyin"
+	}
+}

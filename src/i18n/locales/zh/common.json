@@ -253,5 +253,30 @@
 			"security_warning": "使用不可信部署版本可能导致资产损失。请只使用 biubiu.tools 官方站或自行部署。",
 			"cta": "前往 GitHub"
 		}
+	},
+	"newsletter": {
+		"badge": "保持关注",
+		"title": "订阅更新通知",
+		"subtitle": "第一时间获取新工具发布、功能更新和 Web3 前沿资讯。不发垃圾邮件，只有干货。",
+		"placeholder": "your@email.com",
+		"button": "订阅",
+		"submitting": "提交中...",
+		"success_title": "订阅成功！",
+		"success_message": "感谢订阅，我们会及时推送最新动态。",
+		"subscribe_another": "订阅其他邮箱",
+		"trust": {
+			"no_spam": "不发垃圾邮件",
+			"unsubscribe": "随时可取消",
+			"privacy": "隐私有保障"
+		},
+		"unsubscribe_note": "改变主意了？",
+		"unsubscribe_link": "点此取消订阅",
+		"errors": {
+			"invalid_email": "请输入有效的邮箱地址",
+			"already_subscribed": "该邮箱已订阅",
+			"rate_limited": "尝试次数过多，请稍后再试",
+			"invalid_request": "请求无效，请重试",
+			"server_error": "出错了，请重试"
+		}
 	}
 }

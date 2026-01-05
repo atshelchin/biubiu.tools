@@ -253,5 +253,30 @@
 			"security_warning": "Using untrusted deployments may result in loss of funds. Only use biubiu.tools or self-host.",
 			"cta": "View on GitHub"
 		}
+	},
+	"newsletter": {
+		"badge": "Stay Updated",
+		"title": "Stay in the Loop",
+		"subtitle": "Get notified when we launch new tools, features, and Web3 insights. No spam, just value.",
+		"placeholder": "your@email.com",
+		"button": "Subscribe",
+		"submitting": "Subscribing...",
+		"success_title": "You're subscribed!",
+		"success_message": "Thank you for subscribing. We'll keep you updated with the latest news.",
+		"subscribe_another": "Subscribe another email",
+		"trust": {
+			"no_spam": "No spam",
+			"unsubscribe": "Unsubscribe anytime",
+			"privacy": "Privacy respected"
+		},
+		"unsubscribe_note": "Changed your mind? ",
+		"unsubscribe_link": "Unsubscribe here",
+		"errors": {
+			"invalid_email": "Please enter a valid email address",
+			"already_subscribed": "This email is already subscribed",
+			"rate_limited": "Too many attempts. Please try again later",
+			"invalid_request": "Invalid request. Please try again",
+			"server_error": "Something went wrong. Please try again"
+		}
 	}
 }
