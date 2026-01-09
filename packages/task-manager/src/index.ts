@@ -1,97 +1,86 @@
 /**
  * @shelchin/task-manager
  *
- * Universal Task Management System with Tree Structure
- *
- * Features:
- * - Tree-based task structure (unlimited nesting)
- * - Pause/Resume functionality
+ * A tree-based task management system with:
+ * - Split storage for efficient loading (roots + nodes)
+ * - Merkle tree support for cryptographic verification
+ * - Pause/resume/cancel functionality
  * - IndexedDB persistence
  * - Svelte 5 reactive store
- * - Progress tracking and aggregation
- * - Retry with backoff
- * - Custom persistence adapters
+ * - Event-driven architecture
+ * - Clean, minimal API
  */
 
-// Configuration
-export {
-	initTaskManager,
-	getConfig,
-	isTaskManagerInitialized,
-	resetConfig,
-	DEFAULT_CONFIG,
-	type TaskManagerConfig,
-	type ResolvedConfig,
-	type PersistenceAdapter
-} from './config';
-
+// ============================================================================
 // Types
+// ============================================================================
+
 export type {
-	Task,
+	// Core types
 	TaskStatus,
-	TaskType,
-	PauseReason,
+	TaskRoot,
+	TaskNode,
+	// Creation options
 	CreateTaskOptions,
-	TaskUpdate,
-	TaskExecutionContext,
+	CreateNodeOptions,
+	// Execution types
+	ExecutionContext,
 	TaskExecutor,
-	TaskExecutorRegistry,
-	TaskRecoveryInfo,
-	TaskVisitor,
-	TaskFilter,
-	TaskProgressCallback
+	ExecutorRegistry,
+	// Event types
+	TaskEvent,
+	TaskEventData,
+	TaskEventHandler,
+	// Storage types
+	StorageAdapter,
+	// Configuration
+	TaskManagerConfig,
+	ResolvedConfig,
+	// Merkle types
+	MerkleProof
 } from './types';
 
-// Task Manager Core API
-export {
-	createTask,
-	getTask,
-	getAllTasks,
-	getRecoverableTasks,
-	getTasksByType,
-	getTasksByStatus,
-	updateTask,
-	pauseTask,
-	resumeTask,
-	cancelTask,
-	deleteTask,
-	executeTask
-} from './task-manager';
+export { DEFAULT_CONFIG } from './types';
 
-// Tree Utilities
-export {
-	traverseTree,
-	findTaskById,
-	findTasks,
-	getLeafTasks,
-	getParentTasks,
-	countLeaves,
-	calculateProgress,
-	calculateStatus,
-	updateStatistics,
-	getTaskPath,
-	getParentTask,
-	getNextExecutableTask,
-	cloneTask,
-	flattenTree,
-	getTreeDepth,
-	isAncestor,
-	getDescendants
-} from './utils/tree';
+// ============================================================================
+// Task Manager
+// ============================================================================
 
-// Database Utilities
-export {
-	saveTask,
-	getTask as getTaskFromDb,
-	getAllTasks as getAllTasksFromDb,
-	deleteTask as deleteTaskFromDb,
-	getRecoverableTasks as getRecoverableTasksFromDb,
-	getTasksByStatus as getTasksByStatusFromDb,
-	getTasksByType as getTasksByTypeFromDb,
-	cleanupOldTasks,
-	clearAllTasks,
-	closeDB
-} from './utils/db';
+export { TaskManager, createTaskManager } from './task-manager';
 
-// Stores
-export { createTaskStore, taskStore } from './stores';
+// ============================================================================
+// Storage Adapters
+// ============================================================================
+
+export { IndexedDBStorage, createIndexedDBStorage } from './storage/indexeddb';
+export { MemoryStorage, createMemoryStorage } from './storage/memory';
+
+// ============================================================================
+// Merkle Tree Utilities
+// ============================================================================
+
+export {
+	// Hashing
+	computeLeafHash,
+	computeDataHash,
+	// Building
+	buildMerkleRoot,
+	buildMerkleTreeFromNodes,
+	// Proofs
+	generateProof,
+	generateMerkleProof,
+	// Verification
+	verifyProof,
+	verifyMerkleProof,
+	verifyLeafNode,
+	// Utilities
+	rootsEqual,
+	getMerkleTreeDepth,
+	getMerkleTreeNodeCount
+} from './merkle';
+
+// ============================================================================
+// Svelte Store
+// ============================================================================
+
+export { TaskStore, createTaskStore, taskStore } from './stores';

@@ -1,215 +1,260 @@
 /**
- * Universal Task Management System - Types
+ * Task Manager - Type Definitions
  *
- * A tree-based task management system supporting infinite nesting.
- * Parent tasks aggregate progress/status from children.
- * Only leaf tasks (no children) are executable.
+ * A tree-based task management system with:
+ * - Split storage (roots + nodes) for efficient loading
+ * - Merkle tree support for cryptographic verification
+ * - Minimal API surface for good DX
  */
+
+// ============================================================================
+// Core Types
+// ============================================================================
 
 /**
  * Task status lifecycle:
- * pending -> running -> paused/completed/failed/cancelled/partial
+ * pending -> running -> completed | failed | cancelled
+ *                    -> paused -> running (resume)
  */
 export type TaskStatus =
-	| 'pending' // Not started
-	| 'running' // Currently executing
-	| 'paused' // Paused (can be resumed)
-	| 'completed' // Successfully completed
-	| 'failed' // Failed
-	| 'cancelled' // Cancelled by user
-	| 'partial'; // Partially completed (some children failed)
+	| 'pending'
+	| 'running'
+	| 'paused'
+	| 'completed'
+	| 'failed'
+	| 'cancelled';
 
 /**
- * Task type - identifies which feature created this task
+ * Task root - metadata for the entire task tree
+ * Stored separately for fast list queries
  */
-export type TaskType = string;
-
-/**
- * Pause reason
- */
-export type PauseReason =
-	| 'user' // User clicked pause
-	| 'insufficient_gas' // Not enough gas (blockchain)
-	| 'network_error' // Network/RPC error
-	| 'rate_limit' // Rate limited
-	| 'error' // Generic error
-	| string; // Allow custom reasons
-
-/**
- * Universal Task (Tree Node)
- *
- * A task can be:
- * - Parent task: Has children, progress is calculated from children
- * - Leaf task: No children, has executionData, can be executed
- */
-export interface Task<TData = Record<string, unknown>, TResult = unknown> {
-	// Identity
+export interface TaskRoot {
 	id: string;
-	parentId: string | null;
-	type: TaskType;
 	name: string;
-	description?: string;
-
-	// Hierarchy
-	children: Task<TData, TResult>[];
-	depth: number;
-	path: string[];
-
-	// Status & Progress
+	type: string;
 	status: TaskStatus;
 	progress: number; // 0-100
 
-	// Execution (only for leaf tasks)
-	isLeaf: boolean;
-	executionData?: TData;
-	executor?: string;
-	result?: TResult;
-	error?: string;
+	// Statistics
+	stats: {
+		total: number; // Total leaf nodes
+		completed: number;
+		failed: number;
+	};
 
-	// Retry (only for leaf tasks)
-	attempts: number;
-	maxAttempts: number;
-
-	// Pause/Resume
-	isPaused: boolean;
-	pauseReason?: PauseReason;
-	pauseMessage?: string;
+	// Merkle tree
+	merkleRoot: string | null; // null until first leaf is added
 
 	// Timestamps
 	createdAt: number;
 	updatedAt: number;
 	startedAt?: number;
-	pausedAt?: number;
 	completedAt?: number;
-	failedAt?: number;
-	cancelledAt?: number;
 
-	// Statistics (calculated from children or self)
-	totalLeaves: number;
-	completedLeaves: number;
-	failedLeaves: number;
-
-	// Configuration & State
-	config: Record<string, unknown>;
-	state: Record<string, unknown>;
-
-	// Aggregated results and errors
-	results: TResult[];
-	errors: string[];
-
-	// Metadata
+	// Optional metadata
 	metadata?: Record<string, unknown>;
 }
+
+/**
+ * Task node - a node in the task tree (intermediate or leaf)
+ */
+export interface TaskNode<T = unknown> {
+	id: string;
+	rootId: string; // Reference to TaskRoot
+	parentId: string | null; // null for direct children of root
+	name: string;
+	status: TaskStatus;
+	progress: number;
+
+	// Tree position
+	depth: number; // 0 for root's direct children
+	index: number; // Position among siblings
+	isLeaf: boolean;
+	childCount: number; // Number of direct children
+
+	// Merkle hash (for verification)
+	hash: string;
+
+	// Leaf-only fields
+	data?: T; // Execution data
+	executor?: string; // Executor function name
+	result?: unknown;
+	error?: string;
+
+	// Retry
+	attempts: number;
+	maxAttempts: number;
+
+	// Timestamps
+	createdAt: number;
+	updatedAt: number;
+	startedAt?: number;
+	completedAt?: number;
+}
+
+// ============================================================================
+// Creation Options
+// ============================================================================
 
 /**
  * Options for creating a task tree
  */
-export interface CreateTaskOptions<TData = Record<string, unknown>> {
-	type: TaskType;
+export interface CreateTaskOptions<T = unknown> {
 	name: string;
-	description?: string;
-	config?: Record<string, unknown>;
+	type?: string;
 	metadata?: Record<string, unknown>;
+	children?: CreateNodeOptions<T>[];
+}
 
-	// Child tasks (can be nested recursively)
-	children?: CreateTaskOptions<TData>[];
-
-	// For leaf tasks (no children)
-	executionData?: TData;
+/**
+ * Options for creating a task node
+ */
+export interface CreateNodeOptions<T = unknown> {
+	name: string;
+	children?: CreateNodeOptions<T>[];
+	// Leaf-only
+	data?: T;
 	executor?: string;
 	maxAttempts?: number;
 }
 
-/**
- * Task update payload
- */
-export interface TaskUpdate<TResult = unknown> {
-	status?: TaskStatus;
-	progress?: number;
-	isPaused?: boolean;
-	pauseReason?: PauseReason;
-	pauseMessage?: string;
-	state?: Record<string, unknown>;
-	result?: TResult;
-	error?: string;
-	attempts?: number;
-}
+// ============================================================================
+// Execution Types
+// ============================================================================
 
 /**
- * Task execution context
- * Passed to executor functions for control and progress reporting
+ * Execution context passed to executor functions
  */
-export interface TaskExecutionContext<TData = Record<string, unknown>, TResult = unknown> {
-	// Current task being executed (always a leaf task)
-	task: Task<TData, TResult>;
+export interface ExecutionContext<T = unknown> {
+	// Current node being executed
+	node: TaskNode<T>;
+	data: T;
 
-	// Access to parent and root tasks
-	parentTask: Task<TData, TResult> | null;
-	rootTask: Task<TData, TResult>;
-
-	// Control methods
+	// Control
 	isPaused: () => boolean;
-	checkCondition?: () => Promise<boolean>;
-	checkGasBalance?: () => Promise<boolean>; // Optional custom gas check
+	signal: AbortSignal;
 
-	// Progress methods
-	updateProgress: (progress: number, message?: string) => Promise<void>;
-	updateTaskState: (state: Record<string, unknown>) => Promise<void>;
+	// Progress reporting
+	progress: (percent: number) => Promise<void>;
 
-	// Completion methods
-	completeTask: (result?: TResult) => Promise<void>;
-	failTask: (error: string) => Promise<void>;
+	// Completion
+	complete: (result?: unknown) => Promise<void>;
+	fail: (error: string) => Promise<void>;
 
-	// Parent/Root control
-	pauseParent: (reason: PauseReason, message: string) => Promise<void>;
-	pauseRoot: (reason: PauseReason, message: string) => Promise<void>;
+	// Pause the entire task
+	pauseTask: (reason?: string) => Promise<void>;
 }
 
 /**
- * Task executor function signature
- * Only leaf tasks are executed
+ * Executor function signature
  */
-export type TaskExecutor<TData = Record<string, unknown>, TResult = unknown> = (
-	context: TaskExecutionContext<TData, TResult>
-) => Promise<void>;
+export type TaskExecutor<T = unknown> = (ctx: ExecutionContext<T>) => Promise<void>;
 
 /**
- * Task executor registry
- * Maps executor names to functions
+ * Executor registry - maps executor names to functions
  */
-export interface TaskExecutorRegistry<TData = Record<string, unknown>, TResult = unknown> {
-	[executorName: string]: TaskExecutor<TData, TResult>;
+export type ExecutorRegistry<T = unknown> = Record<string, TaskExecutor<T>>;
+
+// ============================================================================
+// Event Types
+// ============================================================================
+
+export type TaskEvent = 'start' | 'progress' | 'complete' | 'fail' | 'pause' | 'resume' | 'cancel';
+
+export interface TaskEventData {
+	root: TaskRoot;
+	node?: TaskNode;
 }
 
+export type TaskEventHandler = (event: TaskEvent, data: TaskEventData) => void;
+
+// ============================================================================
+// Storage Types
+// ============================================================================
+
 /**
- * Task recovery information
+ * Storage adapter interface for custom persistence
  */
-export interface TaskRecoveryInfo<TData = Record<string, unknown>, TResult = unknown> {
-	task: Task<TData, TResult>;
-	canRecover: boolean;
-	recoverFromTaskId: string;
-	progressSummary: string;
+export interface StorageAdapter {
+	// Root operations
+	saveRoot(root: TaskRoot): Promise<void>;
+	getRoot(id: string): Promise<TaskRoot | null>;
+	getAllRoots(): Promise<TaskRoot[]>;
+	deleteRoot(id: string): Promise<void>;
+
+	// Node operations
+	saveNode(node: TaskNode): Promise<void>;
+	saveNodes(nodes: TaskNode[]): Promise<void>;
+	getNode(id: string): Promise<TaskNode | null>;
+	getNodesByRoot(rootId: string): Promise<TaskNode[]>;
+	getChildren(parentId: string | null, rootId: string): Promise<TaskNode[]>;
+	getLeaves(rootId: string): Promise<TaskNode[]>;
+	deleteNodesByRoot(rootId: string): Promise<void>;
+
+	// Batch operations
+	updateNodeStatus(id: string, status: TaskStatus, updates?: Partial<TaskNode>): Promise<void>;
+
+	// Lifecycle
+	close(): Promise<void>;
+	clear(): Promise<void>;
 }
 
-/**
- * Task tree visitor function
- */
-export type TaskVisitor<TData = Record<string, unknown>, TResult = unknown> = (
-	task: Task<TData, TResult>,
-	depth: number
-) => boolean | void;
+// ============================================================================
+// Configuration
+// ============================================================================
 
-/**
- * Task filter function
- */
-export type TaskFilter<TData = Record<string, unknown>, TResult = unknown> = (
-	task: Task<TData, TResult>
-) => boolean;
+export interface TaskManagerConfig {
+	/**
+	 * Custom storage adapter (defaults to IndexedDB)
+	 */
+	storage?: StorageAdapter;
 
-/**
- * Task progress callback
- */
-export type TaskProgressCallback<TData = Record<string, unknown>, TResult = unknown> = (
-	rootTask: Task<TData, TResult>,
-	currentTask: Task<TData, TResult>
-) => void;
+	/**
+	 * Database name for IndexedDB
+	 */
+	dbName?: string;
+
+	/**
+	 * Default retry settings
+	 */
+	retry?: {
+		maxAttempts?: number;
+		baseDelayMs?: number;
+		maxDelayMs?: number;
+	};
+
+	/**
+	 * Auto-cleanup old completed tasks
+	 */
+	cleanupDays?: number;
+}
+
+export interface ResolvedConfig {
+	dbName: string;
+	retry: {
+		maxAttempts: number;
+		baseDelayMs: number;
+		maxDelayMs: number;
+	};
+	cleanupDays: number;
+}
+
+export const DEFAULT_CONFIG: ResolvedConfig = {
+	dbName: 'TaskManager',
+	retry: {
+		maxAttempts: 3,
+		baseDelayMs: 1000,
+		maxDelayMs: 10000
+	},
+	cleanupDays: 7
+};
+
+// ============================================================================
+// Merkle Types
+// ============================================================================
+
+export interface MerkleProof {
+	leaf: string;
+	proof: string[];
+	root: string;
+}

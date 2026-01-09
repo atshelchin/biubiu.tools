@@ -2,4 +2,4 @@
  * Stores barrel export
  */
 
-export { createTaskStore, taskStore } from './task-store.svelte';
+export { TaskStore, createTaskStore, taskStore } from './task-store.svelte';

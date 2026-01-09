@@ -1,198 +1,303 @@
 /**
  * Svelte 5 Reactive Task Store
  *
- * Provides reactive state management for task trees with automatic persistence sync
+ * Provides reactive state management for task management with:
+ * - Automatic sync with TaskManager
+ * - Derived computed values
+ * - Event subscription
  */
 
 import { SvelteMap } from 'svelte/reactivity';
-import type { Task } from '../types';
-import * as taskManager from '../task-manager';
-import { findTasks, getLeafTasks } from '../utils/tree';
+import type { TaskRoot, TaskNode, TaskManagerConfig, TaskExecutor, ExecutorRegistry } from '../types';
+import { TaskManager, createTaskManager } from '../task-manager';
 
 /**
- * Task store state
+ * Reactive Task Store
  */
-class TaskStore {
-	// Reactive map of root tasks by ID
-	tasks = $state(new SvelteMap<string, Task>());
+export class TaskStore<T = unknown> {
+	private manager: TaskManager<T>;
 
-	// Derived values - all based on root tasks
-	allTasks = $derived(Array.from(this.tasks.values()));
-
-	runningTasks = $derived(this.allTasks.filter((t) => t.status === 'running'));
-
-	pausedTasks = $derived(this.allTasks.filter((t) => t.status === 'paused'));
-
-	completedTasks = $derived(this.allTasks.filter((t) => t.status === 'completed'));
-
-	failedTasks = $derived(this.allTasks.filter((t) => t.status === 'failed'));
-
-	recoverableTasks = $derived(
-		this.allTasks.filter(
-			(t) => t.status === 'pending' || t.status === 'running' || t.status === 'paused'
-		)
-	);
-
-	// Loading state
+	// Reactive state
+	roots = $state(new SvelteMap<string, TaskRoot>());
 	isLoading = $state(false);
 	isInitialized = $state(false);
 
+	// Derived values
+	allRoots = $derived(Array.from(this.roots.values()));
+	pendingRoots = $derived(this.allRoots.filter((r) => r.status === 'pending'));
+	runningRoots = $derived(this.allRoots.filter((r) => r.status === 'running'));
+	pausedRoots = $derived(this.allRoots.filter((r) => r.status === 'paused'));
+	completedRoots = $derived(this.allRoots.filter((r) => r.status === 'completed'));
+	failedRoots = $derived(this.allRoots.filter((r) => r.status === 'failed'));
+	recoverableRoots = $derived(
+		this.allRoots.filter((r) => r.status === 'pending' || r.status === 'running' || r.status === 'paused')
+	);
+
+	// Statistics
+	stats = $derived({
+		total: this.allRoots.reduce((sum, r) => sum + r.stats.total, 0),
+		completed: this.allRoots.reduce((sum, r) => sum + r.stats.completed, 0),
+		failed: this.allRoots.reduce((sum, r) => sum + r.stats.failed, 0),
+		pending: this.allRoots.reduce((sum, r) => sum + r.stats.total - r.stats.completed - r.stats.failed, 0),
+		completionRate: (() => {
+			const total = this.allRoots.reduce((sum, r) => sum + r.stats.total, 0);
+			const completed = this.allRoots.reduce((sum, r) => sum + r.stats.completed, 0);
+			return total > 0 ? Math.round((completed / total) * 100) : 0;
+		})()
+	});
+
+	constructor(config?: TaskManagerConfig) {
+		this.manager = createTaskManager<T>(config);
+		this.setupEventListeners();
+	}
+
 	/**
-	 * Initialize store by loading tasks from persistence
+	 * Setup event listeners to sync state
 	 */
-	async init() {
+	private setupEventListeners(): void {
+		const events = ['start', 'progress', 'complete', 'fail', 'pause', 'resume', 'cancel'] as const;
+		for (const event of events) {
+			this.manager.on(event, (_, data) => {
+				this.roots.set(data.root.id, { ...data.root });
+			});
+		}
+	}
+
+	/**
+	 * Initialize store by loading from storage
+	 */
+	async init(): Promise<void> {
 		if (this.isInitialized) return;
 
 		this.isLoading = true;
 		try {
-			const tasks = await taskManager.getAllTasks();
-			this.tasks.clear();
-			tasks.forEach((task) => {
-				this.tasks.set(task.id, task);
-			});
+			const roots = await this.manager.getAllRoots();
+			this.roots.clear();
+			for (const root of roots) {
+				this.roots.set(root.id, root);
+			}
 			this.isInitialized = true;
 		} finally {
 			this.isLoading = false;
 		}
 	}
 
+	// =========================================================================
+	// Task Operations (delegate to manager)
+	// =========================================================================
+
 	/**
-	 * Add or update a root task in the store
+	 * Create a new task
 	 */
-	setTask(task: Task) {
-		this.tasks.set(task.id, task);
+	async create(options: Parameters<TaskManager<T>['create']>[0]): Promise<TaskRoot> {
+		const root = await this.manager.create(options);
+		this.roots.set(root.id, root);
+		return root;
 	}
 
 	/**
-	 * Get a root task by ID
+	 * Execute a task
 	 */
-	getTask(taskId: string): Task | undefined {
-		return this.tasks.get(taskId);
+	async execute(
+		taskId: string,
+		executorOrRegistry: TaskExecutor<T> | ExecutorRegistry<T>
+	): Promise<TaskRoot> {
+		const root = await this.manager.execute(taskId, executorOrRegistry);
+		this.roots.set(root.id, root);
+		return root;
 	}
 
 	/**
-	 * Remove a task from the store
+	 * Pause a task
 	 */
-	removeTask(taskId: string) {
-		this.tasks.delete(taskId);
+	async pause(taskId: string, reason?: string): Promise<void> {
+		await this.manager.pause(taskId, reason);
+		await this.refreshRoot(taskId);
 	}
 
 	/**
-	 * Refresh a task from database
+	 * Resume a paused task
 	 */
-	async refreshTask(taskId: string) {
-		const task = await taskManager.getTask(taskId);
-		if (task) {
-			this.setTask(task);
+	async resume(
+		taskId: string,
+		executorOrRegistry: TaskExecutor<T> | ExecutorRegistry<T>
+	): Promise<TaskRoot> {
+		const root = await this.manager.resume(taskId, executorOrRegistry);
+		this.roots.set(root.id, root);
+		return root;
+	}
+
+	/**
+	 * Cancel a task
+	 */
+	async cancel(taskId: string): Promise<void> {
+		await this.manager.cancel(taskId);
+		await this.refreshRoot(taskId);
+	}
+
+	/**
+	 * Delete a task
+	 */
+	async delete(taskId: string): Promise<void> {
+		await this.manager.delete(taskId);
+		this.roots.delete(taskId);
+	}
+
+	// =========================================================================
+	// Queries
+	// =========================================================================
+
+	/**
+	 * Get a root by ID
+	 */
+	getRoot(taskId: string): TaskRoot | undefined {
+		return this.roots.get(taskId);
+	}
+
+	/**
+	 * Get nodes for a task
+	 */
+	async getNodes(taskId: string): Promise<TaskNode<T>[]> {
+		return this.manager.getNodes(taskId);
+	}
+
+	/**
+	 * Get children of a node
+	 */
+	async getChildren(taskId: string, parentId?: string | null): Promise<TaskNode<T>[]> {
+		return this.manager.getChildren(taskId, parentId);
+	}
+
+	/**
+	 * Get leaves of a task
+	 */
+	async getLeaves(taskId: string): Promise<TaskNode<T>[]> {
+		return this.manager.getLeaves(taskId);
+	}
+
+	// =========================================================================
+	// Merkle
+	// =========================================================================
+
+	/**
+	 * Get Merkle root
+	 */
+	async getMerkleRoot(taskId: string): Promise<string | null> {
+		return this.manager.getMerkleRoot(taskId);
+	}
+
+	/**
+	 * Get Merkle proof
+	 */
+	async getMerkleProof(taskId: string, leafId: string) {
+		return this.manager.getMerkleProof(taskId, leafId);
+	}
+
+	/**
+	 * Verify Merkle proof
+	 */
+	async verifyProof(proof: Parameters<TaskManager<T>['verifyProof']>[0]): Promise<boolean> {
+		return this.manager.verifyProof(proof);
+	}
+
+	// =========================================================================
+	// Sync & Cleanup
+	// =========================================================================
+
+	/**
+	 * Refresh a single root from storage
+	 */
+	async refreshRoot(taskId: string): Promise<void> {
+		const root = await this.manager.getRoot(taskId);
+		if (root) {
+			this.roots.set(root.id, root);
 		} else {
-			this.removeTask(taskId);
+			this.roots.delete(taskId);
 		}
 	}
 
 	/**
-	 * Refresh all tasks from database
+	 * Refresh all roots from storage
 	 */
-	async refreshAll() {
+	async refreshAll(): Promise<void> {
 		this.isLoading = true;
 		try {
-			const tasks = await taskManager.getAllTasks();
-			this.tasks.clear();
-			tasks.forEach((task) => {
-				this.tasks.set(task.id, task);
-			});
+			const roots = await this.manager.getAllRoots();
+			this.roots.clear();
+			for (const root of roots) {
+				this.roots.set(root.id, root);
+			}
 		} finally {
 			this.isLoading = false;
 		}
 	}
 
 	/**
-	 * Delete a task
+	 * Clear completed tasks from store
 	 */
-	async deleteTask(taskId: string) {
-		await taskManager.deleteTask(taskId);
-		this.removeTask(taskId);
+	async clearCompleted(): Promise<void> {
+		const completed = this.completedRoots;
+		await Promise.all(completed.map((r) => this.delete(r.id)));
 	}
 
 	/**
-	 * Clear completed tasks
+	 * Clear failed tasks from store
 	 */
-	async clearCompleted() {
-		const completedIds = this.completedTasks.map((t) => t.id);
-		await Promise.all(completedIds.map((id) => this.deleteTask(id)));
+	async clearFailed(): Promise<void> {
+		const failed = this.failedRoots;
+		await Promise.all(failed.map((r) => this.delete(r.id)));
 	}
 
 	/**
-	 * Clear failed tasks
+	 * Cleanup old tasks
 	 */
-	async clearFailed() {
-		const failedIds = this.failedTasks.map((t) => t.id);
-		await Promise.all(failedIds.map((id) => this.deleteTask(id)));
+	async cleanup(olderThanDays?: number): Promise<number> {
+		const count = await this.manager.cleanup(olderThanDays);
+		await this.refreshAll();
+		return count;
 	}
 
 	/**
-	 * Get all leaf tasks from all root tasks
+	 * Reset store
 	 */
-	getAllLeafTasks(): Task[] {
-		const leaves: Task[] = [];
-		this.allTasks.forEach((rootTask) => {
-			leaves.push(...getLeafTasks(rootTask));
-		});
-		return leaves;
-	}
-
-	/**
-	 * Find tasks matching a filter across all root tasks
-	 */
-	findTasks(filter: (task: Task) => boolean): Task[] {
-		const results: Task[] = [];
-		this.allTasks.forEach((rootTask) => {
-			results.push(...findTasks(rootTask, filter));
-		});
-		return results;
-	}
-
-	/**
-	 * Get total statistics across all tasks
-	 */
-	getTotalStatistics() {
-		let totalLeaves = 0;
-		let completedLeaves = 0;
-		let failedLeaves = 0;
-
-		this.allTasks.forEach((task) => {
-			totalLeaves += task.totalLeaves;
-			completedLeaves += task.completedLeaves;
-			failedLeaves += task.failedLeaves;
-		});
-
-		return {
-			totalLeaves,
-			completedLeaves,
-			failedLeaves,
-			pendingLeaves: totalLeaves - completedLeaves - failedLeaves,
-			completionRate: totalLeaves > 0 ? Math.round((completedLeaves / totalLeaves) * 100) : 0
-		};
-	}
-
-	/**
-	 * Reset store (useful for testing)
-	 */
-	reset() {
-		this.tasks.clear();
+	reset(): void {
+		this.roots.clear();
 		this.isLoading = false;
 		this.isInitialized = false;
 	}
+
+	/**
+	 * Close store and manager
+	 */
+	async close(): Promise<void> {
+		await this.manager.close();
+		this.reset();
+	}
+
+	/**
+	 * Clear all data
+	 */
+	async clear(): Promise<void> {
+		await this.manager.clear();
+		this.reset();
+	}
+
+	/**
+	 * Get underlying manager (for advanced use)
+	 */
+	getManager(): TaskManager<T> {
+		return this.manager;
+	}
 }
 
 /**
- * Create a new task store instance
- * Allows for multiple independent stores if needed
+ * Create a new task store
  */
-export function createTaskStore(): TaskStore {
-	return new TaskStore();
+export function createTaskStore<T = unknown>(config?: TaskManagerConfig): TaskStore<T> {
+	return new TaskStore<T>(config);
 }
 
 /**
- * Global task store instance (singleton)
+ * Global task store singleton
  */
 export const taskStore = createTaskStore();
