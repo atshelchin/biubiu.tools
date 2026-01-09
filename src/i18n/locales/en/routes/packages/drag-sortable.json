@@ -1,0 +1,116 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "Drag Sortable",
+	"subtitle": "Intuitive Drag-and-Drop Sorting for Svelte 5",
+	"description": "A lightweight Svelte action for drag-and-drop sorting with ghost element, real-time reordering, smooth animations, and full desktop/mobile support.",
+	"features": {
+		"title": "Features",
+		"ghost_element": "Ghost element follows cursor during drag",
+		"realtime_reorder": "Items move aside in real-time",
+		"smooth_animation": "Configurable smooth CSS transitions",
+		"desktop_mobile": "Full support for desktop and mobile",
+		"drag_handle": "Optional drag handle for precise control",
+		"auto_scroll": "Auto-scroll near container edges"
+	},
+	"demo": {
+		"basic": {
+			"title": "1. Basic Usage",
+			"description": "Simply drag items to reorder them. All direct children become draggable.",
+			"reset": "Reset",
+			"fruit_apple": "Apple",
+			"fruit_banana": "Banana",
+			"fruit_cherry": "Cherry",
+			"fruit_date": "Date",
+			"fruit_elderberry": "Elderberry"
+		},
+		"handle": {
+			"title": "2. Drag Handle",
+			"description": "Use a specific element as the drag handle. Buttons and inputs remain fully interactive.",
+			"task_placeholder": "Add new task...",
+			"add": "Add",
+			"edit": "Edit",
+			"delete": "Delete",
+			"task_1": "Design homepage mockup",
+			"task_2": "Implement user authentication",
+			"task_3": "Write API documentation",
+			"task_4": "Setup CI/CD pipeline"
+		},
+		"animation": {
+			"title": "3. Animation Settings",
+			"description": "Customize animation duration for different visual effects.",
+			"duration": "Animation Duration",
+			"ms": "ms",
+			"fast": "Fast (100ms)",
+			"normal": "Normal (200ms)",
+			"slow": "Slow (400ms)",
+			"very_slow": "Very Slow (600ms)",
+			"card_1": "Quick Response",
+			"card_2": "Balanced Feel",
+			"card_3": "Dramatic Effect",
+			"card_4": "Smooth Flow"
+		},
+		"cards": {
+			"title": "4. Card Layout",
+			"description": "Drag and drop works with rich card layouts containing images and metadata.",
+			"views": "views",
+			"likes": "likes",
+			"photo_1": "Mountain Sunset",
+			"photo_2": "Ocean Waves",
+			"photo_3": "Forest Path",
+			"photo_4": "City Lights",
+			"photo_5": "Desert Dunes",
+			"photo_6": "Northern Lights"
+		},
+		"kanban": {
+			"title": "5. Kanban Board",
+			"description": "Build interactive kanban boards with sortable tasks within columns.",
+			"add_task": "Add Task",
+			"col_todo": "To Do",
+			"col_progress": "In Progress",
+			"col_done": "Done",
+			"task_design": "Design system update",
+			"task_api": "API integration",
+			"task_testing": "Unit testing",
+			"task_review": "Code review",
+			"task_deploy": "Deploy to staging",
+			"task_docs": "Update documentation"
+		},
+		"playlist": {
+			"title": "6. Music Playlist",
+			"description": "Create sortable playlists with track information and playback controls.",
+			"now_playing": "Now Playing",
+			"up_next": "Up Next",
+			"track_1": "Midnight Dreams",
+			"track_2": "Summer Breeze",
+			"track_3": "Electric Soul",
+			"track_4": "Sunset Boulevard",
+			"track_5": "Ocean Drive",
+			"artist_1": "Luna Nova",
+			"artist_2": "The Waves",
+			"artist_3": "Neon Pulse",
+			"artist_4": "Jazz Collective",
+			"artist_5": "Coastal Vibes"
+		}
+	},
+	"code": {
+		"title": "Code Examples",
+		"installation": "Installation",
+		"basic_usage": "Basic Usage",
+		"with_handle": "With Drag Handle",
+		"custom_animation": "Custom Animation"
+	},
+	"actions": {
+		"drag": "Drag to reorder",
+		"drop": "Release to drop"
+	},
+	"messages": {
+		"reordered": "Item reordered",
+		"drag_hint": "Drag items to reorder"
+	}
+}
