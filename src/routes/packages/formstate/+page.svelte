@@ -15,6 +15,10 @@
 	import ArrayFieldsDemo from '$lib/components/package-demo/demos/formstate/array-fields-demo.svelte';
 	import WatchDemo from '$lib/components/package-demo/demos/formstate/watch-demo.svelte';
 	import DirtyTrackingDemo from '$lib/components/package-demo/demos/formstate/dirty-tracking-demo.svelte';
+	import ZodDemo from '$lib/components/package-demo/demos/formstate/zod-demo.svelte';
+	import TransformersDemo from '$lib/components/package-demo/demos/formstate/transformers-demo.svelte';
+	import HeadlessDemo from '$lib/components/package-demo/demos/formstate/headless-demo.svelte';
+	import AdvancedValidationDemo from '$lib/components/package-demo/demos/formstate/advanced-validation-demo.svelte';
 
 	const i18n = useI18n();
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -70,8 +74,22 @@ bun add zod`;
 	<!-- Demo 6: Watch API -->
 	<WatchDemo {t} />
 
-	<!-- Demo 7: Dirty Tracking -->
+
+
+	<!-- Demo 8: Zod Integration -->
+	<ZodDemo {t} />
+
+		<!-- Demo 7: Dirty Tracking -->
 	<DirtyTrackingDemo {t} />
+
+	<!-- Demo 9: Input Transformers -->
+	<TransformersDemo {t} />
+
+	<!-- Demo 10: Headless Components -->
+	<HeadlessDemo {t} />
+
+	<!-- Demo 11: Advanced Validation -->
+	<AdvancedValidationDemo {t} />
 
 	<!-- Installation Section -->
 	<DemoSection title={t('code.installation')}>

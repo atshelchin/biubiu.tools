@@ -65,21 +65,8 @@
 			"has_errors": "Has validation errors",
 			"validate_all": "Validate All"
 		},
-		"async": {
-			"title": "4. Async Validation",
-			"description": "Server-side validation with debouncing and loading states",
-			"username": "Username",
-			"username_placeholder": "Check availability...",
-			"checking": "Checking...",
-			"available": "Available",
-			"taken": "Username is taken",
-			"email": "Email",
-			"email_placeholder": "Verify email format...",
-			"debounce": "Debounce",
-			"debounce_desc": "300ms debounce for async validation"
-		},
 		"submit": {
-			"title": "5. Form Submission",
+			"title": "4. Form Submission",
 			"description": "Handle form submission with validation, loading states, and error handling",
 			"first_name": "First Name",
 			"last_name": "Last Name",
@@ -93,7 +80,7 @@
 			"no_submission": "No submission yet"
 		},
 		"array": {
-			"title": "6. Array Fields",
+			"title": "5. Array Fields",
 			"description": "Dynamic array field management - add, remove, reorder items",
 			"tags": "Tags",
 			"add_tag": "Add Tag",
@@ -108,7 +95,7 @@
 			"items_count": "Items"
 		},
 		"watch": {
-			"title": "7. Watch API",
+			"title": "6. Watch API",
 			"description": "React to field changes in real-time with the watch API",
 			"source_field": "Source Field",
 			"source_placeholder": "Type here to see watch in action",
@@ -119,18 +106,21 @@
 			"changed_to": "Changed to"
 		},
 		"zod": {
-			"title": "8. Zod Integration",
+			"title": "7. Zod Integration",
 			"description": "Use Zod schemas for powerful, declarative validation",
 			"username": "Username",
 			"username_placeholder": "3-20 characters",
 			"email": "Email",
 			"age": "Age",
 			"age_placeholder": "18-120",
+			"website": "Website (optional)",
 			"zod_schema": "Zod Schema",
-			"validation_result": "Validation Result"
+			"validation_result": "Validation Result",
+			"all_valid": "All fields valid",
+			"has_errors": "Has validation errors"
 		},
 		"dirty": {
-			"title": "9. Dirty Tracking",
+			"title": "8. Dirty Tracking",
 			"description": "Track which fields have been modified from their initial values",
 			"field_a": "Field A",
 			"field_b": "Field B",
@@ -139,6 +129,62 @@
 			"dirty_values": "Dirty Values Only",
 			"no_changes": "No changes from initial values",
 			"reset_field": "Reset"
+		},
+		"transformers": {
+			"title": "9. Input Transformers",
+			"description": "Automatically transform input values with built-in transformers",
+			"trim": "Trim Whitespace",
+			"trim_placeholder": "  Try spaces around text  ",
+			"trim_hint": "Auto-removes leading/trailing whitespace",
+			"uppercase": "To Uppercase",
+			"uppercase_placeholder": "Type lowercase text",
+			"lowercase": "To Lowercase",
+			"lowercase_placeholder": "Type UPPERCASE text",
+			"number": "To Number",
+			"number_placeholder": "Enter a number (e.g. 42.5)",
+			"number_hint": "Converts string to number type",
+			"composed": "Composed (Trim + Uppercase)",
+			"composed_placeholder": "  try this  ",
+			"composed_hint": "Multiple transformers combined",
+			"transformed_values": "Transformed Values"
+		},
+		"headless": {
+			"title": "10. Headless Components",
+			"description": "Use Form, FormField, and FieldArray for declarative form building",
+			"full_name": "Full Name",
+			"full_name_placeholder": "Enter your full name",
+			"email": "Email",
+			"skills": "Skills",
+			"skill_placeholder": "Enter a skill",
+			"add_skill": "Add Skill",
+			"form_values": "Form Values",
+			"form_desc": "Provides form context to children",
+			"formfield_desc": "Auto-manages field state with render props",
+			"fieldarray_desc": "Dynamic array field operations"
+		},
+		"advanced": {
+			"title": "11. Advanced Validation",
+			"description": "Debounced validation, field dependencies, and batch updates",
+			"username": "Username (async)",
+			"username_placeholder": "Try 'admin' or 'test'",
+			"username_taken": "Username is already taken",
+			"debounce_hint": "Validates after 500ms pause (debounced)",
+			"password": "Password",
+			"password_placeholder": "Min 8 characters",
+			"password_min": "Password must be at least 8 characters",
+			"confirm_password": "Confirm Password",
+			"confirm_placeholder": "Re-enter password",
+			"passwords_must_match": "Passwords must match",
+			"dependency_hint": "Re-validates when password changes (dependency)",
+			"batch_update": "Batch Update All",
+			"feature_debounce": "Debounce",
+			"feature_debounce_desc": "Delay validation after input",
+			"feature_dependencies": "Dependencies",
+			"feature_dependencies_desc": "Re-validate on related field change",
+			"feature_batch": "Batch Update",
+			"feature_batch_desc": "Single re-render for multiple changes",
+			"validation_log": "Validation Log",
+			"no_validations": "No validations yet. Start typing..."
 		}
 	},
 	"code": {
@@ -147,7 +193,10 @@
 		"basic_usage": "Basic Usage",
 		"typed_form": "Type-Safe Form",
 		"validators": "Validators",
-		"zod": "Zod Integration"
+		"zod": "Zod Integration",
+		"transformers": "Transformers",
+		"headless": "Headless Components",
+		"advanced": "Advanced Validation"
 	},
 	"status": {
 		"valid": "Valid",

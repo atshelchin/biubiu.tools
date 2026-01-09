@@ -65,21 +65,8 @@
 			"has_errors": "存在验证错误",
 			"validate_all": "验证全部"
 		},
-		"async": {
-			"title": "4. 异步验证",
-			"description": "服务端验证，支持防抖和加载状态",
-			"username": "用户名",
-			"username_placeholder": "检查可用性...",
-			"checking": "检查中...",
-			"available": "可用",
-			"taken": "用户名已被占用",
-			"email": "邮箱",
-			"email_placeholder": "验证邮箱格式...",
-			"debounce": "防抖",
-			"debounce_desc": "异步验证 300ms 防抖"
-		},
 		"submit": {
-			"title": "5. 表单提交",
+			"title": "4. 表单提交",
 			"description": "处理表单提交：验证、加载状态和错误处理",
 			"first_name": "名",
 			"last_name": "姓",
@@ -93,7 +80,7 @@
 			"no_submission": "尚未提交"
 		},
 		"array": {
-			"title": "6. 数组字段",
+			"title": "5. 数组字段",
 			"description": "动态数组字段管理 - 添加、删除、重新排序",
 			"tags": "标签",
 			"add_tag": "添加标签",
@@ -108,7 +95,7 @@
 			"items_count": "项目数"
 		},
 		"watch": {
-			"title": "7. Watch API",
+			"title": "6. Watch API",
 			"description": "使用 watch API 实时响应字段变化",
 			"source_field": "源字段",
 			"source_placeholder": "在此输入以查看 watch 效果",
@@ -119,18 +106,21 @@
 			"changed_to": "变更为"
 		},
 		"zod": {
-			"title": "8. Zod 集成",
+			"title": "7. Zod 集成",
 			"description": "使用 Zod 模式进行强大的声明式验证",
 			"username": "用户名",
 			"username_placeholder": "3-20 个字符",
 			"email": "邮箱",
 			"age": "年龄",
 			"age_placeholder": "18-120",
+			"website": "网站（可选）",
 			"zod_schema": "Zod Schema",
-			"validation_result": "验证结果"
+			"validation_result": "验证结果",
+			"all_valid": "所有字段验证通过",
+			"has_errors": "存在验证错误"
 		},
 		"dirty": {
-			"title": "9. 脏值追踪",
+			"title": "8. 脏值追踪",
 			"description": "追踪哪些字段相对于初始值发生了修改",
 			"field_a": "字段 A",
 			"field_b": "字段 B",
@@ -139,6 +129,62 @@
 			"dirty_values": "仅修改的值",
 			"no_changes": "无修改",
 			"reset_field": "重置"
+		},
+		"transformers": {
+			"title": "9. 输入转换器",
+			"description": "使用内置转换器自动转换输入值",
+			"trim": "去除空白",
+			"trim_placeholder": "  试试两边加空格  ",
+			"trim_hint": "自动去除首尾空白字符",
+			"uppercase": "转大写",
+			"uppercase_placeholder": "输入小写字母",
+			"lowercase": "转小写",
+			"lowercase_placeholder": "输入大写字母",
+			"number": "转数字",
+			"number_placeholder": "输入数字（如 42.5）",
+			"number_hint": "将字符串转换为数字类型",
+			"composed": "组合（去空白 + 大写）",
+			"composed_placeholder": "  试试这个  ",
+			"composed_hint": "多个转换器组合使用",
+			"transformed_values": "转换后的值"
+		},
+		"headless": {
+			"title": "10. 无头组件",
+			"description": "使用 Form、FormField 和 FieldArray 进行声明式表单构建",
+			"full_name": "全名",
+			"full_name_placeholder": "请输入全名",
+			"email": "邮箱",
+			"skills": "技能",
+			"skill_placeholder": "输入一项技能",
+			"add_skill": "添加技能",
+			"form_values": "表单值",
+			"form_desc": "为子组件提供表单上下文",
+			"formfield_desc": "通过 render props 自动管理字段状态",
+			"fieldarray_desc": "动态数组字段操作"
+		},
+		"advanced": {
+			"title": "11. 高级验证",
+			"description": "防抖验证、字段依赖和批量更新",
+			"username": "用户名（异步）",
+			"username_placeholder": "试试 'admin' 或 'test'",
+			"username_taken": "用户名已被占用",
+			"debounce_hint": "停止输入 500ms 后验证（防抖）",
+			"password": "密码",
+			"password_placeholder": "至少 8 个字符",
+			"password_min": "密码至少需要 8 个字符",
+			"confirm_password": "确认密码",
+			"confirm_placeholder": "再次输入密码",
+			"passwords_must_match": "两次密码不一致",
+			"dependency_hint": "密码变化时重新验证（依赖）",
+			"batch_update": "批量更新",
+			"feature_debounce": "防抖",
+			"feature_debounce_desc": "延迟验证输入",
+			"feature_dependencies": "依赖",
+			"feature_dependencies_desc": "关联字段变化时重新验证",
+			"feature_batch": "批量更新",
+			"feature_batch_desc": "多次修改只触发一次渲染",
+			"validation_log": "验证日志",
+			"no_validations": "暂无验证。开始输入..."
 		}
 	},
 	"code": {
@@ -147,7 +193,10 @@
 		"basic_usage": "基础用法",
 		"typed_form": "类型安全表单",
 		"validators": "验证器",
-		"zod": "Zod 集成"
+		"zod": "Zod 集成",
+		"transformers": "转换器",
+		"headless": "无头组件",
+		"advanced": "高级验证"
 	},
 	"status": {
 		"valid": "有效",
