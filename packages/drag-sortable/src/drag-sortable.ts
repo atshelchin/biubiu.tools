@@ -153,6 +153,16 @@ export function dragSortable(node: HTMLElement, options: DragSortableOptions) {
 		const items = getItems();
 		if (items.length === 0) return 0;
 
+		const draggedRect = itemRects.get(draggedElement!);
+		if (!draggedRect) return originalIndex;
+
+		// Check if cursor is within the original position area
+		const originalTop = draggedRect.top;
+		const originalBottom = draggedRect.top + draggedRect.height;
+		if (clientY >= originalTop && clientY <= originalBottom) {
+			return originalIndex;
+		}
+
 		// Use cached rects for stable calculation
 		for (let i = 0; i < items.length; i++) {
 			const item = items[i];
@@ -163,8 +173,7 @@ export function dragSortable(node: HTMLElement, options: DragSortableOptions) {
 
 			const midY = rect.top + rect.height / 2;
 			if (clientY < midY) {
-				// If dragging upward and we're above an item's midpoint
-				return i <= originalIndex ? i : i;
+				return i;
 			}
 		}
 
