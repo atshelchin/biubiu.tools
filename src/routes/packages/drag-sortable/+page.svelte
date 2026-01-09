@@ -12,7 +12,6 @@
 	import HandleDemo from '$lib/components/package-demo/demos/drag-sortable/handle-demo.svelte';
 	import AnimationDemo from '$lib/components/package-demo/demos/drag-sortable/animation-demo.svelte';
 	import CardsDemo from '$lib/components/package-demo/demos/drag-sortable/cards-demo.svelte';
-	import KanbanDemo from '$lib/components/package-demo/demos/drag-sortable/kanban-demo.svelte';
 	import PlaylistDemo from '$lib/components/package-demo/demos/drag-sortable/playlist-demo.svelte';
 
 	const i18n = useI18n();
@@ -58,10 +57,7 @@ bun add @shelchin/drag-sortable`;
 	<!-- Demo 4: Card Layout -->
 	<CardsDemo {t} />
 
-	<!-- Demo 5: Kanban Board -->
-	<KanbanDemo {t} />
-
-	<!-- Demo 6: Music Playlist -->
+	<!-- Demo 5: Music Playlist -->
 	<PlaylistDemo {t} />
 
 	<!-- Installation Section -->

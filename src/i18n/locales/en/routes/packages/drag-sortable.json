@@ -67,22 +67,8 @@
 			"photo_5": "Desert Dunes",
 			"photo_6": "Northern Lights"
 		},
-		"kanban": {
-			"title": "5. Kanban Board",
-			"description": "Build interactive kanban boards with sortable tasks within columns.",
-			"add_task": "Add Task",
-			"col_todo": "To Do",
-			"col_progress": "In Progress",
-			"col_done": "Done",
-			"task_design": "Design system update",
-			"task_api": "API integration",
-			"task_testing": "Unit testing",
-			"task_review": "Code review",
-			"task_deploy": "Deploy to staging",
-			"task_docs": "Update documentation"
-		},
 		"playlist": {
-			"title": "6. Music Playlist",
+			"title": "5. Music Playlist",
 			"description": "Create sortable playlists with track information and playback controls.",
 			"now_playing": "Now Playing",
 			"up_next": "Up Next",

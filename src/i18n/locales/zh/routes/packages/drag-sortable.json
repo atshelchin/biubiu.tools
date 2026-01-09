@@ -67,22 +67,8 @@
 			"photo_5": "沙漠沙丘",
 			"photo_6": "北极光"
 		},
-		"kanban": {
-			"title": "5. 看板面板",
-			"description": "构建可排序任务的交互式看板面板。",
-			"add_task": "添加任务",
-			"col_todo": "待办",
-			"col_progress": "进行中",
-			"col_done": "已完成",
-			"task_design": "设计系统更新",
-			"task_api": "API 集成",
-			"task_testing": "单元测试",
-			"task_review": "代码审查",
-			"task_deploy": "部署到测试环境",
-			"task_docs": "更新文档"
-		},
 		"playlist": {
-			"title": "6. 音乐播放列表",
+			"title": "5. 音乐播放列表",
 			"description": "创建带有曲目信息和播放控制的可排序播放列表。",
 			"now_playing": "正在播放",
 			"up_next": "即将播放",
