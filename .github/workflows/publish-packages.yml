@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0 # Full history for proper diff
 
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
@@ -34,10 +34,17 @@ jobs:
       - name: Get changed packages
         id: changed
         run: |
-          # Get list of changed packages
-          CHANGED_PACKAGES=$(git diff --name-only HEAD~1 HEAD -- packages/ | cut -d'/' -f2 | sort -u | tr '\n' ' ')
+          # Get the commit range for this push
+          if [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ]; then
+            # First push to branch, compare with parent
+            CHANGED_PACKAGES=$(git diff --name-only HEAD~1 HEAD -- packages/ | cut -d'/' -f2 | sort -u | tr '\n' ' ')
+          else
+            # Normal push, compare with previous state
+            CHANGED_PACKAGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- packages/ | cut -d'/' -f2 | sort -u | tr '\n' ' ')
+          fi
           echo "packages=$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
           echo "Changed packages: $CHANGED_PACKAGES"
+          echo "Comparing: ${{ github.event.before }} -> ${{ github.sha }}"
 
       - name: Install dependencies
         run: bun install
