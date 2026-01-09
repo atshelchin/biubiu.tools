@@ -222,8 +222,10 @@
 			"monthly": "Monthly",
 			"yearly": "Yearly",
 			"unit": "Native Token",
+			"per_day": "day",
+			"per_month": "month",
+			"per_year": "year",
 			"save": "Save {percent}%",
-			"duration": "Valid for {days}",
 			"features": {
 				"all_onchain": "All on-chain tools",
 				"all_query": "All query tools",

@@ -4,7 +4,9 @@
 	import { localizeHref } from '$lib/utils/localized-url';
 
 	const i18n = useI18n();
-	const t = i18n.t.bind(i18n);
+	// Use a wrapper that accepts any string key for dynamic translations
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const t = (key: string, options?: Record<string, unknown>) => i18n.t(key as any, options);
 
 	// Membership billing cycle
 	type BillingCycle = 'daily' | 'monthly' | 'yearly';
@@ -12,9 +14,9 @@
 
 	// Pricing data
 	const membershipPricing = {
-		daily: { price: '0.01', duration: '1 day', savePercent: 0 },
-		monthly: { price: '0.05', duration: '30 days', savePercent: 83 },
-		yearly: { price: '0.1', duration: '365 days', savePercent: 97 }
+		daily: { price: '0.01', unitKey: 'per_day', savePercent: 0 },
+		monthly: { price: '0.05', unitKey: 'per_month', savePercent: 83 },
+		yearly: { price: '0.1', unitKey: 'per_year', savePercent: 97 }
 	};
 
 	const payPerUseFee = '0.005';
@@ -58,8 +60,12 @@
 					<p class="card-description">{t('common.pricing.self_host.description')}</p>
 				</div>
 
+				<!-- Spacer to align with membership billing tabs -->
+				<div class="billing-tabs-spacer"></div>
+
 				<div class="price-display">
 					<span class="price-value">{t('common.pricing.self_host.price')}</span>
+					<span class="price-unit">&nbsp;</span>
 				</div>
 
 				<div class="divider"></div>
@@ -113,6 +119,9 @@
 					<h3 class="card-title">{t('common.pricing.pay_per_use.title')}</h3>
 					<p class="card-description">{t('common.pricing.pay_per_use.description')}</p>
 				</div>
+
+				<!-- Spacer to align with membership billing tabs -->
+				<div class="billing-tabs-spacer"></div>
 
 				<div class="price-display">
 					<span class="price-value">{payPerUseFee}</span>
@@ -189,7 +198,11 @@
 
 				<div class="price-display">
 					<span class="price-value">{membershipPricing[selectedCycle].price}</span>
-					<span class="price-unit">{t('common.pricing.membership.unit')}</span>
+					<span class="price-unit"
+						>{t('common.pricing.membership.unit')}/{t(
+							`common.pricing.membership.${membershipPricing[selectedCycle].unitKey}`
+						)}</span
+					>
 					{#if membershipPricing[selectedCycle].savePercent > 0}
 						<span class="save-badge">
 							{t('common.pricing.membership.save', {
@@ -198,12 +211,6 @@
 						</span>
 					{/if}
 				</div>
-
-				<p class="duration-text">
-					{t('common.pricing.membership.duration', {
-						days: membershipPricing[selectedCycle].duration
-					})}
-				</p>
 
 				<div class="divider"></div>
 
@@ -401,6 +408,12 @@
 		margin-bottom: var(--space-4);
 	}
 
+	/* Spacer to match billing tabs height for alignment */
+	.billing-tabs-spacer {
+		height: calc(var(--space-2) * 2 + var(--space-1) * 2 + 1.25rem);
+		margin-bottom: var(--space-4);
+	}
+
 	.tab-button {
 		flex: 1;
 		padding: var(--space-2) var(--space-3);
@@ -432,6 +445,7 @@
 		gap: var(--space-2);
 		margin-bottom: var(--space-2);
 		flex-wrap: wrap;
+		min-height: 3.5rem;
 	}
 
 	.price-value {
@@ -461,12 +475,6 @@
 		border-radius: var(--radius-full);
 	}
 
-	.duration-text {
-		text-align: center;
-		font-size: var(--text-sm);
-		color: var(--color-muted-foreground);
-		margin-bottom: var(--space-4);
-	}
 
 	/* Divider */
 	.divider {

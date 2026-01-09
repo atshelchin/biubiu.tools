@@ -207,8 +207,10 @@
 			"monthly": "Aylık",
 			"yearly": "Yıllık",
 			"unit": "Yerel Token",
+			"per_day": "gün",
+			"per_month": "ay",
+			"per_year": "yıl",
 			"save": "%{percent} Tasarruf",
-			"duration": "{days} geçerli",
 			"features": {
 				"all_onchain": "Tüm on-chain araçlar",
 				"all_query": "Tüm sorgu araçları",

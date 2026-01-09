@@ -207,8 +207,10 @@
 			"monthly": "월간",
 			"yearly": "연간",
 			"unit": "네이티브 토큰",
+			"per_day": "일",
+			"per_month": "월",
+			"per_year": "년",
 			"save": "{percent}% 절약",
-			"duration": "{days} 유효",
 			"features": {
 				"all_onchain": "모든 온체인 도구",
 				"all_query": "모든 쿼리 도구",

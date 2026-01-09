@@ -207,8 +207,10 @@
 			"monthly": "Mensile",
 			"yearly": "Annuale",
 			"unit": "Token Nativo",
+			"per_day": "giorno",
+			"per_month": "mese",
+			"per_year": "anno",
 			"save": "Risparmia {percent}%",
-			"duration": "Valido per {days}",
 			"features": {
 				"all_onchain": "Tutti gli strumenti on-chain",
 				"all_query": "Tutti gli strumenti di query",

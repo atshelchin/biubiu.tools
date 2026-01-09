@@ -222,8 +222,10 @@
 			"monthly": "月卡",
 			"yearly": "年卡",
 			"unit": "原生代币",
+			"per_day": "天",
+			"per_month": "月",
+			"per_year": "年",
 			"save": "省 {percent}%",
-			"duration": "有效期 {days}",
 			"features": {
 				"all_onchain": "所有上链工具",
 				"all_query": "所有查询工具",

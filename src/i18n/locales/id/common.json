@@ -207,8 +207,10 @@
 			"monthly": "Bulanan",
 			"yearly": "Tahunan",
 			"unit": "Token Natif",
+			"per_day": "hari",
+			"per_month": "bulan",
+			"per_year": "tahun",
 			"save": "Hemat {percent}%",
-			"duration": "Berlaku selama {days}",
 			"features": {
 				"all_onchain": "Semua alat on-chain",
 				"all_query": "Semua alat query",

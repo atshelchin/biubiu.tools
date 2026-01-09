@@ -207,8 +207,10 @@
 			"monthly": "На месяц",
 			"yearly": "На год",
 			"unit": "Нативный токен",
+			"per_day": "день",
+			"per_month": "месяц",
+			"per_year": "год",
 			"save": "Экономия {percent}%",
-			"duration": "Действует {days}",
 			"features": {
 				"all_onchain": "Все ончейн-инструменты",
 				"all_query": "Все инструменты запросов",

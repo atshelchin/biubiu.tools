@@ -207,8 +207,10 @@
 			"monthly": "1ヶ月",
 			"yearly": "1年",
 			"unit": "ネイティブトークン",
+			"per_day": "日",
+			"per_month": "月",
+			"per_year": "年",
 			"save": "{percent}%お得",
-			"duration": "{days}間有効",
 			"features": {
 				"all_onchain": "全てのオンチェーンツール",
 				"all_query": "全てのクエリツール",
