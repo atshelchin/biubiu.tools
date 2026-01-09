@@ -302,6 +302,8 @@ export class TaskManager<T = unknown> {
 
 			pauseTask: async (reason?: string) => {
 				await this.pause(root.id, reason);
+				// Update local root reference so the execution loop knows we're paused
+				root.status = 'paused';
 			}
 		};
 
@@ -317,7 +319,8 @@ export class TaskManager<T = unknown> {
 				await executor(ctx);
 
 				// If executor didn't call complete/fail, mark as completed
-				if (leaf.status === 'running') {
+				// But not if task was paused
+				if (leaf.status === 'running' && root.status !== 'paused') {
 					await ctx.complete();
 				}
 

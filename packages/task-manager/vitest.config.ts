@@ -7,6 +7,12 @@ export default defineConfig({
 		include: ['src/**/*.test.ts'],
 		environment: 'jsdom',
 		setupFiles: ['./vitest.setup.ts'],
-		globals: true
+		globals: true,
+		coverage: {
+			provider: 'v8',
+			reporter: ['text', 'html', 'lcov'],
+			include: ['src/**/*.ts'],
+			exclude: ['src/**/*.test.ts', 'src/**/*.d.ts']
+		}
 	}
 });

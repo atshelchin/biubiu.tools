@@ -236,7 +236,8 @@ export class TaskStore<T = unknown> {
 	 * Clear completed tasks from store
 	 */
 	async clearCompleted(): Promise<void> {
-		const completed = this.completedRoots;
+		// Get completed roots directly from the map to avoid derived value timing issues
+		const completed = Array.from(this.roots.values()).filter((r) => r.status === 'completed');
 		await Promise.all(completed.map((r) => this.delete(r.id)));
 	}
 
@@ -244,7 +245,8 @@ export class TaskStore<T = unknown> {
 	 * Clear failed tasks from store
 	 */
 	async clearFailed(): Promise<void> {
-		const failed = this.failedRoots;
+		// Get failed roots directly from the map to avoid derived value timing issues
+		const failed = Array.from(this.roots.values()).filter((r) => r.status === 'failed');
 		await Promise.all(failed.map((r) => this.delete(r.id)));
 	}
 
