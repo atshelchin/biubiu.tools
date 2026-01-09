@@ -1,9 +1,10 @@
 import type { PageLoad } from './$types';
 import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
+import { buildCanonicalUrl } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const image = `${url.origin}/og-nft-deployer.png`;
 
 	// Define steps with both SEO text and UI description

@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 import { getChainBySlug, getChainById, parseRpcEndpoints } from '@/features/chains/data/chains';
 import type { ChainPageData } from '@/features/chains/types';
 import { createT } from '$i18n/translations';
-import { extractLocaleFromPathname } from '$utils/common';
+import { extractLocaleFromPathname, buildCanonicalUrl } from '$utils/common';
 import { getPromotions } from '@/features/promotions';
 
 export const load: PageServerLoad = (event): ChainPageData => {
@@ -34,7 +34,7 @@ export const load: PageServerLoad = (event): ChainPageData => {
 	const parsedRpcs = parseRpcEndpoints(chain);
 
 	// Build canonical URL
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const image = `${url.origin}/og-chains.png`;
 
 	// Build SEO metadata

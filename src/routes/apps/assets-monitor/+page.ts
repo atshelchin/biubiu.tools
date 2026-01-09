@@ -2,6 +2,7 @@ import type { PageLoad } from './$types';
 import type { HowToStepData } from '$lib/utils/structured-data';
 import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData } from '$lib/utils/structured-data';
+import { buildCanonicalUrl } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	const title = 'Assets Monitor - Track Wallet Asset Movements | BiuBiu Tools';
@@ -9,7 +10,7 @@ export const load: PageLoad = ({ url }) => {
 		'Monitor and analyze all asset movements in any wallet address. Track ETH, ERC20, ERC721, ERC1155 transfers with advanced analytics and local storage.';
 	const keywords =
 		'assets monitor, wallet tracker, transaction history, asset movements, ETH tracker, ERC20 tracker, NFT tracker, blockchain analytics, web3 tools';
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const type = 'website' as const;
 	const image = `${url.origin}/og-assets-monitor.png`;
 	const locale = 'en_US';

@@ -17,7 +17,7 @@
 import type { RequestEvent } from '@sveltejs/kit';
 import { createWebAppData, createHowToData, type HowToStepData } from './structured-data';
 import { createT } from '$i18n/translations';
-import { extractLocaleFromPathname } from '$utils/common';
+import { extractLocaleFromPathname, buildCanonicalUrl } from '$utils/common';
 
 /**
  * Configuration for creating a step-based app page load function.
@@ -130,7 +130,7 @@ export function createStepAppPageLoad(config: StepAppPageConfig) {
 		// i18n key prefix - translations are now in routes/apps/{toolId}.json
 		const i18nPrefix = `routes/apps/${toolId}`;
 
-		const canonical = url.origin + url.pathname;
+		const canonical = buildCanonicalUrl(url);
 		const image = `${url.origin}/${ogImage}`;
 
 		// Generate step data from i18n

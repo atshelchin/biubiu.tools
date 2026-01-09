@@ -2,6 +2,7 @@ import type { PageLoad } from './$types';
 import type { HowToStepData } from '$lib/utils/structured-data';
 import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData } from '$lib/utils/structured-data';
+import { buildCanonicalUrl } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	const title = 'Call Master - Smart Contract Interaction Tool | BiuBiu Tools';
@@ -9,7 +10,7 @@ export const load: PageLoad = ({ url }) => {
 		'Execute smart contract calls with advanced features. Read contract state, send transactions, and batch multiple calls together.';
 	const keywords =
 		'smart contract, contract call, ethereum, read function, write function, abi, multicall, batch call, dapp';
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const type = 'website' as const;
 	const image = `${url.origin}/og-call-master.png`;
 	const locale = 'en_US';

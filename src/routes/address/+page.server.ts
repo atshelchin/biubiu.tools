@@ -2,7 +2,7 @@ import type { PageServerLoad } from './$types';
 import { allAddresses, allNames, stats } from '@/features/address/data';
 import type { LabeledAddress, NameRecord } from '@/features/address/types';
 import { createT } from '$i18n/translations';
-import { extractLocaleFromPathname } from '$utils/common';
+import { extractLocaleFromPathname, buildCanonicalUrl } from '$utils/common';
 import { getPromotions, type Promotion } from '@/features/promotions';
 
 export interface AddressIndexPageData {
@@ -40,7 +40,7 @@ export const load: PageServerLoad = (event): AddressIndexPageData => {
 	const popularNames = allNames.filter((name) => name.notable).slice(0, 20);
 
 	// Build canonical URL
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const image = `${url.origin}/og-address.png`;
 
 	// Build SEO metadata

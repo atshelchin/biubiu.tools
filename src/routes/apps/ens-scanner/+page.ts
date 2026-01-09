@@ -2,6 +2,7 @@ import type { PageLoad } from './$types';
 import type { HowToStepData } from '$lib/utils/structured-data';
 import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData } from '$lib/utils/structured-data';
+import { buildCanonicalUrl } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	const title = 'ENS Scanner - Batch Scan ENS Domain Availability | BiuBiu Tools';
@@ -9,7 +10,7 @@ export const load: PageLoad = ({ url }) => {
 		'Scan multiple ENS domain names for availability, expiry dates, and registration status. Generate names by patterns like birthdays, sequences, and more.';
 	const keywords =
 		'ENS scanner, ENS domains, domain availability, ENS expiry, batch ENS scan, Ethereum Name Service, domain generator, web3 tools';
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const type = 'website' as const;
 	const image = `${url.origin}/og-ens-scanner.png`;
 	const locale = 'en_US';

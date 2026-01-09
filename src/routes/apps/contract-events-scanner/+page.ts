@@ -2,6 +2,7 @@ import type { PageLoad } from './$types';
 import type { HowToStepData } from '$lib/utils/structured-data';
 import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData } from '$lib/utils/structured-data';
+import { buildCanonicalUrl } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	const title = 'Contract Events Scanner - Analyze Smart Contract Events | BiuBiu Tools';
@@ -9,7 +10,7 @@ export const load: PageLoad = ({ url }) => {
 		'Professional tool to scan, analyze and export smart contract events from any blockchain. Fetch event logs, store in IndexedDB, and perform advanced analysis.';
 	const keywords =
 		'smart contract events, event scanner, blockchain events, contract logs, event analysis, web3 tools, ethereum events, event logs, contract monitoring';
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const type = 'website' as const;
 	const image = `${url.origin}/og-contract-events-scanner.png`;
 	const locale = 'en_US';

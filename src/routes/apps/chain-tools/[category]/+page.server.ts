@@ -4,7 +4,7 @@ import { categories } from '@/features/chain-tools/data/categories';
 import { error } from '@sveltejs/kit';
 import type { CategoryId } from '@/features/chain-tools/types';
 import { createT } from '$i18n/translations';
-import { extractLocaleFromPathname } from '$utils/common';
+import { extractLocaleFromPathname, buildCanonicalUrl } from '$utils/common';
 import type { TranslationKeys } from '@shelchin/i18n';
 
 export const load: PageServerLoad = (event) => {
@@ -23,7 +23,7 @@ export const load: PageServerLoad = (event) => {
 	// Create translation function for this request
 	const t = createT(event);
 
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const image = `${url.origin}/og-chain-tools.png`;
 
 	// Get category-specific SEO data

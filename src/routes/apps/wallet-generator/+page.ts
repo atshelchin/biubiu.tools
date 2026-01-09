@@ -2,6 +2,7 @@ import type { PageLoad } from './$types';
 import type { HowToStepData } from '$lib/utils/structured-data';
 import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData } from '$lib/utils/structured-data';
+import { buildCanonicalUrl } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	const title = 'Wallet Factory - Generate Multiple Wallets from Mnemonic or xpub | BiuBiu Tools';
@@ -9,7 +10,7 @@ export const load: PageLoad = ({ url }) => {
 		'Generate multiple cryptocurrency wallets from mnemonic phrases, xpub keys, or secret text. Support for Ethereum and Bitcoin with custom HD paths.';
 	const keywords =
 		'wallet generator, hd wallet, mnemonic wallet, xpub, derivation path, bitcoin wallet, ethereum wallet, batch wallet generation, bip44, bip49, bip84';
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const type = 'website' as const;
 	const image = `${url.origin}/og-wallet-generator.png`;
 	const locale = 'en_US';

@@ -1,7 +1,8 @@
 import type { PageLoad } from './$types';
+import { buildCanonicalUrl } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const image = `${url.origin}/og-nft-manager.png`;
 
 	return {

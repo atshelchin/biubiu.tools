@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 import { getToolById } from '@/features/chain-tools/data/tools';
 import { getToolDetail } from '@/features/chain-tools/data/tool-details';
 import { getCategoryById } from '@/features/chain-tools/data/categories';
-import { extractLocaleFromPathname } from '$utils/common';
+import { extractLocaleFromPathname, buildCanonicalUrl } from '$utils/common';
 
 export const load: PageServerLoad = (event) => {
 	const { url, params } = event;
@@ -47,7 +47,7 @@ export const load: PageServerLoad = (event) => {
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
 	// Build canonical URL
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const image = `${url.origin}/og-chain-tools.png`;
 
 	// Map locale to SEO locale format

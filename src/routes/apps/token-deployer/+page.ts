@@ -2,6 +2,7 @@ import type { PageLoad } from './$types';
 import type { HowToStepData } from '$lib/utils/structured-data';
 import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData } from '$lib/utils/structured-data';
+import { buildCanonicalUrl } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	const title = 'Token Deployer - Create & Deploy ERC20 Tokens | BiuBiu Tools';
@@ -9,7 +10,7 @@ export const load: PageLoad = ({ url }) => {
 		'Deploy custom ERC20 tokens with advanced features including burn, pause, tax system, and anti-bot protection. Perfect for developers and community projects.';
 	const keywords =
 		'token deployer, ERC20, create token, deploy token, smart contract, token creator, DeFi, crypto token, blockchain';
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const type = 'website' as const;
 	const image = `${url.origin}/og-token-deployer.png`;
 	const locale = 'en_US';

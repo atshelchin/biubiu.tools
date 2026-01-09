@@ -2,6 +2,7 @@ import type { PageLoad } from './$types';
 import type { HowToStepData } from '$lib/utils/structured-data';
 import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData } from '$lib/utils/structured-data';
+import { buildCanonicalUrl } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	const title = 'DEX Moonshot Trader - Buy & Sell Tokens from DEXScreener Moonshot | BiuBiu Tools';
@@ -9,7 +10,7 @@ export const load: PageLoad = ({ url }) => {
 		'Trade tokens that were created on DEXScreener Moonshot. Buy and sell tokens directly from your wallet with support for multiple blockchain networks.';
 	const keywords =
 		'dexscreener, moonshot, token trading, buy tokens, sell tokens, dex trading, web3 trading, crypto trading, token swap';
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const type = 'website' as const;
 	const image = `${url.origin}/og-dex-moonshot-trader.png`;
 	const locale = 'en_US';

@@ -7,7 +7,7 @@ import {
 	type ENSRecords
 } from '@/features/address/ens-resolver';
 import { createT } from '$i18n/translations';
-import { extractLocaleFromPathname } from '$utils/common';
+import { extractLocaleFromPathname, buildCanonicalUrl } from '$utils/common';
 import { getPromotions, type Promotion } from '@/features/promotions';
 
 export interface SocialLink {
@@ -106,7 +106,7 @@ export const load: PageServerLoad = async (event): Promise<NameDetailPageData> =
 	const t = createT(event);
 
 	// Build canonical URL
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	// Use avatar from ENS if available
 	const image = ensRecords?.avatar || `${url.origin}/og-address.png`;
 

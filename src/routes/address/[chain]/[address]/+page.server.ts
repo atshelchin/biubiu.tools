@@ -10,7 +10,7 @@ import { CHAIN_META } from '@/features/address/types';
 import type { LabeledAddress, NameRecord, Entity } from '@/features/address/types';
 import { isAddress, getAddress as toChecksumAddress } from 'viem';
 import { createT } from '$i18n/translations';
-import { extractLocaleFromPathname } from '$utils/common';
+import { extractLocaleFromPathname, buildCanonicalUrl } from '$utils/common';
 import type { TranslationKeys } from '@shelchin/i18n';
 
 export interface AddressDetailPageData {
@@ -97,7 +97,7 @@ export const load: PageServerLoad = (event): AddressDetailPageData => {
 	const t = createT(event);
 
 	// Build canonical URL
-	const canonical = url.origin + url.pathname;
+	const canonical = buildCanonicalUrl(url);
 	const image = `${url.origin}/og-address.png`;
 
 	// Build SEO metadata
