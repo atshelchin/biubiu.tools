@@ -1,0 +1,127 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "数据表格",
+	"subtitle": "强大的 Svelte 5 数据表格组件",
+	"description": "灵活、类型安全的数据表格组件，支持排序、分页、自定义渲染和服务端数据加载。",
+	"features": {
+		"title": "功能特性",
+		"sorting": "点击列标题排序，带可视化指示器",
+		"pagination": "完整的分页控件，支持自定义每页数量",
+		"custom_render": "通过 Svelte 5 Snippets 自定义单元格/表头渲染",
+		"server_side": "支持服务端分页和排序",
+		"responsive": "移动端友好，自适应控件",
+		"typescript": "完整的 TypeScript 泛型支持，类型安全"
+	},
+	"demo": {
+		"basic": {
+			"title": "1. 基础表格",
+			"description": "最简配置的表格展示",
+			"users": "用户",
+			"products": "产品",
+			"orders": "订单"
+		},
+		"sorting": {
+			"title": "2. 可排序列",
+			"description": "点击列标题按升序、降序或取消排序",
+			"current_sort": "当前排序",
+			"none": "无",
+			"ascending": "升序",
+			"descending": "降序"
+		},
+		"pagination": {
+			"title": "3. 客户端分页",
+			"description": "在客户端对数据进行分页，支持自定义每页显示数量",
+			"generate_data": "生成数据",
+			"items_count": "数据条数",
+			"page_size": "每页显示"
+		},
+		"server": {
+			"title": "4. 服务端分页",
+			"description": "从服务器按页加载数据，适用于大数据量场景",
+			"simulating": "模拟服务器请求中...",
+			"total_records": "总记录数（服务端）",
+			"load_time": "模拟加载时间",
+			"current_page_data": "当前页数据"
+		},
+		"custom_cells": {
+			"title": "5. 自定义单元格渲染",
+			"description": "使用 Snippets 渲染徽章、按钮和格式化值等自定义内容",
+			"status_active": "活跃",
+			"status_inactive": "未激活",
+			"status_pending": "待处理",
+			"view": "查看",
+			"edit": "编辑"
+		},
+		"row_actions": {
+			"title": "6. 行点击与样式",
+			"description": "处理行点击事件，根据数据条件应用样式",
+			"click_log": "点击日志",
+			"no_clicks": "点击某行查看详情",
+			"priority_high": "高优先级",
+			"priority_medium": "中优先级",
+			"priority_low": "低优先级"
+		},
+		"combined": {
+			"title": "7. 完整示例",
+			"description": "结合排序、分页、过滤和自定义渲染的综合示例",
+			"search": "搜索",
+			"search_placeholder": "按姓名或邮箱筛选...",
+			"status_filter": "状态筛选",
+			"all": "全部",
+			"active": "活跃",
+			"inactive": "未激活",
+			"reset_filters": "重置筛选",
+			"showing": "显示",
+			"of": "/",
+			"filtered": "筛选后"
+		},
+		"variants": {
+			"title": "8. 样式风格",
+			"description": "选择多种内置样式以匹配你的设计风格",
+			"select_style": "选择样式",
+			"default_desc": "经典样式，细边框",
+			"striped_desc": "斑马纹交替行",
+			"bordered_desc": "完整网格边框",
+			"minimal_desc": "简洁无边框设计",
+			"modern_desc": "粗体标题带阴影"
+		}
+	},
+	"columns": {
+		"id": "编号",
+		"name": "姓名",
+		"email": "邮箱",
+		"age": "年龄",
+		"status": "状态",
+		"role": "角色",
+		"department": "部门",
+		"salary": "薪资",
+		"joined": "入职时间",
+		"actions": "操作",
+		"priority": "优先级",
+		"price": "价格",
+		"quantity": "数量",
+		"total": "合计",
+		"date": "日期",
+		"category": "分类"
+	},
+	"code": {
+		"title": "代码示例",
+		"installation": "安装",
+		"basic_usage": "基础用法",
+		"with_sorting": "带排序",
+		"with_pagination": "带分页",
+		"server_side": "服务端分页",
+		"custom_cells": "自定义单元格渲染"
+	},
+	"messages": {
+		"loading": "加载中...",
+		"no_data": "暂无数据",
+		"no_results": "没有匹配的结果"
+	}
+}

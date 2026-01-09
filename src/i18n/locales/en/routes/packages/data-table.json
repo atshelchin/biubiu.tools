@@ -1,0 +1,127 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "Data Table",
+	"subtitle": "Powerful Data Table Component for Svelte 5",
+	"description": "A flexible, type-safe data table component with sorting, pagination, custom rendering, and server-side data support.",
+	"features": {
+		"title": "Features",
+		"sorting": "Click-to-sort columns with visual indicators",
+		"pagination": "Full pagination with customizable page sizes",
+		"custom_render": "Custom cell/header rendering via Svelte 5 Snippets",
+		"server_side": "Server-side pagination and sorting support",
+		"responsive": "Mobile-friendly with adaptive controls",
+		"typescript": "Full TypeScript generics for type safety"
+	},
+	"demo": {
+		"basic": {
+			"title": "1. Basic Table",
+			"description": "Simple table display with minimal configuration",
+			"users": "Users",
+			"products": "Products",
+			"orders": "Orders"
+		},
+		"sorting": {
+			"title": "2. Sortable Columns",
+			"description": "Click column headers to sort data in ascending, descending, or no order",
+			"current_sort": "Current Sort",
+			"none": "None",
+			"ascending": "Ascending",
+			"descending": "Descending"
+		},
+		"pagination": {
+			"title": "3. Client-side Pagination",
+			"description": "Paginate data on the client with customizable page sizes",
+			"generate_data": "Generate Data",
+			"items_count": "Number of Items",
+			"page_size": "Page Size"
+		},
+		"server": {
+			"title": "4. Server-side Pagination",
+			"description": "Load data page-by-page from a server for large datasets",
+			"simulating": "Simulating server request...",
+			"total_records": "Total Records (Server)",
+			"load_time": "Simulated Load Time",
+			"current_page_data": "Current Page Data"
+		},
+		"custom_cells": {
+			"title": "5. Custom Cell Rendering",
+			"description": "Use Snippets to render custom content like badges, buttons, and formatted values",
+			"status_active": "Active",
+			"status_inactive": "Inactive",
+			"status_pending": "Pending",
+			"view": "View",
+			"edit": "Edit"
+		},
+		"row_actions": {
+			"title": "6. Row Click & Styling",
+			"description": "Handle row clicks and apply conditional styling based on data",
+			"click_log": "Click Log",
+			"no_clicks": "Click a row to see details",
+			"priority_high": "High Priority",
+			"priority_medium": "Medium Priority",
+			"priority_low": "Low Priority"
+		},
+		"combined": {
+			"title": "7. Full-featured Example",
+			"description": "Combining sorting, pagination, filtering, and custom rendering",
+			"search": "Search",
+			"search_placeholder": "Filter by name or email...",
+			"status_filter": "Status Filter",
+			"all": "All",
+			"active": "Active",
+			"inactive": "Inactive",
+			"reset_filters": "Reset Filters",
+			"showing": "Showing",
+			"of": "of",
+			"filtered": "filtered"
+		},
+		"variants": {
+			"title": "8. Style Variants",
+			"description": "Choose from multiple built-in styles to match your design",
+			"select_style": "Select Style",
+			"default_desc": "Classic look with subtle borders",
+			"striped_desc": "Alternating row colors",
+			"bordered_desc": "Full grid borders",
+			"minimal_desc": "Clean, borderless design",
+			"modern_desc": "Bold headers with shadow"
+		}
+	},
+	"columns": {
+		"id": "ID",
+		"name": "Name",
+		"email": "Email",
+		"age": "Age",
+		"status": "Status",
+		"role": "Role",
+		"department": "Department",
+		"salary": "Salary",
+		"joined": "Joined",
+		"actions": "Actions",
+		"priority": "Priority",
+		"price": "Price",
+		"quantity": "Quantity",
+		"total": "Total",
+		"date": "Date",
+		"category": "Category"
+	},
+	"code": {
+		"title": "Code Examples",
+		"installation": "Installation",
+		"basic_usage": "Basic Usage",
+		"with_sorting": "With Sorting",
+		"with_pagination": "With Pagination",
+		"server_side": "Server-side Pagination",
+		"custom_cells": "Custom Cell Rendering"
+	},
+	"messages": {
+		"loading": "Loading...",
+		"no_data": "No data available",
+		"no_results": "No results match your filters"
+	}
+}

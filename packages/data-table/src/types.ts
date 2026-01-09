@@ -1,6 +1,11 @@
 import type { Snippet } from 'svelte';
 
 /**
+ * Table style variants
+ */
+export type DataTableVariant = 'default' | 'striped' | 'bordered' | 'minimal' | 'modern';
+
+/**
  * Column definition for DataTable
  */
 export interface DataTableColumn<T = unknown> {
@@ -83,6 +88,8 @@ export interface DataTableProps<T> {
 	headerSnippet?: Snippet<[{ column: DataTableColumn<T> }]>;
 	/** Whether to show bottom pagination on mobile */
 	showMobilePagination?: boolean;
+	/** Table style variant */
+	variant?: DataTableVariant;
 	/** Additional CSS class for the table wrapper */
 	class?: string;
 }
