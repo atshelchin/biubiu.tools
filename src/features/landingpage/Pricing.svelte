@@ -5,8 +5,8 @@
 
 	const i18n = useI18n();
 	// Use a wrapper that accepts any string key for dynamic translations
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const t = (key: string, options?: Record<string, string | number | Date>) =>
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		i18n.t(key as any, options);
 
 	// Membership billing cycle
