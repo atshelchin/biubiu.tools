@@ -64,6 +64,7 @@ export {
 	// Hashing
 	computeLeafHash,
 	computeDataHash,
+	computeLeafHashesBatched,
 	// Building
 	buildMerkleRoot,
 	buildMerkleTreeFromNodes,

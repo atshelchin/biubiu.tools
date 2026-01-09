@@ -17,6 +17,7 @@
 	import RetryDemo from '$lib/components/package-demo/demos/task-manager/retry-demo.svelte';
 	import ExecutorRegistryDemo from '$lib/components/package-demo/demos/task-manager/executor-registry-demo.svelte';
 	import TreeHierarchyDemo from '$lib/components/package-demo/demos/task-manager/tree-hierarchy-demo.svelte';
+	import PerformanceBenchmarkDemo from '$lib/components/package-demo/demos/task-manager/performance-benchmark-demo.svelte';
 
 	const i18n = useI18n();
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -75,6 +76,9 @@ bun add @shelchin/task-manager`;
 
 	<!-- Demo 9: Tree Hierarchy -->
 	<TreeHierarchyDemo {t} />
+
+	<!-- Demo 10: Performance Benchmark -->
+	<PerformanceBenchmarkDemo {t} />
 
 	<!-- Installation Section -->
 	<DemoSection title={t('code.installation')}>

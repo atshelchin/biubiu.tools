@@ -4,6 +4,7 @@
 	 * Demonstrates multi-level nested task structure visualization.
 	 */
 	import { onMount } from 'svelte';
+	import { SvelteMap } from 'svelte/reactivity';
 	import {
 		createTaskManager,
 		createMemoryStorage,
@@ -47,7 +48,7 @@
 
 	// Build tree structure from flat nodes
 	function buildTree(flatNodes: TaskNode[]): TreeNode[] {
-		const nodeMap = new Map<string, TreeNode>();
+		const nodeMap = new SvelteMap<string, TreeNode>();
 		const roots: TreeNode[] = [];
 
 		// First pass: create TreeNode wrappers
@@ -160,7 +161,7 @@
 				if (updated) task = updated;
 				const newNodes = await manager.getNodes(task.id);
 				// Preserve expanded state
-				const expandedMap = new Map<string, boolean>();
+				const expandedMap = new SvelteMap<string, boolean>();
 				const collectExpanded = (nodes: TreeNode[]) => {
 					nodes.forEach((n) => {
 						expandedMap.set(n.id, n.expanded);

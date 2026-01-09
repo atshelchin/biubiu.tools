@@ -12,7 +12,6 @@ import type {
 	TaskRoot,
 	TaskNode,
 	TaskStatus,
-	TaskMode,
 	CreateTaskOptions,
 	CreateNodeOptions,
 	ExecutionContext,
@@ -26,7 +25,22 @@ import type {
 	MerkleProof
 } from './types';
 import { createIndexedDBStorage } from './storage/indexeddb';
-import { computeLeafHash, buildMerkleRoot, generateMerkleProof, verifyMerkleProof } from './merkle';
+import {
+	computeLeafHashesBatched,
+	buildMerkleRoot,
+	generateMerkleProof,
+	verifyMerkleProof
+} from './merkle';
+
+// ============================================================================
+// Performance Configuration
+// ============================================================================
+
+/**
+ * Batch size for node storage operations
+ * Helps avoid memory spikes with large task trees
+ */
+const STORAGE_BATCH_SIZE = 1000;
 
 // ============================================================================
 // ID Generation
@@ -82,9 +96,9 @@ export class TaskManager<T = unknown> {
 		// Build all nodes from options
 		const { nodes, leafCount } = this.buildNodes(rootId, options.children ?? [], now);
 
-		// Compute Merkle root from leaf hashes
+		// Compute Merkle root from leaf hashes (batched for performance)
 		const leaves = nodes.filter((n) => n.isLeaf);
-		const leafHashes = await Promise.all(leaves.map(computeLeafHash));
+		const leafHashes = await computeLeafHashesBatched(leaves);
 
 		// Assign computed hashes back to leaf nodes
 		leaves.forEach((leaf, i) => {
@@ -112,10 +126,14 @@ export class TaskManager<T = unknown> {
 			metadata: options.metadata
 		};
 
-		// Save to storage
+		// Save to storage (batched for large task trees)
 		await this.storage.saveRoot(root);
 		if (nodes.length > 0) {
-			await this.storage.saveNodes(nodes);
+			// Batch storage to avoid memory pressure
+			for (let i = 0; i < nodes.length; i += STORAGE_BATCH_SIZE) {
+				const batch = nodes.slice(i, i + STORAGE_BATCH_SIZE);
+				await this.storage.saveNodes(batch);
+			}
 		}
 
 		return root;
@@ -671,7 +689,7 @@ export class TaskManager<T = unknown> {
 		if (!root) return null;
 
 		const leaves = await this.storage.getLeaves(taskId);
-		const leafHashes = await Promise.all(leaves.map(computeLeafHash));
+		const leafHashes = await computeLeafHashesBatched(leaves);
 		const merkleRoot = leafHashes.length > 0 ? await buildMerkleRoot(leafHashes) : null;
 
 		root.merkleRoot = merkleRoot;

@@ -117,6 +117,27 @@
 			"leaf_nodes": "叶子节点",
 			"max_depth": "最大深度",
 			"no_tree": "暂无任务树。运行演示以查看层级结构。"
+		},
+		"benchmark": {
+			"title": "10. 性能基准测试",
+			"description": "测试不同规模下的任务创建和执行性能",
+			"warning": "大规模测试 (1万+) 可能导致浏览器卡顿",
+			"run_all": "运行全部测试",
+			"stop": "停止",
+			"results": "测试结果",
+			"no_results": "暂无结果。点击「运行全部测试」开始。",
+			"subtasks": "子任务数",
+			"create_time": "创建",
+			"execute_time": "执行",
+			"storage_type": "存储类型",
+			"test_type": "测试类型",
+			"create_only": "仅创建",
+			"execute_only": "仅执行",
+			"both": "全部",
+			"status_col": "状态",
+			"creating": "创建中",
+			"executing": "执行中",
+			"tasks": "个任务"
 		}
 	},
 	"code": {
@@ -130,7 +151,8 @@
 		"events": "事件订阅",
 		"retry": "重试配置",
 		"executor_registry": "执行器注册表",
-		"tree_hierarchy": "树形层级"
+		"tree_hierarchy": "树形层级",
+		"performance_benchmark": "性能基准测试"
 	},
 	"api": {
 		"title": "API 参考",

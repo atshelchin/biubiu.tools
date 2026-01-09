@@ -12,7 +12,7 @@
 		type TaskEvent,
 		type TaskEventData
 	} from '@shelchin/task-manager';
-	import { Play, Radio, Trash2, RotateCcw } from '@lucide/svelte';
+	import { Play, Radio, RotateCcw } from '@lucide/svelte';
 	import {
 		DemoSection,
 		DemoContent,

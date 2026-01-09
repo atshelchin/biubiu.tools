@@ -117,6 +117,27 @@
 			"leaf_nodes": "Leaf Nodes",
 			"max_depth": "Max Depth",
 			"no_tree": "No task tree yet. Run the demo to see the hierarchy."
+		},
+		"benchmark": {
+			"title": "10. Performance Benchmark",
+			"description": "Test task creation and execution performance across different scales",
+			"warning": "Large tests (10k+) may cause browser slowdown",
+			"run_all": "Run All Tests",
+			"stop": "Stop",
+			"results": "Benchmark Results",
+			"no_results": "No results yet. Click 'Run All Tests' to start.",
+			"subtasks": "Subtasks",
+			"create_time": "Create",
+			"execute_time": "Execute",
+			"storage_type": "Storage",
+			"test_type": "Test",
+			"create_only": "Create",
+			"execute_only": "Execute",
+			"both": "Both",
+			"status_col": "Status",
+			"creating": "Creating",
+			"executing": "Executing",
+			"tasks": "tasks"
 		}
 	},
 	"code": {
@@ -130,7 +151,8 @@
 		"events": "Event Subscription",
 		"retry": "Retry Configuration",
 		"executor_registry": "Executor Registry",
-		"tree_hierarchy": "Tree Hierarchy"
+		"tree_hierarchy": "Tree Hierarchy",
+		"performance_benchmark": "Performance Benchmark"
 	},
 	"api": {
 		"title": "API Reference",

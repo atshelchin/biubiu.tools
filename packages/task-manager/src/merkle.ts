@@ -67,6 +67,16 @@ export async function computeDataHash(id: string, data: unknown): Promise<string
 }
 
 // ============================================================================
+// Batch Processing Constants
+// ============================================================================
+
+/**
+ * Batch size for parallel hash computation
+ * Balances memory usage vs speed
+ */
+const HASH_BATCH_SIZE = 500;
+
+// ============================================================================
 // Merkle Tree Building
 // ============================================================================
 
@@ -82,6 +92,8 @@ export async function computeDataHash(id: string, data: unknown): Promise<string
  *     A    B  C    D
  *
  * If odd number of leaves, last leaf is duplicated
+ *
+ * Optimized: Uses parallel batch processing for large trees
  */
 export async function buildMerkleRoot(leafHashes: string[]): Promise<string> {
 	if (leafHashes.length === 0) {
@@ -95,13 +107,20 @@ export async function buildMerkleRoot(leafHashes: string[]): Promise<string> {
 	let level = [...leafHashes];
 
 	while (level.length > 1) {
-		const nextLevel: string[] = [];
-
+		// Build pairs
+		const pairs: [string, string][] = [];
 		for (let i = 0; i < level.length; i += 2) {
 			const left = level[i];
-			// If odd number of nodes, duplicate the last one
 			const right = level[i + 1] ?? level[i];
-			nextLevel.push(await hashPair(left, right));
+			pairs.push([left, right]);
+		}
+
+		// Process in batches to avoid memory spikes
+		const nextLevel: string[] = [];
+		for (let i = 0; i < pairs.length; i += HASH_BATCH_SIZE) {
+			const batch = pairs.slice(i, i + HASH_BATCH_SIZE);
+			const hashes = await Promise.all(batch.map(([l, r]) => hashPair(l, r)));
+			nextLevel.push(...hashes);
 		}
 
 		level = nextLevel;
@@ -111,11 +130,28 @@ export async function buildMerkleRoot(leafHashes: string[]): Promise<string> {
 }
 
 /**
+ * Compute leaf hashes in batches to avoid memory spikes
+ * Returns an array of hashes in the same order as input leaves
+ */
+export async function computeLeafHashesBatched<T>(leaves: TaskNode<T>[]): Promise<string[]> {
+	const hashes: string[] = [];
+
+	for (let i = 0; i < leaves.length; i += HASH_BATCH_SIZE) {
+		const batch = leaves.slice(i, i + HASH_BATCH_SIZE);
+		const batchHashes = await Promise.all(batch.map(computeLeafHash));
+		hashes.push(...batchHashes);
+	}
+
+	return hashes;
+}
+
+/**
  * Build Merkle tree from leaf nodes
  * Computes hashes for each leaf, then builds the tree
+ * Optimized: Uses batched hash computation
  */
 export async function buildMerkleTreeFromNodes(leaves: TaskNode[]): Promise<string> {
-	const hashes = await Promise.all(leaves.map(computeLeafHash));
+	const hashes = await computeLeafHashesBatched(leaves);
 	return buildMerkleRoot(hashes);
 }
 
