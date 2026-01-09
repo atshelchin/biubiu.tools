@@ -18,6 +18,7 @@
 export type {
 	// Core types
 	TaskStatus,
+	TaskMode,
 	TaskRoot,
 	TaskNode,
 	// Creation options

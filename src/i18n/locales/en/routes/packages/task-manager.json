@@ -1,0 +1,134 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "Task Manager",
+	"subtitle": "Tree-based Task Management with Merkle Verification",
+	"description": "A powerful task management library with tree structure, pause/resume capability, IndexedDB persistence, and cryptographic verification via Merkle trees.",
+	"features": {
+		"title": "Features",
+		"tree_structure": "Tree-based task hierarchy with parent-child relationships",
+		"pause_resume": "Pause, resume, and cancel tasks at any time",
+		"persistence": "IndexedDB persistence with split storage for efficiency",
+		"merkle_tree": "Merkle tree support for cryptographic verification",
+		"svelte_store": "Svelte 5 reactive store with derived values",
+		"event_driven": "Event-driven architecture for real-time updates",
+		"retry_logic": "Automatic retry with exponential backoff",
+		"type_safe": "Full TypeScript support with strict types"
+	},
+	"demo": {
+		"basic": {
+			"title": "1. Parallel Execution",
+			"description": "Execute multiple tasks in parallel with configurable concurrency",
+			"create_task": "Create Task",
+			"execute": "Execute",
+			"task_name": "Task Name",
+			"task_name_placeholder": "Enter task name",
+			"add_subtask": "Add Subtask",
+			"subtask_name": "Subtask",
+			"concurrency": "Concurrency",
+			"status": "Status",
+			"progress": "Progress"
+		},
+		"lifecycle": {
+			"title": "2. Task Lifecycle",
+			"description": "Control task execution with pause, resume, and cancel",
+			"start": "Start",
+			"pause": "Pause",
+			"resume": "Resume",
+			"cancel": "Cancel",
+			"reset": "Reset",
+			"current_task": "Current Task",
+			"processing": "Processing",
+			"paused_at": "Paused at"
+		},
+		"batch": {
+			"title": "3. Batch Processing",
+			"description": "Process multiple items with progress tracking",
+			"items_count": "Number of Items",
+			"process_all": "Process All",
+			"stop": "Stop",
+			"completed": "Completed",
+			"failed": "Failed",
+			"remaining": "Remaining"
+		},
+		"merkle": {
+			"title": "4. Merkle Verification",
+			"description": "Generate and verify Merkle proofs for task integrity",
+			"generate_proof": "Generate Proof",
+			"verify_proof": "Verify Proof",
+			"merkle_root": "Merkle Root",
+			"leaf_hash": "Leaf Hash",
+			"proof_path": "Proof Path",
+			"verification_result": "Verification Result",
+			"valid": "Valid",
+			"invalid": "Invalid"
+		},
+		"store": {
+			"title": "5. Reactive Store",
+			"description": "Real-time state management with Svelte 5",
+			"all_tasks": "All Tasks",
+			"pending": "Pending",
+			"running": "Running",
+			"completed": "Completed",
+			"failed": "Failed",
+			"paused": "Paused",
+			"clear_completed": "Clear Completed",
+			"clear_failed": "Clear Failed",
+			"refresh": "Refresh"
+		}
+	},
+	"code": {
+		"title": "Code Examples",
+		"installation": "Installation",
+		"basic_usage": "Basic Usage",
+		"with_executor": "With Custom Executor",
+		"pause_resume": "Pause & Resume",
+		"merkle_proof": "Merkle Proof",
+		"svelte_store": "Svelte Store"
+	},
+	"api": {
+		"title": "API Reference",
+		"task_manager": "TaskManager",
+		"task_store": "TaskStore",
+		"methods": "Methods",
+		"events": "Events",
+		"types": "Types"
+	},
+	"status": {
+		"pending": "Pending",
+		"running": "Running",
+		"paused": "Paused",
+		"completed": "Completed",
+		"failed": "Failed",
+		"cancelled": "Cancelled"
+	},
+	"actions": {
+		"create": "Create",
+		"execute": "Execute",
+		"pause": "Pause",
+		"resume": "Resume",
+		"cancel": "Cancel",
+		"delete": "Delete",
+		"retry": "Retry",
+		"copy": "Copy",
+		"expand": "Expand",
+		"collapse": "Collapse"
+	},
+	"messages": {
+		"task_created": "Task created successfully",
+		"task_completed": "Task completed",
+		"task_failed": "Task failed",
+		"task_paused": "Task paused",
+		"task_resumed": "Task resumed",
+		"task_cancelled": "Task cancelled",
+		"proof_valid": "Proof is valid",
+		"proof_invalid": "Proof is invalid",
+		"no_tasks": "No tasks yet",
+		"loading": "Loading..."
+	}
+}

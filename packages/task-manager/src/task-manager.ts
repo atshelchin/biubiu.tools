@@ -12,6 +12,7 @@ import type {
 	TaskRoot,
 	TaskNode,
 	TaskStatus,
+	TaskMode,
 	CreateTaskOptions,
 	CreateNodeOptions,
 	ExecutionContext,
@@ -22,8 +23,7 @@ import type {
 	StorageAdapter,
 	TaskManagerConfig,
 	ResolvedConfig,
-	MerkleProof,
-	DEFAULT_CONFIG
+	MerkleProof
 } from './types';
 import { createIndexedDBStorage } from './storage/indexeddb';
 import {
@@ -56,6 +56,8 @@ export class TaskManager<T = unknown> {
 	private config: ResolvedConfig;
 	private eventHandlers = new Map<TaskEvent, Set<TaskEventHandler>>();
 	private abortControllers = new Map<string, AbortController>();
+	// Track active task roots so pause() can update their status
+	private activeRoots = new Map<string, TaskRoot>();
 
 	constructor(options: TaskManagerConfig = {}) {
 		this.config = {
@@ -97,6 +99,7 @@ export class TaskManager<T = unknown> {
 			type: options.type ?? 'default',
 			status: 'pending',
 			progress: 0,
+			concurrency: options.concurrency ?? 1, // Default to serial execution
 			stats: {
 				total: leafCount,
 				completed: 0,
@@ -143,6 +146,7 @@ export class TaskManager<T = unknown> {
 				name: opt.name,
 				status: 'pending',
 				progress: 0,
+				mode: opt.mode ?? 'progressive', // Default to progressive mode
 				depth,
 				index: i,
 				isLeaf,
@@ -176,6 +180,7 @@ export class TaskManager<T = unknown> {
 
 	/**
 	 * Execute a task tree
+	 * Supports both serial (concurrency=1) and parallel (concurrency>1) execution
 	 */
 	async execute(
 		taskId: string,
@@ -199,6 +204,9 @@ export class TaskManager<T = unknown> {
 		const abortController = new AbortController();
 		this.abortControllers.set(taskId, abortController);
 
+		// Track active root so pause() can update it
+		this.activeRoots.set(taskId, root);
+
 		// Update root status
 		root.status = 'running';
 		root.startedAt = root.startedAt ?? Date.now();
@@ -210,31 +218,19 @@ export class TaskManager<T = unknown> {
 			// Get all leaves in order
 			const leaves = await this.storage.getLeaves(taskId);
 
-			// Execute leaves one by one
-			for (const leaf of leaves) {
-				// Check if paused or cancelled (status may have changed)
-				const currentStatus = root.status as TaskStatus;
-				if (currentStatus === 'paused' || currentStatus === 'cancelled') {
-					break;
-				}
+			// Filter pending leaves (skip completed/failed)
+			const pendingLeaves = leaves.filter(
+				(leaf) => leaf.status !== 'completed' && leaf.status !== 'failed'
+			);
 
-				// Skip completed/failed leaves
-				if (leaf.status === 'completed' || leaf.status === 'failed') {
-					continue;
-				}
+			const concurrency = root.concurrency ?? 1;
 
-				// Skip if aborted
-				if (abortController.signal.aborted) {
-					break;
-				}
-
-				await this.executeLeaf(root, leaf as TaskNode<T>, getExecutor(leaf.executor), abortController.signal);
-
-				// Refresh root to get updated stats
-				const updatedRoot = await this.storage.getRoot(taskId);
-				if (updatedRoot) {
-					Object.assign(root, updatedRoot);
-				}
+			if (concurrency === 1) {
+				// Serial execution (original behavior)
+				await this.executeSerial(root, pendingLeaves as TaskNode<T>[], getExecutor, abortController);
+			} else {
+				// Parallel execution with concurrency limit
+				await this.executeParallel(root, pendingLeaves as TaskNode<T>[], getExecutor, abortController, concurrency);
 			}
 
 			// Update final status
@@ -243,7 +239,99 @@ export class TaskManager<T = unknown> {
 			return root;
 		} finally {
 			this.abortControllers.delete(taskId);
+			this.activeRoots.delete(taskId);
 		}
+	}
+
+	/**
+	 * Execute leaves serially (one by one)
+	 */
+	private async executeSerial(
+		root: TaskRoot,
+		leaves: TaskNode<T>[],
+		getExecutor: (name?: string) => TaskExecutor<T>,
+		abortController: AbortController
+	): Promise<void> {
+		for (const leaf of leaves) {
+			// Check if paused or cancelled
+			const currentStatus = root.status as TaskStatus;
+			if (currentStatus === 'paused' || currentStatus === 'cancelled') {
+				break;
+			}
+
+			// Skip if aborted
+			if (abortController.signal.aborted) {
+				break;
+			}
+
+			await this.executeLeaf(root, leaf, getExecutor(leaf.executor), abortController.signal);
+
+			// Refresh root to get updated stats
+			const updatedRoot = await this.storage.getRoot(root.id);
+			if (updatedRoot) {
+				Object.assign(root, updatedRoot);
+			}
+		}
+	}
+
+	/**
+	 * Execute leaves in parallel with concurrency limit
+	 */
+	private async executeParallel(
+		root: TaskRoot,
+		leaves: TaskNode<T>[],
+		getExecutor: (name?: string) => TaskExecutor<T>,
+		abortController: AbortController,
+		concurrency: number
+	): Promise<void> {
+		// Use a semaphore-like approach with Promise pool
+		const queue = [...leaves];
+		const executing = new Set<Promise<void>>();
+
+		const runNext = async (): Promise<void> => {
+			while (queue.length > 0) {
+				// Check if paused or cancelled
+				const currentStatus = root.status as TaskStatus;
+				if (currentStatus === 'paused' || currentStatus === 'cancelled') {
+					return;
+				}
+
+				// Skip if aborted
+				if (abortController.signal.aborted) {
+					return;
+				}
+
+				// Wait if at concurrency limit
+				if (executing.size >= concurrency) {
+					await Promise.race(executing);
+				}
+
+				// Double-check after waiting
+				if (queue.length === 0) return;
+
+				const leaf = queue.shift()!;
+				const promise = this.executeLeaf(root, leaf, getExecutor(leaf.executor), abortController.signal)
+					.then(async () => {
+						// Refresh root to get updated stats
+						const updatedRoot = await this.storage.getRoot(root.id);
+						if (updatedRoot) {
+							Object.assign(root, updatedRoot);
+						}
+					})
+					.finally(() => {
+						executing.delete(promise);
+					});
+
+				executing.add(promise);
+			}
+
+			// Wait for all remaining tasks
+			if (executing.size > 0) {
+				await Promise.all(executing);
+			}
+		};
+
+		await runNext();
 	}
 
 	/**
@@ -266,7 +354,11 @@ export class TaskManager<T = unknown> {
 			node: leaf,
 			data: leaf.data as T,
 			signal,
-			isPaused: () => root.status === 'paused',
+			isPaused: () => {
+				// Check local status first (updated by pauseTask)
+				// This is synchronous and fast
+				return root.status === 'paused';
+			},
 
 			progress: async (percent: number) => {
 				leaf.progress = Math.min(100, Math.max(0, percent));
@@ -401,6 +493,13 @@ export class TaskManager<T = unknown> {
 			root.metadata = { ...root.metadata, pauseReason: reason };
 		}
 		await this.storage.saveRoot(root);
+
+		// Update the active root reference so isPaused() returns true
+		const activeRoot = this.activeRoots.get(taskId);
+		if (activeRoot) {
+			activeRoot.status = 'paused';
+		}
+
 		this.emit('pause', { root });
 	}
 

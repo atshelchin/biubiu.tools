@@ -25,6 +25,15 @@ export type TaskStatus =
 	| 'cancelled';
 
 /**
+ * Task execution mode:
+ * - progressive: Has progress updates (0-100%), suitable for file uploads, data processing
+ *   States: pending -> running (0% -> 50% -> 100%) -> completed/failed
+ * - atomic: No progress, shows "waiting" during execution, suitable for API calls, simple operations
+ *   States: pending -> running (waiting for result) -> completed/failed
+ */
+export type TaskMode = 'progressive' | 'atomic';
+
+/**
  * Task root - metadata for the entire task tree
  * Stored separately for fast list queries
  */
@@ -34,6 +43,9 @@ export interface TaskRoot {
 	type: string;
 	status: TaskStatus;
 	progress: number; // 0-100
+
+	// Execution settings
+	concurrency: number; // Number of parallel tasks (1 = serial, >1 = parallel)
 
 	// Statistics
 	stats: {
@@ -65,6 +77,9 @@ export interface TaskNode<T = unknown> {
 	name: string;
 	status: TaskStatus;
 	progress: number;
+
+	// Execution mode
+	mode: TaskMode; // 'progressive' (has progress) or 'atomic' (complete/fail only)
 
 	// Tree position
 	depth: number; // 0 for root's direct children
@@ -102,6 +117,13 @@ export interface TaskNode<T = unknown> {
 export interface CreateTaskOptions<T = unknown> {
 	name: string;
 	type?: string;
+	/**
+	 * Number of parallel tasks to execute
+	 * - 1: Serial execution (default)
+	 * - >1: Parallel execution with specified concurrency
+	 * - Infinity: Execute all tasks in parallel
+	 */
+	concurrency?: number;
 	metadata?: Record<string, unknown>;
 	children?: CreateNodeOptions<T>[];
 }
@@ -111,6 +133,12 @@ export interface CreateTaskOptions<T = unknown> {
  */
 export interface CreateNodeOptions<T = unknown> {
 	name: string;
+	/**
+	 * Task execution mode
+	 * - 'progressive': Shows progress 0-100% (default)
+	 * - 'atomic': No progress, just waiting -> complete/fail
+	 */
+	mode?: TaskMode;
 	children?: CreateNodeOptions<T>[];
 	// Leaf-only
 	data?: T;

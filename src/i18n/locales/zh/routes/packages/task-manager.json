@@ -1,0 +1,134 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "任务管理器",
+	"subtitle": "基于树结构的任务管理与默克尔验证",
+	"description": "强大的任务管理库，支持树形结构、暂停/恢复、IndexedDB 持久化，以及通过默克尔树实现的加密验证。",
+	"features": {
+		"title": "功能特性",
+		"tree_structure": "基于树形结构的任务层级，支持父子关系",
+		"pause_resume": "随时暂停、恢复和取消任务",
+		"persistence": "IndexedDB 持久化存储，采用分层存储提升效率",
+		"merkle_tree": "默克尔树支持，实现加密验证",
+		"svelte_store": "Svelte 5 响应式状态管理与派生值",
+		"event_driven": "事件驱动架构，支持实时更新",
+		"retry_logic": "自动重试，支持指数退避",
+		"type_safe": "完整的 TypeScript 支持，类型严格"
+	},
+	"demo": {
+		"basic": {
+			"title": "1. 并行执行",
+			"description": "可配置并发数的并行任务执行",
+			"create_task": "创建任务",
+			"execute": "执行",
+			"task_name": "任务名称",
+			"task_name_placeholder": "输入任务名称",
+			"add_subtask": "添加子任务",
+			"subtask_name": "子任务",
+			"concurrency": "并发数",
+			"status": "状态",
+			"progress": "进度"
+		},
+		"lifecycle": {
+			"title": "2. 任务生命周期",
+			"description": "使用暂停、恢复和取消控制任务执行",
+			"start": "开始",
+			"pause": "暂停",
+			"resume": "恢复",
+			"cancel": "取消",
+			"reset": "重置",
+			"current_task": "当前任务",
+			"processing": "处理中",
+			"paused_at": "暂停于"
+		},
+		"batch": {
+			"title": "3. 批量处理",
+			"description": "处理多个项目并跟踪进度",
+			"items_count": "项目数量",
+			"process_all": "全部处理",
+			"stop": "停止",
+			"completed": "已完成",
+			"failed": "已失败",
+			"remaining": "剩余"
+		},
+		"merkle": {
+			"title": "4. 默克尔验证",
+			"description": "生成并验证默克尔证明以确保任务完整性",
+			"generate_proof": "生成证明",
+			"verify_proof": "验证证明",
+			"merkle_root": "默克尔根",
+			"leaf_hash": "叶子哈希",
+			"proof_path": "证明路径",
+			"verification_result": "验证结果",
+			"valid": "有效",
+			"invalid": "无效"
+		},
+		"store": {
+			"title": "5. 响应式状态",
+			"description": "使用 Svelte 5 实现实时状态管理",
+			"all_tasks": "所有任务",
+			"pending": "待处理",
+			"running": "运行中",
+			"completed": "已完成",
+			"failed": "已失败",
+			"paused": "已暂停",
+			"clear_completed": "清除已完成",
+			"clear_failed": "清除已失败",
+			"refresh": "刷新"
+		}
+	},
+	"code": {
+		"title": "代码示例",
+		"installation": "安装",
+		"basic_usage": "基础用法",
+		"with_executor": "自定义执行器",
+		"pause_resume": "暂停与恢复",
+		"merkle_proof": "默克尔证明",
+		"svelte_store": "Svelte 状态管理"
+	},
+	"api": {
+		"title": "API 参考",
+		"task_manager": "任务管理器",
+		"task_store": "任务状态",
+		"methods": "方法",
+		"events": "事件",
+		"types": "类型"
+	},
+	"status": {
+		"pending": "待处理",
+		"running": "运行中",
+		"paused": "已暂停",
+		"completed": "已完成",
+		"failed": "已失败",
+		"cancelled": "已取消"
+	},
+	"actions": {
+		"create": "创建",
+		"execute": "执行",
+		"pause": "暂停",
+		"resume": "恢复",
+		"cancel": "取消",
+		"delete": "删除",
+		"retry": "重试",
+		"copy": "复制",
+		"expand": "展开",
+		"collapse": "收起"
+	},
+	"messages": {
+		"task_created": "任务创建成功",
+		"task_completed": "任务已完成",
+		"task_failed": "任务失败",
+		"task_paused": "任务已暂停",
+		"task_resumed": "任务已恢复",
+		"task_cancelled": "任务已取消",
+		"proof_valid": "证明有效",
+		"proof_invalid": "证明无效",
+		"no_tasks": "暂无任务",
+		"loading": "加载中..."
+	}
+}
