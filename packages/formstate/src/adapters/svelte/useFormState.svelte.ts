@@ -207,6 +207,9 @@ export function useFormState(config: IFormConfig = {}, options: UseFormStateOpti
 		// Watch API（P2: 监听特定字段变化）
 		watch: manager.watch.bind(manager),
 
+		// 观察者模式
+		subscribe: manager.subscribe.bind(manager),
+
 		// 性能优化
 		batchUpdate: manager.batchUpdate.bind(manager),
 
