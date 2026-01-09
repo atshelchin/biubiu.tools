@@ -33,6 +33,7 @@ import {
 	verifyMerkleProof
 } from './merkle';
 import { computeMerkleInWorker, isWorkerSupported, terminateWorker } from './merkle-worker-manager';
+import { TabCoordinator, withTabCoordination } from './tab-coordinator';
 
 // ============================================================================
 // Performance Configuration
@@ -69,6 +70,10 @@ export class TaskManager<T = unknown> {
 	private abortControllers = new Map<string, AbortController>();
 	// Track active task roots so pause() can update their status
 	private activeRoots = new Map<string, TaskRoot>();
+	// Mutex locks for atomic stats updates (prevents race conditions in concurrent execution)
+	private statsLocks = new Map<string, Promise<void>>();
+	// Tab coordinator for multi-tab synchronization
+	private tabCoordinator: TabCoordinator | null = null;
 
 	constructor(options: TaskManagerConfig = {}) {
 		this.config = {
@@ -80,10 +85,28 @@ export class TaskManager<T = unknown> {
 			},
 			cleanupDays: options.cleanupDays ?? 7,
 			skipMerkle: options.skipMerkle ?? false,
-			useWorker: options.useWorker ?? false
+			useWorker: options.useWorker ?? false,
+			enableTabCoordination: options.enableTabCoordination ?? false,
+			tabCoordination: {
+				lockTimeout: options.tabCoordination?.lockTimeout ?? 30000,
+				useSharedReads: options.tabCoordination?.useSharedReads ?? false
+			}
 		};
 
-		this.storage = options.storage ?? createIndexedDBStorage(this.config.dbName);
+		// Create base storage adapter
+		let storage = options.storage ?? createIndexedDBStorage(this.config.dbName);
+
+		// Wrap with tab coordination if enabled
+		if (this.config.enableTabCoordination) {
+			this.tabCoordinator = new TabCoordinator({
+				lockName: `task-manager-${this.config.dbName}`,
+				lockTimeout: this.config.tabCoordination.lockTimeout,
+				useSharedReads: this.config.tabCoordination.useSharedReads
+			});
+			storage = withTabCoordination(storage, this.tabCoordinator);
+		}
+
+		this.storage = storage;
 	}
 
 	// =========================================================================
@@ -456,8 +479,8 @@ export class TaskManager<T = unknown> {
 				leaf.updatedAt = Date.now();
 				await this.storage.saveNode(leaf);
 
-				root.stats.completed++;
-				await this.updateRootProgress(root);
+				// Atomic stats update to prevent race conditions in concurrent execution
+				await this.atomicStatsUpdate(root, 'completed');
 				this.emit('complete', { root, node: leaf });
 			},
 
@@ -467,8 +490,8 @@ export class TaskManager<T = unknown> {
 				leaf.updatedAt = Date.now();
 				await this.storage.saveNode(leaf);
 
-				root.stats.failed++;
-				await this.updateRootProgress(root);
+				// Atomic stats update to prevent race conditions in concurrent execution
+				await this.atomicStatsUpdate(root, 'failed');
 				this.emit('fail', { root, node: leaf });
 			},
 
@@ -529,6 +552,59 @@ export class TaskManager<T = unknown> {
 		root.progress = total > 0 ? Math.round((processed / total) * 100) : 0;
 		root.updatedAt = Date.now();
 		await this.storage.saveRoot(root);
+	}
+
+	/**
+	 * Atomic stats update with proper queue-based mutex
+	 * Prevents race conditions when multiple tasks complete simultaneously
+	 * Uses a chained promise queue to ensure serial execution
+	 */
+	private async atomicStatsUpdate(root: TaskRoot, type: 'completed' | 'failed'): Promise<void> {
+		const rootId = root.id;
+
+		// Get current lock or create initial resolved promise
+		const currentLock = this.statsLocks.get(rootId) ?? Promise.resolve();
+
+		// Create our update as a chained promise
+		const ourUpdate = currentLock.then(async () => {
+			// Re-read root from storage to get latest stats
+			const freshRoot = await this.storage.getRoot(rootId);
+			if (!freshRoot) {
+				return;
+			}
+
+			// Increment the appropriate counter
+			if (type === 'completed') {
+				freshRoot.stats.completed++;
+			} else {
+				freshRoot.stats.failed++;
+			}
+
+			// Update progress
+			const { total, completed, failed } = freshRoot.stats;
+			const processed = completed + failed;
+			freshRoot.progress = total > 0 ? Math.round((processed / total) * 100) : 0;
+			freshRoot.updatedAt = Date.now();
+
+			// Save to storage
+			await this.storage.saveRoot(freshRoot);
+
+			// Update in-memory root reference to stay in sync
+			root.stats = freshRoot.stats;
+			root.progress = freshRoot.progress;
+			root.updatedAt = freshRoot.updatedAt;
+		});
+
+		// Set our update as the new lock (next updates will wait for us)
+		this.statsLocks.set(rootId, ourUpdate);
+
+		// Wait for our update to complete
+		await ourUpdate;
+
+		// Cleanup if we're still the last lock
+		if (this.statsLocks.get(rootId) === ourUpdate) {
+			this.statsLocks.delete(rootId);
+		}
 	}
 
 	/**
@@ -978,9 +1054,7 @@ export class TaskManager<T = unknown> {
 		// Clean up orphaned nodes (only if storage supports getAllNodes)
 		if (this.storage.getAllNodes) {
 			const allNodes = await this.storage.getAllNodes();
-			const validRootIds = new Set(
-				(await this.storage.getAllRoots()).map((r) => r.id)
-			);
+			const validRootIds = new Set((await this.storage.getAllRoots()).map((r) => r.id));
 
 			// Group orphaned nodes by rootId for batch deletion
 			const orphanedByRoot = new Map<string, string[]>();
@@ -1013,7 +1087,30 @@ export class TaskManager<T = unknown> {
 		}
 		this.abortControllers.clear();
 		this.eventHandlers.clear();
+
+		// Release tab coordination locks
+		if (this.tabCoordinator) {
+			this.tabCoordinator.releaseAll();
+		}
+
 		await this.storage.close();
+	}
+
+	/**
+	 * Check if multi-tab coordination is enabled and supported
+	 */
+	isTabCoordinationSupported(): boolean {
+		return this.tabCoordinator?.supported ?? false;
+	}
+
+	/**
+	 * Get tab coordination lock status (for debugging)
+	 */
+	async getTabLockInfo(): Promise<{ held: number; pending: number } | null> {
+		if (!this.tabCoordinator) {
+			return null;
+		}
+		return this.tabCoordinator.getLockInfo();
 	}
 
 	/**

@@ -339,6 +339,28 @@ export interface TaskManagerConfig {
 	 * Falls back to main thread if Workers are not supported
 	 */
 	useWorker?: boolean;
+
+	/**
+	 * Enable multi-tab coordination using Web Locks API
+	 * Prevents data corruption when multiple browser tabs access the same database
+	 * Default: false (for backwards compatibility)
+	 */
+	enableTabCoordination?: boolean;
+
+	/**
+	 * Multi-tab coordination options
+	 */
+	tabCoordination?: {
+		/**
+		 * Lock timeout in milliseconds (default: 30000)
+		 */
+		lockTimeout?: number;
+		/**
+		 * Use shared locks for reads (default: false)
+		 * When true, multiple tabs can read simultaneously
+		 */
+		useSharedReads?: boolean;
+	};
 }
 
 export interface ResolvedConfig {
@@ -351,6 +373,11 @@ export interface ResolvedConfig {
 	cleanupDays: number;
 	skipMerkle: boolean;
 	useWorker: boolean;
+	enableTabCoordination: boolean;
+	tabCoordination: {
+		lockTimeout: number;
+		useSharedReads: boolean;
+	};
 }
 
 export const DEFAULT_CONFIG: ResolvedConfig = {
@@ -362,7 +389,12 @@ export const DEFAULT_CONFIG: ResolvedConfig = {
 	},
 	cleanupDays: 7,
 	skipMerkle: false,
-	useWorker: false
+	useWorker: false,
+	enableTabCoordination: false,
+	tabCoordination: {
+		lockTimeout: 30000,
+		useSharedReads: false
+	}
 };
 
 // ============================================================================
@@ -373,4 +405,63 @@ export interface MerkleProof {
 	leaf: string;
 	proof: string[];
 	root: string;
+}
+
+// ============================================================================
+// Error Types
+// ============================================================================
+
+/**
+ * Storage error types for better error handling
+ */
+export type StorageErrorType =
+	| 'QUOTA_EXCEEDED' // Storage quota exceeded
+	| 'CONNECTION_ERROR' // Database connection error
+	| 'TRANSACTION_ERROR' // Transaction failed
+	| 'NOT_FOUND' // Resource not found
+	| 'UNKNOWN'; // Unknown error
+
+/**
+ * Custom storage error with type information
+ */
+export class StorageError extends Error {
+	readonly type: StorageErrorType;
+	readonly originalError?: Error;
+
+	constructor(type: StorageErrorType, message: string, originalError?: Error) {
+		super(message);
+		this.name = 'StorageError';
+		this.type = type;
+		this.originalError = originalError;
+	}
+
+	/**
+	 * Check if this is a quota exceeded error
+	 */
+	isQuotaExceeded(): boolean {
+		return this.type === 'QUOTA_EXCEEDED';
+	}
+
+	/**
+	 * Check if this is a recoverable error (can retry)
+	 */
+	isRecoverable(): boolean {
+		return this.type === 'CONNECTION_ERROR' || this.type === 'TRANSACTION_ERROR';
+	}
+}
+
+/**
+ * Check if an error is a QuotaExceededError
+ */
+export function isQuotaExceededError(error: unknown): boolean {
+	if (error instanceof StorageError) {
+		return error.isQuotaExceeded();
+	}
+	if (error instanceof DOMException) {
+		return error.name === 'QuotaExceededError';
+	}
+	if (error instanceof Error) {
+		return error.name === 'QuotaExceededError' || error.message.includes('quota');
+	}
+	return false;
 }

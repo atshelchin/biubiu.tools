@@ -34,14 +34,17 @@ export type {
 	TaskEventHandler,
 	// Storage types
 	StorageAdapter,
+	IntegrityCheckResult,
 	// Configuration
 	TaskManagerConfig,
 	ResolvedConfig,
 	// Merkle types
-	MerkleProof
+	MerkleProof,
+	// Error types
+	StorageErrorType
 } from './types';
 
-export { DEFAULT_CONFIG } from './types';
+export { DEFAULT_CONFIG, StorageError, isQuotaExceededError } from './types';
 
 // ============================================================================
 // Task Manager
@@ -94,6 +97,14 @@ export {
 	buildRootInWorker,
 	computeMerkleInWorker
 } from './merkle-worker-manager';
+
+// ============================================================================
+// Multi-Tab Coordination
+// ============================================================================
+
+export { TabCoordinator, getTabCoordinator, withTabCoordination } from './tab-coordinator';
+
+export type { TabCoordinatorOptions, LockHandle } from './tab-coordinator';
 
 // ============================================================================
 // Svelte Store
