@@ -4,17 +4,31 @@
  */
 
 import { FormStateManager } from '../../core/FormStateManager';
-import type { IFormConfig, FieldPath, FieldValue } from '../../core/interfaces';
+import type { IFormConfig, FieldPath, FieldValue, FieldError } from '../../core/interfaces';
 import { PathUtils } from '../../utils/PathUtils';
 import { debug } from '../../utils/debug';
 import { safeStringify } from '../../utils/serialize';
 
 let instanceCounter = 0;
 
-export function useFormState(config: IFormConfig = {}) {
+/**
+ * 细粒度状态更新配置
+ */
+interface UseFormStateOptions {
+	/**
+	 * 启用细粒度状态更新（实验性）
+	 * 当启用时，只有变化的字段会触发重新渲染
+	 * @default false
+	 */
+	fineGrainedUpdates?: boolean;
+}
+
+export function useFormState(config: IFormConfig = {}, options: UseFormStateOptions = {}) {
 	const instanceId = ++instanceCounter;
+	const { fineGrainedUpdates = false } = options;
+
 	debug.log(
-		`[useFormState #${instanceId}] Called with ${Object.keys(config.fields || {}).length} fields`
+		`[useFormState #${instanceId}] Called with ${Object.keys(config.fields || {}).length} fields, fineGrainedUpdates: ${fineGrainedUpdates}`
 	);
 
 	const manager = new FormStateManager(config);
@@ -33,6 +47,24 @@ export function useFormState(config: IFormConfig = {}) {
 		fieldStatesVersion: 0
 	});
 
+	// P1: 细粒度字段状态追踪
+	// 每个字段有独立的版本号，只有特定字段变化时才触发相关组件更新
+	const fieldVersions = $state<Record<FieldPath, number>>({});
+
+	/**
+	 * 获取字段版本号（用于建立细粒度依赖）
+	 */
+	function getFieldVersion(path: FieldPath): number {
+		return fieldVersions[path] ?? 0;
+	}
+
+	/**
+	 * 增加字段版本号（触发细粒度更新）
+	 */
+	function incrementFieldVersion(path: FieldPath): void {
+		fieldVersions[path] = (fieldVersions[path] ?? 0) + 1;
+	}
+
 	debug.log(
 		`[useFormState #${instanceId}] state.values after creation:`,
 		safeStringify(state.values, 2)
@@ -46,18 +78,36 @@ export function useFormState(config: IFormConfig = {}) {
 			const newValues = manager.getValues() as Record<string, FieldValue>;
 			debug.log(`[useFormState #${instanceId}] Field changed:`, path);
 			debug.log(`[useFormState #${instanceId}] New values (JSON):`, safeStringify(newValues, 2));
-			state.values = newValues;
+
+			if (fineGrainedUpdates) {
+				// P1: 细粒度更新 - 只更新变化的字段值
+				const newValue = PathUtils.get(newValues, path);
+				PathUtils.setMutable(state.values, path, newValue);
+				incrementFieldVersion(path);
+			} else {
+				// 传统模式 - 替换整个 values 对象
+				state.values = newValues;
+			}
+
 			state.isDirty = manager.isDirty();
 			state.isValid = manager.isValid();
 			state.fieldStatesVersion++;
 		},
-		onFieldValidation: () => {
+		onFieldValidation: (path) => {
 			state.errors = manager.getErrors();
 			state.isValid = manager.isValid();
 			state.isValidating = manager.isValidating();
+
+			if (fineGrainedUpdates && path) {
+				incrementFieldVersion(path);
+			}
+
 			state.fieldStatesVersion++;
 		},
-		onFieldBlur: () => {
+		onFieldBlur: (path) => {
+			if (fineGrainedUpdates && path) {
+				incrementFieldVersion(path);
+			}
 			state.fieldStatesVersion++;
 		}
 	});
@@ -86,8 +136,15 @@ export function useFormState(config: IFormConfig = {}) {
 		// 字段级响应式状态
 		getFieldState: (path: FieldPath) => {
 			// 访问响应式状态以建立依赖
-			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
-			state.fieldStatesVersion;
+			if (fineGrainedUpdates) {
+				// P1: 细粒度模式 - 只依赖特定字段的版本
+				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+				getFieldVersion(path);
+			} else {
+				// 传统模式 - 依赖全局版本
+				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+				state.fieldStatesVersion;
+			}
 			const fieldState = manager.getFieldState(path);
 			// 确保 value 来自响应式的 values
 			return {
@@ -98,8 +155,30 @@ export function useFormState(config: IFormConfig = {}) {
 
 		getValue: (path: FieldPath) => {
 			// 从响应式 values 对象中获取
+			if (fineGrainedUpdates) {
+				// P1: 建立细粒度依赖
+				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+				getFieldVersion(path);
+			}
 			return PathUtils.get(state.values, path);
 		},
+
+		/**
+		 * P1: 获取字段错误（细粒度）
+		 * 只在特定字段的错误变化时触发重新渲染
+		 */
+		getFieldError: (path: FieldPath): FieldError => {
+			if (fineGrainedUpdates) {
+				// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+				getFieldVersion(path);
+			}
+			return state.errors[path] ?? null;
+		},
+
+		/**
+		 * P1: 获取字段版本（用于自定义细粒度依赖）
+		 */
+		getFieldVersion,
 
 		// 字段查询 API（P0: 暴露正式 API，避免私有属性访问）
 		hasField: manager.hasField.bind(manager),

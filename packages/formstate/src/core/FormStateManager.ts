@@ -7,6 +7,7 @@ import { produce, setAutoFreeze } from 'immer';
 import { PathUtils } from '../utils/PathUtils';
 import { debug } from '../utils/debug';
 import { safeStringify, safeParse } from '../utils/serialize';
+import { FormWarnings, checkPerformance } from '../utils/warnings';
 import type {
 	IFormStateManager,
 	IFieldState,
@@ -58,11 +59,12 @@ export class FormStateManager implements IFormStateManager {
 
 		// 注册字段配置
 		if (config.fields) {
-			debug.log(
-				'[FormStateManager.constructor] Registering',
-				Object.keys(config.fields).length,
-				'fields'
-			);
+			const fieldCount = Object.keys(config.fields).length;
+			debug.log('[FormStateManager.constructor] Registering', fieldCount, 'fields');
+
+			// P2: 性能检查 - 大型表单警告
+			checkPerformance(fieldCount);
+
 			Object.entries(config.fields).forEach(([path, fieldConfig]) => {
 				this.registerField(path, fieldConfig);
 			});
@@ -636,6 +638,8 @@ export class FormStateManager implements IFormStateManager {
 				const errorMessage =
 					err instanceof Error ? err.message : typeof err === 'string' ? err : 'Validation error';
 				debug.error('[validateField] Validation threw error:', errorMessage);
+				// P2: 开发警告
+				FormWarnings.validatorThrewError(path, err);
 				this.fieldStates.set(path, {
 					...this.getFieldState(path),
 					error: errorMessage,
@@ -767,6 +771,8 @@ export class FormStateManager implements IFormStateManager {
 		// P0: 防止重复提交 - 必须在任何异步操作之前检查并设置
 		if (this._isSubmitting) {
 			debug.warn('[submit] Form is already submitting, ignoring duplicate submit');
+			// P2: 开发警告
+			FormWarnings.duplicateSubmission();
 			return false;
 		}
 		this._isSubmitting = true;
