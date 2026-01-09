@@ -57,7 +57,8 @@
       "Bash(npm run format:*)",
       "Bash(npm run check:*)",
       "Bash(bun build:*)",
-      "Bash(jobs)"
+      "Bash(jobs)",
+      "Bash(timeout 5 bun run dev:*)"
     ],
     "deny": [],
     "ask": []
