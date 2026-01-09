@@ -323,4 +323,31 @@ bun add @shelchin/formstate @shelchin/data-table @shelchin/drag-sortable`}</code
 			align-items: flex-start;
 		}
 	}
+
+	/* Dark mode support using data-theme attribute */
+	:global([data-theme='dark']) .package-card {
+		background: var(--color-panel-2);
+		border-color: var(--color-panel-border-2);
+	}
+
+	:global([data-theme='dark']) .package-card:hover {
+		border-color: var(--color-primary);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+	}
+
+	:global([data-theme='dark']) .package-icon {
+		background: var(--color-panel-3);
+	}
+
+	:global([data-theme='dark']) .npm-package {
+		background: var(--color-panel-3);
+	}
+
+	:global([data-theme='dark']) .tag {
+		background: var(--color-panel-3);
+	}
+
+	:global([data-theme='dark']) .code-block {
+		background: var(--color-panel-1);
+	}
 </style>
