@@ -465,4 +465,94 @@ describe('useTypedFormState', () => {
 			form.destroy();
 		});
 	});
+
+	describe('edge cases for initialValues flattening', () => {
+		it('should handle empty nested object', () => {
+			interface FormWithEmptyObject {
+				name: string;
+				metadata: Record<string, unknown>;
+			}
+
+			const form = useTypedFormState<FormWithEmptyObject>({
+				initialValues: {
+					name: 'test',
+					metadata: {}
+				}
+			});
+
+			expect(form.getValue('name')).toBe('test');
+			// Empty object is registered as a field
+			expect(form.hasField('metadata')).toBe(true);
+
+			form.destroy();
+		});
+
+		it('should handle null values', () => {
+			interface FormWithNull {
+				name: string;
+				optional: string | null;
+			}
+
+			const form = useTypedFormState<FormWithNull>({
+				initialValues: {
+					name: 'test',
+					optional: null
+				}
+			});
+
+			expect(form.getValue('name')).toBe('test');
+			// null values are registered as a field with null value
+			// getValue returns undefined for unregistered fields, but the field is registered
+			expect(form.hasField('optional')).toBe(true);
+
+			form.destroy();
+		});
+
+		it('should handle undefined values', () => {
+			interface FormWithUndefined {
+				name: string;
+				optional?: string;
+			}
+
+			const form = useTypedFormState<FormWithUndefined>({
+				initialValues: {
+					name: 'test',
+					optional: undefined
+				}
+			});
+
+			expect(form.getValue('name')).toBe('test');
+			expect(form.getValue('optional')).toBeUndefined();
+
+			form.destroy();
+		});
+
+		it('should handle deeply nested objects', () => {
+			interface DeeplyNested {
+				level1: {
+					level2: {
+						level3: {
+							value: string;
+						};
+					};
+				};
+			}
+
+			const form = useTypedFormState<DeeplyNested>({
+				initialValues: {
+					level1: {
+						level2: {
+							level3: {
+								value: 'deep'
+							}
+						}
+					}
+				}
+			});
+
+			expect(form.getValue('level1.level2.level3.value')).toBe('deep');
+
+			form.destroy();
+		});
+	});
 });

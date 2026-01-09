@@ -36,7 +36,13 @@ import type {
 	IFieldState,
 	IFormObserver
 } from '../../core/interfaces';
-import type { Path, PathValue, ArrayPath, ArrayPathValue, DeepPartial } from '../../core/path-types';
+import type {
+	Path,
+	PathValue,
+	ArrayPath,
+	ArrayPathValue,
+	DeepPartial
+} from '../../core/path-types';
 import { PathUtils } from '../../utils/PathUtils';
 import { debug } from '../../utils/debug';
 import { safeStringify } from '../../utils/serialize';
@@ -53,7 +59,10 @@ type FormValuesConstraint = {};
 /**
  * 类型安全的表单配置
  */
-export interface TypedFormConfig<T extends FormValuesConstraint> extends Omit<IFormConfig, 'fields'> {
+export interface TypedFormConfig<T extends FormValuesConstraint> extends Omit<
+	IFormConfig,
+	'fields'
+> {
 	/** 初始值（必须提供完整的类型结构） */
 	initialValues: T;
 	/** 字段配置（使用类型安全的路径） */
@@ -106,8 +115,14 @@ export interface TypedFormState<T extends FormValuesConstraint> {
 	moveArrayItem<P extends ArrayPath<T>>(path: P, fromIndex: number, toIndex: number): void;
 
 	// 类型安全的监听
-	watch<P extends Path<T>>(path: P, callback: (value: PathValue<T, P>, prevValue: PathValue<T, P>) => void): () => void;
-	watch<P extends Path<T>>(paths: P[], callback: (values: { [K in P]: PathValue<T, K> }) => void): () => void;
+	watch<P extends Path<T>>(
+		path: P,
+		callback: (value: PathValue<T, P>, prevValue: PathValue<T, P>) => void
+	): () => void;
+	watch<P extends Path<T>>(
+		paths: P[],
+		callback: (values: { [K in P]: PathValue<T, K> }) => void
+	): () => void;
 
 	// 表单操作
 	setValues(values: DeepPartial<T>, shouldValidate?: boolean): void;
@@ -223,6 +238,7 @@ export function useTypedFormState<T extends FormValuesConstraint>(
 		isDirty: manager.isDirty(),
 		isValid: manager.isValid(),
 		isValidating: manager.isValidating(),
+		isSubmitting: false,
 		fieldStatesVersion: 0
 	});
 
@@ -292,7 +308,7 @@ export function useTypedFormState<T extends FormValuesConstraint>(
 			return state.isValidating;
 		},
 		get isSubmitting() {
-			return manager.isSubmitting();
+			return state.isSubmitting;
 		},
 
 		getValue<P extends Path<T>>(path: P): PathValue<T, P> {
@@ -373,7 +389,11 @@ export function useTypedFormState<T extends FormValuesConstraint>(
 			}
 		},
 
-		insertArrayItem<P extends ArrayPath<T>>(path: P, index: number, item: ArrayPathValue<T, P>): void {
+		insertArrayItem<P extends ArrayPath<T>>(
+			path: P,
+			index: number,
+			item: ArrayPathValue<T, P>
+		): void {
 			const array = PathUtils.get(state.values, path);
 			if (Array.isArray(array)) {
 				const newArray = [...array];
@@ -396,7 +416,9 @@ export function useTypedFormState<T extends FormValuesConstraint>(
 
 		watch<P extends Path<T>>(
 			pathOrPaths: P | P[],
-			callback: ((value: PathValue<T, P>, prevValue: PathValue<T, P>) => void) | ((values: { [K in P]: PathValue<T, K> }) => void)
+			callback:
+				| ((value: PathValue<T, P>, prevValue: PathValue<T, P>) => void)
+				| ((values: { [K in P]: PathValue<T, K> }) => void)
 		): () => void {
 			if (Array.isArray(pathOrPaths)) {
 				return manager.watch(
@@ -422,8 +444,16 @@ export function useTypedFormState<T extends FormValuesConstraint>(
 			manager.setInitialValues(values as Record<string, FieldValue>, shouldReset);
 		},
 
-		submit(onSubmit: (values: T) => void | Promise<void>): Promise<boolean> {
-			return manager.submit(onSubmit as (values: Record<string, FieldValue>) => void | Promise<void>);
+		async submit(onSubmit: (values: T) => void | Promise<void>): Promise<boolean> {
+			state.isSubmitting = true;
+			try {
+				const result = await manager.submit(
+					onSubmit as (values: Record<string, FieldValue>) => void | Promise<void>
+				);
+				return result;
+			} finally {
+				state.isSubmitting = false;
+			}
 		},
 
 		hasField<P extends Path<T>>(path: P): boolean {
@@ -438,11 +468,25 @@ export function useTypedFormState<T extends FormValuesConstraint>(
 			return manager.getRegisteredFields() as Path<T>[];
 		},
 
+		/**
+		 * 获取脏字段列表（响应式）
+		 * 访问 fieldStatesVersion 以建立 Svelte 响应式依赖
+		 */
 		getDirtyFields(): Path<T>[] {
+			// 访问响应式状态以建立依赖，确保字段变化时重新计算
+			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+			state.fieldStatesVersion;
 			return manager.getDirtyFields() as Path<T>[];
 		},
 
+		/**
+		 * 获取脏字段的值（响应式）
+		 * 访问 fieldStatesVersion 以建立 Svelte 响应式依赖
+		 */
 		getDirtyValues(): DeepPartial<T> {
+			// 访问响应式状态以建立依赖，确保字段变化时重新计算
+			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+			state.fieldStatesVersion;
 			return manager.getDirtyValues() as DeepPartial<T>;
 		},
 
@@ -516,4 +560,10 @@ function flattenObject(
 	}
 }
 
-export type { Path, PathValue, ArrayPath, ArrayPathValue, DeepPartial } from '../../core/path-types';
+export type {
+	Path,
+	PathValue,
+	ArrayPath,
+	ArrayPathValue,
+	DeepPartial
+} from '../../core/path-types';

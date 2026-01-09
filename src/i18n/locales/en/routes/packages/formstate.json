@@ -1,0 +1,182 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "GB",
+		"code": "en"
+	},
+	"title": "FormState",
+	"subtitle": "Type-Safe Form State Management for Svelte 5",
+	"description": "A powerful, headless form state management library with full TypeScript inference, built-in validators, Zod integration, and Svelte 5 reactivity.",
+	"features": {
+		"title": "Features",
+		"type_safe": "Full TypeScript inference with type-safe paths",
+		"validators": "Built-in validators: required, email, minLength, pattern, and more",
+		"zod_integration": "Seamless Zod schema validation support",
+		"reactive": "Svelte 5 reactive state with fine-grained updates",
+		"headless": "Headless components for complete UI flexibility",
+		"array_fields": "Dynamic array field management with push, remove, move operations"
+	},
+	"demo": {
+		"basic": {
+			"title": "1. Basic Usage",
+			"description": "Simple form with field registration and value binding",
+			"name": "Name",
+			"name_placeholder": "Enter your name",
+			"email": "Email",
+			"email_placeholder": "Enter your email",
+			"submit": "Submit",
+			"reset": "Reset",
+			"form_values": "Form Values",
+			"form_state": "Form State",
+			"is_dirty": "Dirty",
+			"is_valid": "Valid",
+			"is_submitting": "Submitting"
+		},
+		"typed": {
+			"title": "2. Type-Safe Forms",
+			"description": "Full TypeScript inference with useTypedFormState - get autocomplete for all field paths",
+			"username": "Username",
+			"username_placeholder": "Choose a username",
+			"profile_name": "Profile Name",
+			"profile_name_placeholder": "Your display name",
+			"profile_age": "Age",
+			"profile_bio": "Bio",
+			"profile_bio_placeholder": "Tell us about yourself",
+			"type_inference": "Type Inference",
+			"nested_access": "Nested object access with full autocomplete"
+		},
+		"validators": {
+			"title": "3. Built-in Validators",
+			"description": "Comprehensive validation with real-time error feedback",
+			"required_field": "Required Field",
+			"required_placeholder": "This field is required",
+			"email_field": "Email",
+			"email_placeholder": "Enter a valid email",
+			"password": "Password (min 8 chars)",
+			"password_placeholder": "Enter password",
+			"confirm_password": "Confirm Password",
+			"confirm_placeholder": "Re-enter password",
+			"website": "Website (URL pattern)",
+			"website_placeholder": "https://example.com",
+			"validation_status": "Validation Status",
+			"all_valid": "All fields valid",
+			"has_errors": "Has validation errors",
+			"validate_all": "Validate All"
+		},
+		"async": {
+			"title": "4. Async Validation",
+			"description": "Server-side validation with debouncing and loading states",
+			"username": "Username",
+			"username_placeholder": "Check availability...",
+			"checking": "Checking...",
+			"available": "Available",
+			"taken": "Username is taken",
+			"email": "Email",
+			"email_placeholder": "Verify email format...",
+			"debounce": "Debounce",
+			"debounce_desc": "300ms debounce for async validation"
+		},
+		"submit": {
+			"title": "5. Form Submission",
+			"description": "Handle form submission with validation, loading states, and error handling",
+			"first_name": "First Name",
+			"last_name": "Last Name",
+			"email": "Email",
+			"phone": "Phone (optional)",
+			"submit": "Submit Form",
+			"submitting": "Submitting...",
+			"submit_result": "Submission Result",
+			"success": "Form submitted successfully!",
+			"failed": "Submission failed",
+			"no_submission": "No submission yet"
+		},
+		"array": {
+			"title": "6. Array Fields",
+			"description": "Dynamic array field management - add, remove, reorder items",
+			"tags": "Tags",
+			"add_tag": "Add Tag",
+			"addresses": "Addresses",
+			"add_address": "Add Address",
+			"street": "Street",
+			"city": "City",
+			"remove": "Remove",
+			"move_up": "Move Up",
+			"move_down": "Move Down",
+			"array_state": "Array State",
+			"items_count": "Items"
+		},
+		"watch": {
+			"title": "7. Watch API",
+			"description": "React to field changes in real-time with the watch API",
+			"source_field": "Source Field",
+			"source_placeholder": "Type here to see watch in action",
+			"derived_field": "Derived (uppercase)",
+			"char_count": "Character Count",
+			"watch_log": "Watch Log",
+			"no_changes": "No changes yet. Type in the source field.",
+			"changed_to": "Changed to"
+		},
+		"zod": {
+			"title": "8. Zod Integration",
+			"description": "Use Zod schemas for powerful, declarative validation",
+			"username": "Username",
+			"username_placeholder": "3-20 characters",
+			"email": "Email",
+			"age": "Age",
+			"age_placeholder": "18-120",
+			"zod_schema": "Zod Schema",
+			"validation_result": "Validation Result"
+		},
+		"dirty": {
+			"title": "9. Dirty Tracking",
+			"description": "Track which fields have been modified from their initial values",
+			"field_a": "Field A",
+			"field_b": "Field B",
+			"field_c": "Field C",
+			"dirty_fields": "Dirty Fields",
+			"dirty_values": "Dirty Values Only",
+			"no_changes": "No changes from initial values",
+			"reset_field": "Reset"
+		}
+	},
+	"code": {
+		"title": "Code Examples",
+		"installation": "Installation",
+		"basic_usage": "Basic Usage",
+		"typed_form": "Type-Safe Form",
+		"validators": "Validators",
+		"zod": "Zod Integration"
+	},
+	"status": {
+		"valid": "Valid",
+		"invalid": "Invalid",
+		"validating": "Validating",
+		"dirty": "Dirty",
+		"pristine": "Pristine",
+		"touched": "Touched",
+		"untouched": "Untouched"
+	},
+	"actions": {
+		"submit": "Submit",
+		"reset": "Reset",
+		"clear": "Clear",
+		"validate": "Validate",
+		"add": "Add",
+		"remove": "Remove"
+	},
+	"messages": {
+		"required": "This field is required",
+		"invalid_email": "Please enter a valid email",
+		"min_length": "Minimum {min} characters required",
+		"max_length": "Maximum {max} characters allowed",
+		"pattern_mismatch": "Invalid format",
+		"passwords_must_match": "Passwords must match",
+		"form_valid": "Form is valid",
+		"form_invalid": "Please fix the errors above",
+		"submitting": "Submitting...",
+		"submit_success": "Form submitted successfully",
+		"submit_error": "An error occurred"
+	}
+}

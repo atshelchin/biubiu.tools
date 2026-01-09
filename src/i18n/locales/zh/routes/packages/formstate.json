@@ -1,0 +1,182 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "CN"
+	},
+	"title": "FormState",
+	"subtitle": "Svelte 5 类型安全的表单状态管理",
+	"description": "强大的无头表单状态管理库，支持完整的 TypeScript 类型推断、内置验证器、Zod 集成以及 Svelte 5 响应式状态。",
+	"features": {
+		"title": "功能特性",
+		"type_safe": "完整的 TypeScript 类型推断与类型安全路径",
+		"validators": "内置验证器：必填、邮箱、最小长度、正则等",
+		"zod_integration": "无缝集成 Zod 模式验证",
+		"reactive": "Svelte 5 响应式状态与细粒度更新",
+		"headless": "无头组件，完全灵活的 UI 定制",
+		"array_fields": "动态数组字段管理，支持添加、删除、移动操作"
+	},
+	"demo": {
+		"basic": {
+			"title": "1. 基础用法",
+			"description": "简单表单：字段注册与值绑定",
+			"name": "姓名",
+			"name_placeholder": "请输入姓名",
+			"email": "邮箱",
+			"email_placeholder": "请输入邮箱",
+			"submit": "提交",
+			"reset": "重置",
+			"form_values": "表单值",
+			"form_state": "表单状态",
+			"is_dirty": "已修改",
+			"is_valid": "有效",
+			"is_submitting": "提交中"
+		},
+		"typed": {
+			"title": "2. 类型安全表单",
+			"description": "使用 useTypedFormState 实现完整的 TypeScript 类型推断，所有字段路径自动补全",
+			"username": "用户名",
+			"username_placeholder": "选择一个用户名",
+			"profile_name": "显示名称",
+			"profile_name_placeholder": "你的显示名称",
+			"profile_age": "年龄",
+			"profile_bio": "个人简介",
+			"profile_bio_placeholder": "介绍一下自己",
+			"type_inference": "类型推断",
+			"nested_access": "嵌套对象访问，完整自动补全"
+		},
+		"validators": {
+			"title": "3. 内置验证器",
+			"description": "全面的验证功能，实时错误反馈",
+			"required_field": "必填字段",
+			"required_placeholder": "此字段为必填",
+			"email_field": "邮箱",
+			"email_placeholder": "请输入有效邮箱",
+			"password": "密码（至少8位）",
+			"password_placeholder": "请输入密码",
+			"confirm_password": "确认密码",
+			"confirm_placeholder": "再次输入密码",
+			"website": "网站（URL格式）",
+			"website_placeholder": "https://example.com",
+			"validation_status": "验证状态",
+			"all_valid": "所有字段验证通过",
+			"has_errors": "存在验证错误",
+			"validate_all": "验证全部"
+		},
+		"async": {
+			"title": "4. 异步验证",
+			"description": "服务端验证，支持防抖和加载状态",
+			"username": "用户名",
+			"username_placeholder": "检查可用性...",
+			"checking": "检查中...",
+			"available": "可用",
+			"taken": "用户名已被占用",
+			"email": "邮箱",
+			"email_placeholder": "验证邮箱格式...",
+			"debounce": "防抖",
+			"debounce_desc": "异步验证 300ms 防抖"
+		},
+		"submit": {
+			"title": "5. 表单提交",
+			"description": "处理表单提交：验证、加载状态和错误处理",
+			"first_name": "名",
+			"last_name": "姓",
+			"email": "邮箱",
+			"phone": "电话（可选）",
+			"submit": "提交表单",
+			"submitting": "提交中...",
+			"submit_result": "提交结果",
+			"success": "表单提交成功！",
+			"failed": "提交失败",
+			"no_submission": "尚未提交"
+		},
+		"array": {
+			"title": "6. 数组字段",
+			"description": "动态数组字段管理 - 添加、删除、重新排序",
+			"tags": "标签",
+			"add_tag": "添加标签",
+			"addresses": "地址列表",
+			"add_address": "添加地址",
+			"street": "街道",
+			"city": "城市",
+			"remove": "删除",
+			"move_up": "上移",
+			"move_down": "下移",
+			"array_state": "数组状态",
+			"items_count": "项目数"
+		},
+		"watch": {
+			"title": "7. Watch API",
+			"description": "使用 watch API 实时响应字段变化",
+			"source_field": "源字段",
+			"source_placeholder": "在此输入以查看 watch 效果",
+			"derived_field": "派生值（大写）",
+			"char_count": "字符数",
+			"watch_log": "Watch 日志",
+			"no_changes": "暂无变化。请在源字段中输入内容。",
+			"changed_to": "变更为"
+		},
+		"zod": {
+			"title": "8. Zod 集成",
+			"description": "使用 Zod 模式进行强大的声明式验证",
+			"username": "用户名",
+			"username_placeholder": "3-20 个字符",
+			"email": "邮箱",
+			"age": "年龄",
+			"age_placeholder": "18-120",
+			"zod_schema": "Zod Schema",
+			"validation_result": "验证结果"
+		},
+		"dirty": {
+			"title": "9. 脏值追踪",
+			"description": "追踪哪些字段相对于初始值发生了修改",
+			"field_a": "字段 A",
+			"field_b": "字段 B",
+			"field_c": "字段 C",
+			"dirty_fields": "已修改字段",
+			"dirty_values": "仅修改的值",
+			"no_changes": "无修改",
+			"reset_field": "重置"
+		}
+	},
+	"code": {
+		"title": "代码示例",
+		"installation": "安装",
+		"basic_usage": "基础用法",
+		"typed_form": "类型安全表单",
+		"validators": "验证器",
+		"zod": "Zod 集成"
+	},
+	"status": {
+		"valid": "有效",
+		"invalid": "无效",
+		"validating": "验证中",
+		"dirty": "已修改",
+		"pristine": "未修改",
+		"touched": "已触摸",
+		"untouched": "未触摸"
+	},
+	"actions": {
+		"submit": "提交",
+		"reset": "重置",
+		"clear": "清空",
+		"validate": "验证",
+		"add": "添加",
+		"remove": "删除"
+	},
+	"messages": {
+		"required": "此字段为必填",
+		"invalid_email": "请输入有效的邮箱地址",
+		"min_length": "最少需要 {min} 个字符",
+		"max_length": "最多允许 {max} 个字符",
+		"pattern_mismatch": "格式不正确",
+		"passwords_must_match": "两次密码不一致",
+		"form_valid": "表单验证通过",
+		"form_invalid": "请修复上述错误",
+		"submitting": "提交中...",
+		"submit_success": "表单提交成功",
+		"submit_error": "发生错误"
+	}
+}

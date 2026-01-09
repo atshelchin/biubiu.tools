@@ -44,6 +44,7 @@ export function useFormState(config: IFormConfig = {}, options: UseFormStateOpti
 		isDirty: manager.isDirty(),
 		isValid: manager.isValid(),
 		isValidating: manager.isValidating(),
+		isSubmitting: false,
 		fieldStatesVersion: 0
 	});
 
@@ -130,7 +131,7 @@ export function useFormState(config: IFormConfig = {}, options: UseFormStateOpti
 			return state.isValidating;
 		},
 		get isSubmitting() {
-			return manager.isSubmitting();
+			return state.isSubmitting;
 		},
 
 		// 字段级响应式状态
@@ -195,11 +196,42 @@ export function useFormState(config: IFormConfig = {}, options: UseFormStateOpti
 		validateField: manager.validateField.bind(manager),
 		validateFields: manager.validateFields.bind(manager),
 		validateForm: manager.validateForm.bind(manager),
-		submit: manager.submit.bind(manager),
+		// 包装 submit 方法以更新响应式 isSubmitting 状态
+		submit: async (
+			onSubmit: (values: Record<string, FieldValue>) => void | Promise<void>
+		): Promise<boolean> => {
+			state.isSubmitting = true;
+			try {
+				const result = await manager.submit(onSubmit);
+				return result;
+			} finally {
+				state.isSubmitting = false;
+			}
+		},
 		reset: manager.reset.bind(manager),
 		setInitialValues: manager.setInitialValues.bind(manager),
-		getDirtyFields: manager.getDirtyFields.bind(manager),
-		getDirtyValues: manager.getDirtyValues.bind(manager),
+
+		/**
+		 * 获取脏字段列表（响应式）
+		 * 访问 fieldStatesVersion 以建立 Svelte 响应式依赖
+		 */
+		getDirtyFields: (): FieldPath[] => {
+			// 访问响应式状态以建立依赖，确保字段变化时重新计算
+			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+			state.fieldStatesVersion;
+			return manager.getDirtyFields();
+		},
+
+		/**
+		 * 获取脏字段的值（响应式）
+		 * 访问 fieldStatesVersion 以建立 Svelte 响应式依赖
+		 */
+		getDirtyValues: (): Partial<Record<string, FieldValue>> => {
+			// 访问响应式状态以建立依赖，确保字段变化时重新计算
+			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+			state.fieldStatesVersion;
+			return manager.getDirtyValues();
+		},
 
 		// 数组字段操作（供 FieldArray 组件使用）
 		remapArrayFields: manager.remapArrayFields.bind(manager),
