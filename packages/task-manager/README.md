@@ -1,17 +1,18 @@
 # @shelchin/task-manager
 
-A universal task management system with tree structure, persistence, pause/resume, and progress tracking for Svelte 5.
+A tree-based task management library with Merkle verification, persistence, and Svelte 5 reactivity.
 
 ## Features
 
-- **Tree-based structure** - Unlimited nesting depth for complex task hierarchies
-- **Pause/Resume** - Interrupt and continue tasks at any time
-- **IndexedDB persistence** - Tasks survive browser refreshes
-- **Progress aggregation** - Parent tasks automatically aggregate child progress
-- **Retry with backoff** - Automatic retry for failed tasks
-- **Svelte 5 reactive store** - Full reactivity with runes
-- **Custom persistence** - Plug in your own storage adapter
-- **Type-safe** - Full TypeScript support with generics
+- **Tree-based Structure** - Organize tasks hierarchically with unlimited nesting depth
+- **Pause/Resume/Cancel** - Full lifecycle control at any time
+- **Parallel & Serial Execution** - Configurable concurrency per task
+- **IndexedDB Persistence** - Tasks survive browser refreshes
+- **Merkle Tree Verification** - Cryptographic integrity checking
+- **Svelte 5 Reactive Store** - Built-in reactive state management
+- **Event-Driven Architecture** - Real-time progress updates
+- **Automatic Retry** - Exponential backoff for failed tasks
+- **TypeScript Support** - Full type safety with generics
 
 ## Installation
 
@@ -27,349 +28,501 @@ npm install @shelchin/task-manager
 
 ## Quick Start
 
-### 1. Initialize the task manager (optional)
+### Basic Usage
 
 ```ts
-import { initTaskManager } from '@shelchin/task-manager';
+import { createTaskManager, createIndexedDBStorage } from '@shelchin/task-manager';
 
-// Optional: customize configuration
-initTaskManager({
-	db: {
-		name: 'MyAppTasks',
-		version: 1
-	},
-	retry: {
-		maxAttempts: 5,
-		baseDelayMs: 1000
-	}
+// Create a task manager with IndexedDB storage
+const manager = createTaskManager({
+  storage: createIndexedDBStorage('my-app-tasks')
+});
+
+// Create a task with subtasks
+const task = await manager.create({
+  name: 'Process Files',
+  children: [
+    { name: 'File 1', data: { path: '/a.jpg' } },
+    { name: 'File 2', data: { path: '/b.png' } },
+    { name: 'File 3', data: { path: '/c.pdf' } }
+  ]
+});
+
+// Execute with a custom executor
+await manager.execute(task.id, async (ctx) => {
+  // Access task data
+  const { path } = ctx.data;
+
+  // Check for pause
+  if (ctx.isPaused()) return;
+
+  // Report progress (0-100)
+  await ctx.progress(50);
+
+  // Do the work
+  await processFile(path);
+
+  // Mark as complete
+  await ctx.complete({ processed: true });
 });
 ```
 
-### 2. Create a task
-
-```ts
-import { createTask } from '@shelchin/task-manager';
-
-// Simple task
-const task = await createTask({
-	type: 'file-upload',
-	name: 'Upload files',
-	executionData: { files: ['a.jpg', 'b.png'] },
-	executor: 'uploadFile'
-});
-
-// Task with children
-const task = await createTask({
-	type: 'batch-process',
-	name: 'Process 3 batches',
-	children: [
-		{
-			type: 'batch',
-			name: 'Batch 1',
-			executionData: { items: [1, 2, 3] },
-			executor: 'processBatch'
-		},
-		{
-			type: 'batch',
-			name: 'Batch 2',
-			executionData: { items: [4, 5, 6] },
-			executor: 'processBatch'
-		},
-		{
-			type: 'batch',
-			name: 'Batch 3',
-			executionData: { items: [7, 8, 9] },
-			executor: 'processBatch'
-		}
-	]
-});
-```
-
-### 3. Define executors
-
-```ts
-import type { TaskExecutorRegistry } from '@shelchin/task-manager';
-
-const executors: TaskExecutorRegistry = {
-	uploadFile: async (ctx) => {
-		const { files } = ctx.task.executionData;
-
-		for (let i = 0; i < files.length; i++) {
-			if (ctx.isPaused()) return; // Check for pause
-
-			await uploadSingleFile(files[i]);
-			await ctx.updateProgress(((i + 1) / files.length) * 100);
-		}
-
-		await ctx.completeTask({ uploaded: files.length });
-	},
-
-	processBatch: async (ctx) => {
-		const { items } = ctx.task.executionData;
-
-		try {
-			const result = await processItems(items);
-			await ctx.completeTask(result);
-		} catch (error) {
-			await ctx.failTask(error.message);
-		}
-	}
-};
-```
-
-### 4. Execute the task
-
-```ts
-import { executeTask } from '@shelchin/task-manager';
-
-const result = await executeTask(task.id, executors, (root, current) => {
-	console.log(`${current.name}: ${current.progress}%`);
-});
-
-console.log(`Completed: ${result.completedLeaves}/${result.totalLeaves}`);
-```
-
-### 5. Use with Svelte reactive store
+### Using the Svelte Store
 
 ```svelte
-<script>
-	import { taskStore } from '@shelchin/task-manager';
+<script lang="ts">
+  import { onMount } from 'svelte';
+  import { createTaskStore, createIndexedDBStorage } from '@shelchin/task-manager';
 
-	// Initialize on mount
-	$effect(() => {
-		taskStore.init();
-	});
+  const store = createTaskStore({
+    storage: createIndexedDBStorage('my-tasks')
+  });
+
+  onMount(() => {
+    store.init();
+  });
 </script>
 
-{#if taskStore.isLoading}
-	<p>Loading tasks...</p>
-{:else}
-	<p>Running: {taskStore.runningTasks.length}</p>
-	<p>Completed: {taskStore.completedTasks.length}</p>
+<!-- Reactive values auto-update -->
+<p>Total: {store.allRoots.length}</p>
+<p>Running: {store.runningRoots.length}</p>
+<p>Completed: {store.completedRoots.length}</p>
 
-	{#each taskStore.allTasks as task}
-		<div>
-			{task.name} - {task.progress}% ({task.status})
-		</div>
-	{/each}
-{/if}
+{#each store.allRoots as task (task.id)}
+  <div>
+    {task.name} - {task.progress}% ({task.status})
+  </div>
+{/each}
 ```
 
 ## API Reference
 
-### Configuration
+### TaskManager
+
+The core class for task management.
+
+```ts
+import { createTaskManager } from '@shelchin/task-manager';
+
+const manager = createTaskManager(config);
+```
+
+#### Configuration
 
 ```ts
 interface TaskManagerConfig {
-	db?: {
-		name?: string; // Default: 'TaskManager'
-		version?: number; // Default: 1
-		storeName?: string; // Default: 'tasks'
-	};
-	retry?: {
-		maxAttempts?: number; // Default: 3
-		baseDelayMs?: number; // Default: 1000
-		maxDelayMs?: number; // Default: 10000
-	};
-	cleanup?: {
-		autoCleanupDays?: number; // Default: 7
-		enableAutoCleanup?: boolean; // Default: false
-	};
-	persistenceAdapter?: PersistenceAdapter; // Custom storage
+  storage?: StorageAdapter;     // Custom storage (default: IndexedDB)
+  dbName?: string;              // Database name (default: 'TaskManager')
+  retry?: {
+    maxAttempts?: number;       // Default: 3
+    baseDelayMs?: number;       // Default: 1000
+    maxDelayMs?: number;        // Default: 10000
+  };
+  cleanupDays?: number;         // Auto-cleanup after N days (default: 7)
 }
-
-initTaskManager(config);
 ```
+
+#### Methods
+
+| Method | Description |
+|--------|-------------|
+| `create(options)` | Create a new task tree |
+| `execute(taskId, executor)` | Execute a task |
+| `pause(taskId, reason?)` | Pause a running task |
+| `resume(taskId, executor)` | Resume a paused task |
+| `cancel(taskId)` | Cancel a task |
+| `delete(taskId)` | Delete a task and all its nodes |
+| `getRoot(taskId)` | Get task root by ID |
+| `getAllRoots()` | Get all task roots |
+| `getNodes(taskId)` | Get all nodes for a task |
+| `getLeaves(taskId)` | Get leaf nodes only |
+| `getChildren(taskId, parentId?)` | Get children of a node |
+| `getMerkleRoot(taskId)` | Get the Merkle root hash |
+| `getMerkleProof(taskId, leafId)` | Generate a Merkle proof |
+| `verifyProof(proof)` | Verify a Merkle proof |
+| `cleanup(olderThanDays?)` | Remove old completed tasks |
+| `close()` | Close storage connection |
+| `clear()` | Clear all data |
+| `on(event, handler)` | Subscribe to events |
+| `off(event, handler)` | Unsubscribe from events |
 
 ### Task Creation
 
 ```ts
-interface CreateTaskOptions<TData> {
-	type: string; // Task type identifier
-	name: string; // Human-readable name
-	description?: string;
-	config?: Record<string, unknown>; // Immutable config
-	metadata?: Record<string, unknown>;
+interface CreateTaskOptions<T> {
+  name: string;                    // Task name
+  type?: string;                   // Task type identifier
+  concurrency?: number;            // Parallel execution (default: 1 = serial)
+  metadata?: Record<string, unknown>;
+  children?: CreateNodeOptions<T>[];
+}
 
-	// For leaf tasks (no children)
-	executionData?: TData; // Data for executor
-	executor?: string; // Executor function name
-	maxAttempts?: number; // Retry attempts (default: 3)
-
-	// For parent tasks
-	children?: CreateTaskOptions<TData>[];
+interface CreateNodeOptions<T> {
+  name: string;
+  mode?: 'progressive' | 'atomic'; // Execution mode (default: 'progressive')
+  data?: T;                        // Execution data
+  executor?: string;               // Executor name (for registry)
+  maxAttempts?: number;            // Retry attempts
+  children?: CreateNodeOptions<T>[];
 }
 ```
 
-### Task Execution Context
+### Task Modes
 
-Executors receive a context object with these methods:
+| Mode | Description | Use Case |
+|------|-------------|----------|
+| `progressive` | Shows progress 0-100% during execution | File uploads, data processing |
+| `atomic` | No progress, just waiting → complete/fail | API calls, simple operations |
+
+### Execution Context
+
+Executors receive a context object:
 
 ```ts
-interface TaskExecutionContext<TData, TResult> {
-	task: Task<TData, TResult>; // Current task
-	parentTask: Task | null; // Parent task
-	rootTask: Task; // Root task
+interface ExecutionContext<T> {
+  node: TaskNode<T>;           // Current node being executed
+  data: T;                     // Node's execution data
 
-	isPaused(): boolean; // Check if paused
-	updateProgress(progress: number, message?: string): Promise<void>;
-	updateTaskState(state: Record<string, unknown>): Promise<void>;
-	completeTask(result?: TResult): Promise<void>;
-	failTask(error: string): Promise<void>;
-	pauseParent(reason: string, message: string): Promise<void>;
-	pauseRoot(reason: string, message: string): Promise<void>;
+  isPaused(): boolean;         // Check if task is paused
+  signal: AbortSignal;         // Abort signal for cancellation
+
+  progress(percent: number): Promise<void>;  // Report progress (0-100)
+  complete(result?: unknown): Promise<void>; // Mark as completed
+  fail(error: string): Promise<void>;        // Mark as failed
+  pauseTask(reason?: string): Promise<void>; // Pause entire task
 }
 ```
 
-### Task Control
+### Executor Registry
+
+For tasks with different executor types:
 
 ```ts
-// Pause a task
-await pauseTask(rootTask, taskId, 'user', 'User requested pause');
+import type { ExecutorRegistry } from '@shelchin/task-manager';
 
-// Resume a paused task
-await resumeTask(rootTask, taskId);
+const executors: ExecutorRegistry<MyData> = {
+  uploadFile: async (ctx) => {
+    await uploadFile(ctx.data.file);
+    await ctx.complete();
+  },
+  processData: async (ctx) => {
+    const result = await process(ctx.data);
+    await ctx.complete(result);
+  }
+};
 
-// Cancel a task
-await cancelTask(rootTask, taskId);
+// Create task with executor references
+const task = await manager.create({
+  name: 'Mixed Tasks',
+  children: [
+    { name: 'Upload', executor: 'uploadFile', data: { file: 'a.jpg' } },
+    { name: 'Process', executor: 'processData', data: { id: 123 } }
+  ]
+});
 
-// Delete a task
-await deleteTask(taskId);
+// Execute with registry
+await manager.execute(task.id, executors);
 ```
 
-### Tree Utilities
+### Parallel Execution
+
+```ts
+// Serial execution (default)
+const task = await manager.create({
+  name: 'Serial Task',
+  concurrency: 1, // Execute one at a time
+  children: [/* ... */]
+});
+
+// Parallel execution
+const task = await manager.create({
+  name: 'Parallel Task',
+  concurrency: 5, // Execute 5 at a time
+  children: [/* ... */]
+});
+
+// Execute all in parallel
+const task = await manager.create({
+  name: 'All Parallel',
+  concurrency: Infinity,
+  children: [/* ... */]
+});
+```
+
+### Events
+
+```ts
+// Subscribe to events
+manager.on('start', (event, { root, node }) => {
+  console.log(`Task ${node.name} started`);
+});
+
+manager.on('progress', (event, { root, node }) => {
+  console.log(`Task ${node.name}: ${node.progress}%`);
+});
+
+manager.on('complete', (event, { root, node }) => {
+  console.log(`Task ${node.name} completed`);
+});
+
+// Available events: 'start' | 'progress' | 'complete' | 'fail' | 'pause' | 'resume' | 'cancel'
+```
+
+### Merkle Tree Verification
+
+Every task has a Merkle root computed from its leaf nodes, enabling cryptographic verification.
+
+```ts
+// Get Merkle root
+const merkleRoot = await manager.getMerkleRoot(task.id);
+
+// Generate proof for a specific leaf
+const leaves = await manager.getLeaves(task.id);
+const proof = await manager.getMerkleProof(task.id, leaves[0].id);
+
+// Verify the proof
+const isValid = await manager.verifyProof(proof);
+console.log('Proof valid:', isValid);
+```
+
+You can also use the low-level Merkle utilities:
 
 ```ts
 import {
-	traverseTree,
-	findTaskById,
-	findTasks,
-	getLeafTasks,
-	getParentTasks,
-	countLeaves,
-	calculateProgress,
-	updateStatistics,
-	getTaskPath,
-	getNextExecutableTask,
-	cloneTask,
-	flattenTree,
-	getTreeDepth
+  computeLeafHash,
+  buildMerkleRoot,
+  generateMerkleProof,
+  verifyMerkleProof,
+  getMerkleTreeDepth
 } from '@shelchin/task-manager';
-
-// Traverse all nodes
-traverseTree(root, (task, depth) => {
-	console.log(`${'  '.repeat(depth)}${task.name}`);
-});
-
-// Find specific task
-const task = findTaskById(root, 'task-id');
-
-// Get all leaf tasks
-const leaves = getLeafTasks(root);
-
-// Get task path
-const path = getTaskPath(root, 'leaf-id');
 ```
 
-### Svelte Store
+### TaskStore (Svelte 5)
+
+A reactive store wrapper around TaskManager.
 
 ```ts
-import { taskStore, createTaskStore } from '@shelchin/task-manager';
+import { createTaskStore } from '@shelchin/task-manager';
 
-// Global singleton
-taskStore.init();
-taskStore.allTasks; // All root tasks
-taskStore.runningTasks; // Running tasks
-taskStore.pausedTasks; // Paused tasks
-taskStore.completedTasks; // Completed tasks
-taskStore.failedTasks; // Failed tasks
-taskStore.recoverableTasks; // Can be resumed
+const store = createTaskStore(config);
 
-// Create independent store
-const myStore = createTaskStore();
-await myStore.init();
+// Initialize (load from storage)
+await store.init();
+
+// Reactive derived values
+store.allRoots;        // TaskRoot[]
+store.pendingRoots;    // TaskRoot[]
+store.runningRoots;    // TaskRoot[]
+store.pausedRoots;     // TaskRoot[]
+store.completedRoots;  // TaskRoot[]
+store.failedRoots;     // TaskRoot[]
+store.recoverableRoots; // Tasks that can be resumed
+store.isLoading;       // boolean
+store.isInitialized;   // boolean
+
+// Aggregated stats
+store.stats; // { total, completed, failed, pending, completionRate }
+
+// All TaskManager methods are available
+await store.create({ name: 'Task', children: [...] });
+await store.execute(taskId, executor);
+await store.pause(taskId);
+await store.resume(taskId, executor);
+await store.delete(taskId);
+await store.clearCompleted();
+await store.clearFailed();
+await store.refreshAll();
 ```
 
-## Tree Structure Examples
+### Storage Adapters
 
-### Simple (1 level)
-
-```
-Task: "Export Report" [leaf - executable]
-```
-
-### Medium (2 levels)
-
-```
-Task: "Upload Files"
-├── Task: "file1.jpg" [leaf]
-├── Task: "file2.png" [leaf]
-└── Task: "file3.pdf" [leaf]
-```
-
-### Complex (3+ levels)
-
-```
-Task: "Token Sweep"
-├── Task: "USDT"
-│   ├── Task: "Batch 1" [leaf]
-│   ├── Task: "Batch 2" [leaf]
-│   └── Task: "Batch 3" [leaf]
-├── Task: "USDC"
-│   ├── Task: "Batch 1" [leaf]
-│   └── Task: "Batch 2" [leaf]
-└── Task: "DAI"
-    └── Task: "Batch 1" [leaf]
-```
-
-## Custom Persistence Adapter
+#### IndexedDB (Default)
 
 ```ts
-import type { PersistenceAdapter } from '@shelchin/task-manager';
+import { createIndexedDBStorage } from '@shelchin/task-manager';
 
-const localStorageAdapter: PersistenceAdapter = {
-	async saveTask(task) {
-		localStorage.setItem(`task-${task.id}`, JSON.stringify(task));
-	},
-	async getTask(taskId) {
-		const data = localStorage.getItem(`task-${taskId}`);
-		return data ? JSON.parse(data) : null;
-	},
-	async getAllTasks() {
-		// ... implementation
-	},
-	async deleteTask(taskId) {
-		localStorage.removeItem(`task-${taskId}`);
-	},
-	async getTasksByStatus(status) {
-		// ... implementation
-	},
-	async getTasksByType(type) {
-		// ... implementation
-	}
-};
+const storage = createIndexedDBStorage('my-database');
+const manager = createTaskManager({ storage });
+```
 
-initTaskManager({
-	persistenceAdapter: localStorageAdapter
-});
+#### Memory (Testing)
+
+```ts
+import { createMemoryStorage } from '@shelchin/task-manager';
+
+const storage = createMemoryStorage();
+const manager = createTaskManager({ storage });
+```
+
+#### Custom Storage
+
+Implement the `StorageAdapter` interface:
+
+```ts
+interface StorageAdapter {
+  // Root operations
+  saveRoot(root: TaskRoot): Promise<void>;
+  getRoot(id: string): Promise<TaskRoot | null>;
+  getAllRoots(): Promise<TaskRoot[]>;
+  deleteRoot(id: string): Promise<void>;
+
+  // Node operations
+  saveNode(node: TaskNode): Promise<void>;
+  saveNodes(nodes: TaskNode[]): Promise<void>;
+  getNode(id: string): Promise<TaskNode | null>;
+  getNodesByRoot(rootId: string): Promise<TaskNode[]>;
+  getChildren(parentId: string | null, rootId: string): Promise<TaskNode[]>;
+  getLeaves(rootId: string): Promise<TaskNode[]>;
+  deleteNodesByRoot(rootId: string): Promise<void>;
+
+  // Batch operations
+  updateNodeStatus(id: string, status: TaskStatus, updates?: Partial<TaskNode>): Promise<void>;
+
+  // Lifecycle
+  close(): Promise<void>;
+  clear(): Promise<void>;
+}
+```
+
+## Type Definitions
+
+### TaskRoot
+
+```ts
+interface TaskRoot {
+  id: string;
+  name: string;
+  type: string;
+  status: TaskStatus;
+  progress: number;          // 0-100
+  concurrency: number;
+  stats: {
+    total: number;           // Total leaf nodes
+    completed: number;
+    failed: number;
+  };
+  merkleRoot: string | null;
+  createdAt: number;
+  updatedAt: number;
+  startedAt?: number;
+  completedAt?: number;
+  metadata?: Record<string, unknown>;
+}
+```
+
+### TaskNode
+
+```ts
+interface TaskNode<T = unknown> {
+  id: string;
+  rootId: string;
+  parentId: string | null;
+  name: string;
+  status: TaskStatus;
+  progress: number;
+  mode: TaskMode;
+  depth: number;
+  index: number;
+  isLeaf: boolean;
+  childCount: number;
+  hash: string;              // Merkle hash
+  data?: T;
+  executor?: string;
+  result?: unknown;
+  error?: string;
+  attempts: number;
+  maxAttempts: number;
+  createdAt: number;
+  updatedAt: number;
+  startedAt?: number;
+  completedAt?: number;
+}
+```
+
+### TaskStatus
+
+```ts
+type TaskStatus = 'pending' | 'running' | 'paused' | 'completed' | 'failed' | 'cancelled';
 ```
 
 ## Task Status Lifecycle
 
 ```
 pending → running → completed
-                  → failed
+                  → failed (auto-retry until maxAttempts)
                   → paused → running (resume)
                   → cancelled
-                  → partial (some children failed)
 ```
 
-## Testing
+## Architecture
+
+### Storage Design
+
+The library uses a split storage model for efficiency:
+
+- **TaskRoot** - Lightweight metadata stored separately for fast list queries
+- **TaskNode** - Full node data stored by root ID for batch loading
+
+### Data Flow
+
+```
+Create Task → Build Nodes → Compute Merkle Root → Save to Storage
+    ↓
+Execute → Load Nodes → Run Executor → Update Progress → Emit Events
+    ↓
+Complete/Fail → Update Stats → Update Merkle Root → Save
+```
+
+## Development
+
+### Project Structure
+
+```
+packages/task-manager/
+├── src/
+│   ├── index.ts           # Public API exports
+│   ├── types.ts           # Type definitions
+│   ├── task-manager.ts    # Core TaskManager class
+│   ├── merkle.ts          # Merkle tree utilities
+│   ├── storage/
+│   │   ├── indexeddb.ts   # IndexedDB adapter
+│   │   └── memory.ts      # Memory adapter (testing)
+│   └── stores/
+│       └── task-store.svelte.ts  # Svelte 5 reactive store
+├── README.md
+├── package.json
+└── vitest.config.ts
+```
+
+### Testing
 
 ```bash
 cd packages/task-manager
+
+# Run all tests
 bun run test
+
+# Run with coverage
+bun run test:coverage
+
+# Run in watch mode
+bun run test -- --watch
 ```
+
+### Building
+
+```bash
+# Build the package
+bun run build
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests: `bun run test`
+5. Submit a pull request
 
 ## License
 
