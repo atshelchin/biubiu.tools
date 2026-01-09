@@ -4,14 +4,7 @@
 	 * Lists all available package demos
 	 */
 	import { base } from '$app/paths';
-	import {
-		Package,
-		FileText,
-		Table2,
-		GripVertical,
-		ListTodo,
-		CreditCard
-	} from '@lucide/svelte';
+	import { Package, FileText, Table2, GripVertical, ListTodo, CreditCard } from '@lucide/svelte';
 	import type { Component } from 'svelte';
 
 	interface PackageInfo {
@@ -90,8 +83,7 @@
 		</div>
 		<h1>Packages</h1>
 		<p class="subtitle">
-			A collection of high-quality Svelte 5 packages built with TypeScript and modern best
-			practices
+			A collection of high-quality Svelte 5 packages built with TypeScript and modern best practices
 		</p>
 	</header>
 
