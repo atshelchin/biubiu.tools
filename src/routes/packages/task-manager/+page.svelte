@@ -13,6 +13,10 @@
 	import BatchDemo from '$lib/components/package-demo/demos/task-manager/batch-demo.svelte';
 	import MerkleDemo from '$lib/components/package-demo/demos/task-manager/merkle-demo.svelte';
 	import StoreDemo from '$lib/components/package-demo/demos/task-manager/store-demo.svelte';
+	import EventsDemo from '$lib/components/package-demo/demos/task-manager/events-demo.svelte';
+	import RetryDemo from '$lib/components/package-demo/demos/task-manager/retry-demo.svelte';
+	import ExecutorRegistryDemo from '$lib/components/package-demo/demos/task-manager/executor-registry-demo.svelte';
+	import TreeHierarchyDemo from '$lib/components/package-demo/demos/task-manager/tree-hierarchy-demo.svelte';
 
 	const i18n = useI18n();
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -59,6 +63,18 @@ bun add @shelchin/task-manager`;
 
 	<!-- Demo 5: Store Dashboard -->
 	<StoreDemo {t} />
+
+	<!-- Demo 6: Event System -->
+	<EventsDemo {t} />
+
+	<!-- Demo 7: Automatic Retry -->
+	<RetryDemo {t} />
+
+	<!-- Demo 8: Executor Registry -->
+	<ExecutorRegistryDemo {t} />
+
+	<!-- Demo 9: Tree Hierarchy -->
+	<TreeHierarchyDemo {t} />
 
 	<!-- Installation Section -->
 	<DemoSection title={t('code.installation')}>

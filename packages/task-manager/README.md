@@ -35,35 +35,35 @@ import { createTaskManager, createIndexedDBStorage } from '@shelchin/task-manage
 
 // Create a task manager with IndexedDB storage
 const manager = createTaskManager({
-  storage: createIndexedDBStorage('my-app-tasks')
+	storage: createIndexedDBStorage('my-app-tasks')
 });
 
 // Create a task with subtasks
 const task = await manager.create({
-  name: 'Process Files',
-  children: [
-    { name: 'File 1', data: { path: '/a.jpg' } },
-    { name: 'File 2', data: { path: '/b.png' } },
-    { name: 'File 3', data: { path: '/c.pdf' } }
-  ]
+	name: 'Process Files',
+	children: [
+		{ name: 'File 1', data: { path: '/a.jpg' } },
+		{ name: 'File 2', data: { path: '/b.png' } },
+		{ name: 'File 3', data: { path: '/c.pdf' } }
+	]
 });
 
 // Execute with a custom executor
 await manager.execute(task.id, async (ctx) => {
-  // Access task data
-  const { path } = ctx.data;
+	// Access task data
+	const { path } = ctx.data;
 
-  // Check for pause
-  if (ctx.isPaused()) return;
+	// Check for pause
+	if (ctx.isPaused()) return;
 
-  // Report progress (0-100)
-  await ctx.progress(50);
+	// Report progress (0-100)
+	await ctx.progress(50);
 
-  // Do the work
-  await processFile(path);
+	// Do the work
+	await processFile(path);
 
-  // Mark as complete
-  await ctx.complete({ processed: true });
+	// Mark as complete
+	await ctx.complete({ processed: true });
 });
 ```
 
@@ -71,16 +71,16 @@ await manager.execute(task.id, async (ctx) => {
 
 ```svelte
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import { createTaskStore, createIndexedDBStorage } from '@shelchin/task-manager';
+	import { onMount } from 'svelte';
+	import { createTaskStore, createIndexedDBStorage } from '@shelchin/task-manager';
 
-  const store = createTaskStore({
-    storage: createIndexedDBStorage('my-tasks')
-  });
+	const store = createTaskStore({
+		storage: createIndexedDBStorage('my-tasks')
+	});
 
-  onMount(() => {
-    store.init();
-  });
+	onMount(() => {
+		store.init();
+	});
 </script>
 
 <!-- Reactive values auto-update -->
@@ -89,9 +89,9 @@ await manager.execute(task.id, async (ctx) => {
 <p>Completed: {store.completedRoots.length}</p>
 
 {#each store.allRoots as task (task.id)}
-  <div>
-    {task.name} - {task.progress}% ({task.status})
-  </div>
+	<div>
+		{task.name} - {task.progress}% ({task.status})
+	</div>
 {/each}
 ```
 
@@ -111,68 +111,68 @@ const manager = createTaskManager(config);
 
 ```ts
 interface TaskManagerConfig {
-  storage?: StorageAdapter;     // Custom storage (default: IndexedDB)
-  dbName?: string;              // Database name (default: 'TaskManager')
-  retry?: {
-    maxAttempts?: number;       // Default: 3
-    baseDelayMs?: number;       // Default: 1000
-    maxDelayMs?: number;        // Default: 10000
-  };
-  cleanupDays?: number;         // Auto-cleanup after N days (default: 7)
+	storage?: StorageAdapter; // Custom storage (default: IndexedDB)
+	dbName?: string; // Database name (default: 'TaskManager')
+	retry?: {
+		maxAttempts?: number; // Default: 3
+		baseDelayMs?: number; // Default: 1000
+		maxDelayMs?: number; // Default: 10000
+	};
+	cleanupDays?: number; // Auto-cleanup after N days (default: 7)
 }
 ```
 
 #### Methods
 
-| Method | Description |
-|--------|-------------|
-| `create(options)` | Create a new task tree |
-| `execute(taskId, executor)` | Execute a task |
-| `pause(taskId, reason?)` | Pause a running task |
-| `resume(taskId, executor)` | Resume a paused task |
-| `cancel(taskId)` | Cancel a task |
-| `delete(taskId)` | Delete a task and all its nodes |
-| `getRoot(taskId)` | Get task root by ID |
-| `getAllRoots()` | Get all task roots |
-| `getNodes(taskId)` | Get all nodes for a task |
-| `getLeaves(taskId)` | Get leaf nodes only |
-| `getChildren(taskId, parentId?)` | Get children of a node |
-| `getMerkleRoot(taskId)` | Get the Merkle root hash |
-| `getMerkleProof(taskId, leafId)` | Generate a Merkle proof |
-| `verifyProof(proof)` | Verify a Merkle proof |
-| `cleanup(olderThanDays?)` | Remove old completed tasks |
-| `close()` | Close storage connection |
-| `clear()` | Clear all data |
-| `on(event, handler)` | Subscribe to events |
-| `off(event, handler)` | Unsubscribe from events |
+| Method                           | Description                     |
+| -------------------------------- | ------------------------------- |
+| `create(options)`                | Create a new task tree          |
+| `execute(taskId, executor)`      | Execute a task                  |
+| `pause(taskId, reason?)`         | Pause a running task            |
+| `resume(taskId, executor)`       | Resume a paused task            |
+| `cancel(taskId)`                 | Cancel a task                   |
+| `delete(taskId)`                 | Delete a task and all its nodes |
+| `getRoot(taskId)`                | Get task root by ID             |
+| `getAllRoots()`                  | Get all task roots              |
+| `getNodes(taskId)`               | Get all nodes for a task        |
+| `getLeaves(taskId)`              | Get leaf nodes only             |
+| `getChildren(taskId, parentId?)` | Get children of a node          |
+| `getMerkleRoot(taskId)`          | Get the Merkle root hash        |
+| `getMerkleProof(taskId, leafId)` | Generate a Merkle proof         |
+| `verifyProof(proof)`             | Verify a Merkle proof           |
+| `cleanup(olderThanDays?)`        | Remove old completed tasks      |
+| `close()`                        | Close storage connection        |
+| `clear()`                        | Clear all data                  |
+| `on(event, handler)`             | Subscribe to events             |
+| `off(event, handler)`            | Unsubscribe from events         |
 
 ### Task Creation
 
 ```ts
 interface CreateTaskOptions<T> {
-  name: string;                    // Task name
-  type?: string;                   // Task type identifier
-  concurrency?: number;            // Parallel execution (default: 1 = serial)
-  metadata?: Record<string, unknown>;
-  children?: CreateNodeOptions<T>[];
+	name: string; // Task name
+	type?: string; // Task type identifier
+	concurrency?: number; // Parallel execution (default: 1 = serial)
+	metadata?: Record<string, unknown>;
+	children?: CreateNodeOptions<T>[];
 }
 
 interface CreateNodeOptions<T> {
-  name: string;
-  mode?: 'progressive' | 'atomic'; // Execution mode (default: 'progressive')
-  data?: T;                        // Execution data
-  executor?: string;               // Executor name (for registry)
-  maxAttempts?: number;            // Retry attempts
-  children?: CreateNodeOptions<T>[];
+	name: string;
+	mode?: 'progressive' | 'atomic'; // Execution mode (default: 'progressive')
+	data?: T; // Execution data
+	executor?: string; // Executor name (for registry)
+	maxAttempts?: number; // Retry attempts
+	children?: CreateNodeOptions<T>[];
 }
 ```
 
 ### Task Modes
 
-| Mode | Description | Use Case |
-|------|-------------|----------|
-| `progressive` | Shows progress 0-100% during execution | File uploads, data processing |
-| `atomic` | No progress, just waiting → complete/fail | API calls, simple operations |
+| Mode          | Description                               | Use Case                      |
+| ------------- | ----------------------------------------- | ----------------------------- |
+| `progressive` | Shows progress 0-100% during execution    | File uploads, data processing |
+| `atomic`      | No progress, just waiting → complete/fail | API calls, simple operations  |
 
 ### Execution Context
 
@@ -180,16 +180,16 @@ Executors receive a context object:
 
 ```ts
 interface ExecutionContext<T> {
-  node: TaskNode<T>;           // Current node being executed
-  data: T;                     // Node's execution data
+	node: TaskNode<T>; // Current node being executed
+	data: T; // Node's execution data
 
-  isPaused(): boolean;         // Check if task is paused
-  signal: AbortSignal;         // Abort signal for cancellation
+	isPaused(): boolean; // Check if task is paused
+	signal: AbortSignal; // Abort signal for cancellation
 
-  progress(percent: number): Promise<void>;  // Report progress (0-100)
-  complete(result?: unknown): Promise<void>; // Mark as completed
-  fail(error: string): Promise<void>;        // Mark as failed
-  pauseTask(reason?: string): Promise<void>; // Pause entire task
+	progress(percent: number): Promise<void>; // Report progress (0-100)
+	complete(result?: unknown): Promise<void>; // Mark as completed
+	fail(error: string): Promise<void>; // Mark as failed
+	pauseTask(reason?: string): Promise<void>; // Pause entire task
 }
 ```
 
@@ -201,23 +201,23 @@ For tasks with different executor types:
 import type { ExecutorRegistry } from '@shelchin/task-manager';
 
 const executors: ExecutorRegistry<MyData> = {
-  uploadFile: async (ctx) => {
-    await uploadFile(ctx.data.file);
-    await ctx.complete();
-  },
-  processData: async (ctx) => {
-    const result = await process(ctx.data);
-    await ctx.complete(result);
-  }
+	uploadFile: async (ctx) => {
+		await uploadFile(ctx.data.file);
+		await ctx.complete();
+	},
+	processData: async (ctx) => {
+		const result = await process(ctx.data);
+		await ctx.complete(result);
+	}
 };
 
 // Create task with executor references
 const task = await manager.create({
-  name: 'Mixed Tasks',
-  children: [
-    { name: 'Upload', executor: 'uploadFile', data: { file: 'a.jpg' } },
-    { name: 'Process', executor: 'processData', data: { id: 123 } }
-  ]
+	name: 'Mixed Tasks',
+	children: [
+		{ name: 'Upload', executor: 'uploadFile', data: { file: 'a.jpg' } },
+		{ name: 'Process', executor: 'processData', data: { id: 123 } }
+	]
 });
 
 // Execute with registry
@@ -229,23 +229,29 @@ await manager.execute(task.id, executors);
 ```ts
 // Serial execution (default)
 const task = await manager.create({
-  name: 'Serial Task',
-  concurrency: 1, // Execute one at a time
-  children: [/* ... */]
+	name: 'Serial Task',
+	concurrency: 1, // Execute one at a time
+	children: [
+		/* ... */
+	]
 });
 
 // Parallel execution
 const task = await manager.create({
-  name: 'Parallel Task',
-  concurrency: 5, // Execute 5 at a time
-  children: [/* ... */]
+	name: 'Parallel Task',
+	concurrency: 5, // Execute 5 at a time
+	children: [
+		/* ... */
+	]
 });
 
 // Execute all in parallel
 const task = await manager.create({
-  name: 'All Parallel',
-  concurrency: Infinity,
-  children: [/* ... */]
+	name: 'All Parallel',
+	concurrency: Infinity,
+	children: [
+		/* ... */
+	]
 });
 ```
 
@@ -254,15 +260,15 @@ const task = await manager.create({
 ```ts
 // Subscribe to events
 manager.on('start', (event, { root, node }) => {
-  console.log(`Task ${node.name} started`);
+	console.log(`Task ${node.name} started`);
 });
 
 manager.on('progress', (event, { root, node }) => {
-  console.log(`Task ${node.name}: ${node.progress}%`);
+	console.log(`Task ${node.name}: ${node.progress}%`);
 });
 
 manager.on('complete', (event, { root, node }) => {
-  console.log(`Task ${node.name} completed`);
+	console.log(`Task ${node.name} completed`);
 });
 
 // Available events: 'start' | 'progress' | 'complete' | 'fail' | 'pause' | 'resume' | 'cancel'
@@ -289,11 +295,11 @@ You can also use the low-level Merkle utilities:
 
 ```ts
 import {
-  computeLeafHash,
-  buildMerkleRoot,
-  generateMerkleProof,
-  verifyMerkleProof,
-  getMerkleTreeDepth
+	computeLeafHash,
+	buildMerkleRoot,
+	generateMerkleProof,
+	verifyMerkleProof,
+	getMerkleTreeDepth
 } from '@shelchin/task-manager';
 ```
 
@@ -360,27 +366,27 @@ Implement the `StorageAdapter` interface:
 
 ```ts
 interface StorageAdapter {
-  // Root operations
-  saveRoot(root: TaskRoot): Promise<void>;
-  getRoot(id: string): Promise<TaskRoot | null>;
-  getAllRoots(): Promise<TaskRoot[]>;
-  deleteRoot(id: string): Promise<void>;
+	// Root operations
+	saveRoot(root: TaskRoot): Promise<void>;
+	getRoot(id: string): Promise<TaskRoot | null>;
+	getAllRoots(): Promise<TaskRoot[]>;
+	deleteRoot(id: string): Promise<void>;
 
-  // Node operations
-  saveNode(node: TaskNode): Promise<void>;
-  saveNodes(nodes: TaskNode[]): Promise<void>;
-  getNode(id: string): Promise<TaskNode | null>;
-  getNodesByRoot(rootId: string): Promise<TaskNode[]>;
-  getChildren(parentId: string | null, rootId: string): Promise<TaskNode[]>;
-  getLeaves(rootId: string): Promise<TaskNode[]>;
-  deleteNodesByRoot(rootId: string): Promise<void>;
+	// Node operations
+	saveNode(node: TaskNode): Promise<void>;
+	saveNodes(nodes: TaskNode[]): Promise<void>;
+	getNode(id: string): Promise<TaskNode | null>;
+	getNodesByRoot(rootId: string): Promise<TaskNode[]>;
+	getChildren(parentId: string | null, rootId: string): Promise<TaskNode[]>;
+	getLeaves(rootId: string): Promise<TaskNode[]>;
+	deleteNodesByRoot(rootId: string): Promise<void>;
 
-  // Batch operations
-  updateNodeStatus(id: string, status: TaskStatus, updates?: Partial<TaskNode>): Promise<void>;
+	// Batch operations
+	updateNodeStatus(id: string, status: TaskStatus, updates?: Partial<TaskNode>): Promise<void>;
 
-  // Lifecycle
-  close(): Promise<void>;
-  clear(): Promise<void>;
+	// Lifecycle
+	close(): Promise<void>;
+	clear(): Promise<void>;
 }
 ```
 
@@ -390,23 +396,23 @@ interface StorageAdapter {
 
 ```ts
 interface TaskRoot {
-  id: string;
-  name: string;
-  type: string;
-  status: TaskStatus;
-  progress: number;          // 0-100
-  concurrency: number;
-  stats: {
-    total: number;           // Total leaf nodes
-    completed: number;
-    failed: number;
-  };
-  merkleRoot: string | null;
-  createdAt: number;
-  updatedAt: number;
-  startedAt?: number;
-  completedAt?: number;
-  metadata?: Record<string, unknown>;
+	id: string;
+	name: string;
+	type: string;
+	status: TaskStatus;
+	progress: number; // 0-100
+	concurrency: number;
+	stats: {
+		total: number; // Total leaf nodes
+		completed: number;
+		failed: number;
+	};
+	merkleRoot: string | null;
+	createdAt: number;
+	updatedAt: number;
+	startedAt?: number;
+	completedAt?: number;
+	metadata?: Record<string, unknown>;
 }
 ```
 
@@ -414,28 +420,28 @@ interface TaskRoot {
 
 ```ts
 interface TaskNode<T = unknown> {
-  id: string;
-  rootId: string;
-  parentId: string | null;
-  name: string;
-  status: TaskStatus;
-  progress: number;
-  mode: TaskMode;
-  depth: number;
-  index: number;
-  isLeaf: boolean;
-  childCount: number;
-  hash: string;              // Merkle hash
-  data?: T;
-  executor?: string;
-  result?: unknown;
-  error?: string;
-  attempts: number;
-  maxAttempts: number;
-  createdAt: number;
-  updatedAt: number;
-  startedAt?: number;
-  completedAt?: number;
+	id: string;
+	rootId: string;
+	parentId: string | null;
+	name: string;
+	status: TaskStatus;
+	progress: number;
+	mode: TaskMode;
+	depth: number;
+	index: number;
+	isLeaf: boolean;
+	childCount: number;
+	hash: string; // Merkle hash
+	data?: T;
+	executor?: string;
+	result?: unknown;
+	error?: string;
+	attempts: number;
+	maxAttempts: number;
+	createdAt: number;
+	updatedAt: number;
+	startedAt?: number;
+	completedAt?: number;
 }
 ```
 

@@ -80,6 +80,43 @@
 			"clear_completed": "Clear Completed",
 			"clear_failed": "Clear Failed",
 			"refresh": "Refresh"
+		},
+		"events": {
+			"title": "6. Event System",
+			"description": "Subscribe to real-time task events for monitoring and logging",
+			"run_demo": "Run Demo",
+			"event_log": "Event Log",
+			"no_events": "No events yet. Run the demo to see live events."
+		},
+		"retry": {
+			"title": "7. Automatic Retry",
+			"description": "Failed tasks automatically retry with exponential backoff",
+			"run_demo": "Run Demo",
+			"max_attempts": "Max Attempts",
+			"failure_rate": "Failure Rate",
+			"retry_log": "Retry Log",
+			"no_retries": "No retry events yet. Run the demo to see retry behavior.",
+			"attempts": "Attempts",
+			"attempt": "Attempt"
+		},
+		"registry": {
+			"title": "8. Executor Registry",
+			"description": "Use multiple executor types within a single task workflow",
+			"run_workflow": "Run Workflow",
+			"executor_types": "Executor Types",
+			"upload_desc": "File upload with progress",
+			"process_desc": "Data processing",
+			"notify_desc": "Send notification (atomic)",
+			"no_workflow": "No workflow running. Click 'Run Workflow' to start."
+		},
+		"tree": {
+			"title": "9. Tree Hierarchy",
+			"description": "Organize tasks in multi-level nested structures",
+			"run_demo": "Run Demo",
+			"total_nodes": "Total Nodes",
+			"leaf_nodes": "Leaf Nodes",
+			"max_depth": "Max Depth",
+			"no_tree": "No task tree yet. Run the demo to see the hierarchy."
 		}
 	},
 	"code": {
@@ -89,7 +126,11 @@
 		"with_executor": "With Custom Executor",
 		"pause_resume": "Pause & Resume",
 		"merkle_proof": "Merkle Proof",
-		"svelte_store": "Svelte Store"
+		"svelte_store": "Svelte Store",
+		"events": "Event Subscription",
+		"retry": "Retry Configuration",
+		"executor_registry": "Executor Registry",
+		"tree_hierarchy": "Tree Hierarchy"
 	},
 	"api": {
 		"title": "API Reference",

@@ -80,6 +80,43 @@
 			"clear_completed": "清除已完成",
 			"clear_failed": "清除已失败",
 			"refresh": "刷新"
+		},
+		"events": {
+			"title": "6. 事件系统",
+			"description": "订阅实时任务事件，用于监控和日志记录",
+			"run_demo": "运行演示",
+			"event_log": "事件日志",
+			"no_events": "暂无事件。运行演示以查看实时事件。"
+		},
+		"retry": {
+			"title": "7. 自动重试",
+			"description": "失败的任务会自动重试，支持指数退避",
+			"run_demo": "运行演示",
+			"max_attempts": "最大尝试次数",
+			"failure_rate": "失败率",
+			"retry_log": "重试日志",
+			"no_retries": "暂无重试事件。运行演示以查看重试行为。",
+			"attempts": "尝试次数",
+			"attempt": "第"
+		},
+		"registry": {
+			"title": "8. 执行器注册表",
+			"description": "在单个任务工作流中使用多种执行器类型",
+			"run_workflow": "运行工作流",
+			"executor_types": "执行器类型",
+			"upload_desc": "带进度的文件上传",
+			"process_desc": "数据处理",
+			"notify_desc": "发送通知（原子操作）",
+			"no_workflow": "暂无工作流运行。点击「运行工作流」开始。"
+		},
+		"tree": {
+			"title": "9. 树形层级",
+			"description": "以多级嵌套结构组织任务",
+			"run_demo": "运行演示",
+			"total_nodes": "总节点数",
+			"leaf_nodes": "叶子节点",
+			"max_depth": "最大深度",
+			"no_tree": "暂无任务树。运行演示以查看层级结构。"
 		}
 	},
 	"code": {
@@ -89,7 +126,11 @@
 		"with_executor": "自定义执行器",
 		"pause_resume": "暂停与恢复",
 		"merkle_proof": "默克尔证明",
-		"svelte_store": "Svelte 状态管理"
+		"svelte_store": "Svelte 状态管理",
+		"events": "事件订阅",
+		"retry": "重试配置",
+		"executor_registry": "执行器注册表",
+		"tree_hierarchy": "树形层级"
 	},
 	"api": {
 		"title": "API 参考",
