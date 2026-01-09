@@ -3,13 +3,7 @@
 	 * Task Status Badge
 	 * Displays a task status with appropriate color coding.
 	 */
-	export type TaskStatus =
-		| 'pending'
-		| 'running'
-		| 'paused'
-		| 'completed'
-		| 'failed'
-		| 'cancelled';
+	export type TaskStatus = 'pending' | 'running' | 'paused' | 'completed' | 'failed' | 'cancelled';
 
 	interface Props {
 		status: TaskStatus;

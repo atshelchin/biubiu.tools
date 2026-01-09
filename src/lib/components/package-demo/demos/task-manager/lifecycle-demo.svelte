@@ -42,6 +42,11 @@
 	let loading = $state(true);
 	const ITEMS_COUNT = 10;
 
+	// Calculate progress based on completed tasks (not internal progress)
+	let completedProgress = $derived(
+		task ? Math.round((task.stats.completed / task.stats.total) * 100) : 0
+	);
+
 	// Restore task from storage on mount
 	onMount(async () => {
 		const roots = await manager.getAllRoots();
@@ -109,7 +114,9 @@
 		const executor: TaskExecutor<{ index: number }> = async (ctx) => {
 			currentItem = ctx.data.index;
 
-			for (let i = 0; i <= 100; i += 10) {
+			// Resume from saved progress instead of starting from 0
+			const startProgress = ctx.node.progress;
+			for (let i = startProgress; i <= 100; i += 10) {
 				if (ctx.isPaused()) return;
 				await ctx.progress(i);
 				await new Promise((r) => setTimeout(r, 100));
@@ -228,7 +235,7 @@ manager.on('complete', (event, { root }) => {
 					</div>
 					<div class="status-item">
 						<span class="label">{t('demo.basic.progress')}</span>
-						<span class="value">{task.progress}%</span>
+						<span class="value">{completedProgress}%</span>
 					</div>
 					<div class="status-item">
 						<span class="label">{t('demo.lifecycle.processing')}</span>
@@ -248,17 +255,21 @@ manager.on('complete', (event, { root }) => {
 							class:running={node.status === 'running'}
 							class:failed={node.status === 'failed'}
 							class:cancelled={node.status === 'cancelled'}
+							class:paused={node.status === 'paused'}
 						>
-							<TaskStatusIcon status={node.status} size={14} />
-							{#if node.status === 'pending'}
+							{#if node.status === 'running' || node.status === 'paused'}
+								<span class="node-progress">{node.progress}%</span>
+							{:else if node.status === 'pending'}
 								<span>{index + 1}</span>
+							{:else}
+								<TaskStatusIcon status={node.status} size={14} />
 							{/if}
 						</div>
 					{/each}
 				</div>
 
 				<ProgressBar
-					progress={task.progress}
+					progress={completedProgress}
 					color={getStatusColor(task.status)}
 					size="lg"
 					class="mt-4"
@@ -342,6 +353,16 @@ manager.on('complete', (event, { root }) => {
 	.progress-cell.cancelled {
 		background: var(--color-muted);
 		color: white;
+	}
+
+	.progress-cell.paused {
+		background: var(--color-warning);
+		color: white;
+	}
+
+	.node-progress {
+		font-size: var(--text-xs);
+		font-weight: 600;
 	}
 
 	:global(.mt-4) {

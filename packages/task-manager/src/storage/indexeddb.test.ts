@@ -14,6 +14,7 @@ function createMockRoot(id: string, overrides: Partial<TaskRoot> = {}): TaskRoot
 		type: 'test',
 		status: 'pending',
 		progress: 0,
+		concurrency: 1,
 		stats: { total: 0, completed: 0, failed: 0 },
 		merkleRoot: null,
 		createdAt: Date.now(),
@@ -31,6 +32,7 @@ function createMockNode(id: string, rootId: string, overrides: Partial<TaskNode>
 		name: `Node ${id}`,
 		status: 'pending',
 		progress: 0,
+		mode: 'progressive',
 		depth: 0,
 		index: 0,
 		isLeaf: true,
@@ -169,8 +171,12 @@ describe('IndexedDBStorage', () => {
 
 			it('should return children with specific parentId', async () => {
 				await storage.saveNode(createMockNode('node-1', 'root-1', { parentId: null }));
-				await storage.saveNode(createMockNode('node-2', 'root-1', { parentId: 'node-1', index: 0 }));
-				await storage.saveNode(createMockNode('node-3', 'root-1', { parentId: 'node-1', index: 1 }));
+				await storage.saveNode(
+					createMockNode('node-2', 'root-1', { parentId: 'node-1', index: 0 })
+				);
+				await storage.saveNode(
+					createMockNode('node-3', 'root-1', { parentId: 'node-1', index: 1 })
+				);
 				const children = await storage.getChildren('node-1', 'root-1');
 				expect(children).toHaveLength(2);
 			});

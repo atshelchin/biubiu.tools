@@ -11,7 +11,7 @@
 		type TaskNode,
 		type MerkleProof
 	} from '@shelchin/task-manager';
-	import { Plus, Shield, CheckCircle2, XCircle, ChevronRight } from '@lucide/svelte';
+	import { Plus, Shield, CheckCircle2, XCircle, ChevronRight, Copy, Check } from '@lucide/svelte';
 	import {
 		DemoSection,
 		DemoContent,
@@ -45,11 +45,33 @@
 		if (roots.length > 0) {
 			task = roots[0];
 			nodes = await manager.getLeaves(task.id);
+
+			// Check if nodes have empty hashes (old data before fix)
+			// If so, delete and recreate to get proper hashes
+			if (nodes.length > 0 && !nodes[0].hash) {
+				await manager.delete(task.id);
+				// Auto-create new task with proper hashes
+				task = await manager.create({
+					name: 'Merkle Demo',
+					children: [
+						{ name: 'Transaction A', data: { amount: 100, to: '0xABC...' } },
+						{ name: 'Transaction B', data: { amount: 200, to: '0xDEF...' } },
+						{ name: 'Transaction C', data: { amount: 150, to: '0x123...' } },
+						{ name: 'Transaction D', data: { amount: 300, to: '0x456...' } }
+					]
+				});
+				nodes = await manager.getLeaves(task.id);
+			}
 		}
 		loading = false;
 	});
 
 	async function createTask() {
+		// Delete existing task first to ensure fresh data
+		if (task) {
+			await manager.delete(task.id);
+		}
+
 		task = await manager.create({
 			name: 'Merkle Demo',
 			children: [
@@ -74,6 +96,17 @@
 	async function verifyProof() {
 		if (!proof) return;
 		verified = await manager.verifyProof(proof);
+	}
+
+	// Copy functionality
+	let copiedField = $state<string | null>(null);
+
+	async function copyToClipboard(value: string, field: string) {
+		await navigator.clipboard.writeText(value);
+		copiedField = field;
+		setTimeout(() => {
+			copiedField = null;
+		}, 2000);
 	}
 
 	const codeExample = `// Get Merkle root
@@ -124,15 +157,48 @@ console.log('Proof valid:', isValid);`;
 						<Shield size={24} />
 						<div class="merkle-info">
 							<span class="label">{t('demo.merkle.merkle_root')}</span>
-							<code class="hash">{task.merkleRoot?.slice(0, 16)}...</code>
+							<div class="hash-row">
+								<code class="hash full">{task.merkleRoot}</code>
+								<button
+									class="copy-btn"
+									onclick={() => copyToClipboard(task?.merkleRoot ?? '', 'root')}
+									title="Copy"
+								>
+									{#if copiedField === 'root'}
+										<Check size={14} />
+									{:else}
+										<Copy size={14} />
+									{/if}
+								</button>
+							</div>
 						</div>
 					</div>
 
 					<div class="merkle-leaves">
 						{#each nodes as node, index (node.id)}
-							<div class="merkle-leaf" class:selected={index === selectedLeafIndex}>
+							<div
+								class="merkle-leaf"
+								class:selected={index === selectedLeafIndex}
+								onclick={() => (selectedLeafIndex = index)}
+							>
 								<span class="leaf-name">{node.name}</span>
-								<code class="hash">{node.hash.slice(0, 8)}...</code>
+								<div class="hash-row">
+									<code class="hash full">{node.hash}</code>
+									<button
+										class="copy-btn"
+										onclick={(e) => {
+											e.stopPropagation();
+											copyToClipboard(node.hash, `leaf-${index}`);
+										}}
+										title="Copy"
+									>
+										{#if copiedField === `leaf-${index}`}
+											<Check size={14} />
+										{:else}
+											<Copy size={14} />
+										{/if}
+									</button>
+								</div>
 							</div>
 						{/each}
 					</div>
@@ -140,14 +206,79 @@ console.log('Proof valid:', isValid);`;
 
 				{#if proof}
 					<div class="proof-details">
-						<h4>{t('demo.merkle.proof_path')}</h4>
-						<div class="proof-path">
-							{#each proof.proof as hash, i (i)}
-								<div class="proof-step">
-									<ChevronRight size={14} />
-									<code>{hash.slice(0, 16)}...</code>
-								</div>
-							{/each}
+						<div class="proof-section">
+							<h4>{t('demo.merkle.leaf_hash')}</h4>
+							<div class="hash-row">
+								<code class="hash full">{proof.leaf}</code>
+								<button
+									class="copy-btn"
+									onclick={() => copyToClipboard(proof?.leaf ?? '', 'proof-leaf')}
+									title="Copy"
+								>
+									{#if copiedField === 'proof-leaf'}
+										<Check size={14} />
+									{:else}
+										<Copy size={14} />
+									{/if}
+								</button>
+							</div>
+						</div>
+
+						<div class="proof-section">
+							<h4>{t('demo.merkle.proof_path')} ({proof.proof.length} steps)</h4>
+							<div class="proof-path">
+								{#each proof.proof as hash, i (i)}
+									<div class="proof-step">
+										<span class="step-index">{i + 1}</span>
+										<code class="hash full">{hash}</code>
+										<button
+											class="copy-btn"
+											onclick={() => copyToClipboard(hash, `proof-${i}`)}
+											title="Copy"
+										>
+											{#if copiedField === `proof-${i}`}
+												<Check size={14} />
+											{:else}
+												<Copy size={14} />
+											{/if}
+										</button>
+									</div>
+								{/each}
+							</div>
+						</div>
+
+						<div class="proof-section">
+							<h4>{t('demo.merkle.merkle_root')}</h4>
+							<div class="hash-row">
+								<code class="hash full">{proof.root}</code>
+								<button
+									class="copy-btn"
+									onclick={() => copyToClipboard(proof?.root ?? '', 'proof-root')}
+									title="Copy"
+								>
+									{#if copiedField === 'proof-root'}
+										<Check size={14} />
+									{:else}
+										<Copy size={14} />
+									{/if}
+								</button>
+							</div>
+						</div>
+
+						<div class="proof-section">
+							<h4>Copy All (JSON)</h4>
+							<button
+								class="copy-all-btn"
+								onclick={() => copyToClipboard(JSON.stringify(proof, null, 2), 'proof-all')}
+							>
+								{#if copiedField === 'proof-all'}
+									<Check size={14} />
+									<span>Copied!</span>
+								{:else}
+									<Copy size={14} />
+									<span>Copy Proof JSON</span>
+								{/if}
+							</button>
 						</div>
 
 						{#if verified !== null}
@@ -203,10 +334,49 @@ console.log('Proof valid:', isValid);`;
 
 	.merkle-info .hash {
 		font-family: var(--font-family-mono);
-		font-size: var(--text-sm);
+		font-size: var(--text-xs);
 		background: rgba(255, 255, 255, 0.2);
 		padding: var(--space-1) var(--space-2);
 		border-radius: var(--radius);
+	}
+
+	.hash-row {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	.hash.full {
+		word-break: break-all;
+		font-size: var(--text-xs);
+	}
+
+	.copy-btn {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: var(--space-1);
+		background: rgba(255, 255, 255, 0.2);
+		border: none;
+		border-radius: var(--radius-sm);
+		cursor: pointer;
+		color: inherit;
+		transition: background 0.2s;
+	}
+
+	.copy-btn:hover {
+		background: rgba(255, 255, 255, 0.3);
+	}
+
+	.merkle-leaf .copy-btn {
+		background: var(--color-panel-2);
+		color: var(--color-muted-foreground);
+	}
+
+	.merkle-leaf .copy-btn:hover {
+		background: var(--color-panel-1);
+		color: var(--color-foreground);
 	}
 
 	.merkle-leaves {
@@ -260,7 +430,27 @@ console.log('Proof valid:', isValid);`;
 		font-size: var(--text-sm);
 		font-weight: 600;
 		color: var(--color-foreground);
-		margin-bottom: var(--space-3);
+		margin-bottom: var(--space-2);
+	}
+
+	.proof-section {
+		margin-bottom: var(--space-4);
+	}
+
+	.proof-section .hash-row {
+		padding: var(--space-2);
+		background: var(--color-panel-1);
+		border-radius: var(--radius);
+	}
+
+	.proof-section .copy-btn {
+		background: var(--color-panel-2);
+		color: var(--color-muted-foreground);
+	}
+
+	.proof-section .copy-btn:hover {
+		background: var(--color-primary);
+		color: white;
 	}
 
 	.proof-path {
@@ -278,14 +468,56 @@ console.log('Proof valid:', isValid);`;
 		border-radius: var(--radius);
 	}
 
-	.proof-step :global(svg) {
-		color: var(--color-muted-foreground);
+	.step-index {
+		flex-shrink: 0;
+		width: 20px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: var(--text-xs);
+		font-weight: 600;
+		background: var(--color-primary);
+		color: white;
+		border-radius: 50%;
 	}
 
 	.proof-step code {
+		flex: 1;
 		font-family: var(--font-family-mono);
 		font-size: var(--text-xs);
 		color: var(--color-foreground);
+		word-break: break-all;
+	}
+
+	.proof-step .copy-btn {
+		background: var(--color-panel-2);
+		color: var(--color-muted-foreground);
+	}
+
+	.proof-step .copy-btn:hover {
+		background: var(--color-primary);
+		color: white;
+	}
+
+	.copy-all-btn {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-2) var(--space-3);
+		background: var(--color-panel-1);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius);
+		cursor: pointer;
+		color: var(--color-foreground);
+		font-size: var(--text-sm);
+		transition: all 0.2s;
+	}
+
+	.copy-all-btn:hover {
+		background: var(--color-primary);
+		border-color: var(--color-primary);
+		color: white;
 	}
 
 	.verification-result {

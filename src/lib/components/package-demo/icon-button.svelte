@@ -28,13 +28,7 @@
 	}: Props = $props();
 </script>
 
-<button
-	class="btn-icon btn-icon-{variant} {className}"
-	{disabled}
-	{title}
-	{onclick}
-	type="button"
->
+<button class="btn-icon btn-icon-{variant} {className}" {disabled} {title} {onclick} type="button">
 	<Icon size={iconSize} />
 </button>
 

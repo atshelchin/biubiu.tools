@@ -4,7 +4,7 @@
 	 * A comprehensive demo showcasing all features of the @shelchin/task-manager package
 	 */
 	import { useI18n } from '@shelchin/i18n';
-	import { TreeDeciduous, Zap, Database, Shield } from '@lucide/svelte';
+	import { TreeDeciduous, Zap, Database, Shield, RefreshCw, Radio } from '@lucide/svelte';
 	import { PackageDemoLayout, DemoSection, CodeBlock } from '$lib/components/package-demo';
 
 	// Demo components
@@ -22,7 +22,9 @@
 		{ icon: TreeDeciduous, text: t('features.tree_structure') },
 		{ icon: Zap, text: t('features.pause_resume') },
 		{ icon: Database, text: t('features.persistence') },
-		{ icon: Shield, text: t('features.merkle_tree') }
+		{ icon: Shield, text: t('features.merkle_tree') },
+		{ icon: RefreshCw, text: t('features.retry_logic') },
+		{ icon: Radio, text: t('features.event_driven') }
 	];
 
 	const installationCode = `npm install @shelchin/task-manager

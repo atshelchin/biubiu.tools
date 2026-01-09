@@ -5,12 +5,11 @@
 	 */
 	import { onMount } from 'svelte';
 	import {
-		createTaskManager,
+		createTaskStore,
 		createIndexedDBStorage,
-		type TaskRoot,
 		type TaskExecutor
 	} from '@shelchin/task-manager';
-	import { Plus, RefreshCw, Play, Trash2, Database, Loader2 } from '@lucide/svelte';
+	import { Plus, RefreshCw, Play, Pause, Trash2, Database, Loader2 } from '@lucide/svelte';
 	import {
 		DemoSection,
 		DemoContent,
@@ -31,40 +30,32 @@
 	let { t }: Props = $props();
 
 	const STORAGE_NAME = 'task-manager-demo-store';
-	let manager = createTaskManager<{ step: number }>({
+	// Use createTaskStore for reactive state management
+	let store = createTaskStore<{ step: number }>({
 		storage: createIndexedDBStorage(STORAGE_NAME)
 	});
-	let tasks = $state<TaskRoot[]>([]);
-	let loading = $state(false);
 
+	// Derived stats from store's reactive values
 	const stats = $derived({
-		total: tasks.length,
-		pending: tasks.filter((t) => t.status === 'pending').length,
-		running: tasks.filter((t) => t.status === 'running').length,
-		completed: tasks.filter((t) => t.status === 'completed').length,
-		failed: tasks.filter((t) => t.status === 'failed').length,
-		paused: tasks.filter((t) => t.status === 'paused').length
+		total: store.allRoots.length,
+		pending: store.pendingRoots.length,
+		running: store.runningRoots.length,
+		completed: store.completedRoots.length,
+		failed: store.failedRoots.length,
+		paused: store.pausedRoots.length
 	});
-
-	async function refreshTasks() {
-		loading = true;
-		tasks = await manager.getAllRoots();
-		loading = false;
-	}
 
 	async function createTask() {
 		const names = ['Data Sync', 'File Upload', 'Report Generation', 'API Call', 'Cache Update'];
 		const name = names[Math.floor(Math.random() * names.length)];
 
-		await manager.create({
-			name: `${name} #${tasks.length + 1}`,
+		await store.create({
+			name: `${name} #${store.allRoots.length + 1}`,
 			children: Array.from({ length: 3 + Math.floor(Math.random() * 5) }, (_, i) => ({
 				name: `Step ${i + 1}`,
 				data: { step: i + 1 }
 			}))
 		});
-
-		await refreshTasks();
 	}
 
 	async function executeTask(taskId: string) {
@@ -78,29 +69,41 @@
 			await ctx.complete();
 		};
 
-		await manager.execute(taskId, executor);
-		await refreshTasks();
+		await store.execute(taskId, executor);
+	}
+
+	async function pauseTask(taskId: string) {
+		await store.pause(taskId);
+	}
+
+	async function resumeTask(taskId: string) {
+		const executor: TaskExecutor<{ step: number }> = async (ctx) => {
+			await new Promise((r) => setTimeout(r, 200 + Math.random() * 300));
+
+			if (Math.random() < 0.15) {
+				throw new Error('Random failure');
+			}
+
+			await ctx.complete();
+		};
+
+		await store.resume(taskId, executor);
 	}
 
 	async function deleteTask(taskId: string) {
-		await manager.delete(taskId);
-		await refreshTasks();
+		await store.delete(taskId);
 	}
 
 	async function clearCompleted() {
-		const completed = tasks.filter((t) => t.status === 'completed');
-		for (const task of completed) {
-			await manager.delete(task.id);
-		}
-		await refreshTasks();
+		await store.clearCompleted();
 	}
 
 	async function clearFailed() {
-		const failed = tasks.filter((t) => t.status === 'failed');
-		for (const task of failed) {
-			await manager.delete(task.id);
-		}
-		await refreshTasks();
+		await store.clearFailed();
+	}
+
+	async function refreshAll() {
+		await store.refreshAll();
 	}
 
 	function getStatusColor(status: string): string {
@@ -116,7 +119,7 @@
 	}
 
 	onMount(() => {
-		refreshTasks();
+		store.init();
 	});
 
 	const codeExample = `import { createTaskStore } from '@shelchin/task-manager';
@@ -127,11 +130,16 @@ const store = createTaskStore();
 // Initialize from storage
 await store.init();
 
-// Reactive derived values
-console.log(store.allRoots);      // All tasks
-console.log(store.pendingRoots);  // Pending tasks
+// Reactive derived values (auto-update when state changes)
+console.log(store.allRoots);       // All tasks
+console.log(store.pendingRoots);   // Pending tasks
 console.log(store.completedRoots); // Completed tasks
-console.log(store.stats);         // { total, completed, failed }
+console.log(store.stats);          // { total, completed, failed }
+
+// CRUD operations (automatically sync state)
+await store.create({ name: 'Task', children: [...] });
+await store.execute(taskId, executor);
+await store.delete(taskId);
 
 // Clear completed/failed
 await store.clearCompleted();
@@ -153,8 +161,8 @@ await store.clearFailed();`;
 				<DemoButton icon={Plus} onclick={createTask}>
 					{t('demo.basic.create_task')}
 				</DemoButton>
-				<DemoButton variant="outline" onclick={refreshTasks}>
-					{#if loading}
+				<DemoButton variant="outline" onclick={refreshAll}>
+					{#if store.isLoading}
 						<Loader2 size={16} class="spin" />
 					{:else}
 						<RefreshCw size={16} />
@@ -174,10 +182,10 @@ await store.clearFailed();`;
 			</ActionButtons>
 
 			<div class="store-tasks">
-				{#if tasks.length === 0}
+				{#if store.allRoots.length === 0}
 					<DemoEmptyState icon={Database} message={t('messages.no_tasks')} />
 				{:else}
-					{#each tasks as task (task.id)}
+					{#each store.allRoots as task (task.id)}
 						<div class="store-task-card">
 							<div class="task-info">
 								<TaskStatusIcon status={task.status} size={20} />
@@ -206,6 +214,22 @@ await store.clearFailed();`;
 										variant="success"
 										onclick={() => executeTask(task.id)}
 										title={t('actions.execute')}
+									/>
+								{:else if task.status === 'running'}
+									<IconButton
+										icon={Pause}
+										iconSize={14}
+										variant="warning"
+										onclick={() => pauseTask(task.id)}
+										title={t('actions.pause')}
+									/>
+								{:else if task.status === 'paused'}
+									<IconButton
+										icon={Play}
+										iconSize={14}
+										variant="success"
+										onclick={() => resumeTask(task.id)}
+										title={t('actions.resume')}
 									/>
 								{/if}
 								<IconButton

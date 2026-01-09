@@ -26,12 +26,7 @@ import type {
 	MerkleProof
 } from './types';
 import { createIndexedDBStorage } from './storage/indexeddb';
-import {
-	computeLeafHash,
-	buildMerkleRoot,
-	generateMerkleProof,
-	verifyMerkleProof
-} from './merkle';
+import { computeLeafHash, buildMerkleRoot, generateMerkleProof, verifyMerkleProof } from './merkle';
 
 // ============================================================================
 // ID Generation
@@ -90,6 +85,12 @@ export class TaskManager<T = unknown> {
 		// Compute Merkle root from leaf hashes
 		const leaves = nodes.filter((n) => n.isLeaf);
 		const leafHashes = await Promise.all(leaves.map(computeLeafHash));
+
+		// Assign computed hashes back to leaf nodes
+		leaves.forEach((leaf, i) => {
+			leaf.hash = leafHashes[i];
+		});
+
 		const merkleRoot = leafHashes.length > 0 ? await buildMerkleRoot(leafHashes) : null;
 
 		// Create root
@@ -227,10 +228,21 @@ export class TaskManager<T = unknown> {
 
 			if (concurrency === 1) {
 				// Serial execution (original behavior)
-				await this.executeSerial(root, pendingLeaves as TaskNode<T>[], getExecutor, abortController);
+				await this.executeSerial(
+					root,
+					pendingLeaves as TaskNode<T>[],
+					getExecutor,
+					abortController
+				);
 			} else {
 				// Parallel execution with concurrency limit
-				await this.executeParallel(root, pendingLeaves as TaskNode<T>[], getExecutor, abortController, concurrency);
+				await this.executeParallel(
+					root,
+					pendingLeaves as TaskNode<T>[],
+					getExecutor,
+					abortController,
+					concurrency
+				);
 			}
 
 			// Update final status
@@ -310,7 +322,12 @@ export class TaskManager<T = unknown> {
 				if (queue.length === 0) return;
 
 				const leaf = queue.shift()!;
-				const promise = this.executeLeaf(root, leaf, getExecutor(leaf.executor), abortController.signal)
+				const promise = this.executeLeaf(
+					root,
+					leaf,
+					getExecutor(leaf.executor),
+					abortController.signal
+				)
 					.then(async () => {
 						// Refresh root to get updated stats
 						const updatedRoot = await this.storage.getRoot(root.id);

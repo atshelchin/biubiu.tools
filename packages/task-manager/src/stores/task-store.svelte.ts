@@ -8,7 +8,13 @@
  */
 
 import { SvelteMap } from 'svelte/reactivity';
-import type { TaskRoot, TaskNode, TaskManagerConfig, TaskExecutor, ExecutorRegistry } from '../types';
+import type {
+	TaskRoot,
+	TaskNode,
+	TaskManagerConfig,
+	TaskExecutor,
+	ExecutorRegistry
+} from '../types';
 import { TaskManager, createTaskManager } from '../task-manager';
 
 /**
@@ -30,7 +36,9 @@ export class TaskStore<T = unknown> {
 	completedRoots = $derived(this.allRoots.filter((r) => r.status === 'completed'));
 	failedRoots = $derived(this.allRoots.filter((r) => r.status === 'failed'));
 	recoverableRoots = $derived(
-		this.allRoots.filter((r) => r.status === 'pending' || r.status === 'running' || r.status === 'paused')
+		this.allRoots.filter(
+			(r) => r.status === 'pending' || r.status === 'running' || r.status === 'paused'
+		)
 	);
 
 	// Statistics
@@ -38,7 +46,10 @@ export class TaskStore<T = unknown> {
 		total: this.allRoots.reduce((sum, r) => sum + r.stats.total, 0),
 		completed: this.allRoots.reduce((sum, r) => sum + r.stats.completed, 0),
 		failed: this.allRoots.reduce((sum, r) => sum + r.stats.failed, 0),
-		pending: this.allRoots.reduce((sum, r) => sum + r.stats.total - r.stats.completed - r.stats.failed, 0),
+		pending: this.allRoots.reduce(
+			(sum, r) => sum + r.stats.total - r.stats.completed - r.stats.failed,
+			0
+		),
 		completionRate: (() => {
 			const total = this.allRoots.reduce((sum, r) => sum + r.stats.total, 0);
 			const completed = this.allRoots.reduce((sum, r) => sum + r.stats.completed, 0);

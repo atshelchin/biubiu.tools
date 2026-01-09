@@ -91,7 +91,9 @@
 		executing = true;
 		const taskId = task.id;
 
-		console.log(`[TaskManager] 🚀 Starting task: "${task.name}" (concurrency: ${task.concurrency})`);
+		console.log(
+			`[TaskManager] 🚀 Starting task: "${task.name}" (concurrency: ${task.concurrency})`
+		);
 
 		// Start polling for UI updates during parallel execution
 		updateInterval = setInterval(async () => {
@@ -101,14 +103,18 @@
 		}, 100);
 
 		const executor: TaskExecutor<{ value: number }> = async (ctx) => {
-			console.log(`[TaskManager] ▶️ Starting subtask: "${ctx.node.name}" (data: ${JSON.stringify(ctx.data)})`);
+			console.log(
+				`[TaskManager] ▶️ Starting subtask: "${ctx.node.name}" (data: ${JSON.stringify(ctx.data)})`
+			);
 
 			// Simulate async work (API call, etc.) - atomic task, no progress updates
 			const delay = 500 + Math.random() * 1500; // Random 0.5-2s delay
 			await new Promise((r) => setTimeout(r, delay));
 
 			const result = { result: ctx.data.value * 2 };
-			console.log(`[TaskManager] ✅ Completed subtask: "${ctx.node.name}" (result: ${JSON.stringify(result)})`);
+			console.log(
+				`[TaskManager] ✅ Completed subtask: "${ctx.node.name}" (result: ${JSON.stringify(result)})`
+			);
 			await ctx.complete(result);
 		};
 

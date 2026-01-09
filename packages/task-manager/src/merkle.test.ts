@@ -28,6 +28,7 @@ function createMockLeaf(id: string, data: unknown): TaskNode {
 		name: `Task ${id}`,
 		status: 'pending',
 		progress: 0,
+		mode: 'progressive',
 		depth: 0,
 		index: 0,
 		isLeaf: true,
@@ -319,10 +320,7 @@ describe('Merkle Tree Utilities', () => {
 
 	describe('verifyLeafNode', () => {
 		it('should verify leaf node with proof', async () => {
-			const leaves = [
-				createMockLeaf('leaf-1', { a: 1 }),
-				createMockLeaf('leaf-2', { a: 2 })
-			];
+			const leaves = [createMockLeaf('leaf-1', { a: 1 }), createMockLeaf('leaf-2', { a: 2 })];
 			const hashes = await Promise.all(leaves.map(computeLeafHash));
 			const root = await buildMerkleRoot(hashes);
 			const proof = await generateProof(hashes, 1);
@@ -332,10 +330,7 @@ describe('Merkle Tree Utilities', () => {
 		});
 
 		it('should reject node with wrong data', async () => {
-			const leaves = [
-				createMockLeaf('leaf-1', { a: 1 }),
-				createMockLeaf('leaf-2', { a: 2 })
-			];
+			const leaves = [createMockLeaf('leaf-1', { a: 1 }), createMockLeaf('leaf-2', { a: 2 })];
 			const hashes = await Promise.all(leaves.map(computeLeafHash));
 			const root = await buildMerkleRoot(hashes);
 			const proof = await generateProof(hashes, 1);

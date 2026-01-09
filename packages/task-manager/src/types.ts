@@ -16,13 +16,7 @@
  * pending -> running -> completed | failed | cancelled
  *                    -> paused -> running (resume)
  */
-export type TaskStatus =
-	| 'pending'
-	| 'running'
-	| 'paused'
-	| 'completed'
-	| 'failed'
-	| 'cancelled';
+export type TaskStatus = 'pending' | 'running' | 'paused' | 'completed' | 'failed' | 'cancelled';
 
 /**
  * Task execution mode:

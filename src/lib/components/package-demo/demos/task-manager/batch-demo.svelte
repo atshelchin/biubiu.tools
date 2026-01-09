@@ -18,7 +18,8 @@
 		DemoEmptyState,
 		InputGroup,
 		ActionButtons,
-		DemoButton
+		DemoButton,
+		CodeBlock
 	} from '$lib/components/package-demo';
 
 	interface Props {
@@ -99,6 +100,36 @@
 		nodes = await manager.getNodes(taskId);
 		running = false;
 	}
+
+	const codeExample = `import { createTaskManager } from '@shelchin/task-manager';
+
+const manager = createTaskManager();
+
+// Create a batch processing task
+const task = await manager.create({
+  name: 'Batch Processing',
+  type: 'batch',
+  children: items.map((item, i) => ({
+    name: \`Item \${i + 1}\`,
+    mode: 'atomic', // No progress, just complete/fail
+    data: { id: item.id, ...item }
+  }))
+});
+
+// Execute with error handling
+await manager.execute(task.id, async (ctx) => {
+  try {
+    const result = await processItem(ctx.data);
+    await ctx.complete(result);
+  } catch (error) {
+    throw error; // Will be caught and marked as failed
+  }
+});
+
+// Check results
+const leaves = await manager.getLeaves(task.id);
+const completed = leaves.filter(l => l.status === 'completed');
+const failed = leaves.filter(l => l.status === 'failed');`;
 </script>
 
 <DemoSection title={t('demo.batch.title')} description={t('demo.batch.description')}>
@@ -168,6 +199,8 @@
 			{/if}
 		{/snippet}
 	</DemoContent>
+
+	<CodeBlock title={t('code.basic_usage')} code={codeExample} />
 </DemoSection>
 
 <style>
