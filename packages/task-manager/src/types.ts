@@ -242,6 +242,22 @@ export interface StorageAdapter {
 	// Lifecycle
 	close(): Promise<void>;
 	clear(): Promise<void>;
+
+	// Recovery (optional - for IndexedDB)
+	/**
+	 * Force reconnect to the database
+	 */
+	reconnect?(): Promise<void>;
+
+	/**
+	 * Check if the database is accessible
+	 */
+	isHealthy?(): Promise<boolean>;
+
+	/**
+	 * Delete and recreate the database (WARNING: deletes all data!)
+	 */
+	resetDatabase?(): Promise<void>;
 }
 
 // ============================================================================

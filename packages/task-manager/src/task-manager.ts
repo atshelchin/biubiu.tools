@@ -339,6 +339,10 @@ export class TaskManager<T = unknown> {
 		const queue = [...leafIds];
 		const executing = new Set<Promise<void>>();
 
+		// Cap concurrency to prevent browser freeze with too many parallel operations
+		// Infinity or very large numbers are capped to a reasonable limit
+		const maxConcurrency = Math.min(concurrency, 100);
+
 		const runNext = async (): Promise<void> => {
 			while (queue.length > 0) {
 				// Check if paused or cancelled
@@ -353,7 +357,7 @@ export class TaskManager<T = unknown> {
 				}
 
 				// Wait if at concurrency limit
-				if (executing.size >= concurrency) {
+				if (executing.size >= maxConcurrency) {
 					await Promise.race(executing);
 				}
 

@@ -106,13 +106,16 @@
 			results = results.map((r, idx) => (idx === i ? { ...r, status: 'running' as const } : r));
 
 			try {
+				console.log(`[Benchmark] Starting test for ${count} tasks, storage: ${storageType}`);
 				const manager = createStorage();
+				console.log(`[Benchmark] Manager created`);
 
 				// Build children array
 				const children = [];
 				for (let j = 0; j < count; j++) {
 					children.push({ name: `Task ${j}`, data: { index: j } });
 				}
+				console.log(`[Benchmark] Children array built: ${children.length} items`);
 
 				let createTime = 0;
 				let executeTime = 0;
@@ -121,6 +124,7 @@
 				// Test creation if needed
 				if (testType === 'create' || testType === 'both') {
 					currentPhase = 'create';
+					console.log(`[Benchmark] Starting create phase...`);
 
 					const createStart = performance.now();
 					task = await manager.create({
@@ -130,6 +134,7 @@
 					});
 					const createEnd = performance.now();
 					createTime = createEnd - createStart;
+					console.log(`[Benchmark] Create completed in ${createTime}ms`);
 				}
 
 				// Test execution if needed
@@ -137,9 +142,15 @@
 					currentPhase = 'execute';
 					executionProgress = 0;
 
-					// Subscribe to progress events for real-time display
+					// Subscribe to progress events with throttling for large task counts
+					let lastUpdate = 0;
+					const throttleMs = count >= 10000 ? 100 : count >= 1000 ? 50 : 0;
 					const unsubscribe = manager.on('complete', (_event, data) => {
-						executionProgress = Math.round((data.root.stats.completed / count) * 100);
+						const now = Date.now();
+						if (now - lastUpdate >= throttleMs) {
+							executionProgress = Math.round((data.root.stats.completed / count) * 100);
+							lastUpdate = now;
+						}
 					});
 
 					const executeStart = performance.now();
@@ -158,18 +169,27 @@
 				// If only testing execute, create task first without timing
 				if (testType === 'execute' && !task) {
 					currentPhase = 'create';
+					console.log(`[Benchmark] Execute mode: creating task first...`);
 					task = await manager.create({
 						name: 'Benchmark Task',
 						concurrency: Infinity, // Parallel execution for speed
 						children
 					});
+					console.log(`[Benchmark] Execute mode: task created, id=${task.id}`);
 
 					currentPhase = 'execute';
+					console.log(`[Benchmark] Starting execute phase...`);
 					executionProgress = 0;
 
-					// Subscribe to progress events for real-time display
+					// Subscribe to progress events with throttling for large task counts
+					let lastUpdate = 0;
+					const throttleMs = count >= 10000 ? 100 : count >= 1000 ? 50 : 0;
 					const unsubscribe = manager.on('complete', (_event, data) => {
-						executionProgress = Math.round((data.root.stats.completed / count) * 100);
+						const now = Date.now();
+						if (now - lastUpdate >= throttleMs) {
+							executionProgress = Math.round((data.root.stats.completed / count) * 100);
+							lastUpdate = now;
+						}
 					});
 
 					const executeStart = performance.now();
