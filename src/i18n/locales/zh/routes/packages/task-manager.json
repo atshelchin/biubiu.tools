@@ -137,7 +137,9 @@
 			"status_col": "状态",
 			"creating": "创建中",
 			"executing": "执行中",
-			"tasks": "个任务"
+			"tasks": "个任务",
+			"skip_merkle": "跳过 Merkle 计算（更快）",
+			"use_worker": "使用 Web Worker（后台线程）"
 		}
 	},
 	"code": {

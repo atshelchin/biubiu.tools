@@ -216,6 +216,29 @@ export interface StorageAdapter {
 	// Batch operations
 	updateNodeStatus(id: string, status: TaskStatus, updates?: Partial<TaskNode>): Promise<void>;
 
+	// Streaming operations (for memory-efficient execution)
+	/**
+	 * Get leaf count for a root (without loading all leaves)
+	 */
+	getLeafCount?(rootId: string): Promise<number>;
+
+	/**
+	 * Get pending leaf count for a root (without loading all leaves)
+	 */
+	getPendingLeafCount?(rootId: string): Promise<number>;
+
+	/**
+	 * Get leaf IDs in batches (memory efficient for large task trees)
+	 * Returns only IDs, not full objects
+	 */
+	getLeafIds?(rootId: string): Promise<string[]>;
+
+	/**
+	 * Get pending leaf IDs (leaves with status 'pending')
+	 * Returns only IDs, not full objects
+	 */
+	getPendingLeafIds?(rootId: string): Promise<string[]>;
+
 	// Lifecycle
 	close(): Promise<void>;
 	clear(): Promise<void>;
@@ -249,6 +272,21 @@ export interface TaskManagerConfig {
 	 * Auto-cleanup old completed tasks
 	 */
 	cleanupDays?: number;
+
+	/**
+	 * Skip Merkle tree computation for better performance
+	 * Set to true when cryptographic verification is not needed
+	 * Can significantly improve performance for large task trees (50k+ tasks)
+	 */
+	skipMerkle?: boolean;
+
+	/**
+	 * Use Web Worker for Merkle hash computation
+	 * Offloads CPU-intensive hashing to background thread
+	 * Prevents UI blocking during large task tree creation
+	 * Falls back to main thread if Workers are not supported
+	 */
+	useWorker?: boolean;
 }
 
 export interface ResolvedConfig {
@@ -259,6 +297,8 @@ export interface ResolvedConfig {
 		maxDelayMs: number;
 	};
 	cleanupDays: number;
+	skipMerkle: boolean;
+	useWorker: boolean;
 }
 
 export const DEFAULT_CONFIG: ResolvedConfig = {
@@ -268,7 +308,9 @@ export const DEFAULT_CONFIG: ResolvedConfig = {
 		baseDelayMs: 1000,
 		maxDelayMs: 10000
 	},
-	cleanupDays: 7
+	cleanupDays: 7,
+	skipMerkle: false,
+	useWorker: false
 };
 
 // ============================================================================

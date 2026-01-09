@@ -137,7 +137,9 @@
 			"status_col": "Status",
 			"creating": "Creating",
 			"executing": "Executing",
-			"tasks": "tasks"
+			"tasks": "tasks",
+			"skip_merkle": "Skip Merkle (faster)",
+			"use_worker": "Use Web Worker (background thread)"
 		}
 	},
 	"code": {

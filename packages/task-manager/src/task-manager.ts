@@ -31,6 +31,7 @@ import {
 	generateMerkleProof,
 	verifyMerkleProof
 } from './merkle';
+import { computeMerkleInWorker, isWorkerSupported, terminateWorker } from './merkle-worker-manager';
 
 // ============================================================================
 // Performance Configuration
@@ -76,7 +77,9 @@ export class TaskManager<T = unknown> {
 				baseDelayMs: options.retry?.baseDelayMs ?? 1000,
 				maxDelayMs: options.retry?.maxDelayMs ?? 10000
 			},
-			cleanupDays: options.cleanupDays ?? 7
+			cleanupDays: options.cleanupDays ?? 7,
+			skipMerkle: options.skipMerkle ?? false,
+			useWorker: options.useWorker ?? false
 		};
 
 		this.storage = options.storage ?? createIndexedDBStorage(this.config.dbName);
@@ -96,16 +99,34 @@ export class TaskManager<T = unknown> {
 		// Build all nodes from options
 		const { nodes, leafCount } = this.buildNodes(rootId, options.children ?? [], now);
 
-		// Compute Merkle root from leaf hashes (batched for performance)
-		const leaves = nodes.filter((n) => n.isLeaf);
-		const leafHashes = await computeLeafHashesBatched(leaves);
+		// Compute Merkle root (skip if configured for performance)
+		let merkleRoot: string | null = null;
 
-		// Assign computed hashes back to leaf nodes
-		leaves.forEach((leaf, i) => {
-			leaf.hash = leafHashes[i];
-		});
+		if (!this.config.skipMerkle) {
+			const leaves = nodes.filter((n) => n.isLeaf);
 
-		const merkleRoot = leafHashes.length > 0 ? await buildMerkleRoot(leafHashes) : null;
+			// Use Web Worker if configured and supported (prevents UI blocking)
+			if (this.config.useWorker && isWorkerSupported() && leaves.length > 0) {
+				const { hashes, root } = await computeMerkleInWorker(leaves);
+
+				// Assign computed hashes back to leaf nodes
+				leaves.forEach((leaf, i) => {
+					leaf.hash = hashes[i];
+				});
+
+				merkleRoot = root;
+			} else {
+				// Main thread computation (may block UI for large trees)
+				const leafHashes = await computeLeafHashesBatched(leaves);
+
+				// Assign computed hashes back to leaf nodes
+				leaves.forEach((leaf, i) => {
+					leaf.hash = leafHashes[i];
+				});
+
+				merkleRoot = leafHashes.length > 0 ? await buildMerkleRoot(leafHashes) : null;
+			}
+		}
 
 		// Create root
 		const root: TaskRoot = {
@@ -200,6 +221,7 @@ export class TaskManager<T = unknown> {
 	/**
 	 * Execute a task tree
 	 * Supports both serial (concurrency=1) and parallel (concurrency>1) execution
+	 * Uses streaming mode for memory efficiency with large task trees
 	 */
 	async execute(
 		taskId: string,
@@ -234,29 +256,25 @@ export class TaskManager<T = unknown> {
 		this.emit('start', { root });
 
 		try {
-			// Get all leaves in order
-			const leaves = await this.storage.getLeaves(taskId);
-
-			// Filter pending leaves (skip completed/failed)
-			const pendingLeaves = leaves.filter(
-				(leaf) => leaf.status !== 'completed' && leaf.status !== 'failed'
-			);
+			// Use streaming mode: get IDs only, load nodes on demand
+			// This prevents memory explosion with large task trees (10k+ tasks)
+			const pendingLeafIds = this.storage.getPendingLeafIds
+				? await this.storage.getPendingLeafIds(taskId)
+				: // Fallback for adapters without streaming support
+					(await this.storage.getLeaves(taskId))
+						.filter((leaf) => leaf.status !== 'completed' && leaf.status !== 'failed')
+						.map((leaf) => leaf.id);
 
 			const concurrency = root.concurrency ?? 1;
 
 			if (concurrency === 1) {
-				// Serial execution (original behavior)
-				await this.executeSerial(
-					root,
-					pendingLeaves as TaskNode<T>[],
-					getExecutor,
-					abortController
-				);
+				// Serial execution with streaming
+				await this.executeSerialStreaming(root, pendingLeafIds, getExecutor, abortController);
 			} else {
-				// Parallel execution with concurrency limit
-				await this.executeParallel(
+				// Parallel execution with streaming
+				await this.executeParallelStreaming(
 					root,
-					pendingLeaves as TaskNode<T>[],
+					pendingLeafIds,
 					getExecutor,
 					abortController,
 					concurrency
@@ -264,7 +282,7 @@ export class TaskManager<T = unknown> {
 			}
 
 			// Update final status
-			await this.updateRootStatus(root);
+			await this.updateRootStatusFinal(root);
 
 			return root;
 		} finally {
@@ -274,15 +292,16 @@ export class TaskManager<T = unknown> {
 	}
 
 	/**
-	 * Execute leaves serially (one by one)
+	 * Execute leaves serially with streaming (one by one, load on demand)
+	 * Memory efficient: only loads one node at a time
 	 */
-	private async executeSerial(
+	private async executeSerialStreaming(
 		root: TaskRoot,
-		leaves: TaskNode<T>[],
+		leafIds: string[],
 		getExecutor: (name?: string) => TaskExecutor<T>,
 		abortController: AbortController
 	): Promise<void> {
-		for (const leaf of leaves) {
+		for (const leafId of leafIds) {
 			// Check if paused or cancelled
 			const currentStatus = root.status as TaskStatus;
 			if (currentStatus === 'paused' || currentStatus === 'cancelled') {
@@ -294,28 +313,30 @@ export class TaskManager<T = unknown> {
 				break;
 			}
 
-			await this.executeLeaf(root, leaf, getExecutor(leaf.executor), abortController.signal);
+			// Load node on demand (memory efficient)
+			const leaf = (await this.storage.getNode(leafId)) as TaskNode<T> | null;
+			if (!leaf) continue;
 
-			// Refresh root to get updated stats
-			const updatedRoot = await this.storage.getRoot(root.id);
-			if (updatedRoot) {
-				Object.assign(root, updatedRoot);
-			}
+			// Skip already completed/failed
+			if (leaf.status === 'completed' || leaf.status === 'failed') continue;
+
+			await this.executeLeaf(root, leaf, getExecutor(leaf.executor), abortController.signal);
 		}
 	}
 
 	/**
-	 * Execute leaves in parallel with concurrency limit
+	 * Execute leaves in parallel with streaming and concurrency limit
+	 * Memory efficient: only loads nodes as needed, limits concurrent nodes in memory
 	 */
-	private async executeParallel(
+	private async executeParallelStreaming(
 		root: TaskRoot,
-		leaves: TaskNode<T>[],
+		leafIds: string[],
 		getExecutor: (name?: string) => TaskExecutor<T>,
 		abortController: AbortController,
 		concurrency: number
 	): Promise<void> {
-		// Use a semaphore-like approach with Promise pool
-		const queue = [...leaves];
+		// Use ID queue instead of object queue to save memory
+		const queue = [...leafIds];
 		const executing = new Set<Promise<void>>();
 
 		const runNext = async (): Promise<void> => {
@@ -339,23 +360,20 @@ export class TaskManager<T = unknown> {
 				// Double-check after waiting
 				if (queue.length === 0) return;
 
-				const leaf = queue.shift()!;
-				const promise = this.executeLeaf(
-					root,
-					leaf,
-					getExecutor(leaf.executor),
-					abortController.signal
-				)
-					.then(async () => {
-						// Refresh root to get updated stats
-						const updatedRoot = await this.storage.getRoot(root.id);
-						if (updatedRoot) {
-							Object.assign(root, updatedRoot);
-						}
-					})
-					.finally(() => {
-						executing.delete(promise);
-					});
+				const leafId = queue.shift()!;
+
+				const promise = (async () => {
+					// Load node on demand (memory efficient)
+					const leaf = (await this.storage.getNode(leafId)) as TaskNode<T> | null;
+					if (!leaf) return;
+
+					// Skip already completed/failed
+					if (leaf.status === 'completed' || leaf.status === 'failed') return;
+
+					await this.executeLeaf(root, leaf, getExecutor(leaf.executor), abortController.signal);
+				})().finally(() => {
+					executing.delete(promise);
+				});
 
 				executing.add(promise);
 			}
@@ -474,39 +492,40 @@ export class TaskManager<T = unknown> {
 	}
 
 	/**
-	 * Update root progress based on leaves
+	 * Update root progress based on stats (memory efficient)
+	 * Uses the already-tracked stats instead of loading all leaves
 	 */
 	private async updateRootProgress(root: TaskRoot): Promise<void> {
-		const leaves = await this.storage.getLeaves(root.id);
-		const totalProgress = leaves.reduce((sum, leaf) => sum + leaf.progress, 0);
-		root.progress = leaves.length > 0 ? Math.round(totalProgress / leaves.length) : 0;
+		// Calculate progress from stats (no need to load all leaves)
+		const { total, completed, failed } = root.stats;
+		const processed = completed + failed;
+		root.progress = total > 0 ? Math.round((processed / total) * 100) : 0;
 		root.updatedAt = Date.now();
 		await this.storage.saveRoot(root);
 	}
 
 	/**
-	 * Update root status based on leaves
+	 * Update root status at the end of execution
+	 * Uses stats to determine final status (memory efficient)
 	 */
-	private async updateRootStatus(root: TaskRoot): Promise<void> {
-		const leaves = await this.storage.getLeaves(root.id);
-
-		const allCompleted = leaves.every((l) => l.status === 'completed');
-		const allFailed = leaves.every((l) => l.status === 'failed');
-		const anyFailed = leaves.some((l) => l.status === 'failed');
-		const anyCompleted = leaves.some((l) => l.status === 'completed');
+	private async updateRootStatusFinal(root: TaskRoot): Promise<void> {
+		const { total, completed, failed } = root.stats;
 
 		if (root.status === 'paused' || root.status === 'cancelled') {
 			// Keep current status
-		} else if (allCompleted) {
+		} else if (completed === total) {
 			root.status = 'completed';
 			root.completedAt = Date.now();
-		} else if (allFailed) {
+		} else if (failed === total) {
 			root.status = 'failed';
-		} else if (anyFailed && anyCompleted) {
+		} else if (failed > 0 && completed > 0) {
 			root.status = 'failed'; // Partial failure
 			root.completedAt = Date.now();
+		} else if (failed > 0) {
+			root.status = 'failed';
 		}
 
+		root.progress = total > 0 ? Math.round(((completed + failed) / total) * 100) : 0;
 		root.updatedAt = Date.now();
 		await this.storage.saveRoot(root);
 	}
@@ -683,8 +702,12 @@ export class TaskManager<T = unknown> {
 	/**
 	 * Recompute and update the Merkle root
 	 * Call this after modifying leaf data
+	 * Returns null immediately if skipMerkle is configured
 	 */
 	async updateMerkleRoot(taskId: string): Promise<string | null> {
+		// Skip if Merkle computation is disabled
+		if (this.config.skipMerkle) return null;
+
 		const root = await this.storage.getRoot(taskId);
 		if (!root) return null;
 
@@ -791,6 +814,10 @@ export class TaskManager<T = unknown> {
 	 */
 	async clear(): Promise<void> {
 		await this.storage.clear();
+		// Terminate worker if it was used
+		if (this.config.useWorker) {
+			terminateWorker();
+		}
 	}
 }
 

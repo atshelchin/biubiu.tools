@@ -82,6 +82,20 @@ export {
 } from './merkle';
 
 // ============================================================================
+// Web Worker Utilities
+// ============================================================================
+
+export {
+	// Worker management
+	terminateWorker,
+	isWorkerSupported,
+	// Async APIs
+	computeHashesInWorker,
+	buildRootInWorker,
+	computeMerkleInWorker
+} from './merkle-worker-manager';
+
+// ============================================================================
 // Svelte Store
 // ============================================================================
 

@@ -70,6 +70,47 @@ export class MemoryStorage implements StorageAdapter {
 			.map((n) => ({ ...n }));
 	}
 
+	async getLeafCount(rootId: string): Promise<number> {
+		let count = 0;
+		for (const node of this.nodes.values()) {
+			if (node.rootId === rootId && node.isLeaf) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	async getPendingLeafCount(rootId: string): Promise<number> {
+		let count = 0;
+		for (const node of this.nodes.values()) {
+			if (
+				node.rootId === rootId &&
+				node.isLeaf &&
+				node.status !== 'completed' &&
+				node.status !== 'failed'
+			) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+	async getLeafIds(rootId: string): Promise<string[]> {
+		return Array.from(this.nodes.values())
+			.filter((n) => n.rootId === rootId && n.isLeaf)
+			.sort((a, b) => a.index - b.index)
+			.map((n) => n.id);
+	}
+
+	async getPendingLeafIds(rootId: string): Promise<string[]> {
+		return Array.from(this.nodes.values())
+			.filter(
+				(n) => n.rootId === rootId && n.isLeaf && n.status !== 'completed' && n.status !== 'failed'
+			)
+			.sort((a, b) => a.index - b.index)
+			.map((n) => n.id);
+	}
+
 	async deleteNodesByRoot(rootId: string): Promise<void> {
 		for (const [id, node] of this.nodes) {
 			if (node.rootId === rootId) {

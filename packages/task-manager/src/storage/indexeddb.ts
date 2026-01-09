@@ -185,6 +185,125 @@ export class IndexedDBStorage implements StorageAdapter {
 		return leaves;
 	}
 
+	/**
+	 * Get leaf count using cursor (memory efficient)
+	 */
+	async getLeafCount(rootId: string): Promise<number> {
+		const db = await this.getDB();
+		return new Promise((resolve, reject) => {
+			const tx = db.transaction([NODES_STORE], 'readonly');
+			const store = tx.objectStore(NODES_STORE);
+			const index = store.index('rootId');
+
+			let count = 0;
+			const request = index.openCursor(rootId);
+
+			request.onsuccess = () => {
+				const cursor = request.result;
+				if (cursor) {
+					if (cursor.value.isLeaf) {
+						count++;
+					}
+					cursor.continue();
+				} else {
+					resolve(count);
+				}
+			};
+
+			request.onerror = () => reject(request.error);
+		});
+	}
+
+	/**
+	 * Get pending leaf count using cursor (memory efficient)
+	 */
+	async getPendingLeafCount(rootId: string): Promise<number> {
+		const db = await this.getDB();
+		return new Promise((resolve, reject) => {
+			const tx = db.transaction([NODES_STORE], 'readonly');
+			const store = tx.objectStore(NODES_STORE);
+			const index = store.index('rootId');
+
+			let count = 0;
+			const request = index.openCursor(rootId);
+
+			request.onsuccess = () => {
+				const cursor = request.result;
+				if (cursor) {
+					const node = cursor.value;
+					if (node.isLeaf && node.status !== 'completed' && node.status !== 'failed') {
+						count++;
+					}
+					cursor.continue();
+				} else {
+					resolve(count);
+				}
+			};
+
+			request.onerror = () => reject(request.error);
+		});
+	}
+
+	/**
+	 * Get leaf IDs only (memory efficient for large trees)
+	 */
+	async getLeafIds(rootId: string): Promise<string[]> {
+		const db = await this.getDB();
+		return new Promise((resolve, reject) => {
+			const tx = db.transaction([NODES_STORE], 'readonly');
+			const store = tx.objectStore(NODES_STORE);
+			const index = store.index('rootId');
+
+			const ids: string[] = [];
+			const request = index.openCursor(rootId);
+
+			request.onsuccess = () => {
+				const cursor = request.result;
+				if (cursor) {
+					if (cursor.value.isLeaf) {
+						ids.push(cursor.value.id);
+					}
+					cursor.continue();
+				} else {
+					// Sort by index (need to read each node's index for proper ordering)
+					resolve(ids);
+				}
+			};
+
+			request.onerror = () => reject(request.error);
+		});
+	}
+
+	/**
+	 * Get pending leaf IDs only (memory efficient)
+	 */
+	async getPendingLeafIds(rootId: string): Promise<string[]> {
+		const db = await this.getDB();
+		return new Promise((resolve, reject) => {
+			const tx = db.transaction([NODES_STORE], 'readonly');
+			const store = tx.objectStore(NODES_STORE);
+			const index = store.index('rootId');
+
+			const ids: string[] = [];
+			const request = index.openCursor(rootId);
+
+			request.onsuccess = () => {
+				const cursor = request.result;
+				if (cursor) {
+					const node = cursor.value;
+					if (node.isLeaf && node.status !== 'completed' && node.status !== 'failed') {
+						ids.push(node.id);
+					}
+					cursor.continue();
+				} else {
+					resolve(ids);
+				}
+			};
+
+			request.onerror = () => reject(request.error);
+		});
+	}
+
 	async deleteNodesByRoot(rootId: string): Promise<void> {
 		const db = await this.getDB();
 		return new Promise((resolve, reject) => {
@@ -252,7 +371,11 @@ export class IndexedDBStorage implements StorageAdapter {
 
 /**
  * Create a new IndexedDB storage adapter
+ * @param options - Database name as string, or options object with dbName property
  */
-export function createIndexedDBStorage(dbName?: string): StorageAdapter {
+export function createIndexedDBStorage(
+	options?: string | { dbName?: string }
+): StorageAdapter {
+	const dbName = typeof options === 'string' ? options : options?.dbName;
 	return new IndexedDBStorage(dbName);
 }

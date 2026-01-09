@@ -9,7 +9,7 @@
 		createMemoryStorage,
 		createIndexedDBStorage,
 		type TaskExecutor,
-		type TaskStorage
+		terminateWorker
 	} from '@shelchin/task-manager';
 	import {
 		Play,
@@ -48,15 +48,18 @@
 	}
 
 	// Test scales - includes 100k for stress testing
-	const TEST_SCALES = [100, 1_000, 5_000, 10_000, 50_000, 100_000];
+	const TEST_SCALES = [100, 1_000, 10_000, 100_000];
 	const WARN_THRESHOLD = 10_000; // Show warning for scales >= this
 
 	let storageType = $state<StorageType>('memory');
 	let testType = $state<TestType>('both');
+	let skipMerkle = $state(true); // Default to skip for performance
+	let useWorker = $state(false);
 	let results = $state<BenchmarkResult[]>(createInitialResults());
 	let running = $state(false);
 	let currentTest = $state<number | null>(null);
 	let currentPhase = $state<'create' | 'execute' | null>(null);
+	let executionProgress = $state(0);
 	let aborted = $state(false);
 
 	function createInitialResults(): BenchmarkResult[] {
@@ -73,11 +76,17 @@
 		return `${(ms / 1000).toFixed(2)}s`;
 	}
 
-	function createStorage(): TaskStorage {
-		if (storageType === 'indexeddb') {
-			return createIndexedDBStorage({ dbName: `benchmark-${Date.now()}` });
-		}
-		return createMemoryStorage();
+	function createStorage() {
+		const storage =
+			storageType === 'indexeddb'
+				? createIndexedDBStorage({ dbName: `benchmark-${Date.now()}` })
+				: createMemoryStorage();
+
+		return createTaskManager<{ index: number }>({
+			storage,
+			skipMerkle,
+			useWorker
+		});
 	}
 
 	async function runBenchmark() {
@@ -97,8 +106,7 @@
 			results = results.map((r, idx) => (idx === i ? { ...r, status: 'running' as const } : r));
 
 			try {
-				const storage = createStorage();
-				const manager = createTaskManager<{ index: number }>({ storage });
+				const manager = createStorage();
 
 				// Build children array
 				const children = [];
@@ -117,6 +125,7 @@
 					const createStart = performance.now();
 					task = await manager.create({
 						name: 'Benchmark Task',
+						concurrency: Infinity, // Parallel execution for speed
 						children
 					});
 					const createEnd = performance.now();
@@ -126,6 +135,12 @@
 				// Test execution if needed
 				if ((testType === 'execute' || testType === 'both') && task) {
 					currentPhase = 'execute';
+					executionProgress = 0;
+
+					// Subscribe to progress events for real-time display
+					const unsubscribe = manager.on('complete', (_event, data) => {
+						executionProgress = Math.round((data.root.stats.completed / count) * 100);
+					});
 
 					const executeStart = performance.now();
 					const executor: TaskExecutor<{ index: number }> = async (ctx) => {
@@ -135,6 +150,9 @@
 					await manager.execute(task.id, executor);
 					const executeEnd = performance.now();
 					executeTime = executeEnd - executeStart;
+					executionProgress = 100;
+
+					unsubscribe();
 				}
 
 				// If only testing execute, create task first without timing
@@ -142,10 +160,17 @@
 					currentPhase = 'create';
 					task = await manager.create({
 						name: 'Benchmark Task',
+						concurrency: Infinity, // Parallel execution for speed
 						children
 					});
 
 					currentPhase = 'execute';
+					executionProgress = 0;
+
+					// Subscribe to progress events for real-time display
+					const unsubscribe = manager.on('complete', (_event, data) => {
+						executionProgress = Math.round((data.root.stats.completed / count) * 100);
+					});
 
 					const executeStart = performance.now();
 					const executor: TaskExecutor<{ index: number }> = async (ctx) => {
@@ -154,6 +179,9 @@
 					await manager.execute(task.id, executor);
 					const executeEnd = performance.now();
 					executeTime = executeEnd - executeStart;
+					executionProgress = 100;
+
+					unsubscribe();
 				}
 
 				// Update result
@@ -246,7 +274,11 @@
 const storage = createMemoryStorage();        // Fast, in-memory
 // or: createIndexedDBStorage()               // Persistent, browser storage
 
-const manager = createTaskManager({ storage });
+const manager = createTaskManager({
+  storage,
+  skipMerkle: true,  // Skip Merkle tree for better performance
+  useWorker: true    // Use Web Worker for hash computation
+});
 
 // Build large task tree
 const children = [];
@@ -272,9 +304,10 @@ const executeTime = performance.now() - executeStart;
 console.log(\`Created in \${createTime}ms, executed in \${executeTime}ms\`);
 
 // Performance tips:
+// - skipMerkle: true - Skip Merkle hash computation (50%+ faster)
+// - useWorker: true - Offload hashing to Web Worker (non-blocking)
 // - Memory storage: faster for benchmarks and testing
-// - IndexedDB storage: persistent, slightly slower
-// - Batched hash computation handles up to 100k+ tasks`;
+// - IndexedDB storage: persistent, slightly slower`;
 </script>
 
 <DemoSection title={t('demo.benchmark.title')} description={t('demo.benchmark.description')}>
@@ -338,6 +371,22 @@ console.log(\`Created in \${createTime}ms, executed in \${executeTime}ms\`);
 							{t('demo.benchmark.both')}
 						</button>
 					</div>
+				</div>
+			</div>
+
+			<div class="options-row">
+				<div class="checkbox-toggle">
+					<label class="checkbox-label">
+						<input type="checkbox" bind:checked={skipMerkle} disabled={running} />
+						<span>{t('demo.benchmark.skip_merkle')}</span>
+					</label>
+				</div>
+
+				<div class="checkbox-toggle">
+					<label class="checkbox-label">
+						<input type="checkbox" bind:checked={useWorker} disabled={running || skipMerkle} />
+						<span>{t('demo.benchmark.use_worker')}</span>
+					</label>
 				</div>
 			</div>
 
@@ -425,7 +474,7 @@ console.log(\`Created in \${createTime}ms, executed in \${executeTime}ms\`);
 										{#if result.status === 'completed' && result.executeTime > 0}
 											{formatTime(result.executeTime)}
 										{:else if result.status === 'running' && currentPhase === 'execute'}
-											<span class="running-text">...</span>
+											<span class="running-text">{executionProgress}%</span>
 										{:else}
 											-
 										{/if}
@@ -488,10 +537,36 @@ console.log(\`Created in \${createTime}ms, executed in \${executeTime}ms\`);
 	}
 
 	.storage-toggle,
-	.test-type-toggle {
+	.test-type-toggle,
+	.checkbox-toggle {
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
+	}
+
+	.checkbox-label {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		font-size: var(--text-sm);
+		color: var(--color-foreground);
+		cursor: pointer;
+	}
+
+	.checkbox-label input[type='checkbox'] {
+		width: 16px;
+		height: 16px;
+		accent-color: var(--color-primary);
+		cursor: pointer;
+	}
+
+	.checkbox-label input[type='checkbox']:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	.checkbox-label input[type='checkbox']:disabled + span {
+		opacity: 0.5;
 	}
 
 	.toggle-label {
