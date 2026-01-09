@@ -51,7 +51,9 @@ function getZodIssues(error?: ZodError): ZodIssue[] {
  * 处理 symbol 类型（Zod 4 可能使用 symbol 作为路径）
  */
 function pathToString(path: PropertyKey[]): string {
-	return path.map((p) => (typeof p === 'symbol' ? p.description || String(p) : String(p))).join('.');
+	return path
+		.map((p) => (typeof p === 'symbol' ? p.description || String(p) : String(p)))
+		.join('.');
 }
 
 /**
@@ -140,7 +142,9 @@ export function zodValidator<T = FieldValue>(
  * @param schema - Zod object schema
  * @returns 返回表单验证器对象
  */
-export function zodFormValidator<T extends Record<string, FieldValue>>(schema: ZodSchema<T>): {
+export function zodFormValidator<T extends Record<string, FieldValue>>(
+	schema: ZodSchema<T>
+): {
 	validateForm: (values: T) => Promise<Record<string, FieldError>>;
 	validateField: (field: keyof T, values: T) => Promise<FieldError>;
 } {
@@ -200,7 +204,9 @@ export function zodFormValidator<T extends Record<string, FieldValue>>(schema: Z
  * );
  * ```
  */
-export function composeZodValidators<T = FieldValue>(...validators: IValidator<T>[]): IValidator<T> {
+export function composeZodValidators<T = FieldValue>(
+	...validators: IValidator<T>[]
+): IValidator<T> {
 	return {
 		validate: async (value: T, allValues: Record<string, FieldValue>): Promise<FieldError> => {
 			for (const validator of validators) {

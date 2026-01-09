@@ -142,11 +142,15 @@ export const FormWarnings = {
 	},
 
 	validatorThrewError(path: string, error: unknown) {
-		DevWarnings.error(WarningCodes.VALIDATOR_THREW_ERROR, `Validator for field "${path}" threw an error.`, {
-			field: path,
-			error: error instanceof Error ? error.message : String(error),
-			stack: error instanceof Error ? error.stack : undefined
-		});
+		DevWarnings.error(
+			WarningCodes.VALIDATOR_THREW_ERROR,
+			`Validator for field "${path}" threw an error.`,
+			{
+				field: path,
+				error: error instanceof Error ? error.message : String(error),
+				stack: error instanceof Error ? error.stack : undefined
+			}
+		);
 	},
 
 	asyncValidatorWithoutFlag(path: string) {
@@ -158,10 +162,14 @@ export const FormWarnings = {
 	},
 
 	arrayPathNotArray(path: string, actualType: string) {
-		DevWarnings.error(WarningCodes.ARRAY_PATH_NOT_ARRAY, `Expected array at path "${path}" but got ${actualType}.`, {
-			path,
-			actualType
-		});
+		DevWarnings.error(
+			WarningCodes.ARRAY_PATH_NOT_ARRAY,
+			`Expected array at path "${path}" but got ${actualType}.`,
+			{
+				path,
+				actualType
+			}
+		);
 	},
 
 	arrayIndexOutOfBounds(path: string, index: number, length: number) {

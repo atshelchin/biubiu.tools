@@ -4,7 +4,14 @@
  */
 
 import { describe, it, expectTypeOf } from 'vitest';
-import type { Path, PathValue, ArrayPath, ArrayPathValue, LeafPath, DeepPartial } from './path-types';
+import type {
+	Path,
+	PathValue,
+	ArrayPath,
+	ArrayPathValue,
+	LeafPath,
+	DeepPartial
+} from './path-types';
 
 // 测试用的复杂表单类型
 interface TestFormValues {

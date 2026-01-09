@@ -443,9 +443,7 @@ describe('useFormState', () => {
 			const onSubmit = vi.fn();
 			await form.submit(onSubmit);
 
-			expect(onSubmit).toHaveBeenCalledWith(
-				expect.objectContaining({ name: 'John' })
-			);
+			expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({ name: 'John' }));
 
 			form.destroy();
 		});

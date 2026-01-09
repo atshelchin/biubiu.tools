@@ -213,8 +213,12 @@ export class FormStateManager implements IFormStateManager {
 		});
 
 		// 计算新索引并收集所有需要重新映射的路径
-		const remapped: Array<{ oldPath: string; newPath: string; oldIndex: number; newIndex: number }> =
-			[];
+		const remapped: Array<{
+			oldPath: string;
+			newPath: string;
+			oldIndex: number;
+			newIndex: number;
+		}> = [];
 
 		for (const oldPath of affectedPaths) {
 			const oldIndex = parseInt(oldPath.match(/\[(\d+)\]/)?.[1] || '0');

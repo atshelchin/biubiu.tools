@@ -77,7 +77,10 @@ export type Path<T, D extends number = 5> = [D] extends [never]
 						[K in keyof T & string]: T[K] extends Primitive
 							? K
 							: T[K] extends Array<infer E>
-								? K | `${K}.${number}` | (E extends Primitive ? never : `${K}.${number}.${Path<E, Prev<D>>}`)
+								?
+										| K
+										| `${K}.${number}`
+										| (E extends Primitive ? never : `${K}.${number}.${Path<E, Prev<D>>}`)
 								: IsObject<T[K]> extends true
 									? K | `${K}.${Path<T[K], Prev<D>>}`
 									: K;
@@ -184,4 +187,5 @@ export type ArrayPath<T, D extends number = 5> = [D] extends [never]
 /**
  * 辅助类型：获取数组路径对应的元素类型
  */
-export type ArrayPathValue<T, P extends string> = PathValue<T, P> extends Array<infer E> ? E : never;
+export type ArrayPathValue<T, P extends string> =
+	PathValue<T, P> extends Array<infer E> ? E : never;

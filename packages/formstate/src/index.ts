@@ -155,7 +155,11 @@ export type { FormState } from './adapters/svelte/useFormState.svelte';
  * ```
  */
 export { useTypedFormState } from './adapters/svelte/useTypedFormState.svelte';
-export type { TypedFormConfig, TypedFormStateOptions, TypedFormState } from './adapters/svelte/useTypedFormState.svelte';
+export type {
+	TypedFormConfig,
+	TypedFormStateOptions,
+	TypedFormState
+} from './adapters/svelte/useTypedFormState.svelte';
 
 // ============================================================
 // Svelte Components (Headless)
@@ -210,4 +214,10 @@ export { safeStringify, safeParse, canSerialize, cloneViaSerialization } from '.
 export { debug, enableDebug, disableDebug } from './utils/debug';
 
 /** Development warnings and assertions */
-export { DevWarnings, FormWarnings, WarningCodes, devAssert, checkPerformance } from './utils/warnings';
+export {
+	DevWarnings,
+	FormWarnings,
+	WarningCodes,
+	devAssert,
+	checkPerformance
+} from './utils/warnings';

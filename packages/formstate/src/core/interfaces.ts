@@ -130,10 +130,7 @@ export interface IFormStateManager {
 
 	// Watch API (P2: 监听特定字段变化)
 	watch(path: FieldPath, callback: (value: FieldValue, prevValue: FieldValue) => void): () => void;
-	watch(
-		paths: FieldPath[],
-		callback: (values: Record<FieldPath, FieldValue>) => void
-	): () => void;
+	watch(paths: FieldPath[], callback: (values: Record<FieldPath, FieldValue>) => void): () => void;
 
 	// 持久化
 	serialize(): string;
