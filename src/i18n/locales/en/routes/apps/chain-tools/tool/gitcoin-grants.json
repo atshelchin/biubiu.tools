@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Gitcoin Grants - Quadratic Funding Platform",
+		"description": "Gitcoin Grants uses quadratic funding to support public goods and open source projects. Donate and get your contribution matched.",
+		"keywords": "Gitcoin Grants, quadratic funding, grants, public goods, open source, matching"
+	},
+	"overview": "Gitcoin Grants is the flagship funding platform using quadratic funding to democratically allocate resources to public goods. Small donations from many contributors receive more matching than large donations from few.\n\nThe platform runs regular grant rounds where projects across different categories compete for matching funds. Categories include climate, Web3 infrastructure, education, and more. The matching pool comes from sponsors and the Gitcoin treasury.\n\nPowered by the Grants Stack and Allo Protocol, anyone can now run their own quadratic funding rounds. Over $50M has been distributed through Gitcoin Grants.",
+	"features": {
+		"1": {
+			"title": "Quadratic Funding",
+			"description": "Democratic matching algorithm"
+		},
+		"2": {
+			"title": "Grant Rounds",
+			"description": "Regular funding cycles"
+		},
+		"3": {
+			"title": "Category Pools",
+			"description": "Climate, OSS, Web3, more"
+		},
+		"4": {
+			"title": "Matching Estimation",
+			"description": "See impact of donation"
+		},
+		"5": {
+			"title": "Grants Stack",
+			"description": "Run your own rounds"
+		},
+		"6": {
+			"title": "Multi-chain",
+			"description": "Donate on various chains"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Donate to Projects",
+			"description": "Support public goods"
+		},
+		"2": {
+			"title": "Apply for Grants",
+			"description": "Get funding for your project"
+		},
+		"3": {
+			"title": "Run Grant Rounds",
+			"description": "Fund your ecosystem"
+		},
+		"4": {
+			"title": "Explore Projects",
+			"description": "Discover open source work"
+		},
+		"5": {
+			"title": "Track Impact",
+			"description": "See funding distribution"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does quadratic funding work?",
+			"answer": "Quadratic funding weighs the number of contributors more than amount. A $1 donation from 100 people gets more matching than $100 from 1 person. It amplifies projects with broad community support."
+		},
+		"2": {
+			"question": "When are grant rounds?",
+			"answer": "Gitcoin runs quarterly grant rounds (GG rounds). Each round has different categories and matching pools. Follow Gitcoin on Twitter or join Discord for round announcements."
+		},
+		"3": {
+			"question": "How do I apply for a grant?",
+			"answer": "Create a project profile on Gitcoin, provide details about your work, and apply during an open grant round. Your project will be reviewed before being included in the round."
+		},
+		"4": {
+			"question": "What is the minimum donation?",
+			"answer": "You can donate any amount. Even $1 donations contribute to the matching calculation. Your donation is matched based on how many others also donate to that project."
+		},
+		"5": {
+			"question": "Can I run my own grant round?",
+			"answer": "Yes. Gitcoin's Grants Stack lets anyone run quadratic funding rounds. Many ecosystems (Arbitrum, Optimism, etc.) use it for their grant programs. Documentation is available on docs.gitcoin.co."
+		}
+	},
+	"cta": {
+		"ready": "Ready to fund public goods?",
+		"button": "Explore Gitcoin Grants",
+		"note": "Quadratic funding for all"
+	}
+}

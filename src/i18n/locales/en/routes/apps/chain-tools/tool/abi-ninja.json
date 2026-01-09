@@ -1,0 +1,75 @@
+{
+	"seo": {
+		"title": "ABI Ninja - Smart Contract Interaction Tool",
+		"description": "ABI Ninja lets you interact with any smart contract using its ABI. Read contract data, write transactions, and explore functions without code.",
+		"keywords": "ABI Ninja, smart contract, ABI, interact, read, write, Ethereum, blockchain"
+	},
+	"overview": "ABI Ninja is a user-friendly tool for interacting with smart contracts directly in your browser. Simply paste a contract address or ABI, and you can read data and execute functions without writing any code.\n\nBuilt by BuidlGuidl, it automatically fetches verified ABIs from Etherscan and supports multiple networks. Perfect for developers testing contracts, researchers exploring protocols, or users executing admin functions.\n\nThe tool visualizes contract functions clearly, handles type encoding/decoding automatically, and connects to your wallet for write operations.",
+	"features": {
+		"1": {
+			"title": "Auto ABI Fetch",
+			"description": "Gets verified ABIs from Etherscan"
+		},
+		"2": {
+			"title": "Multi-Network",
+			"description": "Supports all major EVM chains"
+		},
+		"3": {
+			"title": "Read Functions",
+			"description": "Query contract state"
+		},
+		"4": {
+			"title": "Write Functions",
+			"description": "Execute transactions"
+		},
+		"5": {
+			"title": "Type Handling",
+			"description": "Auto encode/decode params"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Test Contracts",
+			"description": "Debug deployed contracts"
+		},
+		"2": {
+			"title": "Explore Protocols",
+			"description": "Research DeFi internals"
+		},
+		"3": {
+			"title": "Admin Operations",
+			"description": "Execute owner functions"
+		},
+		"4": {
+			"title": "Verify Deployments",
+			"description": "Check contract state"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Do I need to know the ABI?",
+			"answer": "Not always. ABI Ninja can fetch verified ABIs from Etherscan automatically. Just paste the contract address. For unverified contracts, you'll need to provide the ABI JSON."
+		},
+		"2": {
+			"question": "Which networks are supported?",
+			"answer": "ABI Ninja supports Ethereum mainnet, Arbitrum, Optimism, Base, Polygon, BSC, and other popular EVM chains. You can switch networks using the dropdown."
+		},
+		"3": {
+			"question": "Is it safe to use?",
+			"answer": "Yes. ABI Ninja is a client-side tool that connects to your wallet. It doesn't store private keys. Always verify transaction details in your wallet before confirming."
+		},
+		"4": {
+			"question": "Can I save contract addresses?",
+			"answer": "Yes. ABI Ninja can save your frequently used contracts locally. You can also share contract links with others for quick access to specific functions."
+		},
+		"5": {
+			"question": "Who built ABI Ninja?",
+			"answer": "ABI Ninja was built by BuidlGuidl, a community of Ethereum builders. It's open source and free to use. The tool was created to make contract interaction accessible to everyone."
+		}
+	},
+	"cta": {
+		"ready": "Ready to interact with contracts?",
+		"button": "Open ABI Ninja",
+		"note": "No code required"
+	}
+}

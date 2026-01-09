@@ -208,6 +208,8 @@ import { capsuleDetail } from './capsule';
 import { portalDetail } from './portal';
 import { reownDetail } from './reown';
 import { litDetail } from './lit';
+import { abiNinjaDetail } from './abi-ninja';
+import { gitcoinGrantsDetail } from './gitcoin-grants';
 
 /**
  * All tool details mapped by tool ID
@@ -412,7 +414,9 @@ export const toolDetails: Record<string, ToolDetail> = {
 	capsule: capsuleDetail,
 	portal: portalDetail,
 	reown: reownDetail,
-	lit: litDetail
+	lit: litDetail,
+	'abi-ninja': abiNinjaDetail,
+	'gitcoin-grants': gitcoinGrantsDetail
 };
 
 /**
