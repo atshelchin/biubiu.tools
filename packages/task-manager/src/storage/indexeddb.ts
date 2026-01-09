@@ -447,6 +447,10 @@ export class IndexedDBStorage implements StorageAdapter {
 
 	/**
 	 * Get pending leaf IDs only (memory efficient)
+	 * Includes 'pending', 'running', and 'paused' statuses for recovery:
+	 * - pending: not started yet
+	 * - running: may have crashed mid-execution, needs re-execution
+	 * - paused: was paused, can be resumed
 	 */
 	async getPendingLeafIds(rootId: string): Promise<string[]> {
 		return this.withRetry(
@@ -463,7 +467,14 @@ export class IndexedDBStorage implements StorageAdapter {
 						const cursor = request.result;
 						if (cursor) {
 							const node = cursor.value;
-							if (node.isLeaf && node.status !== 'completed' && node.status !== 'failed') {
+							// Include pending, running (crashed), and paused statuses
+							// Exclude completed, failed, and cancelled
+							if (
+								node.isLeaf &&
+								node.status !== 'completed' &&
+								node.status !== 'failed' &&
+								node.status !== 'cancelled'
+							) {
 								ids.push(node.id);
 							}
 							cursor.continue();
@@ -496,6 +507,110 @@ export class IndexedDBStorage implements StorageAdapter {
 
 					tx.oncomplete = () => resolve();
 					tx.onerror = () => reject(tx.error);
+				})
+		);
+	}
+
+	// =========================================================================
+	// Atomic Operations (for data integrity)
+	// =========================================================================
+
+	/**
+	 * Atomically save root with all its nodes in a single transaction
+	 * This prevents partial saves if browser crashes mid-operation
+	 *
+	 * For large node counts (>1000), uses batched transactions to avoid
+	 * IndexedDB transaction timeout. Each batch is atomic, but the overall
+	 * operation is not. Use verifyIntegrity() to check for partial saves.
+	 */
+	async saveRootWithNodes(root: TaskRoot, nodes: TaskNode[]): Promise<void> {
+		// For small batches, use single atomic transaction
+		if (nodes.length <= 1000) {
+			return this.withRetry(
+				(db) =>
+					new Promise((resolve, reject) => {
+						const tx = db.transaction([ROOTS_STORE, NODES_STORE], 'readwrite');
+						const rootsStore = tx.objectStore(ROOTS_STORE);
+						const nodesStore = tx.objectStore(NODES_STORE);
+
+						tx.oncomplete = () => resolve();
+						tx.onerror = () => reject(tx.error);
+						tx.onabort = () => reject(tx.error || new Error('Transaction aborted'));
+
+						rootsStore.put(root);
+						for (const node of nodes) {
+							nodesStore.put(node);
+						}
+					})
+			);
+		}
+
+		// For large batches, save in chunks to avoid transaction timeout
+		// First save root, then save nodes in batches
+		// Mark root as 'creating' status to detect incomplete saves
+		const tempRoot = { ...root, metadata: { ...root.metadata, _creating: true } };
+		await this.saveRoot(tempRoot);
+
+		// Save nodes in batches
+		const BATCH_SIZE = 1000;
+		for (let i = 0; i < nodes.length; i += BATCH_SIZE) {
+			const batch = nodes.slice(i, i + BATCH_SIZE);
+			await this.saveNodes(batch);
+		}
+
+		// Mark root as complete (remove _creating flag)
+		const finalRoot = { ...root };
+		if (finalRoot.metadata) {
+			delete finalRoot.metadata._creating;
+		}
+		await this.saveRoot(finalRoot);
+	}
+
+	/**
+	 * Atomically delete root and all its nodes in a single transaction
+	 * This prevents orphaned nodes if browser crashes mid-operation
+	 */
+	async deleteRootWithNodes(rootId: string): Promise<void> {
+		return this.withRetry(
+			(db) =>
+				new Promise((resolve, reject) => {
+					const tx = db.transaction([ROOTS_STORE, NODES_STORE], 'readwrite');
+					const rootsStore = tx.objectStore(ROOTS_STORE);
+					const nodesStore = tx.objectStore(NODES_STORE);
+					const nodesIndex = nodesStore.index('rootId');
+
+					tx.oncomplete = () => resolve();
+					tx.onerror = () => reject(tx.error);
+					tx.onabort = () => reject(tx.error || new Error('Transaction aborted'));
+
+					// Delete all nodes for this root
+					const cursorRequest = nodesIndex.openCursor(rootId);
+					cursorRequest.onsuccess = () => {
+						const cursor = cursorRequest.result;
+						if (cursor) {
+							cursor.delete();
+							cursor.continue();
+						}
+					};
+
+					// Delete the root
+					rootsStore.delete(rootId);
+				})
+		);
+	}
+
+	/**
+	 * Get all nodes across all roots (for orphan detection)
+	 */
+	async getAllNodes(): Promise<TaskNode[]> {
+		return this.withRetry(
+			(db) =>
+				new Promise((resolve, reject) => {
+					const tx = db.transaction([NODES_STORE], 'readonly');
+					const store = tx.objectStore(NODES_STORE);
+					const request = store.getAll();
+					request.onsuccess = () => resolve(request.result || []);
+					request.onerror = () => reject(request.error);
 				})
 		);
 	}

@@ -105,10 +105,50 @@ export class MemoryStorage implements StorageAdapter {
 	async getPendingLeafIds(rootId: string): Promise<string[]> {
 		return Array.from(this.nodes.values())
 			.filter(
-				(n) => n.rootId === rootId && n.isLeaf && n.status !== 'completed' && n.status !== 'failed'
+				(n) =>
+					n.rootId === rootId &&
+					n.isLeaf &&
+					n.status !== 'completed' &&
+					n.status !== 'failed' &&
+					n.status !== 'cancelled'
 			)
 			.sort((a, b) => a.index - b.index)
 			.map((n) => n.id);
+	}
+
+	// =========================================================================
+	// Atomic Operations (for data integrity)
+	// =========================================================================
+
+	/**
+	 * Atomically save root with all its nodes
+	 */
+	async saveRootWithNodes(root: TaskRoot, nodes: TaskNode[]): Promise<void> {
+		// Memory storage is naturally atomic (single-threaded JS)
+		this.roots.set(root.id, { ...root });
+		for (const node of nodes) {
+			this.nodes.set(node.id, { ...node });
+		}
+	}
+
+	/**
+	 * Atomically delete root and all its nodes
+	 */
+	async deleteRootWithNodes(rootId: string): Promise<void> {
+		// Delete nodes first, then root
+		for (const [id, node] of this.nodes) {
+			if (node.rootId === rootId) {
+				this.nodes.delete(id);
+			}
+		}
+		this.roots.delete(rootId);
+	}
+
+	/**
+	 * Get all nodes across all roots (for orphan detection)
+	 */
+	async getAllNodes(): Promise<TaskNode[]> {
+		return Array.from(this.nodes.values()).map((n) => ({ ...n }));
 	}
 
 	async deleteNodesByRoot(rootId: string): Promise<void> {

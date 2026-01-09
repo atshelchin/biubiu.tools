@@ -296,3 +296,179 @@ When updating large amounts of reactive data, use batch operations to prevent UI
 - ✅ `state.addItems(items)` - single reactive update
 
 Always provide batch methods in state stores for bulk operations.
+
+## IndexedDB Best Practices
+
+When working with IndexedDB for persistent storage, follow these guidelines to ensure data reliability:
+
+### 1. Always Use Atomic Transactions
+
+When saving related data (e.g., parent + children), use a single transaction to prevent partial saves:
+
+```typescript
+// ❌ BAD: Non-atomic save - can leave orphaned data if browser crashes
+await saveRoot(root);
+await saveNodes(nodes); // If this fails, root exists but nodes don't
+
+// ✅ GOOD: Atomic save - all or nothing
+async saveRootWithNodes(root: TaskRoot, nodes: TaskNode[]): Promise<void> {
+  const tx = db.transaction(['roots', 'nodes'], 'readwrite');
+  tx.objectStore('roots').put(root);
+  for (const node of nodes) {
+    tx.objectStore('nodes').put(node);
+  }
+  await new Promise((resolve, reject) => {
+    tx.oncomplete = resolve;
+    tx.onerror = () => reject(tx.error);
+  });
+}
+```
+
+### 2. Handle Connection Recovery
+
+IndexedDB connections can become stale. Implement automatic retry:
+
+```typescript
+// Configuration
+const MAX_RETRIES = 3;
+const RETRY_DELAY_MS = 100;
+const OPEN_TIMEOUT_MS = 5000;
+
+// Retry wrapper for all operations
+private async withRetry<R>(operation: (db: IDBDatabase) => Promise<R>): Promise<R> {
+  for (let attempt = 0; attempt < MAX_RETRIES; attempt++) {
+    try {
+      const db = await this.getDB();
+      return await operation(db);
+    } catch (error) {
+      if (isConnectionError(error) && attempt < MAX_RETRIES - 1) {
+        this.resetConnection();
+        await new Promise(r => setTimeout(r, RETRY_DELAY_MS * (attempt + 1)));
+        continue;
+      }
+      throw error;
+    }
+  }
+}
+```
+
+### 3. Validate Database Name Parameters
+
+Always validate that the database name is a string to prevent `[Object object]` database names:
+
+```typescript
+// ❌ BAD: Can create database named "[Object object]"
+constructor(options: { dbName?: string }) {
+  this.dbName = options.dbName; // If options is passed incorrectly
+}
+
+// ✅ GOOD: Validate input type
+export function createIndexedDBStorage(options?: string | { dbName?: string }): StorageAdapter {
+  const dbName = typeof options === 'string' ? options : options?.dbName ?? 'DefaultDB';
+  return new IndexedDBStorage(dbName);
+}
+```
+
+### 4. Handle All Database Events
+
+Listen for connection issues:
+
+```typescript
+db.onclose = () => {
+  console.warn('Database closed unexpectedly');
+  this.resetConnection();
+};
+
+db.onversionchange = () => {
+  console.warn('Database version changed (another tab upgraded)');
+  this.resetConnection();
+};
+
+request.onblocked = () => {
+  console.warn('Database blocked by another connection');
+};
+```
+
+### 5. Implement Data Integrity Checks
+
+Provide methods to verify and repair data:
+
+```typescript
+// Verify stats match actual data
+async verifyIntegrity(taskId: string): Promise<IntegrityCheckResult> {
+  const root = await this.getRoot(taskId);
+  const nodes = await this.getNodes(taskId);
+  const actualCompleted = nodes.filter(n => n.status === 'completed').length;
+
+  if (root.stats.completed !== actualCompleted) {
+    issues.push('Stats mismatch detected');
+  }
+  return { valid: issues.length === 0, issues };
+}
+
+// Repair stats from actual data
+async repairStats(taskId: string): Promise<boolean> {
+  // Recalculate stats from node states
+}
+
+// Clean up orphaned data
+async cleanupOrphanedData(): Promise<number> {
+  // Find nodes without valid root, delete them
+}
+```
+
+### 6. Handle Running Status Recovery
+
+If browser crashes during execution, tasks may be stuck in 'running' status:
+
+```typescript
+// ✅ GOOD: Include 'running' in pending leaf query for crash recovery
+const pendingLeafIds = leaves
+  .filter(leaf =>
+    leaf.status !== 'completed' &&
+    leaf.status !== 'failed' &&
+    leaf.status !== 'cancelled'
+    // Note: 'running' and 'paused' are included for recovery
+  )
+  .map(leaf => leaf.id);
+```
+
+### 7. Use Flags for Incomplete Operations
+
+Mark operations as in-progress to detect incomplete saves:
+
+```typescript
+// Before saving large batch
+root.metadata = { ...root.metadata, _creating: true };
+await saveRoot(root);
+
+// Save nodes in batches...
+
+// After all saves complete
+delete root.metadata._creating;
+await saveRoot(root);
+
+// On load, check for incomplete saves
+if (root.metadata?._creating) {
+  console.warn('Found incomplete task, needs cleanup');
+}
+```
+
+### 8. Batch Large Operations
+
+IndexedDB transactions have time limits. For large datasets:
+
+```typescript
+const BATCH_SIZE = 1000;
+
+// ❌ BAD: May timeout with 10k+ items
+for (const node of nodes) {
+  await saveNode(node);
+}
+
+// ✅ GOOD: Batch to avoid transaction timeout
+for (let i = 0; i < nodes.length; i += BATCH_SIZE) {
+  const batch = nodes.slice(i, i + BATCH_SIZE);
+  await saveNodes(batch);
+}
+```

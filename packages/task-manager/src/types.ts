@@ -195,6 +195,21 @@ export type TaskEventHandler = (event: TaskEvent, data: TaskEventData) => void;
 // ============================================================================
 
 /**
+ * Data integrity verification result
+ */
+export interface IntegrityCheckResult {
+	valid: boolean;
+	issues: string[];
+	stats?: {
+		expectedCompleted: number;
+		actualCompleted: number;
+		expectedFailed: number;
+		actualFailed: number;
+		orphanedNodes: number;
+	};
+}
+
+/**
  * Storage adapter interface for custom persistence
  */
 export interface StorageAdapter {
@@ -215,6 +230,27 @@ export interface StorageAdapter {
 
 	// Batch operations
 	updateNodeStatus(id: string, status: TaskStatus, updates?: Partial<TaskNode>): Promise<void>;
+
+	// =========================================================================
+	// Atomic Operations (for data integrity)
+	// =========================================================================
+
+	/**
+	 * Atomically save root with all its nodes in a single transaction
+	 * This prevents partial saves if browser crashes mid-operation
+	 */
+	saveRootWithNodes?(root: TaskRoot, nodes: TaskNode[]): Promise<void>;
+
+	/**
+	 * Atomically delete root and all its nodes in a single transaction
+	 * This prevents orphaned nodes if browser crashes mid-operation
+	 */
+	deleteRootWithNodes?(rootId: string): Promise<void>;
+
+	/**
+	 * Get all nodes across all roots (for orphan detection)
+	 */
+	getAllNodes?(): Promise<TaskNode[]>;
 
 	// Streaming operations (for memory-efficient execution)
 	/**

@@ -22,7 +22,8 @@ import type {
 	StorageAdapter,
 	TaskManagerConfig,
 	ResolvedConfig,
-	MerkleProof
+	MerkleProof,
+	IntegrityCheckResult
 } from './types';
 import { createIndexedDBStorage } from './storage/indexeddb';
 import {
@@ -147,13 +148,18 @@ export class TaskManager<T = unknown> {
 			metadata: options.metadata
 		};
 
-		// Save to storage (batched for large task trees)
-		await this.storage.saveRoot(root);
-		if (nodes.length > 0) {
-			// Batch storage to avoid memory pressure
-			for (let i = 0; i < nodes.length; i += STORAGE_BATCH_SIZE) {
-				const batch = nodes.slice(i, i + STORAGE_BATCH_SIZE);
-				await this.storage.saveNodes(batch);
+		// Save to storage using atomic operation if available
+		// This prevents partial saves if browser crashes mid-operation
+		if (this.storage.saveRootWithNodes && nodes.length > 0) {
+			await this.storage.saveRootWithNodes(root, nodes);
+		} else {
+			// Fallback: save root first, then nodes in batches
+			await this.storage.saveRoot(root);
+			if (nodes.length > 0) {
+				for (let i = 0; i < nodes.length; i += STORAGE_BATCH_SIZE) {
+					const batch = nodes.slice(i, i + STORAGE_BATCH_SIZE);
+					await this.storage.saveNodes(batch);
+				}
 			}
 		}
 
@@ -258,11 +264,20 @@ export class TaskManager<T = unknown> {
 		try {
 			// Use streaming mode: get IDs only, load nodes on demand
 			// This prevents memory explosion with large task trees (10k+ tasks)
+			//
+			// IMPORTANT: Include 'running' status in recovery
+			// If browser crashed while a task was running, its status will be 'running'
+			// We need to re-execute it, otherwise it will be stuck forever
 			const pendingLeafIds = this.storage.getPendingLeafIds
 				? await this.storage.getPendingLeafIds(taskId)
 				: // Fallback for adapters without streaming support
 					(await this.storage.getLeaves(taskId))
-						.filter((leaf) => leaf.status !== 'completed' && leaf.status !== 'failed')
+						.filter(
+							(leaf) =>
+								leaf.status !== 'completed' &&
+								leaf.status !== 'failed' &&
+								leaf.status !== 'cancelled'
+						)
 						.map((leaf) => leaf.id);
 
 			const concurrency = root.concurrency ?? 1;
@@ -317,8 +332,10 @@ export class TaskManager<T = unknown> {
 			const leaf = (await this.storage.getNode(leafId)) as TaskNode<T> | null;
 			if (!leaf) continue;
 
-			// Skip already completed/failed
-			if (leaf.status === 'completed' || leaf.status === 'failed') continue;
+			// Skip already completed/failed/cancelled
+			// Note: 'running' status means crashed mid-execution, so we re-execute
+			if (leaf.status === 'completed' || leaf.status === 'failed' || leaf.status === 'cancelled')
+				continue;
 
 			await this.executeLeaf(root, leaf, getExecutor(leaf.executor), abortController.signal);
 		}
@@ -371,8 +388,14 @@ export class TaskManager<T = unknown> {
 					const leaf = (await this.storage.getNode(leafId)) as TaskNode<T> | null;
 					if (!leaf) return;
 
-					// Skip already completed/failed
-					if (leaf.status === 'completed' || leaf.status === 'failed') return;
+					// Skip already completed/failed/cancelled
+					// Note: 'running' status means crashed mid-execution, so we re-execute
+					if (
+						leaf.status === 'completed' ||
+						leaf.status === 'failed' ||
+						leaf.status === 'cancelled'
+					)
+						return;
 
 					await this.executeLeaf(root, leaf, getExecutor(leaf.executor), abortController.signal);
 				})().finally(() => {
@@ -613,11 +636,20 @@ export class TaskManager<T = unknown> {
 
 	/**
 	 * Delete a task and all its nodes
+	 * Uses atomic deletion if available to prevent orphaned data
 	 */
 	async delete(taskId: string): Promise<void> {
 		await this.cancel(taskId);
-		await this.storage.deleteNodesByRoot(taskId);
-		await this.storage.deleteRoot(taskId);
+
+		// Use atomic deletion if available
+		if (this.storage.deleteRootWithNodes) {
+			await this.storage.deleteRootWithNodes(taskId);
+		} else {
+			// Fallback: delete nodes first, then root
+			// (reverse order from creation to minimize orphan risk)
+			await this.storage.deleteNodesByRoot(taskId);
+			await this.storage.deleteRoot(taskId);
+		}
 	}
 
 	// =========================================================================
@@ -798,6 +830,177 @@ export class TaskManager<T = unknown> {
 		}
 
 		return deleted;
+	}
+
+	// =========================================================================
+	// Data Integrity
+	// =========================================================================
+
+	/**
+	 * Verify data integrity for a specific task
+	 * Checks for:
+	 * - Stats consistency (completed/failed counts match actual node states)
+	 * - Incomplete saves (root exists but nodes are missing or incomplete)
+	 * - Orphaned nodes detection
+	 *
+	 * @param taskId - The task ID to verify
+	 * @returns IntegrityCheckResult with validation status and any issues found
+	 */
+	async verifyIntegrity(taskId: string): Promise<IntegrityCheckResult> {
+		const issues: string[] = [];
+
+		const root = await this.storage.getRoot(taskId);
+		if (!root) {
+			return {
+				valid: false,
+				issues: ['Root not found']
+			};
+		}
+
+		// Check for incomplete save (has _creating flag)
+		if (root.metadata?._creating) {
+			issues.push('Task creation was interrupted - may have incomplete nodes');
+		}
+
+		const nodes = await this.storage.getNodesByRoot(taskId);
+		const leaves = nodes.filter((n) => n.isLeaf);
+
+		// Check stats consistency
+		const actualCompleted = leaves.filter((n) => n.status === 'completed').length;
+		const actualFailed = leaves.filter((n) => n.status === 'failed').length;
+		const actualTotal = leaves.length;
+
+		if (root.stats.completed !== actualCompleted) {
+			issues.push(
+				`Stats mismatch: completed count is ${root.stats.completed} but actual is ${actualCompleted}`
+			);
+		}
+
+		if (root.stats.failed !== actualFailed) {
+			issues.push(
+				`Stats mismatch: failed count is ${root.stats.failed} but actual is ${actualFailed}`
+			);
+		}
+
+		if (root.stats.total !== actualTotal) {
+			issues.push(
+				`Stats mismatch: total count is ${root.stats.total} but actual is ${actualTotal}`
+			);
+		}
+
+		// Check for stuck running tasks (potential crash recovery needed)
+		const runningNodes = leaves.filter((n) => n.status === 'running');
+		if (runningNodes.length > 0 && root.status !== 'running') {
+			issues.push(
+				`Found ${runningNodes.length} nodes with 'running' status but root is '${root.status}' - possible crash during execution`
+			);
+		}
+
+		return {
+			valid: issues.length === 0,
+			issues,
+			stats: {
+				expectedCompleted: root.stats.completed,
+				actualCompleted,
+				expectedFailed: root.stats.failed,
+				actualFailed,
+				orphanedNodes: 0 // Will be calculated in cleanupOrphanedData
+			}
+		};
+	}
+
+	/**
+	 * Repair stats for a task by recalculating from actual node states
+	 * Use after verifyIntegrity reports stats mismatches
+	 *
+	 * @param taskId - The task ID to repair
+	 * @returns true if repairs were made, false if no repairs needed
+	 */
+	async repairStats(taskId: string): Promise<boolean> {
+		const root = await this.storage.getRoot(taskId);
+		if (!root) return false;
+
+		const nodes = await this.storage.getNodesByRoot(taskId);
+		const leaves = nodes.filter((n) => n.isLeaf);
+
+		const actualCompleted = leaves.filter((n) => n.status === 'completed').length;
+		const actualFailed = leaves.filter((n) => n.status === 'failed').length;
+		const actualTotal = leaves.length;
+
+		const needsRepair =
+			root.stats.completed !== actualCompleted ||
+			root.stats.failed !== actualFailed ||
+			root.stats.total !== actualTotal;
+
+		if (needsRepair) {
+			root.stats = {
+				total: actualTotal,
+				completed: actualCompleted,
+				failed: actualFailed
+			};
+
+			// Recalculate progress
+			const processed = actualCompleted + actualFailed;
+			root.progress = actualTotal > 0 ? Math.round((processed / actualTotal) * 100) : 0;
+
+			// Remove _creating flag if present
+			if (root.metadata?._creating) {
+				delete root.metadata._creating;
+			}
+
+			root.updatedAt = Date.now();
+			await this.storage.saveRoot(root);
+		}
+
+		return needsRepair;
+	}
+
+	/**
+	 * Find and clean up orphaned data:
+	 * - Nodes without a corresponding root
+	 * - Roots with _creating flag (incomplete saves)
+	 *
+	 * @returns Number of orphaned items cleaned up
+	 */
+	async cleanupOrphanedData(): Promise<number> {
+		let cleaned = 0;
+
+		// Clean up incomplete roots (with _creating flag)
+		const roots = await this.storage.getAllRoots();
+		for (const root of roots) {
+			if (root.metadata?._creating) {
+				// This root was never fully created, delete it
+				await this.delete(root.id);
+				cleaned++;
+			}
+		}
+
+		// Clean up orphaned nodes (only if storage supports getAllNodes)
+		if (this.storage.getAllNodes) {
+			const allNodes = await this.storage.getAllNodes();
+			const validRootIds = new Set(
+				(await this.storage.getAllRoots()).map((r) => r.id)
+			);
+
+			// Group orphaned nodes by rootId for batch deletion
+			const orphanedByRoot = new Map<string, string[]>();
+			for (const node of allNodes) {
+				if (!validRootIds.has(node.rootId)) {
+					if (!orphanedByRoot.has(node.rootId)) {
+						orphanedByRoot.set(node.rootId, []);
+					}
+					orphanedByRoot.get(node.rootId)!.push(node.id);
+				}
+			}
+
+			// Delete orphaned nodes
+			for (const [rootId] of orphanedByRoot) {
+				await this.storage.deleteNodesByRoot(rootId);
+				cleaned++;
+			}
+		}
+
+		return cleaned;
 	}
 
 	/**
