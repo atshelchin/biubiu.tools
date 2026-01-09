@@ -35,8 +35,8 @@
 	// Watch log entries
 	let watchLog = $state<Array<{ time: string; oldValue: string; newValue: string }>>([]);
 
-	// Setup watch on mount
-	const unwatch = form.watch('source', (newValue, oldValue) => {
+	// Setup watch on mount (unwatch stored for cleanup if needed)
+	void form.watch('source', (newValue, oldValue) => {
 		// Update derived field (uppercase)
 		form.setValue('derived', String(newValue).toUpperCase());
 

@@ -8,11 +8,13 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { TaskManager, createTaskManager } from './task-manager';
 import { createMemoryStorage, MemoryStorage } from './storage/memory';
-import type { TaskExecutor, TaskRoot, TaskNode, StorageAdapter } from './types';
+import type { TaskExecutor, TaskRoot, TaskNode } from './types';
 
 /**
  * Custom storage adapter that can simulate failures
+ * @internal Used for testing partial save scenarios
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 class FailableMemoryStorage extends MemoryStorage {
 	private shouldFailOnSaveNodes = false;
 	private shouldFailAfterNNodes = -1;
@@ -381,6 +383,7 @@ describe('Data Integrity', () => {
 			// Test that saveRootWithNodes is called for create
 			let atomicSaveWasCalled = false;
 			const atomicStorage = createMemoryStorage();
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			(atomicStorage as any).saveRootWithNodes = async (root: TaskRoot, nodes: TaskNode[]) => {
 				atomicSaveWasCalled = true;
 				await atomicStorage.saveRoot(root);
@@ -403,6 +406,7 @@ describe('Data Integrity', () => {
 		it('should use atomic delete when available', async () => {
 			let atomicDeleteWasCalled = false;
 			const atomicStorage = createMemoryStorage();
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			(atomicStorage as any).deleteRootWithNodes = async (rootId: string) => {
 				atomicDeleteWasCalled = true;
 				await atomicStorage.deleteNodesByRoot(rootId);
@@ -458,7 +462,6 @@ describe('Data Integrity', () => {
 		});
 
 		it('should maintain stats after pause and resume', async () => {
-			const pausedAt = 0;
 			const executor: TaskExecutor<{ value: number }> = async (ctx) => {
 				if (ctx.data.value === 2) {
 					await ctx.pauseTask('test');
@@ -511,12 +514,10 @@ describe('Data Integrity', () => {
 				]
 			});
 
-			let failCount = 0;
 			const executor: TaskExecutor<{ value: number }> = async (ctx) => {
 				// Simulate varying execution times
 				await new Promise((r) => setTimeout(r, Math.random() * 20));
 				if (ctx.data.value === 3) {
-					failCount++;
 					throw new Error('Simulated failure');
 				}
 				await ctx.complete();
@@ -526,7 +527,7 @@ describe('Data Integrity', () => {
 
 			const finalRoot = await tm.getRoot(root.id);
 			expect(finalRoot?.stats.total).toBe(5);
-			expect(finalRoot?.stats.completed + finalRoot!.stats.failed).toBe(5);
+			expect((finalRoot?.stats.completed ?? 0) + (finalRoot?.stats.failed ?? 0)).toBe(5);
 
 			// Verify integrity
 			const result = await tm.verifyIntegrity(root.id);

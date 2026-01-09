@@ -103,7 +103,8 @@
 		verificationResult = null;
 	}
 
-	async function verifyTampered() {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	async function _verifyTampered() {
 		isVerifying = true;
 
 		await new Promise((r) => setTimeout(r, 500));

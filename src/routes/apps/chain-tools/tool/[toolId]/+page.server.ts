@@ -34,7 +34,7 @@ export const load: PageServerLoad = (event) => {
 	void categoryIcon; // Icon is a Svelte component and not serializable
 
 	// Get related tools data - exclude icon which is not serializable
-	const relatedToolsData = detail.relatedTools
+	const relatedToolsData = (detail.relatedTools ?? [])
 		.map((id) => getToolById(id))
 		.filter((t): t is NonNullable<typeof t> => t !== undefined)
 		.slice(0, 6)

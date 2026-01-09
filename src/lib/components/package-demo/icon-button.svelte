@@ -5,7 +5,7 @@
 	 */
 	import type { Component } from 'svelte';
 
-	type ButtonVariant = 'default' | 'primary' | 'success' | 'danger';
+	type ButtonVariant = 'default' | 'primary' | 'success' | 'danger' | 'warning';
 
 	interface Props {
 		icon: Component;
@@ -85,5 +85,14 @@
 
 	.btn-icon-danger:hover:not(:disabled) {
 		background: rgba(239, 68, 68, 0.1);
+	}
+
+	.btn-icon-warning {
+		background: transparent;
+		color: var(--color-warning);
+	}
+
+	.btn-icon-warning:hover:not(:disabled) {
+		background: rgba(245, 158, 11, 0.1);
 	}
 </style>

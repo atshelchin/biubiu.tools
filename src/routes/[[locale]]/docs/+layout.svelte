@@ -16,6 +16,8 @@
 
 	let { data, children }: Props = $props();
 	const i18n = useI18n();
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const t = (key: string) => i18n.t(key as any);
 
 	let sidebarOpen = $state(false);
 	let collapsedCategories = new SvelteSet<string>();
@@ -53,7 +55,7 @@
 		</button>
 		<span class="mobile-title">
 			<Book size={20} />
-			{i18n.t('common.docs.title')}
+			{t('common.docs.title')}
 		</span>
 	</header>
 
@@ -62,7 +64,7 @@
 		<div class="sidebar-header">
 			<a href={localizeHref('/docs')} class="sidebar-brand">
 				<Book size={24} />
-				<span>{i18n.t('common.docs.title')}</span>
+				<span>{t('common.docs.title')}</span>
 			</a>
 		</div>
 

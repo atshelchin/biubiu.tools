@@ -2,7 +2,7 @@
  * Merkle Tree Utilities - Unit Tests
  */
 
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import {
 	computeLeafHash,
 	computeDataHash,
@@ -284,7 +284,7 @@ describe('Merkle Tree Utilities', () => {
 				await computeDataHash('leaf-2', { a: 2 })
 			];
 			const root = await buildMerkleRoot(hashes);
-			const proof = await generateProof(hashes, 0);
+			await generateProof(hashes, 0);
 			// Tamper with proof
 			const tamperedProof = ['0000000000000000000000000000000000000000000000000000000000000000'];
 			const isValid = await verifyProof(hashes[0], tamperedProof, root);

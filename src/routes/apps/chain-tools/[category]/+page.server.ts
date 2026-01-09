@@ -49,9 +49,8 @@ export const load: PageServerLoad = (event) => {
 
 	// Get FAQs for this category from routes/apps/chain-tools/{category}.category_seo.faqs
 	type FaqItem = { question: string; answer: string };
-	const faqs: FaqItem[] = t<FaqItem[]>(
-		`routes/apps/chain-tools/${categoryKey}.category_seo.faqs` as never
-	);
+	const faqs = (t(`routes/apps/chain-tools/${categoryKey}.category_seo.faqs` as never) ||
+		[]) as FaqItem[];
 
 	// Generate structured data
 	const webAppData = createWebAppData({

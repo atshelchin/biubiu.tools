@@ -170,7 +170,7 @@ function buildMulticallData(): Array<{
 function decodeUint256Result(
 	result: { success: boolean; returnData: `0x${string}` },
 	abi: typeof ERC721_TOTAL_SUPPLY_ABI | typeof USAGE_STATS_ABI,
-	functionName: string
+	functionName: 'totalSupply' | 'totalFreeUsage' | 'totalPremiumUsage' | 'totalPaidUsage'
 ): { success: boolean; value: bigint } {
 	if (!result.success || result.returnData === '0x' || result.returnData.length < 66) {
 		return { success: false, value: 0n };

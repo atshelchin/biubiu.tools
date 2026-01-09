@@ -217,7 +217,7 @@ function addSignature(txIndex: number) {
 						<div class="section-content">
 							<p class="section-desc">{t('demo.nested_abi.transactions_desc')}</p>
 
-							{#each form.getValue('transactions') as tx, txIndex (txIndex)}
+							{#each form.getValue('transactions') as Array<unknown> as tx, txIndex (txIndex)}
 								<div class="nested-item level-1">
 									<div class="item-header">
 										<span class="item-index">[{txIndex}]</span>
@@ -289,7 +289,7 @@ function addSignature(txIndex: number) {
 											</div>
 
 											<div class="nested-items">
-												{#each (tx as Record<string, unknown>).signatures as sig, sigIndex (sigIndex)}
+												{#each (tx as Record<string, unknown>).signatures as Array<unknown> as sig, sigIndex (sigIndex)}
 													<div class="nested-item level-2">
 														<div class="sig-header">
 															<span class="item-index">[{sigIndex}]</span>

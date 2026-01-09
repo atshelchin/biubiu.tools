@@ -115,8 +115,9 @@
 		submitSuccess = false;
 	}
 
-	// Check if current step has errors
-	const currentStepHasErrors = $derived(() => {
+	// Check if current step has errors (used by canProceed logic)
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const _currentStepHasErrors = $derived(() => {
 		const fields = stepFields[currentStep];
 		return fields.some((field) => form.errors[field]);
 	});
@@ -187,7 +188,7 @@ function prevStep() {
 		{#snippet panel()}
 			<!-- Step Indicator -->
 			<div class="step-indicator">
-				{#each stepTitles as title, index}
+				{#each stepTitles as title, index (index)}
 					<div
 						class="step"
 						class:active={index === currentStep}

@@ -12,7 +12,8 @@
 
 	const i18n = useI18n();
 	// Use a wrapper that accepts any string key for dynamic translations
-	const t = (key: string, options?: { defaultValue?: string }) => i18n.t(key, options);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const t = (key: string, options?: { defaultValue?: string }) => i18n.t(key as any, options);
 
 	const sectionTitle = $derived(
 		t('routes/apps/chain-tools.related_tools', {

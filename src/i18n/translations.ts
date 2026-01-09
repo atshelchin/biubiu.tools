@@ -42,10 +42,14 @@ export interface ServerEvent {
  *   return { title: t('page.title') };
  * };
  */
-export function createT(event: ServerEvent) {
-	return createServerT(translations, {
+export function createT(
+	event: ServerEvent
+): (key: string, params?: Record<string, string | number>) => string {
+	const serverT = createServerT(translations, {
 		event,
 		defaultLocale: 'en',
 		supportedLocales: locales
 	});
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	return (key: string, params?: Record<string, string | number>) => serverT(key as any, params);
 }

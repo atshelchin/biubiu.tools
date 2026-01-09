@@ -11,7 +11,7 @@
 		type TaskNode,
 		type MerkleProof
 	} from '@shelchin/task-manager';
-	import { Plus, Shield, CheckCircle2, XCircle, ChevronRight, Copy, Check } from '@lucide/svelte';
+	import { Plus, Shield, CheckCircle2, XCircle, Copy, Check } from '@lucide/svelte';
 	import {
 		DemoSection,
 		DemoContent,
@@ -38,6 +38,7 @@
 	});
 	let selectedLeafIndex = $state(0);
 	let loading = $state(true);
+	void loading; // Used in template conditionals
 
 	// Restore task from storage on mount
 	onMount(async () => {

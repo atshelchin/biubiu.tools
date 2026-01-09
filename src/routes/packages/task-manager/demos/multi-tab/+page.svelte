@@ -169,7 +169,7 @@
 		}
 	}
 
-	onMount(async () => {
+	onMount(() => {
 		// Create coordinator for lock status
 		coordinator = new TabCoordinator({
 			lockName: 'task-manager-MultiTabDemo'
@@ -193,7 +193,7 @@
 		log(`${t('tab_initialized')} ${isSupported ? t('supported') : t('not_supported')}`, 'info');
 
 		// Load existing tasks
-		await loadTasks();
+		loadTasks();
 
 		// Poll lock status
 		const interval = setInterval(updateLockInfo, 500);

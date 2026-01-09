@@ -3,6 +3,7 @@
 	 * Conditional Fields Demo
 	 * Demonstrates conditional field visibility based on other field values.
 	 */
+	import { slide } from 'svelte/transition';
 	import { useFormState, Validators } from '@shelchin/formstate';
 	import { Eye, EyeOff, Package, Truck, CreditCard } from '@lucide/svelte';
 	import {

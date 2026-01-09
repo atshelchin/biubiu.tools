@@ -8,8 +8,7 @@
 		createTaskManager,
 		createMemoryStorage,
 		createIndexedDBStorage,
-		type TaskExecutor,
-		terminateWorker
+		type TaskExecutor
 	} from '@shelchin/task-manager';
 	import {
 		Play,

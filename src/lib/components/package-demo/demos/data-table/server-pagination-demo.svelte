@@ -213,8 +213,7 @@
 			<div class="info-card">
 				<Clock size={18} />
 				<div>
-					<span class="label">{t('demo.server.load_time')}</span>
-					<InputGroup>
+					<InputGroup label={t('demo.server.load_time')} id="server-load-time">
 						<input
 							type="range"
 							min="100"
@@ -222,6 +221,7 @@
 							step="100"
 							bind:value={loadTime}
 							class="slider"
+							id="server-load-time"
 						/>
 						<span class="slider-value">{loadTime}ms</span>
 					</InputGroup>

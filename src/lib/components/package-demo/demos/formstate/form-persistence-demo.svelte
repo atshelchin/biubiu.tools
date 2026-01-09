@@ -139,7 +139,7 @@
 	// Watch for changes and auto-save
 	$effect(() => {
 		// Access form.values to track changes
-		const _ = JSON.stringify(form.values);
+		void JSON.stringify(form.values);
 		scheduleAutoSave();
 	});
 
@@ -232,7 +232,7 @@ async function importFromFile(file: File) {
 			<InputGroup label={t('demo.persistence.description')} id="persist-desc">
 				<textarea
 					id="persist-desc"
-					value={form.values.description}
+					value={form.values.description as string}
 					oninput={(e) => form.setValue('description', e.currentTarget.value)}
 					placeholder={t('demo.persistence.description_placeholder')}
 					rows="3"

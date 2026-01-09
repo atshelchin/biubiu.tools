@@ -6,10 +6,12 @@
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import { localizeHref } from '$lib/utils/localized-url';
 	import { ArrowRight, ExternalLink } from '@lucide/svelte';
+	import { page } from '$app/state';
 
 	const i18n = useI18n();
 	// Use a wrapper that accepts any string key for dynamic translations
-	const t = (key: string) => i18n.t(key);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const t = (key: string) => i18n.t(key as any);
 
 	// Filter state
 	let selectedStage: DevStage | 'all' = $state('all');
@@ -53,6 +55,7 @@
 <SeoHead
 	title={t('routes/roadmap.meta.title')}
 	description={t('routes/roadmap.meta.description')}
+	canonical={page.url.href}
 />
 
 <div class="roadmap-page">

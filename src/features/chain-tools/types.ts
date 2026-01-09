@@ -107,12 +107,46 @@ export interface ToolFAQ {
 }
 
 /**
- * Tool detail page extended data
+ * Tool feature item
+ */
+export interface ToolFeature {
+	title: string;
+	description: string;
+}
+
+/**
+ * Tool use case item
+ */
+export interface ToolUseCase {
+	title: string;
+	description: string;
+}
+
+/**
+ * Tool about section (legacy format)
+ */
+export interface ToolAbout {
+	overview: string;
+	features: ToolFeature[];
+	useCases: ToolUseCase[];
+}
+
+/**
+ * Tool CTA section (legacy format)
+ */
+export interface ToolCTA {
+	ready: string;
+	button: string;
+	note: string;
+}
+
+/**
+ * Tool detail page extended data - i18n format
  * Used for rich content pages with SEO optimization
  *
  * Note: Text content uses i18n keys, actual content is in translation files
  */
-export interface ToolDetail {
+export interface ToolDetailI18n {
 	id: string; // Matches ExternalTool.id
 
 	// i18n key prefix for this tool's content
@@ -138,6 +172,22 @@ export interface ToolDetail {
 	// Metadata
 	lastUpdated: string; // ISO date string
 }
+
+/**
+ * Tool detail page extended data - legacy format
+ * Contains inline content instead of i18n keys
+ */
+export interface ToolDetailLegacy {
+	about: ToolAbout;
+	faqs: ToolFAQ[];
+	cta: ToolCTA;
+	relatedTools?: string[];
+}
+
+/**
+ * Tool detail - supports both i18n and legacy formats
+ */
+export type ToolDetail = ToolDetailI18n | ToolDetailLegacy;
 
 /**
  * Serializable version of ExternalTool (without Svelte component icon)

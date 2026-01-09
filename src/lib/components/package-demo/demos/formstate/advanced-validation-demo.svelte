@@ -249,7 +249,7 @@ form.batchUpdate(() => {
 						<p class="empty-log">{t('demo.advanced.no_validations')}</p>
 					{:else}
 						<ul>
-							{#each validationLog as log}
+							{#each validationLog as log, i (i)}
 								<li>{log}</li>
 							{/each}
 						</ul>

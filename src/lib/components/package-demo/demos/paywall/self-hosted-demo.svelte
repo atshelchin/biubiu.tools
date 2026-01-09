@@ -25,7 +25,8 @@
 			: { allowed: false, reason: 'membership_required', showUpgrade: true }
 	);
 
-	const envCode = `# .env
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const _envCode = `# .env
 VITE_SELF_HOSTED=true`;
 
 	const configCode = `import { initPaywall } from '@shelchin/paywall';

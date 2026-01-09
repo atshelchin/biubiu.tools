@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Info, Calendar, Users, Coins, ExternalLink } from '@lucide/svelte';
 	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
-	import type { ToolDetail } from '../types';
+	import type { ToolDetail, ToolDetailI18n } from '../types';
 
 	interface Props {
 		detail: ToolDetail;
@@ -10,6 +10,11 @@
 	let { detail }: Props = $props();
 
 	const i18n = useI18n();
+
+	// Type guard to check if detail is ToolDetailI18n
+	function isI18nDetail(d: ToolDetail): d is ToolDetailI18n {
+		return 'i18nKeyPrefix' in d;
+	}
 
 	// Social link icons and labels
 	const socialConfig = {
@@ -20,8 +25,12 @@
 		docs: { label: 'Docs', icon: 'Docs' }
 	};
 
-	const hasSocialLinks = $derived(detail.socialLinks && Object.keys(detail.socialLinks).length > 0);
-	const hasProjectInfo = $derived(detail.founded || detail.team || detail.funding);
+	// Use type guard for i18n-specific properties
+	const i18nDetail = $derived(isI18nDetail(detail) ? detail : null);
+	const hasSocialLinks = $derived(
+		i18nDetail?.socialLinks && Object.keys(i18nDetail.socialLinks).length > 0
+	);
+	const hasProjectInfo = $derived(i18nDetail?.founded || i18nDetail?.team || i18nDetail?.funding);
 </script>
 
 {#if hasProjectInfo || hasSocialLinks}
@@ -39,7 +48,7 @@
 			<!-- Project Details -->
 			{#if hasProjectInfo}
 				<div class="info-grid">
-					{#if detail.founded}
+					{#if i18nDetail?.founded}
 						<div class="info-item">
 							<Calendar class="info-icon" />
 							<div class="info-content">
@@ -48,12 +57,12 @@
 										defaultValue: 'Founded'
 									})}</span
 								>
-								<span class="info-value">{detail.founded}</span>
+								<span class="info-value">{i18nDetail.founded}</span>
 							</div>
 						</div>
 					{/if}
 
-					{#if detail.team}
+					{#if i18nDetail?.team}
 						<div class="info-item">
 							<Users class="info-icon" />
 							<div class="info-content">
@@ -62,12 +71,12 @@
 										defaultValue: 'Team'
 									})}</span
 								>
-								<span class="info-value">{detail.team}</span>
+								<span class="info-value">{i18nDetail.team}</span>
 							</div>
 						</div>
 					{/if}
 
-					{#if detail.funding}
+					{#if i18nDetail?.funding}
 						<div class="info-item">
 							<Coins class="info-icon" />
 							<div class="info-content">
@@ -76,7 +85,7 @@
 										defaultValue: 'Funding'
 									})}</span
 								>
-								<span class="info-value">{detail.funding}</span>
+								<span class="info-value">{i18nDetail.funding}</span>
 							</div>
 						</div>
 					{/if}
@@ -84,7 +93,7 @@
 			{/if}
 
 			<!-- Social Links -->
-			{#if hasSocialLinks && detail.socialLinks}
+			{#if hasSocialLinks && i18nDetail?.socialLinks}
 				<div class="social-section">
 					<span class="social-label"
 						>{i18n.t('routes/apps/chain-tools.links' as keyof TranslationKeys, {
@@ -92,7 +101,7 @@
 						})}:</span
 					>
 					<div class="social-links">
-						{#each Object.entries(detail.socialLinks) as [key, url] (key)}
+						{#each Object.entries(i18nDetail.socialLinks) as [key, url] (key)}
 							{#if url}
 								<a href={url} target="_blank" rel="noopener noreferrer" class="social-link">
 									<span>{socialConfig[key as keyof typeof socialConfig]?.label || key}</span>

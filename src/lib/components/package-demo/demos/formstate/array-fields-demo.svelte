@@ -9,8 +9,6 @@
 		DemoSection,
 		DemoContent,
 		CodeBlock,
-		InputGroup,
-		ActionButtons,
 		DemoButton,
 		IconButton
 	} from '$lib/components/package-demo';

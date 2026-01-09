@@ -74,18 +74,19 @@ export function parseFrontmatter(content: string): {
 		}
 
 		// Handle arrays (simple case: comma-separated in brackets)
+		const fm = frontmatter as unknown as Record<string, unknown>;
 		if (value.startsWith('[') && value.endsWith(']')) {
 			const arrayContent = value.slice(1, -1);
 			const items = arrayContent.split(',').map((item) => item.trim().replace(/^['"]|['"]$/g, ''));
-			(frontmatter as Record<string, unknown>)[key] = items;
+			fm[key] = items;
 		} else if (value === 'true') {
-			(frontmatter as Record<string, unknown>)[key] = true;
+			fm[key] = true;
 		} else if (value === 'false') {
-			(frontmatter as Record<string, unknown>)[key] = false;
+			fm[key] = false;
 		} else if (!isNaN(Number(value)) && value !== '') {
-			(frontmatter as Record<string, unknown>)[key] = Number(value);
+			fm[key] = Number(value);
 		} else {
-			(frontmatter as Record<string, unknown>)[key] = value;
+			fm[key] = value;
 		}
 	}
 

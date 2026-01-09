@@ -6,7 +6,8 @@
 	import { subscribe } from './api';
 
 	const i18n = useI18n();
-	const t = i18n.t.bind(i18n);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const t = (key: string) => i18n.t(key as any);
 
 	// Form state
 	let email = $state('');

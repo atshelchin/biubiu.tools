@@ -129,8 +129,15 @@
 <DemoSection title={t('demo.pagination.title')} description={t('demo.pagination.description')}>
 	<DemoContent fullWidth>
 		<div class="controls">
-			<InputGroup label={t('demo.pagination.items_count')}>
-				<input type="number" min="10" max="1000" bind:value={itemCount} class="number-input" />
+			<InputGroup label={t('demo.pagination.items_count')} id="pagination-items-count">
+				<input
+					type="number"
+					min="10"
+					max="1000"
+					bind:value={itemCount}
+					class="number-input"
+					id="pagination-items-count"
+				/>
 			</InputGroup>
 
 			<DemoButton onclick={regenerateData} variant="secondary">

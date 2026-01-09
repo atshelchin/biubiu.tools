@@ -37,7 +37,9 @@
 		retry: { maxAttempts: 2, baseDelayMs: 100, maxDelayMs: 500 }
 	});
 	let running = $state(false);
+	void running; // Used in template conditionals
 	let loading = $state(true);
+	void loading; // Used in template conditionals
 
 	// Restore task from storage on mount
 	onMount(async () => {

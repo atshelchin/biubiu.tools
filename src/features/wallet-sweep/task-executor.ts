@@ -4,7 +4,7 @@
  * 执行 Token 归集子任务（每个批次）
  */
 
-import type { TaskExecutionContext } from '@shelchin/task-manager';
+import type { ExecutionContext } from '@shelchin/task-manager';
 import type { Address } from 'viem';
 
 export interface SweepSubTaskData {
@@ -32,52 +32,35 @@ export interface SweepResult {
 /**
  * 执行单个归集批次
  */
-export async function executeSweepSubTask(ctx: TaskExecutionContext) {
-	const data = ctx.task.executionData as unknown as SweepSubTaskData;
+export async function executeSweepSubTask(ctx: ExecutionContext<SweepSubTaskData>) {
+	const data = ctx.data;
 
 	try {
 		// 检查是否暂停
 		if (ctx.isPaused()) {
-			await ctx.pauseParent('user', '用户暂停');
+			await ctx.pauseTask('用户暂停');
 			return;
 		}
 
-		// 检查 Gas 余额（针对临时钱包模式）
-		if (ctx.checkGasBalance) {
-			const hasGas = await ctx.checkGasBalance();
-			if (!hasGas) {
-				await ctx.pauseParent('insufficient_gas', 'Gas 余额不足，请充值后继续');
-				return;
-			}
-		}
-
 		// 更新进度：准备阶段
-		await ctx.updateProgress(5, '准备批次交易...');
+		await ctx.progress(5);
 
 		// 执行归集逻辑
 		const results: SweepResult[] = [];
 		const totalWallets = data.walletAddresses.length;
 
-		// 从任务状态中获取已处理的索引（用于恢复）
-		const startIndex = (ctx.task.state.lastProcessedIndex as number) || 0;
-
-		for (let i = startIndex; i < totalWallets; i++) {
+		for (let i = 0; i < totalWallets; i++) {
 			const wallet = data.walletAddresses[i];
 
 			// 检查是否暂停
 			if (ctx.isPaused()) {
-				// 保存当前进度
-				await ctx.updateTaskState({
-					lastProcessedIndex: i,
-					processedResults: results
-				});
-				await ctx.pauseParent('user', '用户暂停');
+				await ctx.pauseTask('用户暂停');
 				return;
 			}
 
 			// 更新进度
-			const progress = 5 + Math.floor((i / totalWallets) * 90);
-			await ctx.updateProgress(progress, `处理钱包 ${i + 1}/${totalWallets}...`);
+			const progressPct = 5 + Math.floor((i / totalWallets) * 90);
+			await ctx.progress(progressPct);
 
 			try {
 				// TODO: 实现实际的转账逻辑
@@ -108,14 +91,6 @@ export async function executeSweepSubTask(ctx: TaskExecutionContext) {
 					success: false
 				});
 			}
-
-			// 每处理 10 个钱包，保存一次进度
-			if ((i + 1) % 10 === 0) {
-				await ctx.updateTaskState({
-					lastProcessedIndex: i,
-					processedResults: results
-				});
-			}
 		}
 
 		// 检查结果
@@ -123,10 +98,10 @@ export async function executeSweepSubTask(ctx: TaskExecutionContext) {
 		const failCount = results.filter((r) => !r.success).length;
 
 		if (successCount === 0) {
-			await ctx.failTask(`所有 ${totalWallets} 个钱包转账均失败`);
+			await ctx.fail(`所有 ${totalWallets} 个钱包转账均失败`);
 		} else {
-			await ctx.updateProgress(100, `完成：${successCount} 成功，${failCount} 失败`);
-			await ctx.completeTask({
+			await ctx.progress(100);
+			await ctx.complete({
 				results,
 				successCount,
 				failCount,
@@ -134,7 +109,7 @@ export async function executeSweepSubTask(ctx: TaskExecutionContext) {
 			});
 		}
 	} catch (error) {
-		await ctx.failTask(error instanceof Error ? error.message : String(error));
+		await ctx.fail(error instanceof Error ? error.message : String(error));
 	}
 }
 

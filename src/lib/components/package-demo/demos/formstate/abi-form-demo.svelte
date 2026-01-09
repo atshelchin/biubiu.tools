@@ -23,8 +23,8 @@
 	let generatedResult = $state<string | null>(null);
 	let copySuccess = $state(false);
 
-	// Ethereum address validator
-	const addressValidator = Validators.pattern(/^0x[a-fA-F0-9]{40}$/, t('demo.abi.address_invalid'));
+	// Ethereum address validator (available for field-level validation if needed)
+	void Validators.pattern(/^0x[a-fA-F0-9]{40}$/, t('demo.abi.address_invalid'));
 
 	const form = useFormState({
 		fields: {
@@ -305,10 +305,10 @@ const form = useFormState({
 				<pre class="signature">function transferBatch(
   address[] memory recipients,
   uint256[] memory amounts,
-  struct Metadata {'{'}
+  struct Metadata &#123;
     string memo,
     uint8 priority
-  {'}'} memory metadata
+  &#125; memory metadata
 ) external</pre>
 
 				<h4>{t('demo.abi.current_params')}</h4>

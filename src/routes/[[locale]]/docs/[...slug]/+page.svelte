@@ -13,6 +13,8 @@
 
 	let { data }: Props = $props();
 	const i18n = useI18n();
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const t = (key: string) => i18n.t(key as any);
 
 	// Find prev/next documents
 	const allDocs = $derived.by(() => {
@@ -89,7 +91,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.doc.frontmatter.title} | {i18n.t('common.docs.title')} | biubiu.tools</title>
+	<title>{data.doc.frontmatter.title} | {t('common.docs.title')} | biubiu.tools</title>
 	<meta name="description" content={data.doc.frontmatter.description ?? ''} />
 
 	<!-- Open Graph -->
@@ -105,7 +107,7 @@
 	<div class="doc-container">
 		<!-- Breadcrumb -->
 		<nav class="breadcrumb" aria-label="Breadcrumb">
-			<a href="/docs">{i18n.t('common.docs.title')}</a>
+			<a href="/docs">{t('common.docs.title')}</a>
 			<ChevronRight size={14} />
 			<span>{categoryLabel}</span>
 			<ChevronRight size={14} />
@@ -150,7 +152,7 @@
 				<nav class="doc-nav">
 					{#if prevDoc}
 						<a href={prevDoc.path} class="nav-link prev">
-							<span class="nav-label">← {i18n.t('common.docs.previous')}</span>
+							<span class="nav-label">← {t('common.docs.previous')}</span>
 							<span class="nav-title">{prevDoc.title}</span>
 						</a>
 					{:else}
@@ -158,7 +160,7 @@
 					{/if}
 					{#if nextDoc}
 						<a href={nextDoc.path} class="nav-link next">
-							<span class="nav-label">{i18n.t('common.docs.next')} →</span>
+							<span class="nav-label">{t('common.docs.next')} →</span>
 							<span class="nav-title">{nextDoc.title}</span>
 						</a>
 					{/if}
@@ -173,7 +175,7 @@
 						class="edit-link"
 					>
 						<Edit size={14} />
-						{i18n.t('common.docs.edit_on_github')}
+						{t('common.docs.edit_on_github')}
 					</a>
 				</div>
 			</div>
@@ -182,7 +184,7 @@
 			{#if data.doc.toc.length > 0}
 				<aside class="doc-toc">
 					<div class="toc-wrapper">
-						<h4 class="toc-title">{i18n.t('common.docs.on_this_page')}</h4>
+						<h4 class="toc-title">{t('common.docs.on_this_page')}</h4>
 						<nav class="toc-nav">
 							{#each data.doc.toc as item (item.id)}
 								<a

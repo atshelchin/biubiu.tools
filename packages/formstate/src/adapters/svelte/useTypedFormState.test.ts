@@ -2,7 +2,7 @@
  * useTypedFormState 功能测试
  */
 
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { useTypedFormState } from './useTypedFormState.svelte';
 import { Validators } from '../../core/Validators';
 

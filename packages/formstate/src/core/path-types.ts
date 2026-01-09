@@ -35,7 +35,7 @@ type IsObject<T> = T extends Primitive
 	? false
 	: T extends Array<unknown>
 		? false
-		: T extends Function
+		: T extends (...args: unknown[]) => unknown
 			? false
 			: T extends Date
 				? false
@@ -45,8 +45,10 @@ type IsObject<T> = T extends Primitive
 
 /**
  * 获取数组元素类型
+ * @internal Used for type inference in path utilities
  */
-type ArrayElement<T> = T extends Array<infer E> ? E : never;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+type _ArrayElement<T> = T extends Array<infer E> ? E : never;
 
 /**
  * 限制递归深度，防止 TypeScript 编译器栈溢出

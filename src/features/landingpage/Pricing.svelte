@@ -6,7 +6,8 @@
 	const i18n = useI18n();
 	// Use a wrapper that accepts any string key for dynamic translations
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const t = (key: string, options?: Record<string, unknown>) => i18n.t(key as any, options);
+	const t = (key: string, options?: Record<string, string | number | Date>) =>
+		i18n.t(key as any, options);
 
 	// Membership billing cycle
 	type BillingCycle = 'daily' | 'monthly' | 'yearly';
@@ -474,7 +475,6 @@
 		font-weight: var(--font-semibold);
 		border-radius: var(--radius-full);
 	}
-
 
 	/* Divider */
 	.divider {

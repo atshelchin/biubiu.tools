@@ -12,12 +12,22 @@
 	import ToolDetailCta from '@/features/chain-tools/components/tool-detail-cta.svelte';
 	import { localizeHref } from '$lib/utils/localized-url';
 	import type { PageData } from './$types';
+	import type { ToolDetail, ToolDetailI18n } from '@/features/chain-tools/types';
 
 	let { data }: { data: PageData } = $props();
 
 	const i18n = useI18n();
 	// Use a wrapper that accepts any string key for dynamic translations
-	const t = (key: string, options?: { defaultValue?: string }) => i18n.t(key, options);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const t = (key: string, options?: { defaultValue?: string }) => i18n.t(key as any, options);
+
+	// Type guard to check if detail is i18n format
+	function isI18nDetail(d: ToolDetail): d is ToolDetailI18n {
+		return 'i18nKeyPrefix' in d;
+	}
+
+	// Get i18n detail if available
+	const i18nDetail = $derived(isI18nDetail(data.detail) ? data.detail : null);
 
 	// Load tool-specific translations dynamically
 	// The translation file is loaded as: routes/apps/chain-tools/tool/{toolId}.json
@@ -33,15 +43,21 @@
 	const seoDescription = $derived(t(`${toolI18nPrefix}.seo.description`, { defaultValue: '' }));
 	const seoKeywords = $derived(t(`${toolI18nPrefix}.seo.keywords`, { defaultValue: '' }));
 
-	// Build FAQ data from translations
+	// Build FAQ data from translations (i18n) or legacy format
 	const faqs = $derived.by(() => {
 		const faqList: Array<{ question: string; answer: string }> = [];
-		for (let i = 1; i <= data.detail.faqCount; i++) {
-			const question = t(`${toolI18nPrefix}.faqs.${i}.question`, { defaultValue: '' });
-			const answer = t(`${toolI18nPrefix}.faqs.${i}.answer`, { defaultValue: '' });
-			if (question && answer) {
-				faqList.push({ question, answer });
+		if (i18nDetail) {
+			// i18n format: get FAQs from translations
+			for (let i = 1; i <= i18nDetail.faqCount; i++) {
+				const question = t(`${toolI18nPrefix}.faqs.${i}.question`, { defaultValue: '' });
+				const answer = t(`${toolI18nPrefix}.faqs.${i}.answer`, { defaultValue: '' });
+				if (question && answer) {
+					faqList.push({ question, answer });
+				}
 			}
+		} else if ('faqs' in data.detail && Array.isArray(data.detail.faqs)) {
+			// Legacy format: faqs are inline
+			return data.detail.faqs;
 		}
 		return faqList;
 	});
@@ -103,11 +119,13 @@
 	<!-- Overview Section -->
 	<ToolDetailOverview toolId={data.tool.id} i18nPrefix={toolI18nPrefix} />
 
-	<!-- Features Section -->
-	<ToolDetailFeatures i18nPrefix={toolI18nPrefix} featureCount={data.detail.featureCount} />
+	<!-- Features Section (i18n format only) -->
+	{#if i18nDetail}
+		<ToolDetailFeatures i18nPrefix={toolI18nPrefix} featureCount={i18nDetail.featureCount} />
 
-	<!-- Use Cases Section -->
-	<ToolDetailUseCases i18nPrefix={toolI18nPrefix} useCaseCount={data.detail.useCaseCount} />
+		<!-- Use Cases Section -->
+		<ToolDetailUseCases i18nPrefix={toolI18nPrefix} useCaseCount={i18nDetail.useCaseCount} />
+	{/if}
 
 	<!-- Project Info Section -->
 	<ToolDetailInfo detail={data.detail} />
@@ -127,13 +145,15 @@
 	<!-- CTA Section -->
 	<ToolDetailCta tool={data.tool} i18nPrefix={toolI18nPrefix} />
 
-	<!-- Last Updated -->
-	<footer class="page-footer">
-		<p class="last-updated">
-			{lastUpdatedLabel}:
-			{data.detail.lastUpdated}
-		</p>
-	</footer>
+	<!-- Last Updated (i18n format only) -->
+	{#if i18nDetail}
+		<footer class="page-footer">
+			<p class="last-updated">
+				{lastUpdatedLabel}:
+				{i18nDetail.lastUpdated}
+			</p>
+		</footer>
+	{/if}
 </div>
 
 <style>

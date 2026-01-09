@@ -20,7 +20,6 @@
 		TaskStatusIcon,
 		ProgressBar,
 		DemoEmptyState,
-		ActionButtons,
 		DemoButton
 	} from '$lib/components/package-demo';
 
@@ -38,8 +37,10 @@
 		retry: { maxAttempts: 1, baseDelayMs: 100, maxDelayMs: 500 }
 	});
 	let running = $state(false);
+	void running; // Used in template conditionals
 	let currentItem = $state(0);
 	let loading = $state(true);
+	void loading; // Used in template conditionals
 	const ITEMS_COUNT = 10;
 
 	// Calculate progress based on completed tasks (not internal progress)

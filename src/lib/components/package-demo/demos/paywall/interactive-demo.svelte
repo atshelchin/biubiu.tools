@@ -6,7 +6,6 @@
 	import {
 		Play,
 		User,
-		UserCheck,
 		UserX,
 		Crown,
 		Search,
@@ -14,7 +13,6 @@
 		ArrowRightLeft,
 		Check,
 		X,
-		AlertTriangle,
 		CreditCard
 	} from '@lucide/svelte';
 	import {
@@ -24,7 +22,7 @@
 		InputGroup,
 		CodeBlock
 	} from '$lib/components/package-demo';
-	import type { PaywallResult, PaywallContext, QuotaConfig } from '@shelchin/paywall';
+	import type { PaywallResult, QuotaConfig } from '@shelchin/paywall';
 
 	interface Props {
 		t: (key: string) => string;

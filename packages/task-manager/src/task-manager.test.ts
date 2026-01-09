@@ -5,7 +5,7 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { TaskManager, createTaskManager } from './task-manager';
 import { createMemoryStorage } from './storage/memory';
-import type { TaskExecutor, ExecutorRegistry, TaskRoot, TaskNode, ExecutionContext } from './types';
+import type { TaskExecutor, ExecutorRegistry } from './types';
 
 describe('TaskManager', () => {
 	let tm: TaskManager<{ value: number }>;
@@ -540,7 +540,7 @@ describe('TaskManager', () => {
 
 	describe('getRecoverable', () => {
 		it('should return pending, running, and paused tasks', async () => {
-			const pending = await tm.create({ name: 'Pending' });
+			await tm.create({ name: 'Pending' });
 			const running = await tm.create({ name: 'Running' });
 			await tm.create({ name: 'To Complete' });
 
@@ -662,6 +662,7 @@ describe('TaskManager', () => {
 				root.status = 'completed';
 				root.updatedAt = Date.now() - 10 * 24 * 60 * 60 * 1000; // 10 days ago
 				// Save directly to storage (hacky but needed for test)
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				await (tm as any).storage.saveRoot(root);
 			}
 
