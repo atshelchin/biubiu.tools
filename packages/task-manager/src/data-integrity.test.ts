@@ -381,10 +381,7 @@ describe('Data Integrity', () => {
 			// Test that saveRootWithNodes is called for create
 			let atomicSaveWasCalled = false;
 			const atomicStorage = createMemoryStorage();
-			(atomicStorage as any).saveRootWithNodes = async (
-				root: TaskRoot,
-				nodes: TaskNode[]
-			) => {
+			(atomicStorage as any).saveRootWithNodes = async (root: TaskRoot, nodes: TaskNode[]) => {
 				atomicSaveWasCalled = true;
 				await atomicStorage.saveRoot(root);
 				await atomicStorage.saveNodes(nodes);
@@ -461,7 +458,7 @@ describe('Data Integrity', () => {
 		});
 
 		it('should maintain stats after pause and resume', async () => {
-			let pausedAt = 0;
+			const pausedAt = 0;
 			const executor: TaskExecutor<{ value: number }> = async (ctx) => {
 				if (ctx.data.value === 2) {
 					await ctx.pauseTask('test');
@@ -482,7 +479,7 @@ describe('Data Integrity', () => {
 			// First execution - will pause at task 2
 			await tm.execute(root.id, executor);
 
-			let pausedRoot = await tm.getRoot(root.id);
+			const pausedRoot = await tm.getRoot(root.id);
 			expect(pausedRoot?.status).toBe('paused');
 			expect(pausedRoot?.stats.completed).toBe(1); // Task 1 completed
 

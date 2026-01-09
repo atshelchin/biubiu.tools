@@ -36,6 +36,14 @@ export class FormStateManager implements IFormStateManager {
 	private isBatching = false;
 	private batchedChanges = new Set<FieldPath>();
 
+	// P0: 提交状态
+	private _isSubmitting = false;
+
+	// P2: Watch API - 字段监听器
+	private fieldWatchers: Map<FieldPath, Set<(value: FieldValue, prevValue: FieldValue) => void>> =
+		new Map();
+	private previousValues: Map<FieldPath, FieldValue> = new Map();
+
 	constructor(config: IFormConfig = {}) {
 		debug.log(
 			'[FormStateManager.constructor] config.fields:',
@@ -143,10 +151,157 @@ export class FormStateManager implements IFormStateManager {
 			this.validationAbortControllers.delete(path);
 		}
 
+		// 清理 Watch 监听器
+		this.fieldWatchers.delete(path);
+		this.previousValues.delete(path);
+
 		// 清理配置和状态
 		this.fieldConfigs.delete(path);
 		this.fieldStates.delete(path);
 		this.values = PathUtils.delete(this.values, path) as Record<string, FieldValue>;
+	}
+
+	// ========== 字段查询 API (P0: 暴露正式 API) ==========
+
+	/**
+	 * 检查字段是否已注册
+	 */
+	hasField(path: FieldPath): boolean {
+		return this.fieldConfigs.has(path);
+	}
+
+	/**
+	 * 获取字段配置（只读）
+	 */
+	getFieldConfig(path: FieldPath): IFieldConfig | undefined {
+		const config = this.fieldConfigs.get(path);
+		// 返回副本以防止外部修改
+		return config ? { ...config } : undefined;
+	}
+
+	/**
+	 * 获取所有已注册的字段路径
+	 */
+	getRegisteredFields(): FieldPath[] {
+		return Array.from(this.fieldConfigs.keys());
+	}
+
+	/**
+	 * 重新映射数组字段的路径（供 FieldArray 组件使用）
+	 * 防止删除/移动后路径错位
+	 */
+	remapArrayFields(
+		arrayPath: FieldPath,
+		operation: 'remove' | 'insert' | 'move',
+		fromIndex: number,
+		toIndex?: number
+	): void {
+		// 转义正则特殊字符
+		const escapeRegex = (str: string) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+		// 找出所有受影响的字段路径
+		const allPaths = Array.from(this.fieldStates.keys());
+		const regex = new RegExp(`^${escapeRegex(arrayPath)}\\[(\\d+)\\]`);
+
+		const affectedPaths = allPaths.filter((path) => {
+			const match = path.match(regex);
+			if (!match) return false;
+			const pathIndex = parseInt(match[1]);
+			return pathIndex >= fromIndex;
+		});
+
+		// 计算新索引并收集所有需要重新映射的路径
+		const remapped: Array<{ oldPath: string; newPath: string; oldIndex: number; newIndex: number }> =
+			[];
+
+		for (const oldPath of affectedPaths) {
+			const oldIndex = parseInt(oldPath.match(/\[(\d+)\]/)?.[1] || '0');
+			let newIndex = oldIndex;
+
+			if (operation === 'remove') {
+				if (oldIndex === fromIndex) {
+					// 被删除的项，跳过映射（会在后续清理）
+					continue;
+				} else if (oldIndex > fromIndex) {
+					newIndex = oldIndex - 1;
+				}
+			} else if (operation === 'insert') {
+				if (oldIndex >= fromIndex) {
+					newIndex = oldIndex + 1;
+				}
+			} else if (operation === 'move' && toIndex !== undefined) {
+				if (oldIndex === fromIndex) {
+					newIndex = toIndex;
+				} else if (fromIndex < toIndex) {
+					// 向后移动
+					if (oldIndex > fromIndex && oldIndex <= toIndex) {
+						newIndex = oldIndex - 1;
+					}
+				} else {
+					// 向前移动
+					if (oldIndex >= toIndex && oldIndex < fromIndex) {
+						newIndex = oldIndex + 1;
+					}
+				}
+			}
+
+			if (newIndex !== oldIndex) {
+				const newPath = oldPath.replace(/\[\d+\]/, `[${newIndex}]`);
+				remapped.push({ oldPath, newPath, oldIndex, newIndex });
+			}
+		}
+
+		// 根据操作类型决定处理顺序
+		// - remove: 索引减小，从低到高处理（先移动items[1]到items[0]，再移动items[2]到items[1]）
+		// - insert: 索引增大，从高到低处理（先移动items[2]到items[3]，再移动items[1]到items[2]）
+		// - move: 需要先提取被移动的项，再处理其他
+		if (operation === 'remove') {
+			remapped.sort((a, b) => a.oldIndex - b.oldIndex);
+		} else if (operation === 'insert') {
+			remapped.sort((a, b) => b.oldIndex - a.oldIndex);
+		}
+
+		// 对于 move 操作，需要特殊处理避免覆盖
+		// 先提取所有状态到临时存储，然后一次性写入
+		const tempStates = new Map<string, IFieldState>();
+		const tempConfigs = new Map<string, IFieldConfig>();
+
+		for (const { oldPath, newPath } of remapped) {
+			const state = this.fieldStates.get(oldPath);
+			if (state) {
+				tempStates.set(newPath, state);
+				this.fieldStates.delete(oldPath);
+			}
+			const config = this.fieldConfigs.get(oldPath);
+			if (config) {
+				tempConfigs.set(newPath, config);
+				this.fieldConfigs.delete(oldPath);
+			}
+		}
+
+		// 写入新位置
+		for (const [path, state] of tempStates) {
+			this.fieldStates.set(path, state);
+		}
+		for (const [path, config] of tempConfigs) {
+			this.fieldConfigs.set(path, config);
+		}
+
+		// 清理超出范围的索引
+		const arrayValue = this.getValue(arrayPath);
+		const arrayLength = Array.isArray(arrayValue) ? arrayValue.length : 0;
+
+		const allPathsAfterRemap = Array.from(this.fieldStates.keys());
+		for (const path of allPathsAfterRemap) {
+			const match = path.match(regex);
+			if (match) {
+				const pathIndex = parseInt(match[1]);
+				if (pathIndex >= arrayLength) {
+					this.fieldStates.delete(path);
+					this.fieldConfigs.delete(path);
+				}
+			}
+		}
 	}
 
 	// ========== 值管理 ==========
@@ -201,6 +356,9 @@ export class FormStateManager implements IFormStateManager {
 			this.batchedChanges.add(path);
 			return; // 延迟到 batchUpdate 结束时处理
 		}
+
+		// P2: 触发 Watch 回调
+		this.notifyWatchers(path, transformedValue);
 
 		// 通知观察者
 		this.observers.forEach((observer) => {
@@ -561,6 +719,13 @@ export class FormStateManager implements IFormStateManager {
 		return Array.from(this.fieldStates.values()).some((state) => state.validating);
 	}
 
+	/**
+	 * P0: 检查表单是否正在提交
+	 */
+	isSubmitting(): boolean {
+		return this._isSubmitting;
+	}
+
 	getTouchedFields(): FieldPath[] {
 		return Array.from(this.fieldStates.entries())
 			.filter(([, state]) => state.touched)
@@ -599,19 +764,26 @@ export class FormStateManager implements IFormStateManager {
 	async submit(
 		onSubmit: (values: Record<string, FieldValue>) => void | Promise<void>
 	): Promise<boolean> {
-		// 标记所有字段为已触摸
-		this.fieldStates.forEach((state, path) => {
-			this.fieldStates.set(path, { ...state, touched: true });
-		});
-
-		// 验证整个表单
-		const errors = await this.validateForm();
-
-		if (Object.keys(errors).length > 0) {
+		// P0: 防止重复提交 - 必须在任何异步操作之前检查并设置
+		if (this._isSubmitting) {
+			debug.warn('[submit] Form is already submitting, ignoring duplicate submit');
 			return false;
 		}
+		this._isSubmitting = true;
 
 		try {
+			// 标记所有字段为已触摸
+			this.fieldStates.forEach((state, path) => {
+				this.fieldStates.set(path, { ...state, touched: true });
+			});
+
+			// 验证整个表单
+			const errors = await this.validateForm();
+
+			if (Object.keys(errors).length > 0) {
+				return false;
+			}
+
 			await onSubmit(this.values);
 
 			this.observers.forEach((observer) => {
@@ -621,6 +793,9 @@ export class FormStateManager implements IFormStateManager {
 			return true;
 		} catch {
 			return false;
+		} finally {
+			// P0: 重置提交状态
+			this._isSubmitting = false;
 		}
 	}
 
@@ -658,5 +833,107 @@ export class FormStateManager implements IFormStateManager {
 		manager.fieldStates = new Map(data.fieldStates);
 
 		return manager;
+	}
+
+	// ========== Watch API (P2) ==========
+
+	/**
+	 * 监听单个或多个字段的变化
+	 *
+	 * @example
+	 * ```typescript
+	 * // 监听单个字段
+	 * const unwatch = form.watch('email', (value, prevValue) => {
+	 *   console.log(`Email changed from ${prevValue} to ${value}`);
+	 * });
+	 *
+	 * // 监听多个字段
+	 * const unwatch = form.watch(['firstName', 'lastName'], (values) => {
+	 *   console.log(`Name: ${values.firstName} ${values.lastName}`);
+	 * });
+	 * ```
+	 */
+	watch(
+		pathOrPaths: FieldPath | FieldPath[],
+		callback:
+			| ((value: FieldValue, prevValue: FieldValue) => void)
+			| ((values: Record<FieldPath, FieldValue>) => void)
+	): () => void {
+		if (Array.isArray(pathOrPaths)) {
+			// 监听多个字段
+			const paths = pathOrPaths;
+			const multiCallback = callback as (values: Record<FieldPath, FieldValue>) => void;
+
+			const singleFieldCallback = () => {
+				const values: Record<FieldPath, FieldValue> = {};
+				paths.forEach((p) => {
+					values[p] = this.getValue(p);
+				});
+				multiCallback(values);
+			};
+
+			// 为每个字段注册监听器
+			const unsubscribers: (() => void)[] = [];
+			paths.forEach((path) => {
+				let watchers = this.fieldWatchers.get(path);
+				if (!watchers) {
+					watchers = new Set();
+					this.fieldWatchers.set(path, watchers);
+				}
+				// 包装为单字段回调格式
+				const wrappedCallback = () => singleFieldCallback();
+				watchers.add(wrappedCallback as (value: FieldValue, prevValue: FieldValue) => void);
+
+				unsubscribers.push(() => {
+					watchers?.delete(wrappedCallback as (value: FieldValue, prevValue: FieldValue) => void);
+				});
+			});
+
+			// 返回取消订阅函数
+			return () => {
+				unsubscribers.forEach((unsub) => unsub());
+			};
+		} else {
+			// 监听单个字段
+			const path = pathOrPaths;
+			const singleCallback = callback as (value: FieldValue, prevValue: FieldValue) => void;
+
+			let watchers = this.fieldWatchers.get(path);
+			if (!watchers) {
+				watchers = new Set();
+				this.fieldWatchers.set(path, watchers);
+			}
+
+			// 初始化 previousValue
+			if (!this.previousValues.has(path)) {
+				this.previousValues.set(path, this.getValue(path));
+			}
+
+			watchers.add(singleCallback);
+
+			// 返回取消订阅函数
+			return () => {
+				watchers?.delete(singleCallback);
+			};
+		}
+	}
+
+	/**
+	 * 通知字段监听器（内部方法）
+	 */
+	private notifyWatchers(path: FieldPath, newValue: FieldValue): void {
+		const watchers = this.fieldWatchers.get(path);
+		if (!watchers || watchers.size === 0) return;
+
+		const prevValue = this.previousValues.get(path);
+		this.previousValues.set(path, newValue);
+
+		watchers.forEach((callback) => {
+			try {
+				callback(newValue, prevValue);
+			} catch (err) {
+				debug.error('[watch] Watcher callback threw error:', err);
+			}
+		});
 	}
 }

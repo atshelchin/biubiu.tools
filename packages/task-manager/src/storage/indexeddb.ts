@@ -12,6 +12,7 @@
  */
 
 import type { TaskRoot, TaskNode, TaskStatus, StorageAdapter } from '../types';
+import { StorageError } from '../types';
 
 const DB_VERSION = 1;
 const ROOTS_STORE = 'roots';
@@ -185,6 +186,57 @@ export class IndexedDBStorage implements StorageAdapter {
 	}
 
 	/**
+	 * Convert IndexedDB errors to StorageError with proper type
+	 */
+	private wrapError(error: unknown): StorageError {
+		if (error instanceof StorageError) {
+			return error;
+		}
+
+		if (error instanceof DOMException) {
+			// QuotaExceededError - storage is full
+			if (error.name === 'QuotaExceededError') {
+				return new StorageError(
+					'QUOTA_EXCEEDED',
+					'Storage quota exceeded. Please free up space by deleting old tasks.',
+					error
+				);
+			}
+
+			// Connection errors
+			if (
+				error.name === 'InvalidStateError' ||
+				error.name === 'TransactionInactiveError' ||
+				error.message.includes('database connection is closing')
+			) {
+				return new StorageError(
+					'CONNECTION_ERROR',
+					`Database connection error: ${error.message}`,
+					error
+				);
+			}
+
+			// Transaction errors
+			if (error.name === 'AbortError' || error.name === 'TransactionInactiveError') {
+				return new StorageError('TRANSACTION_ERROR', `Transaction failed: ${error.message}`, error);
+			}
+
+			// NotFoundError
+			if (error.name === 'NotFoundError') {
+				return new StorageError('NOT_FOUND', `Resource not found: ${error.message}`, error);
+			}
+		}
+
+		// Unknown error
+		const message = error instanceof Error ? error.message : String(error);
+		return new StorageError(
+			'UNKNOWN',
+			`Unknown storage error: ${message}`,
+			error instanceof Error ? error : undefined
+		);
+	}
+
+	/**
 	 * Execute a database operation with automatic retry on connection errors
 	 */
 	private async withRetry<R>(
@@ -195,23 +247,25 @@ export class IndexedDBStorage implements StorageAdapter {
 			const db = await this.getDB();
 			return await operation(db);
 		} catch (error) {
-			// Check if it's a connection-related error
-			const isConnectionError =
-				error instanceof DOMException &&
-				(error.name === 'InvalidStateError' ||
-					error.name === 'TransactionInactiveError' ||
-					error.message.includes('database connection is closing'));
+			const storageError = this.wrapError(error);
 
-			if (isConnectionError && retryCount < MAX_RETRIES) {
+			// QuotaExceededError - don't retry, throw immediately
+			if (storageError.type === 'QUOTA_EXCEEDED') {
+				console.error('[IndexedDB] Storage quota exceeded');
+				throw storageError;
+			}
+
+			// Connection errors - retry
+			if (storageError.isRecoverable() && retryCount < MAX_RETRIES) {
 				console.warn(
-					`[IndexedDB] Connection error, retrying operation (attempt ${retryCount + 1}/${MAX_RETRIES})`
+					`[IndexedDB] ${storageError.type}, retrying operation (attempt ${retryCount + 1}/${MAX_RETRIES})`
 				);
 				this.resetConnection();
 				await new Promise((r) => setTimeout(r, RETRY_DELAY_MS * (retryCount + 1)));
 				return this.withRetry(operation, retryCount + 1);
 			}
 
-			throw error;
+			throw storageError;
 		}
 	}
 

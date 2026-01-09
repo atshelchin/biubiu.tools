@@ -58,7 +58,12 @@
       "Bash(npm run check:*)",
       "Bash(bun build:*)",
       "Bash(jobs)",
-      "Bash(timeout 5 bun run dev:*)"
+      "Bash(timeout 5 bun run dev:*)",
+      "Bash(bun test:*)",
+      "Bash(bunx svelte-check:*)",
+      "Bash(timeout 20 bun run dev:*)",
+      "Bash(lsof:*)",
+      "Bash(FORMSTATE_DEBUG=false bun test:*)"
     ],
     "deny": [],
     "ask": []

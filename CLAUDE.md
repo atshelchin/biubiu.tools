@@ -375,17 +375,17 @@ Listen for connection issues:
 
 ```typescript
 db.onclose = () => {
-  console.warn('Database closed unexpectedly');
-  this.resetConnection();
+	console.warn('Database closed unexpectedly');
+	this.resetConnection();
 };
 
 db.onversionchange = () => {
-  console.warn('Database version changed (another tab upgraded)');
-  this.resetConnection();
+	console.warn('Database version changed (another tab upgraded)');
+	this.resetConnection();
 };
 
 request.onblocked = () => {
-  console.warn('Database blocked by another connection');
+	console.warn('Database blocked by another connection');
 };
 ```
 
@@ -424,13 +424,11 @@ If browser crashes during execution, tasks may be stuck in 'running' status:
 ```typescript
 // ✅ GOOD: Include 'running' in pending leaf query for crash recovery
 const pendingLeafIds = leaves
-  .filter(leaf =>
-    leaf.status !== 'completed' &&
-    leaf.status !== 'failed' &&
-    leaf.status !== 'cancelled'
-    // Note: 'running' and 'paused' are included for recovery
-  )
-  .map(leaf => leaf.id);
+	.filter(
+		(leaf) => leaf.status !== 'completed' && leaf.status !== 'failed' && leaf.status !== 'cancelled'
+		// Note: 'running' and 'paused' are included for recovery
+	)
+	.map((leaf) => leaf.id);
 ```
 
 ### 7. Use Flags for Incomplete Operations
@@ -450,7 +448,7 @@ await saveRoot(root);
 
 // On load, check for incomplete saves
 if (root.metadata?._creating) {
-  console.warn('Found incomplete task, needs cleanup');
+	console.warn('Found incomplete task, needs cleanup');
 }
 ```
 
@@ -463,12 +461,12 @@ const BATCH_SIZE = 1000;
 
 // ❌ BAD: May timeout with 10k+ items
 for (const node of nodes) {
-  await saveNode(node);
+	await saveNode(node);
 }
 
 // ✅ GOOD: Batch to avoid transaction timeout
 for (let i = 0; i < nodes.length; i += BATCH_SIZE) {
-  const batch = nodes.slice(i, i + BATCH_SIZE);
-  await saveNodes(batch);
+	const batch = nodes.slice(i, i + BATCH_SIZE);
+	await saveNodes(batch);
 }
 ```

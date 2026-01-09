@@ -79,6 +79,9 @@ export function useFormState(config: IFormConfig = {}) {
 		get isValidating() {
 			return state.isValidating;
 		},
+		get isSubmitting() {
+			return manager.isSubmitting();
+		},
 
 		// 字段级响应式状态
 		getFieldState: (path: FieldPath) => {
@@ -98,6 +101,11 @@ export function useFormState(config: IFormConfig = {}) {
 			return PathUtils.get(state.values, path);
 		},
 
+		// 字段查询 API（P0: 暴露正式 API，避免私有属性访问）
+		hasField: manager.hasField.bind(manager),
+		getFieldConfig: manager.getFieldConfig.bind(manager),
+		getRegisteredFields: manager.getRegisteredFields.bind(manager),
+
 		// 操作方法
 		registerField: manager.registerField.bind(manager),
 		unregisterField: manager.unregisterField.bind(manager),
@@ -113,6 +121,12 @@ export function useFormState(config: IFormConfig = {}) {
 		setInitialValues: manager.setInitialValues.bind(manager),
 		getDirtyFields: manager.getDirtyFields.bind(manager),
 		getDirtyValues: manager.getDirtyValues.bind(manager),
+
+		// 数组字段操作（供 FieldArray 组件使用）
+		remapArrayFields: manager.remapArrayFields.bind(manager),
+
+		// Watch API（P2: 监听特定字段变化）
+		watch: manager.watch.bind(manager),
 
 		// 性能优化
 		batchUpdate: manager.batchUpdate.bind(manager),

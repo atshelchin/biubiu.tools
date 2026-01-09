@@ -5,6 +5,7 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { IndexedDBStorage, createIndexedDBStorage } from './indexeddb';
 import type { TaskRoot, TaskNode } from '../types';
+import { StorageError, isQuotaExceededError } from '../types';
 
 // Helper to create mock TaskRoot
 function createMockRoot(id: string, overrides: Partial<TaskRoot> = {}): TaskRoot {
@@ -582,5 +583,123 @@ describe('IndexedDBStorage', () => {
 			const roots = await storage.getAllRoots();
 			expect(roots).toHaveLength(3);
 		});
+	});
+
+	describe('Health Check', () => {
+		it('should report healthy status when database is accessible', async () => {
+			const healthy = await storage.isHealthy();
+			expect(healthy).toBe(true);
+		});
+
+		it('should recover from unhealthy state via reconnect', async () => {
+			await storage.close();
+			// After close, the next operation should auto-reconnect
+			const healthy = await storage.isHealthy();
+			expect(healthy).toBe(true);
+		});
+	});
+
+	describe('Reconnect', () => {
+		it('should force reconnect successfully', async () => {
+			await storage.saveRoot(createMockRoot('root-1'));
+			await storage.reconnect();
+
+			const root = await storage.getRoot('root-1');
+			expect(root).not.toBeNull();
+		});
+	});
+});
+
+// =========================================================================
+// StorageError Tests
+// =========================================================================
+
+describe('StorageError', () => {
+	describe('constructor', () => {
+		it('should create error with type and message', () => {
+			const error = new StorageError('QUOTA_EXCEEDED', 'Storage is full');
+			expect(error.type).toBe('QUOTA_EXCEEDED');
+			expect(error.message).toBe('Storage is full');
+			expect(error.name).toBe('StorageError');
+		});
+
+		it('should preserve original error', () => {
+			const originalError = new Error('Original');
+			const error = new StorageError('CONNECTION_ERROR', 'Connection failed', originalError);
+			expect(error.originalError).toBe(originalError);
+		});
+	});
+
+	describe('isQuotaExceeded', () => {
+		it('should return true for QUOTA_EXCEEDED type', () => {
+			const error = new StorageError('QUOTA_EXCEEDED', 'Storage is full');
+			expect(error.isQuotaExceeded()).toBe(true);
+		});
+
+		it('should return false for other types', () => {
+			const error = new StorageError('CONNECTION_ERROR', 'Connection failed');
+			expect(error.isQuotaExceeded()).toBe(false);
+		});
+	});
+
+	describe('isRecoverable', () => {
+		it('should return true for CONNECTION_ERROR', () => {
+			const error = new StorageError('CONNECTION_ERROR', 'Connection failed');
+			expect(error.isRecoverable()).toBe(true);
+		});
+
+		it('should return true for TRANSACTION_ERROR', () => {
+			const error = new StorageError('TRANSACTION_ERROR', 'Transaction failed');
+			expect(error.isRecoverable()).toBe(true);
+		});
+
+		it('should return false for QUOTA_EXCEEDED', () => {
+			const error = new StorageError('QUOTA_EXCEEDED', 'Storage is full');
+			expect(error.isRecoverable()).toBe(false);
+		});
+
+		it('should return false for NOT_FOUND', () => {
+			const error = new StorageError('NOT_FOUND', 'Not found');
+			expect(error.isRecoverable()).toBe(false);
+		});
+	});
+});
+
+describe('isQuotaExceededError', () => {
+	it('should detect StorageError with QUOTA_EXCEEDED type', () => {
+		const error = new StorageError('QUOTA_EXCEEDED', 'Storage is full');
+		expect(isQuotaExceededError(error)).toBe(true);
+	});
+
+	it('should not detect StorageError with other types', () => {
+		const error = new StorageError('CONNECTION_ERROR', 'Connection failed');
+		expect(isQuotaExceededError(error)).toBe(false);
+	});
+
+	it('should detect DOMException with QuotaExceededError name', () => {
+		const error = new DOMException('Quota exceeded', 'QuotaExceededError');
+		expect(isQuotaExceededError(error)).toBe(true);
+	});
+
+	it('should detect Error with QuotaExceededError name', () => {
+		const error = new Error('Quota exceeded');
+		error.name = 'QuotaExceededError';
+		expect(isQuotaExceededError(error)).toBe(true);
+	});
+
+	it('should detect Error with quota in message', () => {
+		const error = new Error('Storage quota exceeded');
+		expect(isQuotaExceededError(error)).toBe(true);
+	});
+
+	it('should return false for unrelated errors', () => {
+		const error = new Error('Something went wrong');
+		expect(isQuotaExceededError(error)).toBe(false);
+	});
+
+	it('should return false for non-errors', () => {
+		expect(isQuotaExceededError(null)).toBe(false);
+		expect(isQuotaExceededError(undefined)).toBe(false);
+		expect(isQuotaExceededError('error string')).toBe(false);
 	});
 });

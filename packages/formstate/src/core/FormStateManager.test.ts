@@ -934,4 +934,251 @@ describe('FormStateManager', () => {
 			vi.useRealTimers();
 		});
 	});
+
+	describe('hasField', () => {
+		it('should return true for registered field', () => {
+			const manager = new FormStateManager({
+				fields: { name: { defaultValue: 'John' } }
+			});
+			expect(manager.hasField('name')).toBe(true);
+		});
+
+		it('should return false for unregistered field', () => {
+			const manager = new FormStateManager();
+			expect(manager.hasField('nonexistent')).toBe(false);
+		});
+
+		it('should return false after unregistering field', () => {
+			const manager = new FormStateManager({
+				fields: { name: { defaultValue: 'John' } }
+			});
+			manager.unregisterField('name');
+			expect(manager.hasField('name')).toBe(false);
+		});
+	});
+
+	describe('getFieldConfig', () => {
+		it('should return config for registered field', () => {
+			const manager = new FormStateManager({
+				fields: {
+					name: { defaultValue: 'John', persistent: true }
+				}
+			});
+			const config = manager.getFieldConfig('name');
+			expect(config).toBeDefined();
+			expect(config?.defaultValue).toBe('John');
+			expect(config?.persistent).toBe(true);
+		});
+
+		it('should return undefined for unregistered field', () => {
+			const manager = new FormStateManager();
+			expect(manager.getFieldConfig('nonexistent')).toBeUndefined();
+		});
+	});
+
+	describe('getRegisteredFields', () => {
+		it('should return all registered field paths', () => {
+			const manager = new FormStateManager({
+				fields: {
+					name: { defaultValue: 'John' },
+					email: { defaultValue: 'john@example.com' },
+					age: { defaultValue: 30 }
+				}
+			});
+			const fields = manager.getRegisteredFields();
+			expect(fields).toHaveLength(3);
+			expect(fields).toContain('name');
+			expect(fields).toContain('email');
+			expect(fields).toContain('age');
+		});
+
+		it('should return empty array for no fields', () => {
+			const manager = new FormStateManager();
+			expect(manager.getRegisteredFields()).toEqual([]);
+		});
+	});
+
+	describe('isSubmitting', () => {
+		it('should return false initially', () => {
+			const manager = new FormStateManager();
+			expect(manager.isSubmitting()).toBe(false);
+		});
+
+		it('should return true during submit', async () => {
+			let resolveSubmit: () => void;
+			const submitPromise = new Promise<void>((resolve) => {
+				resolveSubmit = resolve;
+			});
+
+			const manager = new FormStateManager({
+				fields: { name: { defaultValue: 'John' } }
+			});
+
+			let isSubmittingDuringSubmit = false;
+			const submitResult = manager.submit(async () => {
+				isSubmittingDuringSubmit = manager.isSubmitting();
+				await submitPromise;
+			});
+
+			resolveSubmit!();
+			await submitResult;
+			expect(isSubmittingDuringSubmit).toBe(true);
+			expect(manager.isSubmitting()).toBe(false);
+		});
+
+		it('should prevent duplicate submissions', async () => {
+			let submitCount = 0;
+			const manager = new FormStateManager({
+				fields: { name: { defaultValue: 'John' } }
+			});
+
+			const onSubmit = async () => {
+				submitCount++;
+				await new Promise((resolve) => setTimeout(resolve, 50));
+			};
+
+			const submit1 = manager.submit(onSubmit);
+			const submit2 = manager.submit(onSubmit); // Should be prevented
+
+			await Promise.all([submit1, submit2]);
+			expect(submitCount).toBe(1);
+		});
+	});
+
+	describe('watch', () => {
+		it('should notify on single field change', () => {
+			const manager = new FormStateManager({
+				fields: { name: { defaultValue: 'John' } }
+			});
+
+			const callback = vi.fn();
+			manager.watch('name', callback);
+
+			manager.setValue('name', 'Jane');
+			expect(callback).toHaveBeenCalledWith('Jane', 'John');
+		});
+
+		it('should not notify for other field changes', () => {
+			const manager = new FormStateManager({
+				fields: {
+					name: { defaultValue: 'John' },
+					age: { defaultValue: 30 }
+				}
+			});
+
+			const callback = vi.fn();
+			manager.watch('name', callback);
+
+			manager.setValue('age', 31);
+			expect(callback).not.toHaveBeenCalled();
+		});
+
+		it('should return unsubscribe function', () => {
+			const manager = new FormStateManager({
+				fields: { name: { defaultValue: 'John' } }
+			});
+
+			const callback = vi.fn();
+			const unsubscribe = manager.watch('name', callback);
+
+			manager.setValue('name', 'Jane');
+			expect(callback).toHaveBeenCalledTimes(1);
+
+			unsubscribe();
+			manager.setValue('name', 'Bob');
+			expect(callback).toHaveBeenCalledTimes(1); // Still 1, not called again
+		});
+
+		it('should watch multiple fields', () => {
+			const manager = new FormStateManager({
+				fields: {
+					firstName: { defaultValue: 'John' },
+					lastName: { defaultValue: 'Doe' }
+				}
+			});
+
+			const callback = vi.fn();
+			manager.watch(['firstName', 'lastName'], callback);
+
+			manager.setValue('firstName', 'Jane');
+			expect(callback).toHaveBeenCalledWith({
+				firstName: 'Jane',
+				lastName: 'Doe'
+			});
+		});
+	});
+
+	describe('remapArrayFields', () => {
+		it('should remap field states on remove', () => {
+			const manager = new FormStateManager({
+				fields: {
+					items: { defaultValue: ['a', 'b', 'c'] }
+				}
+			});
+
+			// Register array item fields with states
+			manager.registerField('items[0]', { defaultValue: 'a' });
+			manager.registerField('items[1]', { defaultValue: 'b' });
+			manager.registerField('items[2]', { defaultValue: 'c' });
+			manager.setFieldTouched('items[1]', true);
+
+			// Remove item at index 0
+			manager.setValue('items', ['b', 'c']);
+			manager.remapArrayFields('items', 'remove', 0);
+
+			// After removing items[0]:
+			// - items[1] moves to items[0] (touched state should be preserved)
+			// - items[2] moves to items[1]
+			// - items[2] should no longer exist (out of bounds)
+			const state0 = manager.getFieldState('items[0]');
+			expect(state0.touched).toBe(true); // Was items[1], which was touched
+			expect(manager.hasField('items[2]')).toBe(false);
+		});
+
+		it('should remap field states on insert', () => {
+			const manager = new FormStateManager({
+				fields: {
+					items: { defaultValue: ['a', 'b'] }
+				}
+			});
+
+			manager.registerField('items[0]', { defaultValue: 'a' });
+			manager.registerField('items[1]', { defaultValue: 'b' });
+			manager.setFieldTouched('items[1]', true);
+
+			// Insert 'new' at index 1, array becomes ['a', 'new', 'b']
+			manager.setValue('items', ['a', 'new', 'b']);
+			manager.remapArrayFields('items', 'insert', 1);
+
+			// After inserting at index 1:
+			// - items[0] stays at items[0]
+			// - items[1] moves to items[2] (touched state should be preserved)
+			const state2 = manager.getFieldState('items[2]');
+			expect(state2.touched).toBe(true); // Was items[1], which was touched
+		});
+
+		it('should remap field states on move', () => {
+			const manager = new FormStateManager({
+				fields: {
+					items: { defaultValue: ['a', 'b', 'c'] }
+				}
+			});
+
+			manager.registerField('items[0]', { defaultValue: 'a' });
+			manager.registerField('items[1]', { defaultValue: 'b' });
+			manager.registerField('items[2]', { defaultValue: 'c' });
+			manager.setFieldTouched('items[0]', true);
+
+			// Move item from index 0 to index 2, array becomes ['b', 'c', 'a']
+			manager.setValue('items', ['b', 'c', 'a']);
+			manager.remapArrayFields('items', 'move', 0, 2);
+
+			// After moving items[0] to index 2:
+			// - items[0] (touched) moves to items[2]
+			// - items[1] moves to items[0]
+			// - items[2] moves to items[1]
+			const state2 = manager.getFieldState('items[2]');
+			expect(state2.touched).toBe(true); // Was items[0], which was touched
+		});
+	});
 });

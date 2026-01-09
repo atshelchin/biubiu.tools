@@ -51,9 +51,8 @@
 
 	// 注册字段（只在字段尚未注册时注册）
 	onMount(() => {
-		// 检查字段是否已经注册（通过 useFormState 配置）
-		const existingConfig = formState._manager['fieldConfigs'].get(name);
-		if (!existingConfig) {
+		// P0: 使用公开 API 检查字段是否已注册
+		if (!formState.hasField(name)) {
 			// 字段未注册，使用传入的 config 注册
 			formState.registerField(name, config);
 			registeredByComponent = true;
@@ -64,7 +63,8 @@
 	onDestroy(() => {
 		// 只有动态字段（非 persistent）且由此组件注册的才自动注销
 		if (registeredByComponent) {
-			const fieldConfig = formState._manager['fieldConfigs'].get(name);
+			// P0: 使用公开 API 获取字段配置
+			const fieldConfig = formState.getFieldConfig(name);
 			if (!fieldConfig?.persistent) {
 				formState.unregisterField(name);
 			}

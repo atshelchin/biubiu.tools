@@ -78,9 +78,23 @@ export interface IFormStateManager {
 	registerField(path: FieldPath, config?: IFieldConfig): void;
 	unregisterField(path: FieldPath): void;
 
+	// 字段查询（P0: 暴露正式 API，避免私有属性访问）
+	hasField(path: FieldPath): boolean;
+	getFieldConfig(path: FieldPath): IFieldConfig | undefined;
+	getRegisteredFields(): FieldPath[];
+
+	// 数组字段操作（供 FieldArray 组件使用）
+	remapArrayFields(
+		arrayPath: FieldPath,
+		operation: 'remove' | 'insert' | 'move',
+		fromIndex: number,
+		toIndex?: number
+	): void;
+
 	// 值管理
 	setValue(path: FieldPath, value: FieldValue, shouldValidate?: boolean): void;
 	getValue(path: FieldPath): FieldValue;
+	getValue<T>(path: FieldPath): T; // 泛型重载，支持类型推断
 	getValues(): Readonly<Record<string, FieldValue>>;
 	setValues(values: Record<string, FieldValue>, shouldValidate?: boolean): void;
 
@@ -102,6 +116,7 @@ export interface IFormStateManager {
 	isDirty(): boolean;
 	isValid(): boolean;
 	isValidating(): boolean;
+	isSubmitting(): boolean; // P0: 添加提交状态
 	getTouchedFields(): FieldPath[];
 	getDirtyFields(): FieldPath[];
 	getErrors(): Record<FieldPath, FieldError>;
@@ -112,6 +127,13 @@ export interface IFormStateManager {
 
 	// 观察者
 	subscribe(observer: IFormObserver): () => void;
+
+	// Watch API (P2: 监听特定字段变化)
+	watch(path: FieldPath, callback: (value: FieldValue, prevValue: FieldValue) => void): () => void;
+	watch(
+		paths: FieldPath[],
+		callback: (values: Record<FieldPath, FieldValue>) => void
+	): () => void;
 
 	// 持久化
 	serialize(): string;
