@@ -1,7 +1,10 @@
 <script lang="ts">
-	import { Check, X, Zap, Crown, AlertTriangle, Github, Server } from '@lucide/svelte';
+	import { Check, X, Zap, Crown, AlertTriangle, Github, Server, Loader2 } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n';
 	import { localizeHref } from '$lib/utils/localized-url';
+	import { onMount } from 'svelte';
+	import { createPublicClient, http, formatEther } from 'viem';
+	import { readPricingFromContract, type FormattedPricing } from '@shelchin/paywall';
 
 	const i18n = useI18n();
 	// Use a wrapper that accepts any string key for dynamic translations
@@ -9,18 +12,151 @@
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		i18n.t(key as any, options);
 
+	// BiuBiuPremium contract address (same on all chains via CREATE2)
+	const PREMIUM_CONTRACT_ADDRESS = '0x61Ae52Bb677847853DB30091ccc32d9b68878B71' as const;
+
+	// Minimal ABI for price reading
+	const PRICE_ABI = [
+		{
+			type: 'function',
+			name: 'DAILY_PRICE',
+			inputs: [],
+			outputs: [{ type: 'uint256' }],
+			stateMutability: 'view'
+		},
+		{
+			type: 'function',
+			name: 'MONTHLY_PRICE',
+			inputs: [],
+			outputs: [{ type: 'uint256' }],
+			stateMutability: 'view'
+		},
+		{
+			type: 'function',
+			name: 'YEARLY_PRICE',
+			inputs: [],
+			outputs: [{ type: 'uint256' }],
+			stateMutability: 'view'
+		},
+		{
+			type: 'function',
+			name: 'NON_MEMBER_FEE',
+			inputs: [],
+			outputs: [{ type: 'uint256' }],
+			stateMutability: 'view'
+		}
+	] as const;
+
+	// Supported networks for pricing
+	interface PricingNetwork {
+		chainId: number;
+		name: string;
+		symbol: string;
+		rpcUrl: string;
+	}
+
+	const PRICING_NETWORKS: PricingNetwork[] = [
+		{ chainId: 11155111, name: 'Sepolia', symbol: 'ETH', rpcUrl: 'https://rpc.sepolia.org' },
+		{ chainId: 1, name: 'Ethereum', symbol: 'ETH', rpcUrl: 'https://eth.llamarpc.com' },
+		{ chainId: 137, name: 'Polygon', symbol: 'MATIC', rpcUrl: 'https://polygon-rpc.com' },
+		{ chainId: 56, name: 'BNB Chain', symbol: 'BNB', rpcUrl: 'https://bsc-dataseed1.binance.org' },
+		{ chainId: 42161, name: 'Arbitrum', symbol: 'ETH', rpcUrl: 'https://arb1.arbitrum.io/rpc' },
+		{ chainId: 10, name: 'Optimism', symbol: 'ETH', rpcUrl: 'https://mainnet.optimism.io' }
+	];
+
 	// Membership billing cycle
 	type BillingCycle = 'daily' | 'monthly' | 'yearly';
 	let selectedCycle: BillingCycle = $state('monthly');
+	let selectedNetwork = $state<PricingNetwork>(PRICING_NETWORKS[0]);
 
-	// Pricing data
-	const membershipPricing = {
-		daily: { price: '0.01', unitKey: 'per_day', savePercent: 0 },
-		monthly: { price: '0.05', unitKey: 'per_month', savePercent: 83 },
-		yearly: { price: '0.1', unitKey: 'per_year', savePercent: 97 }
-	};
+	// Dynamic pricing state
+	let isLoadingPrices = $state(false);
+	let pricingError = $state<string | null>(null);
+	let dynamicPricing = $state<FormattedPricing | null>(null);
 
-	const payPerUseFee = '0.005';
+	// Compute pricing with save percentages
+	const membershipPricing = $derived(() => {
+		if (!dynamicPricing) {
+			return {
+				daily: { price: '--', unitKey: 'per_day', savePercent: 0 },
+				monthly: { price: '--', unitKey: 'per_month', savePercent: 0 },
+				yearly: { price: '--', unitKey: 'per_year', savePercent: 0 }
+			};
+		}
+
+		const dailyPrice = parseFloat(dynamicPricing.daily);
+		const monthlyPrice = parseFloat(dynamicPricing.monthly);
+		const yearlyPrice = parseFloat(dynamicPricing.yearly);
+
+		// Calculate savings compared to daily rate
+		const monthlySave =
+			dailyPrice > 0 ? Math.round((1 - monthlyPrice / (dailyPrice * 30)) * 100) : 0;
+		const yearlySave =
+			dailyPrice > 0 ? Math.round((1 - yearlyPrice / (dailyPrice * 365)) * 100) : 0;
+
+		return {
+			daily: { price: dynamicPricing.daily, unitKey: 'per_day', savePercent: 0 },
+			monthly: {
+				price: dynamicPricing.monthly,
+				unitKey: 'per_month',
+				savePercent: monthlySave > 0 ? monthlySave : 0
+			},
+			yearly: {
+				price: dynamicPricing.yearly,
+				unitKey: 'per_year',
+				savePercent: yearlySave > 0 ? yearlySave : 0
+			}
+		};
+	});
+
+	const payPerUseFee = $derived(dynamicPricing?.perUse ?? '--');
+
+	// Load prices from chain
+	async function loadPrices(network: PricingNetwork) {
+		isLoadingPrices = true;
+		pricingError = null;
+
+		try {
+			const publicClient = createPublicClient({
+				chain: {
+					id: network.chainId,
+					name: network.name,
+					nativeCurrency: { name: network.symbol, symbol: network.symbol, decimals: 18 },
+					rpcUrls: { default: { http: [network.rpcUrl] } }
+				},
+				transport: http(network.rpcUrl)
+			});
+
+			const pricing = await readPricingFromContract(
+				publicClient,
+				PREMIUM_CONTRACT_ADDRESS,
+				PRICE_ABI
+			);
+
+			dynamicPricing = {
+				daily: formatEther(pricing.dailyPrice),
+				monthly: formatEther(pricing.monthlyPrice),
+				yearly: formatEther(pricing.yearlyPrice),
+				perUse: formatEther(pricing.nonMemberFee)
+			};
+		} catch (err) {
+			console.error('Failed to load pricing:', err);
+			pricingError = err instanceof Error ? err.message : 'Failed to load pricing';
+		} finally {
+			isLoadingPrices = false;
+		}
+	}
+
+	// Handle network change
+	function handleNetworkChange(network: PricingNetwork) {
+		selectedNetwork = network;
+		loadPrices(network);
+	}
+
+	// Load prices on mount
+	onMount(() => {
+		loadPrices(selectedNetwork);
+	});
 
 	// Available tool paths for random navigation
 	const toolPaths = [
@@ -47,6 +183,34 @@
 			<p class="section-subtitle">
 				{t('common.pricing.subtitle')}
 			</p>
+		</div>
+
+		<!-- Network selector -->
+		<div class="network-selector">
+			<span class="network-label">{t('common.pricing.select_network')}</span>
+			<div class="network-tabs">
+				{#each PRICING_NETWORKS as network (network.chainId)}
+					<button
+						class="network-tab {selectedNetwork.chainId === network.chainId ? 'active' : ''}"
+						onclick={() => handleNetworkChange(network)}
+						disabled={isLoadingPrices}
+					>
+						{network.name}
+					</button>
+				{/each}
+			</div>
+			{#if isLoadingPrices}
+				<div class="loading-indicator">
+					<Loader2 size={16} class="spinner" />
+					<span>{t('common.pricing.loading')}</span>
+				</div>
+			{/if}
+			{#if pricingError}
+				<div class="pricing-error">
+					<AlertTriangle size={14} />
+					<span>{pricingError}</span>
+				</div>
+			{/if}
 		</div>
 
 		<!-- Pricing grid - 3 cards in a row -->
@@ -126,7 +290,9 @@
 
 				<div class="price-display">
 					<span class="price-value">{payPerUseFee}</span>
-					<span class="price-unit">{t('common.pricing.pay_per_use.unit')}</span>
+					<span class="price-unit"
+						>{selectedNetwork.symbol} {t('common.pricing.pay_per_use.unit')}</span
+					>
 				</div>
 
 				<div class="divider"></div>
@@ -198,16 +364,16 @@
 				</div>
 
 				<div class="price-display">
-					<span class="price-value">{membershipPricing[selectedCycle].price}</span>
+					<span class="price-value">{membershipPricing()[selectedCycle].price}</span>
 					<span class="price-unit"
-						>{t('common.pricing.membership.unit')}/{t(
-							`common.pricing.membership.${membershipPricing[selectedCycle].unitKey}`
+						>{selectedNetwork.symbol}/{t(
+							`common.pricing.membership.${membershipPricing()[selectedCycle].unitKey}`
 						)}</span
 					>
-					{#if membershipPricing[selectedCycle].savePercent > 0}
+					{#if membershipPricing()[selectedCycle].savePercent > 0}
 						<span class="save-badge">
 							{t('common.pricing.membership.save', {
-								percent: membershipPricing[selectedCycle].savePercent
+								percent: membershipPricing()[selectedCycle].savePercent
 							})}
 						</span>
 					{/if}
@@ -288,6 +454,87 @@
 		color: var(--color-muted-foreground);
 		max-width: 36rem;
 		margin: 0 auto;
+	}
+
+	/* Network selector */
+	.network-selector {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-3);
+		margin-bottom: var(--space-8);
+	}
+
+	.network-label {
+		font-size: var(--text-sm);
+		color: var(--color-muted-foreground);
+		font-weight: var(--font-medium);
+	}
+
+	.network-tabs {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-2);
+		padding: var(--space-1);
+		background: var(--color-panel-2);
+		border-radius: var(--radius-lg);
+	}
+
+	.network-tab {
+		padding: var(--space-2) var(--space-3);
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		color: var(--color-muted-foreground);
+		background: transparent;
+		border: none;
+		border-radius: var(--radius-md);
+		cursor: pointer;
+		transition: all 150ms ease;
+	}
+
+	.network-tab:hover:not(:disabled) {
+		color: var(--color-foreground);
+	}
+
+	.network-tab.active {
+		background: var(--color-background);
+		color: var(--color-primary);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.network-tab:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+	.loading-indicator {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		font-size: var(--text-sm);
+		color: var(--color-muted-foreground);
+	}
+
+	.loading-indicator :global(.spinner) {
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.pricing-error {
+		display: flex;
+		align-items: center;
+		gap: var(--space-1);
+		font-size: var(--text-xs);
+		color: hsl(0, 70%, 50%);
 	}
 
 	/* Pricing grid - 3 cards in a row */

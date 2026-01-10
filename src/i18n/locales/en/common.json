@@ -200,6 +200,8 @@
 		"title": "Simple, Transparent Pricing",
 		"subtitle": "Choose the plan that works best for you. Pay per use or unlock everything with a membership.",
 		"transition": "Don't want to deploy? Use our hosted service",
+		"select_network": "Select Network",
+		"loading": "Loading prices...",
 		"pay_per_use": {
 			"title": "Pay Per Use",
 			"description": "Perfect for occasional users",
@@ -280,5 +282,37 @@
 			"invalid_request": "Invalid request. Please try again",
 			"server_error": "Something went wrong. Please try again"
 		}
+	},
+	"membership": {
+		"status": {
+			"active": "Premium Member",
+			"expired": "Membership Expired",
+			"none": "Not a Member"
+		},
+		"days_left": "days left",
+		"tap_to_renew": "Tap to renew",
+		"become_member": "Become a Member",
+		"unlock_all_tools": "Unlock all premium tools",
+		"wallet": "Wallet",
+		"expires": "Expires",
+		"network": "Network",
+		"benefit": {
+			"all_tools": "All on-chain tools",
+			"unlimited": "Unlimited usage"
+		},
+		"extend_membership": "Extend Membership",
+		"plan": {
+			"daily": "Daily",
+			"monthly": "Monthly",
+			"yearly": "Yearly"
+		},
+		"subscribe_now": "Subscribe Now",
+		"subscribing": "Processing...",
+		"subscribe_success": "Subscribed!",
+		"subscribe_failed": "Failed",
+		"renewing": "Processing...",
+		"renew_success": "Extended!",
+		"renew_failed": "Failed",
+		"chain_notice": "Membership valid on {chain} only"
 	}
 }

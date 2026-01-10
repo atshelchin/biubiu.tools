@@ -4,9 +4,21 @@
 	 * Uses shared TokenSelectionSidebar component
 	 */
 	import { TokenSelectionSidebar } from '$lib/components/step/token-selection';
+	import MembershipCard from '$lib/components/ui/membership-card.svelte';
 	import { step3State } from '@/features/wallet-sweep/stores/step3-state.svelte';
 
 	let selectedCount = $derived(step3State.selectedTokenIds.size);
 </script>
 
 <TokenSelectionSidebar i18nPrefix="routes/apps/wallet-sweep" {selectedCount} />
+
+<!-- Membership subscription card -->
+<div class="membership-section">
+	<MembershipCard />
+</div>
+
+<style>
+	.membership-section {
+		margin-top: var(--space-4);
+	}
+</style>

@@ -79,7 +79,9 @@ export type {
 	PaywallResult,
 	PaywallRule,
 	MembershipStoreState,
-	UsageQuotaStoreState
+	UsageQuotaStoreState,
+	PricingInfo,
+	FormattedPricing
 } from './types';
 
 // Error types
@@ -108,6 +110,12 @@ export {
 	verifyAllMemberships,
 	terminateVerifier
 } from './composables/use-membership-verifier';
+export {
+	createPricingStore,
+	usePricingStore,
+	setPricingStore
+} from './composables/use-pricing.svelte';
+export type { PricingStoreState } from './composables/use-pricing.svelte';
 
 // Rule helpers
 export {
@@ -118,7 +126,13 @@ export {
 } from './utils/rules';
 
 // Contract utilities
-export { readMembershipStatus } from './utils/contract';
+export {
+	readMembershipStatus,
+	readPricingInfo,
+	formatPricing,
+	readFormattedPricing,
+	readPricingFromContract
+} from './utils/contract';
 
 // Checksum utilities (legacy, use signature.ts for new code)
 export {

@@ -15,6 +15,22 @@ export interface MembershipStatus {
 	remainingDays: number;
 }
 
+/** 价格信息（从合约读取） */
+export interface PricingInfo {
+	dailyPrice: bigint; // wei
+	monthlyPrice: bigint; // wei
+	yearlyPrice: bigint; // wei
+	nonMemberFee: bigint; // wei (按次付费费用)
+}
+
+/** 格式化后的价格信息（ETH 字符串） */
+export interface FormattedPricing {
+	daily: string; // e.g. "0.05"
+	monthly: string; // e.g. "0.25"
+	yearly: string; // e.g. "1.25"
+	perUse: string; // e.g. "0.01"
+}
+
 /** 缓存的会员数据（存入 IndexedDB） */
 export interface MembershipCache {
 	address: Address;
