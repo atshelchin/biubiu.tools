@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Hero from './Hero.svelte';
 	import Features from './Features.svelte';
-	import Stats from './Stats.svelte';
-	import Pricing from './Pricing.svelte';
+	// import Stats from './Stats.svelte';
+	// import Pricing from './Pricing.svelte';
 	import FAQs from './FAQs.svelte';
 	import { Newsletter } from './newsletter';
 	import CTA from './CTA.svelte';
@@ -17,10 +17,10 @@
 	<Features />
 
 	<!-- Stats section | 统计数据区 -->
-	<Stats />
+	<!-- <Stats /> -->
 
 	<!-- Pricing section | 定价部分 -->
-	<Pricing />
+	<!-- <Pricing /> -->
 
 	<!-- FAQs section | 常见问题部分 -->
 	<FAQs />
