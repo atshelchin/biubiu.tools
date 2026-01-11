@@ -7,7 +7,7 @@
 		"flag": "🇨🇳"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "一站式 Web3 工具箱",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "开始使用",
 	"cta_learn_more": "了解更多",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "什么是 biubiu.tools？",
-				"answer": "biubiu.tools 是一个专为开发者、交易员和资深用户设计的综合性 Web3 工具箱。它提供代币创建、批量转账、钱包管理、合约交互等核心功能 - 所有工具集于一处，界面简洁专业。"
+				"answer": "biubiu.tools 是一个专为开发者、交易员和资深用户设计的以太坊生态工具箱。它提供代币创建、批量转账、钱包管理、合约交互等核心功能 - 所有工具集于一处，界面简洁专业。完美支持以太坊及所有 EVM 兼容链。"
 			},
 			{
 				"question": "biubiu.tools 免费吗？",
 				"answer": "是的！核心功能完全免费。对于链上操作（如代币创建或批量转账），你只需支付网络 Gas 费加少量协议费用。你也可以购买会员，解锁所选链上的所有工具无限使用。"
 			},
 			{
-				"question": "支持哪些区块链网络？",
-				"answer": "我们支持 20+ 条 EVM 兼容链，包括以太坊、BSC、Polygon、Arbitrum、Optimism、Base、Avalanche 等。你也可以通过网络设置添加自定义网络。"
+				"question": "支持哪些网络？",
+				"answer": "我们支持以太坊及 20+ 条 EVM 兼容链，包括 BSC、Polygon、Arbitrum、Optimism、Base、Avalanche 等。你也可以通过网络设置添加自定义网络。"
 			},
 			{
 				"question": "我的私钥安全吗？",
@@ -96,7 +96,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "一站式 Web3 工具箱",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "隐私政策",
 		"terms": "服务条款",
 		"roadmap": "路线图",

@@ -7,7 +7,7 @@
 		"flag": "🇰🇷"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "올인원 Web3 툴킷",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "시작하기",
 	"cta_learn_more": "자세히 보기",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "biubiu.tools는 무엇인가요?",
-				"answer": "biubiu.tools는 개발자, 트레이더, 파워 유저를 위해 설계된 종합 Web3 툴킷입니다. 토큰 생성, 일괄 전송, 지갑 관리, 컨트랙트 상호작용 등 필수 도구들을 깔끔하고 전문적인 인터페이스로 한 곳에서 제공합니다."
+				"answer": "biubiu.tools는 개발자, 트레이더, 파워 유저를 위해 설계된 종합 Ethereum 생태계 툴킷입니다. 토큰 생성, 일괄 전송, 지갑 관리, 컨트랙트 상호작용 등 필수 도구들을 깔끔하고 전문적인 인터페이스로 한 곳에서 제공합니다. Ethereum과 모든 EVM 호환 체인에서 원활하게 작동합니다."
 			},
 			{
 				"question": "biubiu.tools는 무료인가요?",
 				"answer": "네! 핵심 기능은 완전 무료입니다. 온체인 작업(토큰 생성, 일괄 전송 등)의 경우 네트워크 가스비와 소액의 프로토콜 수수료만 지불하시면 됩니다. 또는 원하시는 체인에서 모든 도구를 무제한으로 사용하실 수 있는 멤버십을 구매하실 수 있습니다."
 			},
 			{
-				"question": "어떤 블록체인 네트워크를 지원하나요?",
-				"answer": "Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche 등 20개 이상의 EVM 호환 네트워크를 지원합니다. 네트워크 설정을 통해 커스텀 네트워크도 추가하실 수 있습니다."
+				"question": "어떤 네트워크를 지원하나요?",
+				"answer": "Ethereum과 BSC, Polygon, Arbitrum, Optimism, Base, Avalanche 등 20개 이상의 EVM 호환 네트워크를 지원합니다. 네트워크 설정을 통해 커스텀 네트워크도 추가하실 수 있습니다."
 			},
 			{
 				"question": "개인키는 안전한가요?",
@@ -92,7 +92,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "올인원 Web3 툴킷",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "개인정보처리방침",
 		"terms": "이용약관",
 		"roadmap": "로드맵",

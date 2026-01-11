@@ -7,7 +7,7 @@
 		"flag": "🇹🇷"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Hepsi Bir Arada Web3 Araç Seti",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "Başla",
 	"cta_learn_more": "Daha fazla bilgi",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "biubiu.tools nedir?",
-				"answer": "biubiu.tools, geliştiriciler, yatırımcılar ve ileri düzey kullanıcılar için tasarlanmış kapsamlı bir Web3 araç setidir. Token oluşturma, toplu transferler, cüzdan yönetimi ve sözleşme etkileşimleri gibi temel araçları temiz ve profesyonel bir arayüzle tek bir yerde sunar."
+				"answer": "biubiu.tools, geliştiriciler, yatırımcılar ve ileri düzey kullanıcılar için tasarlanmış kapsamlı bir Ethereum ekosistemi araç setidir. Token oluşturma, toplu transferler, cüzdan yönetimi ve sözleşme etkileşimleri gibi temel araçları temiz ve profesyonel bir arayüzle tek bir yerde sunar. Ethereum ve tüm EVM uyumlu ağlarda sorunsuz çalışır."
 			},
 			{
 				"question": "biubiu.tools kullanımı ücretsiz mi?",
 				"answer": "Evet! Temel özellikler tamamen ücretsizdir. On-chain işlemler için (token oluşturma veya toplu transferler gibi) yalnızca ağ gas ücretleri ve küçük bir protokol ücreti ödersiniz. Alternatif olarak, tercih ettiğiniz zincirdeki tüm araçlara sınırsız erişim için üyelik satın alabilirsiniz."
 			},
 			{
-				"question": "Hangi blockchain ağları destekleniyor?",
-				"answer": "Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche ve daha fazlası dahil 20'den fazla EVM uyumlu ağı destekliyoruz. Ağ ayarlarımız üzerinden özel ağlar da ekleyebilirsiniz."
+				"question": "Hangi ağlar destekleniyor?",
+				"answer": "Ethereum ve BSC, Polygon, Arbitrum, Optimism, Base, Avalanche ve daha fazlası dahil 20'den fazla EVM uyumlu ağı destekliyoruz. Ağ ayarlarımız üzerinden özel ağlar da ekleyebilirsiniz."
 			},
 			{
 				"question": "Özel anahtarım güvende mi?",
@@ -92,7 +92,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "Hepsi bir arada Web3 araç setiniz",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "Gizlilik",
 		"terms": "Koşullar",
 		"roadmap": "Yol haritası",

@@ -7,7 +7,7 @@
 		"flag": "🇮🇹"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Toolkit Web3 tutto-in-uno",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "Inizia",
 	"cta_learn_more": "Scopri di più",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "Cos'è biubiu.tools?",
-				"answer": "biubiu.tools è un toolkit Web3 completo progettato per sviluppatori, trader e power user. Fornisce strumenti essenziali come creazione di token, trasferimenti batch, gestione wallet e interazioni con contratti - tutto in un unico posto con un'interfaccia pulita e professionale."
+				"answer": "biubiu.tools è un toolkit completo dell'ecosistema Ethereum progettato per sviluppatori, trader e power user. Fornisce strumenti essenziali come creazione di token, trasferimenti batch, gestione wallet e interazioni con contratti - tutto in un unico posto con un'interfaccia pulita e professionale. Funziona perfettamente su Ethereum e tutte le reti compatibili EVM."
 			},
 			{
 				"question": "biubiu.tools è gratuito?",
 				"answer": "Sì! Le funzionalità core sono completamente gratuite. Per le operazioni on-chain (come la creazione di token o i trasferimenti batch), paghi solo le commissioni gas di rete più una piccola commissione di protocollo. In alternativa, puoi acquistare un abbonamento per accesso illimitato a tutti gli strumenti sulla tua chain preferita."
 			},
 			{
-				"question": "Quali reti blockchain sono supportate?",
-				"answer": "Supportiamo oltre 20 reti compatibili con EVM, tra cui Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche e molte altre. Puoi anche aggiungere reti personalizzate attraverso le nostre impostazioni di rete."
+				"question": "Quali reti sono supportate?",
+				"answer": "Supportiamo Ethereum e oltre 20 reti compatibili con EVM, tra cui BSC, Polygon, Arbitrum, Optimism, Base, Avalanche e molte altre. Puoi anche aggiungere reti personalizzate attraverso le nostre impostazioni di rete."
 			},
 			{
 				"question": "La mia chiave privata è al sicuro?",
@@ -92,7 +92,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "Il tuo toolkit Web3 tutto-in-uno",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "Privacy",
 		"terms": "Termini",
 		"roadmap": "Roadmap",

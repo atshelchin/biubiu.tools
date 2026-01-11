@@ -7,7 +7,7 @@
 		"code": "en"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "All-in-One Web3 Toolkit",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "Get Started",
 	"cta_learn_more": "Learn More",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "What is biubiu.tools?",
-				"answer": "biubiu.tools is a comprehensive Web3 toolkit designed for developers, traders, and power users. It provides essential tools like token creation, batch transfers, wallet management, and contract interactions - all in one place with a clean, professional interface."
+				"answer": "biubiu.tools is a comprehensive Ethereum ecosystem toolkit designed for developers, traders, and power users. It provides essential tools like token creation, batch transfers, wallet management, and contract interactions - all in one place with a clean, professional interface. Works seamlessly across Ethereum and all EVM-compatible networks."
 			},
 			{
 				"question": "Is biubiu.tools free to use?",
 				"answer": "Yes! Core features are completely free. For on-chain operations (like token creation or batch transfers), you only pay the network gas fees plus a small protocol fee. Alternatively, you can purchase a membership for unlimited access to all tools on your preferred chain."
 			},
 			{
-				"question": "Which blockchain networks are supported?",
-				"answer": "We support 20+ EVM-compatible networks including Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, and many more. You can also add custom networks through our network settings."
+				"question": "Which networks are supported?",
+				"answer": "We support Ethereum and 20+ EVM-compatible networks including BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, and many more. You can also add custom networks through our network settings."
 			},
 			{
 				"question": "Is my private key safe?",
@@ -96,7 +96,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "Your all-in-one Web3 toolkit",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "Privacy",
 		"terms": "Terms",
 		"roadmap": "Roadmap",
@@ -261,7 +261,7 @@
 	"newsletter": {
 		"badge": "Stay Updated",
 		"title": "Stay in the Loop",
-		"subtitle": "Get notified when we launch new tools, features, and Web3 insights. No spam, just value.",
+		"subtitle": "Get notified when we launch new tools, features, and Ethereum ecosystem insights. No spam, just value.",
 		"placeholder": "your@email.com",
 		"button": "Subscribe",
 		"submitting": "Subscribing...",

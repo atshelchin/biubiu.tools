@@ -7,7 +7,7 @@
 		"flag": "🇫🇷"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Boîte à outils Web3 tout-en-un",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "Commencer",
 	"cta_learn_more": "En savoir plus",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "Qu'est-ce que biubiu.tools ?",
-				"answer": "biubiu.tools est une boîte à outils Web3 complète conçue pour les développeurs, traders et utilisateurs avancés. Elle fournit des outils essentiels comme la création de tokens, les transferts en lot, la gestion de portefeuilles et les interactions avec les contrats - le tout en un seul endroit avec une interface claire et professionnelle."
+				"answer": "biubiu.tools est une boîte à outils complète de l'écosystème Ethereum conçue pour les développeurs, traders et utilisateurs avancés. Elle fournit des outils essentiels comme la création de tokens, les transferts en lot, la gestion de portefeuilles et les interactions avec les contrats - le tout en un seul endroit avec une interface claire et professionnelle. Fonctionne parfaitement sur Ethereum et tous les réseaux compatibles EVM."
 			},
 			{
 				"question": "biubiu.tools est-il gratuit ?",
 				"answer": "Oui ! Les fonctionnalités de base sont entièrement gratuites. Pour les opérations on-chain (comme la création de tokens ou les transferts en lot), vous ne payez que les frais de gas du réseau plus des frais de protocole minimes. Vous pouvez également souscrire un abonnement pour un accès illimité à tous les outils sur la chaîne de votre choix."
 			},
 			{
-				"question": "Quels réseaux blockchain sont pris en charge ?",
-				"answer": "Nous prenons en charge plus de 20 réseaux compatibles EVM, notamment Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche et bien d'autres. Vous pouvez également ajouter des réseaux personnalisés via nos paramètres réseau."
+				"question": "Quels réseaux sont pris en charge ?",
+				"answer": "Nous prenons en charge Ethereum et plus de 20 réseaux compatibles EVM, notamment BSC, Polygon, Arbitrum, Optimism, Base, Avalanche et bien d'autres. Vous pouvez également ajouter des réseaux personnalisés via nos paramètres réseau."
 			},
 			{
 				"question": "Ma clé privée est-elle sécurisée ?",
@@ -92,7 +92,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "Votre boîte à outils Web3 tout-en-un",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "Confidentialité",
 		"terms": "Conditions",
 		"roadmap": "Feuille de route",

@@ -7,7 +7,7 @@
 		"flag": "🇻🇳"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Bộ công cụ Web3 tất cả trong một",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "Bắt đầu",
 	"cta_learn_more": "Tìm hiểu thêm",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "biubiu.tools là gì?",
-				"answer": "biubiu.tools là một bộ công cụ Web3 toàn diện được thiết kế cho các nhà phát triển, trader và người dùng chuyên nghiệp. Nó cung cấp các công cụ thiết yếu như tạo token, chuyển hàng loạt, quản lý ví và tương tác hợp đồng - tất cả ở một nơi với giao diện sạch sẽ, chuyên nghiệp."
+				"answer": "biubiu.tools là một bộ công cụ hệ sinh thái Ethereum toàn diện được thiết kế cho các nhà phát triển, trader và người dùng chuyên nghiệp. Nó cung cấp các công cụ thiết yếu như tạo token, chuyển hàng loạt, quản lý ví và tương tác hợp đồng - tất cả ở một nơi với giao diện sạch sẽ, chuyên nghiệp. Hoạt động hoàn hảo trên Ethereum và tất cả các mạng tương thích EVM."
 			},
 			{
 				"question": "biubiu.tools có miễn phí không?",
 				"answer": "Có! Các tính năng cốt lõi hoàn toàn miễn phí. Đối với các thao tác on-chain (như tạo token hoặc chuyển hàng loạt), bạn chỉ trả phí gas mạng cộng với một khoản phí giao thức nhỏ. Ngoài ra, bạn có thể mua thành viên để truy cập không giới hạn tất cả các công cụ trên chuỗi ưa thích của bạn."
 			},
 			{
-				"question": "Những mạng blockchain nào được hỗ trợ?",
-				"answer": "Chúng tôi hỗ trợ hơn 20 mạng tương thích EVM bao gồm Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche và nhiều mạng khác. Bạn cũng có thể thêm các mạng tùy chỉnh thông qua cài đặt mạng của chúng tôi."
+				"question": "Những mạng nào được hỗ trợ?",
+				"answer": "Chúng tôi hỗ trợ Ethereum và hơn 20 mạng tương thích EVM bao gồm BSC, Polygon, Arbitrum, Optimism, Base, Avalanche và nhiều mạng khác. Bạn cũng có thể thêm các mạng tùy chỉnh thông qua cài đặt mạng của chúng tôi."
 			},
 			{
 				"question": "Khóa riêng tư của tôi có an toàn không?",
@@ -92,7 +92,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "Bộ công cụ Web3 tất cả trong một",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "Quyền riêng tư",
 		"terms": "Điều khoản",
 		"roadmap": "Lộ trình",

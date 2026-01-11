@@ -7,7 +7,7 @@
 		"flag": "🇮🇩"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Toolkit Web3 Serba Ada",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "Mulai",
 	"cta_learn_more": "Pelajari lebih lanjut",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "Apa itu biubiu.tools?",
-				"answer": "biubiu.tools adalah toolkit Web3 komprehensif yang dirancang untuk developer, trader, dan pengguna profesional. Menyediakan alat-alat penting seperti pembuatan token, transfer batch, manajemen wallet, dan interaksi kontrak - semua dalam satu tempat dengan antarmuka yang bersih dan profesional."
+				"answer": "biubiu.tools adalah toolkit ekosistem Ethereum komprehensif yang dirancang untuk developer, trader, dan pengguna profesional. Menyediakan alat-alat penting seperti pembuatan token, transfer batch, manajemen wallet, dan interaksi kontrak - semua dalam satu tempat dengan antarmuka yang bersih dan profesional. Berfungsi dengan sempurna di Ethereum dan semua jaringan yang kompatibel dengan EVM."
 			},
 			{
 				"question": "Apakah biubiu.tools gratis digunakan?",
 				"answer": "Ya! Fitur inti sepenuhnya gratis. Untuk operasi on-chain (seperti pembuatan token atau transfer batch), Anda hanya membayar biaya gas jaringan ditambah biaya protokol kecil. Alternatifnya, Anda dapat membeli keanggotaan untuk akses tak terbatas ke semua alat di chain pilihan Anda."
 			},
 			{
-				"question": "Jaringan blockchain apa saja yang didukung?",
-				"answer": "Kami mendukung 20+ jaringan kompatibel EVM termasuk Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, dan banyak lagi. Anda juga dapat menambahkan jaringan kustom melalui pengaturan jaringan kami."
+				"question": "Jaringan apa saja yang didukung?",
+				"answer": "Kami mendukung Ethereum dan 20+ jaringan kompatibel EVM termasuk BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, dan banyak lagi. Anda juga dapat menambahkan jaringan kustom melalui pengaturan jaringan kami."
 			},
 			{
 				"question": "Apakah private key saya aman?",
@@ -92,7 +92,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "Toolkit Web3 serba ada Anda",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "Privasi",
 		"terms": "Ketentuan",
 		"roadmap": "Peta jalan",

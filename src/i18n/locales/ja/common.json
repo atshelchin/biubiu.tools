@@ -7,7 +7,7 @@
 		"flag": "🇯🇵"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "オールインワン Web3 ツールキット",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "始める",
 	"cta_learn_more": "詳しく見る",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "biubiu.toolsとは何ですか？",
-				"answer": "biubiu.toolsは、開発者、トレーダー、パワーユーザー向けに設計された包括的なWeb3ツールキットです。トークン作成、バッチ送金、ウォレット管理、コントラクト操作などの必須ツールを、クリーンでプロフェッショナルなインターフェースで一箇所に提供します。"
+				"answer": "biubiu.toolsは、開発者、トレーダー、パワーユーザー向けに設計された包括的なEthereumエコシステムツールキットです。トークン作成、バッチ送金、ウォレット管理、コントラクト操作などの必須ツールを、クリーンでプロフェッショナルなインターフェースで一箇所に提供します。Ethereumと全てのEVM互換チェーンでシームレスに動作します。"
 			},
 			{
 				"question": "biubiu.toolsは無料で使えますか？",
 				"answer": "はい！コア機能は完全に無料です。オンチェーン操作（トークン作成やバッチ送金など）の場合、ネットワークガス代に加えて少額のプロトコル手数料のみお支払いいただきます。または、お好みのチェーンで全てのツールに無制限でアクセスできるメンバーシップを購入することもできます。"
 			},
 			{
-				"question": "どのブロックチェーンネットワークに対応していますか？",
-				"answer": "Ethereum、BSC、Polygon、Arbitrum、Optimism、Base、Avalancheなど、20以上のEVM互換ネットワークに対応しています。ネットワーク設定からカスタムネットワークを追加することもできます。"
+				"question": "どのネットワークに対応していますか？",
+				"answer": "Ethereumと、BSC、Polygon、Arbitrum、Optimism、Base、Avalancheなど20以上のEVM互換ネットワークに対応しています。ネットワーク設定からカスタムネットワークを追加することもできます。"
 			},
 			{
 				"question": "秘密鍵は安全ですか？",
@@ -92,7 +92,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "オールインワン Web3 ツールキット",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "プライバシー",
 		"terms": "利用規約",
 		"roadmap": "ロードマップ",

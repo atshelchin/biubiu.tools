@@ -7,7 +7,7 @@
 		"code": "pt"
 	},
 	"hero_title": "BiuBiu",
-	"hero_subtitle": "Kit de ferramentas Web3 tudo-em-um",
+	"hero_subtitle": "Ethereum-First Power Tools. EVM-Ready.",
 	"cta_get_started": "Começar",
 	"cta_learn_more": "Saiba Mais",
 	"cta": {
@@ -29,15 +29,15 @@
 		"items": [
 			{
 				"question": "O que é biubiu.tools?",
-				"answer": "biubiu.tools é um kit de ferramentas Web3 abrangente projetado para desenvolvedores, traders e usuários avançados. Fornece ferramentas essenciais como criação de tokens, transferências em lote, gerenciamento de carteiras e interações com contratos - tudo em um só lugar com uma interface limpa e profissional."
+				"answer": "biubiu.tools é um kit de ferramentas abrangente do ecossistema Ethereum projetado para desenvolvedores, traders e usuários avançados. Fornece ferramentas essenciais como criação de tokens, transferências em lote, gerenciamento de carteiras e interações com contratos - tudo em um só lugar com uma interface limpa e profissional. Funciona perfeitamente no Ethereum e em todas as redes compatíveis com EVM."
 			},
 			{
 				"question": "O biubiu.tools é gratuito?",
 				"answer": "Sim! Os recursos principais são completamente gratuitos. Para operações on-chain (como criação de tokens ou transferências em lote), você paga apenas as taxas de gas da rede mais uma pequena taxa de protocolo. Alternativamente, você pode adquirir uma assinatura para acesso ilimitado a todas as ferramentas na sua rede preferida."
 			},
 			{
-				"question": "Quais redes blockchain são suportadas?",
-				"answer": "Suportamos mais de 20 redes compatíveis com EVM, incluindo Ethereum, BSC, Polygon, Arbitrum, Optimism, Base, Avalanche e muitas outras. Você também pode adicionar redes personalizadas através das nossas configurações de rede."
+				"question": "Quais redes são suportadas?",
+				"answer": "Suportamos Ethereum e mais de 20 redes compatíveis com EVM, incluindo BSC, Polygon, Arbitrum, Optimism, Base, Avalanche e muitas outras. Você também pode adicionar redes personalizadas através das nossas configurações de rede."
 			},
 			{
 				"question": "Minha chave privada está segura?",
@@ -92,7 +92,7 @@
 		}
 	},
 	"footer": {
-		"tagline": "Seu kit de ferramentas Web3 tudo-em-um",
+		"tagline": "Ethereum-First Power Tools. EVM-Ready.",
 		"privacy": "Privacidade",
 		"terms": "Termos",
 		"roadmap": "Roadmap",
