@@ -54,7 +54,6 @@
 <svelte:head>
 	<title>{t('routes/unsubscribe.page_title')} | BiuBiu Tools</title>
 	<meta name="description" content={t('routes/unsubscribe.page_description')} />
-	<meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 <div class="unsubscribe-page">
