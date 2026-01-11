@@ -11,9 +11,10 @@
 	"cta_get_started": "Inizia",
 	"cta_learn_more": "Scopri di più",
 	"cta": {
-		"title": "Toolkit Ecosistema Ethereum",
-		"subtitle": "Trasferimenti batch, consolidamento asset, scansione indirizzi. Chiavi elaborate localmente, open-source e auditabile.",
-		"button_text": "Prova Gratis",
+		"badge": "100% Open Source",
+		"title": "Operazioni On-Chain in Batch, Semplificate",
+		"subtitle": "Basta attività ripetitive. Le tue chiavi non lasciano mai il browser.",
+		"button_text": "Vedi Tutti gli Strumenti",
 		"secondary_button": "Vedi Codice"
 	},
 	"faqs": {
@@ -23,35 +24,51 @@
 		"items": [
 			{
 				"question": "Cos'è biubiu.tools?",
-				"answer": "biubiu.tools è un toolkit completo dell'ecosistema Ethereum progettato per sviluppatori, trader e power user. Fornisce strumenti essenziali come creazione di token, trasferimenti batch, gestione wallet e interazioni con contratti - tutto in un unico posto con un'interfaccia pulita e professionale. Funziona perfettamente su Ethereum e tutte le reti compatibili EVM."
+				"answer": "biubiu.tools è un toolkit progettato per operazioni on-chain in batch. Automatizza trasferimenti batch, sweep di asset e altro tramite smart contract, facendoti risparmiare tempo e gas significativi. Funziona su Ethereum e tutte le chain compatibili EVM."
 			},
 			{
-				"question": "biubiu.tools è gratuito?",
-				"answer": "Sì! Le funzionalità core sono completamente gratuite. Per le operazioni on-chain (come la creazione di token o i trasferimenti batch), paghi solo le commissioni gas di rete più una piccola commissione di protocollo. In alternativa, puoi acquistare un abbonamento per accesso illimitato a tutti gli strumenti sulla tua chain preferita."
+				"question": "Questo strumento è sicuro?",
+				"answer": "Le tue chiavi private non lasciano mai il browser - tutte le operazioni di firma vengono eseguite localmente. Non memorizziamo dati sensibili e il nostro codice è 100% open source per consentirti di verificarlo in qualsiasi momento."
 			},
 			{
-				"question": "Quali reti sono supportate?",
-				"answer": "Supportiamo Ethereum e oltre 20 reti compatibili con EVM, tra cui BSC, Polygon, Arbitrum, Optimism, Base, Avalanche e molte altre. Puoi anche aggiungere reti personalizzate attraverso le nostre impostazioni di rete."
+				"question": "Come posso verificare la sicurezza dello strumento?",
+				"answer": "Visita il nostro repository GitHub per esaminare il codice sorgente completo. Puoi anche ospitare la tua istanza, o ispezionare le richieste di rete del browser per confermare che le tue chiavi non vengono mai trasmesse."
 			},
 			{
-				"question": "La mia chiave privata è al sicuro?",
-				"answer": "Assolutamente. Le tue chiavi private non lasciano mai il tuo browser. Tutte le operazioni crittografiche vengono eseguite localmente sul tuo dispositivo. Non abbiamo accesso alle tue chiavi e nessun dato viene inviato ai nostri server. Puoi verificarlo tu stesso - il nostro codice è 100% open source."
+				"question": "Quali reti blockchain sono supportate?",
+				"answer": "Supportiamo Ethereum e oltre 20 chain compatibili EVM tra cui BSC, Polygon, Arbitrum, Optimism, Base, Avalanche e altre. Puoi anche aggiungere reti RPC personalizzate."
+			},
+			{
+				"question": "Quali wallet sono supportati?",
+				"answer": "Supportiamo MetaMask, WalletConnect, Coinbase Wallet e altri wallet principali. Puoi anche importare chiavi private direttamente (elaborate solo localmente, mai caricate)."
+			},
+			{
+				"question": "Quali vantaggi ha rispetto a strumenti simili?",
+				"answer": "100% open source e verificabile, chiavi private elaborate localmente, smart contract ottimizzati per il gas, prezzi trasparenti. Supporta senza permessi qualsiasi chain compatibile EVM senza attendere l'integrazione ufficiale."
+			},
+			{
+				"question": "Come vengono calcolate le commissioni?",
+				"answer": "Commissione = Gas di rete + Commissione di protocollo. Le commissioni di protocollo variano per tipo di operazione, tipicamente una piccola quantità di token nativo. L'abbonamento rimuove le commissioni di protocollo, rendendolo più economico per utenti frequenti."
 			},
 			{
 				"question": "Qual è la differenza tra Paga a consumo e Abbonamento?",
-				"answer": "Paga a consumo addebita una piccola commissione per ogni operazione on-chain e non include gli strumenti di query. L'abbonamento ti dà accesso illimitato a TUTTI gli strumenti (inclusi gli strumenti di query premium) sulla tua chain acquistata per una durata fissa. Gli utenti intensivi risparmiano tipicamente oltre il 50% con l'abbonamento."
+				"answer": "Paga a consumo addebita una commissione di protocollo per operazione, ideale per uso occasionale. L'abbonamento fornisce accesso illimitato a tutti gli strumenti senza commissioni di protocollo durante il periodo di validità, risparmiando tipicamente oltre il 50% per utenti frequenti."
 			},
 			{
-				"question": "Devo connettere il mio wallet per usare gli strumenti?",
-				"answer": "Dipende dallo strumento. Gli strumenti di sola lettura (come esploratori di contratti, convertitori di unità, ecc.) funzionano senza alcuna connessione. Per le operazioni on-chain, dovrai connettere il tuo wallet o importare una chiave privata - ma ricorda, le chiavi vengono elaborate solo localmente."
+				"question": "Cosa include l'Abbonamento?",
+				"answer": "I membri ottengono accesso illimitato a tutti gli strumenti sulla chain acquistata (inclusi strumenti di query premium), zero commissioni di protocollo e supporto prioritario. L'abbonamento è per chain - l'uso cross-chain richiede acquisti separati."
 			},
 			{
-				"question": "biubiu.tools è open source?",
-				"answer": "Sì! L'intera nostra codebase è open source e disponibile su GitHub. Puoi rivedere il codice, contribuire con miglioramenti o persino ospitare la tua istanza. Crediamo nella trasparenza e nello sviluppo guidato dalla community."
+				"question": "Posso implementarlo io stesso?",
+				"answer": "Assolutamente! Il codice è completamente open source e puoi implementarlo su qualsiasi chain EVM. Le versioni self-hosted non hanno commissioni di protocollo, perfetto per sviluppatori e team tecnici. Consulta la documentazione di deployment nel nostro repository GitHub."
 			},
 			{
-				"question": "Come posso ottenere supporto o segnalare problemi?",
-				"answer": "Unisciti al nostro gruppo Telegram per supporto e discussioni in tempo reale. Per segnalazioni di bug e richieste di funzionalità, apri un issue sul nostro repository GitHub. Rispondiamo tipicamente entro 24 ore."
+				"question": "Come inizio?",
+				"answer": "1) Connetti il tuo wallet; 2) Seleziona la rete di destinazione; 3) Scegli il tuo strumento; 4) Segui le istruzioni. Nessuna registrazione richiesta - inizia subito."
+			},
+			{
+				"question": "Come posso ottenere aiuto in caso di problemi?",
+				"answer": "Unisciti alla nostra community Telegram per supporto in tempo reale. Per problemi tecnici o richieste di funzionalità, apri un Issue su GitHub. Rispondiamo tipicamente entro 24 ore."
 			}
 		],
 		"still_questions": "Hai ancora domande?",

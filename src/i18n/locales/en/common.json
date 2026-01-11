@@ -11,9 +11,10 @@
 	"cta_get_started": "Get Started",
 	"cta_learn_more": "Learn More",
 	"cta": {
-		"title": "Ethereum Ecosystem Toolkit",
-		"subtitle": "Batch transfers, asset sweeping, address scanning. Keys processed locally, open-source and auditable.",
-		"button_text": "Try Free",
+		"badge": "100% Open Source",
+		"title": "Batch On-Chain Operations, Done Right",
+		"subtitle": "No more repetitive tasks. Your keys never leave the browser.",
+		"button_text": "View All Tools",
 		"secondary_button": "View Source"
 	},
 	"faqs": {
@@ -23,35 +24,51 @@
 		"items": [
 			{
 				"question": "What is biubiu.tools?",
-				"answer": "biubiu.tools is a comprehensive Ethereum ecosystem toolkit designed for developers, traders, and power users. It provides essential tools like token creation, batch transfers, wallet management, and contract interactions - all in one place with a clean, professional interface. Works seamlessly across Ethereum and all EVM-compatible networks."
+				"answer": "biubiu.tools is a toolkit designed for batch on-chain operations. It automates batch transfers, asset sweeping, and more through smart contracts, saving you significant time and gas fees. Works on Ethereum and all EVM-compatible chains."
 			},
 			{
-				"question": "Is biubiu.tools free to use?",
-				"answer": "Yes! Core features are completely free. For on-chain operations (like token creation or batch transfers), you only pay the network gas fees plus a small protocol fee. Alternatively, you can purchase a membership for unlimited access to all tools on your preferred chain."
+				"question": "Is this tool secure?",
+				"answer": "Your private keys never leave your browser - all signing operations are performed locally. We don't store any sensitive data, and our code is 100% open source for you to audit anytime."
 			},
 			{
-				"question": "Which networks are supported?",
-				"answer": "We support Ethereum and 20+ EVM-compatible networks including BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, and many more. You can also add custom networks through our network settings."
+				"question": "How can I verify the tool's security?",
+				"answer": "Visit our GitHub repository to review the complete source code. You can also self-host your own instance, or inspect browser network requests to confirm your keys are never transmitted."
 			},
 			{
-				"question": "Is my private key safe?",
-				"answer": "Absolutely. Your private keys never leave your browser. All cryptographic operations are performed locally on your device. You can verify this yourself - our code is 100% open source."
+				"question": "Which blockchain networks are supported?",
+				"answer": "We support Ethereum and 20+ EVM-compatible chains including BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, and more. You can also add custom RPC networks."
+			},
+			{
+				"question": "Which wallets are supported?",
+				"answer": "We support MetaMask, WalletConnect, Coinbase Wallet, and other major wallets. You can also import private keys directly (processed locally only, never uploaded)."
+			},
+			{
+				"question": "What advantages does this have over similar tools?",
+				"answer": "100% open source and auditable, private keys processed locally, gas-optimized smart contracts, and transparent pricing. Permissionlessly supports any EVM-compatible chain without waiting for official integration."
+			},
+			{
+				"question": "How are fees calculated?",
+				"answer": "Fee = Network Gas + Protocol Fee. Protocol fees vary by operation type, typically a small amount of native token. Membership removes protocol fees, making it more economical for heavy users."
 			},
 			{
 				"question": "What's the difference between Pay-Per-Use and Membership?",
-				"answer": "Pay-Per-Use charges a small fee for each on-chain operation and doesn't include query tools. Membership gives you unlimited access to ALL tools (including premium query tools) on your purchased chain for a fixed duration. Heavy users typically save 50%+ with membership."
+				"answer": "Pay-Per-Use charges a protocol fee per operation, ideal for occasional use. Membership provides unlimited access to all tools with no protocol fees during the validity period, typically saving 50%+ for frequent users."
 			},
 			{
-				"question": "Do I need to connect my wallet to use the tools?",
-				"answer": "It depends on the tool. Read-only tools (like contract explorers, unit converters, etc.) work without any connection. For on-chain operations, you'll need to either connect your wallet or import a private key - but remember, keys are processed locally only."
+				"question": "What's included in the Membership?",
+				"answer": "Members get unlimited access to all tools on the purchased chain (including premium query tools), zero protocol fees, and priority support. Membership is per-chain - cross-chain use requires separate purchases."
 			},
 			{
-				"question": "Is biubiu.tools open source?",
-				"answer": "Yes! Our entire codebase is open source and available on GitHub. You can review the code, contribute improvements, or even self-host your own instance. We believe in transparency and community-driven development."
+				"question": "Can I deploy it myself?",
+				"answer": "Absolutely! The code is fully open source and you can deploy it to any EVM chain. Self-hosted versions have zero protocol fees, perfect for developers and technical teams. See the deployment docs in our GitHub repository."
 			},
 			{
-				"question": "How can I get support or report issues?",
-				"answer": "Join our Telegram group for real-time support and discussions. For bug reports and feature requests, please open an issue on our GitHub repository. We typically respond within 24 hours."
+				"question": "How do I get started?",
+				"answer": "1) Connect your wallet; 2) Select the target network; 3) Choose your tool; 4) Follow the prompts. No registration required - start using immediately."
+			},
+			{
+				"question": "How can I get help if I have issues?",
+				"answer": "Join our Telegram community for real-time support. For technical issues or feature requests, submit an Issue on GitHub. We typically respond within 24 hours."
 			}
 		],
 		"still_questions": "Still have questions?",

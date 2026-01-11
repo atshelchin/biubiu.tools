@@ -11,9 +11,10 @@
 	"cta_get_started": "Commencer",
 	"cta_learn_more": "En savoir plus",
 	"cta": {
-		"title": "Boîte à Outils Ethereum",
-		"subtitle": "Transferts en lot, consolidation d'actifs, scan d'adresses. Clés traitées localement, open-source et auditable.",
-		"button_text": "Essai Gratuit",
+		"badge": "100% Open Source",
+		"title": "Opérations On-Chain en Lot, Simplifiées",
+		"subtitle": "Fini les tâches répétitives. Vos clés ne quittent jamais le navigateur.",
+		"button_text": "Voir Tous les Outils",
 		"secondary_button": "Voir le Code"
 	},
 	"faqs": {
@@ -23,35 +24,51 @@
 		"items": [
 			{
 				"question": "Qu'est-ce que biubiu.tools ?",
-				"answer": "biubiu.tools est une boîte à outils complète de l'écosystème Ethereum conçue pour les développeurs, traders et utilisateurs avancés. Elle fournit des outils essentiels comme la création de tokens, les transferts en lot, la gestion de portefeuilles et les interactions avec les contrats - le tout en un seul endroit avec une interface claire et professionnelle. Fonctionne parfaitement sur Ethereum et tous les réseaux compatibles EVM."
+				"answer": "biubiu.tools est une boîte à outils conçue pour les opérations on-chain en lot. Elle automatise les transferts en lot, le balayage d'actifs et plus encore via des contrats intelligents, vous faisant économiser un temps et des frais de gas considérables. Fonctionne sur Ethereum et toutes les chaînes compatibles EVM."
 			},
 			{
-				"question": "biubiu.tools est-il gratuit ?",
-				"answer": "Oui ! Les fonctionnalités de base sont entièrement gratuites. Pour les opérations on-chain (comme la création de tokens ou les transferts en lot), vous ne payez que les frais de gas du réseau plus des frais de protocole minimes. Vous pouvez également souscrire un abonnement pour un accès illimité à tous les outils sur la chaîne de votre choix."
+				"question": "Cet outil est-il sécurisé ?",
+				"answer": "Vos clés privées ne quittent jamais votre navigateur - toutes les opérations de signature sont effectuées localement. Nous ne stockons aucune donnée sensible, et notre code est 100% open source pour que vous puissiez l'auditer à tout moment."
 			},
 			{
-				"question": "Quels réseaux sont pris en charge ?",
-				"answer": "Nous prenons en charge Ethereum et plus de 20 réseaux compatibles EVM, notamment BSC, Polygon, Arbitrum, Optimism, Base, Avalanche et bien d'autres. Vous pouvez également ajouter des réseaux personnalisés via nos paramètres réseau."
+				"question": "Comment puis-je vérifier la sécurité de l'outil ?",
+				"answer": "Visitez notre dépôt GitHub pour examiner le code source complet. Vous pouvez également héberger votre propre instance, ou inspecter les requêtes réseau du navigateur pour confirmer que vos clés ne sont jamais transmises."
 			},
 			{
-				"question": "Ma clé privée est-elle sécurisée ?",
-				"answer": "Absolument. Vos clés privées ne quittent jamais votre navigateur. Toutes les opérations cryptographiques sont effectuées localement sur votre appareil. Nous n'avons pas accès à vos clés et aucune donnée n'est envoyée à nos serveurs. Vous pouvez le vérifier vous-même - notre code est 100% open source."
+				"question": "Quels réseaux blockchain sont pris en charge ?",
+				"answer": "Nous prenons en charge Ethereum et plus de 20 chaînes compatibles EVM, notamment BSC, Polygon, Arbitrum, Optimism, Base, Avalanche et plus encore. Vous pouvez également ajouter des réseaux RPC personnalisés."
+			},
+			{
+				"question": "Quels portefeuilles sont pris en charge ?",
+				"answer": "Nous prenons en charge MetaMask, WalletConnect, Coinbase Wallet et d'autres portefeuilles majeurs. Vous pouvez également importer des clés privées directement (traitées localement uniquement, jamais téléchargées)."
+			},
+			{
+				"question": "Quels avantages par rapport aux outils similaires ?",
+				"answer": "100% open source et auditable, clés privées traitées localement, contrats intelligents optimisés pour le gas, tarification transparente. Supporte sans permission n'importe quelle chaîne compatible EVM sans attendre l'intégration officielle."
+			},
+			{
+				"question": "Comment les frais sont-ils calculés ?",
+				"answer": "Frais = Gas réseau + Frais de protocole. Les frais de protocole varient selon le type d'opération, généralement un petit montant de token natif. L'abonnement supprime les frais de protocole, ce qui le rend plus économique pour les utilisateurs intensifs."
 			},
 			{
 				"question": "Quelle est la différence entre le paiement à l'usage et l'abonnement ?",
-				"answer": "Le paiement à l'usage facture des frais minimes pour chaque opération on-chain et n'inclut pas les outils de requête. L'abonnement vous donne un accès illimité à TOUS les outils (y compris les outils de requête premium) sur la chaîne achetée pour une durée déterminée. Les utilisateurs intensifs économisent généralement plus de 50% avec l'abonnement."
+				"answer": "Le paiement à l'usage facture des frais de protocole par opération, idéal pour une utilisation occasionnelle. L'abonnement offre un accès illimité à tous les outils sans frais de protocole pendant la période de validité, économisant généralement plus de 50% pour les utilisateurs fréquents."
 			},
 			{
-				"question": "Dois-je connecter mon portefeuille pour utiliser les outils ?",
-				"answer": "Cela dépend de l'outil. Les outils en lecture seule (comme les explorateurs de contrats, convertisseurs d'unités, etc.) fonctionnent sans connexion. Pour les opérations on-chain, vous devrez soit connecter votre portefeuille, soit importer une clé privée - mais rappelez-vous, les clés sont traitées localement uniquement."
+				"question": "Qu'est-ce qui est inclus dans l'abonnement ?",
+				"answer": "Les membres obtiennent un accès illimité à tous les outils sur la chaîne achetée (y compris les outils de requête premium), zéro frais de protocole et un support prioritaire. L'abonnement est par chaîne - l'utilisation inter-chaînes nécessite des achats séparés."
 			},
 			{
-				"question": "biubiu.tools est-il open source ?",
-				"answer": "Oui ! Notre code source complet est open source et disponible sur GitHub. Vous pouvez consulter le code, contribuer aux améliorations ou même héberger votre propre instance. Nous croyons en la transparence et au développement communautaire."
+				"question": "Puis-je le déployer moi-même ?",
+				"answer": "Absolument ! Le code est entièrement open source et vous pouvez le déployer sur n'importe quelle chaîne EVM. Les versions auto-hébergées n'ont aucun frais de protocole, parfait pour les développeurs et équipes techniques. Consultez la documentation de déploiement dans notre dépôt GitHub."
 			},
 			{
-				"question": "Comment obtenir de l'aide ou signaler des problèmes ?",
-				"answer": "Rejoignez notre groupe Telegram pour obtenir de l'aide en temps réel et participer aux discussions. Pour signaler des bugs et demander des fonctionnalités, veuillez ouvrir une issue sur notre dépôt GitHub. Nous répondons généralement sous 24 heures."
+				"question": "Comment commencer ?",
+				"answer": "1) Connectez votre portefeuille ; 2) Sélectionnez le réseau cible ; 3) Choisissez votre outil ; 4) Suivez les instructions. Aucune inscription requise - commencez immédiatement."
+			},
+			{
+				"question": "Comment obtenir de l'aide en cas de problème ?",
+				"answer": "Rejoignez notre communauté Telegram pour un support en temps réel. Pour les problèmes techniques ou les demandes de fonctionnalités, soumettez une Issue sur GitHub. Nous répondons généralement sous 24 heures."
 			}
 		],
 		"still_questions": "Vous avez encore des questions ?",

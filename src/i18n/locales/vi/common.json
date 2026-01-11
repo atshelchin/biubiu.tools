@@ -11,9 +11,10 @@
 	"cta_get_started": "Bắt đầu",
 	"cta_learn_more": "Tìm hiểu thêm",
 	"cta": {
-		"title": "Bộ Công Cụ Hệ Sinh Thái Ethereum",
-		"subtitle": "Chuyển hàng loạt, hợp nhất tài sản, quét địa chỉ. Khóa được xử lý cục bộ, mã nguồn mở và có thể kiểm toán.",
-		"button_text": "Dùng Thử Miễn Phí",
+		"badge": "100% Mã Nguồn Mở",
+		"title": "Thao Tác On-Chain Hàng Loạt, Đơn Giản",
+		"subtitle": "Tạm biệt các tác vụ lặp lại. Khóa của bạn không bao giờ rời khỏi trình duyệt.",
+		"button_text": "Xem Tất Cả Công Cụ",
 		"secondary_button": "Xem Mã Nguồn"
 	},
 	"faqs": {
@@ -23,35 +24,51 @@
 		"items": [
 			{
 				"question": "biubiu.tools là gì?",
-				"answer": "biubiu.tools là một bộ công cụ hệ sinh thái Ethereum toàn diện được thiết kế cho các nhà phát triển, trader và người dùng chuyên nghiệp. Nó cung cấp các công cụ thiết yếu như tạo token, chuyển hàng loạt, quản lý ví và tương tác hợp đồng - tất cả ở một nơi với giao diện sạch sẽ, chuyên nghiệp. Hoạt động hoàn hảo trên Ethereum và tất cả các mạng tương thích EVM."
+				"answer": "biubiu.tools là bộ công cụ được thiết kế cho các thao tác on-chain hàng loạt. Tự động hóa chuyển hàng loạt, thu gom tài sản và nhiều hơn nữa thông qua hợp đồng thông minh, giúp bạn tiết kiệm đáng kể thời gian và phí gas. Hoạt động trên Ethereum và tất cả các chain tương thích EVM."
 			},
 			{
-				"question": "biubiu.tools có miễn phí không?",
-				"answer": "Có! Các tính năng cốt lõi hoàn toàn miễn phí. Đối với các thao tác on-chain (như tạo token hoặc chuyển hàng loạt), bạn chỉ trả phí gas mạng cộng với một khoản phí giao thức nhỏ. Ngoài ra, bạn có thể mua thành viên để truy cập không giới hạn tất cả các công cụ trên chuỗi ưa thích của bạn."
+				"question": "Công cụ này có an toàn không?",
+				"answer": "Khóa riêng tư của bạn không bao giờ rời khỏi trình duyệt - tất cả các thao tác ký được thực hiện cục bộ. Chúng tôi không lưu trữ dữ liệu nhạy cảm, và mã nguồn của chúng tôi 100% mở để bạn kiểm tra bất cứ lúc nào."
 			},
 			{
-				"question": "Những mạng nào được hỗ trợ?",
-				"answer": "Chúng tôi hỗ trợ Ethereum và hơn 20 mạng tương thích EVM bao gồm BSC, Polygon, Arbitrum, Optimism, Base, Avalanche và nhiều mạng khác. Bạn cũng có thể thêm các mạng tùy chỉnh thông qua cài đặt mạng của chúng tôi."
+				"question": "Làm thế nào để xác minh tính bảo mật của công cụ?",
+				"answer": "Truy cập kho lưu trữ GitHub của chúng tôi để xem xét mã nguồn đầy đủ. Bạn cũng có thể tự lưu trữ phiên bản riêng, hoặc kiểm tra các yêu cầu mạng của trình duyệt để xác nhận khóa của bạn không bao giờ được truyền đi."
 			},
 			{
-				"question": "Khóa riêng tư của tôi có an toàn không?",
-				"answer": "Hoàn toàn an toàn. Khóa riêng tư của bạn không bao giờ rời khỏi trình duyệt. Tất cả các thao tác mã hóa được thực hiện cục bộ trên thiết bị của bạn. Chúng tôi không có quyền truy cập vào khóa của bạn và không có dữ liệu nào được gửi đến máy chủ của chúng tôi. Bạn có thể tự xác minh điều này - mã nguồn của chúng tôi 100% mở."
+				"question": "Những mạng blockchain nào được hỗ trợ?",
+				"answer": "Chúng tôi hỗ trợ Ethereum và hơn 20 chain tương thích EVM bao gồm BSC, Polygon, Arbitrum, Optimism, Base, Avalanche và nhiều hơn nữa. Bạn cũng có thể thêm các mạng RPC tùy chỉnh."
+			},
+			{
+				"question": "Những ví nào được hỗ trợ?",
+				"answer": "Chúng tôi hỗ trợ MetaMask, WalletConnect, Coinbase Wallet và các ví lớn khác. Bạn cũng có thể nhập khóa riêng tư trực tiếp (chỉ xử lý cục bộ, không bao giờ tải lên)."
+			},
+			{
+				"question": "Công cụ này có lợi thế gì so với các công cụ tương tự?",
+				"answer": "100% mã nguồn mở và có thể kiểm tra, khóa riêng tư được xử lý cục bộ, hợp đồng thông minh tối ưu hóa gas, giá cả minh bạch. Hỗ trợ không cần phép bất kỳ chain tương thích EVM nào mà không cần chờ tích hợp chính thức."
+			},
+			{
+				"question": "Phí được tính như thế nào?",
+				"answer": "Phí = Gas mạng + Phí giao thức. Phí giao thức thay đổi theo loại thao tác, thường là một lượng nhỏ token gốc. Thành viên loại bỏ phí giao thức, làm cho nó kinh tế hơn cho người dùng thường xuyên."
 			},
 			{
 				"question": "Sự khác biệt giữa Trả theo lần dùng và Thành viên là gì?",
-				"answer": "Trả theo lần dùng tính phí nhỏ cho mỗi thao tác on-chain và không bao gồm các công cụ truy vấn. Thành viên cung cấp cho bạn quyền truy cập không giới hạn vào TẤT CẢ các công cụ (bao gồm cả công cụ truy vấn cao cấp) trên chuỗi bạn đã mua trong một khoảng thời gian cố định. Người dùng thường xuyên thường tiết kiệm hơn 50% với thành viên."
+				"answer": "Trả theo lần dùng tính phí giao thức cho mỗi thao tác, lý tưởng cho sử dụng không thường xuyên. Thành viên cung cấp quyền truy cập không giới hạn vào tất cả công cụ mà không có phí giao thức trong thời gian hiệu lực, thường tiết kiệm hơn 50% cho người dùng thường xuyên."
 			},
 			{
-				"question": "Tôi có cần kết nối ví để sử dụng các công cụ không?",
-				"answer": "Tùy thuộc vào công cụ. Các công cụ chỉ đọc (như trình khám phá hợp đồng, bộ chuyển đổi đơn vị, v.v.) hoạt động mà không cần bất kỳ kết nối nào. Đối với các thao tác on-chain, bạn sẽ cần kết nối ví hoặc nhập khóa riêng tư - nhưng hãy nhớ rằng, khóa chỉ được xử lý cục bộ."
+				"question": "Thành viên bao gồm những gì?",
+				"answer": "Thành viên được truy cập không giới hạn vào tất cả công cụ trên chain đã mua (bao gồm công cụ truy vấn cao cấp), không phí giao thức và hỗ trợ ưu tiên. Thành viên theo từng chain - sử dụng đa chain cần mua riêng."
 			},
 			{
-				"question": "biubiu.tools có mã nguồn mở không?",
-				"answer": "Có! Toàn bộ mã nguồn của chúng tôi là mã nguồn mở và có sẵn trên GitHub. Bạn có thể xem xét mã, đóng góp cải tiến hoặc thậm chí tự lưu trữ phiên bản riêng của mình. Chúng tôi tin tưởng vào tính minh bạch và phát triển hướng cộng đồng."
+				"question": "Tôi có thể tự triển khai không?",
+				"answer": "Chắc chắn rồi! Mã nguồn hoàn toàn mở và bạn có thể triển khai lên bất kỳ chain EVM nào. Các phiên bản tự lưu trữ không có phí giao thức, hoàn hảo cho các nhà phát triển và đội ngũ kỹ thuật. Xem tài liệu triển khai trong kho lưu trữ GitHub của chúng tôi."
 			},
 			{
-				"question": "Làm thế nào để nhận hỗ trợ hoặc báo cáo vấn đề?",
-				"answer": "Tham gia nhóm Telegram của chúng tôi để được hỗ trợ và thảo luận theo thời gian thực. Đối với báo cáo lỗi và yêu cầu tính năng, vui lòng mở issue trên kho lưu trữ GitHub của chúng tôi. Chúng tôi thường phản hồi trong vòng 24 giờ."
+				"question": "Làm thế nào để bắt đầu?",
+				"answer": "1) Kết nối ví của bạn; 2) Chọn mạng đích; 3) Chọn công cụ của bạn; 4) Làm theo hướng dẫn. Không cần đăng ký - bắt đầu sử dụng ngay lập tức."
+			},
+			{
+				"question": "Làm thế nào để nhận trợ giúp nếu gặp vấn đề?",
+				"answer": "Tham gia cộng đồng Telegram của chúng tôi để được hỗ trợ theo thời gian thực. Đối với các vấn đề kỹ thuật hoặc yêu cầu tính năng, mở Issue trên GitHub. Chúng tôi thường phản hồi trong vòng 24 giờ."
 			}
 		],
 		"still_questions": "Vẫn còn câu hỏi?",

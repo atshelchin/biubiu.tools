@@ -11,9 +11,10 @@
 	"cta_get_started": "Mulai",
 	"cta_learn_more": "Pelajari lebih lanjut",
 	"cta": {
-		"title": "Toolkit Ekosistem Ethereum",
-		"subtitle": "Transfer batch, konsolidasi aset, pemindaian alamat. Kunci diproses secara lokal, open-source dan dapat diaudit.",
-		"button_text": "Coba Gratis",
+		"badge": "100% Open Source",
+		"title": "Operasi On-Chain Batch, Mudah dan Cepat",
+		"subtitle": "Ucapkan selamat tinggal pada tugas berulang. Kunci Anda tidak pernah meninggalkan browser.",
+		"button_text": "Lihat Semua Alat",
 		"secondary_button": "Lihat Kode"
 	},
 	"faqs": {
@@ -23,35 +24,51 @@
 		"items": [
 			{
 				"question": "Apa itu biubiu.tools?",
-				"answer": "biubiu.tools adalah toolkit ekosistem Ethereum komprehensif yang dirancang untuk developer, trader, dan pengguna profesional. Menyediakan alat-alat penting seperti pembuatan token, transfer batch, manajemen wallet, dan interaksi kontrak - semua dalam satu tempat dengan antarmuka yang bersih dan profesional. Berfungsi dengan sempurna di Ethereum dan semua jaringan yang kompatibel dengan EVM."
+				"answer": "biubiu.tools adalah toolkit yang dirancang untuk operasi on-chain batch. Mengotomatisasi transfer batch, penyapuan aset, dan lainnya melalui smart contract, menghemat waktu dan biaya gas Anda secara signifikan. Berfungsi di Ethereum dan semua chain yang kompatibel dengan EVM."
 			},
 			{
-				"question": "Apakah biubiu.tools gratis digunakan?",
-				"answer": "Ya! Fitur inti sepenuhnya gratis. Untuk operasi on-chain (seperti pembuatan token atau transfer batch), Anda hanya membayar biaya gas jaringan ditambah biaya protokol kecil. Alternatifnya, Anda dapat membeli keanggotaan untuk akses tak terbatas ke semua alat di chain pilihan Anda."
+				"question": "Apakah alat ini aman?",
+				"answer": "Private key Anda tidak pernah meninggalkan browser - semua operasi penandatanganan dilakukan secara lokal. Kami tidak menyimpan data sensitif, dan kode kami 100% open source agar Anda dapat mengauditnya kapan saja."
 			},
 			{
-				"question": "Jaringan apa saja yang didukung?",
-				"answer": "Kami mendukung Ethereum dan 20+ jaringan kompatibel EVM termasuk BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, dan banyak lagi. Anda juga dapat menambahkan jaringan kustom melalui pengaturan jaringan kami."
+				"question": "Bagaimana cara memverifikasi keamanan alat ini?",
+				"answer": "Kunjungi repositori GitHub kami untuk meninjau kode sumber lengkap. Anda juga dapat meng-host instance sendiri, atau memeriksa permintaan jaringan browser untuk mengonfirmasi bahwa kunci Anda tidak pernah ditransmisikan."
 			},
 			{
-				"question": "Apakah private key saya aman?",
-				"answer": "Sangat aman. Private key Anda tidak pernah meninggalkan browser Anda. Semua operasi kriptografi dilakukan secara lokal di perangkat Anda. Kami tidak memiliki akses ke kunci Anda, dan tidak ada data yang dikirim ke server kami. Anda dapat memverifikasi sendiri - kode kami 100% open source."
+				"question": "Jaringan blockchain apa saja yang didukung?",
+				"answer": "Kami mendukung Ethereum dan 20+ chain kompatibel EVM termasuk BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, dan lainnya. Anda juga dapat menambahkan jaringan RPC kustom."
+			},
+			{
+				"question": "Wallet apa saja yang didukung?",
+				"answer": "Kami mendukung MetaMask, WalletConnect, Coinbase Wallet, dan wallet utama lainnya. Anda juga dapat mengimpor private key secara langsung (diproses secara lokal saja, tidak pernah diunggah)."
+			},
+			{
+				"question": "Apa keunggulan dibanding alat serupa?",
+				"answer": "100% open source dan dapat diaudit, private key diproses secara lokal, smart contract yang dioptimasi gas, harga transparan. Mendukung chain kompatibel EVM mana pun tanpa izin tanpa menunggu integrasi resmi."
+			},
+			{
+				"question": "Bagaimana biaya dihitung?",
+				"answer": "Biaya = Gas Jaringan + Biaya Protokol. Biaya protokol bervariasi berdasarkan jenis operasi, biasanya sejumlah kecil token natif. Keanggotaan menghapus biaya protokol, menjadikannya lebih ekonomis untuk pengguna aktif."
 			},
 			{
 				"question": "Apa perbedaan antara Bayar per Penggunaan dan Keanggotaan?",
-				"answer": "Bayar per Penggunaan membebankan biaya kecil untuk setiap operasi on-chain dan tidak termasuk alat query. Keanggotaan memberi Anda akses tak terbatas ke SEMUA alat (termasuk alat query premium) di chain yang Anda beli untuk durasi tetap. Pengguna aktif biasanya menghemat 50%+ dengan keanggotaan."
+				"answer": "Bayar per Penggunaan mengenakan biaya protokol per operasi, ideal untuk penggunaan sesekali. Keanggotaan menyediakan akses tak terbatas ke semua alat tanpa biaya protokol selama periode berlaku, biasanya menghemat 50%+ untuk pengguna sering."
 			},
 			{
-				"question": "Apakah saya perlu menghubungkan wallet untuk menggunakan alat?",
-				"answer": "Tergantung pada alatnya. Alat read-only (seperti contract explorer, konverter unit, dll.) bekerja tanpa koneksi. Untuk operasi on-chain, Anda perlu menghubungkan wallet atau mengimpor private key - tetapi ingat, kunci diproses hanya secara lokal."
+				"question": "Apa saja yang termasuk dalam Keanggotaan?",
+				"answer": "Anggota mendapatkan akses tak terbatas ke semua alat di chain yang dibeli (termasuk alat query premium), nol biaya protokol, dan dukungan prioritas. Keanggotaan per-chain - penggunaan lintas chain memerlukan pembelian terpisah."
 			},
 			{
-				"question": "Apakah biubiu.tools open source?",
-				"answer": "Ya! Seluruh codebase kami adalah open source dan tersedia di GitHub. Anda dapat meninjau kode, berkontribusi perbaikan, atau bahkan meng-host sendiri instance Anda. Kami percaya pada transparansi dan pengembangan berbasis komunitas."
+				"question": "Bisakah saya men-deploy sendiri?",
+				"answer": "Tentu saja! Kode sepenuhnya open source dan Anda dapat men-deploy ke chain EVM mana pun. Versi self-hosted tidak memiliki biaya protokol, sempurna untuk developer dan tim teknis. Lihat dokumentasi deployment di repositori GitHub kami."
 			},
 			{
-				"question": "Bagaimana cara mendapatkan dukungan atau melaporkan masalah?",
-				"answer": "Bergabunglah dengan grup Telegram kami untuk dukungan dan diskusi real-time. Untuk laporan bug dan permintaan fitur, silakan buka issue di repositori GitHub kami. Kami biasanya merespons dalam 24 jam."
+				"question": "Bagaimana cara memulai?",
+				"answer": "1) Hubungkan wallet Anda; 2) Pilih jaringan tujuan; 3) Pilih alat Anda; 4) Ikuti petunjuk. Tidak perlu pendaftaran - langsung mulai gunakan."
+			},
+			{
+				"question": "Bagaimana cara mendapatkan bantuan jika ada masalah?",
+				"answer": "Bergabunglah dengan komunitas Telegram kami untuk dukungan real-time. Untuk masalah teknis atau permintaan fitur, buka Issue di GitHub. Kami biasanya merespons dalam 24 jam."
 			}
 		],
 		"still_questions": "Masih ada pertanyaan?",

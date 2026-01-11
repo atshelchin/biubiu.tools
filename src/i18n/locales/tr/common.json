@@ -11,9 +11,10 @@
 	"cta_get_started": "Başla",
 	"cta_learn_more": "Daha fazla bilgi",
 	"cta": {
-		"title": "Ethereum Ekosistem Araç Seti",
-		"subtitle": "Toplu transferler, varlık birleştirme, adres tarama. Anahtarlar yerel olarak işlenir, açık kaynak ve denetlenebilir.",
-		"button_text": "Ücretsiz Dene",
+		"badge": "100% Açık Kaynak",
+		"title": "On-Chain Toplu İşlemler, Kolayca",
+		"subtitle": "Tekrarlayan görevlere son. Anahtarlarınız asla tarayıcıyı terk etmez.",
+		"button_text": "Tüm Araçları Gör",
 		"secondary_button": "Kaynağı Gör"
 	},
 	"faqs": {
@@ -23,35 +24,51 @@
 		"items": [
 			{
 				"question": "biubiu.tools nedir?",
-				"answer": "biubiu.tools, geliştiriciler, yatırımcılar ve ileri düzey kullanıcılar için tasarlanmış kapsamlı bir Ethereum ekosistemi araç setidir. Token oluşturma, toplu transferler, cüzdan yönetimi ve sözleşme etkileşimleri gibi temel araçları temiz ve profesyonel bir arayüzle tek bir yerde sunar. Ethereum ve tüm EVM uyumlu ağlarda sorunsuz çalışır."
+				"answer": "biubiu.tools, toplu on-chain işlemler için tasarlanmış bir araç setidir. Akıllı sözleşmeler aracılığıyla toplu transferleri, varlık süpürmesini ve daha fazlasını otomatikleştirerek önemli ölçüde zaman ve gas tasarrufu sağlar. Ethereum ve tüm EVM uyumlu zincirlerde çalışır."
 			},
 			{
-				"question": "biubiu.tools kullanımı ücretsiz mi?",
-				"answer": "Evet! Temel özellikler tamamen ücretsizdir. On-chain işlemler için (token oluşturma veya toplu transferler gibi) yalnızca ağ gas ücretleri ve küçük bir protokol ücreti ödersiniz. Alternatif olarak, tercih ettiğiniz zincirdeki tüm araçlara sınırsız erişim için üyelik satın alabilirsiniz."
+				"question": "Bu araç güvenli mi?",
+				"answer": "Özel anahtarlarınız asla tarayıcınızı terk etmez - tüm imzalama işlemleri yerel olarak gerçekleştirilir. Hassas veri saklamıyoruz ve kodumuz istediğiniz zaman denetleyebilmeniz için 100% açık kaynaktır."
 			},
 			{
-				"question": "Hangi ağlar destekleniyor?",
-				"answer": "Ethereum ve BSC, Polygon, Arbitrum, Optimism, Base, Avalanche ve daha fazlası dahil 20'den fazla EVM uyumlu ağı destekliyoruz. Ağ ayarlarımız üzerinden özel ağlar da ekleyebilirsiniz."
+				"question": "Aracın güvenliğini nasıl doğrulayabilirim?",
+				"answer": "Tam kaynak kodunu incelemek için GitHub depomuzu ziyaret edin. Kendi örneğinizi de barındırabilir veya anahtarlarınızın asla iletilmediğini doğrulamak için tarayıcı ağ isteklerini inceleyebilirsiniz."
 			},
 			{
-				"question": "Özel anahtarım güvende mi?",
-				"answer": "Kesinlikle. Özel anahtarlarınız asla tarayıcınızdan ayrılmaz. Tüm kriptografik işlemler cihazınızda yerel olarak gerçekleştirilir. Anahtarlarınıza erişimimiz yoktur ve hiçbir veri sunucularımıza gönderilmez. Bunu kendiniz doğrulayabilirsiniz - kodumuz 100% açık kaynaktır."
+				"question": "Hangi blockchain ağları destekleniyor?",
+				"answer": "Ethereum ve BSC, Polygon, Arbitrum, Optimism, Base, Avalanche dahil 20'den fazla EVM uyumlu zinciri destekliyoruz. Özel RPC ağları da ekleyebilirsiniz."
+			},
+			{
+				"question": "Hangi cüzdanlar destekleniyor?",
+				"answer": "MetaMask, WalletConnect, Coinbase Wallet ve diğer büyük cüzdanları destekliyoruz. Özel anahtarları doğrudan da içe aktarabilirsiniz (yalnızca yerel olarak işlenir, asla yüklenmez)."
+			},
+			{
+				"question": "Benzer araçlara göre avantajları nedir?",
+				"answer": "100% açık kaynak ve denetlenebilir, özel anahtarlar yerel olarak işlenir, gas için optimize edilmiş akıllı sözleşmeler, şeffaf fiyatlandırma. Resmi entegrasyon beklemeden herhangi bir EVM uyumlu zinciri izinsiz olarak destekler."
+			},
+			{
+				"question": "Ücretler nasıl hesaplanır?",
+				"answer": "Ücret = Ağ Gas + Protokol Ücreti. Protokol ücretleri işlem türüne göre değişir, genellikle küçük miktarda yerel token. Üyelik protokol ücretlerini kaldırarak yoğun kullanıcılar için daha ekonomik hale getirir."
 			},
 			{
 				"question": "Kullandıkça Öde ile Üyelik arasındaki fark nedir?",
-				"answer": "Kullandıkça Öde, her on-chain işlem için küçük bir ücret alır ve sorgu araçlarını içermez. Üyelik, satın aldığınız zincirdeki TÜM araçlara (premium sorgu araçları dahil) belirli bir süre için sınırsız erişim sağlar. Yoğun kullanıcılar genellikle üyelikle %50'den fazla tasarruf eder."
+				"answer": "Kullandıkça Öde işlem başına protokol ücreti alır, ara sıra kullanım için idealdir. Üyelik, geçerlilik süresi boyunca protokol ücreti olmadan tüm araçlara sınırsız erişim sağlar, sık kullanıcılar için genellikle %50'den fazla tasarruf sağlar."
 			},
 			{
-				"question": "Araçları kullanmak için cüzdanımı bağlamam gerekiyor mu?",
-				"answer": "Araca göre değişir. Salt okunur araçlar (sözleşme keşfedicileri, birim dönüştürücüler vb.) herhangi bir bağlantı olmadan çalışır. On-chain işlemler için cüzdanınızı bağlamanız veya özel anahtar içe aktarmanız gerekir - ancak unutmayın, anahtarlar yalnızca yerel olarak işlenir."
+				"question": "Üyeliğe neler dahil?",
+				"answer": "Üyeler satın aldıkları zincirdeki tüm araçlara (premium sorgu araçları dahil) sınırsız erişim, sıfır protokol ücreti ve öncelikli destek alır. Üyelik zincir başınadır - zincirler arası kullanım ayrı satın alma gerektirir."
 			},
 			{
-				"question": "biubiu.tools açık kaynak mı?",
-				"answer": "Evet! Tüm kod tabanımız açık kaynak ve GitHub'da mevcuttur. Kodu inceleyebilir, iyileştirmelere katkıda bulunabilir veya kendi örneğinizi bile barındırabilirsiniz. Şeffaflığa ve topluluk odaklı geliştirmeye inanıyoruz."
+				"question": "Kendim dağıtabilir miyim?",
+				"answer": "Kesinlikle! Kod tamamen açık kaynaktır ve herhangi bir EVM zincirine dağıtabilirsiniz. Kendi sunucunuzda barındırılan sürümlerin protokol ücreti yoktur, geliştiriciler ve teknik ekipler için mükemmeldir. GitHub depomuzda dağıtım belgelerine bakın."
 			},
 			{
-				"question": "Nasıl destek alabilirim veya sorun bildirebilirim?",
-				"answer": "Gerçek zamanlı destek ve tartışmalar için Telegram grubumuza katılın. Hata raporları ve özellik istekleri için lütfen GitHub depomuzda bir issue açın. Genellikle 24 saat içinde yanıt veriyoruz."
+				"question": "Nasıl başlarım?",
+				"answer": "1) Cüzdanınızı bağlayın; 2) Hedef ağı seçin; 3) Aracınızı seçin; 4) Talimatları izleyin. Kayıt gerektirmez - hemen kullanmaya başlayın."
+			},
+			{
+				"question": "Sorun yaşarsam nasıl yardım alabilirim?",
+				"answer": "Gerçek zamanlı destek için Telegram topluluğumuza katılın. Teknik sorunlar veya özellik istekleri için GitHub'da bir Issue açın. Genellikle 24 saat içinde yanıt veriyoruz."
 			}
 		],
 		"still_questions": "Hala sorularınız mı var?",

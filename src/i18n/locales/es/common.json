@@ -11,9 +11,10 @@
 	"cta_get_started": "Comenzar",
 	"cta_learn_more": "Más información",
 	"cta": {
-		"title": "Kit de Herramientas Ethereum",
-		"subtitle": "Transferencias masivas, consolidación de activos, escaneo de direcciones. Claves procesadas localmente, código abierto y auditable.",
-		"button_text": "Probar Gratis",
+		"badge": "100% Código Abierto",
+		"title": "Operaciones On-Chain en Lote, Sin Complicaciones",
+		"subtitle": "Adiós a las tareas repetitivas. Tus claves nunca salen del navegador.",
+		"button_text": "Ver Todas las Herramientas",
 		"secondary_button": "Ver Código"
 	},
 	"faqs": {
@@ -23,35 +24,51 @@
 		"items": [
 			{
 				"question": "¿Qué es biubiu.tools?",
-				"answer": "biubiu.tools es un kit de herramientas del ecosistema Ethereum integral diseñado para desarrolladores, traders y usuarios avanzados. Proporciona herramientas esenciales como creación de tokens, transferencias masivas, gestión de billeteras e interacciones con contratos, todo en un solo lugar con una interfaz limpia y profesional. Funciona perfectamente en Ethereum y todas las redes compatibles con EVM."
+				"answer": "biubiu.tools es un kit de herramientas diseñado para operaciones on-chain en lote. Automatiza transferencias masivas, barrido de activos y más a través de contratos inteligentes, ahorrándote tiempo significativo y tarifas de gas. Funciona en Ethereum y todas las redes compatibles con EVM."
 			},
 			{
-				"question": "¿Es gratis usar biubiu.tools?",
-				"answer": "¡Sí! Las funciones principales son completamente gratuitas. Para operaciones en la cadena (como creación de tokens o transferencias masivas), solo pagas las tarifas de gas de la red más una pequeña tarifa de protocolo. Alternativamente, puedes comprar una membresía para acceso ilimitado a todas las herramientas en tu cadena preferida."
+				"question": "¿Es segura esta herramienta?",
+				"answer": "Tus claves privadas nunca salen de tu navegador - todas las operaciones de firma se realizan localmente. No almacenamos datos sensibles, y nuestro código es 100% código abierto para que lo audites cuando quieras."
 			},
 			{
-				"question": "¿Qué redes están soportadas?",
-				"answer": "Soportamos Ethereum y más de 20 redes compatibles con EVM, incluyendo BSC, Polygon, Arbitrum, Optimism, Base, Avalanche y muchas más. También puedes agregar redes personalizadas a través de nuestra configuración de red."
+				"question": "¿Cómo puedo verificar la seguridad de la herramienta?",
+				"answer": "Visita nuestro repositorio de GitHub para revisar el código fuente completo. También puedes alojar tu propia instancia, o inspeccionar las solicitudes de red del navegador para confirmar que tus claves nunca se transmiten."
 			},
 			{
-				"question": "¿Mi clave privada está segura?",
-				"answer": "Absolutamente. Tus claves privadas nunca salen de tu navegador. Todas las operaciones criptográficas se realizan localmente en tu dispositivo. No tenemos acceso a tus claves y no se envían datos a nuestros servidores. Puedes verificar esto tú mismo: nuestro código es 100% código abierto."
+				"question": "¿Qué redes blockchain son compatibles?",
+				"answer": "Soportamos Ethereum y más de 20 redes compatibles con EVM, incluyendo BSC, Polygon, Arbitrum, Optimism, Base, Avalanche y más. También puedes agregar redes RPC personalizadas."
+			},
+			{
+				"question": "¿Qué billeteras son compatibles?",
+				"answer": "Soportamos MetaMask, WalletConnect, Coinbase Wallet y otras billeteras principales. También puedes importar claves privadas directamente (procesadas solo localmente, nunca cargadas)."
+			},
+			{
+				"question": "¿Qué ventajas tiene sobre herramientas similares?",
+				"answer": "100% código abierto y auditable, claves privadas procesadas localmente, contratos inteligentes optimizados para gas, precios transparentes. Soporta cualquier red compatible con EVM sin permisos ni espera de integración oficial."
+			},
+			{
+				"question": "¿Cómo se calculan las tarifas?",
+				"answer": "Tarifa = Gas de red + Tarifa de protocolo. Las tarifas de protocolo varían según el tipo de operación, generalmente una pequeña cantidad de token nativo. La membresía elimina las tarifas de protocolo, siendo más económica para usuarios frecuentes."
 			},
 			{
 				"question": "¿Cuál es la diferencia entre pago por uso y membresía?",
-				"answer": "El pago por uso cobra una pequeña tarifa por cada operación en la cadena y no incluye herramientas de consulta. La membresía te da acceso ilimitado a TODAS las herramientas (incluidas las herramientas de consulta premium) en tu cadena comprada por una duración fija. Los usuarios frecuentes generalmente ahorran más del 50% con la membresía."
+				"answer": "El pago por uso cobra una tarifa de protocolo por operación, ideal para uso ocasional. La membresía proporciona acceso ilimitado a todas las herramientas sin tarifas de protocolo durante el período de validez, ahorrando típicamente más del 50% para usuarios frecuentes."
 			},
 			{
-				"question": "¿Necesito conectar mi billetera para usar las herramientas?",
-				"answer": "Depende de la herramienta. Las herramientas de solo lectura (como exploradores de contratos, convertidores de unidades, etc.) funcionan sin ninguna conexión. Para operaciones en la cadena, necesitarás conectar tu billetera o importar una clave privada, pero recuerda, las claves se procesan solo localmente."
+				"question": "¿Qué incluye la membresía?",
+				"answer": "Los miembros obtienen acceso ilimitado a todas las herramientas en la red comprada (incluidas herramientas de consulta premium), cero tarifas de protocolo y soporte prioritario. La membresía es por red - el uso entre redes requiere compras separadas."
 			},
 			{
-				"question": "¿Es biubiu.tools de código abierto?",
-				"answer": "¡Sí! Toda nuestra base de código es de código abierto y está disponible en GitHub. Puedes revisar el código, contribuir con mejoras o incluso alojar tu propia instancia. Creemos en la transparencia y el desarrollo impulsado por la comunidad."
+				"question": "¿Puedo desplegarlo yo mismo?",
+				"answer": "¡Absolutamente! El código es completamente de código abierto y puedes desplegarlo en cualquier red EVM. Las versiones auto-alojadas no tienen tarifas de protocolo, perfecto para desarrolladores y equipos técnicos. Consulta la documentación de despliegue en nuestro repositorio de GitHub."
 			},
 			{
-				"question": "¿Cómo puedo obtener soporte o reportar problemas?",
-				"answer": "Únete a nuestro grupo de Telegram para soporte en tiempo real y discusiones. Para reportes de errores y solicitudes de funciones, por favor abre un issue en nuestro repositorio de GitHub. Generalmente respondemos en 24 horas."
+				"question": "¿Cómo empiezo?",
+				"answer": "1) Conecta tu billetera; 2) Selecciona la red objetivo; 3) Elige tu herramienta; 4) Sigue las instrucciones. No se requiere registro - empieza a usar inmediatamente."
+			},
+			{
+				"question": "¿Cómo puedo obtener ayuda si tengo problemas?",
+				"answer": "Únete a nuestra comunidad de Telegram para soporte en tiempo real. Para problemas técnicos o solicitudes de funciones, abre un Issue en GitHub. Generalmente respondemos en 24 horas."
 			}
 		],
 		"still_questions": "¿Aún tienes preguntas?",

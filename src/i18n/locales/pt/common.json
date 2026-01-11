@@ -11,9 +11,10 @@
 	"cta_get_started": "Começar",
 	"cta_learn_more": "Saiba Mais",
 	"cta": {
-		"title": "Kit de Ferramentas Ethereum",
-		"subtitle": "Transferências em lote, consolidação de ativos, varredura de endereços. Chaves processadas localmente, código aberto e auditável.",
-		"button_text": "Experimentar Grátis",
+		"badge": "100% Código Aberto",
+		"title": "Operações On-Chain em Lote, Feitas Corretamente",
+		"subtitle": "Chega de tarefas repetitivas. Suas chaves nunca saem do navegador.",
+		"button_text": "Ver Todas as Ferramentas",
 		"secondary_button": "Ver Código"
 	},
 	"faqs": {
@@ -23,35 +24,51 @@
 		"items": [
 			{
 				"question": "O que é biubiu.tools?",
-				"answer": "biubiu.tools é um kit de ferramentas abrangente do ecossistema Ethereum projetado para desenvolvedores, traders e usuários avançados. Fornece ferramentas essenciais como criação de tokens, transferências em lote, gerenciamento de carteiras e interações com contratos - tudo em um só lugar com uma interface limpa e profissional. Funciona perfeitamente no Ethereum e em todas as redes compatíveis com EVM."
+				"answer": "biubiu.tools é um kit de ferramentas projetado para operações on-chain em lote. Automatiza transferências em massa, varredura de ativos e muito mais através de contratos inteligentes, economizando tempo significativo e taxas de gas. Funciona no Ethereum e em todas as redes compatíveis com EVM."
 			},
 			{
-				"question": "O biubiu.tools é gratuito?",
-				"answer": "Sim! Os recursos principais são completamente gratuitos. Para operações on-chain (como criação de tokens ou transferências em lote), você paga apenas as taxas de gas da rede mais uma pequena taxa de protocolo. Alternativamente, você pode adquirir uma assinatura para acesso ilimitado a todas as ferramentas na sua rede preferida."
+				"question": "Esta ferramenta é segura?",
+				"answer": "Suas chaves privadas nunca saem do seu navegador - todas as operações de assinatura são realizadas localmente. Não armazenamos dados sensíveis, e nosso código é 100% código aberto para você auditar quando quiser."
 			},
 			{
-				"question": "Quais redes são suportadas?",
-				"answer": "Suportamos Ethereum e mais de 20 redes compatíveis com EVM, incluindo BSC, Polygon, Arbitrum, Optimism, Base, Avalanche e muitas outras. Você também pode adicionar redes personalizadas através das nossas configurações de rede."
+				"question": "Como posso verificar a segurança da ferramenta?",
+				"answer": "Visite nosso repositório GitHub para revisar o código-fonte completo. Você também pode hospedar sua própria instância, ou inspecionar as requisições de rede do navegador para confirmar que suas chaves nunca são transmitidas."
 			},
 			{
-				"question": "Minha chave privada está segura?",
-				"answer": "Absolutamente. Suas chaves privadas nunca saem do seu navegador. Todas as operações criptográficas são realizadas localmente no seu dispositivo. Não temos acesso às suas chaves e nenhum dado é enviado aos nossos servidores. Você pode verificar isso você mesmo - nosso código é 100% código aberto."
+				"question": "Quais redes blockchain são suportadas?",
+				"answer": "Suportamos Ethereum e mais de 20 redes compatíveis com EVM, incluindo BSC, Polygon, Arbitrum, Optimism, Base, Avalanche e mais. Você também pode adicionar redes RPC personalizadas."
 			},
 			{
-				"question": "Qual a diferença entre Pague por Uso e Assinatura?",
-				"answer": "Pague por Uso cobra uma pequena taxa para cada operação on-chain e não inclui ferramentas de consulta. A Assinatura dá acesso ilimitado a TODAS as ferramentas (incluindo ferramentas de consulta premium) na rede adquirida por um período fixo. Usuários frequentes normalmente economizam mais de 50% com a assinatura."
+				"question": "Quais carteiras são suportadas?",
+				"answer": "Suportamos MetaMask, WalletConnect, Coinbase Wallet e outras carteiras principais. Você também pode importar chaves privadas diretamente (processadas apenas localmente, nunca enviadas)."
 			},
 			{
-				"question": "Preciso conectar minha carteira para usar as ferramentas?",
-				"answer": "Depende da ferramenta. Ferramentas somente leitura (como exploradores de contratos, conversores de unidades, etc.) funcionam sem qualquer conexão. Para operações on-chain, você precisará conectar sua carteira ou importar uma chave privada - mas lembre-se, as chaves são processadas apenas localmente."
+				"question": "Quais vantagens em relação a ferramentas similares?",
+				"answer": "100% código aberto e auditável, chaves privadas processadas localmente, contratos inteligentes otimizados para gas, preços transparentes. Suporta qualquer rede compatível com EVM sem permissão e sem esperar integração oficial."
 			},
 			{
-				"question": "O biubiu.tools é código aberto?",
-				"answer": "Sim! Nossa base de código inteira é código aberto e está disponível no GitHub. Você pode revisar o código, contribuir com melhorias ou até mesmo hospedar sua própria instância. Acreditamos em transparência e desenvolvimento orientado pela comunidade."
+				"question": "Como as taxas são calculadas?",
+				"answer": "Taxa = Gas da rede + Taxa de protocolo. As taxas de protocolo variam por tipo de operação, geralmente uma pequena quantidade de token nativo. A assinatura remove as taxas de protocolo, sendo mais econômica para usuários frequentes."
 			},
 			{
-				"question": "Como posso obter suporte ou reportar problemas?",
-				"answer": "Junte-se ao nosso grupo no Telegram para suporte em tempo real e discussões. Para relatos de bugs e solicitações de recursos, abra uma issue no nosso repositório GitHub. Normalmente respondemos em até 24 horas."
+				"question": "Qual a diferença entre pague por uso e assinatura?",
+				"answer": "Pague por uso cobra uma taxa de protocolo por operação, ideal para uso ocasional. A assinatura fornece acesso ilimitado a todas as ferramentas sem taxas de protocolo durante o período de validade, economizando tipicamente mais de 50% para usuários frequentes."
+			},
+			{
+				"question": "O que está incluído na assinatura?",
+				"answer": "Assinantes obtêm acesso ilimitado a todas as ferramentas na rede adquirida (incluindo ferramentas de consulta premium), zero taxas de protocolo e suporte prioritário. A assinatura é por rede - uso entre redes requer compras separadas."
+			},
+			{
+				"question": "Posso fazer deploy eu mesmo?",
+				"answer": "Absolutamente! O código é totalmente código aberto e você pode fazer deploy em qualquer rede EVM. Versões auto-hospedadas não têm taxas de protocolo, perfeito para desenvolvedores e equipes técnicas. Consulte a documentação de deploy no nosso repositório GitHub."
+			},
+			{
+				"question": "Como começar?",
+				"answer": "1) Conecte sua carteira; 2) Selecione a rede alvo; 3) Escolha sua ferramenta; 4) Siga as instruções. Não é necessário registro - comece a usar imediatamente."
+			},
+			{
+				"question": "Como posso obter ajuda se tiver problemas?",
+				"answer": "Junte-se à nossa comunidade no Telegram para suporte em tempo real. Para problemas técnicos ou solicitações de recursos, abra uma Issue no GitHub. Normalmente respondemos em 24 horas."
 			}
 		],
 		"still_questions": "Ainda tem dúvidas?",
