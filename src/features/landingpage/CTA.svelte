@@ -1,20 +1,16 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
-	import { ArrowRight, Sparkles, Github, Check, ShieldCheck, Code2, Lock } from '@lucide/svelte';
-	import { localizeHref } from '$lib/utils/localized-url';
+	import { ArrowRight, Github, ShieldCheck } from '@lucide/svelte';
 
 	const i18n = useI18n();
 	const t = i18n.t.bind(i18n);
 
-	// Featured batch operation tools - randomly pick one for CTA
-	const featuredTools = [
-		'/apps/one-to-many-transfer',
-		'/apps/wallet-sweep',
-		'/apps/token-balance-scanner'
-	];
-	const randomToolHref = localizeHref(
-		featuredTools[Math.floor(Math.random() * featuredTools.length)]
-	);
+	function scrollToTools() {
+		const toolsSection = document.getElementById('tools');
+		if (toolsSection) {
+			toolsSection.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
 </script>
 
 <!-- CTA section with premium design -->
@@ -28,7 +24,7 @@
 		<!-- Badge -->
 		<div class="badge">
 			<ShieldCheck class="badge-icon" />
-			<span>Start Building</span>
+			<span>{t('common.cta.badge')}</span>
 		</div>
 
 		<!-- Main title with gradient -->
@@ -43,10 +39,10 @@
 
 		<!-- Action buttons -->
 		<div class="button-group">
-			<a href={randomToolHref} class="btn-primary">
+			<button type="button" class="btn-primary" onclick={scrollToTools}>
 				<span>{t('common.cta.button_text')}</span>
 				<ArrowRight class="btn-icon" />
-			</a>
+			</button>
 			<a
 				href="https://github.com/atshelchin/biubiu.tools"
 				target="_blank"
