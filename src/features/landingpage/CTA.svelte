@@ -59,7 +59,7 @@
 		</div>
 
 		<!-- Trust indicators with icons -->
-		<div class="trust-indicators">
+		<!-- <div class="trust-indicators">
 			<div class="indicator">
 				<Check class="indicator-icon" />
 				<span>{t('common.cta.trust.no_registration')}</span>
@@ -76,7 +76,7 @@
 				<Lock class="indicator-icon" />
 				<span>{t('common.cta.trust.privacy_first')}</span>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </section>
 
