@@ -209,8 +209,10 @@
 	},
 	"pricing": {
 		"title": "简单透明的定价",
-		"subtitle": "选择最适合您的方案。按次付费或订阅会员解锁全部功能。",
+		"subtitle": "所有链，0.01 Native。一个价，不套路。",
 		"transition": "嫌部署太麻烦？直接付费使用",
+		"select_network": "选择网络",
+		"loading": "加载价格中...",
 		"pay_per_use": {
 			"title": "按次付费",
 			"description": "适合偶尔使用的用户",
@@ -229,14 +231,14 @@
 			"title": "会员订阅",
 			"description": "解锁所在链的全部工具",
 			"badge": "超值之选",
-			"daily": "日卡",
 			"monthly": "月卡",
 			"yearly": "年卡",
 			"unit": "原生代币",
-			"per_day": "天",
 			"per_month": "月",
 			"per_year": "年",
 			"save": "省 {percent}%",
+			"break_even_monthly": "每月用 12 次即回本",
+			"break_even_yearly": "相当于 5 个月",
 			"features": {
 				"all_onchain": "所有上链工具",
 				"all_query": "所有查询工具",
@@ -248,7 +250,7 @@
 			"purchase_hint": "可在工具页面购买"
 		},
 		"tips": {
-			"heavy_user": "高频用户？会员订阅更省钱。",
+			"heavy_user": "高频用户？月卡用 12 次即回本。",
 			"query_tools": "需要查询工具？仅会员可用。",
 			"multi_chain": "多链操作？每条链需单独订阅会员。"
 		},

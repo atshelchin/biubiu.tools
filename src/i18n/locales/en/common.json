@@ -209,7 +209,7 @@
 	},
 	"pricing": {
 		"title": "Simple, Transparent Pricing",
-		"subtitle": "Choose the plan that works best for you. Pay per use or unlock everything with a membership.",
+		"subtitle": "All chains, 0.01 Native. One price, no tricks.",
 		"transition": "Don't want to deploy? Use our hosted service",
 		"select_network": "Select Network",
 		"loading": "Loading prices...",
@@ -231,14 +231,14 @@
 			"title": "Membership",
 			"description": "Full access to all tools on your chain",
 			"badge": "Best Value",
-			"daily": "Daily",
 			"monthly": "Monthly",
 			"yearly": "Yearly",
 			"unit": "Native Token",
-			"per_day": "day",
 			"per_month": "month",
 			"per_year": "year",
 			"save": "Save {percent}%",
+			"break_even_monthly": "Break even at 12 uses/month",
+			"break_even_yearly": "Equal to 5 months",
 			"features": {
 				"all_onchain": "All on-chain tools",
 				"all_query": "All query tools",
@@ -250,7 +250,7 @@
 			"purchase_hint": "Purchase available on tool pages"
 		},
 		"tips": {
-			"heavy_user": "Heavy user? Membership saves you more on frequent operations.",
+			"heavy_user": "Heavy user? Monthly membership breaks even at just 12 uses.",
 			"query_tools": "Need query tools? They're exclusively available with membership.",
 			"multi_chain": "Working across multiple chains? You'll need a membership for each chain."
 		},
@@ -313,7 +313,6 @@
 		},
 		"extend_membership": "Extend Membership",
 		"plan": {
-			"daily": "Daily",
 			"monthly": "Monthly",
 			"yearly": "Yearly"
 		},

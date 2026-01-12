@@ -64,8 +64,8 @@
 		{ chainId: 10, name: 'Optimism', symbol: 'ETH', rpcUrl: 'https://mainnet.optimism.io' }
 	];
 
-	// Membership billing cycle
-	type BillingCycle = 'daily' | 'monthly' | 'yearly';
+	// Membership billing cycle (daily removed - only monthly and yearly)
+	type BillingCycle = 'monthly' | 'yearly';
 	let selectedCycle: BillingCycle = $state('monthly');
 	let selectedNetwork = $state<PricingNetwork>(PRICING_NETWORKS[0]);
 
@@ -75,36 +75,36 @@
 	let dynamicPricing = $state<FormattedPricing | null>(null);
 
 	// Compute pricing with save percentages
+	// New pricing: perUse = 0.01, monthly = 0.12 (12x), yearly = 0.6 (5x monthly)
 	const membershipPricing = $derived(() => {
 		if (!dynamicPricing) {
 			return {
-				daily: { price: '--', unitKey: 'per_day', savePercent: 0 },
 				monthly: { price: '--', unitKey: 'per_month', savePercent: 0 },
 				yearly: { price: '--', unitKey: 'per_year', savePercent: 0 }
 			};
 		}
 
-		const dailyPrice = parseFloat(dynamicPricing.daily);
+		const perUsePrice = parseFloat(dynamicPricing.perUse);
 		const monthlyPrice = parseFloat(dynamicPricing.monthly);
 		const yearlyPrice = parseFloat(dynamicPricing.yearly);
 
-		// Calculate savings compared to daily rate
-		const monthlySave =
-			dailyPrice > 0 ? Math.round((1 - monthlyPrice / (dailyPrice * 30)) * 100) : 0;
+		// Calculate savings: monthly = 12x perUse (break even at 12 uses)
+		// yearly = 5x monthly (save ~58% vs paying monthly for 12 months)
 		const yearlySave =
-			dailyPrice > 0 ? Math.round((1 - yearlyPrice / (dailyPrice * 365)) * 100) : 0;
+			monthlyPrice > 0 ? Math.round((1 - yearlyPrice / (monthlyPrice * 12)) * 100) : 0;
 
 		return {
-			daily: { price: dynamicPricing.daily, unitKey: 'per_day', savePercent: 0 },
 			monthly: {
 				price: dynamicPricing.monthly,
 				unitKey: 'per_month',
-				savePercent: monthlySave > 0 ? monthlySave : 0
+				savePercent: 0,
+				breakEven: '12'
 			},
 			yearly: {
 				price: dynamicPricing.yearly,
 				unitKey: 'per_year',
-				savePercent: yearlySave > 0 ? yearlySave : 0
+				savePercent: yearlySave > 0 ? yearlySave : 0,
+				breakEven: '5'
 			}
 		};
 	});
@@ -341,14 +341,8 @@
 					<p class="card-description">{t('common.pricing.membership.description')}</p>
 				</div>
 
-				<!-- Billing cycle tabs -->
+				<!-- Billing cycle tabs (daily removed) -->
 				<div class="billing-tabs">
-					<button
-						class="tab-button {selectedCycle === 'daily' ? 'active' : ''}"
-						onclick={() => (selectedCycle = 'daily')}
-					>
-						{t('common.pricing.membership.daily')}
-					</button>
 					<button
 						class="tab-button {selectedCycle === 'monthly' ? 'active' : ''}"
 						onclick={() => (selectedCycle = 'monthly')}
