@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import type { I18nInstance } from '@shelchin/i18n';
 	import { Layers, CircleHelp } from '@lucide/svelte';
 	import GitHubStarButton from '$lib/components/widgets/github-star-button.svelte';
@@ -9,6 +10,12 @@
 	}
 
 	let { i18n }: Props = $props();
+
+	// Check if we're on the homepage
+	const isHomepage = $derived(() => {
+		const path = page.url.pathname;
+		return path === '/' || path === '/en' || path === '/zh' || /^\/[a-z]{2}\/?$/.test(path);
+	});
 
 	function scrollToSection(e: MouseEvent, sectionId: string) {
 		e.preventDefault();
@@ -28,16 +35,18 @@
 
 		<!-- Right-aligned controls -->
 		<div class="toolbar-right">
-			<nav class="nav-links" aria-label="Quick navigation">
-				<a href="#tools" class="nav-link" onclick={(e) => scrollToSection(e, 'tools')}>
-					<Layers class="nav-icon" />
-					<span>{i18n.t('common.nav.features')}</span>
-				</a>
-				<a href="#faqs" class="nav-link" onclick={(e) => scrollToSection(e, 'faqs')}>
-					<CircleHelp class="nav-icon" />
-					<span>{i18n.t('common.nav.help')}</span>
-				</a>
-			</nav>
+			{#if isHomepage()}
+				<nav class="nav-links" aria-label="Quick navigation">
+					<a href="#tools" class="nav-link" onclick={(e) => scrollToSection(e, 'tools')}>
+						<Layers class="nav-icon" />
+						<span>{i18n.t('common.nav.features')}</span>
+					</a>
+					<a href="#faqs" class="nav-link" onclick={(e) => scrollToSection(e, 'faqs')}>
+						<CircleHelp class="nav-icon" />
+						<span>{i18n.t('common.nav.help')}</span>
+					</a>
+				</nav>
+			{/if}
 			<GitHubStarButton />
 		</div>
 	</div>
