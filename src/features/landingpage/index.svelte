@@ -7,6 +7,10 @@
 	import FAQs from './FAQs.svelte';
 	import { Newsletter } from './newsletter';
 	import CTA from './CTA.svelte';
+	import { useScrollTracking } from '$lib/analytics/use-scroll-tracking.svelte';
+
+	// Initialize scroll depth tracking for analytics
+	useScrollTracking();
 </script>
 
 <!-- Landing page layout | 着陆页布局 -->

@@ -8,6 +8,26 @@
 	import { toolsConfig } from '../data/tools-data';
 	import Dice3D from '$lib/components/ui/dice-3d.svelte';
 	import type { Component } from 'svelte';
+	import {
+		trackPersonaClick,
+		trackDiceRoll,
+		trackDiceResult,
+		trackToolClick,
+		addUTMToUrl,
+		PERSONAS as ANALYTICS_PERSONAS,
+		SECTIONS,
+		type PersonaType
+	} from '$lib/analytics';
+
+	// Map persona id to analytics PersonaType
+	function toAnalyticsPersona(personaId: string): PersonaType {
+		const mapping: Record<string, PersonaType> = {
+			'data-analyst': ANALYTICS_PERSONAS.DATA_ANALYST,
+			developer: ANALYTICS_PERSONAS.DEVELOPER,
+			'airdrop-hunter': ANALYTICS_PERSONAS.AIRDROP_HUNTER
+		};
+		return mapping[personaId] || ANALYTICS_PERSONAS.DATA_ANALYST;
+	}
 
 	interface Tool {
 		icon: Component;
@@ -241,6 +261,10 @@
 		playClickSound();
 		isShaking = true;
 		showDice3D = true;
+
+		// Track dice roll event
+		const currentPersonaType = toAnalyticsPersona(carousel.currentPersona.id);
+		trackDiceRoll(currentPersonaType);
 	}
 
 	function onDiceAnimationStart() {
@@ -259,6 +283,13 @@
 		discoveredTool = activeTools[randomIndex];
 		showDiscoveryModal = true;
 		playCelebrationSound();
+
+		// Track dice result event
+		if (discoveredTool) {
+			const currentPersonaType = toAnalyticsPersona(carousel.currentPersona.id);
+			const toolId = discoveredTool.link?.replace('/apps/', '') || 'unknown';
+			trackDiceResult(toolId, currentPersonaType);
+		}
 		const myConfetti = getConfetti();
 		myConfetti({
 			particleCount: 60,
@@ -299,7 +330,21 @@
 
 	function goToDiscoveredTool() {
 		if (discoveredTool?.link) {
-			window.location.href = discoveredTool.link;
+			const toolId = discoveredTool.link.replace('/apps/', '');
+			const currentPersonaType = toAnalyticsPersona(carousel.currentPersona.id);
+
+			// Track tool click from dice discovery
+			trackToolClick(toolId, SECTIONS.PERSONA, i18n.locale, currentPersonaType);
+
+			// Navigate with UTM parameters
+			const urlWithUtm = addUTMToUrl(discoveredTool.link, {
+				source: 'landing',
+				medium: 'persona',
+				campaign: `dice_${currentPersonaType}`,
+				content: toolId,
+				term: i18n.locale
+			});
+			window.location.href = urlWithUtm;
 		}
 	}
 
@@ -308,6 +353,38 @@
 		setTimeout(() => {
 			handleShake();
 		}, 100);
+	}
+
+	// Handle persona tab click with tracking
+	function handlePersonaTabClick(newIndex: number) {
+		const currentIndex = carousel.state.personaIndex;
+		if (currentIndex === newIndex) return;
+
+		const fromPersona = toAnalyticsPersona(PERSONAS[currentIndex].id);
+		const toPersona = toAnalyticsPersona(PERSONAS[newIndex].id);
+		trackPersonaClick(fromPersona, toPersona);
+
+		carousel.goToPersona(newIndex);
+	}
+
+	// Handle pain point CTA click with tracking
+	function handlePainPointCTAClick(e: MouseEvent, link: string) {
+		e.preventDefault();
+		const toolId = link.replace('/apps/', '');
+		const currentPersonaType = toAnalyticsPersona(carousel.currentPersona.id);
+
+		// Track tool click
+		trackToolClick(toolId, SECTIONS.PERSONA, i18n.locale, currentPersonaType);
+
+		// Navigate with UTM parameters
+		const urlWithUtm = addUTMToUrl(link, {
+			source: 'landing',
+			medium: 'persona',
+			campaign: currentPersonaType,
+			content: toolId,
+			term: i18n.locale
+		});
+		window.location.href = urlWithUtm;
 	}
 
 	// Lifecycle
@@ -321,6 +398,7 @@
 </script>
 
 <section
+	id="persona-carousel"
 	class="persona-carousel"
 	onmouseenter={carousel.handleMouseEnter}
 	onmouseleave={carousel.handleMouseLeave}
@@ -342,7 +420,7 @@
 				<button
 					class="persona-tab"
 					class:active={carousel.state.personaIndex === index}
-					onclick={() => carousel.goToPersona(index)}
+					onclick={() => handlePersonaTabClick(index)}
 					role="tab"
 					aria-selected={carousel.state.personaIndex === index}
 					aria-controls="carousel-content"
@@ -373,7 +451,11 @@
 
 				<!-- CTA Buttons -->
 				<div class="cta-group">
-					<a href={currentPainPoint.link} class="cta-button primary">
+					<a
+						href={currentPainPoint.link}
+						class="cta-button primary"
+						onclick={(e) => handlePainPointCTAClick(e, currentPainPoint.link)}
+					>
 						<span>{t(currentPainPoint.ctaKey as keyof TranslationKeys)}</span>
 						<ArrowRight class="cta-icon" />
 					</a>
@@ -734,7 +816,7 @@
 
 	.tag {
 		font-size: var(--text-xs);
-		color: var(--color-muted-foreground);
+		/* color: var(--color-muted-foreground); */
 		letter-spacing: 0.05em;
 	}
 

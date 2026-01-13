@@ -30,7 +30,7 @@
 </svelte:head>
 
 <!-- Hero section with brand mesh gradient | 带品牌网格渐变的主要展示区 -->
-<section class="hero-section">
+<section id="hero" class="hero-section">
 	<!-- Premium geometric pattern overlay | 高端几何图案叠加 -->
 	<div class="hero-pattern-overlay" style="background-image: url({bgSvg})"></div>
 

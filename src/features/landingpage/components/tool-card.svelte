@@ -4,6 +4,7 @@
 	import ToolStatusBadge from '$lib/components/ui/tool-status-badge.svelte';
 	import { localizeHref } from '$lib/utils/localized-url';
 	import type { Component } from 'svelte';
+	import { trackToolClick, addUTMToUrl, SECTIONS, type SectionName } from '$lib/analytics';
 
 	interface Props {
 		icon: Component;
@@ -17,6 +18,7 @@
 		index: number;
 		telegramLink: string;
 		hidden?: boolean;
+		trackingSection?: SectionName;
 	}
 
 	let {
@@ -30,7 +32,8 @@
 		stage,
 		index,
 		telegramLink,
-		hidden = false
+		hidden = false,
+		trackingSection = SECTIONS.FEATURES
 	}: Props = $props();
 
 	const i18n = useI18n();
@@ -38,6 +41,26 @@
 
 	function joinTelegramGroup() {
 		window.open(telegramLink, '_blank');
+	}
+
+	function handleToolClick(e: MouseEvent) {
+		if (!link || link === telegramLink) return;
+
+		e.preventDefault();
+		const toolId = link.replace('/apps/', '');
+
+		// Track tool click
+		trackToolClick(toolId, trackingSection, i18n.locale);
+
+		// Navigate with UTM parameters
+		const urlWithUtm = addUTMToUrl(link, {
+			source: 'landing',
+			medium: trackingSection,
+			campaign: 'organic',
+			content: toolId,
+			term: i18n.locale
+		});
+		window.location.href = localizeHref(urlWithUtm);
 	}
 </script>
 
@@ -97,7 +120,7 @@
 					<span class="btn-text">{t('tools.join_telegram')}</span>
 				</button>
 			{:else}
-				<a href={localizeHref(link)} class="action-btn primary">
+				<a href={localizeHref(link)} class="action-btn primary" onclick={handleToolClick}>
 					<span class="btn-text">{t('tools.launch_app')}</span>
 					<ArrowRight class="btn-arrow" />
 				</a>
