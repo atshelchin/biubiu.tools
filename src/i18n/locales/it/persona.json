@@ -1,0 +1,73 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"feel_lucky": "Mi sento fortunato",
+	"data_analyst": {
+		"label": "Analista dati",
+		"pain_1": {
+			"title": "Eventi on-chain sparsi ovunque?",
+			"subtitle": "Filtra per intervallo di blocchi, esporta in CSV con un clic.",
+			"cta": "Scansiona eventi"
+		},
+		"pain_2": {
+			"title": "Tracciare i saldi di più wallet è noioso?",
+			"subtitle": "Funziona con qualsiasi ERC20, token nativi inclusi.",
+			"cta": "Controlla saldi"
+		},
+		"pain_3": {
+			"title": "Dov'è l'explorer? Qual è l'RPC?",
+			"subtitle": "Strumenti essenziali per 20+ chain, salva solo questo.",
+			"cta": "Vedi strumenti chain"
+		},
+		"tag_1": "Scansione batch",
+		"tag_2": "Esporta dati",
+		"tag_3": "Tutte le chain"
+	},
+	"developer": {
+		"label": "Sviluppatore",
+		"pain_1": {
+			"title": "Di nuovo deploy manuale su 10 chain?",
+			"subtitle": "CREATE2 mantiene gli indirizzi coerenti, senza problemi.",
+			"cta": "Deploy contratto"
+		},
+		"pain_2": {
+			"title": "Servono 50 wallet per i test?",
+			"subtitle": "Deriva dal mnemonico, esporta le chiavi istantaneamente.",
+			"cta": "Genera wallet"
+		},
+		"pain_3": {
+			"title": "Scrivere contratti solo per lanciare un token?",
+			"subtitle": "Compila un form, fai il deploy su mainnet o testnet.",
+			"cta": "Crea token"
+		},
+		"tag_1": "Deploy multi-chain",
+		"tag_2": "Indirizzo coerente",
+		"tag_3": "Open Source"
+	},
+	"airdrop_hunter": {
+		"label": "Cacciatore di airdrop",
+		"pain_1": {
+			"title": "Riscattare airdrop per 100 wallet manualmente?",
+			"subtitle": "Una transazione, un gas. Fatto.",
+			"cta": "Inizia sweep"
+		},
+		"pain_2": {
+			"title": "Distribuire token a 100 indirizzi = 100 clic?",
+			"subtitle": "Lo smart contract gestisce tutto, salta gli errori automaticamente.",
+			"cta": "Distribuzione batch"
+		},
+		"pain_3": {
+			"title": "Quale wallet ha ancora saldo?",
+			"subtitle": "Incolla gli indirizzi, ottieni risultati istantaneamente.",
+			"cta": "Scansiona saldi"
+		},
+		"tag_1": "Chiavi locali",
+		"tag_2": "Operazioni batch",
+		"tag_3": "Multi-wallet"
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"feel_lucky": "Tenter ma chance",
+	"data_analyst": {
+		"label": "Analyste de données",
+		"pain_1": {
+			"title": "Les événements on-chain éparpillés partout ?",
+			"subtitle": "Filtrez par plage de blocs, exportez en CSV en un clic.",
+			"cta": "Scanner les événements"
+		},
+		"pain_2": {
+			"title": "Suivre les avoirs de plusieurs wallets est pénible ?",
+			"subtitle": "Fonctionne avec tous les ERC20, tokens natifs inclus.",
+			"cta": "Vérifier les soldes"
+		},
+		"pain_3": {
+			"title": "Où est l'explorateur ? C'est quoi le RPC ?",
+			"subtitle": "Outils essentiels pour 20+ chaînes, un seul signet suffit.",
+			"cta": "Voir les outils chaîne"
+		},
+		"tag_1": "Scan par lots",
+		"tag_2": "Export de données",
+		"tag_3": "Toutes les chaînes"
+	},
+	"developer": {
+		"label": "Développeur",
+		"pain_1": {
+			"title": "Encore un déploiement manuel sur 10 chaînes ?",
+			"subtitle": "CREATE2 garde les adresses cohérentes, sans tracas.",
+			"cta": "Déployer le contrat"
+		},
+		"pain_2": {
+			"title": "Besoin de 50 wallets pour les tests ?",
+			"subtitle": "Dérivez d'un mnémonique, exportez les clés instantanément.",
+			"cta": "Générer des wallets"
+		},
+		"pain_3": {
+			"title": "Écrire des contrats juste pour lancer un token ?",
+			"subtitle": "Remplissez un formulaire, déployez sur mainnet ou testnet.",
+			"cta": "Créer un token"
+		},
+		"tag_1": "Déploiement multi-chaînes",
+		"tag_2": "Adresse cohérente",
+		"tag_3": "Open Source"
+	},
+	"airdrop_hunter": {
+		"label": "Chasseur d'airdrops",
+		"pain_1": {
+			"title": "Réclamer des airdrops pour 100 wallets manuellement ?",
+			"subtitle": "Une transaction, un frais de gas. Terminé.",
+			"cta": "Commencer le sweep"
+		},
+		"pain_2": {
+			"title": "Distribuer des tokens à 100 adresses = 100 clics ?",
+			"subtitle": "Le smart contract gère tout, saute les échecs automatiquement.",
+			"cta": "Distribution par lots"
+		},
+		"pain_3": {
+			"title": "Quel wallet a encore un solde ?",
+			"subtitle": "Collez les adresses, obtenez les résultats instantanément.",
+			"cta": "Scanner les soldes"
+		},
+		"tag_1": "Clés en local",
+		"tag_2": "Opérations par lots",
+		"tag_3": "Multi-wallets"
+	}
+}

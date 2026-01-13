@@ -1,0 +1,73 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"feel_lucky": "Şansımı dene",
+	"data_analyst": {
+		"label": "Veri Analisti",
+		"pain_1": {
+			"title": "Zincir üstü olaylar her yere dağılmış mı?",
+			"subtitle": "Blok aralığına göre filtrele, tek tıkla CSV'ye aktar.",
+			"cta": "Olayları Tara"
+		},
+		"pain_2": {
+			"title": "Birden fazla cüzdandaki varlıkları takip etmek zor mu?",
+			"subtitle": "Herhangi bir ERC20 ile çalışır, yerel tokenlar dahil.",
+			"cta": "Bakiyeleri Kontrol Et"
+		},
+		"pain_3": {
+			"title": "Explorer nerede? RPC ne?",
+			"subtitle": "20+ zincirin temel araçları, bunu kaydet yeter.",
+			"cta": "Zincir Araçlarını Gör"
+		},
+		"tag_1": "Toplu Tarama",
+		"tag_2": "Veri Dışa Aktarma",
+		"tag_3": "Tüm Zincirler"
+	},
+	"developer": {
+		"label": "Geliştirici",
+		"pain_1": {
+			"title": "Yine 10 zincire manuel dağıtım mı?",
+			"subtitle": "CREATE2 adresleri tutarlı tutar, zahmetsiz.",
+			"cta": "Sözleşme Dağıt"
+		},
+		"pain_2": {
+			"title": "Test için 50 cüzdan mı gerekiyor?",
+			"subtitle": "Mnemonikten türet, anahtarları anında dışa aktar.",
+			"cta": "Cüzdan Oluştur"
+		},
+		"pain_3": {
+			"title": "Token çıkarmak için sözleşme mi yazmalı?",
+			"subtitle": "Form doldur, mainnet veya testnet'e dağıt.",
+			"cta": "Token Oluştur"
+		},
+		"tag_1": "Çoklu Zincir Dağıtımı",
+		"tag_2": "Tutarlı Adres",
+		"tag_3": "Açık Kaynak"
+	},
+	"airdrop_hunter": {
+		"label": "Airdrop Avcısı",
+		"pain_1": {
+			"title": "100 cüzdandan airdrop'ları manuel mi topluyorsunuz?",
+			"subtitle": "Tek işlem, tek gas. Bitti.",
+			"cta": "Sweep Başlat"
+		},
+		"pain_2": {
+			"title": "100 adrese token dağıtmak = 100 tıklama mı?",
+			"subtitle": "Akıllı sözleşme halleder, hataları otomatik atlar.",
+			"cta": "Toplu Dağıtım"
+		},
+		"pain_3": {
+			"title": "Hangi cüzdanda hâlâ bakiye var?",
+			"subtitle": "Adresleri yapıştır, sonuçları anında al.",
+			"cta": "Bakiye Tara"
+		},
+		"tag_1": "Anahtarlar Yerel",
+		"tag_2": "Toplu İşlemler",
+		"tag_3": "Çoklu Cüzdan"
+	}
+}

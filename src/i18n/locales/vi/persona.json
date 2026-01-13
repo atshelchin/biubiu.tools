@@ -1,0 +1,73 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"feel_lucky": "Thử vận may",
+	"data_analyst": {
+		"label": "Phân tích dữ liệu",
+		"pain_1": {
+			"title": "Sự kiện on-chain rải rác khắp nơi?",
+			"subtitle": "Lọc theo phạm vi block, xuất CSV chỉ một click.",
+			"cta": "Quét sự kiện"
+		},
+		"pain_2": {
+			"title": "Theo dõi số dư nhiều ví thật phiền phức?",
+			"subtitle": "Hỗ trợ mọi ERC20, bao gồm cả token gốc.",
+			"cta": "Kiểm tra số dư"
+		},
+		"pain_3": {
+			"title": "Explorer ở đâu? RPC là gì?",
+			"subtitle": "Công cụ thiết yếu cho 20+ chain, lưu cái này là đủ.",
+			"cta": "Xem công cụ chain"
+		},
+		"tag_1": "Quét hàng loạt",
+		"tag_2": "Xuất dữ liệu",
+		"tag_3": "Tất cả chain"
+	},
+	"developer": {
+		"label": "Nhà phát triển",
+		"pain_1": {
+			"title": "Lại deploy thủ công lên 10 chain?",
+			"subtitle": "CREATE2 giữ địa chỉ nhất quán, không phiền phức.",
+			"cta": "Deploy hợp đồng"
+		},
+		"pain_2": {
+			"title": "Cần 50 ví để test?",
+			"subtitle": "Sinh từ mnemonic, xuất khóa ngay lập tức.",
+			"cta": "Tạo ví"
+		},
+		"pain_3": {
+			"title": "Viết hợp đồng chỉ để ra token?",
+			"subtitle": "Điền form, deploy lên mainnet hoặc testnet.",
+			"cta": "Tạo token"
+		},
+		"tag_1": "Deploy đa chain",
+		"tag_2": "Địa chỉ nhất quán",
+		"tag_3": "Mã nguồn mở"
+	},
+	"airdrop_hunter": {
+		"label": "Thợ săn airdrop",
+		"pain_1": {
+			"title": "Nhận airdrop cho 100 ví bằng tay?",
+			"subtitle": "Một giao dịch, một gas. Xong.",
+			"cta": "Bắt đầu sweep"
+		},
+		"pain_2": {
+			"title": "Phân phối token cho 100 địa chỉ = 100 click?",
+			"subtitle": "Smart contract xử lý, tự động bỏ qua lỗi.",
+			"cta": "Phân phối hàng loạt"
+		},
+		"pain_3": {
+			"title": "Ví nào còn số dư?",
+			"subtitle": "Dán địa chỉ, nhận kết quả ngay lập tức.",
+			"cta": "Quét số dư"
+		},
+		"tag_1": "Khóa lưu local",
+		"tag_2": "Thao tác hàng loạt",
+		"tag_3": "Đa ví"
+	}
+}

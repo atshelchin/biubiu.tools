@@ -1,0 +1,73 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"feel_lucky": "Coba Keberuntungan",
+	"data_analyst": {
+		"label": "Analis Data",
+		"pain_1": {
+			"title": "Event on-chain tersebar di mana-mana?",
+			"subtitle": "Filter berdasarkan rentang blok, ekspor ke CSV sekali klik.",
+			"cta": "Scan Event"
+		},
+		"pain_2": {
+			"title": "Melacak saldo banyak wallet itu merepotkan?",
+			"subtitle": "Bekerja dengan ERC20 apapun, termasuk token native.",
+			"cta": "Cek Saldo"
+		},
+		"pain_3": {
+			"title": "Di mana explorernya? Apa RPC-nya?",
+			"subtitle": "Tools penting untuk 20+ chain, bookmark yang ini saja.",
+			"cta": "Lihat Tools Chain"
+		},
+		"tag_1": "Scan Batch",
+		"tag_2": "Ekspor Data",
+		"tag_3": "Semua Chain"
+	},
+	"developer": {
+		"label": "Developer",
+		"pain_1": {
+			"title": "Deploy manual ke 10 chain lagi?",
+			"subtitle": "CREATE2 menjaga alamat konsisten, tanpa ribet.",
+			"cta": "Deploy Kontrak"
+		},
+		"pain_2": {
+			"title": "Butuh 50 wallet untuk testing?",
+			"subtitle": "Turunkan dari mnemonic, ekspor key langsung.",
+			"cta": "Generate Wallet"
+		},
+		"pain_3": {
+			"title": "Menulis kontrak hanya untuk buat token?",
+			"subtitle": "Isi form, deploy ke mainnet atau testnet.",
+			"cta": "Buat Token"
+		},
+		"tag_1": "Deploy Multi-Chain",
+		"tag_2": "Alamat Konsisten",
+		"tag_3": "Open Source"
+	},
+	"airdrop_hunter": {
+		"label": "Pemburu Airdrop",
+		"pain_1": {
+			"title": "Klaim airdrop untuk 100 wallet secara manual?",
+			"subtitle": "Satu transaksi, satu gas. Selesai.",
+			"cta": "Mulai Sweep"
+		},
+		"pain_2": {
+			"title": "Distribusi token ke 100 alamat = 100 klik?",
+			"subtitle": "Smart contract yang urus, lewati error otomatis.",
+			"cta": "Distribusi Batch"
+		},
+		"pain_3": {
+			"title": "Wallet mana yang masih ada saldonya?",
+			"subtitle": "Tempel alamat, hasil langsung keluar.",
+			"cta": "Scan Saldo"
+		},
+		"tag_1": "Key di Lokal",
+		"tag_2": "Operasi Batch",
+		"tag_3": "Multi-Wallet"
+	}
+}

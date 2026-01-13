@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Hero from './Hero.svelte';
+	import { PersonaCarousel } from './persona-carousel';
 	import Features from './Features.svelte';
 	// import Stats from './Stats.svelte';
 	// import Pricing from './Pricing.svelte';
@@ -12,6 +13,9 @@
 <div class="landing-page">
 	<!-- Hero section | 主要展示区 -->
 	<Hero />
+
+	<!-- Persona carousel section | 人群痛点轮播区 -->
+	<PersonaCarousel />
 
 	<!-- Features section | 功能特性区 -->
 	<Features />

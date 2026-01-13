@@ -1,0 +1,73 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"feel_lucky": "Probar suerte",
+	"data_analyst": {
+		"label": "Analista de datos",
+		"pain_1": {
+			"title": "¿Eventos on-chain dispersos por todas partes?",
+			"subtitle": "Filtra por rango de bloques, exporta a CSV con un clic.",
+			"cta": "Escanear eventos"
+		},
+		"pain_2": {
+			"title": "¿Rastrear holdings de múltiples wallets es tedioso?",
+			"subtitle": "Funciona con cualquier ERC20, tokens nativos incluidos.",
+			"cta": "Verificar saldos"
+		},
+		"pain_3": {
+			"title": "¿Dónde está el explorador? ¿Cuál es el RPC?",
+			"subtitle": "Herramientas esenciales de 20+ cadenas, guarda solo este.",
+			"cta": "Ver herramientas de cadena"
+		},
+		"tag_1": "Escaneo por lotes",
+		"tag_2": "Exportar datos",
+		"tag_3": "Todas las cadenas"
+	},
+	"developer": {
+		"label": "Desarrollador",
+		"pain_1": {
+			"title": "¿Desplegando manualmente en 10 cadenas otra vez?",
+			"subtitle": "CREATE2 mantiene las direcciones consistentes, sin complicaciones.",
+			"cta": "Desplegar contrato"
+		},
+		"pain_2": {
+			"title": "¿Necesitas 50 wallets para pruebas?",
+			"subtitle": "Deriva de mnemónico, exporta claves al instante.",
+			"cta": "Generar wallets"
+		},
+		"pain_3": {
+			"title": "¿Escribir contratos solo para lanzar un token?",
+			"subtitle": "Llena un formulario, despliega en mainnet o testnet.",
+			"cta": "Crear token"
+		},
+		"tag_1": "Despliegue multi-cadena",
+		"tag_2": "Dirección consistente",
+		"tag_3": "Código abierto"
+	},
+	"airdrop_hunter": {
+		"label": "Cazador de airdrops",
+		"pain_1": {
+			"title": "¿Reclamando airdrops de 100 wallets manualmente?",
+			"subtitle": "Una transacción, un gas. Hecho.",
+			"cta": "Iniciar sweep"
+		},
+		"pain_2": {
+			"title": "¿Distribuir tokens a 100 direcciones = 100 clics?",
+			"subtitle": "El smart contract lo maneja, salta fallos automáticamente.",
+			"cta": "Distribución por lotes"
+		},
+		"pain_3": {
+			"title": "¿Qué wallet todavía tiene saldo?",
+			"subtitle": "Pega direcciones, obtén resultados al instante.",
+			"cta": "Escanear saldos"
+		},
+		"tag_1": "Claves en local",
+		"tag_2": "Operaciones por lotes",
+		"tag_3": "Multi-wallet"
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"feel_lucky": "I'm Feeling Lucky",
+	"data_analyst": {
+		"label": "Data Analyst",
+		"pain_1": {
+			"title": "On-chain events scattered everywhere?",
+			"subtitle": "Filter by block range, export to CSV in one click.",
+			"cta": "Scan Events"
+		},
+		"pain_2": {
+			"title": "Tracking holdings across wallets is a pain?",
+			"subtitle": "Works with any ERC20, native tokens included.",
+			"cta": "Check Balances"
+		},
+		"pain_3": {
+			"title": "Where's the explorer? What's the RPC?",
+			"subtitle": "20+ chains' essential tools, bookmark this one.",
+			"cta": "View Chain Tools"
+		},
+		"tag_1": "Batch Scanning",
+		"tag_2": "Export Data",
+		"tag_3": "All Chains"
+	},
+	"developer": {
+		"label": "Developer",
+		"pain_1": {
+			"title": "Deploying to 10 chains manually again?",
+			"subtitle": "CREATE2 keeps addresses consistent, hassle-free.",
+			"cta": "Deploy Contract"
+		},
+		"pain_2": {
+			"title": "Need 50 wallets for testing?",
+			"subtitle": "Derive from mnemonic, export keys instantly.",
+			"cta": "Generate Wallets"
+		},
+		"pain_3": {
+			"title": "Writing contracts just to launch a token?",
+			"subtitle": "Fill a form, deploy to mainnet or testnet.",
+			"cta": "Create Token"
+		},
+		"tag_1": "Multi-Chain Deploy",
+		"tag_2": "Consistent Address",
+		"tag_3": "Open Source"
+	},
+	"airdrop_hunter": {
+		"label": "Airdrop Hunter",
+		"pain_1": {
+			"title": "Claiming airdrops for 100 wallets manually?",
+			"subtitle": "One transaction, one gas fee. Done.",
+			"cta": "Start Sweeping"
+		},
+		"pain_2": {
+			"title": "Distributing tokens to 100 addresses = 100 clicks?",
+			"subtitle": "Smart contract handles it, auto-skips failures.",
+			"cta": "Batch Distribute"
+		},
+		"pain_3": {
+			"title": "Which wallet still has balance?",
+			"subtitle": "Paste addresses, get results instantly.",
+			"cta": "Scan Balances"
+		},
+		"tag_1": "Keys Stay Local",
+		"tag_2": "Batch Operations",
+		"tag_3": "Multi-Wallet"
+	}
+}
