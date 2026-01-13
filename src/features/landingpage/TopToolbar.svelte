@@ -1,6 +1,22 @@
 <script lang="ts">
+	import type { I18nInstance } from '@shelchin/i18n';
+	import { Layers, CircleHelp } from '@lucide/svelte';
 	import GitHubStarButton from '$lib/components/widgets/github-star-button.svelte';
 	import { localizeHref } from '$lib/utils/localized-url';
+
+	interface Props {
+		i18n: I18nInstance;
+	}
+
+	let { i18n }: Props = $props();
+
+	function scrollToSection(e: MouseEvent, sectionId: string) {
+		e.preventDefault();
+		const section = document.getElementById(sectionId);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
 </script>
 
 <div class="top-toolbar">
@@ -9,7 +25,19 @@
 			<img src="/logo.svg" alt="BiuBiu Tools Logo" class="logo" />
 			<span class="site-title">BiuBiu Tools</span>
 		</a>
-		<div class="toolbar-controls">
+
+		<!-- Right-aligned controls -->
+		<div class="toolbar-right">
+			<nav class="nav-links" aria-label="Quick navigation">
+				<a href="#tools" class="nav-link" onclick={(e) => scrollToSection(e, 'tools')}>
+					<Layers class="nav-icon" />
+					<span>{i18n.t('common.nav.features')}</span>
+				</a>
+				<a href="#faqs" class="nav-link" onclick={(e) => scrollToSection(e, 'faqs')}>
+					<CircleHelp class="nav-icon" />
+					<span>{i18n.t('common.nav.help')}</span>
+				</a>
+			</nav>
 			<GitHubStarButton />
 		</div>
 	</div>
@@ -72,11 +100,40 @@
 		white-space: nowrap;
 	}
 
-	.toolbar-controls {
+	/* Navigation links */
+	.nav-links {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
-		gap: var(--space-3);
+		gap: var(--space-1);
+	}
+
+	.nav-link {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-2) var(--space-3);
+		border-radius: var(--radius-md);
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		color: var(--color-muted-foreground);
+		text-decoration: none;
+		transition: all 0.15s ease;
+	}
+
+	.nav-link:hover {
+		color: var(--color-foreground);
+		background: var(--color-panel-2);
+	}
+
+	:global(.nav-icon) {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	.toolbar-right {
+		display: flex;
+		align-items: center;
+		gap: var(--space-4);
 	}
 
 	/* Add padding to body when toolbar is fixed */
@@ -90,13 +147,22 @@
 			padding: var(--space-3) var(--space-4);
 		}
 
-		.toolbar-controls {
+		.toolbar-right {
 			gap: var(--space-2);
 		}
 
 		.logo {
 			width: 1.75rem;
 			height: 1.75rem;
+		}
+
+		/* Hide nav link text on mobile, show only icons */
+		.nav-link span {
+			display: none;
+		}
+
+		.nav-link {
+			padding: var(--space-2);
 		}
 	}
 

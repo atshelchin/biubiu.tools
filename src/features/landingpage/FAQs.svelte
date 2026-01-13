@@ -1,6 +1,14 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { ChevronDown, HelpCircle, MessageCircle, Shield, Code, Zap } from '@lucide/svelte';
+	import {
+		ChevronDown,
+		HelpCircle,
+		MessageCircle,
+		Shield,
+		Code,
+		Zap,
+		Rocket
+	} from '@lucide/svelte';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { useI18n } from '@shelchin/i18n';
 
@@ -80,8 +88,9 @@
 		}
 	}
 
-	// Category icons for visual interest
-	const categoryIcons = [Shield, Code, Zap, Shield, Zap, Code, Code, MessageCircle];
+	// Category icons for visual interest - map to trust/security/features themes
+	// 6 questions: What is, Security, Networks, Testnet, Self-deploy, Help
+	const categoryIcons = [Rocket, Shield, Zap, Code, Code, MessageCircle];
 </script>
 
 <!-- FAQs section with clean design -->
@@ -105,7 +114,7 @@
 
 		<!-- FAQ items with two columns -->
 		<div class="faqs-grid" role="list">
-			{#each faqs as faq, index (faq.question)}
+			{#each faqs as faq, index (index)}
 				{@const IconComponent = categoryIcons[index % categoryIcons.length]}
 				<article
 					class="faq-item {openItems.has(index) ? 'expanded' : ''}"
@@ -128,13 +137,17 @@
 						<ChevronDown class="arrow-icon {openItems.has(index) ? 'rotated' : ''}" />
 					</button>
 
-					{#if openItems.has(index)}
-						<div id="faq-content-{index}" class="faq-content" role="region">
-							<p class="faq-answer">
-								{faq.answer}
-							</p>
-						</div>
-					{/if}
+					<!-- Always render content for SEO, use CSS to show/hide -->
+					<div
+						id="faq-content-{index}"
+						class="faq-content"
+						class:hidden={!openItems.has(index)}
+						role="region"
+					>
+						<p class="faq-answer">
+							{faq.answer}
+						</p>
+					</div>
 				</article>
 			{/each}
 		</div>
@@ -347,6 +360,10 @@
 	.faq-content {
 		padding: 0 var(--space-6) var(--space-6);
 		animation: slideDown 0.15s ease-out;
+	}
+
+	.faq-content.hidden {
+		display: none;
 	}
 
 	@keyframes slideDown {

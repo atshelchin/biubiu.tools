@@ -7,6 +7,7 @@
 	import { createGeoBlockStore } from '$lib/stores/geo-block.svelte.js';
 	import { createCookieConsentStore, checkConsent } from '@shelchin/cookie-consent';
 	import { initializeReferral } from '$lib/utils/referral';
+	import { captureAttribution } from '$lib/analytics';
 	import '../design-tokens.css';
 	import '../global.css';
 	import type { LayoutData } from './$types.js';
@@ -63,15 +64,16 @@
 	// Initialize geo-blocking detection (client-side backup)
 	createGeoBlockStore();
 
-	// Initialize referral system once for the entire app
+	// Initialize referral system and analytics attribution once for the entire app
 	onMount(() => {
 		initializeReferral();
+		captureAttribution();
 	});
 </script>
 
 <GeoBlockOverlay />
 <EnvironmentBanner />
-<TopToolbar />
+<TopToolbar {i18n} />
 <div class="app">
 	{@render children()}
 	<Footer />

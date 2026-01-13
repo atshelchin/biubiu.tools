@@ -10,12 +10,57 @@
 	"hero_subtitle": "Ethereum-First Power Tools.",
 	"cta_get_started": "Get Started",
 	"cta_learn_more": "Learn More",
+	"nav": {
+		"features": "Features",
+		"help": "Help"
+	},
 	"cta": {
 		"badge": "100% Open Source",
-		"title": "Batch On-Chain Operations, Done Right",
-		"subtitle": "No more repetitive tasks. Your keys never leave the browser.",
-		"button_text": "View All Tools",
-		"secondary_button": "View Source"
+		"title": "Stop Clicking 100 Times",
+		"subtitle": "One transaction does it all. Your keys never leave the browser.",
+		"button_text": "Start Free",
+		"secondary_button": "View Source",
+		"headlines": [
+			{
+				"title": "Stop Clicking 100 Times",
+				"subtitle": "One transaction does it all. Your keys never leave the browser."
+			},
+			{
+				"title": "Batch Operations, Save 80% Gas",
+				"subtitle": "100 wallets, 1 transaction. Smart contracts do the heavy lifting."
+			},
+			{
+				"title": "Your Time is Worth More",
+				"subtitle": "Let smart contracts click for you. Focus on what matters."
+			},
+			{
+				"title": "No More Repetitive Work",
+				"subtitle": "Automate batch transfers, sweeps, and deployments. All in browser."
+			}
+		],
+		"variants": {
+			"data_analyst": {
+				"title": "Query On-Chain Data at Scale",
+				"subtitle": "Scan events, check balances, export to CSV. All in one place.",
+				"button_text": "Try Balance Scanner"
+			},
+			"developer": {
+				"title": "Deploy Once, Run Everywhere",
+				"subtitle": "Same address on every chain. CREATE2 makes it simple.",
+				"button_text": "Deploy Contract"
+			},
+			"airdrop_hunter": {
+				"title": "100 Wallets, 1 Transaction",
+				"subtitle": "Sweep tokens, distribute airdrops. Save 80% on gas.",
+				"button_text": "Start Sweeping"
+			}
+		},
+		"trust": {
+			"users": "5,000+ users",
+			"transactions": "50,000+ txns",
+			"chains": "20+ chains",
+			"open_source": "Open Source"
+		}
 	},
 	"faqs": {
 		"badge": "Common Questions",
@@ -24,47 +69,23 @@
 		"items": [
 			{
 				"question": "What is biubiu.tools?",
-				"answer": "biubiu.tools is a toolkit designed for batch on-chain operations. It automates batch transfers, asset sweeping, and more through smart contracts, saving you significant time and gas fees. Works on Ethereum and all EVM-compatible chains."
+				"answer": "biubiu.tools is Ethereum-first power tools for Web3 power users. Whether you're a data analyst querying on-chain data, a developer deploying contracts across chains, or an airdrop hunter managing multiple wallets - we provide batch operation tools that save 80%+ time and gas."
 			},
 			{
 				"question": "Is this tool secure?",
-				"answer": "Your private keys never leave your browser - all signing operations are performed locally. We don't store any sensitive data, and our code is 100% open source for you to audit anytime."
-			},
-			{
-				"question": "How can I verify the tool's security?",
-				"answer": "Visit our GitHub repository to review the complete source code. You can also self-host your own instance, or inspect browser network requests to confirm your keys are never transmitted."
+				"answer": "Your private keys never leave your browser - all operations are performed locally. We don't store any sensitive data. The code is 100% open source on GitHub for you to audit, and you can self-host your own instance anytime."
 			},
 			{
 				"question": "Which blockchain networks are supported?",
-				"answer": "We support Ethereum and 20+ EVM-compatible chains including BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, and more. You can also add custom RPC networks."
+				"answer": "We support Ethereum and 20+ EVM-compatible chains including BSC, Polygon, Arbitrum, Optimism, Base, Avalanche, and more. Permissionlessly supports any EVM-compatible chain - no waiting for official integration. You can also add custom RPC networks."
 			},
 			{
-				"question": "Which wallets are supported?",
-				"answer": "We support MetaMask, WalletConnect, Coinbase Wallet, and other major wallets. You can also import private keys directly (processed locally only, never uploaded)."
-			},
-			{
-				"question": "What advantages does this have over similar tools?",
-				"answer": "100% open source and auditable, private keys processed locally, gas-optimized smart contracts, and transparent pricing. Permissionlessly supports any EVM-compatible chain without waiting for official integration."
-			},
-			{
-				"question": "How are fees calculated?",
-				"answer": "Fee = Network Gas + Protocol Fee. Protocol fees vary by operation type, typically a small amount of native token. Membership removes protocol fees, making it more economical for heavy users."
-			},
-			{
-				"question": "What's the difference between Pay-Per-Use and Membership?",
-				"answer": "Pay-Per-Use charges a protocol fee per operation, ideal for occasional use. Membership provides unlimited access to all tools with no protocol fees during the validity period, typically saving 50%+ for frequent users."
-			},
-			{
-				"question": "What's included in the Membership?",
-				"answer": "Members get unlimited access to all tools on the purchased chain (including premium query tools), zero protocol fees, and priority support. Membership is per-chain - cross-chain use requires separate purchases."
+				"question": "Can I test the app on a testnet?",
+				"answer": "Yes! Any testnet works - Sepolia, local Anvil, or your own dev network. Just connect a testnet wallet and start testing. No permission needed."
 			},
 			{
 				"question": "Can I deploy it myself?",
 				"answer": "Absolutely! The code is fully open source and you can deploy it to any EVM chain. Self-hosted versions have zero protocol fees, perfect for developers and technical teams. See the deployment docs in our GitHub repository."
-			},
-			{
-				"question": "How do I get started?",
-				"answer": "1) Connect your wallet; 2) Select the target network; 3) Choose your tool; 4) Follow the prompts. No registration required - start using immediately."
 			},
 			{
 				"question": "How can I get help if I have issues?",

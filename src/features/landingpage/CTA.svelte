@@ -1,16 +1,121 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { useI18n } from '@shelchin/i18n';
-	import { ArrowRight, Github, ShieldCheck } from '@lucide/svelte';
+	import { ArrowRight, Github, ShieldCheck, Users, Zap, Globe, Code2 } from '@lucide/svelte';
+	import { trackCTAClick, trackToolClick, addUTMToUrl, SECTIONS } from '$lib/analytics';
+	import { localizeHref } from '$lib/utils/localized-url';
 
 	const i18n = useI18n();
 	const t = i18n.t.bind(i18n);
 
-	function scrollToTools() {
-		const toolsSection = document.getElementById('tools');
-		if (toolsSection) {
-			toolsSection.scrollIntoView({ behavior: 'smooth' });
+	// CTA variant type
+	type CTAVariant = 'default' | 'data_analyst' | 'developer' | 'airdrop_hunter';
+
+	// Headline structure
+	interface Headline {
+		title: string;
+		subtitle: string;
+	}
+
+	// Props for A/B variant
+	interface Props {
+		variant?: CTAVariant;
+	}
+
+	let { variant = 'default' }: Props = $props();
+
+	// Random headline index (selected on mount for default variant)
+	let headlineIndex = $state(0);
+
+	// Get headlines array for random rotation
+	const headlines = $derived.by(() => {
+		const items = t('common.cta.headlines') as unknown as Headline[];
+		return Array.isArray(items) ? items : [];
+	});
+
+	// Select random headline on mount
+	onMount(() => {
+		if (headlines.length > 0) {
+			headlineIndex = Math.floor(Math.random() * headlines.length);
+		}
+	});
+
+	// Get content based on variant (use random headline for default)
+	const title = $derived.by(() => {
+		if (variant !== 'default') {
+			return t(`common.cta.variants.${variant}.title` as Parameters<typeof t>[0]);
+		}
+		// Use random headline for default variant
+		return headlines[headlineIndex]?.title ?? t('common.cta.title');
+	});
+
+	const subtitle = $derived.by(() => {
+		if (variant !== 'default') {
+			return t(`common.cta.variants.${variant}.subtitle` as Parameters<typeof t>[0]);
+		}
+		// Use random headline for default variant
+		return headlines[headlineIndex]?.subtitle ?? t('common.cta.subtitle');
+	});
+
+	const buttonText = $derived(
+		variant === 'default'
+			? t('common.cta.button_text')
+			: t(`common.cta.variants.${variant}.button_text` as Parameters<typeof t>[0])
+	);
+
+	// Link based on variant
+	const primaryLink = $derived.by(() => {
+		switch (variant) {
+			case 'data_analyst':
+				return '/apps/token-balance-scanner';
+			case 'developer':
+				return '/apps/contract-deployer';
+			case 'airdrop_hunter':
+				return '/apps/wallet-sweep';
+			default:
+				return '#tools';
+		}
+	});
+
+	function handlePrimaryClick(e: MouseEvent) {
+		// Track the CTA click
+		trackCTAClick(variant, 'primary', SECTIONS.CTA);
+
+		if (variant === 'default') {
+			e.preventDefault();
+			const toolsSection = document.getElementById('tools');
+			if (toolsSection) {
+				toolsSection.scrollIntoView({ behavior: 'smooth' });
+			}
+		} else {
+			// For variant-specific links, add UTM and track tool click
+			e.preventDefault();
+			const toolId = primaryLink.replace('/apps/', '');
+			trackToolClick(toolId, SECTIONS.CTA, i18n.locale);
+
+			const urlWithUtm = addUTMToUrl(primaryLink, {
+				source: 'landing',
+				medium: 'cta',
+				campaign: variant,
+				content: toolId,
+				term: i18n.locale
+			});
+			window.location.href = localizeHref(urlWithUtm);
 		}
 	}
+
+	function handleSecondaryClick() {
+		// Track secondary CTA (GitHub link)
+		trackCTAClick(variant, 'secondary', SECTIONS.CTA);
+	}
+
+	// Trust badges config
+	const trustBadges = [
+		{ icon: Users, key: 'users' },
+		{ icon: Zap, key: 'transactions' },
+		{ icon: Globe, key: 'chains' },
+		{ icon: Code2, key: 'open_source' }
+	] as const;
 </script>
 
 <!-- CTA section with premium design -->
@@ -29,50 +134,42 @@
 
 		<!-- Main title with gradient -->
 		<h2 id="cta-title" class="cta-title">
-			{t('common.cta.title')}
+			{title}
 		</h2>
 
 		<!-- Subtitle -->
 		<p class="cta-subtitle">
-			{t('common.cta.subtitle')}
+			{subtitle}
 		</p>
+
+		<!-- Trust badges -->
+		<div class="trust-badges">
+			{#each trustBadges as badge (badge.key)}
+				{@const IconComponent = badge.icon}
+				<div class="trust-badge">
+					<IconComponent class="trust-icon" />
+					<span>{t(`common.cta.trust.${badge.key}`)}</span>
+				</div>
+			{/each}
+		</div>
 
 		<!-- Action buttons -->
 		<div class="button-group">
-			<button type="button" class="btn-primary" onclick={scrollToTools}>
-				<span>{t('common.cta.button_text')}</span>
+			<a href={primaryLink} class="btn-primary" onclick={handlePrimaryClick}>
+				<span>{buttonText}</span>
 				<ArrowRight class="btn-icon" />
-			</button>
+			</a>
 			<a
-				href="https://github.com/atshelchin/biubiu.tools"
+				href="https://github.com/AilentDE/biubiu.tools"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="btn-secondary"
+				onclick={handleSecondaryClick}
 			>
 				<Github class="btn-icon-left" />
 				<span>{t('common.cta.secondary_button')}</span>
 			</a>
 		</div>
-
-		<!-- Trust indicators with icons -->
-		<!-- <div class="trust-indicators">
-			<div class="indicator">
-				<Check class="indicator-icon" />
-				<span>{t('common.cta.trust.no_registration')}</span>
-			</div>
-			<div class="indicator">
-				<Sparkles class="indicator-icon" />
-				<span>{t('common.cta.trust.free_tools')}</span>
-			</div>
-			<div class="indicator">
-				<Code2 class="indicator-icon" />
-				<span>{t('common.cta.trust.open_source')}</span>
-			</div>
-			<div class="indicator">
-				<Lock class="indicator-icon" />
-				<span>{t('common.cta.trust.privacy_first')}</span>
-			</div>
-		</div> -->
 	</div>
 </section>
 
@@ -197,10 +294,45 @@
 	/* Subtitle */
 	.cta-subtitle {
 		max-width: 36rem;
-		margin: 0 auto var(--space-10);
+		margin: 0 auto var(--space-8);
 		font-size: var(--text-lg);
 		line-height: 1.7;
 		color: var(--color-description-2);
+	}
+
+	/* Trust badges */
+	.trust-badges {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-3);
+		margin-bottom: var(--space-10);
+	}
+
+	.trust-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-2) var(--space-4);
+		background: var(--color-panel-1);
+		border: 1px solid var(--color-panel-border-1);
+		border-radius: var(--radius-full);
+		font-size: var(--text-sm);
+		color: var(--color-description-2);
+		transition: all 0.15s ease;
+	}
+
+	.trust-badge:hover {
+		background: var(--color-panel-2);
+		border-color: var(--color-primary);
+		color: var(--color-foreground);
+		transform: translateY(-2px);
+	}
+
+	:global(.trust-icon) {
+		width: 1rem;
+		height: 1rem;
+		color: var(--color-primary);
 	}
 
 	/* Button group */
@@ -209,7 +341,6 @@
 		flex-direction: column;
 		align-items: center;
 		gap: var(--space-4);
-		margin-bottom: var(--space-10);
 	}
 
 	@media (min-width: 640px) {
@@ -297,57 +428,26 @@
 		height: 1.125rem;
 	}
 
-	/* Trust indicators */
-	.trust-indicators {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--space-4) var(--space-6);
-		max-width: 36rem;
-		margin: 0 auto;
-	}
-
-	@media (min-width: 640px) {
-		.trust-indicators {
-			grid-template-columns: repeat(4, auto);
-			justify-content: center;
-			gap: var(--space-8);
-			max-width: none;
-		}
-	}
-
-	.indicator {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-		padding: var(--space-2) var(--space-3);
-		background: var(--color-panel-1);
-		border: 1px solid var(--color-panel-border-1);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		color: var(--color-description-2);
-		transition: all 0.15s ease;
-		white-space: nowrap;
-	}
-
-	.indicator:hover {
-		background: var(--color-panel-2);
-		border-color: var(--color-primary);
-		color: var(--color-foreground);
-		transform: translateY(-2px);
-	}
-
-	:global(.indicator-icon) {
-		width: 1rem;
-		height: 1rem;
-		color: var(--color-primary);
-		flex-shrink: 0;
-	}
-
 	/* Responsive adjustments */
 	@media (min-width: 768px) {
 		.cta-section {
 			padding: var(--space-24) var(--space-8);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.trust-badges {
+			gap: var(--space-2);
+		}
+
+		.trust-badge {
+			padding: var(--space-1) var(--space-3);
+			font-size: var(--text-xs);
+		}
+
+		:global(.trust-icon) {
+			width: 0.875rem;
+			height: 0.875rem;
 		}
 	}
 </style>
