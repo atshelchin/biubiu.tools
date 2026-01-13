@@ -42,5 +42,11 @@
 		"cancel": "Cancel",
 		"success": "Thanks! We'll notify you when it's ready.",
 		"error": "Please enter a valid email address."
+	},
+	"filter": {
+		"all": "All Tools",
+		"data_analyst": "Data Analyst",
+		"developer": "Developer",
+		"airdrop_hunter": "Airdrop Hunter"
 	}
 }

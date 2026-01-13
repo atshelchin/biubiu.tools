@@ -1,11 +1,22 @@
 <script lang="ts">
 	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import { Sparkles, ChevronDown, ChevronUp } from '@lucide/svelte';
-	import { toolsConfig, TELEGRAM_GROUP_LINK } from './data/tools-data';
+	import { toolsConfig, TELEGRAM_GROUP_LINK, type PersonaType } from './data/tools-data';
 	import ToolCard from './components/tool-card.svelte';
 
 	const i18n = useI18n();
 	const t = i18n.t.bind(i18n);
+
+	// Filter state - null means show all
+	let activeFilter = $state<PersonaType | null>(null);
+
+	// Filter options
+	const filterOptions: { key: PersonaType | null; labelKey: string }[] = [
+		{ key: null, labelKey: 'tools.filter.all' },
+		{ key: 'data-analyst', labelKey: 'tools.filter.data_analyst' },
+		{ key: 'developer', labelKey: 'tools.filter.developer' },
+		{ key: 'airdrop-hunter', labelKey: 'tools.filter.airdrop_hunter' }
+	];
 
 	// Transform tool config with i18n translations - reactive to language changes
 	const tools = $derived(
@@ -19,9 +30,23 @@
 		}))
 	);
 
+	// Filtered tools based on persona selection
+	const filteredTools = $derived.by(() => {
+		if (activeFilter === null) return tools;
+		const filter = activeFilter;
+		return tools.filter((tool) => tool.personas?.includes(filter));
+	});
+
 	// Show more/less state
 	const INITIAL_VISIBLE_COUNT = 9;
 	let showAll = $state(false);
+
+	// Reset showAll when filter changes
+	$effect(() => {
+		// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+		activeFilter;
+		showAll = false;
+	});
 </script>
 
 <!-- Premium Tools Section -->
@@ -47,11 +72,24 @@
 			<p class="section-subtitle">
 				{t('tools.section_subtitle')}
 			</p>
+
+			<!-- Filter tabs -->
+			<div class="filter-tabs">
+				{#each filterOptions as option (option.key)}
+					<button
+						class="filter-tab"
+						class:active={activeFilter === option.key}
+						onclick={() => (activeFilter = option.key)}
+					>
+						{t(option.labelKey as keyof TranslationKeys)}
+					</button>
+				{/each}
+			</div>
 		</div>
 
 		<!-- Premium cards grid -->
 		<div class="tools-grid">
-			{#each tools as tool, index (index)}
+			{#each filteredTools as tool, index (tool.titleKey)}
 				<ToolCard
 					icon={tool.icon}
 					title={tool.title}
@@ -69,7 +107,7 @@
 		</div>
 
 		<!-- Show More / Show Less Button -->
-		{#if tools.length > INITIAL_VISIBLE_COUNT}
+		{#if filteredTools.length > INITIAL_VISIBLE_COUNT}
 			<div class="show-more-wrapper">
 				<button class="show-more-btn" onclick={() => (showAll = !showAll)}>
 					{#if showAll}
@@ -77,7 +115,7 @@
 						<span>{t('common.show_less')}</span>
 					{:else}
 						<ChevronDown class="show-more-icon" />
-						<span>{t('common.show_more')} ({tools.length - INITIAL_VISIBLE_COUNT})</span>
+						<span>{t('common.show_more')} ({filteredTools.length - INITIAL_VISIBLE_COUNT})</span>
 					{/if}
 				</button>
 			</div>
@@ -194,6 +232,39 @@
 		color: var(--color-description-3);
 	}
 
+	/* Filter tabs */
+	.filter-tabs {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-2);
+		margin-top: var(--space-8);
+	}
+
+	.filter-tab {
+		padding: var(--space-2) var(--space-4);
+		border-radius: var(--radius-full);
+		background: var(--color-panel-2);
+		border: 1px solid var(--color-panel-border-2);
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		color: var(--color-description-2);
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.filter-tab:hover {
+		background: var(--color-panel-3);
+		border-color: var(--color-primary);
+		color: var(--color-primary);
+	}
+
+	.filter-tab.active {
+		background: var(--color-primary);
+		border-color: var(--color-primary);
+		color: var(--color-primary-foreground);
+	}
+
 	/* Grid with compact spacing - 3 columns */
 	.tools-grid {
 		display: grid;
@@ -205,6 +276,15 @@
 	@media (max-width: 768px) {
 		.container {
 			padding: var(--space-3) var(--space-1);
+		}
+
+		.filter-tabs {
+			gap: var(--space-1);
+		}
+
+		.filter-tab {
+			padding: var(--space-1) var(--space-3);
+			font-size: var(--text-xs);
 		}
 	}
 

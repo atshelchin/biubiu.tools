@@ -17406,6 +17406,10 @@ declare module '@shelchin/i18n' {
 		'tools.feedback_card.feature_2': string;
 		'tools.feedback_card.feature_3': string;
 		'tools.feedback_card.title': string;
+		'tools.filter.airdrop_hunter': string;
+		'tools.filter.all': string;
+		'tools.filter.data_analyst': string;
+		'tools.filter.developer': string;
 		'tools.join_telegram': string;
 		'tools.launch_app': string;
 		'tools.notify_me': string;
